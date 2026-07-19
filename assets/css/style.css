@@ -1423,3 +1423,13 @@ body.home-page .reveal.is-visible {
     padding-bottom: 40px !important;
 }
 
+
+/* Move Featured Book closer to Hero */
+
+.featured-book,
+.book-section {
+    margin-top: -140px !important;
+    position: relative;
+    z-index: 10;
+}
+
