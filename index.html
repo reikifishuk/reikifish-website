@@ -52,46 +52,81 @@
         </div>
       </nav>
 
-      <section class="home-hero section-frame">
+      <section class="book-first-hero" aria-labelledby="book-hero-title">
+        <div class="book-hero-atmosphere" aria-hidden="true"></div>
+
         <div class="container-fluid home-container">
-          <div class="row g-4 g-xl-5 align-items-center home-hero-grid">
-            <div class="col-12 col-lg-5 home-hero-copy reveal">
-              <p class="eyebrow">WALKING THE GREY</p>
-              <h1 class="home-hero-title">
-                <span>WALKING</span>
-                <span>THE GREY</span>
-              </h1>
-              <p class="home-hero-subtitle">
-                There is another place to stand. Between reaction and response.
-                Between fear and understanding. Between darkness and light.
-              </p>
-              <div class="home-actions d-flex flex-wrap gap-3">
-                <a class="btn btn-gold" href="books.html">Begin the Journey</a>
-                <a class="btn btn-outline" href="books.html">Explore the Book</a>
-              </div>
-              <div class="home-quote-panel">
-                <p class="mb-0">
-                  “Stillness is not emptiness.
-                  It is where the mind learns to hear itself.”
+          <div class="row align-items-center g-5 book-hero-layout">
+
+            <div class="col-12 col-lg-6 order-2 order-lg-1">
+              <div class="book-hero-copy reveal">
+                <p class="book-hero-kicker">THE FEATURED BOOK BY REIKI FISH</p>
+
+                <h1 class="book-hero-title" id="book-hero-title">
+                  <span>Walking</span>
+                  <span>the Grey</span>
+                </h1>
+
+                <p class="book-hero-lead">
+                  A journey beyond fear and reaction, into stillness, truth,
+                  emotional strength and the difficult ground between darkness and light.
                 </p>
+
+                <blockquote class="book-hero-quote">
+                  “Stillness is not emptiness. It is where the mind learns to hear itself.”
+                </blockquote>
+
+                <div class="book-hero-actions">
+                  <a class="btn book-primary-button" href="books.html">
+                    Explore the Book
+                  </a>
+
+                  <a class="btn book-secondary-button" href="#featured-book">
+                    Discover the Story
+                  </a>
+                </div>
+
+                <div class="book-hero-details" aria-label="Book themes">
+                  <span>Stillness</span>
+                  <span>Truth</span>
+                  <span>Endurance</span>
+                  <span>Reclamation</span>
+                </div>
               </div>
             </div>
 
-            <div class="col-12 col-lg-7 home-hero-media reveal">
-              <div class="media-frame hero-frame" data-media-shell>
-                <img
-                  class="media-image"
-                  src="assets/images/hero-background.webp"
-                  alt="Atmospheric landscape with a lone tree, still lake and light breaking through clouds"
-                  width="1600"
-                  height="900"
-                  loading="eager"
-                  decoding="async"
-                />
+            <div class="col-12 col-lg-6 order-1 order-lg-2">
+              <div class="book-hero-visual reveal">
+                <div class="book-glow" aria-hidden="true"></div>
+
+                <div class="book-cover-stage">
+                  <img
+                    class="book-hero-cover"
+                    src="assets/images/books/walking-the-grey-cover.png"
+                    alt="Walking the Grey book cover by Reiki Fish"
+                    width="900"
+                    height="1100"
+                    loading="eager"
+                    decoding="async"
+                  />
+
+                  <span class="book-cover-shadow" aria-hidden="true"></span>
+                </div>
+
+                <div class="book-hero-caption">
+                  <span class="book-caption-line"></span>
+                  <p>A book about remaining steady when certainty, identity and family life are tested.</p>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
+
+        <a class="book-scroll-cue" href="#featured-book" aria-label="Scroll to the featured book section">
+          <span>Continue</span>
+          <span class="book-scroll-line" aria-hidden="true"></span>
+        </a>
       </section>
     </header>
 
