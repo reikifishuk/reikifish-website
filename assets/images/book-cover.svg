@@ -1,0 +1,11 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1100" rx="30" fill="#F6F3EE"/>
+  <rect x="90" y="90" width="720" height="920" rx="24" fill="#1A1B1E"/>
+  <rect x="140" y="140" width="620" height="820" rx="20" fill="#2E3138"/>
+  <path d="M230 780C310 650 390 560 470 500C550 440 630 380 700 260" stroke="#D8D2C7" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M250 780C330 680 410 620 500 570C590 520 650 470 690 390" stroke="#B08D57" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <text x="450" y="290" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="52" fill="#F6F3EE">Walking the Grey</text>
+  <text x="450" y="350" text-anchor="middle" font-family="Inter, sans-serif" font-size="23" fill="#D8D2C7" letter-spacing="4">ANDY FISH</text>
+  <text x="450" y="840" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" fill="#F6F3EE">A quiet journey through</text>
+  <text x="450" y="880" text-anchor="middle" font-family="Inter, sans-serif" font-size="22" fill="#F6F3EE">stillness, growth and insight</text>
+</svg>
