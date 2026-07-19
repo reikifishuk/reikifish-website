@@ -1002,6 +1002,9 @@ body.home-page .section-intro-wide {
 }
 
 body.home-page .services-grid {
+    margin-top: 70px;
+    gap: 42px;
+
   display: grid;
   gap: 40px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1297,6 +1300,9 @@ body.home-page .reveal.is-visible {
 
 @media (min-width: 992px) and (max-width: 1499.98px) {
   body.home-page .services-grid {
+    margin-top: 70px;
+    gap: 42px;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
@@ -1708,6 +1714,9 @@ body.home-page .contact-actions{margin-top:0;flex:0 0 auto}
 -------------------------------------------------- */
 
 .services-grid {
+    margin-top: 70px;
+    gap: 42px;
+
   align-items: stretch;
 }
 
