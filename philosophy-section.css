@@ -1,0 +1,23 @@
+/* === GREY PHILOSOPHY SECTION START === */
+
+.grey-philosophy-panel{
+padding:4rem;
+border-radius:24px;
+background:linear-gradient(135deg,#141414,#232323);
+border:1px solid rgba(205,169,92,.25);
+box-shadow:0 25px 60px rgba(0,0,0,.35);
+}
+
+.grey-philosophy-panel h2 span{
+display:block;
+color:#cda95c;
+}
+
+.philosophy-quote{
+border-left:3px solid #cda95c;
+padding-left:1.5rem;
+margin:2rem 0;
+font-size:1.5rem;
+font-style:italic;
+color:#fff;
+}

@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Andy Fish | Walking the Grey</title>
+    <meta
+      name="description"
+      content="Learn more about Andy Fish, his lived experience, the philosophy of Walking the Grey, and his psychology-informed coaching and educational work."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: clamp(7.6rem, 10vw, 9.4rem);
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2rem, 4vw, 4rem);
+        grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 10.5ch;
+        font-size: clamp(4rem, 7vw, 7.35rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 40rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 54vw, 720px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 54vw, 720px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: 7rem;
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="brand-mark">AF</span>
+            <span class="d-flex flex-column">
+              <span class="brand-name">Andy Fish</span>
+              <span class="brand-subtitle">Author • Psychology • Mindset Coach</span>
+            </span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><a class="nav-link" href="coaching.html">Coaching</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="about-hero section-frame">
+        <div class="container-fluid home-container">
+          <div class="about-hero-grid">
+            <div class="about-hero-copy reveal">
+              <p class="eyebrow">ABOUT ANDY FISH</p>
+              <h1 class="section-heading-xl about-hero-title">Finding clarity when life becomes uncertain.</h1>
+              <p class="home-hero-subtitle">
+                Andy Fish is an author, psychology-informed coach and mental-health educator whose work grew from lived
+                experience of adversity, grief, family separation and the emotional consequences of prolonged conflict.
+              </p>
+              <p class="home-hero-subtitle">
+                His journey through fatherhood, parental alienation and the psychological patterns associated with DARVO
+                led him to explore a central question: how do we remain grounded when everything around us encourages
+                fear, reaction and emotional overwhelm?
+              </p>
+              <div class="home-actions d-flex flex-wrap gap-3">
+                <a class="btn btn-gold" href="books.html">Explore Walking the Grey</a>
+              </div>
+              <p class="about-hero-note">
+                His work sits at the meeting point of lived adversity, psychological insight and the disciplined search
+                for steadiness when life becomes emotionally overwhelming.
+              </p>
+            </div>
+
+            <div class="about-hero-visual reveal">
+              <figure class="about-hero-stage media-frame" data-media-shell>
+                <img
+                  class="media-image"
+                  src="assets/images/hero-background.webp"
+                  alt="A muted landscape opening the page with a quiet, reflective mood"
+                  width="1600"
+                  height="900"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="home-main">
+      <section class="section-frame reveal">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-story-layout">
+            <div class="about-story-media">
+              <figure class="about-story-stage">
+                <img
+                  src="assets/images/home/standing-in-the-grey.jpg"
+                  alt="A solitary path through misty terrain, suggesting reflection and change"
+                  width="1280"
+                  height="853"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+              <div class="about-story-pull editorial-surface">
+                <p>
+                  The work begins in the space where grief, fatherhood, separation and recovery refuse to remain abstract.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="chapter-header">
+                <p class="eyebrow">MY STORY</p>
+                <h2 class="section-heading-lg">From lived experience to purposeful work.</h2>
+              </div>
+              <div class="about-story-stream chapter-copy">
+                <div class="about-story-block">
+                  <p class="lead-text">
+                    Andy’s work did not begin as a theory. It began through the reality of trying to remain a loving
+                    father while navigating separation, grief, false narratives and the emotional strain of family
+                    conflict.
+                  </p>
+                </div>
+                <div class="about-story-block">
+                  <p>
+                    These experiences revealed how unresolved trauma can affect communication, identity, relationships and
+                    the nervous system. They also demonstrated the importance of learning to pause, regulate and respond
+                    thoughtfully rather than being pulled into cycles of reaction.
+                  </p>
+                </div>
+                <div class="about-story-block">
+                  <p class="mb-0">
+                    Instead of allowing adversity to define the rest of his life, Andy began studying mental health,
+                    psychology, trauma-informed practice, emotional regulation and psychology-informed coaching. This
+                    learning became the foundation for his writing, educational work and the philosophy known as Walking
+                    the Grey.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame reveal">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-philosophy-layout">
+            <div>
+              <div class="chapter-header">
+                <p class="eyebrow">WALKING THE GREY</p>
+                <h2 class="section-heading-xl">Walking the Grey</h2>
+              </div>
+              <blockquote class="about-philosophy-quote editorial-quote">
+                “The Grey is not uncertainty. It is the place where reaction becomes reflection, fear becomes understanding and strength no longer needs to announce itself.”
+              </blockquote>
+              <div class="about-philosophy-copy chapter-body">
+                <p>
+                  Walking the Grey is a philosophy of emotional regulation, discernment and resilience. It recognises
+                  that human experiences are rarely entirely light or entirely dark.
+                </p>
+                <p>
+                  The Grey is the calm centre between extremes: a place where people can acknowledge pain without
+                  becoming consumed by it, recognise manipulation without losing compassion, and establish boundaries
+                  without surrendering their integrity.
+                </p>
+              </div>
+            </div>
+            <figure class="about-philosophy-book media-frame" data-media-shell>
+              <img
+                class="media-image"
+                src="assets/images/books/walking-the-grey-cover.png"
+                alt="Walking the Grey book photography"
+                width="1000"
+                height="1400"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame reveal">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="chapter-header">
+            <p class="eyebrow">QUALIFICATIONS</p>
+            <h2 class="section-heading-lg">Professional development and lived understanding</h2>
+            <p class="lead-text">
+              Andy’s approach combines lived experience with continued education in mental health, psychology, trauma awareness, emotional regulation and psychology-informed coaching.
+            </p>
+          </div>
+          <div class="qualification-grid">
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">01</span>
+              <h3>Psychology-informed coaching</h3>
+              <p>Coaching grounded in practical behavioural insight, reflection and emotional steadiness.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">02</span>
+              <h3>Mental Health certifications</h3>
+              <p>Structured study supporting psychologically aware conversations and educational work.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">03</span>
+              <h3>Trauma-informed practice</h3>
+              <p>An approach shaped by the effects of stress, grief, survival responses and recovery.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">04</span>
+              <h3>Emotional regulation</h3>
+              <p>Applied learning focused on nervous-system awareness, response patterns and steadiness.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">05</span>
+              <h3>Personal development</h3>
+              <p>Continued independent research into growth, resilience, identity and meaningful change.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">06</span>
+              <h3>Author</h3>
+              <p>Creator of Walking the Grey and its wider philosophy of reflection, discernment and resilience.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">07</span>
+              <h3>Speaker</h3>
+              <p>Public psychology and wellbeing discussions shaped by lived understanding and calm delivery.</p>
+            </article>
+            <article class="qualification-card editorial-surface">
+              <span class="card-kicker">08</span>
+              <h3>Podcast host</h3>
+              <p>Reflective audio conversations extending the themes of regulation, trauma and human behaviour.</p>
+            </article>
+          </div>
+          <p class="qualification-note">
+            Andy is not presenting himself as a psychologist, psychiatrist or psychotherapist. His work is educational and coaching-based and is not a replacement for medical, psychological or emergency care.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-frame reveal">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="chapter-header">
+            <p class="eyebrow">WHO I HELP</p>
+            <h2 class="section-heading-lg">You may recognise yourself here.</h2>
+            <p class="lead-text">
+              You do not need to pretend the past did not happen. The work begins by learning how the past affects the present and developing healthier ways to move forward.
+            </p>
+          </div>
+          <div class="audience-grid">
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-people-arrows"></i></span>
+              <h3>Parents experiencing parental alienation</h3>
+              <p>Support for people living with separation, loss of contact and the grief of disrupted parent-child relationships.</p>
+            </article>
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+              <h3>People recovering from trauma</h3>
+              <p>Space to understand how trauma shapes identity, relationships, reactions and the body.</p>
+            </article>
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-cloud-rain"></i></span>
+              <h3>People carrying grief</h3>
+              <p>Grounded reflection for those living with sorrow, absence, emotional exhaustion or major life change.</p>
+            </article>
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-wave-square"></i></span>
+              <h3>Emotional regulation</h3>
+              <p>Practical guidance for those who want to respond more thoughtfully without suppressing feeling.</p>
+            </article>
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+              <h3>DARVO and manipulation</h3>
+              <p>Clarity for people trying to make sense of blame shifting, coercion and psychological confusion.</p>
+            </article>
+            <article class="audience-card editorial-surface">
+              <span class="audience-icon" aria-hidden="true"><i class="fa-solid fa-shield-heart"></i></span>
+              <h3>High-conflict relationships</h3>
+              <p>Support for people navigating ongoing tension, fear, reactivity and the search for steadier boundaries.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame reveal">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="chapter-header">
+            <p class="eyebrow">VALUES</p>
+            <h2 class="section-heading-lg">The principles that shape the work.</h2>
+          </div>
+          <div class="values-grid">
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+              <h3>Truth</h3>
+              <p>Seeking understanding before assumption and remaining committed to honesty.</p>
+            </article>
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+              <h3>Compassion</h3>
+              <p>Meeting people with empathy while maintaining healthy boundaries.</p>
+            </article>
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-shield-heart"></i></span>
+              <h3>Integrity</h3>
+              <p>Remaining consistent in values even during adversity.</p>
+            </article>
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+              <h3>Regulation</h3>
+              <p>Responding thoughtfully instead of reacting emotionally.</p>
+            </article>
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-mountain"></i></span>
+              <h3>Resilience</h3>
+              <p>Growing through life's challenges without losing yourself.</p>
+            </article>
+            <article class="value-card editorial-surface">
+              <span class="value-card-icon" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></span>
+              <h3>Service</h3>
+              <p>Using experience and education to help others move forward.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame reveal" id="about-cta">
+        <div class="container-fluid home-container">
+          <div class="chapter-divider mx-auto" aria-hidden="true">
+            <img src="assets/images/gold-divider.svg" alt="" width="112" height="10" loading="lazy" decoding="async" />
+          </div>
+          <div class="about-cta-panel">
+            <div class="about-cta-copy">
+              <p class="eyebrow">NEXT STEPS</p>
+              <h2 class="section-heading-lg">Your experiences may explain where you are. They do not have to decide where you remain.</h2>
+              <p class="lead-text mb-0">
+                Explore the philosophy behind Walking the Grey or learn how psychology-informed coaching may support
+                your next steps.
+              </p>
+            </div>
+            <div class="contact-actions about-cta-actions d-flex flex-wrap gap-3">
+              <a class="btn btn-gold" href="books.html">Discover the Book</a>
+              <a class="btn btn-outline" href="coaching.html">Explore Coaching</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
