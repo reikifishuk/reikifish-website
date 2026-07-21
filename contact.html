@@ -57,18 +57,22 @@
           </p>
         </div>
 
-        <form class="contact-form" data-contact-form action="mailto:andyprouk@yahoo.com" method="post" enctype="text/plain">
-          <input type="hidden" name="Date & Time submitted" data-submitted-at />
+        <form class="contact-form" data-contact-form action="/api/contact" method="post" novalidate>
+          <input type="hidden" name="submittedAtClient" data-submitted-at-client />
+          <input type="hidden" name="website" value="" autocomplete="off" tabindex="-1" data-honeypot />
+          <div class="contact-form-status" data-contact-status hidden role="alert" aria-live="polite"></div>
 
           <div class="contact-form-grid">
-            <div class="contact-field contact-field-span-2">
+            <div class="contact-field">
               <label for="fullName">Full Name *</label>
               <input id="fullName" name="Full Name" type="text" autocomplete="name" required />
+              <p class="contact-field-error" data-error-for="fullName" hidden></p>
             </div>
 
-            <div class="contact-field contact-field-span-2">
+            <div class="contact-field">
               <label for="emailAddress">Email Address *</label>
               <input id="emailAddress" name="Email" type="email" autocomplete="email" required />
+              <p class="contact-field-error" data-error-for="emailAddress" hidden></p>
             </div>
 
             <div class="contact-field">
@@ -81,7 +85,7 @@
               <input id="organisation" name="Organisation" type="text" autocomplete="organization" />
             </div>
 
-            <div class="contact-field contact-field-span-2">
+            <div class="contact-field">
               <label for="enquiryType">Enquiry Type *</label>
               <select id="enquiryType" name="Enquiry Type" required>
                 <option value="" selected disabled>Select an enquiry type</option>
@@ -94,11 +98,13 @@
                 <option>Book Enquiry</option>
                 <option>General Enquiry</option>
               </select>
+              <p class="contact-field-error" data-error-for="enquiryType" hidden></p>
             </div>
 
-            <div class="contact-field contact-field-span-2">
+            <div class="contact-field contact-field-span-2 contact-message-field">
               <label for="message">Tell me a little about your enquiry...</label>
               <textarea id="message" name="Message" rows="8" minlength="10" required></textarea>
+              <p class="contact-field-error" data-error-for="message" hidden></p>
             </div>
           </div>
 
@@ -107,9 +113,6 @@
           </div>
         </form>
 
-        <p class="contact-success" data-contact-success hidden role="status" aria-live="polite">
-          Thank you. Your enquiry has been received and I'll respond as soon as possible.
-        </p>
       </section>
     </main>
 
