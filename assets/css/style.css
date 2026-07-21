@@ -43,21 +43,20 @@ a { text-decoration: none; color: inherit; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 1000;
 }
-.navbar-brand { color: var(--cream) !important; font-weight: 600; }
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 50%;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
+.navbar-brand {
+  color: var(--cream) !important;
+  font-weight: 600;
+  padding: 0;
+  line-height: 1;
 }
-.brand-name { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; line-height: 1; }
-.brand-subtitle { font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,243,239,0.72); }
+
+.site-logo {
+  display: block;
+  width: auto;
+  height: clamp(2.95rem, 4.8vw, 3.35rem);
+  max-height: 3.35rem;
+  object-fit: contain;
+}
 .nav-link { color: rgba(246,243,239,0.86) !important; transition: color 0.25s ease; }
 .nav-link:hover, .nav-link:focus, .nav-link.active { color: var(--gold) !important; }
 
@@ -292,6 +291,11 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 991.98px) {
+  .site-logo {
+    height: 3rem;
+    max-height: 3rem;
+  }
+
   .hero-section {
     min-height: auto;
     padding-top: 8.5rem;
@@ -307,6 +311,16 @@ a { text-decoration: none; color: inherit; }
 }
 
 @media (max-width: 575.98px) {
+  body.home-page .site-nav .site-logo {
+    height: 2.95rem;
+    max-height: 2.95rem;
+  }
+
+  .site-logo {
+    height: 2.75rem;
+    max-height: 2.75rem;
+  }
+
   .hero-section > .container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1443,25 +1457,12 @@ body.home-page .site-nav {
 }
 
 body.home-page .site-nav .navbar-brand {
-  gap: 0.7rem !important;
+  padding-block: 0.05rem;
 }
 
-body.home-page .site-nav .brand-mark {
-  width: 2.15rem;
-  height: 2.15rem;
-  border-color: var(--gold);
-  color: var(--gold);
-  font-size: 0.92rem;
-}
-
-body.home-page .site-nav .brand-name {
-  font-size: 0.98rem;
-}
-
-body.home-page .site-nav .brand-subtitle {
-  font-size: 0.66rem;
-  letter-spacing: 0.22em;
-  color: rgba(238, 233, 226, 0.7);
+body.home-page .site-nav .site-logo {
+  height: clamp(3.1rem, 5vw, 3.55rem);
+  max-height: 3.55rem;
 }
 
 body.home-page .site-nav .nav-link {
