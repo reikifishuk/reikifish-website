@@ -454,6 +454,70 @@ body.coaching-page .coaching-editorial-cta {
   margin-top: clamp(1rem, 1.95vw, 1.55rem);
 }
 
+body.coaching-page .coaching-support-section {
+  padding-top: clamp(0.25rem, 0.9vw, 0.5rem);
+}
+
+body.coaching-page .coaching-support-intro {
+  max-width: 68rem;
+}
+
+body.coaching-page .coaching-support-intro .section-heading-xl {
+  margin-bottom: clamp(0.75rem, 1.6vw, 1.1rem);
+}
+
+body.coaching-page .coaching-support-intro p {
+  margin: 0;
+  max-width: 62ch;
+  color: rgba(246, 243, 239, 0.84);
+  line-height: 1.82;
+}
+
+body.coaching-page .coaching-support-grid {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  gap: clamp(1.5rem, 3.2vw, 2.4rem);
+  align-items: start;
+  margin-top: clamp(1.15rem, 2.4vw, 1.75rem);
+}
+
+body.coaching-page .coaching-support-column {
+  min-width: 0;
+}
+
+body.coaching-page .coaching-support-label {
+  margin: 0 0 0.9rem;
+  color: var(--stone);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+  line-height: 1.2;
+}
+
+body.coaching-page .coaching-support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(215, 209, 199, 0.18);
+}
+
+body.coaching-page .coaching-support-list li {
+  padding: 0.88rem 0;
+  border-bottom: 1px solid rgba(215, 209, 199, 0.14);
+  color: rgba(246, 243, 239, 0.86);
+  line-height: 1.58;
+}
+
+body.coaching-page .coaching-support-prose p {
+  margin: 0;
+  color: rgba(246, 243, 239, 0.84);
+  line-height: 1.84;
+  max-width: 56ch;
+}
+
+body.coaching-page .coaching-support-prose p + p {
+  margin-top: clamp(0.95rem, 1.5vw, 1.2rem);
+}
+
 @media (max-width: 991.98px) {
   body.coaching-page .coaching-editorial {
     gap: clamp(1.5rem, 4vw, 2rem);
@@ -493,6 +557,11 @@ body.coaching-page .coaching-editorial-cta {
   body.coaching-page .coaching-editorial-cta {
     margin-top: clamp(0.9rem, 2.8vw, 1.25rem);
   }
+
+  body.coaching-page .coaching-support-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -518,6 +587,18 @@ body.coaching-page .coaching-editorial-cta {
 
   body.coaching-page .coaching-editorial-media img {
     object-position: center 20%;
+  }
+
+  body.coaching-page .coaching-support-section {
+    padding-top: 0;
+  }
+
+  body.coaching-page .coaching-support-label {
+    margin-bottom: 0.75rem;
+  }
+
+  body.coaching-page .coaching-support-list li {
+    padding: 0.78rem 0;
   }
 }
 
