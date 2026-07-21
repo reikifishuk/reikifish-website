@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const fixedNavbar = document.querySelector('.navbar.fixed-top');
+
+  if (fixedNavbar) {
+    const updateNavOffset = () => {
+      document.documentElement.style.setProperty('--nav-offset', `${Math.ceil(fixedNavbar.offsetHeight)}px`);
+    };
+
+    const updateNavScrollState = () => {
+      document.body.classList.toggle('nav-scrolled', window.scrollY > 24);
+    };
+
+    updateNavOffset();
+    updateNavScrollState();
+
+    window.addEventListener('resize', updateNavOffset, { passive: true });
+    window.addEventListener('scroll', updateNavScrollState, { passive: true });
+  }
+
   const year = document.getElementById('year');
   if (year) {
     year.textContent = new Date().getFullYear();
