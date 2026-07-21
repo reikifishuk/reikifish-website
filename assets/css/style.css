@@ -2402,18 +2402,6 @@ body.home-page .hp-book-grid {
   display: block;
 }
 
-@keyframes greyGradientDrift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 body.home-page #walking-the-grey {
   padding-top: clamp(1.2rem, 2vw, 1.9rem);
 }
@@ -2462,7 +2450,7 @@ body.home-page .grey-symbol-group {
 }
 
 body.home-page .grey-symbol {
-  width: 70px;
+  width: clamp(75px, 5vw, 80px);
   aspect-ratio: 1;
   border-radius: 50%;
   border: 1px solid rgba(201, 164, 106, 0.36);
@@ -2474,12 +2462,8 @@ body.home-page .grey-symbol-light {
 }
 
 body.home-page .grey-symbol-centre {
-  width: 90px;
   background: linear-gradient(125deg, #efe3cf 6%, #bdb6ac 34%, #7e7973 58%, #262523 94%);
-  background-size: 170% 170%;
-  background-position: 0% 50%;
   border-color: rgba(201, 164, 106, 0.28);
-  animation: greyGradientDrift 11s ease-in-out infinite;
 }
 
 body.home-page .grey-symbol-dark {
