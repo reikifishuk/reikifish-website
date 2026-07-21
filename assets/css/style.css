@@ -71,7 +71,7 @@ a { text-decoration: none; color: inherit; }
 
 .site-logo {
   display: block;
-  width: clamp(11.9rem, 18.5vw, 15.2rem);
+  width: clamp(16rem, 24vw, 20rem);
   height: auto;
   aspect-ratio: 1681 / 935;
   object-fit: contain;
