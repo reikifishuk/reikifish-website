@@ -538,7 +538,7 @@ body.coaching-page .coaching-support-prose p + p {
 
 body.coaching-page .coaching-support-prose-centered {
   max-width: 62rem;
-  margin: clamp(1.15rem, 2.1vw, 1.6rem) auto 0;
+  margin: clamp(4.25rem, 4.8vw, 4.75rem) auto 0;
   text-align: center;
 }
 
