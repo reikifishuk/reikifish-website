@@ -10,6 +10,7 @@
   --ink-2: #85888a;
   --image-radius: 1.4rem;
   --nav-offset: 7.3rem;
+  --hero-offset-gap: clamp(1.15rem, 2.1vw, 1.6rem);
 }
 
 * { box-sizing: border-box; }
@@ -45,6 +46,11 @@ a { text-decoration: none; color: inherit; }
   z-index: 1000;
 }
 
+.navbar.fixed-top {
+  padding-top: clamp(0.42rem, 1.1vw, 0.8rem) !important;
+  padding-bottom: clamp(0.42rem, 1.1vw, 0.8rem) !important;
+}
+
 .navbar > .container-fluid {
   align-items: center;
 }
@@ -65,7 +71,7 @@ a { text-decoration: none; color: inherit; }
 
 .site-logo {
   display: block;
-  width: clamp(12.9rem, 20vw, 16.5rem);
+  width: clamp(11.9rem, 18.5vw, 15.2rem);
   height: auto;
   aspect-ratio: 1681 / 935;
   object-fit: contain;
@@ -322,7 +328,7 @@ body.nav-scrolled .navbar-brand {
 
 @media (max-width: 991.98px) {
   .site-logo {
-    width: clamp(11.8rem, 26vw, 14rem);
+    width: clamp(11.1rem, 24.5vw, 13.3rem);
   }
 
   .hero-section {
@@ -341,11 +347,11 @@ body.nav-scrolled .navbar-brand {
 
 @media (max-width: 575.98px) {
   body.home-page .site-nav .site-logo {
-    width: clamp(10.4rem, 44vw, 12rem);
+    width: clamp(9.9rem, 42vw, 11.4rem);
   }
 
   .site-logo {
-    width: clamp(10.1rem, 43vw, 11.7rem);
+    width: clamp(9.7rem, 40vw, 11rem);
   }
 
   .hero-section > .container {
@@ -1262,7 +1268,7 @@ body.contact-page .contact-form .btn:focus-visible {
   text-transform: uppercase;
 }
 .inner-header {
-  padding-top: max(5rem, calc(var(--nav-offset) + 0.65rem));
+  padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
   min-height: 46vh;
   background: linear-gradient(130deg, rgba(24,26,29,0.92), rgba(37,42,48,0.78));
 }
@@ -1488,7 +1494,7 @@ body.home-page .site-nav .navbar-brand {
 }
 
 body.home-page .site-nav .site-logo {
-  width: clamp(13.6rem, 21vw, 17.1rem);
+  width: clamp(12.5rem, 19.5vw, 15.8rem);
 }
 
 body.home-page .site-nav .nav-link {
@@ -1515,7 +1521,7 @@ body.home-page .section-frame {
 }
 
 body.home-page .home-hero {
-  padding-top: max(clamp(7.4rem, 9vw, 8.8rem), calc(var(--nav-offset) + 0.85rem));
+  padding-top: max(clamp(7.4rem, 9vw, 8.8rem), calc(var(--nav-offset) + var(--hero-offset-gap)));
   padding-bottom: clamp(3.5rem, 4.8vw, 5rem);
 }
 

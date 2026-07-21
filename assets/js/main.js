@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const fixedNavbar = document.querySelector('.navbar.fixed-top');
 
   if (fixedNavbar) {
+    const navLogo = fixedNavbar.querySelector('.site-logo');
     const updateNavOffset = () => {
       document.documentElement.style.setProperty('--nav-offset', `${Math.ceil(fixedNavbar.offsetHeight)}px`);
     };
@@ -13,8 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavOffset();
     updateNavScrollState();
 
+    if (navLogo && !navLogo.complete) {
+      navLogo.addEventListener('load', updateNavOffset, { once: true });
+    }
+
+    window.addEventListener('load', updateNavOffset, { once: true });
     window.addEventListener('resize', updateNavOffset, { passive: true });
     window.addEventListener('scroll', updateNavScrollState, { passive: true });
+
+    fixedNavbar.addEventListener('shown.bs.collapse', updateNavOffset);
+    fixedNavbar.addEventListener('hidden.bs.collapse', updateNavOffset);
   }
 
   const year = document.getElementById('year');
