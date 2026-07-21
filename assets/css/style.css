@@ -418,36 +418,39 @@ body.coaching-page .coaching-credibility-row {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border-top: 1px solid rgba(215, 209, 199, 0.24);
-  border-bottom: 1px solid rgba(215, 209, 199, 0.18);
+  gap: 1rem;
 }
 
 body.coaching-page .coaching-credibility-card {
-  padding: clamp(1.15rem, 2vw, 1.8rem);
+  min-height: 100%;
+  padding: clamp(1.35rem, 2.4vw, 2rem);
+  border-radius: 1.15rem;
+  background: rgba(16, 19, 20, 0.9);
+  border: 1px solid rgba(197, 159, 89, 0.16);
   min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background: transparent;
-  border-right: 1px solid rgba(215, 209, 199, 0.14);
+  transition: border-color 250ms ease, transform 250ms ease;
 }
 
-body.coaching-page .coaching-credibility-card:last-child {
-  border-right: 0;
+body.coaching-page .coaching-credibility-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(197, 159, 89, 0.3);
 }
 
 body.coaching-page .coaching-credibility-card h3 {
   margin: 0;
   color: var(--stone);
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.35rem, 1.9vw, 1.75rem);
-  line-height: 1.22;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  line-height: 1.16;
 }
 
 body.coaching-page .coaching-credibility-card p {
-  margin: 0.6rem 0 0;
+  margin: 0.75rem 0 0;
   color: rgba(246, 243, 239, 0.78);
-  line-height: 1.72;
+  line-height: 1.74;
 }
 
 body.coaching-page .coaching-editorial-cta {
@@ -562,16 +565,11 @@ body.coaching-page .coaching-support-prose-centered {
 
   body.coaching-page .coaching-credibility-row {
     grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
 
   body.coaching-page .coaching-credibility-card {
-    padding: clamp(1.1rem, 3.4vw, 1.45rem);
-    border-right: 0;
-    border-bottom: 1px solid rgba(215, 209, 199, 0.14);
-  }
-
-  body.coaching-page .coaching-credibility-card:last-child {
-    border-bottom: 0;
+    padding: clamp(1.2rem, 4vw, 1.55rem);
   }
 
   body.coaching-page .coaching-editorial-cta {
