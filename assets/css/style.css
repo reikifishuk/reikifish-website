@@ -480,9 +480,9 @@ body.coaching-page .coaching-support-grid {
   display: grid;
   padding: 0;
   margin: 0;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.15rem, 2.3vw, 1.8rem) clamp(1rem, 2vw, 1.5rem);
-  margin-top: clamp(1.15rem, 2.4vw, 1.75rem);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: clamp(1rem, 1.9vw, 1.5rem) clamp(0.9rem, 1.8vw, 1.35rem);
+  margin-top: clamp(1rem, 2vw, 1.45rem);
 }
 
 body.coaching-page .coaching-support-item {
@@ -536,9 +536,15 @@ body.coaching-page .coaching-support-prose p + p {
 }
 
 body.coaching-page .coaching-support-prose-centered {
-  max-width: 52rem;
-  margin: clamp(1.5rem, 3vw, 2.2rem) auto 0;
+  max-width: 46rem;
+  margin: clamp(0.9rem, 1.8vw, 1.35rem) auto 0;
   text-align: center;
+}
+
+@media (max-width: 1199.98px) {
+  body.coaching-page .coaching-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -576,10 +582,6 @@ body.coaching-page .coaching-support-prose-centered {
     margin-top: clamp(0.9rem, 2.8vw, 1.25rem);
   }
 
-  body.coaching-page .coaching-support-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: clamp(1rem, 2.8vw, 1.4rem) clamp(1rem, 2.6vw, 1.3rem);
-  }
 }
 
 @media (max-width: 767.98px) {
