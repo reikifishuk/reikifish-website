@@ -2399,41 +2399,166 @@ body.home-page .hp-help-card a {
 }
 
 body.home-page .hp-book-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 48px;
-  align-items: start;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
+  display: block;
 }
 
-body.home-page .hp-book-media {
-  order: 2;
+body.home-page .grey-philosophy-layout {
   width: 100%;
-  height: clamp(420px, 32vw, 460px);
-  border-radius: 1.35rem;
-  border: 1px solid var(--border-soft);
-  background: transparent;
-  position: static;
-  overflow: hidden;
-  align-self: start;
-}
-
-body.home-page .hp-book-media img {
-  position: static;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-body.home-page .hp-book-copy {
-  order: 1;
+  max-width: 980px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: clamp(2rem, 3vw, 2.75rem);
+  background: transparent;
+}
+
+body.home-page .grey-philosophy-symbols {
+  width: min(100%, 760px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.4rem, 3vw, 3rem);
+  align-items: start;
+  justify-items: center;
+  padding-bottom: clamp(0.4rem, 1vw, 0.8rem);
+}
+
+body.home-page .grey-symbol-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+body.home-page .grey-symbol {
+  width: clamp(70px, 6vw, 90px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 164, 106, 0.42);
+  display: block;
+}
+
+body.home-page .grey-symbol-light {
+  background: linear-gradient(180deg, #f2ede4 0%, #ddd3c0 100%);
+}
+
+body.home-page .grey-symbol-centre {
+  background: linear-gradient(135deg, #b6b2ab 0%, #6b6864 48%, #232321 100%);
+  border-color: rgba(201, 164, 106, 0.32);
+}
+
+body.home-page .grey-symbol-dark {
+  background: linear-gradient(180deg, #2a2b2d 0%, #141517 100%);
+}
+
+body.home-page .grey-symbol-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+body.home-page .grey-symbol-group-focus .grey-symbol-label {
+  color: var(--gold-light);
+}
+
+body.home-page .grey-philosophy-copy {
+  width: min(100%, 780px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+body.home-page .grey-philosophy-copy .hp-heading {
+  max-width: 15ch;
+}
+
+body.home-page .grey-philosophy-intro {
+  width: min(100%, 700px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+body.home-page .grey-philosophy-intro p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+body.home-page .grey-philosophy-columns {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.8rem);
+  padding-top: clamp(0.6rem, 1vw, 0.9rem);
+}
+
+body.home-page .grey-philosophy-column {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201, 164, 106, 0.34);
+}
+
+body.home-page .grey-philosophy-column h3 {
+  margin: 0 0 1rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 2vw, 1.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text);
+}
+
+body.home-page .grey-philosophy-column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+body.home-page .grey-philosophy-column li {
+  color: var(--text-soft);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+body.home-page .grey-philosophy-column-focus h3,
+body.home-page .grey-philosophy-column-focus li {
+  color: var(--gold-light);
+}
+
+body.home-page .grey-philosophy-closing {
+  width: min(100%, 620px);
+  padding-top: clamp(0.4rem, 1vw, 0.8rem);
+  border-top: 1px solid rgba(201, 164, 106, 0.28);
+}
+
+body.home-page .grey-philosophy-closing p {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.55rem, 2.1vw, 2rem);
+  line-height: 1.15;
+  color: var(--text);
+}
+
+body.home-page .grey-philosophy-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--gold-light);
+  font-size: 0.94rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.home-page .grey-philosophy-link span {
+  transition: transform 0.3s ease;
+}
+
+body.home-page .grey-philosophy-link:hover span {
+  transform: translateX(4px);
 }
 
 body.home-page .hp-list {
@@ -2548,10 +2673,14 @@ body.home-page .hp-cta-panel {
 
 @media (max-width: 991.98px) {
   body.home-page .hp-meet-grid,
-  body.home-page .hp-book-grid,
   body.home-page .hp-speaking-grid,
   body.home-page .hp-testimonial-grid {
     grid-template-columns: 1fr;
+  }
+
+  body.home-page .grey-philosophy-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   body.home-page .hp-meet-media,
