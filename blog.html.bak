@@ -44,15 +44,30 @@
         </div>
       </nav>
 
-      <section class="container py-6 reveal">
-  <div class="text-center">
-    <p class="eyebrow">Journal</p>
-    <h1 class="display-3 fw-light mb-4">Thoughts on trauma,<br>resilience and<br>personal growth.</h1>
-    <p class="lead mx-auto" style="max-width:700px;">Essays exploring psychology, leadership, healing, resilience and the ideas behind <em>Walking the Grey</em>.</p>
-  </div>
-</section>
+      <section class="container py-6 reveal books-hero">
+        <div class="books-hero-layout">
+          <article class="books-hero-copy">
+            <p class="eyebrow">BOOK</p>
+            <h1 class="books-hero-title">Walking the Grey</h1>
+            <p class="lead-text books-hero-intro">
+              Walking the Grey explores healing, psychology, identity, resilience and the space between light and darkness, offering a reflective path for readers drawn to depth, insight and honest self-understanding.
+            </p>
+          </article>
+          <figure class="books-hero-media" aria-label="Walking the Grey official cover">
+            <img
+              src="assets/images/books/walking-the-grey-cover.png"
+              alt="Walking the Grey book cover by Andy Fish"
+              width="1224"
+              height="1776"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+    </header>
 
-<main class="container py-5">
+    <main class="container py-5">
       <section class="books-overview reveal" aria-labelledby="book-overview-title">
         <h2 class="section-heading-lg" id="book-overview-title">Book Overview</h2>
         <div class="books-overview-copy">
