@@ -462,18 +462,18 @@ body.coaching-page .coaching-support-section {
 }
 
 body.coaching-page .coaching-support-intro {
-  max-width: 68rem;
+  max-width: 72rem;
 }
 
 body.coaching-page .coaching-support-intro .section-heading-xl {
-  margin-bottom: clamp(0.75rem, 1.6vw, 1.1rem);
+  margin-bottom: clamp(0.65rem, 1.4vw, 0.95rem);
 }
 
 body.coaching-page .coaching-support-intro p {
   margin: 0;
-  max-width: 60ch;
+  max-width: 68ch;
   color: rgba(246, 243, 239, 0.84);
-  line-height: 1.82;
+  line-height: 1.85;
 }
 
 body.coaching-page .coaching-support-grid {
@@ -482,7 +482,7 @@ body.coaching-page .coaching-support-grid {
   margin: 0;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: clamp(1rem, 1.9vw, 1.5rem) clamp(0.9rem, 1.8vw, 1.35rem);
-  margin-top: clamp(1rem, 2vw, 1.45rem);
+  margin-top: clamp(0.8rem, 1.6vw, 1.1rem);
 }
 
 body.coaching-page .coaching-support-item {
@@ -526,19 +526,29 @@ body.coaching-page .coaching-support-item p {
 
 body.coaching-page .coaching-support-prose p {
   margin: 0;
-  color: rgba(246, 243, 239, 0.84);
-  line-height: 1.84;
-  max-width: 58ch;
+  color: rgba(246, 243, 239, 0.92);
+  line-height: 1.92;
+  max-width: 64ch;
+  font-size: clamp(1.05rem, 1.05vw, 1.18rem);
 }
 
 body.coaching-page .coaching-support-prose p + p {
-  margin-top: clamp(0.95rem, 1.5vw, 1.2rem);
+  margin-top: clamp(1.1rem, 1.8vw, 1.45rem);
 }
 
 body.coaching-page .coaching-support-prose-centered {
-  max-width: 46rem;
-  margin: clamp(0.9rem, 1.8vw, 1.35rem) auto 0;
+  max-width: 58rem;
+  margin: clamp(0.65rem, 1.2vw, 0.95rem) auto 0;
   text-align: center;
+}
+
+body.coaching-page .coaching-support-prose-centered p:last-child {
+  margin-top: clamp(0.35rem, 0.8vw, 0.6rem);
+  color: var(--stone);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 1199.98px) {
@@ -626,7 +636,7 @@ body.coaching-page .coaching-support-prose-centered {
   }
 
   body.coaching-page .coaching-support-prose-centered {
-    margin-top: 1.35rem;
+    margin-top: 1rem;
   }
 }
 
