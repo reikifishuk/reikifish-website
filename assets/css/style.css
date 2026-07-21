@@ -119,7 +119,7 @@ body.nav-scrolled .navbar-brand {
 .hero-section {
   position: relative;
   min-height: 100vh;
-  padding: clamp(9rem, 12vh, 12rem) 0 clamp(5rem, 8vh, 8rem);
+  padding: clamp(10rem, 13vh, 13rem) 0 clamp(5rem, 8vh, 8rem);
   overflow: hidden;
 }
 
