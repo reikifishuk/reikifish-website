@@ -84,4 +84,51 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
   }
+
+  const contactForm = document.querySelector('[data-contact-form]');
+  if (contactForm) {
+    const successMessage = document.querySelector('[data-contact-success]');
+    const submittedAtField = contactForm.querySelector('[data-submitted-at]');
+
+    contactForm.addEventListener('submit', (event) => {
+      if (!contactForm.checkValidity()) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const formData = new FormData(contactForm);
+      const submittedAt = new Date().toLocaleString('en-GB', {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      });
+
+      if (submittedAtField) {
+        submittedAtField.value = submittedAt;
+      }
+
+      const lines = [
+        ['Full Name', formData.get('Full Name')],
+        ['Email', formData.get('Email')],
+        ['Telephone', formData.get('Telephone') || ''],
+        ['Organisation', formData.get('Organisation') || ''],
+        ['Enquiry Type', formData.get('Enquiry Type')],
+        ['Message', formData.get('Message')],
+        ['Date & Time submitted', submittedAt],
+      ];
+
+      const body = lines
+        .map(([label, value]) => `${label}: ${value ?? ''}`)
+        .join('\n\n');
+
+      const mailtoUrl = `mailto:andyprouk@yahoo.com?subject=${encodeURIComponent('Website enquiry from Andy Fish website')}&body=${encodeURIComponent(body)}`;
+
+      if (successMessage) {
+        successMessage.hidden = false;
+      }
+
+      window.location.href = mailtoUrl;
+      contactForm.reset();
+    });
+  }
 });

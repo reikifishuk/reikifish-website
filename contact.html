@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="contact-page">
     <header class="inner-header">
       <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
         <div class="container-fluid">
@@ -48,23 +48,69 @@
     </header>
 
     <main class="container py-5">
-      <div class="row g-4 reveal">
-        <div class="col-lg-6">
-          <article class="info-card h-100">
-            <h2>Write to Andy</h2>
-            <p><strong>Email:</strong> hello@andyfish.co.uk</p>
-            <p><strong>Location:</strong> London • Online worldwide</p>
-            <p><strong>Response:</strong> Typically within three working days.</p>
-          </article>
+      <section class="contact-enquiry reveal" aria-labelledby="contact-enquiry-title">
+        <div class="contact-enquiry-intro">
+          <p class="eyebrow">Enquiry</p>
+          <h2 class="section-heading-lg" id="contact-enquiry-title">Let's Start the Conversation</h2>
+          <p class="lead-text">
+            Whether you're seeking trauma-informed coaching, leadership development, a speaking engagement or media collaboration, I'd love to hear from you.
+          </p>
         </div>
-        <div class="col-lg-6">
-          <article class="info-card h-100">
-            <h2>Availability</h2>
-            <p>Book events, private coaching and literary discussions are available throughout the year.</p>
-            <a class="btn btn-gold mt-3" href="mailto:hello@andyfish.co.uk">Email Andy</a>
-          </article>
-        </div>
-      </div>
+
+        <form class="contact-form" data-contact-form action="mailto:andyprouk@yahoo.com" method="post" enctype="text/plain">
+          <input type="hidden" name="Date & Time submitted" data-submitted-at />
+
+          <div class="contact-form-grid">
+            <div class="contact-field contact-field-span-2">
+              <label for="fullName">Full Name *</label>
+              <input id="fullName" name="Full Name" type="text" autocomplete="name" required />
+            </div>
+
+            <div class="contact-field contact-field-span-2">
+              <label for="emailAddress">Email Address *</label>
+              <input id="emailAddress" name="Email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="contact-field">
+              <label for="telephoneNumber">Telephone Number <span class="contact-optional">(optional)</span></label>
+              <input id="telephoneNumber" name="Telephone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="contact-field">
+              <label for="organisation">Organisation / Company <span class="contact-optional">(optional)</span></label>
+              <input id="organisation" name="Organisation" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="contact-field contact-field-span-2">
+              <label for="enquiryType">Enquiry Type *</label>
+              <select id="enquiryType" name="Enquiry Type" required>
+                <option value="" selected disabled>Select an enquiry type</option>
+                <option>Trauma-Informed Coaching</option>
+                <option>Leadership Coaching</option>
+                <option>Executive Coaching</option>
+                <option>Speaking Engagement</option>
+                <option>Podcast / Media Interview</option>
+                <option>Literary Event</option>
+                <option>Book Enquiry</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="contact-field contact-field-span-2">
+              <label for="message">Tell me a little about your enquiry...</label>
+              <textarea id="message" name="Message" rows="8" minlength="10" required></textarea>
+            </div>
+          </div>
+
+          <div class="contact-form-actions">
+            <button class="btn btn-gold" type="submit">Send Enquiry</button>
+          </div>
+        </form>
+
+        <p class="contact-success" data-contact-success hidden role="status" aria-live="polite">
+          Thank you. Your enquiry has been received and I'll respond as soon as possible.
+        </p>
+      </section>
     </main>
 
     <footer class="footer">
