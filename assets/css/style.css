@@ -3187,8 +3187,9 @@ body.home-page #how-i-help .help-editorial-grid {
 }
 
 body.home-page #how-i-help .help-editorial-card {
+  --help-card-padding: clamp(2.5rem, 3vw, 3rem);
   min-height: 100%;
-  padding: clamp(2.5rem, 3vw, 3rem);
+  padding: var(--help-card-padding);
   border-radius: 24px;
   border: 1px solid rgba(201, 164, 106, 0.35);
   background: linear-gradient(160deg, rgba(21, 25, 26, 0.96), rgba(15, 18, 19, 0.98));
@@ -3204,24 +3205,31 @@ body.home-page #how-i-help .help-editorial-card:hover {
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.24);
 }
 
-body.home-page #how-i-help .help-editorial-icon {
-  width: 34px;
-  height: 34px;
-  margin-bottom: 1.45rem;
-  color: #c9a46a;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+body.home-page #how-i-help .help-editorial-media {
+  position: relative;
+  width: calc(100% + (var(--help-card-padding) * 2));
+  height: clamp(170px, 15vw, 190px);
+  margin: calc(var(--help-card-padding) * -1) calc(var(--help-card-padding) * -1) 1.45rem;
+  overflow: hidden;
+  border-radius: 1.35rem;
+  background: linear-gradient(160deg, rgba(18, 22, 24, 0.98), rgba(10, 12, 14, 0.98));
 }
 
-body.home-page #how-i-help .help-editorial-icon svg {
+body.home-page #how-i-help .help-editorial-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7, 10, 12, 0.18) 0%, rgba(7, 10, 12, 0.38) 100%);
+  pointer-events: none;
+}
+
+body.home-page #how-i-help .help-editorial-media img {
   width: 100%;
   height: 100%;
-  stroke: currentColor;
-  stroke-width: 1.7;
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(0.82) contrast(1.02) brightness(0.9);
 }
 
 body.home-page #how-i-help .help-editorial-card h3 {
@@ -3255,10 +3263,6 @@ body.home-page #how-i-help .help-editorial-card a span {
   transition: transform 0.3s ease;
 }
 
-body.home-page #how-i-help .help-editorial-card:hover .help-editorial-icon {
-  color: #dec08c;
-}
-
 body.home-page #how-i-help .help-editorial-card:hover a span {
   transform: translateX(4px);
 }
@@ -3281,6 +3285,7 @@ body.home-page #how-i-help .help-editorial-card:hover a span {
   }
 
   body.home-page #how-i-help .help-editorial-card {
+    --help-card-padding: 2rem;
     padding: 2rem;
   }
 }
