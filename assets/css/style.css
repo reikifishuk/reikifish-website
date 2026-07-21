@@ -2257,9 +2257,11 @@ max-width:420px;
 
 body.home-page .hp-section {
   position: relative;
+  padding-bottom: clamp(2.5rem, 3.4vw, 3.25rem);
 }
 
 body.home-page .hp-section + .hp-section {
+  padding-top: clamp(2.5rem, 3.4vw, 3.25rem);
   border-top: 1px solid rgba(238, 233, 226, 0.08);
 }
 
