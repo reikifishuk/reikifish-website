@@ -1494,7 +1494,7 @@ body.home-page .site-nav .navbar-brand {
 }
 
 body.home-page .site-nav .site-logo {
-  width: clamp(12.5rem, 19.5vw, 15.8rem);
+  width: clamp(16rem, 24vw, 20rem);
 }
 
 body.home-page .site-nav .nav-link {
