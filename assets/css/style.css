@@ -425,8 +425,8 @@ body.coaching-page .coaching-credibility-card {
   min-height: 100%;
   padding: clamp(1.35rem, 2.4vw, 2rem);
   border-radius: 1.15rem;
-  background: rgba(16, 19, 20, 0.9);
-  border: 1px solid rgba(197, 159, 89, 0.16);
+  background: rgba(15, 18, 19, 0.95);
+  border: 1px solid rgba(197, 159, 89, 0.22);
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -436,7 +436,7 @@ body.coaching-page .coaching-credibility-card {
 
 body.coaching-page .coaching-credibility-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(197, 159, 89, 0.3);
+  border-color: rgba(197, 159, 89, 0.32);
 }
 
 body.coaching-page .coaching-credibility-card h3 {
@@ -491,7 +491,7 @@ body.coaching-page .coaching-support-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.35rem 0.2rem;
+  padding: 0.2rem 0.2rem 0.1rem;
 }
 
 body.coaching-page .coaching-support-icon {
@@ -501,7 +501,7 @@ body.coaching-page .coaching-support-icon {
   align-items: center;
   justify-content: center;
   color: var(--gold-soft);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
 }
 
 body.coaching-page .coaching-support-icon svg {
@@ -518,35 +518,35 @@ body.coaching-page .coaching-support-item h3 {
 }
 
 body.coaching-page .coaching-support-item p {
-  margin: 0.45rem 0 0;
+  margin: 0.3rem 0 0;
   color: rgba(246, 243, 239, 0.86);
-  line-height: 1.58;
+  line-height: 1.52;
   max-width: 24ch;
 }
 
 body.coaching-page .coaching-support-prose p {
   margin: 0;
-  color: rgba(246, 243, 239, 0.92);
-  line-height: 1.92;
-  max-width: 64ch;
-  font-size: clamp(1.05rem, 1.05vw, 1.18rem);
+  color: rgba(246, 243, 239, 0.95);
+  line-height: 2;
+  max-width: none;
+  font-size: clamp(1.1rem, 1.1vw, 1.25rem);
 }
 
 body.coaching-page .coaching-support-prose p + p {
-  margin-top: clamp(1.1rem, 1.8vw, 1.45rem);
+  margin-top: clamp(1rem, 1.7vw, 1.35rem);
 }
 
 body.coaching-page .coaching-support-prose-centered {
-  max-width: 58rem;
-  margin: clamp(0.65rem, 1.2vw, 0.95rem) auto 0;
+  max-width: 62rem;
+  margin: clamp(0.4rem, 0.9vw, 0.7rem) auto 0;
   text-align: center;
 }
 
 body.coaching-page .coaching-support-prose-centered p:last-child {
-  margin-top: clamp(0.35rem, 0.8vw, 0.6rem);
+  margin-top: clamp(0.3rem, 0.75vw, 0.5rem);
   color: var(--stone);
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+  font-size: clamp(1.22rem, 1.7vw, 1.52rem);
   font-weight: 600;
   letter-spacing: 0.01em;
 }
