@@ -653,6 +653,229 @@ body.coaching-page .coaching-support-prose-centered p:last-child {
   }
 }
 
+body.books-page .books-hero {
+  padding-top: clamp(6.6rem, 9vw, 8.3rem);
+  padding-bottom: clamp(4.2rem, 7vw, 5.6rem);
+}
+
+body.books-page .books-hero-layout {
+  display: grid;
+  grid-template-columns: 54% 46%;
+  gap: clamp(1.8rem, 4vw, 3.3rem);
+  align-items: center;
+}
+
+body.books-page .books-hero-copy {
+  max-width: 40rem;
+}
+
+body.books-page .books-hero-title {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 6vw, 5.9rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+}
+
+body.books-page .books-hero-intro {
+  margin-top: clamp(1.05rem, 2vw, 1.5rem);
+  max-width: 35rem;
+}
+
+body.books-page .books-hero-media {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+body.books-page .books-hero-media img {
+  width: min(100%, 480px);
+  height: auto;
+  border-radius: 0.35rem;
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.3);
+}
+
+body.books-page .books-overview,
+body.books-page .books-passages,
+body.books-page .books-themes,
+body.books-page .books-details {
+  margin-top: clamp(3.8rem, 6vw, 5.2rem);
+}
+
+body.books-page .books-overview-copy,
+body.books-page .books-section-head {
+  max-width: 52rem;
+}
+
+body.books-page .books-overview-copy p {
+  margin: 0;
+  color: rgba(246, 243, 239, 0.86);
+  line-height: 1.86;
+}
+
+body.books-page .books-overview-copy p + p {
+  margin-top: 1rem;
+}
+
+body.books-page .books-passages-list {
+  margin-top: clamp(1.25rem, 2.5vw, 1.9rem);
+  display: grid;
+  gap: 1rem;
+}
+
+body.books-page .passage-item {
+  margin: 0;
+  padding: clamp(1.4rem, 2.3vw, 2rem) 0;
+  border-top: 1px solid rgba(215, 209, 199, 0.18);
+}
+
+body.books-page .passage-item:last-child {
+  border-bottom: 1px solid rgba(215, 209, 199, 0.18);
+}
+
+body.books-page .passage-item blockquote {
+  margin: 0;
+  color: var(--stone);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.3rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+body.books-page .passage-item figcaption {
+  margin-top: 0.7rem;
+  color: rgba(240, 200, 142, 0.78);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+body.books-page .books-feature-grid {
+  margin-top: clamp(1.2rem, 2.5vw, 2rem);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.95rem, 2vw, 1.4rem);
+}
+
+body.books-page .books-feature {
+  padding: 1.1rem 0.15rem 1.1rem 0;
+  border-top: 1px solid rgba(215, 209, 199, 0.17);
+}
+
+body.books-page .books-feature h3 {
+  margin: 0;
+  color: var(--stone);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+}
+
+body.books-page .books-feature p {
+  margin: 0.48rem 0 0;
+  color: rgba(246, 243, 239, 0.82);
+  line-height: 1.72;
+}
+
+body.books-page .books-details-layout {
+  margin-top: clamp(1.2rem, 2.3vw, 1.8rem);
+  border-top: 1px solid rgba(215, 209, 199, 0.2);
+  border-bottom: 1px solid rgba(215, 209, 199, 0.18);
+  padding: clamp(1.45rem, 2.8vw, 2.1rem) 0;
+}
+
+body.books-page .books-meta-list {
+  margin: 0;
+}
+
+body.books-page .books-meta-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid rgba(215, 209, 199, 0.12);
+}
+
+body.books-page .books-meta-row:last-child {
+  border-bottom: 0;
+}
+
+body.books-page .books-meta-row dt {
+  margin: 0;
+  color: rgba(240, 200, 142, 0.85);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+body.books-page .books-meta-row dd {
+  margin: 0;
+  color: rgba(246, 243, 239, 0.84);
+}
+
+body.books-page .books-actions {
+  margin-top: clamp(1.2rem, 2.2vw, 1.75rem);
+}
+
+@media (max-width: 991.98px) {
+  body.books-page .books-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  body.books-page .books-hero-copy,
+  body.books-page .books-hero-intro {
+    max-width: 100%;
+  }
+
+  body.books-page .books-hero-media {
+    justify-content: flex-start;
+  }
+
+  body.books-page .books-hero-media img {
+    width: min(100%, 420px);
+  }
+
+  body.books-page .books-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.books-page .books-hero {
+    padding-top: 6.3rem;
+    padding-bottom: 3.7rem;
+  }
+
+  body.books-page .books-hero-title {
+    font-size: clamp(2.7rem, 14vw, 4.1rem);
+  }
+
+  body.books-page .books-hero-media img {
+    width: min(100%, 360px);
+  }
+
+  body.books-page .books-overview,
+  body.books-page .books-passages,
+  body.books-page .books-themes,
+  body.books-page .books-details {
+    margin-top: clamp(3rem, 8vw, 4rem);
+  }
+
+  body.books-page .books-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.books-page .books-meta-row {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  body.books-page .books-actions .btn {
+    width: 100%;
+  }
+}
+
 .py-6 { padding-top: 7rem; padding-bottom: 5rem; }
 .py-lg-6 { padding-top: 6rem; padding-bottom: 6rem; }
 .section-title {

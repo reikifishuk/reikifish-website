@@ -15,7 +15,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body>
+  <body class="books-page">
     <header class="inner-header">
       <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
         <div class="container-fluid">
@@ -41,29 +41,125 @@
         </div>
       </nav>
 
-      <section class="container py-6 reveal">
-        <p class="eyebrow">Books</p>
-        <h1 class="display-4 fw-semibold">Walking the Grey</h1>
-        <p class="lead-text">A literary work for readers drawn to reflection, psychology and the quiet architecture of change.</p>
+      <section class="container py-6 reveal books-hero">
+        <div class="books-hero-layout">
+          <article class="books-hero-copy">
+            <p class="eyebrow">BOOK</p>
+            <h1 class="books-hero-title">Walking the Grey</h1>
+            <p class="lead-text books-hero-intro">
+              Walking the Grey explores healing, psychology, identity, resilience and the space between light and darkness, offering a reflective path for readers drawn to depth, insight and honest self-understanding.
+            </p>
+          </article>
+          <figure class="books-hero-media" aria-label="Walking the Grey official cover">
+            <img
+              src="assets/images/books/walking-the-grey-cover.png"
+              alt="Official cover of Walking the Grey by Andy Fish"
+              width="1224"
+              height="1776"
+              loading="eager"
+              decoding="async"
+            />
+          </figure>
+        </div>
       </section>
     </header>
 
     <main class="container py-5">
-      <div class="row g-4 align-items-center reveal">
-        <div class="col-lg-5">
-          <div class="book-visual">
-            <img src="assets/images/walking-grey-book.webp" alt="Walking the Grey book cover" />
-          </div>
+      <section class="books-overview reveal" aria-labelledby="book-overview-title">
+        <h2 class="section-heading-lg" id="book-overview-title">Book Overview</h2>
+        <div class="books-overview-copy">
+          <p>
+            Walking the Grey is a reflective exploration of what it means to rebuild from difficult experiences without simplifying what has been lived. It moves through themes of psychology, emotional regulation and personal accountability with a tone grounded in honesty rather than spectacle.
+          </p>
+          <p>
+            Without revealing every turn, the book invites readers into the subtle work of recognising patterns, reclaiming identity and finding steadier ways to respond when life feels uncertain.
+          </p>
+          <p>
+            It is written for those who value nuance, depth and practical understanding over easy certainty.
+          </p>
         </div>
-        <div class="col-lg-7">
-          <article class="info-card h-100">
-            <h2>About the book</h2>
-            <p>Walking the Grey is an intimate study of the spaces between certainty and uncertainty. It offers reflections and insights for readers seeking depth without drama.</p>
-            <p>Each chapter moves with calm intention, revealing how stillness can become a source of wisdom rather than passivity.</p>
-            <a class="btn btn-gold mt-3" href="contact.html">Request a reader copy</a>
+      </section>
+
+      <section class="books-passages reveal" aria-labelledby="selected-passages-title">
+        <div class="books-section-head">
+          <h2 class="section-heading-lg" id="selected-passages-title">Selected Passages</h2>
+          <p class="lead-text mb-0">Placeholders below are ready to be replaced with genuine excerpts from the book.</p>
+        </div>
+        <div class="books-passages-list">
+          <figure class="passage-item">
+            <blockquote>[Excerpt placeholder from an opening chapter]</blockquote>
+            <figcaption>Chapter excerpt placeholder</figcaption>
+          </figure>
+          <figure class="passage-item">
+            <blockquote>[Excerpt placeholder exploring psychology, identity or resilience]</blockquote>
+            <figcaption>Chapter excerpt placeholder</figcaption>
+          </figure>
+          <figure class="passage-item">
+            <blockquote>[Excerpt placeholder capturing a reflective turning point]</blockquote>
+            <figcaption>Chapter excerpt placeholder</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="books-themes reveal" aria-labelledby="why-read-title">
+        <div class="books-section-head">
+          <h2 class="section-heading-lg" id="why-read-title">Why Read Walking the Grey?</h2>
+        </div>
+        <div class="books-feature-grid" role="list" aria-label="Core themes">
+          <article class="books-feature" role="listitem">
+            <h3>Healing</h3>
+            <p>A grounded perspective on recovery that respects complexity and lived experience.</p>
+          </article>
+          <article class="books-feature" role="listitem">
+            <h3>Identity</h3>
+            <p>Reflections on rebuilding a steadier sense of self through uncertainty and change.</p>
+          </article>
+          <article class="books-feature" role="listitem">
+            <h3>Psychology</h3>
+            <p>Insight into patterns, attachment and emotional processes that shape behaviour.</p>
+          </article>
+          <article class="books-feature" role="listitem">
+            <h3>Emotional resilience</h3>
+            <p>Practical awareness for responding with clarity when pressure and conflict intensify.</p>
+          </article>
+          <article class="books-feature" role="listitem">
+            <h3>Human behaviour</h3>
+            <p>A deeper understanding of relational dynamics, defence patterns and responsibility.</p>
+          </article>
+          <article class="books-feature" role="listitem">
+            <h3>Personal growth</h3>
+            <p>A measured invitation to move from reaction toward conscious, intentional response.</p>
           </article>
         </div>
-      </div>
+      </section>
+
+      <section class="books-details reveal" aria-labelledby="book-details-title">
+        <h2 class="section-heading-lg" id="book-details-title">Book Details</h2>
+        <div class="books-details-layout">
+          <dl class="books-meta-list" aria-label="Book information">
+            <div class="books-meta-row">
+              <dt>Format</dt>
+              <dd>Digital</dd>
+            </div>
+            <div class="books-meta-row">
+              <dt>Kindle Edition</dt>
+              <dd>Available on Amazon Kindle</dd>
+            </div>
+            <div class="books-meta-row">
+              <dt>Author</dt>
+              <dd>Andy Fish</dd>
+            </div>
+            <div class="books-meta-row">
+              <dt>Category</dt>
+              <dd>Psychology, personal growth and reflective memoir</dd>
+            </div>
+          </dl>
+          <div class="books-actions d-flex flex-wrap gap-3">
+            <a class="btn btn-gold" href="https://www.amazon.co.uk/Walking-Grey-Reiki-Fish-ebook/dp/B0GX2R2SW5/" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+            <a class="btn btn-outline" href="coaching.html">Explore Coaching</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
