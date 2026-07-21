@@ -3208,9 +3208,9 @@ body.home-page #how-i-help .help-editorial-card:hover {
 body.home-page #how-i-help .help-editorial-media {
   position: relative;
   width: calc(100% + (var(--help-card-padding) * 2));
-  height: clamp(130px, 11vw, 150px);
-  max-height: 150px;
-  margin: calc(var(--help-card-padding) * -1) calc(var(--help-card-padding) * -1) 1.75rem;
+  height: clamp(140px, 11.5vw, 160px);
+  max-height: 160px;
+  margin: calc(var(--help-card-padding) * -1) calc(var(--help-card-padding) * -1) clamp(1.5rem, 2vw, 1.75rem);
   overflow: hidden;
   border-radius: 1.35rem 1.35rem 0 0;
   background: linear-gradient(160deg, rgba(18, 22, 24, 0.98), rgba(10, 12, 14, 0.98));
