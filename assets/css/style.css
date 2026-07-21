@@ -2577,3 +2577,507 @@ body.home-page .hp-cta-panel {
   }
 }
 
+
+
+/* ===== Meet Andy v2 ===== */
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:90px;
+    align-items:center;
+}
+
+.intro-copy{
+    max-width:720px;
+}
+
+.intro-body{
+    margin:24px 0;
+    font-size:1.1rem;
+    line-height:1.9;
+    color:rgba(255,255,255,.72);
+}
+
+.intro-aside{
+    border:none;
+    padding:0;
+}
+
+.intro-aside img{
+    width:100%;
+    display:block;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 40px 90px rgba(0,0,0,.45);
+}
+
+.intro-stat{
+    display:none;
+}
+
+@media(max-width:992px){
+
+.intro-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+}
+
+
+/* ===== Section 2 Image Upgrade ===== */
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.05fr .95fr;
+    gap:80px;
+    align-items:center;
+}
+
+.intro-aside{
+    border:none;
+    padding:0;
+}
+
+.intro-image{
+    width:100%;
+    display:block;
+    border-radius:18px;
+    object-fit:cover;
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+@media(max-width:992px){
+    .intro-grid{
+        grid-template-columns:1fr;
+        gap:50px;
+    }
+}
+
+
+/* ===== Section 2 Editorial Image ===== */
+
+.intro-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:90px;
+    align-items:center;
+}
+
+.intro-copy{
+    max-width:720px;
+}
+
+.intro-aside{
+    border:none;
+    padding:0;
+}
+
+.intro-image{
+    width:100%;
+    border-radius:18px;
+    display:block;
+    box-shadow:0 30px 80px rgba(0,0,0,.35);
+}
+
+@media (max-width:992px){
+
+.intro-grid{
+grid-template-columns:1fr;
+gap:50px;
+}
+
+}
+
+
+/* ===== SECTION 2 REBUILD ===== */
+
+#about{
+    padding:120px 0;
+}
+
+#about .intro-grid{
+    display:grid;
+    grid-template-columns:58% 42%;
+    gap:80px;
+    align-items:center;
+}
+
+#about .intro-copy{
+    max-width:760px;
+}
+
+#about .rebuilt-title{
+    margin:20px 0 30px;
+    font-size:clamp(3.5rem,6vw,5.8rem);
+    line-height:.95;
+}
+
+#about .rebuilt-lead{
+    font-size:1.45rem;
+    color:rgba(255,255,255,.82);
+    max-width:640px;
+    margin-bottom:40px;
+}
+
+#about .intro-body{
+    font-size:1.15rem;
+    line-height:2;
+    color:rgba(255,255,255,.68);
+    margin-bottom:26px;
+}
+
+#about .intro-image-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#about .intro-image{
+    width:100%;
+    max-width:560px;
+    border-radius:24px;
+    display:block;
+    object-fit:cover;
+    box-shadow:0 40px 90px rgba(0,0,0,.45);
+}
+
+@media(max-width:1000px){
+
+#about .intro-grid{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+#about .intro-image{
+    max-width:700px;
+}
+
+}
+
+
+/* ===== Meet Andy V2 ===== */
+
+.hp-meet-grid{
+display:grid;
+grid-template-columns:58% 42%;
+gap:80px;
+align-items:center;
+}
+
+.hp-meet-copy{
+max-width:720px;
+}
+
+.hp-meet-media{
+padding:0;
+background:none;
+border:none;
+box-shadow:none;
+}
+
+.hp-meet-media img{
+width:100%;
+display:block;
+border-radius:22px;
+object-fit:cover;
+box-shadow:0 40px 90px rgba(0,0,0,.45);
+}
+
+@media(max-width:1000px){
+
+.hp-meet-grid{
+grid-template-columns:1fr;
+gap:60px;
+}
+
+}
+
+
+/* ===== Meet Andy Editorial ===== */
+
+.hp-meet{
+    position:relative;
+    overflow:visible;
+}
+
+.hp-meet-grid{
+    align-items:center;
+}
+
+.hp-meet-copy{
+    position:relative;
+    z-index:2;
+}
+
+.hp-meet-media{
+    position:relative;
+    transform:translateY(-60px);
+}
+
+.hp-meet-media img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:28px;
+    box-shadow:0 50px 120px rgba(0,0,0,.55);
+}
+
+.hp-meet-media::before{
+    content:"";
+    position:absolute;
+    left:-30px;
+    top:40px;
+    width:2px;
+    height:180px;
+    background:#c8a46a;
+}
+
+@media(max-width:992px){
+
+.hp-meet-media{
+    transform:none;
+}
+
+.hp-meet-media::before{
+    display:none;
+}
+
+}
+
+
+/* ===== How I Help V2 ===== */
+
+.hp-help-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:32px;
+}
+
+.hp-help-card{
+    padding:42px;
+    border-radius:24px;
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.hp-help-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 28px 70px rgba(0,0,0,.25);
+}
+
+.hp-help-card h3{
+    font-size:1.6rem;
+    margin-bottom:16px;
+}
+
+.hp-help-card p{
+    margin-bottom:28px;
+    line-height:1.8;
+}
+
+@media(max-width:900px){
+    .hp-help-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+
+/* ===== Meet Andy Image Layout ===== */
+
+.hp-meet-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:72px;
+    align-items:stretch;
+}
+
+.hp-meet-copy{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hp-meet-media{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    border:1px solid rgba(200,164,106,.25);
+    border-radius:28px;
+    background:rgba(255,255,255,.02);
+}
+
+.hp-meet-media img{
+    width:100%;
+    max-width:520px;
+    height:100%;
+    max-height:680px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+}
+
+@media (max-width:980px){
+
+.hp-meet-grid{
+    grid-template-columns:1fr;
+}
+
+.hp-meet-media{
+    margin-top:32px;
+}
+
+.hp-meet-media img{
+    max-height:none;
+}
+
+}
+
+
+/* ===== Meet Andy Image Fix ===== */
+
+.hp-meet-grid{
+    display:grid;
+    grid-template-columns:60% 40%;
+    gap:64px;
+    align-items:stretch;
+}
+
+.hp-meet-media{
+    display:flex;
+    align-items:stretch;
+    justify-content:center;
+    padding:0;
+    border:1px solid rgba(200,164,106,.25);
+    border-radius:24px;
+    overflow:hidden;
+    background:#111;
+}
+
+.hp-meet-media .media-image,
+.hp-meet-media img{
+    width:100%;
+    height:100%;
+    min-height:620px;
+    object-fit:cover;
+    display:block;
+}
+
+@media (max-width:960px){
+    .hp-meet-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hp-meet-media .media-image,
+    .hp-meet-media img{
+        min-height:420px;
+    }
+}
+
+
+/* ===== Meet Andy Alignment Fix ===== */
+
+.hp-meet-grid{
+    display:grid !important;
+    grid-template-columns:minmax(0,1.6fr) minmax(380px,.9fr) !important;
+    gap:56px;
+    align-items:stretch !important;
+}
+
+.hp-meet-copy{
+    height:100%;
+}
+
+.hp-meet-media{
+    display:flex;
+    align-self:stretch;
+    overflow:hidden;
+    border-radius:24px;
+    border:1px solid rgba(200,164,106,.28);
+    padding:0;
+    background:#151515;
+}
+
+.hp-meet-media img,
+.hp-meet-media .media-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+@media (max-width:960px){
+    .hp-meet-grid{
+        grid-template-columns:1fr !important;
+    }
+
+    .hp-meet-media{
+        margin-top:32px;
+        min-height:420px;
+    }
+}
+
+
+/* ===== MEET ANDY FINAL ALIGNMENT ===== */
+
+.hp-meet-grid{
+    display:grid !important;
+    grid-template-columns:58% 42% !important;
+    gap:72px !important;
+    align-items:start !important;
+}
+
+.hp-meet-copy{
+    display:block !important;
+}
+
+.hp-meet-copy .hp-panel{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    padding:0 !important;
+}
+
+.hp-kpis{
+    display:none !important;
+}
+
+.hp-meet-media{
+    margin-top:140px !important;
+    padding:0 !important;
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.hp-meet-media img,
+.hp-meet-media .media-image{
+    width:100% !important;
+    height:640px !important;
+    object-fit:cover !important;
+    border-radius:24px;
+    border:1px solid rgba(200,164,106,.25);
+    display:block;
+}
+
+.hp-meet-copy h2{
+    max-width:760px;
+}
+
+@media(max-width:992px){
+
+.hp-meet-grid{
+    grid-template-columns:1fr !important;
+}
+
+.hp-meet-media{
+    margin-top:40px !important;
+}
+
+.hp-meet-media img{
+    height:auto !important;
+}
+
+}
+
