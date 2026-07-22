@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Welcome to the Journal",
+    "slug": "welcome-to-the-journal",
+    "excerpt": "Introducing the Psychology Journal-thoughts on trauma, resilience, leadership and personal growth.",
+    "date": "2026-07-22",
+    "featured": true,
+    "categories": [
+      "Psychology",
+      "Resilience"
+    ]
+  }
+]

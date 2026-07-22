@@ -1,0 +1,1 @@
+document.getElementById('new-post')?.addEventListener('click',()=>location='editor.html');

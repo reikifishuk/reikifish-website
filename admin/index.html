@@ -1,13 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Content Admin | Andy Fish Journal</title>
-    <meta name="robots" content="noindex,nofollow" />
-  </head>
-  <body>
-    <!-- Decap CMS only; no Netlify Identity widget/script is used in this setup. -->
-    <script src="https://unpkg.com/decap-cms@^3.1.0/dist/decap-cms.js"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reiki Fish Admin</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Reiki Fish Admin</h1>
+  <span>Content Management</span>
+</header>
+
+<main class="dashboard">
+
+<div class="card">
+<h2>📝 New Article</h2>
+<p>Create a new blog post.</p>
+<button id="new-post">Open Editor</button>
+</div>
+
+<div class="card">
+<h2>📚 Articles</h2>
+<p>View and edit published posts.</p>
+<button>Manage</button>
+</div>
+
+<div class="card">
+<h2>🖼 Media</h2>
+<p>Upload and organise images.</p>
+<button>Open Library</button>
+</div>
+
+<div class="card">
+<h2>🚀 Publish</h2>
+<p>Build and publish the website.</p>
+<button>Publish</button>
+</div>
+
+</main>
+
+<script src="js/admin.js"></script>
+
+</body>
 </html>

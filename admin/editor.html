@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Article</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="topbar">
+<h1>New Article</h1>
+<a href="index.html">← Dashboard</a>
+</header>
+
+<main class="editor">
+
+<label>Title</label>
+<input id="title" type="text" placeholder="Article title">
+
+<label>Slug</label>
+<input id="slug" type="text" placeholder="generated automatically">
+
+<label>Excerpt</label>
+<textarea id="excerpt" rows="4"></textarea>
+
+<label>Article</label>
+<textarea id="content" rows="20"></textarea>
+
+<button id="save">Save Draft</button>
+<button id="publish">Publish</button>
+
+</main>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
