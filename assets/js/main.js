@@ -273,44 +273,48 @@ document.addEventListener('DOMContentLoaded', () => {
         statusMessage.textContent = 'Sending your enquiry...';
       }
 
-      fetch(contactForm.action || '/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(payload),
-      })
-        .then(async (response) => {
-          const data = await response.json().catch(() => ({}));
-          if (!response.ok) {
-            throw new Error(data.error || 'Unable to send your enquiry.');
-          }
+      try {
+        const toEmail = String(contactForm.dataset.contactEmail || '').trim();
+        if (!toEmail) {
+          throw new Error('Contact email is not configured for this form.');
+        }
 
-          contactForm.reset();
-          if (submittedAtField) {
-            submittedAtField.value = String(Date.now());
-          }
-          if (statusMessage) {
-            statusMessage.hidden = false;
-            statusMessage.textContent = data.message || "Thank you. Your enquiry has been sent successfully.";
-          }
-          Object.keys(fields).forEach((name) => clearValidation(name));
-        })
-        .catch((error) => {
-          if (statusMessage) {
-            statusMessage.hidden = false;
-            statusMessage.textContent = error.message || 'Something went wrong. Please try again.';
-          }
-        })
-        .finally(() => {
-          if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.removeAttribute('aria-busy');
-            submitButton.textContent = submitButton.dataset.originalLabel || 'Send Enquiry';
-            delete submitButton.dataset.originalLabel;
-          }
-        });
+        const subject = `Coaching Enquiry - ${payload.enquiryType || 'General Enquiry'}`;
+        const body = [
+          `Full Name: ${payload.fullName}`,
+          `Email Address: ${payload.emailAddress}`,
+          `Telephone Number: ${payload.telephoneNumber || 'Not provided'}`,
+          `Organisation: ${payload.organisation || 'Not provided'}`,
+          `Enquiry Type: ${payload.enquiryType}`,
+          '',
+          'Message:',
+          payload.message,
+        ].join('\n');
+
+        window.location.href = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        contactForm.reset();
+        if (submittedAtField) {
+          submittedAtField.value = String(Date.now());
+        }
+        if (statusMessage) {
+          statusMessage.hidden = false;
+          statusMessage.textContent = 'Your email app should now open with this enquiry pre-filled.';
+        }
+        Object.keys(fields).forEach((name) => clearValidation(name));
+      } catch (error) {
+        if (statusMessage) {
+          statusMessage.hidden = false;
+          statusMessage.textContent = error.message || 'Something went wrong. Please try again.';
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute('aria-busy');
+          submitButton.textContent = submitButton.dataset.originalLabel || 'Send Enquiry';
+          delete submitButton.dataset.originalLabel;
+        }
+      }
     });
   }
 });

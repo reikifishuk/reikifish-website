@@ -63,7 +63,14 @@
           </p>
         </div>
 
-        <form class="contact-form" data-contact-form action="/api/contact" method="post" novalidate>
+        <form
+          class="contact-form"
+          data-contact-form
+          data-contact-email="hello@reikifish.com"
+          action="mailto:hello@reikifish.com"
+          method="post"
+          novalidate
+        >
           <input type="hidden" name="submittedAtClient" data-submitted-at-client />
           <input type="hidden" name="website" value="" autocomplete="off" tabindex="-1" data-honeypot />
           <div class="contact-form-status" data-contact-status hidden role="alert" aria-live="polite"></div>
