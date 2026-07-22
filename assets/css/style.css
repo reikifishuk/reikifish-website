@@ -71,7 +71,7 @@ a { text-decoration: none; color: inherit; }
 
 .site-logo {
   display: block;
-  width: clamp(16rem, 24vw, 20rem);
+  width: clamp(13rem, 18vw, 16rem);
   height: auto;
   aspect-ratio: 1681 / 935;
   object-fit: contain;
@@ -1494,7 +1494,7 @@ body.home-page .site-nav .navbar-brand {
 }
 
 body.home-page .site-nav .site-logo {
-  width: clamp(16rem, 24vw, 20rem);
+  width: clamp(13rem, 18vw, 16rem);
 }
 
 body.home-page .site-nav .nav-link {
