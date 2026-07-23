@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>New Article</title>
 <link rel="stylesheet" href="css/admin.css">
 </head>
@@ -16,19 +16,65 @@
 <main class="editor">
 
 <label>Title</label>
-<input id="title" type="text" placeholder="Article title">
+<input id="title" type="text">
+
+<label>Meta Title <span id="meta-title-count">0/70</span></label>
+<input id="seo-title" type="text" maxlength="70" placeholder="SEO title, maximum 70 characters">
+
+<label>Meta Description <span id="meta-description-count">0/155</span></label>
+<textarea id="meta-description" rows="4" maxlength="155" placeholder="Search description, maximum 155 characters"></textarea>
 
 <label>Slug</label>
-<input id="slug" type="text" placeholder="generated automatically">
+<input id="slug" type="text">
+
+<label>Category</label>
+<select id="category">
+<option>Psychology</option>
+<option>Trauma</option>
+<option>Reiki</option>
+<option>Resilience</option>
+<option>Wellbeing</option>
+</select>
+
+<label>Featured Image</label>
+<input id="image" type="file" accept="image/*">
+
+<label>Image Alt Text</label>
+<input id="alt" type="text">
 
 <label>Excerpt</label>
-<textarea id="excerpt" rows="4"></textarea>
+<textarea id="excerpt" rows="5"></textarea>
 
-<label>Article</label>
+<label>Article (Visual editor coming next)</label>
 <textarea id="content" rows="20"></textarea>
 
+
+
+<label>Tags (comma separated)</label>
+<input id="tags" type="text" placeholder="psychology, resilience, coaching">
+
+<label>Author</label>
+<input id="author" type="text" value="Andy Fish">
+
+<label>Publish Date</label>
+<input id="date" type="date">
+
+<label>
+<input id="featured" type="checkbox">
+ Feature this article
+</label>
+
+<label>
+<input id="draft" type="checkbox">
+ Save as draft
+</label>
+
+
+<div class="actions">
+<button id="preview">Preview</button>
 <button id="save">Save Draft</button>
 <button id="publish">Publish</button>
+</div>
 
 </main>
 
