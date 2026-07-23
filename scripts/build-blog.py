@@ -20,6 +20,9 @@ for post in POSTS.glob("*.md"):
 
     meta = yaml.safe_load(front)
 
+    if meta.get("draft", False):
+        continue
+
     html = markdown.markdown(body)
 
     outfile = OUTPUT / f"{meta['slug']}.html"

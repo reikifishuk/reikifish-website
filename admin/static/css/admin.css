@@ -1,0 +1,113 @@
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#eef2ef;
+color:#24312d;
+}
+
+.topbar{
+background:#173f35;
+color:#fff;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.topbar a{
+color:#fff;
+text-decoration:none;
+}
+
+.dashboard{
+max-width:1200px;
+margin:40px auto;
+display:grid;
+grid-template-columns:repeat(2,minmax(320px,1fr));
+gap:30px;
+padding:0 20px;
+}
+
+.card{
+background:#fff;
+border-radius:14px;
+padding:30px;
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.card h2{
+margin-bottom:15px;
+}
+
+.card p{
+margin-bottom:25px;
+line-height:1.6;
+}
+
+button{
+padding:14px 22px;
+background:#2f6f5e;
+color:#fff;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#245648;
+}
+
+.editor{
+max-width:1100px;
+margin:40px auto;
+padding:40px;
+background:#fff;
+border-radius:14px;
+box-shadow:0 8px 24px rgba(0,0,0,.08);
+}
+
+.editor label{
+display:block;
+font-weight:bold;
+margin-top:24px;
+margin-bottom:8px;
+}
+
+.editor input,
+.editor select,
+.editor textarea{
+width:100%;
+padding:14px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+#content{
+min-height:600px;
+font-family:Georgia,serif;
+line-height:1.8;
+}
+
+.actions{
+display:flex;
+gap:15px;
+margin-top:30px;
+}
+
+.editor label span{float:right;font-weight:normal;font-size:14px;color:#66736f}
+
+
+input[type=checkbox]{
+width:auto;
+margin-right:10px;
+transform:scale(1.2);
+}
+
