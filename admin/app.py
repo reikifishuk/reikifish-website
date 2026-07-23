@@ -54,6 +54,32 @@ imageAlt: {data.get('imageAlt','')}
     })
 
 
+@app.route("/posts")
+def posts():
+    import yaml
+
+    posts = []
+
+    for f in sorted(POSTS.glob("*.md")):
+        raw = f.read_text(encoding="utf-8")
+
+        if not raw.startswith("---"):
+            continue
+
+        _, front, body = raw.split("---", 2)
+        meta = yaml.safe_load(front)
+
+        posts.append({
+            "title": meta.get("title",""),
+            "slug": meta.get("slug",""),
+            "draft": meta.get("draft", True),
+            "featured": meta.get("featured", False),
+            "date": str(meta.get("date",""))
+        })
+
+    return jsonify(posts)
+
+
 @app.route("/publish", methods=["POST"])
 def publish():
     data = request.get_json() or {}

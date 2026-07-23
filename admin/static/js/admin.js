@@ -108,3 +108,24 @@ document.getElementById("publish")?.addEventListener("click", async (e) => {
         alert(result.message || "Publish failed.");
     }
 });
+
+
+async function loadPosts() {
+    const res = await fetch("/posts");
+    const posts = await res.json();
+
+    const list = document.getElementById("post-list");
+    if (!list) return;
+
+    list.innerHTML = posts.map(p => `
+        <div class="post-row">
+            <strong>${p.title}</strong>
+            <small> (${p.draft ? "Draft" : "Published"})</small>
+            <button>Edit</button>
+            <button>Delete</button>
+        </div>
+    `).join("");
+}
+
+loadPosts();
+
