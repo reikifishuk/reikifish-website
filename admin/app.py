@@ -80,6 +80,50 @@ def posts():
     return jsonify(posts)
 
 
+
+@app.route("/post/<slug>")
+def get_post(slug):
+    import yaml
+
+    if not slug or slug != Path(slug).name:
+        return jsonify({"success": False, "message": "Invalid slug"}), 400
+
+    filename = POSTS / f"{slug}.md"
+
+    if not filename.exists():
+        return jsonify({"success": False, "message": "Post not found"}), 404
+
+    raw = filename.read_text(encoding="utf-8")
+
+    if not raw.startswith("---"):
+        return jsonify({"success": False, "message": "Invalid post format"}), 500
+
+    try:
+        _, front, body = raw.split("---", 2)
+    except ValueError:
+        return jsonify({"success": False, "message": "Invalid post format"}), 500
+
+    meta = yaml.safe_load(front) or {}
+
+    return jsonify({
+        "success": True,
+        "title": meta.get("title", ""),
+        "seo-title": meta.get("seo-title", ""),
+        "meta-description": meta.get("meta-description", ""),
+        "slug": meta.get("slug", slug),
+        "category": meta.get("category", ""),
+        "tags": meta.get("tags", ""),
+        "author": meta.get("author", ""),
+        "featured": meta.get("featured", False),
+        "draft": meta.get("draft", True),
+        "date": str(meta.get("date", "")),
+        "excerpt": meta.get("excerpt", ""),
+        "image": meta.get("image", ""),
+        "imageAlt": meta.get("imageAlt", meta.get("alt", "")),
+        "content": body.strip()
+    })
+
+
 @app.route("/publish", methods=["POST"])
 def publish():
     data = request.get_json() or {}

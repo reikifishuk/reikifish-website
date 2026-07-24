@@ -121,7 +121,7 @@ async function loadPosts() {
         <div class="post-row">
             <strong>${p.title}</strong>
             <small> (${p.draft ? "Draft" : "Published"})</small>
-            <button>Edit</button>
+            <button type="button" class="edit-post" data-slug="${p.slug}">Edit</button>
             <button>Delete</button>
         </div>
     `).join("");
@@ -129,3 +129,94 @@ async function loadPosts() {
 
 loadPosts();
 
+
+
+// EDIT-POST-FUNCTIONALITY
+function findEditorField(names) {
+    for (const name of names) {
+        const byId = document.getElementById(name);
+        if (byId) return byId;
+
+        const byName = document.querySelector(`[name="${name}"]`);
+        if (byName) return byName;
+    }
+
+    return null;
+}
+
+function setEditorField(names, value) {
+    const field = findEditorField(names);
+    if (!field) return;
+
+    if (field.type === "checkbox") {
+        field.checked = Boolean(value);
+        return;
+    }
+
+    if (Array.isArray(value)) {
+        field.value = value.join(", ");
+        return;
+    }
+
+    field.value = value ?? "";
+    field.dispatchEvent(new Event("input", { bubbles: true }));
+    field.dispatchEvent(new Event("change", { bubbles: true }));
+}
+
+async function loadPostForEditing() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+
+    if (!slug || !window.location.pathname.includes("/editor")) return;
+
+    try {
+        const response = await fetch(`/post/${encodeURIComponent(slug)}`);
+        const post = await response.json();
+
+        if (!response.ok || !post.success) {
+            throw new Error(post.message || "Could not load post.");
+        }
+
+        setEditorField(["title"], post.title);
+        setEditorField(["seo-title", "seoTitle"], post["seo-title"]);
+        setEditorField(
+            ["meta-description", "metaDescription"],
+            post["meta-description"]
+        );
+        setEditorField(["slug"], post.slug);
+        setEditorField(["category"], post.category);
+        setEditorField(["tags"], post.tags);
+        setEditorField(["author"], post.author);
+        setEditorField(["featured"], post.featured);
+        setEditorField(["draft"], post.draft);
+        setEditorField(["date"], post.date);
+        setEditorField(["excerpt"], post.excerpt);
+        setEditorField(["image"], post.image);
+        setEditorField(["imageAlt", "alt", "image-alt"], post.imageAlt);
+        setEditorField(["content", "body"], post.content);
+
+        document.title = `Edit: ${post.title || post.slug}`;
+    } catch (error) {
+        console.error(error);
+        alert(error.message);
+    }
+}
+
+document.addEventListener("click", event => {
+    const button = event.target.closest(".edit-post");
+    if (!button) return;
+
+    const slug = button.dataset.slug;
+    if (!slug) {
+        alert("This post has no slug.");
+        return;
+    }
+
+    window.location.href = `/editor?slug=${encodeURIComponent(slug)}`;
+});
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadPostForEditing);
+} else {
+    loadPostForEditing();
+}
