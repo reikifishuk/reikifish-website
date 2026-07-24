@@ -1,12 +1,29 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from pathlib import Path
+from werkzeug.utils import secure_filename
 from datetime import date
 import subprocess
 
 app = Flask(__name__)
 
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+ASSETS_FOLDER = PROJECT_ROOT / "assets"
+
+
+
+
+UPLOAD_FOLDER = ASSETS_FOLDER / "images" / "blog"
+UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
+
 POSTS = Path("content/posts")
 POSTS.mkdir(parents=True, exist_ok=True)
+
+
+
+@app.route("/assets/<path:filename>")
+def serve_asset(filename):
+    return send_from_directory(ASSETS_FOLDER, filename)
+
 
 @app.route("/")
 def home():
@@ -145,6 +162,7 @@ def delete_post(slug):
 
     subprocess.run(
         ["python3", "scripts/build-blog.py"],
+        cwd=Path(__file__).resolve().parent.parent,
         capture_output=True,
         text=True
     )
@@ -153,6 +171,33 @@ def delete_post(slug):
         "success": True,
         "message": "Post deleted successfully."
     })
+
+
+
+
+@app.route("/upload-image", methods=["POST"])
+def upload_image():
+
+    if "image" not in request.files:
+        return jsonify(success=False, message="No image supplied."),400
+
+    file=request.files["image"]
+
+    if file.filename=="":
+        return jsonify(success=False,message="No file selected."),400
+
+    filename=secure_filename(file.filename)
+
+    destination=UPLOAD_FOLDER/filename
+
+    file.save(destination)
+
+    return jsonify(
+        success=True,
+        filename=filename,
+        path="/assets/images/blog/" + filename
+    )
+
 
 
 @app.route("/publish", methods=["POST"])
@@ -189,6 +234,7 @@ imageAlt: {data.get('alt','')}
 
     result = subprocess.run(
         ["python3", "scripts/build-blog.py"],
+        cwd=Path(__file__).resolve().parent.parent,
         capture_output=True,
         text=True
     )

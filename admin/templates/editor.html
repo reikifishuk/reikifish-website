@@ -39,6 +39,20 @@
 <label>Featured Image</label>
 <input id="image" type="file" accept="image/*">
 
+<div id="image-info" style="margin-top:10px;display:none;">
+    <strong>Current image</strong><br>
+    <img id="image-preview"
+         style="max-width:220px;
+                max-height:160px;
+                display:block;
+                margin:10px 0;
+                border-radius:8px;
+                border:1px solid #ccc;">
+    <div id="image-filename"
+         style="font-size:.9rem;color:#666;"></div>
+    <small>Select another image at any time to replace it.</small>
+</div>
+
 <label>Image Alt Text</label>
 <input id="alt" type="text">
 

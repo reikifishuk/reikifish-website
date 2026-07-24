@@ -111,3 +111,33 @@ margin-right:10px;
 transform:scale(1.2);
 }
 
+
+
+/* ---------- Image Preview ---------- */
+
+#image-info{
+    margin-top:14px;
+    padding:14px;
+    border:1px solid #d9d9d9;
+    border-radius:10px;
+    background:#fafafa;
+}
+
+#image-preview{
+    display:block;
+    max-width:240px;
+    max-height:170px;
+    object-fit:cover;
+    border-radius:8px;
+    margin:12px 0;
+    box-shadow:0 2px 8px rgba(0,0,0,.12);
+}
+
+#image-filename{
+    font-size:.9rem;
+    font-weight:600;
+    color:#555;
+    word-break:break-word;
+    margin-bottom:8px;
+}
+

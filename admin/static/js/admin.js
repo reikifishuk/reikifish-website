@@ -1,3 +1,5 @@
+let currentImagePath = "";
+
 document.getElementById('new-post')?.addEventListener('click',()=>location='/editor');
 const seoTitle=document.getElementById('seo-title');const seoDescription=document.getElementById('meta-description');const seoTitleCount=document.getElementById('meta-title-count');const seoDescriptionCount=document.getElementById('meta-description-count');function updateSeoCounts(){if(seoTitleCount&&seoTitle)seoTitleCount.textContent=seoTitle.value.length+'/70';if(seoDescriptionCount&&seoDescription)seoDescriptionCount.textContent=seoDescription.value.length+'/155';}seoTitle?.addEventListener('input',updateSeoCounts);seoDescription?.addEventListener('input',updateSeoCounts);updateSeoCounts();
 
@@ -45,9 +47,7 @@ document.getElementById("save")?.addEventListener("click", async (e) => {
         featured: document.getElementById("featured").checked,
         draft: isDraft,
         excerpt: document.getElementById("excerpt").value,
-        image: document.getElementById("image").files.length
-            ? document.getElementById("image").files[0].name
-            : "",
+        image: currentImagePath,
         alt: document.getElementById("alt").value,
         content: document.getElementById("content").value
     };
@@ -84,9 +84,7 @@ document.getElementById("publish")?.addEventListener("click", async (e) => {
         featured: document.getElementById("featured").checked,
         draft: false,
         excerpt: document.getElementById("excerpt").value,
-        image: document.getElementById("image").files.length
-            ? document.getElementById("image").files[0].name
-            : "",
+        image: currentImagePath,
         alt: document.getElementById("alt").value,
         content: document.getElementById("content").value,
         date: document.getElementById("date")?.value || ""
@@ -191,7 +189,23 @@ async function loadPostForEditing() {
         setEditorField(["draft"], post.draft);
         setEditorField(["date"], post.date);
         setEditorField(["excerpt"], post.excerpt);
-        setEditorField(["image"], post.image);
+        const imageInput = document.getElementById("image");
+        if (imageInput) {
+            imageInput.value = "";
+            currentImagePath = post.image || "";
+            currentImagePath = post.image || "";
+            imageInput.dataset.filename = currentImagePath;
+
+            const info = document.getElementById("image-info");
+            const preview = document.getElementById("image-preview");
+            const filename = document.getElementById("image-filename");
+
+            if (post.image) {
+                info.style.display = "block";
+                preview.src = currentImagePath;
+                filename.textContent = post.image.split("/").pop();
+            }
+        }
         setEditorField(["imageAlt", "alt", "image-alt"], post.imageAlt);
         setEditorField(["content", "body"], post.content);
 
@@ -246,3 +260,56 @@ if (document.readyState === "loading") {
 } else {
     loadPostForEditing();
 }
+
+
+// IMAGE-UPLOAD
+document.getElementById("image")?.addEventListener("change", async event => {
+
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+
+        const response = await fetch("/upload-image", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (!result.success) {
+            alert(result.message || "Upload failed.");
+            return;
+        }
+
+        const alt = document.getElementById("alt");
+
+        currentImagePath = result.path;
+        currentImagePath = result.path || "";
+        event.target.dataset.filename = currentImagePath;
+
+        if (alt && !alt.value.trim()) {
+            alt.value = file.name.replace(/\.[^.]+$/, "");
+        }
+
+
+        const info=document.getElementById("image-info");
+        const preview=document.getElementById("image-preview");
+        const filename=document.getElementById("image-filename");
+
+        if(info) info.style.display="block";
+        if (preview) preview.src = currentImagePath;
+        if(filename) filename.textContent = result.filename || currentImagePath.split("/").pop();
+
+        alert("Image uploaded successfully.");
+
+
+    } catch (err) {
+        console.error(err);
+        alert("Image upload failed.");
+    }
+
+});
