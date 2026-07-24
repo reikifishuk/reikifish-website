@@ -122,7 +122,7 @@ async function loadPosts() {
             <strong>${p.title}</strong>
             <small> (${p.draft ? "Draft" : "Published"})</small>
             <button type="button" class="edit-post" data-slug="${p.slug}">Edit</button>
-            <button>Delete</button>
+            <button type="button" class="delete-post" data-slug="${p.slug}">Delete</button>
         </div>
     `).join("");
 }
@@ -214,6 +214,32 @@ document.addEventListener("click", event => {
 
     window.location.href = `/editor?slug=${encodeURIComponent(slug)}`;
 });
+
+document.addEventListener("click", async event => {
+    const button = event.target.closest(".delete-post");
+    if (!button) return;
+
+    const slug = button.dataset.slug;
+
+    if (!confirm(`Delete "${slug}"? This cannot be undone.`))
+        return;
+
+    const response = await fetch(`/delete/${encodeURIComponent(slug)}`, {
+        method: "DELETE"
+    });
+
+    const result = await response.json();
+
+    if (!result.success) {
+        alert(result.message || "Delete failed.");
+        return;
+    }
+
+    alert(result.message);
+
+    loadPosts();
+});
+
 
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", loadPostForEditing);

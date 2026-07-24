@@ -124,6 +124,37 @@ def get_post(slug):
     })
 
 
+
+@app.route("/delete/<slug>", methods=["DELETE"])
+def delete_post(slug):
+    if not slug or slug != Path(slug).name:
+        return jsonify({
+            "success": False,
+            "message": "Invalid slug"
+        }), 400
+
+    filename = POSTS / f"{slug}.md"
+
+    if not filename.exists():
+        return jsonify({
+            "success": False,
+            "message": "Post not found"
+        }), 404
+
+    filename.unlink()
+
+    subprocess.run(
+        ["python3", "scripts/build-blog.py"],
+        capture_output=True,
+        text=True
+    )
+
+    return jsonify({
+        "success": True,
+        "message": "Post deleted successfully."
+    })
+
+
 @app.route("/publish", methods=["POST"])
 def publish():
     data = request.get_json() or {}
