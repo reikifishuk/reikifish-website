@@ -363,3 +363,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof EasyMDE === "undefined") return;
+
+    const textarea = document.querySelector("#content");
+    if (!textarea) return;
+
+    if (window.easyMDE) return;
+
+    window.easyMDE = new EasyMDE({
+        element: textarea,
+        spellChecker: false,
+        status: ["words", "lines"],
+        sideBySideFullscreen: false
+    });
+});
