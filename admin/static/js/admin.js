@@ -313,3 +313,63 @@ document.getElementById("image")?.addEventListener("change", async event => {
     }
 
 });
+
+async function loadMediaLibrary() {
+    const panel = document.getElementById("media-library");
+    const grid = document.getElementById("media-grid");
+
+    if (!panel || !grid) return;
+
+    panel.style.display = "block";
+    grid.innerHTML = "<p>Loading...</p>";
+
+    try {
+        const res = await fetch("/media");
+        const images = await res.json();
+
+        grid.innerHTML = "";
+
+        if (!images.length) {
+            grid.innerHTML = "<p>No uploaded images found.</p>";
+            return;
+        }
+
+        images.forEach(img => {
+            const card = document.createElement("div");
+            card.style.cursor = "pointer";
+            card.style.padding = "6px";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "6px";
+            card.style.textAlign = "center";
+
+            card.innerHTML = `
+                <img src="${img.path}" style="width:100%;height:90px;object-fit:cover;">
+                <div style="margin-top:6px;font-size:12px;">${img.name}</div>
+            `;
+
+            card.onclick = () => {
+                currentImagePath = img.path;
+
+                document.getElementById("image-preview").src = img.path;
+                document.getElementById("image-filename").textContent = img.name;
+                document.getElementById("image-info").style.display = "block";
+
+                panel.style.display = "none";
+            };
+
+            grid.appendChild(card);
+        });
+
+    } catch (e) {
+        grid.innerHTML = "<p>Failed to load media.</p>";
+        console.error(e);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("open-media");
+    if (btn) {
+        btn.addEventListener("click", loadMediaLibrary);
+    }
+});
+

@@ -175,6 +175,42 @@ def delete_post(slug):
 
 
 
+
+
+@app.route("/media")
+def media():
+    images = []
+
+    image_dir = Path(__file__).resolve().parent.parent / "assets" / "images" / "blog"
+    image_dir.mkdir(parents=True, exist_ok=True)
+
+    for ext in ("*.png","*.jpg","*.jpeg","*.webp","*.gif","*.svg"):
+        for f in sorted(image_dir.glob(ext)):
+            images.append({
+                "name": f.name,
+                "path": "/assets/images/blog/" + f.name
+            })
+
+    return jsonify(images)
+
+
+@app.route("/delete-image", methods=["POST"])
+def delete_image():
+    data = request.get_json()
+
+    if not data or "name" not in data:
+        return jsonify(success=False)
+
+    target = Path(__file__).resolve().parent.parent / "assets" / "images" / "blog" / data["name"]
+
+    if target.exists():
+        target.unlink()
+
+    return jsonify(success=True)
+
+
+
+
 @app.route("/upload-image", methods=["POST"])
 def upload_image():
 
