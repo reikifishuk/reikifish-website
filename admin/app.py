@@ -9,21 +9,15 @@ app = Flask(__name__)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ASSETS_FOLDER = PROJECT_ROOT / "assets"
 
-
-
-
 UPLOAD_FOLDER = ASSETS_FOLDER / "images" / "blog"
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 
 POSTS = Path("content/posts")
 POSTS.mkdir(parents=True, exist_ok=True)
 
-
-
 @app.route("/assets/<path:filename>")
 def serve_asset(filename):
     return send_from_directory(ASSETS_FOLDER, filename)
-
 
 @app.route("/")
 def home():
@@ -70,7 +64,6 @@ imageAlt: {data.get('imageAlt','')}
         "file": str(filename)
     })
 
-
 @app.route("/posts")
 def posts():
     import yaml
@@ -95,8 +88,6 @@ def posts():
         })
 
     return jsonify(posts)
-
-
 
 @app.route("/post/<slug>")
 def get_post(slug):
@@ -140,8 +131,6 @@ def get_post(slug):
         "content": body.strip()
     })
 
-
-
 @app.route("/delete/<slug>", methods=["DELETE"])
 def delete_post(slug):
     if not slug or slug != Path(slug).name:
@@ -172,11 +161,6 @@ def delete_post(slug):
         "message": "Post deleted successfully."
     })
 
-
-
-
-
-
 @app.route("/media")
 def media():
     images = []
@@ -193,7 +177,6 @@ def media():
 
     return jsonify(images)
 
-
 @app.route("/delete-image", methods=["POST"])
 def delete_image():
     data = request.get_json()
@@ -207,9 +190,6 @@ def delete_image():
         target.unlink()
 
     return jsonify(success=True)
-
-
-
 
 @app.route("/upload-image", methods=["POST"])
 def upload_image():
@@ -233,8 +213,6 @@ def upload_image():
         filename=filename,
         path="/assets/images/blog/" + filename
     )
-
-
 
 @app.route("/publish", methods=["POST"])
 def publish():

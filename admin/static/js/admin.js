@@ -3,7 +3,6 @@ let currentImagePath = "";
 document.getElementById('new-post')?.addEventListener('click',()=>location='/editor');
 const seoTitle=document.getElementById('seo-title');const seoDescription=document.getElementById('meta-description');const seoTitleCount=document.getElementById('meta-title-count');const seoDescriptionCount=document.getElementById('meta-description-count');function updateSeoCounts(){if(seoTitleCount&&seoTitle)seoTitleCount.textContent=seoTitle.value.length+'/70';if(seoDescriptionCount&&seoDescription)seoDescriptionCount.textContent=seoDescription.value.length+'/155';}seoTitle?.addEventListener('input',updateSeoCounts);seoDescription?.addEventListener('input',updateSeoCounts);updateSeoCounts();
 
-
 const title=document.getElementById("title");
 const slug=document.getElementById("slug");
 
@@ -29,7 +28,6 @@ slug?.addEventListener("input",()=>{
 slug.dataset.edited="true";
 
 });
-
 
 document.getElementById("save")?.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -69,7 +67,6 @@ document.getElementById("save")?.addEventListener("click", async (e) => {
     }
 });
 
-
 document.getElementById("publish")?.addEventListener("click", async (e) => {
     e.preventDefault();
 
@@ -107,7 +104,6 @@ document.getElementById("publish")?.addEventListener("click", async (e) => {
     }
 });
 
-
 async function loadPosts() {
     const res = await fetch("/posts");
     const posts = await res.json();
@@ -126,8 +122,6 @@ async function loadPosts() {
 }
 
 loadPosts();
-
-
 
 // EDIT-POST-FUNCTIONALITY
 function findEditorField(names) {
@@ -254,13 +248,11 @@ document.addEventListener("click", async event => {
     loadPosts();
 });
 
-
 if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", loadPostForEditing);
 } else {
     loadPostForEditing();
 }
-
 
 // IMAGE-UPLOAD
 document.getElementById("image")?.addEventListener("change", async event => {
@@ -295,7 +287,6 @@ document.getElementById("image")?.addEventListener("change", async event => {
             alt.value = file.name.replace(/\.[^.]+$/, "");
         }
 
-
         const info=document.getElementById("image-info");
         const preview=document.getElementById("image-preview");
         const filename=document.getElementById("image-filename");
@@ -305,7 +296,6 @@ document.getElementById("image")?.addEventListener("change", async event => {
         if(filename) filename.textContent = result.filename || currentImagePath.split("/").pop();
 
         alert("Image uploaded successfully.");
-
 
     } catch (err) {
         console.error(err);
