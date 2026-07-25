@@ -268,3 +268,109 @@ featuredImageAlt: {data.get('alt','')}
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
+
+@app.route("/upload-image", methods=["POST"])
+def upload_image():
+
+    if "image" not in request.files:
+        return {"error":"No image supplied"},400
+
+    image=request.files["image"]
+
+    alt=request.form.get("alt","").strip()
+
+    if not alt:
+        return {"error":"Alt text is required."},400
+
+    caption=request.form.get("caption","").strip()
+
+    os.makedirs("images/blog",exist_ok=True)
+
+    filename=secure_filename(image.filename)
+
+    dest=os.path.join("images/blog",filename)
+
+    image.save(dest)
+
+    return {
+        "success":True,
+        "url":"/images/blog/"+filename,
+        "filename":filename,
+        "alt":alt,
+        "caption":caption
+    }
+
+
+
+@app.route("/media/upload",methods=["POST"])
+def media_upload():
+
+    if "image" not in request.files:
+        return {"error":"No image"},400
+
+    image=request.files["image"]
+
+    alt=request.form.get("alt","").strip()
+
+    caption=request.form.get("caption","").strip()
+
+    if not alt:
+        return {"error":"Image Alt Text is required"},400
+
+    stem=request.form.get("filename","").strip()
+
+    if not stem:
+        stem=Path(image.filename).stem
+
+    stem=secure_filename(stem.lower())
+
+    ext=Path(image.filename).suffix.lower()
+
+    filename=f"{stem}{ext}"
+
+    folder=Path("images/blog")
+
+    folder.mkdir(parents=True,exist_ok=True)
+
+    i=2
+
+    while (folder/filename).exists():
+
+        filename=f"{stem}-{i}{ext}"
+
+        i+=1
+
+    image.save(folder/filename)
+
+    db=Path("media/library.json")
+
+    library=json.loads(db.read_text())
+
+    record={
+
+        "filename":filename,
+
+        "url":"/images/blog/"+filename,
+
+        "alt":alt,
+
+        "caption":caption,
+
+        "uploaded":datetime.utcnow().isoformat()
+
+    }
+
+    library.append(record)
+
+    db.write_text(json.dumps(library,indent=2))
+
+    return record
+
+@app.route("/media/library")
+def media_library():
+
+    db=Path("media/library.json")
+
+    return json.loads(db.read_text())
+

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reiki Fish Admin</title>
-<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
 </head>
 <body>
 
@@ -39,9 +39,14 @@
 <button>Publish</button>
 </div>
 
+
+<h2>Posts</h2>
+<div id="post-list"></div>
+
 </main>
 
-<script src="js/admin.js"></script>
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
 
 </body>
 </html>
