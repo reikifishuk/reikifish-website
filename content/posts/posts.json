@@ -1,1 +1,58 @@
-[]
+{
+  "items": [
+    {
+      "title": "435435",
+      "slug": "435435",
+      "url": "articles/435435.html",
+      "date": "2026-07-25",
+      "dateLabel": "25 July 2026",
+      "author": "Andy Fish",
+      "excerpt": "3454353",
+      "category": "Psychology",
+      "categories": [
+        "Psychology"
+      ],
+      "tags": [],
+      "image": "/assets/images/blog/31949491-62d4-47f9-b21a-96de82eb4ea3-md.jpeg",
+      "imageAlt": "345435",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "title": "test",
+      "slug": "test",
+      "url": "articles/test.html",
+      "date": "2026-07-25",
+      "dateLabel": "25 July 2026",
+      "author": "Andy Fish",
+      "excerpt": "sdfsdfsdf",
+      "category": "- Trauma",
+      "categories": [
+        "- Trauma"
+      ],
+      "tags": [],
+      "image": "/assets/images/blog/discord.png",
+      "imageAlt": "discord",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
+      "title": "werwerwerwe",
+      "slug": "werwerwerwe",
+      "url": "articles/werwerwerwe.html",
+      "date": "2026-07-25",
+      "dateLabel": "25 July 2026",
+      "author": "Andy Fish",
+      "excerpt": "werwerwerwerw",
+      "category": "- Psychology",
+      "categories": [
+        "- Psychology"
+      ],
+      "tags": [],
+      "image": "/assets/images/blog/ChatGPT_Image_May_30_2026_12_24_04_PM.png",
+      "imageAlt": "ChatGPT Image May 30, 2026, 12_24_04 PM",
+      "readingTime": "1 min read",
+      "featured": false
+    }
+  ]
+}

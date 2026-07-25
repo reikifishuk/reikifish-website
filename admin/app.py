@@ -40,18 +40,18 @@ def save_draft():
 
     markdown = f"""---
 title: {data.get('title','')}
-seo-title: {data.get('seo-title','')}
-meta-description: {data.get('meta-description','')}
+seoTitle: {data.get('seo-title','')}
+metaDescription: {data.get('meta-description','')}
 slug: {slug}
-category: {data.get('category','')}
+categories: {data.get('category','')}
 tags: {data.get('tags','')}
 author: {data.get('author','')}
 featured: {str(data.get('featured', False)).lower()}
 draft: {str(data.get('draft', True)).lower()}
 date: {date.today()}
 excerpt: {data.get('excerpt','')}
-image: {data.get('image','')}
-imageAlt: {data.get('imageAlt','')}
+featuredImage: {data.get('image','')}
+featuredImageAlt: {data.get('imageAlt','')}
 ---
 
 {data.get('content','')}
@@ -150,7 +150,7 @@ def delete_post(slug):
     filename.unlink()
 
     subprocess.run(
-        ["python3", "scripts/build-blog.py"],
+        ["node", "scripts/build-blog.js"],
         cwd=Path(__file__).resolve().parent.parent,
         capture_output=True,
         text=True
@@ -227,18 +227,18 @@ def publish():
 
     markdown = f"""---
 title: {data.get('title','')}
-seo-title: {data.get('seo-title','')}
-meta-description: {data.get('meta-description','')}
+seoTitle: {data.get('seo-title','')}
+metaDescription: {data.get('meta-description','')}
 slug: {slug}
-category: {data.get('category','')}
+categories: {data.get('category','')}
 tags: {data.get('tags','')}
 author: {data.get('author','')}
 featured: {str(data.get('featured', False)).lower()}
 draft: false
 date: {data.get('date') or date.today()}
 excerpt: {data.get('excerpt','')}
-image: {data.get('image','')}
-imageAlt: {data.get('alt','')}
+featuredImage: {data.get('image','')}
+featuredImageAlt: {data.get('alt','')}
 ---
 
 {data.get('content','')}
@@ -247,7 +247,7 @@ imageAlt: {data.get('alt','')}
     filename.write_text(markdown, encoding="utf-8")
 
     result = subprocess.run(
-        ["python3", "scripts/build-blog.py"],
+        ["node", "scripts/build-blog.js"],
         cwd=Path(__file__).resolve().parent.parent,
         capture_output=True,
         text=True
