@@ -2,6 +2,7 @@ from pathlib import Path
 import yaml
 import markdown
 import json
+from jinja2 import Template
 
 POSTS = Path("content/posts")
 OUTPUT = Path("blog/posts")
@@ -47,3 +48,15 @@ Path("build/posts.json").write_text(
 
 print(f"Generated {len(posts)} posts")
 print("Created build/posts.json")
+
+
+template = Template(
+    Path("templates/blog-index.html").read_text(encoding="utf-8")
+)
+
+Path("blog/index.html").write_text(
+    template.render(posts=posts),
+    encoding="utf-8"
+)
+
+print("Created blog/index.html")
