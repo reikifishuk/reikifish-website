@@ -214,6 +214,113 @@ def upload_image():
         path="/assets/images/blog/" + filename
     )
 
+
+# CMS_COMPLETE_PUBLISH_START
+@app.route("/publish-complete", methods=["POST"])
+def publish_complete():
+    import json
+    import re
+    import subprocess
+    from datetime import date
+    from pathlib import Path
+    from werkzeug.utils import secure_filename
+
+    repo_root = Path(__file__).resolve().parent.parent
+    posts_dir = repo_root / "content" / "posts"
+    images_dir = repo_root / "assets" / "images" / "blog"
+
+    posts_dir.mkdir(parents=True, exist_ok=True)
+    images_dir.mkdir(parents=True, exist_ok=True)
+
+    title = (request.form.get("title") or "").strip()
+    slug = (request.form.get("slug") or "").strip()
+
+    if not title:
+        return jsonify({"success": False, "message": "Title is required."}), 400
+
+    if not slug:
+        slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+    if not slug:
+        return jsonify({"success": False, "message": "A valid slug is required."}), 400
+
+    existing_post = posts_dir / f"{slug}.md"
+    existing_image = (request.form.get("existingImage") or "").strip()
+    image_path = existing_image
+
+    upload = request.files.get("image")
+
+    if upload and upload.filename:
+        original = secure_filename(upload.filename)
+        stem = Path(original).stem or slug
+        suffix = Path(original).suffix.lower() or ".jpg"
+
+        allowed = {".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif"}
+        if suffix not in allowed:
+            return jsonify({
+                "success": False,
+                "message": "Please use JPG, PNG, WEBP, GIF or AVIF."
+            }), 400
+
+        filename = f"{slug}-{stem}{suffix}"
+        destination = images_dir / filename
+        counter = 2
+
+        while destination.exists():
+            filename = f"{slug}-{stem}-{counter}{suffix}"
+            destination = images_dir / filename
+            counter += 1
+
+        upload.save(destination)
+        image_path = f"assets/images/blog/{filename}"
+
+    def yaml_string(value):
+        return json.dumps(str(value or ""), ensure_ascii=False)
+
+    markdown = f"""---
+title: {yaml_string(title)}
+seoTitle: {yaml_string(request.form.get("seoTitle") or title)}
+metaDescription: {yaml_string(request.form.get("metaDescription") or request.form.get("excerpt"))}
+slug: {yaml_string(slug)}
+categories: {yaml_string(request.form.get("category"))}
+tags: {yaml_string(request.form.get("tags"))}
+author: {yaml_string(request.form.get("author") or "Reiki Fish")}
+featured: {str((request.form.get("featured") or "").lower() == "true").lower()}
+draft: false
+date: {yaml_string(request.form.get("date") or date.today().isoformat())}
+excerpt: {yaml_string(request.form.get("excerpt"))}
+featuredImage: {yaml_string(image_path)}
+featuredImageAlt: {yaml_string(request.form.get("imageAlt"))}
+---
+
+{request.form.get("content") or ""}
+"""
+
+    existing_post.write_text(markdown, encoding="utf-8")
+
+    result = subprocess.run(
+        ["node", "scripts/build-blog.js"],
+        cwd=repo_root,
+        capture_output=True,
+        text=True
+    )
+
+    if result.returncode != 0:
+        return jsonify({
+            "success": False,
+            "message": "Post was saved, but the site build failed.",
+            "error": result.stderr
+        }), 500
+
+    return jsonify({
+        "success": True,
+        "message": "Article published successfully.",
+        "file": str(existing_post),
+        "image": image_path,
+        "url": f"/articles/{slug}.html"
+    })
+# CMS_COMPLETE_PUBLISH_END
+
 @app.route("/publish", methods=["POST"])
 def publish():
     data = request.get_json() or {}

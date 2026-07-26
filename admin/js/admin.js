@@ -1,19 +1,7 @@
-document.getElementById("new-post")?.addEventListener("click", () => {
-  location.href = "editor.html";
-});
+const byId = id => document.getElementById(id);
+const value = id => byId(id)?.value?.trim() || "";
 
-const byId = (id) => document.getElementById(id);
-const value = (id) => byId(id)?.value?.trim() || "";
-const checked = (id) => Boolean(byId(id)?.checked);
-
-const title = byId("title");
-const slug = byId("slug");
-const seoTitle = byId("seo-title");
-const seoDescription = byId("meta-description");
-const seoTitleCount = byId("meta-title-count");
-const seoDescriptionCount = byId("meta-description-count");
-
-function makeSlug(text) {
+function slugify(text) {
   return String(text || "")
     .toLowerCase()
     .trim()
@@ -22,255 +10,151 @@ function makeSlug(text) {
     .replace(/^-+|-+$/g, "");
 }
 
-function updateSeoCounts() {
-  if (seoTitleCount && seoTitle) {
-    seoTitleCount.textContent = `${seoTitle.value.length}/70`;
-  }
-
-  if (seoDescriptionCount && seoDescription) {
-    seoDescriptionCount.textContent = `${seoDescription.value.length}/155`;
-  }
-}
+const title = byId("title");
+const slug = byId("slug");
+const seoTitle = byId("seo-title");
+const metaDescription = byId("meta-description");
 
 title?.addEventListener("input", () => {
   if (slug?.dataset.edited === "true") return;
-  if (slug) slug.value = makeSlug(title.value);
+  if (slug) slug.value = slugify(title.value);
 });
 
 slug?.addEventListener("input", () => {
   slug.dataset.edited = "true";
 });
 
-seoTitle?.addEventListener("input", updateSeoCounts);
-seoDescription?.addEventListener("input", updateSeoCounts);
-updateSeoCounts();
+function updateCounts() {
+  const titleCount = byId("meta-title-count");
+  const descriptionCount = byId("meta-description-count");
 
-function editorContent() {
-  if (window.tinymce?.get("content")) {
-    return window.tinymce.get("content").getContent();
+  if (titleCount) titleCount.textContent = `${seoTitle?.value.length || 0}/70`;
+  if (descriptionCount) {
+    descriptionCount.textContent = `${metaDescription?.value.length || 0}/155`;
   }
-
-  return byId("content")?.value || "";
 }
 
-function normaliseImagePath(path) {
-  return String(path || "")
-    .trim()
-    .replace(/^https?:\/\/[^/]+/i, "")
-    .replace(/^\/+/, "")
-    .replace(/^images\/blog\//, "assets/images/blog/");
+seoTitle?.addEventListener("input", updateCounts);
+metaDescription?.addEventListener("input", updateCounts);
+updateCounts();
+
+function content() {
+  const editor = window.tinymce?.get("content");
+  return editor ? editor.getContent() : byId("content")?.value || "";
 }
 
-async function uploadFeaturedImage() {
-  const input = byId("image");
-  const file = input?.files?.[0];
+function setBusy(button, busy, text) {
+  if (!button) return;
 
-  if (!file) {
-    return normaliseImagePath(
-      input?.dataset?.currentImage ||
-      byId("featured-image")?.value ||
-      ""
-    );
+  if (busy) {
+    button.dataset.oldText = button.textContent;
+    button.textContent = text;
+    button.disabled = true;
+  } else {
+    button.textContent = button.dataset.oldText || button.textContent;
+    button.disabled = false;
   }
-
-  const endpoints = [
-    "/media/upload",
-    "/upload-image",
-    "/upload"
-  ];
-
-  let lastError = "Image upload endpoint was not found.";
-
-  for (const endpoint of endpoints) {
-    try {
-      const form = new FormData();
-      form.append("image", file);
-      form.append("file", file);
-      form.append("alt", value("alt"));
-      form.append("caption", "");
-
-      const response = await fetch(endpoint, {
-        method: "POST",
-        body: form
-      });
-
-      if (!response.ok) {
-        lastError = `${endpoint}: HTTP ${response.status}`;
-        continue;
-      }
-
-      const result = await response.json();
-      const imagePath =
-        result.url ||
-        result.path ||
-        result.image ||
-        result.filename ||
-        "";
-
-      if (!imagePath) {
-        lastError = `${endpoint}: upload succeeded but returned no image path`;
-        continue;
-      }
-
-      if (result.filename && !String(imagePath).includes("/")) {
-        return `assets/images/blog/${result.filename}`;
-      }
-
-      return normaliseImagePath(imagePath);
-    } catch (error) {
-      lastError = `${endpoint}: ${error.message}`;
-    }
-  }
-
-  throw new Error(lastError);
 }
 
-async function collectPostData(uploadImage = true) {
-  const postSlug = value("slug") || makeSlug(value("title"));
+async function publishPost() {
+  const postTitle = value("title");
+  const postSlug = value("slug") || slugify(postTitle);
 
-  if (!value("title")) {
-    throw new Error("A post title is required.");
-  }
-
-  if (!postSlug) {
-    throw new Error("A valid slug is required.");
-  }
+  if (!postTitle) throw new Error("Enter a title.");
+  if (!postSlug) throw new Error("Enter a valid slug.");
 
   if (slug) slug.value = postSlug;
 
-  const image = uploadImage
-    ? await uploadFeaturedImage()
-    : normaliseImagePath(
-        byId("image")?.dataset?.currentImage ||
-        byId("featured-image")?.value ||
-        ""
-      );
+  const form = new FormData();
 
-  return {
-    title: value("title"),
-    "seo-title": value("seo-title") || value("title"),
-    "meta-description": value("meta-description") || value("excerpt"),
-    slug: postSlug,
-    category: value("category"),
-    categories: value("category"),
-    tags: value("tags"),
-    author: value("author") || "Reiki Fish",
-    featured: checked("featured"),
-    excerpt: value("excerpt"),
-    date: value("date") || new Date().toISOString().slice(0, 10),
-    image,
-    featuredImage: image,
-    alt: value("alt"),
-    imageAlt: value("alt"),
-    featuredImageAlt: value("alt"),
-    content: editorContent()
-  };
-}
+  form.append("title", postTitle);
+  form.append("slug", postSlug);
+  form.append("seoTitle", value("seo-title") || postTitle);
+  form.append("metaDescription", value("meta-description") || value("excerpt"));
+  form.append("category", value("category"));
+  form.append("tags", value("tags"));
+  form.append("author", value("author") || "Reiki Fish");
+  form.append("featured", String(Boolean(byId("featured")?.checked)));
+  form.append("excerpt", value("excerpt"));
+  form.append("date", value("date"));
+  form.append("imageAlt", value("alt"));
+  form.append("existingImage", byId("image")?.dataset.currentImage || "");
+  form.append("content", content());
 
-async function sendPost(endpoint, data) {
-  const response = await fetch(endpoint, {
+  const image = byId("image")?.files?.[0];
+  if (image) form.append("image", image);
+
+  const response = await fetch("/publish-complete", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
+    body: form
   });
 
-  let result;
+  const result = await response.json().catch(() => ({}));
 
-  try {
-    result = await response.json();
-  } catch {
-    result = {};
-  }
-
-  if (!response.ok || result.success === false) {
-    throw new Error(
-      result.message ||
-      result.error ||
-      `Request failed with HTTP ${response.status}`
-    );
+  if (!response.ok || !result.success) {
+    throw new Error(result.message || result.error || `HTTP ${response.status}`);
   }
 
   return result;
 }
 
-function setBusy(button, busy, busyText) {
-  if (!button) return;
-
-  if (busy) {
-    button.dataset.originalText = button.textContent;
-    button.textContent = busyText;
-    button.disabled = true;
-  } else {
-    button.textContent = button.dataset.originalText || button.textContent;
-    button.disabled = false;
-  }
-}
-
-byId("save")?.addEventListener("click", async (event) => {
+byId("publish")?.addEventListener("click", async event => {
   event.preventDefault();
-  const button = event.currentTarget;
-  setBusy(button, true, "Saving…");
 
-  try {
-    const data = await collectPostData(true);
-    const result = await sendPost("/save-draft", data);
-    alert(result.message || `Draft saved${result.file ? ` to ${result.file}` : ""}.`);
-  } catch (error) {
-    alert(`Draft could not be saved: ${error.message}`);
-  } finally {
-    setBusy(button, false);
-  }
-});
-
-byId("publish")?.addEventListener("click", async (event) => {
-  event.preventDefault();
   const button = event.currentTarget;
   setBusy(button, true, "Publishing…");
 
   try {
-    const data = await collectPostData(true);
-    const result = await sendPost("/publish", data);
-
-    alert(
-      result.message ||
-      "Article published successfully. Featured image, ALT text and SEO metadata were saved."
-    );
+    const result = await publishPost();
+    alert(result.message || "Article published successfully.");
 
     if (result.url) {
       window.open(result.url, "_blank", "noopener");
     }
   } catch (error) {
-    alert(`Article could not be published: ${error.message}`);
+    alert(`Publish failed: ${error.message}`);
   } finally {
     setBusy(button, false);
   }
 });
 
-byId("preview")?.addEventListener("click", (event) => {
+byId("save")?.addEventListener("click", async event => {
+  event.preventDefault();
+
+  const button = event.currentTarget;
+  setBusy(button, true, "Saving…");
+
+  try {
+    const result = await publishPost();
+    alert(result.message || "Draft saved.");
+  } catch (error) {
+    alert(`Save failed: ${error.message}`);
+  } finally {
+    setBusy(button, false);
+  }
+});
+
+byId("preview")?.addEventListener("click", event => {
   event.preventDefault();
 
   const preview = window.open("", "_blank");
   if (!preview) return;
 
-  preview.document.write(`
-    <!doctype html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>${value("title") || "Article preview"}</title>
-        <style>
-          body{max-width:800px;margin:40px auto;padding:0 20px;font:18px/1.7 system-ui,sans-serif}
-          img{max-width:100%;height:auto}
-        </style>
-      </head>
-      <body>
-        <h1>${value("title")}</h1>
-        ${editorContent()}
-      </body>
-    </html>
-  `);
+  preview.document.write(`<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${value("title") || "Preview"}</title>
+<style>
+body{max-width:800px;margin:40px auto;padding:20px;font:18px/1.7 system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<h1>${value("title")}</h1>
+${content()}
+</body>
+</html>`);
 
   preview.document.close();
 });

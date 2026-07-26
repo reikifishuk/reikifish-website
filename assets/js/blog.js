@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     featuredCard.innerHTML = `
       <figure class="blog-featured-media">
-        <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageAlt || post.title)}" loading="lazy" decoding="async" />
+        ${post.image ? `<img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageAlt || post.title)}" loading="lazy" decoding="async" />` : ""}
       </figure>
       <div class="blog-featured-copy">
         <p class="blog-meta">${escapeHtml(formatMeta(post))}</p>
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         (post) => `
           <article class="blog-card">
             <a class="blog-card-image" href="${escapeHtml(toArticleUrl(post))}" aria-label="Read ${escapeHtml(post.title)}">
-              <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageAlt || post.title)}" loading="lazy" decoding="async" />
+              ${post.image ? `<img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.imageAlt || post.title)}" loading="lazy" decoding="async" />` : ""}
             </a>
             <div class="blog-card-content">
               <p class="blog-meta">${escapeHtml(formatMeta(post))}</p>

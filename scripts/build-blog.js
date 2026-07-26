@@ -241,7 +241,7 @@ function readMarkdownPosts() {
     const categories = asArray(frontmatter.categories);
     const tags = asArray(frontmatter.tags);
     const author = String(frontmatter.author || 'Andy Fish').trim();
-    const featuredImage = String(frontmatter.featuredImage || 'assets/images/home/standing-in-the-grey.jpg').trim();
+    const featuredImage = String(frontmatter.featuredImage || '').trim();
     const featuredImageAlt = String(frontmatter.featuredImageAlt || `${title} featured image`).trim();
     const excerpt = String(frontmatter.excerpt || buildExcerpt(body)).trim();
     const seoTitle = String(frontmatter.seoTitle || `${title} | Andy Fish Journal`).trim();
