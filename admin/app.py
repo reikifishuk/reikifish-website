@@ -15,6 +15,16 @@ UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 POSTS = Path("content/posts")
 POSTS.mkdir(parents=True, exist_ok=True)
 
+
+# CMS_CORS_FINAL
+@app.after_request
+def cms_cors_headers(response):
+    response.headers["Access-Control-Allow-Origin"] = request.headers.get("Origin", "*")
+    response.headers["Access-Control-Allow-Headers"] = "Content-Type"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    return response
+
 @app.route("/assets/<path:filename>")
 def serve_asset(filename):
     return send_from_directory(ASSETS_FOLDER, filename)
@@ -513,10 +523,6 @@ featuredImageAlt: {yaml_text(request.form.get("imageAlt"))}
     })
 # FEATURED_IMAGE_PUBLISH_V2_END
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
-
-
 @app.route("/upload-image", methods=["POST"])
 def upload_image():
 
@@ -621,3 +627,5 @@ def media_library():
 
     return json.loads(db.read_text())
 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=True)

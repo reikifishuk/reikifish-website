@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: String(rawPost.category || categories[0] || 'Journal').trim(),
       categories,
       tags,
-      image: String(rawPost.image || 'assets/images/home/standing-in-the-grey.jpg').trim(),
+      image: String(rawPost.image || '').trim(),
       imageAlt: String(rawPost.imageAlt || rawPost.title || 'Article image').trim(),
       readingTime: String(rawPost.readingTime || '').trim(),
       featured: Boolean(rawPost.featured),

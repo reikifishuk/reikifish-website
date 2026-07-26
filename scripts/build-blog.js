@@ -414,6 +414,7 @@ function renderArticlePage(post, publishedPosts) {
 
     <main class="container py-5">
       <article class="article-body reveal">
+        ${post.featuredImage ? `
         <figure class="article-featured-media">
           <img
             src="../${escapeHtml(post.featuredImage)}"
@@ -422,6 +423,7 @@ function renderArticlePage(post, publishedPosts) {
             decoding="async"
           />
         </figure>
+        ` : ''}
 
         <div class="article-tag-list">${renderTags(post)}</div>
 

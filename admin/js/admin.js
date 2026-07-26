@@ -1,3 +1,18 @@
+
+function flaskApiBase() {
+  const host = window.location.hostname;
+
+  // When opened from the Codespaces port-8000 preview, convert
+  // its forwarded hostname to the corresponding port-5000 URL.
+  if (host.endsWith(".app.github.dev")) {
+    const flaskHost = host.replace(/-\d+\.app\.github\.dev$/, "-5000.app.github.dev");
+    return `https://${flaskHost}`;
+  }
+
+  if (window.location.port === "5000") return "";
+  return "http://127.0.0.1:5000";
+}
+
 const el = id => document.getElementById(id);
 const val = id => el(id)?.value?.trim() || "";
 
@@ -94,11 +109,15 @@ async function publishArticle() {
 
   const selectedImage = el("image")?.files?.[0];
 
+  if (!selectedImage && !el("image")?.dataset.currentImage) {
+    throw new Error("Please select a featured image.");
+  }
+
   if (selectedImage) {
     form.append("image", selectedImage, selectedImage.name);
   }
 
-  const response = await fetch("/publish-v2", {
+  const response = await fetch(`${flaskApiBase()}/publish-v2`, {
     method: "POST",
     body: form
   });
