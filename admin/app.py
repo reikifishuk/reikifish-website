@@ -50,8 +50,8 @@ featured: {str(data.get('featured', False)).lower()}
 draft: {str(data.get('draft', True)).lower()}
 date: {date.today()}
 excerpt: {data.get('excerpt','')}
-featuredImage: {data.get('image','')}
-featuredImageAlt: {data.get('imageAlt','')}
+featuredImage: {data.get('image') or data.get('featuredImage') or ''}
+featuredImageAlt: {data.get('imageAlt') or data.get('alt') or data.get('featuredImageAlt') or ''}
 ---
 
 {data.get('content','')}
@@ -237,8 +237,8 @@ featured: {str(data.get('featured', False)).lower()}
 draft: false
 date: {data.get('date') or date.today()}
 excerpt: {data.get('excerpt','')}
-featuredImage: {data.get('image','')}
-featuredImageAlt: {data.get('alt','')}
+featuredImage: {data.get('image') or data.get('featuredImage') or ''}
+featuredImageAlt: {data.get('imageAlt') or data.get('alt') or data.get('featuredImageAlt') or ''}
 ---
 
 {data.get('content','')}
