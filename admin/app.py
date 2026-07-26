@@ -373,6 +373,146 @@ featuredImageAlt: {data.get('imageAlt') or data.get('alt') or data.get('featured
         "message": "Article published successfully."
     })
 
+
+# FEATURED_IMAGE_PUBLISH_V2_START
+@app.route("/publish-v2", methods=["POST"])
+def publish_v2():
+    import json
+    import re
+    import subprocess
+    from datetime import date
+    from pathlib import Path
+    from werkzeug.utils import secure_filename
+
+    root = Path(__file__).resolve().parent.parent
+    posts_dir = root / "content" / "posts"
+    images_dir = root / "assets" / "images" / "blog"
+
+    posts_dir.mkdir(parents=True, exist_ok=True)
+    images_dir.mkdir(parents=True, exist_ok=True)
+
+    title = (request.form.get("title") or "").strip()
+    slug = (request.form.get("slug") or "").strip()
+
+    if not title:
+        return jsonify({
+            "success": False,
+            "message": "Please enter a title."
+        }), 400
+
+    if not slug:
+        slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+
+    if not slug:
+        return jsonify({
+            "success": False,
+            "message": "Please enter a valid slug."
+        }), 400
+
+    def clean_existing_image(value):
+        value = (value or "").strip()
+        value = re.sub(r"^https?://[^/]+/", "", value)
+        value = value.lstrip("/")
+        value = re.sub(
+            r"^(?:images|media)/blog/",
+            "assets/images/blog/",
+            value
+        )
+        return value
+
+    featured_image = clean_existing_image(
+        request.form.get("existingImage")
+    )
+
+    uploaded = request.files.get("image")
+
+    if uploaded and uploaded.filename:
+        safe_original = secure_filename(uploaded.filename)
+        suffix = Path(safe_original).suffix.lower()
+
+        allowed = {
+            ".jpg", ".jpeg", ".png",
+            ".webp", ".gif", ".avif"
+        }
+
+        if suffix not in allowed:
+            return jsonify({
+                "success": False,
+                "message": "Featured image must be JPG, PNG, WEBP, GIF or AVIF."
+            }), 400
+
+        image_name = f"{slug}{suffix}"
+        image_file = images_dir / image_name
+
+        # Re-publishing the same slug replaces its previous featured image.
+        for old_suffix in allowed:
+            old = images_dir / f"{slug}{old_suffix}"
+            if old.exists() and old != image_file:
+                old.unlink()
+
+        uploaded.save(image_file)
+        featured_image = f"assets/images/blog/{image_name}"
+
+    def yaml_text(value):
+        return json.dumps(str(value or ""), ensure_ascii=False)
+
+    seo_title = (
+        request.form.get("seoTitle")
+        or title
+    ).strip()
+
+    excerpt = (request.form.get("excerpt") or "").strip()
+
+    meta_description = (
+        request.form.get("metaDescription")
+        or excerpt
+    ).strip()
+
+    markdown = f"""---
+title: {yaml_text(title)}
+seoTitle: {yaml_text(seo_title)}
+metaDescription: {yaml_text(meta_description)}
+slug: {yaml_text(slug)}
+categories: {yaml_text(request.form.get("category"))}
+tags: {yaml_text(request.form.get("tags"))}
+author: {yaml_text(request.form.get("author") or "Reiki Fish")}
+featured: {str((request.form.get("featured") or "").lower() == "true").lower()}
+draft: false
+date: {yaml_text(request.form.get("date") or date.today().isoformat())}
+excerpt: {yaml_text(excerpt)}
+featuredImage: {yaml_text(featured_image)}
+featuredImageAlt: {yaml_text(request.form.get("imageAlt"))}
+---
+
+{request.form.get("content") or ""}
+"""
+
+    post_file = posts_dir / f"{slug}.md"
+    post_file.write_text(markdown, encoding="utf-8")
+
+    build = subprocess.run(
+        ["node", "scripts/build-blog.js"],
+        cwd=root,
+        capture_output=True,
+        text=True
+    )
+
+    if build.returncode != 0:
+        return jsonify({
+            "success": False,
+            "message": "The post was saved, but the site build failed.",
+            "error": build.stderr
+        }), 500
+
+    return jsonify({
+        "success": True,
+        "message": "Article published with its featured image.",
+        "slug": slug,
+        "image": featured_image,
+        "url": f"/articles/{slug}.html"
+    })
+# FEATURED_IMAGE_PUBLISH_V2_END
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
 
