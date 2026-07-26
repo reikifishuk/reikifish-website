@@ -3,6 +3,7 @@ import yaml
 import markdown
 import json
 from jinja2 import Template
+from markupsafe import Markup
 
 POSTS = Path("content/posts")
 OUTPUT = Path("blog/posts")
@@ -26,9 +27,26 @@ for post in POSTS.glob("*.md"):
 
     html = markdown.markdown(body)
 
+    post_template = Template(
+        Path("templates/post.html").read_text(encoding="utf-8")
+    )
+
+    page = post_template.render(
+        title=meta.get("seoTitle") or meta["title"],
+        heading=meta["title"],
+        description=meta.get("metaDescription",""),
+        author=meta.get("author","Reiki Fish"),
+        date=str(meta["date"]),
+        content=Markup(html),
+        featured_image=meta.get("featuredImage",""),
+        featured_image_alt=meta.get("featuredImageAlt",""),
+        excerpt=meta.get("excerpt",""),
+        slug=meta["slug"]
+    )
+
     outfile = OUTPUT / f"{meta['slug']}.html"
 
-    outfile.write_text(html, encoding="utf-8")
+    outfile.write_text(page, encoding="utf-8")
 
     posts.append({
         "title": meta["title"],

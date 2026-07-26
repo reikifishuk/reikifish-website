@@ -7,67 +7,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/tinymce@7.9.1/tinymce.min.js">
 
-const imageInput=document.getElementById("featuredImageUpload");
-
-if(imageInput){
-
-imageInput.addEventListener("change",async()=>{
-
-const file=imageInput.files[0];
-
-if(!file) return;
-
-const alt=document.getElementById("featuredAlt").value.trim();
-
-if(!alt){
-
-alert("Image Alt Text is required.");
-
-imageInput.value="";
-
-return;
-
-}
-
-const fd=new FormData();
-
-fd.append("image",file);
-
-fd.append("alt",alt);
-
-fd.append("caption",document.getElementById("featuredCaption").value);
-
-const r=await fetch("/upload-image",{
-
-method:"POST",
-
-body:fd
-
-});
-
-const data=await r.json();
-
-if(data.success){
-
-document.getElementById("featuredImage").value=data.url;
-
-document.getElementById("imagePreview").style.display="block";
-
-document.getElementById("imagePreview").innerHTML=
-
-'<img src="'+data.url+'" style="max-width:100%;border-radius:8px;"><p><strong>ALT:</strong> '+data.alt+'</p>';
-
-}else{
-
-alert(data.error);
-
-}
-
-});
-
-}
-
-
 </script>
 
     <style>
@@ -259,7 +198,28 @@ id="featuredImageUpload"
 accept="image/png,image/jpeg,image/webp">
 
 <div id="imagePreview"
-style="display:none;margin:15px 0;"></div>
+style="display:none;margin:15px 0;">
+<img id="previewImage" style="max-width:100%;border-radius:8px;">
+</div>
+
+<script>
+const upload=document.getElementById("featuredImageUpload");
+const preview=document.getElementById("imagePreview");
+const img=document.getElementById("previewImage");
+
+upload.addEventListener("change",e=>{
+    const file=e.target.files[0];
+    if(!file) return;
+    
+img.src="";
+
+img.src="";
+img.src=URL.createObjectURL(file);
+
+
+    preview.style.display="block";
+});
+</script>
 
 <label>Image Alt Text *</label>
 
@@ -492,7 +452,7 @@ const data=await r.json();
 
 if(data.success){
 
-document.getElementById("featuredImage").value=data.url;
+document.getElementById("featuredImage").value=data.path || data.url || "";
 
 document.getElementById("imagePreview").style.display="block";
 

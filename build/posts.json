@@ -1,0 +1,29 @@
+[
+  {
+    "title": "wedwed",
+    "slug": "wedwed",
+    "excerpt": "wedwed",
+    "date": "2026-07-26",
+    "featured": false,
+    "categories": "Psychology"
+  },
+  {
+    "title": "wedw",
+    "slug": "wedw",
+    "excerpt": "weded",
+    "date": "2026-07-26",
+    "featured": false,
+    "categories": "Psychology"
+  },
+  {
+    "title": "Welcome to the Journal",
+    "slug": "welcome-to-the-journal",
+    "excerpt": "Introducing the Psychology Journal-thoughts on trauma, resilience, leadership and personal growth.",
+    "date": "2026-07-22",
+    "featured": true,
+    "categories": [
+      "Psychology",
+      "Resilience"
+    ]
+  }
+]

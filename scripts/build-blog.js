@@ -249,7 +249,11 @@ function readMarkdownPosts() {
     const readingTime = String(frontmatter.readingTime || countReadingTime(body)).trim();
     const featured = Boolean(frontmatter.featured);
     const draft = Boolean(frontmatter.draft);
-    const contentHtml = markdownToHtml(body);
+    const trimmedBody = body.trim();
+    const contentHtml =
+      trimmedBody.startsWith('<')
+        ? trimmedBody
+        : markdownToHtml(body);
 
     return {
       title,
