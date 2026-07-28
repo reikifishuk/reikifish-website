@@ -87,13 +87,23 @@ document.getElementById("publish")?.addEventListener("click", async (e) => {
         date: document.getElementById("date")?.value || ""
     };
 
-    const response = await fetch("/publish", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
+    const formData = new FormData();
+
+Object.entries(data).forEach(([key, value]) => {
+    formData.append(key, value ?? "");
+});
+
+const imageInput = document.getElementById("image");
+if (imageInput && imageInput.files.length) {
+    formData.append("image", imageInput.files[0]);
+}
+
+formData.append("existingImage", window.currentImagePath || "");
+
+const response = await fetch("/publish-v2", {
+    method: "POST",
+    body: formData
+});
 
     const result = await response.json();
 

@@ -378,7 +378,7 @@ placeholder="Optional image caption">
             : "Saving draft…";
 
         try {
-            const response = await fetch("/publish", {
+            const response = await fetch("/publish-v2", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
@@ -452,7 +452,7 @@ const data=await r.json();
 
 if(data.success){
 
-document.getElementById("featuredImage").value=data.path || data.url || "";
+document.getElementById("featuredImage").value=data.url || data.url || "";
 
 document.getElementById("imagePreview").style.display="block";
 

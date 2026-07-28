@@ -1,24 +1,3 @@
 {
-  "items": [
-    {
-      "title": "TEST 123",
-      "slug": "test-123",
-      "url": "articles/test-123.html",
-      "date": "2026-07-26",
-      "dateLabel": "26 July 2026",
-      "author": "Reiki Fish",
-      "excerpt": "SDFSDF",
-      "category": "Psychology",
-      "categories": [
-        "Psychology"
-      ],
-      "tags": [
-        "Trauma"
-      ],
-      "image": "",
-      "imageAlt": "",
-      "readingTime": "1 min read",
-      "featured": false
-    }
-  ]
+  "items": []
 }

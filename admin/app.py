@@ -218,7 +218,12 @@ def publish_complete():
     posts_dir.mkdir(parents=True, exist_ok=True)
     images_dir.mkdir(parents=True, exist_ok=True)
 
-    title = (request.form.get("title") or "").strip()
+    print("FORM:", dict(request.form))
+    print("FILES:", list(request.files.keys()))
+    print("\n===== PUBLISH_V2 =====")
+print("FORM:", dict(request.form))
+print("FILES:", list(request.files.keys()))
+title = (request.form.get("title") or "").strip()
     slug = (request.form.get("slug") or "").strip()
 
     if not title:
@@ -377,6 +382,9 @@ def publish_v2():
     posts_dir.mkdir(parents=True, exist_ok=True)
     images_dir.mkdir(parents=True, exist_ok=True)
 
+    print("\n===== PUBLISH_V2 =====")
+    print("FORM:", dict(request.form))
+    print("FILES:", list(request.files.keys()))
     title = (request.form.get("title") or "").strip()
     slug = (request.form.get("slug") or "").strip()
 
