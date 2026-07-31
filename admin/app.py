@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
+﻿from flask import Flask, request, jsonify, render_template, send_from_directory
 from pathlib import Path
 from werkzeug.utils import secure_filename
 from datetime import date
@@ -12,7 +12,7 @@ ASSETS_FOLDER = PROJECT_ROOT / "assets"
 UPLOAD_FOLDER = ASSETS_FOLDER / "images" / "blog"
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
 
-POSTS = Path("content/posts")
+POSTS = PROJECT_ROOT / "content" / "posts"
 POSTS.mkdir(parents=True, exist_ok=True)
 
 @app.route("/assets/<path:filename>")
@@ -268,3 +268,4 @@ featuredImageAlt: {data.get('alt','')}
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+

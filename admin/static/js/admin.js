@@ -1,4 +1,4 @@
-let currentImagePath = "";
+﻿let currentImagePath = "";
 
 document.getElementById('new-post')?.addEventListener('click',()=>location='/editor');
 const seoTitle=document.getElementById('seo-title');const seoDescription=document.getElementById('meta-description');const seoTitleCount=document.getElementById('meta-title-count');const seoDescriptionCount=document.getElementById('meta-description-count');function updateSeoCounts(){if(seoTitleCount&&seoTitle)seoTitleCount.textContent=seoTitle.value.length+'/70';if(seoDescriptionCount&&seoDescription)seoDescriptionCount.textContent=seoDescription.value.length+'/155';}seoTitle?.addEventListener('input',updateSeoCounts);seoDescription?.addEventListener('input',updateSeoCounts);updateSeoCounts();
@@ -47,7 +47,7 @@ document.getElementById("save")?.addEventListener("click", async (e) => {
         excerpt: document.getElementById("excerpt").value,
         image: currentImagePath,
         alt: document.getElementById("alt").value,
-        content: document.getElementById("content").value
+        content: getArticleContent()
     };
 
     const response = await fetch("/save-draft", {
@@ -67,43 +67,65 @@ document.getElementById("save")?.addEventListener("click", async (e) => {
     }
 });
 
-document.getElementById("publish")?.addEventListener("click", async (e) => {
-    e.preventDefault();
+document.getElementById("publish")?.addEventListener("click", async (event) => {
+    event.preventDefault();
 
-    const data = {
-        title: document.getElementById("title").value,
-        "seo-title": document.getElementById("seo-title").value,
-        "meta-description": document.getElementById("meta-description").value,
-        slug: document.getElementById("slug").value,
-        category: document.getElementById("category").value,
-        tags: document.getElementById("tags").value,
-        author: document.getElementById("author").value,
-        featured: document.getElementById("featured").checked,
+    const titleField = document.getElementById("title");
+    const slugField = document.getElementById("slug");
+    const titleValue = titleField?.value.trim() || "";
+    const slugValue = slugField?.value.trim() || makeSlug(titleValue);
+
+    if (!titleValue) {
+        alert("Please enter an article title.");
+        titleField?.focus();
+        return;
+    }
+
+    if (!slugValue) {
+        alert("A valid slug could not be created.");
+        slugField?.focus();
+        return;
+    }
+
+    slugField.value = slugValue;
+
+    const payload = {
+        title: titleValue,
+        "seo-title": document.getElementById("seo-title")?.value.trim() || titleValue,
+        "meta-description": document.getElementById("meta-description")?.value.trim() || "",
+        slug: slugValue,
+        category: document.getElementById("category")?.value || "Psychology",
+        tags: document.getElementById("tags")?.value || "",
+        author: document.getElementById("author")?.value || "Andy Fish",
+        featured: Boolean(document.getElementById("featured")?.checked),
         draft: false,
-        excerpt: document.getElementById("excerpt").value,
-        image: currentImagePath,
-        alt: document.getElementById("alt").value,
-        content: document.getElementById("content").value,
+        excerpt: document.getElementById("excerpt")?.value || "",
+        image: currentImagePath || "",
+        alt: document.getElementById("alt")?.value || "",
+        content: getArticleContent(),
         date: document.getElementById("date")?.value || ""
     };
 
-    const response = await fetch("/publish", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
+    try {
+        const response = await fetch("/publish", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
 
-    const result = await response.json();
+        const result = await response.json();
 
-    if (result.success) {
-        alert(result.message);
-    } else {
-        alert(result.message || "Publish failed.");
+        if (!response.ok || !result.success) {
+            throw new Error(result.error || result.message || `Publish failed: HTTP ${response.status}`);
+        }
+
+        alert(`Published successfully: ${result.file}`);
+        window.location.href = "/";
+    } catch (error) {
+        console.error("Publish error:", error);
+        alert(`Publish failed: ${error.message}`);
     }
 });
-
 async function loadPosts() {
     const res = await fetch("/posts");
     const posts = await res.json();
@@ -202,6 +224,9 @@ async function loadPostForEditing() {
         }
         setEditorField(["imageAlt", "alt", "image-alt"], post.imageAlt);
         setEditorField(["content", "body"], post.content);
+        if (window.tinymce && tinymce.get("content")) {
+            tinymce.get("content").setContent(post.content || "");
+        }
 
         document.title = `Edit: ${post.title || post.slug}`;
     } catch (error) {
@@ -363,24 +388,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+// TINYMCE-VISUAL-EDITOR-START
+function getArticleContent() {
+    const editor = window.tinymce && tinymce.get("content");
+    return editor
+        ? editor.getContent()
+        : (document.getElementById("content")?.value || "");
+}
 
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (typeof EasyMDE === "undefined") return;
-
-    const textarea = document.querySelector("#content");
+window.addEventListener("load", function () {
+    const textarea = document.getElementById("content");
     if (!textarea) return;
 
-    if (window.easyMDE) return;
+    if (typeof tinymce === "undefined") {
+        console.error("TinyMCE failed to load");
+        return;
+    }
 
-    window.easyMDE = new EasyMDE({
-        element: textarea,
-        spellChecker: false,
-        status: ["words", "lines"],
-        sideBySideFullscreen: false
+    if (tinymce.get("content")) return;
+
+    tinymce.init({
+        selector: "#content",
+        height: 620,
+        menubar: "edit view insert format tools table help",
+        branding: false,
+        promotion: false,
+        browser_spellcheck: true,
+        convert_urls: false,
+
+        plugins: [
+            "advlist", "autolink", "lists", "link", "image",
+            "media", "table", "code", "fullscreen", "preview",
+            "searchreplace", "wordcount", "visualblocks",
+            "charmap", "anchor", "insertdatetime", "help"
+        ],
+
+        toolbar:
+            "undo redo | blocks | bold italic underline | " +
+            "alignleft aligncenter alignright alignjustify | " +
+            "bullist numlist outdent indent | link image table | " +
+            "blockquote removeformat | code preview fullscreen",
+
+        setup: function (editor) {
+            editor.on("change input undo redo", function () {
+                editor.save();
+            });
+        }
     });
 });
+// TINYMCE-VISUAL-EDITOR-END
+
+

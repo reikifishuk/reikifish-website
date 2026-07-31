@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>New Article</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
 </head>
 <body>
 
 <header class="topbar">
 <h1>New Article</h1>
-<a href="/">← Dashboard</a>
+<a href="/">â† Dashboard</a>
 </header>
 
 <main class="editor">
@@ -70,7 +69,7 @@
 <label>Excerpt</label>
 <textarea id="excerpt" rows="5"></textarea>
 
-<label>Article (Visual editor coming next)</label>
+<label>Article</label>
 <textarea id="content" rows="20"></textarea>
 
 
@@ -102,9 +101,10 @@
 </div>
 
 </main>
-
-<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tinymce@7.9.1/tinymce.min.js"></script>
+<script src="{{ url_for('static', filename='js/admin.js') }}?v=20260731192453"></script>
 </body>
 </html>
+
+
+
