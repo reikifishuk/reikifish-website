@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #090b0c;
   --bg-2: #111416;
   --bg-3: #1a1d1f;
@@ -97,7 +97,7 @@ body.nav-scrolled .navbar-brand {
 .nav-link:hover, .nav-link:focus, .nav-link.active { color: var(--gold) !important; }
 
 .hero-shell {
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   position: relative;
   overflow: hidden;
   background: linear-gradient(120deg, rgba(12, 15, 17, 0.82), rgba(23, 26, 29, 0.7));
@@ -118,7 +118,7 @@ body.nav-scrolled .navbar-brand {
 }
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 72px);
   padding: clamp(10rem, 13vh, 13rem) 0 clamp(5rem, 8vh, 8rem);
   overflow: hidden;
 }
@@ -1039,7 +1039,7 @@ body.contact-page .contact-field-error {
 }
 
 body.contact-page .contact-field-error::before {
-  content: '• ';
+  content: 'â€¢ ';
 }
 
 body.contact-page .contact-form-status {
@@ -2276,7 +2276,7 @@ max-width:420px;
 }
 
 .quote-text::after{
-    content:"— Walking the Grey";
+    content:"â€” Walking the Grey";
     display:block;
     margin-top:18px;
     color:#c89b5d;
@@ -4898,6 +4898,7 @@ body.admin-page .inner-header {
     display:block;
     margin:0;
 }
+
 
 
 
