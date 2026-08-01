@@ -4861,3 +4861,17 @@ body.admin-page .inner-header {
 }
 
 
+
+.navbar{
+    min-height:80px;
+}
+
+.navbar-brand{
+    padding-top:.2rem;
+    padding-bottom:.2rem;
+}
+
+.site-nav .navbar-nav{
+    gap:.65rem;
+}
+
