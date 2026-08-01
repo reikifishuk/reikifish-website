@@ -119,7 +119,7 @@ body.nav-scrolled .navbar-brand {
 .hero-section {
   position: relative;
   min-height: calc(100vh - 72px);
-  padding: clamp(10rem, 13vh, 13rem) 0 clamp(5rem, 8vh, 8rem);
+  padding: clamp(5.5rem, 7vh, 7rem) 0 clamp(3rem, 5vh, 5rem);
   overflow: hidden;
 }
 
@@ -4898,6 +4898,7 @@ body.admin-page .inner-header {
     display:block;
     margin:0;
 }
+
 
 
 
