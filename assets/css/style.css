@@ -4903,3 +4903,8 @@ body.admin-page .inner-header {
 
 
 
+
+body.home-page .hero-section{
+    margin-top:-28px !important;
+    padding-top:2.5rem !important;
+}
