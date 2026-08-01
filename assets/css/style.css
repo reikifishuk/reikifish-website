@@ -47,8 +47,8 @@ a { text-decoration: none; color: inherit; }
 }
 
 .navbar.fixed-top {
-  padding-top: clamp(0.42rem, 1.1vw, 0.8rem) !important;
-  padding-bottom: clamp(0.42rem, 1.1vw, 0.8rem) !important;
+  padding-top:.15rem !important;
+  padding-bottom:.15rem !important;
 }
 
 .navbar > .container-fluid {
@@ -4862,9 +4862,7 @@ body.admin-page .inner-header {
 
 
 
-.navbar{
-    min-height:80px;
-}
+
 
 .navbar-brand{
     padding-top:.2rem;
@@ -4882,9 +4880,8 @@ body.admin-page .inner-header {
 }
 
 .navbar{
-    min-height:64px !important;
-    padding-top:0 !important;
-    padding-bottom:0 !important;
+    padding-top:.15rem !important;
+    padding-bottom:.15rem !important;
 }
 
 .navbar-brand{
@@ -4898,6 +4895,7 @@ body.admin-page .inner-header {
     display:block;
     margin:0;
 }
+
 
 
 
