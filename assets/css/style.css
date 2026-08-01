@@ -97,7 +97,7 @@ body.nav-scrolled .navbar-brand {
 .nav-link:hover, .nav-link:focus, .nav-link.active { color: var(--gold) !important; }
 
 .hero-shell {
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 52px);
   position: relative;
   overflow: hidden;
   background: linear-gradient(120deg, rgba(12, 15, 17, 0.82), rgba(23, 26, 29, 0.7));
@@ -118,7 +118,7 @@ body.nav-scrolled .navbar-brand {
 }
 .hero-section {
   position: relative;
-  min-height: calc(100vh - 72px);
+  min-height: calc(100vh - 52px);
   padding: clamp(5.5rem, 7vh, 7rem) 0 clamp(3rem, 5vh, 5rem);
   overflow: hidden;
 }
@@ -4898,6 +4898,7 @@ body.admin-page .inner-header {
     display:block;
     margin:0;
 }
+
 
 
 
