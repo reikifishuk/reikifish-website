@@ -4875,3 +4875,27 @@ body.admin-page .inner-header {
     gap:.65rem;
 }
 
+
+.site-nav{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+
+.navbar{
+    min-height:64px !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+
+.navbar-brand{
+    margin-top:0 !important;
+    margin-bottom:0 !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+
+.site-logo{
+    display:block;
+    margin:0;
+}
+
