@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
@@ -375,7 +375,7 @@ function renderArticlePage(post, publishedPosts) {
           <a class="navbar-brand d-flex align-items-center" href="../index.html" aria-label="Andy Fish home">
             <img
               class="site-logo"
-              src="../assets/images/logo.png"
+              src="../assets/images/andy fish - walking the grey.png"
               alt="Andy Fish - Author, Psychology & Mindset Coach"
               width="1681"
               height="935"
@@ -408,7 +408,7 @@ function renderArticlePage(post, publishedPosts) {
       <section class="container py-6 reveal article-hero">
         <p class="eyebrow">${escapeHtml(primaryCategory)}</p>
         <h1 class="section-heading-xl">${escapeHtml(post.title)}</h1>
-        <p class="lead-text">${escapeHtml(post.dateLabel)} • ${escapeHtml(post.author)} • ${escapeHtml(post.readingTime)}</p>
+        <p class="lead-text">${escapeHtml(post.dateLabel)} â€¢ ${escapeHtml(post.author)} â€¢ ${escapeHtml(post.readingTime)}</p>
       </section>
     </header>
 
@@ -562,3 +562,4 @@ function build() {
 }
 
 build();
+
