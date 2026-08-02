@@ -1619,8 +1619,8 @@ body.home-page .media-image {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  object-fit: contain;
+  object-position: center top;
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
@@ -1635,8 +1635,8 @@ body.home-page .media-frame.is-missing .media-image {
 
 body.home-page .hero-frame {
   width: min(100%, 100%);
-  aspect-ratio: 16 / 9;
-  max-height: 760px;
+  aspect-ratio: 16 / 10;
+  max-height: 820px;
 }
 
 body.home-page .hero-frame .media-image {
@@ -4908,3 +4908,4 @@ body.home-page .hero-section{
     margin-top:-28px !important;
     padding-top:2.5rem !important;
 }
+
