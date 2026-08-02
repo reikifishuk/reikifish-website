@@ -4963,3 +4963,39 @@ body.home-page .insight-card p{
     line-height:1.6;
 }
 
+
+/* Perfect alignment for Psychology & Human Behaviour cards */
+body.home-page .hp-topic-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+body.home-page .hp-topic-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    margin:0 auto 1.25rem;
+}
+
+body.home-page .hp-topic-card h3{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    width:100%;
+    margin:0 0 1rem;
+    line-height:1.2;
+}
+
+body.home-page .hp-topic-card p{
+    flex:1;
+    margin:0;
+    text-align:center;
+    line-height:1.6;
+}
+
