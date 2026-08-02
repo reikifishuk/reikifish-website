@@ -4913,3 +4913,10 @@ body.home-page .hero-section{
 }
 
 
+
+@media (min-width: 992px){
+    body.home-page .home-hero-media{
+        align-self:flex-start;
+        margin-top:-32px;
+    }
+}
