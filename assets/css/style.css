@@ -4924,3 +4924,42 @@ body.home-page .hero-section{
 
 
 
+
+/* Centre Psychology & Human Behaviour cards */
+body.home-page .insight-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    height:100%;
+    padding:2rem 1.8rem;
+}
+
+body.home-page .insight-card .icon,
+body.home-page .insight-card svg,
+body.home-page .insight-card i{
+    width:42px;
+    height:42px;
+    margin:0 0 1.35rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+body.home-page .insight-card h3{
+    min-height:72px;
+    margin:0 0 1rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    line-height:1.2;
+}
+
+body.home-page .insight-card p{
+    flex:1;
+    margin:0;
+    text-align:center;
+    line-height:1.6;
+}
+
