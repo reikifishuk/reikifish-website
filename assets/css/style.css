@@ -1640,7 +1640,10 @@ body.home-page .hero-frame {
 }
 
 body.home-page .hero-frame .media-image {
-  filter: saturate(0.82) contrast(1.06) brightness(0.88) sepia(0.08);
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  filter:saturate(0.82) contrast(1.06) brightness(0.88) sepia(0.08);
 }
 
 body.home-page .featured-book-panel,
@@ -4908,4 +4911,5 @@ body.home-page .hero-section{
     margin-top:-28px !important;
     padding-top:2.5rem !important;
 }
+
 
