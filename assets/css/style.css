@@ -4999,3 +4999,14 @@ body.home-page .hp-topic-card p{
     line-height:1.6;
 }
 
+
+/* Tighten spacing inside Psychology cards */
+body.home-page .hp-topic-card h3{
+    margin-bottom:.45rem !important;
+    min-height:60px !important;
+}
+
+body.home-page .hp-topic-card p{
+    margin-top:0 !important;
+}
+
