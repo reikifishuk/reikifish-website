@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --bg: #090b0c;
   --bg-2: #111416;
   --bg-3: #1a1d1f;
@@ -1039,7 +1039,7 @@ body.contact-page .contact-field-error {
 }
 
 body.contact-page .contact-field-error::before {
-  content: 'â€¢ ';
+  content: '• ';
 }
 
 body.contact-page .contact-form-status {
@@ -2279,7 +2279,7 @@ max-width:420px;
 }
 
 .quote-text::after{
-    content:"â€” Walking the Grey";
+    content:"— Walking the Grey";
     display:block;
     margin-top:18px;
     color:#c89b5d;
@@ -4917,8 +4917,9 @@ body.home-page .hero-section{
 @media (min-width: 992px){
     body.home-page .home-hero-media{
         align-self:flex-start;
-        margin-top:52px;
+        margin-top:60px;
     }
 }
+
 
 
