@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template, send_from_directory
+﻿from flask import Flask, request, jsonify, render_template, send_from_directory
 from pathlib import Path
 from werkzeug.utils import secure_filename
 from datetime import date
@@ -221,9 +221,6 @@ def publish_complete():
     print("FORM:", dict(request.form))
     print("FILES:", list(request.files.keys()))
     print("\n===== PUBLISH_V2 =====")
-print("FORM:", dict(request.form))
-print("FILES:", list(request.files.keys()))
-title = (request.form.get("title") or "").strip()
     slug = (request.form.get("slug") or "").strip()
 
     if not title:
