@@ -451,14 +451,14 @@ def publish_v2():
         return json.dumps(str(value or ""), ensure_ascii=False)
 
     seo_title = (
-        request.form.get("seoTitle")
+        data.get("seoTitle") or data.get("seo-title")
         or title
     ).strip()
 
-    excerpt = (request.form.get("excerpt") or "").strip()
+    excerpt = (data.get("excerpt") or "").strip()
 
     meta_description = (
-        request.form.get("metaDescription")
+        data.get("metaDescription") or data.get("meta-description")
         or excerpt
     ).strip()
 
@@ -467,18 +467,18 @@ title: {yaml_text(title)}
 seoTitle: {yaml_text(seo_title)}
 metaDescription: {yaml_text(meta_description)}
 slug: {yaml_text(slug)}
-categories: {yaml_text(request.form.get("category"))}
-tags: {yaml_text(request.form.get("tags"))}
-author: {yaml_text(request.form.get("author") or "Reiki Fish")}
-featured: {str((request.form.get("featured") or "").lower() == "true").lower()}
+categories: {yaml_text(data.get("category"))}
+tags: {yaml_text(data.get("tags"))}
+author: {yaml_text(data.get("author") or "Reiki Fish")}
+featured: {str((data.get("featured") or "").lower() == "true").lower()}
 draft: false
-date: {yaml_text(request.form.get("date") or date.today().isoformat())}
+date: {yaml_text(data.get("date") or date.today().isoformat())}
 excerpt: {yaml_text(excerpt)}
 featuredImage: {yaml_text(featured_image)}
-featuredImageAlt: {yaml_text(request.form.get("imageAlt"))}
+featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("alt"))}
 ---
 
-{request.form.get("content") or ""}
+{data.get("content") or ""}
 """
 
     post_file = posts_dir / f"{slug}.md"
