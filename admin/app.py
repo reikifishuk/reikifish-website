@@ -233,7 +233,7 @@ def publish_complete():
         return jsonify({"success": False, "message": "A valid slug is required."}), 400
 
     existing_post = posts_dir / f"{slug}.md"
-    existing_image = (data.get("existingImage") or "").strip()
+    existing_image = (data.get("existingImage") or data.get("featured_image") or "").strip()
     image_path = existing_image
 
     upload = request.files.get("image")
@@ -415,7 +415,7 @@ def publish_v2():
         return value
 
     featured_image = clean_existing_image(
-        data.get("existingImage")
+        data.get("existingImage") or data.get("featured_image")
     )
 
     uploaded = request.files.get("image")
@@ -458,7 +458,7 @@ def publish_v2():
     excerpt = (data.get("excerpt") or "").strip()
 
     meta_description = (
-        data.get("metaDescription") or data.get("meta-description")
+        data.get("metaDescription") or data.get("meta") or data.get("meta-description")
         or excerpt
     ).strip()
 
@@ -467,7 +467,7 @@ title: {yaml_text(title)}
 seoTitle: {yaml_text(seo_title)}
 metaDescription: {yaml_text(meta_description)}
 slug: {yaml_text(slug)}
-categories: {yaml_text(data.get("category"))}
+categories: {yaml_text(data.get("category") or data.get("categories"))}
 tags: {yaml_text(data.get("tags"))}
 author: {yaml_text(data.get("author") or "Reiki Fish")}
 featured: {str((data.get("featured") or "").lower() == "true").lower()}
@@ -475,7 +475,7 @@ draft: false
 date: {yaml_text(data.get("date") or date.today().isoformat())}
 excerpt: {yaml_text(excerpt)}
 featuredImage: {yaml_text(featured_image)}
-featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("alt"))}
+featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("featuredAlt") or data.get("alt"))}
 ---
 
 {data.get("content") or ""}
