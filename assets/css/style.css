@@ -1566,7 +1566,7 @@ body.home-page .home-actions {
 }
 
 body.home-page .home-quote-panel {
-  max-width: 32rem;
+  max-width: 42rem;
   padding: 1rem 1.15rem;
   border-radius: 1.1rem;
   border: 1px solid var(--border);
@@ -5009,4 +5009,5 @@ body.home-page .hp-topic-card h3{
 body.home-page .hp-topic-card p{
     margin-top:0 !important;
 }
+
 
