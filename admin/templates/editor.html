@@ -388,7 +388,7 @@ placeholder="Optional image caption">
             const result = await response.json().catch(() => ({}));
 
             if (!response.ok) {
-                throw new Error(result.error || `Server returned ${response.status}`);
+                throw new Error(result.message || result.error || `Server returned ${response.status}`);
             }
 
             statusBox.textContent = result.message ||
