@@ -453,13 +453,15 @@ const data=await r.json();
 
 if(data.success){
 
-document.getElementById("featuredImage").value=data.url || data.url || "";
+const imagePath = data.url || data.image || data.path || data.filename || "";
 
-document.getElementById("imagePreview").style.display="block";
+document.getElementById("featuredImage").value = imagePath;
 
-document.getElementById("imagePreview").innerHTML=
-
-'<img src="'+data.url+'" style="max-width:100%;border-radius:8px;"><p><strong>ALT:</strong> '+data.alt+'</p>';
+if(imagePath){
+    document.getElementById("imagePreview").style.display="block";
+    document.getElementById("imagePreview").innerHTML =
+        '<img src="' + imagePath + '" style="max-width:100%;border-radius:8px;"><p><strong>ALT:</strong> ' + (data.alt || alt) + '</p>';
+}
 
 }else{
 
