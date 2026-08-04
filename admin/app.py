@@ -274,7 +274,7 @@ categories: {yaml_string(request.form.get("category"))}
 tags: {yaml_string(request.form.get("tags"))}
 author: {yaml_string(request.form.get("author") or "Reiki Fish")}
 featured: {str((request.form.get("featured") or "").lower() == "true").lower()}
-draft: false
+draft: {str(data.get("status") != "published").lower()}
 date: {yaml_string(request.form.get("date") or date.today().isoformat())}
 excerpt: {yaml_string(request.form.get("excerpt"))}
 featuredImage: {yaml_string(image_path)}
@@ -451,11 +451,26 @@ def publish_v2():
         return json.dumps(str(value or ""), ensure_ascii=False)
 
     seo_title = (
-        data.get("seoTitle") or data.get("seo-title")
+        data.get("seoTitle") or data.get("seo_title") or data.get("seo-title")
         or title
     ).strip()
 
     excerpt = (data.get("excerpt") or "").strip()
+
+    content = str(data.get("content") or "").strip()
+    empty_content = {"", "<p></p>", "<p><br></p>", "<p><br data-mce-bogus=\"1\"></p>"}
+
+    if content in empty_content:
+        return jsonify({
+            "success": False,
+            "message": "Article content is required. Nothing was overwritten."
+        }), 400
+
+    if not featured_image:
+        return jsonify({
+            "success": False,
+            "message": "Please upload a featured image before publishing."
+        }), 400
 
     meta_description = (
         data.get("metaDescription") or data.get("meta") or data.get("meta-description")
@@ -475,13 +490,23 @@ draft: false
 date: {yaml_text(data.get("date") or date.today().isoformat())}
 excerpt: {yaml_text(excerpt)}
 featuredImage: {yaml_text(featured_image)}
-featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("featuredAlt") or data.get("alt"))}
+featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("image_alt") or data.get("featuredAlt") or data.get("alt"))}
 ---
 
-{data.get("content") or ""}
+{content}
 """
 
     post_file = posts_dir / f"{slug}.md"
+
+    if post_file.exists():
+        backups_dir = posts_dir / "_backups"
+        backups_dir.mkdir(parents=True, exist_ok=True)
+        backup_file = backups_dir / f"{slug}.previous.md"
+        backup_file.write_text(
+            post_file.read_text(encoding="utf-8"),
+            encoding="utf-8"
+        )
+
     post_file.write_text(markdown, encoding="utf-8")
 
     build = subprocess.run(
