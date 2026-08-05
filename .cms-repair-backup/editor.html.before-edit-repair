@@ -252,8 +252,6 @@ placeholder="Optional image caption">
 </main>
 
 <script>
-    const existingPost = {{ post|default({})|tojson|safe }};
-
     const slugify = value => value
         .toLowerCase()
         .trim()
@@ -265,41 +263,6 @@ placeholder="Optional image caption">
     const slugInput = document.getElementById("slug");
     const seoTitleInput = document.getElementById("seoTitle");
     let slugEdited = false;
-
-    const setField = (id, value) => {
-        const field = document.getElementById(id);
-        if (field) field.value = value || "";
-    };
-
-    if (existingPost && existingPost.slug) {
-        slugEdited = true;
-
-        setField("title", existingPost.title);
-        setField("slug", existingPost.slug);
-        setField("seoTitle", existingPost.seoTitle);
-        setField("meta", existingPost.metaDescription);
-        setField("excerpt", existingPost.excerpt);
-        setField("category", existingPost.category);
-        setField("tags", existingPost.tags);
-        setField("author", existingPost.author);
-        setField("featuredImage", existingPost.featuredImage);
-        setField("featuredAlt", existingPost.featuredImageAlt);
-        setField("publishStatus", "published");
-
-        if (existingPost.featuredImage) {
-            const preview = document.getElementById("imagePreview");
-
-            if (preview) {
-                preview.style.display = "block";
-                preview.innerHTML =
-                    '<img src="' + existingPost.featuredImage +
-                    '" style="max-width:100%;border-radius:8px;" ' +
-                    'alt="' + (existingPost.featuredImageAlt || "") + '">' +
-                    '<p><strong>ALT:</strong> ' +
-                    (existingPost.featuredImageAlt || "") + '</p>';
-            }
-        }
-    }
 
     slugInput.addEventListener("input", () => {
         slugEdited = true;
@@ -360,13 +323,6 @@ placeholder="Optional image caption">
             }
             img { max-width: 100%; height: auto; }
         `,
-
-        init_instance_callback(editor) {
-            if (existingPost && existingPost.content) {
-                editor.setContent(existingPost.content);
-                editor.fire("change");
-            }
-        },
 
         setup(editor) {
             const updateCount = () => {
@@ -517,6 +473,57 @@ alert(data.error);
 
 }
 
+
+
+
+<script>
+
+const existingPost = {{ post|tojson|safe }};
+
+window.addEventListener("load", function () {
+
+    if (!existingPost) return;
+
+    function set(id,value){
+        const el=document.getElementById(id);
+        if(el) el.value=value||"";
+    }
+
+    set("title",existingPost.title);
+    set("slug",existingPost.slug);
+    set("seoTitle",existingPost.seoTitle);
+    set("meta",existingPost.metaDescription);
+    set("excerpt",existingPost.excerpt);
+    set("category",existingPost.category);
+    set("tags",existingPost.tags);
+    set("author",existingPost.author);
+    set("featuredImage",existingPost.featuredImage);
+    set("featuredAlt",existingPost.featuredImageAlt);
+
+    if(existingPost.featuredImage){
+
+        const preview=document.getElementById("imagePreview");
+
+        if(preview){
+
+            preview.style.display="block";
+
+            preview.innerHTML=
+            '<img src="'+existingPost.featuredImage+'" style="max-width:100%;border-radius:8px;">';
+
+        }
+
+    }
+
+    if(window.tinymce && tinymce.activeEditor){
+
+        tinymce.activeEditor.setContent(existingPost.content||"");
+
+    }
+
+});
+
+</script>
 
 </script>
 </body>
