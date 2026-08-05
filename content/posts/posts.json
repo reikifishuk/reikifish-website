@@ -17,26 +17,6 @@
       "imageAlt": "The Grey Method Coaching helps people find emotional balance and a positive mindset during difficult times",
       "readingTime": "6 min read",
       "featured": false
-    },
-    {
-      "title": "TEST 123",
-      "slug": "test-123",
-      "url": "articles/test-123.html",
-      "date": "2026-08-05",
-      "dateLabel": "5 August 2026",
-      "author": "Reiki Fish",
-      "excerpt": "SDFSDF",
-      "category": "SDFSDFS",
-      "categories": [
-        "SDFSDFS"
-      ],
-      "tags": [
-        "['SDFSDF']"
-      ],
-      "image": "assets/images/blog/disd.png",
-      "imageAlt": "SDFSDFS",
-      "readingTime": "1 min read",
-      "featured": true
     }
   ]
 }
