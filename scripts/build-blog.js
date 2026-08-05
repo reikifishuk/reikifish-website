@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
@@ -408,12 +408,12 @@ function renderArticlePage(post, publishedPosts) {
       <section class="container py-6 reveal article-hero">
         <p class="eyebrow">${escapeHtml(primaryCategory)}</p>
         <h1 class="section-heading-xl">${escapeHtml(post.title)}</h1>
-        <p class="lead-text">${escapeHtml(post.dateLabel)} • ${escapeHtml(post.author)} • ${escapeHtml(post.readingTime)}</p>
+        <p class="lead-text">${escapeHtml(post.dateLabel)} â€¢ ${escapeHtml(post.author)} â€¢ ${escapeHtml(post.readingTime)}</p>
       </section>
     </header>
 
     <main class="container py-5">
-      <article class="article-body reveal">
+      <article class="article-body">
         ${post.featuredImage ? `
         <figure class="article-featured-media">
           <img
@@ -562,3 +562,4 @@ function build() {
 }
 
 build();
+
