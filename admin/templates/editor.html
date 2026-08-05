@@ -247,6 +247,15 @@ placeholder="Optional image caption">
             <option value="draft">Draft</option>
             <option value="published">Published</option>
         </select>
+
+        <label style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <input
+                id="featured"
+                type="checkbox"
+                style="width:auto;margin:0;"
+            >
+            Feature this article at the top of the blog
+        </label>
     </aside>
 <input type="hidden" id="featuredImage">
 </main>
@@ -285,6 +294,11 @@ placeholder="Optional image caption">
         setField("featuredImage", existingPost.featuredImage);
         setField("featuredAlt", existingPost.featuredImageAlt);
         setField("publishStatus", "published");
+
+        const featuredField = document.getElementById("featured");
+        if (featuredField) {
+            featuredField.checked = Boolean(existingPost.featured);
+        }
 
         if (existingPost.featuredImage) {
             const preview = document.getElementById("imagePreview");
@@ -414,6 +428,7 @@ placeholder="Optional image caption">
                 .map(tag => tag.trim())
                 .filter(Boolean),
             author: document.getElementById("author").value.trim(),
+            featured: document.getElementById("featured").checked,
             status,
             content
         };

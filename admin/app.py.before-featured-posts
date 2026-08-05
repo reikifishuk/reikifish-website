@@ -51,7 +51,6 @@ def editor():
         "author": "Reiki Fish",
         "featuredImage": "",
         "featuredImageAlt": "",
-        "featured": False,
         "content": ""
     }
 
@@ -87,7 +86,6 @@ def editor():
                         "author": front.get("author", "Reiki Fish"),
                         "featuredImage": front.get("featuredImage", ""),
                         "featuredImageAlt": front.get("featuredImageAlt", ""),
-                        "featured": bool(front.get("featured", False)),
                         "content": body
                     }
 
@@ -513,15 +511,6 @@ def publish_v2():
 
     excerpt = (data.get("excerpt") or "").strip()
 
-    featured_value = data.get("featured", False)
-
-    if isinstance(featured_value, str):
-        is_featured = featured_value.strip().lower() in {
-            "true", "1", "yes", "on"
-        }
-    else:
-        is_featured = bool(featured_value)
-
     content = str(data.get("content") or "").strip()
     empty_content = {"", "<p></p>", "<p><br></p>", "<p><br data-mce-bogus=\"1\"></p>"}
 
@@ -550,7 +539,7 @@ slug: {yaml_text(slug)}
 categories: {yaml_text(data.get("category") or data.get("categories"))}
 tags: {yaml_text(data.get("tags"))}
 author: {yaml_text(data.get("author") or "Reiki Fish")}
-featured: {str(is_featured).lower()}
+featured: {str((data.get("featured") or "").lower() == "true").lower()}
 draft: false
 date: {yaml_text(data.get("date") or date.today().isoformat())}
 excerpt: {yaml_text(excerpt)}
@@ -562,26 +551,6 @@ featuredImageAlt: {yaml_text(data.get("imageAlt") or data.get("image_alt") or da
 """
 
     post_file = posts_dir / f"{slug}.md"
-
-    if is_featured:
-        for other_file in posts_dir.glob("*.md"):
-            if other_file == post_file:
-                continue
-
-            other_text = other_file.read_text(encoding="utf-8")
-
-            updated_text = re.sub(
-                r"(?m)^featured:\s*true\s*$",
-                "featured: false",
-                other_text,
-                count=1
-            )
-
-            if updated_text != other_text:
-                other_file.write_text(
-                    updated_text,
-                    encoding="utf-8"
-                )
 
     if post_file.exists():
         backups_dir = posts_dir / "_backups"
