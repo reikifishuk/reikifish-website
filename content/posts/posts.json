@@ -1,73 +1,21 @@
 {
   "items": [
     {
-      "title": "How Can The Grey Method Coaching Help Me Build a Positive Mindset When I Am Going Through Absolute Hell?",
-      "slug": "grey-method-positive-mindset-difficult-times",
-      "url": "articles/grey-method-positive-mindset-difficult-times.html",
-      "date": "2026-08-04",
-      "dateLabel": "4 August 2026",
+      "title": "How Can The Grey Principles Help Me Build a Positive Mindset When I Am Going Through Absolute Hell?",
+      "slug": "how-can-the-grey-principles-help-me-build-a-positive-mindset-when-i-am-going-through-absolute-hell",
+      "url": "articles/how-can-the-grey-principles-help-me-build-a-positive-mindset-when-i-am-going-through-absolute-hell.html",
+      "date": "2026-08-05",
+      "dateLabel": "5 August 2026",
       "author": "Reiki Fish",
-      "excerpt": "",
-      "category": "Journal",
-      "categories": [],
-      "tags": [],
-      "image": "",
-      "imageAlt": "How Can The Grey Method Coaching Help Me Build a Positive Mindset When I Am Going Through Absolute Hell? featured image",
-      "readingTime": "1 min read",
-      "featured": false
-    },
-    {
-      "title": "last test",
-      "slug": "last-test",
-      "url": "articles/last-test.html",
-      "date": "2026-08-04",
-      "dateLabel": "4 August 2026",
-      "author": "Reiki Fish",
-      "excerpt": "cascasca",
-      "category": "Trauma",
+      "excerpt": "A positive mindset does not mean pretending everything is fine. Discover how The Grey Method can help you face reality, find emotional balance, and move forwards when life feels unbearable.",
+      "category": "Coaching",
       "categories": [
-        "Trauma"
+        "Coaching"
       ],
       "tags": [],
-      "image": "",
-      "imageAlt": "last test featured image",
-      "readingTime": "1 min read",
-      "featured": false
-    },
-    {
-      "title": "TEST 120",
-      "slug": "test-120",
-      "url": "articles/test-120.html",
-      "date": "2026-08-04",
-      "dateLabel": "4 August 2026",
-      "author": "Reiki Fish",
-      "excerpt": "34R34R34R3",
-      "category": "Trauma",
-      "categories": [
-        "Trauma"
-      ],
-      "tags": [],
-      "image": "",
-      "imageAlt": "TEST 120 featured image",
-      "readingTime": "1 min read",
-      "featured": false
-    },
-    {
-      "title": "wedwed",
-      "slug": "wedwed",
-      "url": "articles/wedwed.html",
-      "date": "2026-08-04",
-      "dateLabel": "4 August 2026",
-      "author": "Reiki Fish",
-      "excerpt": "wedwedw",
-      "category": "Journal",
-      "categories": [],
-      "tags": [
-        "['wedwe']"
-      ],
-      "image": "",
-      "imageAlt": "wedwed featured image",
-      "readingTime": "1 min read",
+      "image": "assets/images/blog/WALKING_THE_GREY.png",
+      "imageAlt": "The Grey Method Coaching helps people find emotional balance and a positive mindset during difficult times",
+      "readingTime": "6 min read",
       "featured": false
     }
   ]
