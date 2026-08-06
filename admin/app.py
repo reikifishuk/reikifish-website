@@ -1,4 +1,4 @@
-﻿from flask import Flask, request, jsonify, render_template, send_from_directory
+from flask import Flask, request, jsonify, render_template, send_from_directory
 from pathlib import Path
 from werkzeug.utils import secure_filename
 from datetime import date
@@ -32,6 +32,11 @@ def serve_asset(filename):
 @app.route("/")
 def home():
     return render_template("index.html")
+
+@app.route("/articles")
+def articles_manager():
+    return render_template("articles.html")
+
 
 @app.route("/editor")
 def editor():

@@ -48,5 +48,54 @@
 
 <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
 
+
+<!-- ARTICLES_MANAGER_DASHBOARD_FIX -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Make the Articles Manage button open the proper manager.
+    const manage = Array.from(
+        document.querySelectorAll("a, button")
+    ).find(function (element) {
+        return element.textContent.trim().toLowerCase() === "manage";
+    });
+
+    if (manage) {
+
+        if (manage.tagName === "A") {
+            manage.setAttribute("href", "/articles");
+        }
+
+        manage.addEventListener(
+            "click",
+            function (event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                window.location.href = "/articles";
+            },
+            true
+        );
+    }
+
+    // Posts are now managed inside the Articles page.
+    const postsHeading = Array.from(
+        document.querySelectorAll("h1, h2, h3, h4")
+    ).find(function (heading) {
+        return heading.textContent.trim().toLowerCase() === "posts";
+    });
+
+    if (postsHeading) {
+
+        let node = postsHeading;
+
+        while (node) {
+            const next = node.nextElementSibling;
+            node.style.display = "none";
+            node = next;
+        }
+    }
+});
+</script>
+
 </body>
 </html>
