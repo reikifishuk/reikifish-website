@@ -6,7 +6,7 @@ slug: "my-ex-is-using-my-child-against-me"
 categories: "Parental Alienation & DARVO"
 tags: "[\"['DARVO']\"]"
 author: "Reiki Fish"
-featured: true
+featured: false
 draft: false
 date: "2026-08-06"
 excerpt: "When a relationship with your child suddenly changes after separation, it can be devastating. This in-depth guide explores alienating behaviours, false or disputed allegations, children’s wishes, evidence and the family courts in Scotland and England."

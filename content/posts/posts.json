@@ -40,7 +40,7 @@
       "image": "assets/images/blog/parental_alienation.png",
       "imageAlt": "Distressed parent coping with separation, child contact problems and alienating behaviours after a relationship breakdown.",
       "readingTime": "39 min read",
-      "featured": true
+      "featured": false
     },
     {
       "title": "Is It Really Narcissism? The Traits, Warning Signs and Red Flags People Get Wrong",
@@ -71,6 +71,27 @@
       "imageAlt": "Woman facing an idealised mirror reflection, representing narcissistic grandiosity, vulnerability, self-image and personality traits.",
       "readingTime": "25 min read",
       "featured": false
+    },
+    {
+      "title": "The Book of DARVO: When Blame Becomes a Weapon",
+      "slug": "the-book-of-darvo",
+      "url": "articles/the-book-of-darvo.html",
+      "date": "2026-08-06",
+      "dateLabel": "6 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "The Book of DARVO is a new work from Andy Fish exploring what happens when accountability becomes blame reversal. Discover the psychology of DARVO, smear campaigns, coercive control, economic abuse, children caught in adult conflict and why evidence can be more powerful than retaliation.",
+      "category": "Updates",
+      "categories": [
+        "Updates"
+      ],
+      "tags": [
+        "['DARVO'",
+        "'Book']"
+      ],
+      "image": "assets/images/blog/book_of_darvo.png",
+      "imageAlt": "The Book of DARVO by Andy Fish explores blame reversal, smear campaigns, coercive control and psychological abuse.",
+      "readingTime": "14 min read",
+      "featured": true
     },
     {
       "title": "DARVO: When the Person Who Hurt You Claims to Be the Victim",
