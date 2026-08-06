@@ -5933,3 +5933,212 @@ div:has(> .coaching-value-icon) p {
     }
 
 }
+
+
+/* ==========================================================
+   GREY_BOOK_OVERVIEW_LAYOUT_V2
+   ========================================================== */
+
+.book-overview-premium {
+    padding:
+        clamp(5rem, 7vw, 7rem) 0 !important;
+}
+
+
+/* TWO COLUMNS */
+
+.book-overview-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(420px, .92fr) !important;
+
+    gap:
+        clamp(3.5rem, 6vw, 7rem) !important;
+
+    align-items:
+        center !important;
+
+    width:
+        100%;
+}
+
+
+/* LEFT */
+
+.book-overview-copy {
+    min-width:
+        0;
+
+    max-width:
+        760px;
+}
+
+.book-overview-eyebrow {
+    margin:
+        0 0 1rem !important;
+
+    color:
+        #dfa855 !important;
+
+    font-size:
+        .8rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .27em;
+
+    text-transform:
+        uppercase;
+}
+
+.book-overview-line {
+    width:
+        68px;
+
+    height:
+        2px;
+
+    margin-bottom:
+        1.9rem;
+
+    background:
+        #dfa855;
+}
+
+.book-overview-copy h2 {
+    margin:
+        0 0 1.5rem !important;
+}
+
+.book-overview-copy > p:not(.book-overview-eyebrow) {
+    margin:
+        0 0 1.4rem !important;
+
+    line-height:
+        1.8;
+
+    color:
+        rgba(240,237,231,.77);
+}
+
+
+/* RIGHT IMAGE */
+
+.book-overview-visual {
+    position:
+        relative;
+
+    width:
+        100%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+}
+
+.book-overview-image {
+    display:
+        block;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        1.4 / 1;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    border-radius:
+        28px;
+
+    border:
+        1px solid rgba(226,170,82,.28);
+
+    box-shadow:
+        0 32px 75px rgba(0,0,0,.32),
+        0 0 0 1px rgba(255,255,255,.025);
+}
+
+
+/* SUBTLE GOLD DEPTH */
+
+.book-overview-visual::after {
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        10% -4% -6% 8%;
+
+    z-index:
+        -1;
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(226,170,82,.055);
+
+    filter:
+        blur(42px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .book-overview-grid {
+        grid-template-columns:
+            minmax(0,1fr)
+            minmax(340px,.85fr) !important;
+
+        gap:
+            3rem !important;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .book-overview-premium {
+        padding:
+            4rem 0 !important;
+    }
+
+    .book-overview-grid {
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            2.5rem !important;
+    }
+
+    .book-overview-copy {
+        max-width:
+            none;
+    }
+
+    .book-overview-image {
+        aspect-ratio:
+            4 / 3;
+
+        border-radius:
+            20px;
+    }
+
+}
