@@ -5768,3 +5768,168 @@ div:has(> .coaching-value-icon) p {
     }
 
 }
+
+
+/* ==========================================================
+   WALKING_GREY_HERO_ENRICHMENT
+   ========================================================== */
+
+.book-hero-secondary {
+    max-width: 790px;
+
+    margin-top:
+        1.5rem;
+
+    line-height:
+        1.75;
+
+    color:
+        rgba(240,237,231,.72);
+}
+
+
+/* THEME TAGS */
+
+.book-hero-themes {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: .7rem;
+
+    margin-top:
+        1.8rem;
+}
+
+.book-hero-themes span {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        .55rem .9rem;
+
+    border-radius:
+        999px;
+
+    border:
+        1px solid rgba(226,170,82,.30);
+
+    background:
+        rgba(226,170,82,.055);
+
+    color:
+        #e0aa55;
+
+    font-size:
+        .78rem;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .06em;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* PHILOSOPHY PANEL */
+
+.book-hero-philosophy {
+    position: relative;
+
+    max-width:
+        760px;
+
+    margin-top:
+        2rem;
+
+    padding:
+        1.4rem 1.6rem;
+
+    border-radius:
+        16px;
+
+    border-left:
+        2px solid #dfa855;
+
+    border-top:
+        1px solid rgba(226,170,82,.14);
+
+    border-right:
+        1px solid rgba(226,170,82,.14);
+
+    border-bottom:
+        1px solid rgba(226,170,82,.14);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(226,170,82,.055),
+            rgba(255,255,255,.012)
+        );
+}
+
+.book-hero-philosophy-label {
+    display:
+        block;
+
+    margin-bottom:
+        .55rem;
+
+    color:
+        #dfa855;
+
+    font-size:
+        .74rem;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .24em;
+
+    text-transform:
+        uppercase;
+}
+
+.book-hero-philosophy p {
+    margin:
+        0 !important;
+
+    max-width:
+        650px;
+
+    line-height:
+        1.65;
+
+    color:
+        rgba(240,237,231,.78);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .book-hero-secondary {
+        margin-top:
+            1.25rem;
+    }
+
+    .book-hero-themes {
+        margin-top:
+            1.4rem;
+    }
+
+    .book-hero-philosophy {
+        margin-top:
+            1.5rem;
+
+        padding:
+            1.25rem;
+    }
+
+}
