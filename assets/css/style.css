@@ -5487,3 +5487,38 @@ div:has(> .coaching-value-icon) p {
         margin-bottom: 2.5rem;
     }
 }
+
+
+/* SUPPORT_CTA_SPACING_FIX */
+
+/* Reduce empty space beneath final support cards */
+.support-premium-section {
+    padding-bottom: clamp(2rem, 3vw, 3.5rem) !important;
+}
+
+/* Bring booking CTA closer */
+.support-cta-section {
+    padding-top: clamp(2rem, 3vw, 3.5rem) !important;
+}
+
+/* Centre CTA beneath the card grid */
+.support-cta-section .container {
+    text-align: center;
+}
+
+.support-cta-section .btn {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 620px) {
+
+    .support-premium-section {
+        padding-bottom: 2rem !important;
+    }
+
+    .support-cta-section {
+        padding-top: 2rem !important;
+    }
+}
