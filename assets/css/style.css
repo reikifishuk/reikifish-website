@@ -6294,3 +6294,548 @@ div:has(> .coaching-value-icon) p {
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_COACHING_PAGE_V1
+   ========================================================== */
+
+.trauma-page {
+    background: #111516;
+    color: #ece9e3;
+}
+
+.trauma-section-inner,
+.trauma-hero-inner,
+.trauma-final-inner {
+    width: min(1180px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.trauma-eyebrow {
+    display: block;
+    color: #dfa855;
+    font-size: .79rem;
+    font-weight: 700;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.trauma-gold-line {
+    display: block;
+    width: 72px;
+    height: 2px;
+    background: #dfa855;
+    margin-bottom: 30px;
+}
+
+.trauma-hero {
+    background:
+        radial-gradient(circle at 82% 35%, rgba(223,168,85,.09), transparent 30%),
+        #1b1f21;
+    padding: 105px 0;
+}
+
+.trauma-hero-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.18fr) minmax(360px, .82fr);
+    gap: 90px;
+    align-items: center;
+}
+
+.trauma-hero-copy h1 {
+    max-width: 800px;
+    margin: 0 0 26px;
+    color: #f2eee8;
+    font-size: clamp(3rem, 5vw, 5.4rem);
+    line-height: .99;
+    letter-spacing: -.035em;
+}
+
+.trauma-hero-copy p {
+    max-width: 760px;
+    color: #cbc8c2;
+    font-size: 1.08rem;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+.trauma-hero-copy .trauma-hero-lead {
+    color: #e3dfd8;
+    font-size: 1.22rem;
+}
+
+.trauma-hero-cta {
+    margin-top: 18px;
+}
+
+.trauma-hero-panel {
+    position: relative;
+    padding: 48px;
+    border: 1px solid rgba(223,168,85,.34);
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(223,168,85,.08), transparent 45%),
+        #101415;
+    box-shadow: 0 28px 70px rgba(0,0,0,.26);
+}
+
+.trauma-hero-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 48px;
+    width: 72px;
+    height: 2px;
+    background: #dfa855;
+}
+
+.trauma-panel-label {
+    color: #dfa855;
+    font-size: .72rem;
+    letter-spacing: .24em;
+    font-weight: 700;
+}
+
+.trauma-hero-panel blockquote {
+    margin: 30px 0 26px;
+    color: #f1ede7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.6rem, 2.1vw, 2.35rem);
+    line-height: 1.35;
+}
+
+.trauma-hero-panel p {
+    color: #aaa9a5;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.trauma-understanding {
+    padding: 105px 0;
+    background: #0e1213;
+}
+
+.trauma-section-heading {
+    max-width: 940px;
+}
+
+.trauma-section-heading h2,
+.trauma-support-intro h2,
+.trauma-process-heading h2,
+.trauma-boundary-panel h2,
+.trauma-final-inner h2 {
+    color: #efebe5;
+    line-height: 1.12;
+    letter-spacing: -.025em;
+}
+
+.trauma-section-heading h2,
+.trauma-support-intro h2 {
+    max-width: 930px;
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    margin: 0 0 28px;
+}
+
+.trauma-section-heading p {
+    max-width: 900px;
+    color: #bbb9b4;
+    font-size: 1.08rem;
+    line-height: 1.85;
+    margin-bottom: 20px;
+}
+
+.trauma-support-section {
+    padding: 105px 0 115px;
+    background: #121617;
+}
+
+.trauma-support-intro {
+    max-width: 900px;
+    margin-bottom: 55px;
+}
+
+.trauma-support-intro p {
+    max-width: 780px;
+    color: #b9b7b2;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.trauma-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.trauma-card {
+    min-height: 300px;
+    padding: 36px;
+    border: 1px solid rgba(223,168,85,.26);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(223,168,85,.06), transparent 30%),
+        #0d1112;
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.trauma-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(223,168,85,.52);
+    box-shadow: 0 22px 50px rgba(0,0,0,.24);
+}
+
+.trauma-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 28px;
+    border: 1px solid rgba(223,168,85,.42);
+    border-radius: 17px;
+    color: #dfa855;
+    background: rgba(223,168,85,.07);
+}
+
+.trauma-card-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.trauma-card h3 {
+    color: #eeeae4;
+    font-size: 1.4rem;
+    margin: 0 0 16px;
+}
+
+.trauma-card p {
+    color: #aaa9a5;
+    line-height: 1.75;
+    margin: 0;
+}
+
+.trauma-process {
+    padding: 110px 0;
+    background: #0c1011;
+}
+
+.trauma-process-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.trauma-process-heading h2 {
+    font-size: clamp(2.4rem, 3.7vw, 3.8rem);
+    margin: 0 0 28px;
+}
+
+.trauma-process-heading p {
+    color: #b5b3ae;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.trauma-process-list {
+    display: grid;
+    gap: 16px;
+}
+
+.trauma-process-item {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding: 26px 0;
+    border-bottom: 1px solid rgba(223,168,85,.19);
+}
+
+.trauma-process-item > span {
+    color: #dfa855;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+}
+
+.trauma-process-item h3 {
+    color: #eeeae4;
+    margin: 0 0 8px;
+    font-size: 1.28rem;
+}
+
+.trauma-process-item p {
+    color: #9f9f9b;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.trauma-boundary-section {
+    padding: 95px 0;
+    background: #121617;
+}
+
+.trauma-boundary-panel {
+    display: grid;
+    grid-template-columns: 1.4fr .6fr;
+    gap: 70px;
+    align-items: center;
+    padding: 55px 60px;
+    border: 1px solid rgba(223,168,85,.3);
+    border-radius: 26px;
+    background: #0d1112;
+}
+
+.trauma-boundary-panel h2 {
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    margin: 0 0 22px;
+}
+
+.trauma-boundary-panel p {
+    color: #aaa9a5;
+    line-height: 1.78;
+    margin-bottom: 16px;
+}
+
+.trauma-boundary-mark {
+    display: grid;
+    gap: 12px;
+}
+
+.trauma-boundary-mark span {
+    padding: 15px 20px;
+    text-align: center;
+    color: #dfa855;
+    border: 1px solid rgba(223,168,85,.3);
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.trauma-final-cta {
+    padding: 115px 0;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(223,168,85,.09), transparent 36%),
+        #0b0f10;
+}
+
+.trauma-final-inner {
+    max-width: 850px;
+    text-align: center;
+}
+
+.trauma-gold-line-centred {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trauma-final-inner h2 {
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    margin: 0 auto 25px;
+}
+
+.trauma-final-inner p {
+    max-width: 720px;
+    margin: 0 auto 32px;
+    color: #b7b5b0;
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.trauma-final-inner small {
+    display: block;
+    margin-top: 22px;
+    color: #8d8d89;
+    letter-spacing: .06em;
+}
+
+
+/* ==========================================================
+   COACHING NAVIGATION DROPDOWN
+   ========================================================== */
+
+.coaching-nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.coaching-nav-submenu {
+    position: absolute;
+    z-index: 9999;
+    top: calc(100% + 14px);
+    left: 50%;
+    min-width: 210px;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(-50%, 8px);
+    border: 1px solid rgba(223,168,85,.28);
+    border-radius: 16px;
+    background: rgba(12,16,17,.98);
+    box-shadow: 0 24px 50px rgba(0,0,0,.38);
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        visibility .2s ease;
+}
+
+.coaching-nav-submenu::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 16px;
+}
+
+.coaching-nav-dropdown:hover .coaching-nav-submenu,
+.coaching-nav-dropdown:focus-within .coaching-nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.coaching-nav-submenu a {
+    display: block !important;
+    width: 100%;
+    padding: 12px 15px !important;
+    border-radius: 10px;
+    color: #dedbd5 !important;
+    font-size: .92rem !important;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.coaching-nav-submenu a:hover,
+.coaching-nav-submenu a:focus {
+    color: #dfa855 !important;
+    background: rgba(223,168,85,.09);
+}
+
+
+/* TABLET */
+
+@media (max-width: 991px) {
+
+    .trauma-hero {
+        padding: 80px 0;
+    }
+
+    .trauma-hero-inner,
+    .trauma-process-grid,
+    .trauma-boundary-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .trauma-hero-inner,
+    .trauma-process-grid {
+        gap: 55px;
+    }
+
+    .trauma-hero-panel {
+        max-width: 680px;
+    }
+
+    .trauma-card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trauma-boundary-panel {
+        gap: 35px;
+    }
+
+    .coaching-nav-dropdown {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    .coaching-nav-submenu {
+        position: static;
+        display: flex;
+        width: 100%;
+        min-width: 0;
+        margin-top: 5px;
+        padding: 0 0 0 16px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        border: 0;
+        border-left: 1px solid rgba(223,168,85,.35);
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .coaching-nav-dropdown:hover .coaching-nav-submenu,
+    .coaching-nav-dropdown:focus-within .coaching-nav-submenu {
+        transform: none;
+    }
+
+    .coaching-nav-submenu a {
+        color: #dfa855 !important;
+        padding: 9px 12px !important;
+        font-size: .86rem !important;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+    .trauma-section-inner,
+    .trauma-hero-inner,
+    .trauma-final-inner {
+        width: min(100% - 34px, 1180px);
+    }
+
+    .trauma-hero {
+        padding: 65px 0 70px;
+    }
+
+    .trauma-hero-copy h1 {
+        font-size: clamp(2.65rem, 13vw, 4rem);
+    }
+
+    .trauma-hero-panel {
+        padding: 35px 28px;
+    }
+
+    .trauma-understanding,
+    .trauma-support-section,
+    .trauma-process,
+    .trauma-boundary-section,
+    .trauma-final-cta {
+        padding: 72px 0;
+    }
+
+    .trauma-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trauma-card {
+        min-height: 0;
+        padding: 30px 27px;
+    }
+
+    .trauma-boundary-panel {
+        padding: 36px 27px;
+    }
+
+    .trauma-process-item {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+}
