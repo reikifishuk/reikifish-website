@@ -6,7 +6,7 @@ slug: "test"
 categories: "pschology"
 tags: "['asdasd']"
 author: "Reiki Fish"
-featured: false
+featured: true
 draft: false
 date: "2026-08-06"
 excerpt: "sdfsdfs"
@@ -15,3 +15,4 @@ featuredImageAlt: "sdfsd"
 ---
 
 <p>testsssss</p>
+

@@ -96,6 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const getFilteredPosts = () => {
     const searchValue = state.search.toLowerCase();
     return state.posts.filter((post) => {
+      if (state.featured && post.slug === state.featured.slug) {
+        return false;
+      }
+
       const categoryMatch =
         state.activeCategory === 'all' || post.categories.map((cat) => cat.toLowerCase()).includes(state.activeCategory.toLowerCase());
 
