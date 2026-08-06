@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       if (submitButton && submitButton.disabled) {
@@ -274,34 +274,55 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const toEmail = String(contactForm.dataset.contactEmail || '').trim();
-        if (!toEmail) {
-          throw new Error('Contact email is not configured for this form.');
+        const endpoint =
+          String(
+            contactForm.dataset.contactEndpoint ||
+            '/api/contact'
+          ).trim();
+
+        const response = await fetch(endpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            ...payload,
+            website: String(formData.get('website') || ''),
+          }),
+        });
+
+        let result = {};
+
+        try {
+          result = await response.json();
+        } catch (_) {
+          result = {};
         }
 
-        const subject = `Coaching Enquiry - ${payload.enquiryType || 'General Enquiry'}`;
-        const body = [
-          `Full Name: ${payload.fullName}`,
-          `Email Address: ${payload.emailAddress}`,
-          `Telephone Number: ${payload.telephoneNumber || 'Not provided'}`,
-          `Organisation: ${payload.organisation || 'Not provided'}`,
-          `Enquiry Type: ${payload.enquiryType}`,
-          '',
-          'Message:',
-          payload.message,
-        ].join('\n');
-
-        window.location.href = `mailto:${encodeURIComponent(toEmail)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        if (!response.ok || !result.success) {
+          throw new Error(
+            result.message ||
+            'Your enquiry could not be sent. Please try again.'
+          );
+        }
 
         contactForm.reset();
+
         if (submittedAtField) {
           submittedAtField.value = String(Date.now());
         }
+
         if (statusMessage) {
           statusMessage.hidden = false;
-          statusMessage.textContent = 'Your email app should now open with this enquiry pre-filled.';
+          statusMessage.textContent =
+            result.message ||
+            'Thank you. Your enquiry has been sent successfully.';
         }
-        Object.keys(fields).forEach((name) => clearValidation(name));
+
+        Object.keys(fields).forEach((name) =>
+          clearValidation(name)
+        );
       } catch (error) {
         if (statusMessage) {
           statusMessage.hidden = false;
