@@ -1,6 +1,26 @@
 {
   "items": [
     {
+      "title": "test",
+      "slug": "test",
+      "url": "articles/test.html",
+      "date": "2026-08-06",
+      "dateLabel": "6 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "sdfsdfs",
+      "category": "pschology",
+      "categories": [
+        "pschology"
+      ],
+      "tags": [
+        "['asdasd']"
+      ],
+      "image": "assets/images/blog/h1.png",
+      "imageAlt": "sdfsd",
+      "readingTime": "1 min read",
+      "featured": false
+    },
+    {
       "title": "How Can The Grey Principles Help Me Build a Positive Mindset When I Am Going Through Absolute Hell?",
       "slug": "how-can-the-grey-principles-help-me-build-a-positive-mindset-when-i-am-going-through-absolute-hell",
       "url": "articles/how-can-the-grey-principles-help-me-build-a-positive-mindset-when-i-am-going-through-absolute-hell.html",
