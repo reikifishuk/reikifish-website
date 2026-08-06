@@ -5267,3 +5267,223 @@ div:has(> .coaching-value-icon) p {
         min-height: auto;
     }
 }
+
+
+/* ==========================================================
+   PREMIUM_AREAS_OF_SUPPORT
+   ========================================================== */
+
+.support-premium-section {
+    padding-top: clamp(5rem, 8vw, 8rem);
+    padding-bottom: clamp(5rem, 8vw, 8rem);
+}
+
+.support-premium-intro {
+    max-width: 920px;
+    margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.support-premium-intro .eyebrow {
+    color: #dfa855;
+    text-transform: uppercase;
+    letter-spacing: .28em;
+    font-size: .86rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.support-premium-rule {
+    width: 72px;
+    height: 2px;
+    background: #dfa855;
+    margin-bottom: 2rem;
+}
+
+.support-premium-intro h2 {
+    margin: 0 0 1.25rem;
+    max-width: 900px;
+}
+
+.support-premium-lead {
+    max-width: 800px;
+    line-height: 1.8;
+    color: rgba(240, 237, 231, .76);
+}
+
+
+/* GRID */
+
+.support-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.4rem;
+}
+
+
+/* CARDS */
+
+.support-premium-card {
+    min-height: 255px;
+
+    padding: 2.1rem 1.8rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    border:
+        1px solid rgba(226, 170, 82, .22);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.025),
+            rgba(255,255,255,.008)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.025),
+        0 22px 50px rgba(0,0,0,.12);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.support-premium-card:hover {
+    transform: translateY(-4px);
+
+    border-color:
+        rgba(226,170,82,.42);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(226,170,82,.055),
+            rgba(255,255,255,.012)
+        );
+}
+
+
+/* ICON */
+
+.support-premium-icon {
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.45rem;
+
+    border-radius: 15px;
+
+    color: #e0aa55;
+
+    border:
+        1px solid rgba(226,170,82,.33);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(226,170,82,.13),
+            rgba(226,170,82,.035)
+        );
+
+    box-shadow:
+        0 12px 28px rgba(0,0,0,.18);
+}
+
+.support-premium-icon svg {
+    width: 26px;
+    height: 26px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.45;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* TEXT */
+
+.support-premium-card h3 {
+    width: 100%;
+    margin: 0 0 .85rem !important;
+
+    text-align: center !important;
+
+    line-height: 1.15;
+
+    min-height: 2.3em;
+}
+
+.support-premium-card p {
+    width: 100%;
+    max-width: 270px;
+
+    margin: 0 auto !important;
+
+    text-align: center !important;
+
+    line-height: 1.65;
+
+    color:
+        rgba(240,237,231,.72);
+}
+
+
+/* CENTRE FINAL TWO CARDS */
+
+.support-premium-card:nth-child(9) {
+    grid-column: 2;
+}
+
+.support-premium-card:nth-child(10) {
+    grid-column: 3;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+
+    .support-premium-grid {
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+    .support-premium-card:nth-child(9),
+    .support-premium-card:nth-child(10) {
+        grid-column: auto;
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+
+    .support-premium-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-premium-card {
+        min-height: auto;
+        padding: 1.9rem 1.5rem;
+    }
+
+    .support-premium-intro {
+        margin-bottom: 2.5rem;
+    }
+}
