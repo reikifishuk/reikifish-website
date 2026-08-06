@@ -5200,3 +5200,70 @@ div:has(> .coaching-value-icon) p {
     margin-right: auto;
     text-align: center;
 }
+
+
+/* COACHING_CARD_ALIGNMENT_FINAL */
+
+/*
+   Force every card containing a coaching icon
+   into the same centred vertical layout.
+*/
+
+:is(article, div, li):has(> .coaching-value-icon) {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+/* Icons: identical position and spacing */
+:is(article, div, li):has(> .coaching-value-icon)
+> .coaching-value-icon {
+    flex: 0 0 auto;
+    margin: 0 auto 26px auto !important;
+}
+
+/* Titles: identical horizontal + vertical alignment */
+:is(article, div, li):has(> .coaching-value-icon)
+> h2,
+:is(article, div, li):has(> .coaching-value-icon)
+> h3,
+:is(article, div, li):has(> .coaching-value-icon)
+> h4 {
+    width: 100% !important;
+    min-height: 44px;
+    margin: 0 0 16px 0 !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center !important;
+}
+
+/* Descriptions: same width and centred underneath */
+:is(article, div, li):has(> .coaching-value-icon)
+> p {
+    width: 100%;
+    max-width: 390px !important;
+
+    margin:
+        0 auto !important;
+
+    text-align:
+        center !important;
+}
+
+/* Maintain alignment on mobile */
+@media (max-width: 700px) {
+
+    :is(article, div, li):has(> .coaching-value-icon)
+    > h2,
+    :is(article, div, li):has(> .coaching-value-icon)
+    > h3,
+    :is(article, div, li):has(> .coaching-value-icon)
+    > h4 {
+        min-height: auto;
+    }
+}
