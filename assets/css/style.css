@@ -5167,3 +5167,36 @@ body.home-page .hp-topic-card p{
         height: 25px;
     }
 }
+
+
+/* COACHING_VALUE_CENTRED */
+
+/* Centre each premium icon */
+.coaching-value-icon {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.4rem;
+}
+
+/* Centre all content in cards containing our premium icons */
+div:has(> .coaching-value-icon) {
+    text-align: center;
+}
+
+/* Keep headings consistently aligned */
+div:has(> .coaching-value-icon) h2,
+div:has(> .coaching-value-icon) h3,
+div:has(> .coaching-value-icon) h4 {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Keep body copy balanced underneath */
+div:has(> .coaching-value-icon) p {
+    max-width: 390px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
