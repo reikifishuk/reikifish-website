@@ -5011,3 +5011,10 @@ body.home-page .hp-topic-card p{
 }
 
 
+
+
+/* BLOG_SIDEBAR_ACTIVE_CATEGORY */
+.blog-sidebar a.is-active {
+    color: #e2aa52;
+    font-weight: 700;
+}

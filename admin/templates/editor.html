@@ -234,7 +234,16 @@ id="featuredCaption"
 placeholder="Optional image caption">
 
         <label for="category">Category</label>
-        <input id="category" type="text" placeholder="Psychology">
+        <select id="category" required>
+            <option value="">Select a category</option>
+            <option value="Updates">Updates</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Reiki">Reiki</option>
+            <option value="Events">Events</option>
+            <option value="Coaching">Coaching</option>
+            <option value="Parental Alienation &amp; DARVO">Parental Alienation &amp; DARVO</option>
+            <option value="Social Science">Social Science</option>
+        </select>
 
         <label for="tags">Tags</label>
         <input id="tags" type="text" placeholder="trauma, coaching, mindset">

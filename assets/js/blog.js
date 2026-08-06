@@ -91,6 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
         )}">${escapeHtml(label)}</button>`;
       })
       .join('');
+    
+    root.querySelectorAll('[data-sidebar-category]').forEach((link) => {
+      const linkCategory = String(link.dataset.sidebarCategory || 'all');
+
+      const active =
+        linkCategory.toLowerCase() === state.activeCategory.toLowerCase();
+
+      link.classList.toggle('is-active', active);
+
+      if (active) {
+        link.setAttribute('aria-current', 'true');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
   };
 
   const getFilteredPosts = () => {
@@ -257,6 +272,32 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const bindEvents = () => {
+    const sidebarCategories = root.querySelectorAll('[data-sidebar-category]');
+
+    sidebarCategories.forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+
+        state.activeCategory =
+          String(link.dataset.sidebarCategory || 'all');
+
+        state.page = 1;
+
+        renderCategoryFilters();
+        renderAll();
+
+        const articlesHeading =
+          document.getElementById('all-articles-title');
+
+        if (articlesHeading) {
+          articlesHeading.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
     if (categoryContainer) {
       categoryContainer.addEventListener('click', (event) => {
         const target = event.target.closest('[data-category]');

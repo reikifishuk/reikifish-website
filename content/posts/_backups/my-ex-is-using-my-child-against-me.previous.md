@@ -3,8 +3,8 @@ title: "My Ex Is Using My Child Against Me: What Can I Actually Do?"
 seoTitle: "Parental Alienation & Child Contact: A UK Guide for Parents"
 metaDescription: "Is your ex using your child against you? Explore alienating behaviours, family court evidence and practical steps for parents in Scotland and England."
 slug: "my-ex-is-using-my-child-against-me"
-categories: "Parental Alienation & DARVO"
-tags: "[\"['DARVO']\"]"
+categories: "Psychology"
+tags: "['DARVO']"
 author: "Reiki Fish"
 featured: true
 draft: false
