@@ -5522,3 +5522,249 @@ div:has(> .coaching-value-icon) p {
         padding-top: 2rem !important;
     }
 }
+
+
+/* ==========================================================
+   COACHING_FINAL_PREMIUM_CTA
+   ========================================================== */
+
+/* Remove additional divider created by support redesign */
+.support-premium-rule {
+    display: none !important;
+}
+
+
+/* Reduce gap beneath support cards */
+.support-premium-section {
+    padding-bottom:
+        clamp(2.5rem, 4vw, 4rem) !important;
+}
+
+
+/* CTA SECTION */
+
+.support-cta-section {
+    padding:
+        0 0 clamp(5rem, 8vw, 8rem) !important;
+}
+
+
+/* PREMIUM CTA PANEL */
+
+.coaching-final-cta {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+        clamp(3rem, 6vw, 5.5rem)
+        clamp(1.5rem, 5vw, 5rem);
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    border:
+        1px solid rgba(226,170,82,.28);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(226,170,82,.09),
+            transparent 42%
+        ),
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.026),
+            rgba(255,255,255,.008)
+        );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.035),
+        0 35px 80px rgba(0,0,0,.20);
+}
+
+
+/* VERY SUBTLE GOLD GLOW */
+
+.coaching-final-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    left: 50%;
+    top: -230px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        rgba(226,170,82,.13);
+
+    filter: blur(80px);
+
+    pointer-events: none;
+}
+
+
+/* EYEBROW */
+
+.coaching-final-eyebrow {
+    position: relative;
+
+    margin:
+        0 0 1rem !important;
+
+    color: #dfa855 !important;
+
+    font-size: .82rem;
+    font-weight: 700;
+
+    letter-spacing: .28em;
+
+    text-transform: uppercase;
+
+    text-align: center !important;
+}
+
+
+/* GOLD LINE */
+
+.coaching-final-line {
+    width: 64px;
+    height: 2px;
+
+    margin:
+        0 auto 1.8rem;
+
+    background: #dfa855;
+}
+
+
+/* HEADING */
+
+.coaching-final-cta h2 {
+    position: relative;
+
+    max-width: 850px;
+
+    margin:
+        0 auto 1.5rem !important;
+
+    text-align:
+        center !important;
+
+    line-height: 1.08;
+}
+
+
+/* COPY */
+
+.coaching-final-copy {
+    position: relative;
+
+    max-width: 760px !important;
+
+    margin:
+        0 auto 2.2rem !important;
+
+    text-align:
+        center !important;
+
+    line-height: 1.8;
+
+    color:
+        rgba(240,237,231,.76) !important;
+}
+
+
+/* BUTTON */
+
+.coaching-final-button {
+    position: relative;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: .75rem;
+
+    margin:
+        0 auto !important;
+}
+
+.coaching-final-button span {
+    transition:
+        transform .25s ease;
+}
+
+.coaching-final-button:hover span {
+    transform:
+        translateX(4px);
+}
+
+
+/* REASSURANCE */
+
+.coaching-final-reassurance {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: .8rem;
+
+    margin-top: 1.7rem;
+
+    color:
+        rgba(240,237,231,.54);
+
+    font-size: .86rem;
+
+    letter-spacing: .04em;
+}
+
+.coaching-final-dot {
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        #dfa855;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+
+    .coaching-final-cta {
+        border-radius: 20px;
+
+        padding:
+            3rem 1.4rem;
+    }
+
+    .coaching-final-cta h2 br {
+        display: none;
+    }
+
+    .coaching-final-button {
+        width: 100%;
+    }
+
+}
