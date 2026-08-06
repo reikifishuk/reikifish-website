@@ -1,23 +1,23 @@
 {
   "items": [
     {
-      "title": "test",
-      "slug": "test",
-      "url": "articles/test.html",
+      "title": "My Ex Is Using My Child Against Me: What Can I Actually Do?",
+      "slug": "my-ex-is-using-my-child-against-me",
+      "url": "articles/my-ex-is-using-my-child-against-me.html",
       "date": "2026-08-06",
       "dateLabel": "6 August 2026",
       "author": "Reiki Fish",
-      "excerpt": "sdfsdfs",
-      "category": "pschology",
+      "excerpt": "When a relationship with your child suddenly changes after separation, it can be devastating. This in-depth guide explores alienating behaviours, false or disputed allegations, children’s wishes, evidence and the family courts in Scotland and England.",
+      "category": "Psychology",
       "categories": [
-        "pschology"
+        "Psychology"
       ],
       "tags": [
-        "['asdasd']"
+        "['DARVO']"
       ],
-      "image": "assets/images/blog/h1.png",
-      "imageAlt": "sdfsd",
-      "readingTime": "1 min read",
+      "image": "assets/images/blog/parental_alienation.png",
+      "imageAlt": "Distressed parent coping with separation, child contact problems and alienating behaviours after a relationship breakdown.",
+      "readingTime": "39 min read",
       "featured": true
     },
     {
