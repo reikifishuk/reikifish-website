@@ -7162,3 +7162,217 @@ div:has(> .coaching-value-icon) p {
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_HERO_PANEL_V4
+   ========================================================== */
+
+.trauma-page .trauma-hero-panel-v4 {
+    position: relative !important;
+
+    align-self: center !important;
+
+    padding: 46px 44px !important;
+
+    border: 1px solid rgba(223,168,85,.30) !important;
+    border-radius: 26px !important;
+
+    background:
+        radial-gradient(
+            circle at 12% 0%,
+            rgba(223,168,85,.09),
+            transparent 34%
+        ),
+        #0d1112 !important;
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,.24) !important;
+}
+
+.trauma-page .trauma-hero-panel-v4::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 44px !important;
+
+    width: 72px !important;
+    height: 2px !important;
+
+    background: #dfa855 !important;
+}
+
+.trauma-page .trauma-panel-label {
+    display: block !important;
+
+    margin-bottom: 21px !important;
+
+    color: #dfa855 !important;
+
+    font-size: .72rem !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .25em !important;
+}
+
+.trauma-page .trauma-hero-panel-v4 h2 {
+    max-width: 440px !important;
+
+    margin: 0 0 20px !important;
+
+    color: #f0ede7 !important;
+
+    font-family: Georgia, "Times New Roman", serif !important;
+
+    font-size: clamp(1.75rem, 2.35vw, 2.55rem) !important;
+
+    font-weight: 400 !important;
+
+    line-height: 1.22 !important;
+
+    letter-spacing: -.015em !important;
+}
+
+.trauma-page .trauma-panel-intro {
+    margin: 0 0 30px !important;
+
+    color: #aaa8a3 !important;
+
+    font-size: .98rem !important;
+    line-height: 1.7 !important;
+}
+
+.trauma-page .trauma-panel-principles {
+    display: grid !important;
+
+    gap: 0 !important;
+
+    margin: 0 0 27px !important;
+
+    border-top:
+        1px solid rgba(223,168,85,.15) !important;
+}
+
+.trauma-page .trauma-principle {
+    display: grid !important;
+
+    grid-template-columns: 46px 1fr !important;
+
+    gap: 15px !important;
+
+    align-items: center !important;
+
+    padding: 16px 0 !important;
+
+    border-bottom:
+        1px solid rgba(223,168,85,.15) !important;
+}
+
+.trauma-page .trauma-principle-icon {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    border:
+        1px solid rgba(223,168,85,.31) !important;
+
+    border-radius: 12px !important;
+
+    color: #dfa855 !important;
+
+    background:
+        rgba(223,168,85,.055) !important;
+}
+
+.trauma-page .trauma-principle-icon svg {
+    width: 21px !important;
+    height: 21px !important;
+
+    fill: none !important;
+
+    stroke: currentColor !important;
+    stroke-width: 1.55 !important;
+
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+}
+
+.trauma-page .trauma-principle strong {
+    display: block !important;
+
+    margin-bottom: 2px !important;
+
+    color: #e8e4de !important;
+
+    font-size: .98rem !important;
+}
+
+.trauma-page .trauma-principle small {
+    display: block !important;
+
+    color: #92928f !important;
+
+    font-size: .84rem !important;
+    line-height: 1.4 !important;
+}
+
+.trauma-page .trauma-panel-foot {
+    margin: 0 !important;
+
+    color: #b4b1ab !important;
+
+    font-size: .88rem !important;
+
+    line-height: 1.65 !important;
+
+    font-style: italic !important;
+}
+
+
+/* Keep hero balanced */
+
+.trauma-page .trauma-hero-inner {
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(390px, .88fr) !important;
+
+    gap: 76px !important;
+}
+
+
+/* TABLET */
+
+@media (max-width: 991px) {
+
+    .trauma-page .trauma-hero-inner {
+        grid-template-columns: 1fr !important;
+    }
+
+    .trauma-page .trauma-hero-panel-v4 {
+        max-width: 650px !important;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 680px) {
+
+    .trauma-page .trauma-hero-panel-v4 {
+        width: 100% !important;
+
+        padding: 34px 27px !important;
+    }
+
+    .trauma-page .trauma-hero-panel-v4::before {
+        left: 27px !important;
+    }
+
+}
