@@ -1,6 +1,28 @@
 {
   "items": [
     {
+      "title": "Not Everything Is Narcissism: Understanding the Overlap Between Cluster B Personality Disorders",
+      "slug": "cluster-b-personality-disorders-overlap",
+      "url": "articles/cluster-b-personality-disorders-overlap.html",
+      "date": "2026-08-06",
+      "dateLabel": "6 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "Not everything is narcissism. Explore the complex overlap between NPD, BPD, ASPD and HPD, why similar behaviours can have very different psychological origins, and how modern personality science is moving beyond simple diagnostic boxes.",
+      "category": "Psychology",
+      "categories": [
+        "Psychology"
+      ],
+      "tags": [
+        "['Cluster B'",
+        "'Personality Disorders'",
+        "'Narcissism']"
+      ],
+      "image": "assets/images/blog/cluster_b_explained.png",
+      "imageAlt": "Four overlapping human profiles representing the shared and distinct traits found across Cluster B personality disorders.",
+      "readingTime": "15 min read",
+      "featured": false
+    },
+    {
       "title": "My Ex Is Using My Child Against Me: What Can I Actually Do?",
       "slug": "my-ex-is-using-my-child-against-me",
       "url": "articles/my-ex-is-using-my-child-against-me.html",
