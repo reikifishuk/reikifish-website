@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .join('');
     
-    root.querySelectorAll('[data-sidebar-category]').forEach((link) => {
+    document.querySelectorAll('[data-sidebar-category]').forEach((link) => {
       const linkCategory = String(link.dataset.sidebarCategory || 'all');
 
       const active =
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const bindEvents = () => {
-    const sidebarCategories = root.querySelectorAll('[data-sidebar-category]');
+    const sidebarCategories = document.querySelectorAll('[data-sidebar-category]');
 
     sidebarCategories.forEach((link) => {
       link.addEventListener('click', (event) => {
