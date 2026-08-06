@@ -7376,3 +7376,454 @@ div:has(> .coaching-value-icon) p {
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_IMPACT_BANNER_V1
+   ========================================================== */
+
+
+/*
+Remove inherited spacing from the original Coaching template.
+The banner now begins directly beneath the site navigation.
+*/
+
+main.trauma-page {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* ==========================================================
+   MAIN BANNER
+   ========================================================== */
+
+.trauma-impact-banner {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 360px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid rgba(223,168,85,.17);
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(39,107,103,.20),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 78% 35%,
+            rgba(223,168,85,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 55% 120%,
+            rgba(126,65,42,.20),
+            transparent 42%
+        ),
+        linear-gradient(
+            115deg,
+            #0d1516 0%,
+            #14191a 35%,
+            #1d1814 67%,
+            #121516 100%
+        );
+}
+
+
+/*
+Soft illuminated strip at top
+*/
+
+.trauma-impact-banner::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+
+    width: 76%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(223,168,85,.15),
+            rgba(223,168,85,.85),
+            rgba(223,168,85,.15),
+            transparent
+        );
+
+    box-shadow:
+        0 0 28px rgba(223,168,85,.32);
+}
+
+
+/*
+Large atmospheric glow
+*/
+
+.trauma-impact-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    right: -260px;
+    top: -290px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223,168,85,.11) 0,
+            rgba(223,168,85,.04) 38%,
+            transparent 69%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   SUBTLE GRAPHICAL GRID
+   ========================================================== */
+
+.trauma-banner-grid {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .18;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.022) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.022) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        62px 62px;
+
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent,
+            black 30%,
+            black 70%,
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   DECORATIVE ORBITS
+   ========================================================== */
+
+.trauma-banner-orbit {
+    position: absolute;
+
+    border:
+        1px solid rgba(223,168,85,.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.trauma-banner-orbit-one {
+    width: 340px;
+    height: 340px;
+
+    left: -190px;
+    bottom: -190px;
+}
+
+.trauma-banner-orbit-two {
+    width: 520px;
+    height: 520px;
+
+    right: -290px;
+    top: -340px;
+
+    border-color:
+        rgba(83,143,138,.10);
+}
+
+
+/* ==========================================================
+   BANNER COPY
+   ========================================================== */
+
+.trauma-banner-inner {
+    position: relative;
+    z-index: 3;
+
+    width:
+        min(1050px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding:
+        60px 0 58px;
+
+    text-align: center;
+}
+
+.trauma-banner-kicker {
+    display: inline-block;
+
+    margin-bottom: 23px;
+
+    color: #dfa855;
+
+    font-size: .72rem;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: .30em;
+
+    text-transform: uppercase;
+}
+
+.trauma-banner-inner h2 {
+    margin:
+        0 auto 21px !important;
+
+    max-width:
+        1000px !important;
+
+    color:
+        #f1eee8 !important;
+
+    font-size:
+        clamp(2.7rem, 4.7vw, 5rem) !important;
+
+    font-weight:
+        500 !important;
+
+    line-height:
+        1.03 !important;
+
+    letter-spacing:
+        -.038em !important;
+}
+
+.trauma-banner-inner h2 span {
+    display: block;
+
+    color:
+        #f0ede7;
+}
+
+.trauma-banner-inner h2 strong {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #dfa855;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    letter-spacing:
+        -.025em;
+}
+
+.trauma-banner-inner p {
+    max-width: 670px;
+
+    margin:
+        0 auto !important;
+
+    color:
+        #b9b6b0 !important;
+
+    font-size:
+        1.06rem !important;
+
+    line-height:
+        1.65 !important;
+}
+
+
+/* ==========================================================
+   GRAPHICAL JOURNEY LINE
+   ========================================================== */
+
+.trauma-banner-path {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 190px;
+
+    margin:
+        31px auto 0;
+}
+
+.trauma-banner-path span {
+    display: block;
+
+    flex:
+        0 0 8px;
+
+    width: 8px;
+    height: 8px;
+
+    border:
+        1px solid #dfa855;
+
+    border-radius:
+        50%;
+
+    background:
+        #151819;
+
+    box-shadow:
+        0 0 12px rgba(223,168,85,.32);
+}
+
+.trauma-banner-path span:last-child {
+    background:
+        #dfa855;
+
+    box-shadow:
+        0 0 18px rgba(223,168,85,.58);
+}
+
+.trauma-banner-path i {
+    display: block;
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(223,168,85,.20),
+            rgba(223,168,85,.70),
+            rgba(223,168,85,.20)
+        );
+}
+
+
+/* ==========================================================
+   TRAUMA HERO NOW FOLLOWS BANNER TIGHTLY
+   ========================================================== */
+
+.trauma-page .trauma-hero {
+    padding-top:
+        80px !important;
+
+    padding-bottom:
+        95px !important;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    .trauma-impact-banner {
+        min-height:
+            330px;
+    }
+
+    .trauma-banner-inner {
+        width:
+            calc(100% - 50px);
+
+        padding:
+            55px 0;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 680px) {
+
+    .trauma-impact-banner {
+        min-height:
+            320px;
+    }
+
+    .trauma-banner-inner {
+        width:
+            calc(100% - 34px);
+
+        padding:
+            50px 0;
+    }
+
+    .trauma-banner-kicker {
+        font-size:
+            .62rem;
+
+        letter-spacing:
+            .20em;
+
+        margin-bottom:
+            18px;
+    }
+
+    .trauma-banner-inner h2 {
+        font-size:
+            clamp(2.25rem, 10vw, 3.3rem) !important;
+    }
+
+    .trauma-banner-inner p {
+        max-width:
+            440px;
+
+        font-size:
+            .96rem !important;
+    }
+
+    .trauma-banner-path {
+        margin-top:
+            25px;
+    }
+
+    .trauma-page .trauma-hero {
+        padding-top:
+            65px !important;
+    }
+
+}
