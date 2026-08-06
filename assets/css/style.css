@@ -5098,3 +5098,72 @@ body.home-page .hp-topic-card p{
         border-radius: 16px;
     }
 }
+
+
+/* COACHING_PREMIUM_VALUE_ICONS */
+
+.coaching-value-icon {
+    width: 54px;
+    height: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.35rem;
+    border-radius: 15px;
+
+    color: #dfa855;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(226, 170, 82, 0.13),
+            rgba(226, 170, 82, 0.035)
+        );
+
+    border: 1px solid rgba(226, 170, 82, 0.32);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.05),
+        0 12px 30px rgba(0,0,0,0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.coaching-value-icon svg {
+    width: 27px;
+    height: 27px;
+    display: block;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.35;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.coaching-value-icon:hover {
+    transform: translateY(-2px);
+
+    border-color:
+        rgba(226, 170, 82, 0.55);
+
+    background:
+        rgba(226, 170, 82, 0.12);
+}
+
+@media (max-width: 600px) {
+
+    .coaching-value-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 14px;
+        margin-bottom: 1.1rem;
+    }
+
+    .coaching-value-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+}
