@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Leadership Coaching | Performance & Management | Andy Fish</title>
+    <meta name="description" content="Team leadership coaching for managers and organisations seeking stronger performance, communication, conflict management, efficiency and team alignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260806-trauma-v4" />
+  
+<style id="TEAM_LEADERSHIP_PAGE_V1">
+
+.team-leadership-page {
+    background: #0b0f0f;
+    color: #f1ede5;
+}
+
+.team-leadership-page * {
+    box-sizing: border-box;
+}
+
+.tl-container {
+    width: min(1480px, calc(100% - 96px));
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.tl-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 92px 0 88px;
+    border-bottom: 1px solid rgba(223,166,76,.22);
+    background:
+        radial-gradient(circle at 82% 32%, rgba(223,166,76,.13), transparent 27%),
+        radial-gradient(circle at 12% 80%, rgba(17,93,89,.13), transparent 30%),
+        linear-gradient(115deg,#091919 0%,#111616 52%,#2a1e12 100%);
+}
+
+.tl-hero::after {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -170px;
+    top: -140px;
+    border: 1px solid rgba(223,166,76,.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 65px rgba(223,166,76,.025),
+        0 0 0 130px rgba(31,111,105,.022);
+}
+
+.tl-hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0,1.12fr) minmax(390px,.88fr);
+    gap: 82px;
+    align-items: center;
+}
+
+.tl-eyebrow {
+    display: inline-block;
+    color: #dfa64c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .27em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.tl-rule {
+    width: 88px;
+    height: 2px;
+    background: #dfa64c;
+    margin-bottom: 31px;
+}
+
+.tl-hero h1 {
+    max-width: 850px;
+    margin: 0 0 27px;
+    font-size: clamp(54px,5.3vw,88px);
+    line-height: .99;
+    letter-spacing: -.035em;
+    color: #f1ede5;
+}
+
+.tl-hero h1 em {
+    display: block;
+    margin-top: 8px;
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tl-hero-copy {
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgba(241,237,229,.82);
+}
+
+.tl-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 29px;
+    padding: 17px 27px;
+    border-radius: 999px;
+    background: #e3aa4f;
+    color: #090b0b !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.tl-button:hover {
+    transform: translateY(-2px);
+    background: #edb85f;
+}
+
+/* HERO VISUAL */
+
+.tl-performance-panel {
+    position: relative;
+    padding: 38px;
+    border: 1px solid rgba(223,166,76,.38);
+    border-radius: 25px;
+    background: rgba(5,11,11,.82);
+    box-shadow: 0 28px 65px rgba(0,0,0,.28);
+}
+
+.tl-panel-label {
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.tl-panel-title {
+    margin: 18px 0 30px;
+    font-family: Georgia,serif;
+    font-size: 35px;
+    line-height: 1.15;
+}
+
+.tl-performance-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(223,166,76,.14);
+}
+
+.tl-performance-number {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(223,166,76,.42);
+    border-radius: 50%;
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.tl-performance-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.tl-performance-item span {
+    color: rgba(241,237,229,.65);
+    line-height: 1.5;
+}
+
+/* GENERAL SECTIONS */
+
+.tl-section {
+    padding: 88px 0;
+    border-bottom: 1px solid rgba(255,255,255,.055);
+}
+
+.tl-section-heading {
+    display: grid;
+    grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr);
+    gap: 90px;
+    align-items: start;
+}
+
+.tl-section h2 {
+    margin: 0;
+    font-size: clamp(44px,4vw,68px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+}
+
+.tl-section h2 em {
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+}
+
+.tl-copy {
+    font-size: 19px;
+    line-height: 1.75;
+    color: rgba(241,237,229,.76);
+}
+
+.tl-copy p {
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+
+/* EXPERIENCE */
+
+.tl-experience {
+    background:
+        linear-gradient(90deg,rgba(10,38,37,.3),transparent 55%);
+}
+
+.tl-experience-strip {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid rgba(223,166,76,.23);
+    border-radius: 21px;
+    overflow: hidden;
+    background: #090e0e;
+}
+
+.tl-experience-item {
+    padding: 29px 27px;
+    border-right: 1px solid rgba(223,166,76,.15);
+}
+
+.tl-experience-item:last-child {
+    border-right: 0;
+}
+
+.tl-experience-item span {
+    display: block;
+    margin-bottom: 10px;
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-experience-item strong {
+    font-size: 19px;
+}
+
+/* CAPABILITY CARDS */
+
+.tl-capabilities {
+    background: #090d0d;
+}
+
+.tl-card-grid {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.tl-card {
+    min-height: 250px;
+    padding: 31px;
+    border: 1px solid rgba(223,166,76,.25);
+    border-radius: 20px;
+    background:
+        linear-gradient(145deg,rgba(12,21,21,.98),rgba(8,12,12,.98));
+    transition: .22s ease;
+}
+
+.tl-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(223,166,76,.52);
+    box-shadow: 0 20px 45px rgba(0,0,0,.22);
+}
+
+.tl-card-number {
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.tl-card h3 {
+    margin: 34px 0 13px;
+    font-size: 25px;
+    color: #f1ede5;
+}
+
+.tl-card p {
+    margin: 0;
+    color: rgba(241,237,229,.65);
+    line-height: 1.65;
+}
+
+/* LEVELS */
+
+.tl-level-grid {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.tl-level {
+    position: relative;
+    padding: 35px 32px;
+    border-top: 2px solid #dfa64c;
+    background: rgba(7,14,14,.72);
+}
+
+.tl-level-label {
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-level h3 {
+    margin: 18px 0 13px;
+    font-family: Georgia,serif;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.tl-level p {
+    margin: 0;
+    line-height: 1.65;
+    color: rgba(241,237,229,.67);
+}
+
+/* SYNERGY */
+
+.tl-synergy {
+    background:
+        radial-gradient(circle at 50% 100%,rgba(223,166,76,.08),transparent 34%);
+}
+
+.tl-synergy-flow {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr 70px 1fr;
+    align-items: center;
+}
+
+.tl-flow-card {
+    padding: 31px;
+    min-height: 190px;
+    border: 1px solid rgba(223,166,76,.27);
+    border-radius: 19px;
+    background: #080d0d;
+}
+
+.tl-flow-card span {
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-flow-card h3 {
+    margin: 17px 0 10px;
+    font-size: 23px;
+}
+
+.tl-flow-card p {
+    color: rgba(241,237,229,.63);
+    line-height: 1.6;
+}
+
+.tl-flow-line {
+    height: 1px;
+    background: linear-gradient(90deg,#dfa64c,rgba(223,166,76,.18));
+}
+
+/* CTA */
+
+.tl-cta {
+    padding: 95px 0;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 100%,rgba(223,166,76,.12),transparent 34%),
+        #090d0d;
+}
+
+.tl-cta-inner {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.tl-cta h2 {
+    margin: 0;
+    font-size: clamp(48px,5vw,76px);
+    line-height: 1.03;
+}
+
+.tl-cta h2 em {
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+}
+
+.tl-cta p {
+    max-width: 720px;
+    margin: 27px auto 0;
+    color: rgba(241,237,229,.72);
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+    .tl-container {
+        width: min(100% - 48px,1480px);
+    }
+
+    .tl-hero-grid,
+    .tl-section-heading {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .tl-performance-panel {
+        max-width: 680px;
+    }
+
+    .tl-experience-strip,
+    .tl-card-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .tl-level-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-synergy-flow {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tl-flow-line {
+        width: 1px;
+        height: 35px;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .tl-container {
+        width: calc(100% - 28px);
+    }
+
+    .tl-hero,
+    .tl-section {
+        padding: 58px 0;
+    }
+
+    .tl-hero h1 {
+        font-size: clamp(45px,13vw,63px);
+    }
+
+    .tl-section h2 {
+        font-size: clamp(38px,10vw,52px);
+    }
+
+    .tl-experience-strip,
+    .tl-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-experience-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(223,166,76,.15);
+    }
+
+    .tl-experience-item:last-child {
+        border-bottom: 0;
+    }
+
+    .tl-performance-panel {
+        padding: 27px 23px;
+    }
+}
+
+</style>
+
+</head>
+  <body class="coaching-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link active" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Team Leadership</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container py-6 reveal">
+        <p class="eyebrow">Coaching</p>
+
+<div class="coaching-hero-grid">
+
+    <div class="coaching-hero-copy">
+<h1 class="display-4 fw-semibold">A measured path toward steadier living.</h1>
+
+<p class="lead-text">
+Private, trauma-informed coaching for people navigating emotional overwhelm, difficult relationships, major life change or simply feeling stuck. We slow things down, separate what is happening from the noise around it, and work towards clearer decisions, stronger boundaries and a steadier sense of self.
+</p>
+
+<p class="lead-text" style="margin-top: 1rem;">
+No labels. No judgement. No pressure to become someone else. Just a calm space to understand where you are, what is keeping you there and what your next step could be.
+</p>
+
+<p class="lead-text" style="margin-top: 1rem;">
+Sessions are shaped around what is happening in your life now. We can explore patterns, choices and practical next steps at a pace that feels manageable, while keeping the focus on what you can influence and change.
+</p>
+
+<div style="margin-top: 2rem;">
+  <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+</div>
+    </div>
+
+    <div class="coaching-hero-visual">
+        <img
+            src="assets/images/the grey.png"
+            alt="A quiet path leading towards warm light, representing calm progress and steadier living."
+            class="coaching-hero-image"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+        >
+    </div>
+
+</div>
+      </section>
+    </header>
+
+    
+<main class="team-leadership-page">
+
+<section class="tl-hero">
+  <div class="tl-container tl-hero-grid">
+
+    <div>
+      <span class="tl-eyebrow">Team Leadership & Performance</span>
+      <div class="tl-rule"></div>
+
+      <h1>
+        Raise the bar.
+        <em>Bring the team with you.</em>
+      </h1>
+
+      <p class="tl-hero-copy">
+        Leadership is more than asking people to work harder. Strong teams need clarity,
+        trust, accountability, efficient communication and leaders who know how to deal
+        with pressure and conflict without creating more of it.
+      </p>
+
+      <p class="tl-hero-copy">
+        I work with managers, team leaders and organisations to turn friction into focus,
+        strengthen performance and create teams that work together rather than simply
+        working alongside one another.
+      </p>
+
+      <a class="tl-button" href="contact.html">
+        Discuss Your Team
+        <span>?</span>
+      </a>
+    </div>
+
+    <aside class="tl-performance-panel">
+
+      <span class="tl-panel-label">The performance equation</span>
+
+      <div class="tl-panel-title">
+        High performance needs more than high expectations.
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">01</div>
+        <div>
+          <strong>Clarity</strong>
+          <span>People understand the objective, their role and what good looks like.</span>
+        </div>
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">02</div>
+        <div>
+          <strong>Capability</strong>
+          <span>The team has the confidence, skills and support to deliver.</span>
+        </div>
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">03</div>
+        <div>
+          <strong>Accountability</strong>
+          <span>Standards are clear, ownership is real and problems are addressed.</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+
+<section class="tl-section tl-experience">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Experience That Has Been Lived</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        More than 20 years of
+        <em>leading in the real world.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          For more than two decades I have worked across leadership, management,
+          marketing and performance, from highly successful marketing projects to
+          leading multiple departments and bringing different teams together around
+          a common objective.
+        </p>
+
+        <p>
+          My background includes both agency and in-house environments. That matters
+          because the pressures are different: agencies need pace, prioritisation and
+          client delivery, while internal teams need alignment, stakeholder management,
+          process and long-term ownership.
+        </p>
+
+        <p>
+          I bring those worlds together. The aim is not management theory for its own
+          sake. It is practical leadership that improves how people communicate, solve
+          problems, handle conflict and deliver together.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-experience-strip">
+
+      <div class="tl-experience-item">
+        <span>01</span>
+        <strong>20+ Years Leadership</strong>
+      </div>
+
+      <div class="tl-experience-item">
+        <span>02</span>
+        <strong>Agency Experience</strong>
+      </div>
+
+      <div class="tl-experience-item">
+        <span>03</span>
+        <strong>In-House Leadership</strong>
+      </div>
+
+      <div class="tl-experience-item">
+        <span>04</span>
+        <strong>Multi-Department Teams</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-section tl-capabilities">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Where We Raise The Bar</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Better leadership creates
+        <em>better conditions to perform.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Performance problems are rarely solved by pressure alone. We look underneath
+          the numbers at the communication, expectations, processes, relationships and
+          leadership behaviours shaping the result.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-card-grid">
+
+      <article class="tl-card">
+        <span class="tl-card-number">01</span>
+        <h3>Performance & Standards</h3>
+        <p>
+          Define what strong performance actually means, set expectations clearly and
+          create accountability without turning leadership into constant policing.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">02</span>
+        <h3>Conflict & Difficult Conversations</h3>
+        <p>
+          Deal with disagreement earlier, communicate directly and stop unresolved
+          tension from quietly damaging performance and trust.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">03</span>
+        <h3>Communication & Role Clarity</h3>
+        <p>
+          Reduce crossed wires, duplicated work and uncertainty by making ownership,
+          priorities and decision-making clearer.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">04</span>
+        <h3>Efficiency & Workflow</h3>
+        <p>
+          Identify friction, unnecessary complexity and bottlenecks so that people can
+          spend more time delivering useful work.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">05</span>
+        <h3>Team Culture & Synergy</h3>
+        <p>
+          Help individuals and departments understand how their work connects, building
+          cooperation instead of silos.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">06</span>
+        <h3>Change, Pressure & Growth</h3>
+        <p>
+          Lead more steadily when expectations rise, structures change or a growing
+          organisation needs its leadership to mature with it.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-section">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Leadership At Your Level</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Start where you are.
+        <em>Go as advanced as you need.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Leadership coaching should meet the reality of the person or organisation.
+          Someone managing people for the first time needs something different from a
+          senior leader coordinating multiple functions.
+        </p>
+
+        <p>
+          I can work at either level ? from helping somebody build their foundations to
+          working through advanced team performance and enterprise-level leadership
+          challenges.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-level-grid">
+
+      <article class="tl-level">
+        <span class="tl-level-label">FOUNDATION</span>
+        <h3>New & Emerging Leaders</h3>
+        <p>
+          Build confidence, delegate properly, set standards, give feedback and learn
+          how to handle difficult conversations without avoiding them.
+        </p>
+      </article>
+
+      <article class="tl-level">
+        <span class="tl-level-label">GROWTH</span>
+        <h3>Established Managers & Teams</h3>
+        <p>
+          Improve performance, accountability, communication and efficiency while
+          developing a leadership style people can actually work with.
+        </p>
+      </article>
+
+      <article class="tl-level">
+        <span class="tl-level-label">ADVANCED</span>
+        <h3>Senior & Enterprise Leadership</h3>
+        <p>
+          Work across departments, priorities and stakeholders to strengthen strategic
+          alignment, organisational performance and leadership through complexity.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-section tl-synergy">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Creating Synergy</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Stop managing departments.
+        <em>Start connecting them.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Some of the biggest performance losses happen between teams rather than
+          inside them. Different priorities, unclear ownership and poor handovers turn
+          capable people into a fragmented organisation.
+        </p>
+
+        <p>
+          My approach looks at the whole system: where friction begins, where
+          communication breaks down and what needs to align so that individual talent
+          becomes collective performance.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-synergy-flow">
+
+      <article class="tl-flow-card">
+        <span>01 ? DIAGNOSE</span>
+        <h3>Find the friction</h3>
+        <p>
+          Identify where communication, process, expectations or relationships are
+          slowing the team down.
+        </p>
+      </article>
+
+      <div class="tl-flow-line"></div>
+
+      <article class="tl-flow-card">
+        <span>02 ? ALIGN</span>
+        <h3>Create shared clarity</h3>
+        <p>
+          Bring priorities, responsibilities and standards into a structure people can
+          understand and act on.
+        </p>
+      </article>
+
+      <div class="tl-flow-line"></div>
+
+      <article class="tl-flow-card">
+        <span>03 ? EMBED</span>
+        <h3>Turn insight into behaviour</h3>
+        <p>
+          Make the changes practical enough to survive beyond the coaching conversation
+          and become part of how the team operates.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-cta">
+  <div class="tl-container tl-cta-inner">
+
+    <span class="tl-eyebrow">Team Leadership Coaching</span>
+
+    <h2>
+      Better teams start with
+      <em>better leadership conversations.</em>
+    </h2>
+
+    <p>
+      Whether you are stepping into management for the first time, trying to unlock
+      more from an established team or dealing with leadership complexity across an
+      organisation, we can start with the problem in front of you.
+    </p>
+
+    <a class="tl-button" href="contact.html">
+      Start a Leadership Conversation
+      <span>?</span>
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
