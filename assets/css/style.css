@@ -11912,3 +11912,43 @@ body:has(.pa-visual-hero) .pa-page {
         padding-top: 35px !important;
     }
 }
+
+
+/* PA_BLOCK2_POSITION_MASTER_V2 */
+
+/* Slightly more breathing room between Block 1 and Block 2 */
+.pa-block2-spacing {
+    padding-top: 68px !important;
+    padding-bottom: 55px !important;
+    overflow: visible !important;
+}
+
+/* Prevent earlier rules from cutting off the right title */
+.pa-block2-spacing .pa-block2-right-title {
+    display: block !important;
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    margin-top: 0 !important;
+    padding-top: 34px !important;
+    padding-bottom: 8px !important;
+    overflow: visible !important;
+}
+
+/* Make sure heading containers cannot crop it */
+.pa-block2-spacing h2,
+.pa-block2-spacing h3 {
+    overflow: visible !important;
+}
+
+@media (max-width: 900px) {
+
+    .pa-block2-spacing {
+        padding-top: 48px !important;
+        padding-bottom: 45px !important;
+    }
+
+    .pa-block2-spacing .pa-block2-right-title {
+        padding-top: 22px !important;
+    }
+}
