@@ -10661,3 +10661,58 @@ around it.
         margin-top: -80px !important;
     }
 }
+
+
+/* ==========================================================
+   PA_HERO_POSITION_FINAL_FIX
+   Remove inherited page gap WITHOUT clipping hero content
+   ========================================================== */
+
+main.pa-page {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    overflow: visible !important;
+}
+
+.pa-page .pa-visual-hero {
+    margin-top: 0 !important;
+    transform: none !important;
+}
+
+/* Keep complete statement visible */
+.pa-page .pa-visual-copy {
+    overflow: visible !important;
+}
+
+.pa-page .pa-visual-eyebrow,
+.pa-page .pa-visual-copy h2,
+.pa-page .pa-visual-copy h2 em {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+    .pa-page .pa-visual-hero {
+        margin-top: 0 !important;
+        min-height: 510px;
+    }
+
+    .pa-page .pa-visual-inner {
+        min-height: 510px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 801px) and (max-width: 1200px) {
+    .pa-page .pa-visual-hero {
+        margin-top: 0 !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    .pa-page .pa-visual-hero {
+        margin-top: 0 !important;
+    }
+}
