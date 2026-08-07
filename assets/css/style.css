@@ -11989,3 +11989,32 @@ body:has(.pa-visual-hero) .pa-page {
         padding-top: 88px !important;
     }
 }
+
+
+/* PA_BLOCK2_TO_REALITY_GAP_FINAL */
+
+@media (min-width: 901px) {
+
+    /* Remove excessive empty space beneath Block 2 */
+    .pa-block2-spacing {
+        min-height: 0 !important;
+        height: auto !important;
+        padding-bottom: 28px !important;
+    }
+
+    /* Bring following image section upwards */
+    .pa-reality-inner {
+        padding-top: 55px !important;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .pa-block2-spacing {
+        padding-bottom: 35px !important;
+    }
+
+    .pa-reality-inner {
+        padding-top: 45px !important;
+    }
+}
