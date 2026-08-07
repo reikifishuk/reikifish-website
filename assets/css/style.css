@@ -12525,3 +12525,370 @@ body:has(.pa-visual-hero) .pa-page {
         top: 30px !important;
     }
 }
+
+/* ==========================================================
+   PA_HELP_COMPLETE_REDESIGN
+   ========================================================== */
+
+#pa-help-premium {
+    position: relative;
+    overflow: hidden;
+
+    padding: 80px 6% 90px;
+
+    background:
+        radial-gradient(
+            circle at 87% 28%,
+            rgba(223,166,76,.16),
+            transparent 23%
+        ),
+        radial-gradient(
+            circle at 3% 95%,
+            rgba(39,112,107,.18),
+            transparent 28%
+        ),
+        linear-gradient(
+            120deg,
+            #071b1b 0%,
+            #0e1818 42%,
+            #151713 68%,
+            #241a0f 100%
+        );
+
+    border-top: 1px solid rgba(223,166,76,.28);
+    border-bottom: 1px solid rgba(223,166,76,.26);
+}
+
+#pa-help-premium::before {
+    content: "";
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -170px;
+    top: -220px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 0 80px,
+            rgba(223,166,76,.14) 81px 82px,
+            transparent 83px 150px,
+            rgba(67,133,127,.12) 151px 152px,
+            transparent 153px 225px,
+            rgba(223,166,76,.08) 226px 227px,
+            transparent 228px
+        );
+
+    pointer-events: none;
+}
+
+.pa-help-shell {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1500px;
+
+    margin: 0 auto;
+}
+
+.pa-help-heading {
+    display: grid;
+    grid-template-columns: minmax(0,1.35fr) minmax(360px,.65fr);
+    gap: 70px;
+
+    align-items: center;
+}
+
+.pa-help-copy {
+    max-width: 900px;
+}
+
+.pa-help-eyebrow {
+    margin: 0;
+
+    color: #dfa64c;
+
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .28em;
+}
+
+.pa-help-rule {
+    width: 68px;
+    height: 2px;
+
+    margin: 23px 0 35px;
+
+    background: #dfa64c;
+}
+
+#pa-help-premium h2 {
+    margin: 0 0 30px;
+
+    color: #f1eee7;
+
+    font-size: clamp(44px,4.1vw,70px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+}
+
+#pa-help-premium h2 em {
+    color: #dfa64c;
+
+    font-family: Georgia,serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pa-help-intro {
+    max-width: 790px;
+
+    margin: 0;
+
+    color: rgba(239,235,226,.74);
+
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+/* Right visual panel */
+
+.pa-help-focus {
+    padding: 34px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7,14,14,.94),
+            rgba(12,15,14,.96)
+        );
+
+    border: 1px solid rgba(223,166,76,.35);
+    border-radius: 24px;
+
+    box-shadow: 0 28px 70px rgba(0,0,0,.28);
+}
+
+.pa-help-focus-label {
+    color: #dfa64c;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .25em;
+}
+
+.pa-help-focus-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 25px 0 8px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(223,166,76,.55),
+            rgba(223,166,76,.06)
+        );
+}
+
+.pa-help-focus-step {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+
+    padding: 21px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.pa-help-focus-step:last-child {
+    border-bottom: 0;
+}
+
+.pa-help-focus-step > span {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    color: #dfa64c;
+
+    border: 1px solid rgba(223,166,76,.35);
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.pa-help-focus-step strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f2eee6;
+
+    font-size: 17px;
+}
+
+.pa-help-focus-step p {
+    margin: 0;
+
+    color: rgba(239,235,226,.62);
+
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+/* Six cards */
+
+.pa-help-cards {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 18px;
+
+    margin-top: 58px;
+}
+
+.pa-help-cards article {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 225px;
+
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13,22,22,.96),
+            rgba(8,13,13,.96)
+        );
+
+    border: 1px solid rgba(223,166,76,.26);
+    border-radius: 20px;
+
+    box-shadow: 0 18px 45px rgba(0,0,0,.20);
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}
+
+.pa-help-cards article::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 30px;
+
+    width: 54px;
+    height: 2px;
+
+    background: #dfa64c;
+}
+
+.pa-help-cards article:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(223,166,76,.54);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30),
+        0 0 30px rgba(223,166,76,.04);
+}
+
+.pa-help-number {
+    display: inline-grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    margin-bottom: 21px;
+
+    color: #dfa64c;
+
+    background: rgba(223,166,76,.06);
+
+    border: 1px solid rgba(223,166,76,.30);
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.pa-help-cards h3 {
+    margin: 0 0 12px;
+
+    color: #f0ece5;
+
+    font-size: 19px;
+    line-height: 1.28;
+}
+
+.pa-help-cards p {
+    margin: 0;
+
+    color: rgba(239,235,226,.64);
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* Tablet */
+
+@media (max-width: 1050px) {
+
+    .pa-help-heading {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pa-help-focus {
+        max-width: 700px;
+    }
+
+    .pa-help-cards {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    #pa-help-premium {
+        padding: 55px 22px 62px;
+    }
+
+    #pa-help-premium h2 {
+        font-size: 40px;
+    }
+
+    .pa-help-intro {
+        font-size: 16px;
+    }
+
+    .pa-help-focus {
+        padding: 25px 22px;
+    }
+
+    .pa-help-cards {
+        grid-template-columns: 1fr;
+        gap: 14px;
+
+        margin-top: 38px;
+    }
+
+    .pa-help-cards article {
+        min-height: 0;
+        padding: 27px 24px;
+    }
+}
