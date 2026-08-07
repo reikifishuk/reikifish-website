@@ -12293,3 +12293,235 @@ body:has(.pa-visual-hero) .pa-page {
         opacity: .55 !important;
     }
 }
+
+/* ==========================================================
+   PA_COACHING_HELP_PREMIUM_V2
+   ========================================================== */
+
+.pa-coaching-help-tight {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    padding: 72px 5% 82px !important;
+
+    background:
+        radial-gradient(
+            circle at 88% 42%,
+            rgba(223,166,76,.13),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 8% 76%,
+            rgba(31,103,99,.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            115deg,
+            #0a1717 0%,
+            #101717 48%,
+            #171713 76%,
+            #211a12 100%
+        ) !important;
+
+    border-top: 1px solid rgba(223,166,76,.22) !important;
+    border-bottom: 1px solid rgba(223,166,76,.22) !important;
+}
+
+/* Premium circular graphic on right */
+.pa-coaching-help-tight::before {
+    content: "" !important;
+    position: absolute !important;
+
+    width: 600px !important;
+    height: 600px !important;
+
+    right: -160px !important;
+    top: -115px !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 0 82px,
+            rgba(223,166,76,.12) 83px 84px,
+            transparent 85px 154px,
+            rgba(83,145,138,.11) 155px 156px,
+            transparent 157px 228px,
+            rgba(223,166,76,.07) 229px 230px,
+            transparent 231px
+        ) !important;
+
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+/* Give section content a proper premium width */
+.pa-coaching-help-tight > * {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    max-width: 1500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Main heading */
+.pa-coaching-help-tight h2 {
+    max-width: 1050px !important;
+    margin-bottom: 28px !important;
+
+    font-size: clamp(42px, 4vw, 68px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -.025em !important;
+}
+
+/* Intro copy */
+.pa-coaching-help-tight h2 + p {
+    max-width: 850px !important;
+    margin-bottom: 48px !important;
+
+    color: rgba(239,235,226,.72) !important;
+    font-size: 18px !important;
+    line-height: 1.75 !important;
+}
+
+/* Any existing grid inside this section */
+.pa-coaching-help-tight [class*="grid"] {
+    width: 100% !important;
+    max-width: 1400px !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(3,minmax(0,1fr)) !important;
+    gap: 20px !important;
+
+    margin-top: 42px !important;
+}
+
+/* Existing cards */
+.pa-coaching-help-tight :is(
+    article,
+    [class*="card"]
+) {
+    position: relative !important;
+    overflow: hidden !important;
+
+    min-height: 220px !important;
+
+    padding: 34px 32px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16,24,24,.98),
+            rgba(10,15,15,.98)
+        ) !important;
+
+    border: 1px solid rgba(223,166,76,.28) !important;
+    border-radius: 20px !important;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.025) !important;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease !important;
+}
+
+/* Gold highlight on cards */
+.pa-coaching-help-tight :is(
+    article,
+    [class*="card"]
+)::before {
+    content: "" !important;
+
+    position: absolute !important;
+    top: 0 !important;
+    left: 30px !important;
+
+    width: 54px !important;
+    height: 2px !important;
+
+    background: #dfa64c !important;
+}
+
+/* Card hover */
+.pa-coaching-help-tight :is(
+    article,
+    [class*="card"]
+):hover {
+    transform: translateY(-5px) !important;
+
+    border-color: rgba(223,166,76,.55) !important;
+
+    box-shadow:
+        0 24px 55px rgba(0,0,0,.30),
+        0 0 35px rgba(223,166,76,.045) !important;
+}
+
+/* Card headings */
+.pa-coaching-help-tight :is(
+    article,
+    [class*="card"]
+) h3 {
+    margin-top: 14px !important;
+    margin-bottom: 12px !important;
+
+    color: #f1ede5 !important;
+
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+}
+
+/* Card body */
+.pa-coaching-help-tight :is(
+    article,
+    [class*="card"]
+) p {
+    color: rgba(239,235,226,.67) !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+
+    .pa-coaching-help-tight [class*="grid"] {
+        grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .pa-coaching-help-tight {
+        padding: 52px 22px 58px !important;
+    }
+
+    .pa-coaching-help-tight h2 {
+        font-size: 40px !important;
+    }
+
+    .pa-coaching-help-tight [class*="grid"] {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .pa-coaching-help-tight :is(
+        article,
+        [class*="card"]
+    ) {
+        min-height: 0 !important;
+        padding: 28px 24px !important;
+    }
+
+    .pa-coaching-help-tight::before {
+        width: 350px !important;
+        height: 350px !important;
+        right: -220px !important;
+        top: 30px !important;
+    }
+}
