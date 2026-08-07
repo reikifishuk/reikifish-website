@@ -7906,3 +7906,54 @@ Keep actual Trauma content nicely separated from banner.
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_BANNER_POSITION_FINAL
+   ========================================================== */
+
+/*
+The inherited page structure leaves approximately 250px
+above the first Trauma section. Pull the banner into that
+space and allow following content to move with it.
+*/
+
+@media (min-width: 992px) {
+
+    html body main.trauma-page
+    > section.trauma-impact-banner:first-child {
+
+        margin-top: -250px !important;
+        margin-bottom: 0 !important;
+
+    }
+
+}
+
+
+/* Tablet requires much less correction */
+
+@media (min-width: 681px) and (max-width: 991px) {
+
+    html body main.trauma-page
+    > section.trauma-impact-banner:first-child {
+
+        margin-top: -140px !important;
+
+    }
+
+}
+
+
+/* Mobile - avoid pushing content beneath mobile navigation */
+
+@media (max-width: 680px) {
+
+    html body main.trauma-page
+    > section.trauma-impact-banner:first-child {
+
+        margin-top: -80px !important;
+
+    }
+
+}
