@@ -100,6 +100,241 @@
 
 }
 </style>
+
+<style>
+/* ==========================================================
+   TRAUMA_IMPACT_VISUAL_FINAL
+   ========================================================== */
+
+/* Automatically finds the parent containing our new visual */
+:is(section, div):has(> .trauma-impact-visual) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: minmax(0,1.15fr) minmax(380px,.85fr);
+    column-gap: 70px;
+
+    padding: 65px;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(223,166,76,.13),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            rgba(7,30,30,.98),
+            rgba(13,20,20,.98) 52%,
+            rgba(29,22,14,.98)
+        );
+
+    border: 1px solid rgba(223,166,76,.25);
+    border-radius: 26px;
+
+    box-shadow: 0 30px 75px rgba(0,0,0,.20);
+}
+
+/* Put all existing copy on the left */
+:is(section, div):has(> .trauma-impact-visual) > *:not(.trauma-impact-visual) {
+    grid-column: 1;
+}
+
+/* Graphical panel occupies right side */
+.trauma-impact-visual {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 20;
+
+    align-self: center;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,14,14,.92),
+            rgba(11,15,14,.96)
+        );
+
+    border: 1px solid rgba(223,166,76,.34);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30),
+        inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+/* Decorative rings */
+.trauma-impact-visual::before {
+    content: "";
+
+    position: absolute;
+    width: 330px;
+    height: 330px;
+
+    right: -125px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223,166,76,.35) 0 3px,
+            transparent 4px 60px,
+            rgba(223,166,76,.11) 61px 62px,
+            transparent 63px 105px,
+            rgba(63,132,126,.11) 106px 107px,
+            transparent 108px 150px,
+            rgba(223,166,76,.07) 151px 152px,
+            transparent 153px
+        );
+
+    pointer-events: none;
+}
+
+.impact-visual-label {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: #dfa64c;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .24em;
+}
+
+.impact-step {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+
+    align-items: center;
+}
+
+.impact-number {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    color: #dfa64c;
+    background: rgba(223,166,76,.06);
+
+    border: 1px solid rgba(223,166,76,.36);
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.impact-step strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f1ede5;
+
+    font-size: 19px;
+}
+
+.impact-step p {
+    margin: 0 !important;
+
+    color: rgba(239,235,226,.63) !important;
+
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+}
+
+.impact-connector {
+    width: 1px;
+    height: 34px;
+
+    margin: 7px 0 7px 22px;
+
+    background:
+        linear-gradient(
+            #dfa64c,
+            rgba(223,166,76,.10)
+        );
+}
+
+.impact-step-final .impact-number {
+    color: #101313;
+    background: #dfa64c;
+}
+
+.impact-statement {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 32px;
+    padding-top: 23px;
+
+    color: rgba(241,237,229,.85);
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    font-family: Georgia,serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.impact-statement span {
+    display: inline-block;
+
+    width: 36px;
+    height: 1px;
+
+    margin-right: 12px;
+    vertical-align: middle;
+
+    background: #dfa64c;
+}
+
+/* Tablet/mobile */
+
+@media (max-width: 1000px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        grid-template-columns: 1fr;
+        padding: 42px;
+    }
+
+    .trauma-impact-visual {
+        grid-column: 1;
+        grid-row: auto;
+
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .trauma-impact-visual {
+        padding: 27px 22px;
+        border-radius: 18px;
+    }
+}
+</style>
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -486,6 +721,48 @@
                 understand what may be keeping them active and identify where
                 greater choice can be created in the present.
             </p>
+<div class="trauma-impact-visual">
+
+    <span class="impact-visual-label">FROM REACTION TO CHOICE</span>
+
+    <div class="impact-path">
+
+        <div class="impact-step">
+            <span class="impact-number">01</span>
+            <div>
+                <strong>Notice</strong>
+                <p>The response that appears automatically.</p>
+            </div>
+        </div>
+
+        <div class="impact-connector"></div>
+
+        <div class="impact-step">
+            <span class="impact-number">02</span>
+            <div>
+                <strong>Understand</strong>
+                <p>What shaped it and what may still be keeping it active.</p>
+            </div>
+        </div>
+
+        <div class="impact-connector"></div>
+
+        <div class="impact-step impact-step-final">
+            <span class="impact-number">03</span>
+            <div>
+                <strong>Choose</strong>
+                <p>Create space for a response that belongs to the present.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="impact-statement">
+        <span></span>
+        The past can explain a pattern without deciding what happens next.
+    </div>
+
+</div>
         </div>
 
     </div>
