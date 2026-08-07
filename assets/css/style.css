@@ -9043,3 +9043,108 @@ html body main.trauma-page {
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_BANNER_V9_ARTWORK
+   Decorative layer only - dimensions unchanged
+   ========================================================== */
+
+.trauma-banner-v7 {
+    isolation: isolate !important;
+}
+
+
+/* SVG editorial artwork */
+
+.trauma-banner-editorial-art {
+    position: absolute;
+
+    z-index: 1;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    opacity: .90;
+}
+
+.trauma-banner-editorial-art svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Ensure statement remains beautifully above artwork */
+
+.trauma-banner-v7-inner {
+    position: relative !important;
+
+    z-index: 5 !important;
+}
+
+
+/*
+Very soft dark veil directly behind central wording,
+preserving readability while artwork remains visible
+around it.
+*/
+
+.trauma-banner-v7-inner::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    left: 50%;
+    top: 50%;
+
+    width: 82%;
+    height: 150%;
+
+    transform:
+        translate(-50%, -50%);
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(13,18,19,.56) 0%,
+            rgba(13,18,19,.25) 40%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* Additional subtle upper highlight */
+
+.trauma-banner-v7 {
+    box-shadow:
+        inset 0 1px 0 rgba(223,168,85,.07),
+        inset 0 -1px 0 rgba(223,168,85,.05) !important;
+}
+
+
+/* Mobile - reduce complexity */
+
+@media (max-width: 680px) {
+
+    .trauma-banner-editorial-art {
+        opacity: .58;
+    }
+
+    .trauma-banner-editorial-art svg {
+        width: 170%;
+        margin-left: -35%;
+    }
+
+}
