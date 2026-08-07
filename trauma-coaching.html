@@ -814,6 +814,60 @@ p {
 }
 
 </style>
+<style id="TRAUMA_HELP_GAP_FINAL">
+
+/*
+   Pull HOW COACHING CAN HELP upward.
+   Only this exact section is affected.
+*/
+
+[data-trauma-help-section="true"] {
+
+    margin-top: 0 !important;
+
+    padding-top: 48px !important;
+
+    border-top: 0 !important;
+}
+
+
+/* Keep the eyebrow neatly positioned */
+
+[data-trauma-help-section="true"]
+.section-label,
+
+[data-trauma-help-section="true"]
+.eyebrow {
+
+    margin-top: 0 !important;
+}
+
+
+/* Desktop spacing should feel connected, not cramped */
+
+@media (min-width: 1051px) {
+
+    [data-trauma-help-section="true"] {
+
+        padding-top: 52px !important;
+        padding-bottom: 70px !important;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 1050px) {
+
+    [data-trauma-help-section="true"] {
+
+        padding-top: 38px !important;
+    }
+
+}
+
+</style>
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -1248,7 +1302,7 @@ p {
 </section>
 
 
-<section class="trauma-support-section">
+<section data-trauma-help-section="true" class="trauma-support-section">
     <div class="trauma-section-inner">
 
         <div class="trauma-support-intro">
