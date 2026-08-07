@@ -13,7 +13,7 @@
     />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/style.css?v=20260806-trauma-v4" />
-  
+
 <style id="TEAM_LEADERSHIP_PAGE_V1">
 
 .team-leadership-page {
@@ -504,6 +504,606 @@
 
 </style>
 
+
+
+<style id="TEAM_LEADERSHIP_INTRO_FINAL">
+
+/* ==========================================================
+   TEAM LEADERSHIP INTRO
+   ========================================================== */
+
+.tl-intro-feature {
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 78px 0 82px;
+
+    background:
+        radial-gradient(
+            circle at 82% 28%,
+            rgba(223,166,76,.10),
+            transparent 29%
+        ),
+        linear-gradient(
+            115deg,
+            #081818 0%,
+            #101717 52%,
+            #241a11 100%
+        );
+
+    border-bottom:
+        1px solid rgba(223,166,76,.24);
+}
+
+
+/* Subtle background detail */
+
+.tl-intro-feature::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: -230px;
+    bottom: -310px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(223,166,76,.09);
+
+    box-shadow:
+        0 0 0 70px rgba(27,104,99,.025),
+        0 0 0 140px rgba(223,166,76,.018);
+}
+
+
+.tl-intro-inner {
+
+    width:
+        min(1480px, calc(100% - 96px));
+
+    margin:
+        0 auto;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, .94fr)
+        minmax(520px, 1.06fr);
+
+    gap:
+        clamp(65px, 6vw, 105px);
+
+    align-items:
+        center;
+}
+
+
+/* ==========================================================
+   LEFT CONTENT
+   ========================================================== */
+
+.tl-intro-copy {
+
+    max-width:
+        710px;
+}
+
+
+.tl-intro-eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        22px;
+
+    color:
+        #dfa64c;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .27em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.tl-intro-rule {
+
+    width:
+        88px;
+
+    height:
+        2px;
+
+    margin-bottom:
+        31px;
+
+    background:
+        #dfa64c;
+}
+
+
+.tl-intro-copy h1 {
+
+    margin:
+        0 0 28px;
+
+    color:
+        #f1ede5;
+
+    font-size:
+        clamp(50px, 4.7vw, 76px);
+
+    line-height:
+        1.01;
+
+    letter-spacing:
+        -.035em;
+}
+
+
+.tl-intro-copy h1 em {
+
+    display:
+        block;
+
+    margin-top:
+        9px;
+
+    color:
+        #dfa64c;
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        .88em;
+
+    font-style:
+        italic;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.05;
+}
+
+
+.tl-intro-copy p {
+
+    max-width:
+        690px;
+
+    margin:
+        0 0 20px;
+
+    color:
+        rgba(241,237,229,.75);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+}
+
+
+.tl-intro-copy
+.tl-intro-lead {
+
+    color:
+        rgba(241,237,229,.91);
+
+    font-size:
+        20px;
+}
+
+
+.tl-intro-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-top:
+        14px;
+
+    padding:
+        17px 27px;
+
+    border-radius:
+        999px;
+
+    background:
+        #e3aa4f;
+
+    color:
+        #090b0b !important;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        700;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.tl-intro-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        #efb960;
+}
+
+
+/* ==========================================================
+   IMAGE SIDE
+   ========================================================== */
+
+.tl-intro-visual {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        625px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(223,166,76,.38);
+
+    border-radius:
+        28px;
+
+    background:
+        #080d0d;
+
+    box-shadow:
+        0 32px 75px rgba(0,0,0,.30);
+}
+
+
+.tl-intro-visual img {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    display:
+        block;
+}
+
+
+/* Dark gradient makes overlays premium/readable */
+
+.tl-image-shade {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(4,8,8,.12) 52%,
+            rgba(4,8,8,.88) 100%
+        );
+}
+
+
+/* Bottom statement */
+
+.tl-image-label {
+
+    position:
+        absolute;
+
+    left:
+        30px;
+
+    right:
+        30px;
+
+    bottom:
+        112px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        15px 20px;
+
+    border:
+        1px solid rgba(223,166,76,.35);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(5,10,10,.86);
+
+    backdrop-filter:
+        blur(7px);
+
+    color:
+        #f1ede5;
+
+    font-weight:
+        650;
+}
+
+
+.tl-image-label span {
+
+    width:
+        35px;
+
+    height:
+        1px;
+
+    flex:
+        0 0 auto;
+
+    background:
+        #dfa64c;
+}
+
+
+/* Performance strip */
+
+.tl-image-metrics {
+
+    position:
+        absolute;
+
+    left:
+        30px;
+
+    right:
+        30px;
+
+    bottom:
+        28px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        8px;
+}
+
+
+.tl-image-metrics div {
+
+    padding:
+        14px 15px;
+
+    border-top:
+        1px solid rgba(223,166,76,.38);
+
+    background:
+        rgba(5,10,10,.64);
+}
+
+
+.tl-image-metrics strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #dfa64c;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.tl-image-metrics span {
+
+    color:
+        #f1ede5;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .tl-intro-inner {
+
+        width:
+            min(100% - 48px, 1480px);
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            46px;
+    }
+
+
+    .tl-intro-copy {
+
+        max-width:
+            800px;
+    }
+
+
+    .tl-intro-visual {
+
+        min-height:
+            560px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+    .tl-intro-feature {
+
+        padding:
+            54px 0;
+    }
+
+
+    .tl-intro-inner {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .tl-intro-copy h1 {
+
+        font-size:
+            clamp(43px, 12vw, 59px);
+    }
+
+
+    .tl-intro-copy p,
+    .tl-intro-copy .tl-intro-lead {
+
+        font-size:
+            16px;
+
+        line-height:
+            1.65;
+    }
+
+
+    .tl-intro-visual {
+
+        min-height:
+            470px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .tl-image-label {
+
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            125px;
+
+        border-radius:
+            18px;
+    }
+
+
+    .tl-image-metrics {
+
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            20px;
+    }
+
+
+    .tl-image-metrics span {
+
+        font-size:
+            11px;
+    }
+
+}
+
+</style>
+
+
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -541,47 +1141,100 @@
         </div>
       </nav>
 
-      <section class="container py-6 reveal">
-        <p class="eyebrow">Coaching</p>
 
-<div class="coaching-hero-grid">
 
-    <div class="coaching-hero-copy">
-<h1 class="display-4 fw-semibold">A measured path toward steadier living.</h1>
+<section class="tl-intro-feature">
 
-<p class="lead-text">
-Private, trauma-informed coaching for people navigating emotional overwhelm, difficult relationships, major life change or simply feeling stuck. We slow things down, separate what is happening from the noise around it, and work towards clearer decisions, stronger boundaries and a steadier sense of self.
-</p>
+  <div class="tl-intro-inner">
 
-<p class="lead-text" style="margin-top: 1rem;">
-No labels. No judgement. No pressure to become someone else. Just a calm space to understand where you are, what is keeping you there and what your next step could be.
-</p>
+    <div class="tl-intro-copy">
 
-<p class="lead-text" style="margin-top: 1rem;">
-Sessions are shaped around what is happening in your life now. We can explore patterns, choices and practical next steps at a pace that feels manageable, while keeping the focus on what you can influence and change.
-</p>
+      <span class="tl-intro-eyebrow">
+        LEADERSHIP IN PRACTICE
+      </span>
 
-<div style="margin-top: 2rem;">
-  <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
-</div>
+      <div class="tl-intro-rule"></div>
+
+      <h1>
+        Great teams do not
+        happen by accident.
+        <em>They are led with clarity.</em>
+      </h1>
+
+      <p class="tl-intro-lead">
+        Strong leadership creates the conditions in which people
+        can perform at their best: clear expectations, honest
+        communication, useful accountability and the confidence
+        to deal with problems before they become bigger ones.
+      </p>
+
+      <p>
+        I bring more than 20 years of practical leadership
+        experience across agency and in-house environments,
+        successful marketing projects and the management of
+        multiple departments. I understand both the pressure
+        to deliver and the human dynamics behind the result.
+      </p>
+
+      <p>
+        Whether you are taking responsibility for a team for the
+        first time or working at senior or enterprise level, the
+        focus is the same: remove unnecessary friction, raise
+        standards and help capable people work together more
+        effectively.
+      </p>
+
+      <a href="contact.html" class="tl-intro-button">
+        Talk About Your Team
+        <span>?</span>
+      </a>
+
     </div>
 
-    <div class="coaching-hero-visual">
-        <img
-            src="assets/images/the grey.png"
-            alt="A quiet path leading towards warm light, representing calm progress and steadier living."
-            class="coaching-hero-image"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-        >
+
+    <div class="tl-intro-visual">
+
+      <img
+        src="assets/images/coaching.webp"
+        alt="Professional leadership coaching and team development"
+      >
+
+      <div class="tl-image-shade"></div>
+
+      <div class="tl-image-label">
+        <span></span>
+        Leadership that turns direction into performance.
+      </div>
+
+      <div class="tl-image-metrics">
+
+        <div>
+          <strong>01</strong>
+          <span>Clarity</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>Alignment</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>Performance</span>
+        </div>
+
+      </div>
+
     </div>
 
-</div>
-      </section>
+  </div>
+
+</section>
+
+
     </header>
 
-    
+
 <main class="team-leadership-page">
 
 <section class="tl-hero">
