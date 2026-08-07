@@ -11981,3 +11981,11 @@ body:has(.pa-visual-hero) .pa-page {
         margin-top: 25px !important;
     }
 }
+
+
+/* PA_BLOCK2_FINAL_BREATHING_ROOM */
+@media (min-width: 901px) {
+    .pa-block2-spacing {
+        padding-top: 88px !important;
+    }
+}
