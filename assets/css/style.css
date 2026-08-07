@@ -8898,3 +8898,148 @@ html body main.trauma-page {
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_BANNER_V8_BALANCE
+   ========================================================== */
+
+@media (min-width: 992px) {
+
+    .trauma-banner-v7 {
+        min-height: 290px !important;
+    }
+
+    .trauma-banner-v7-inner {
+        padding:
+            58px 0 62px !important;
+    }
+
+    .trauma-banner-v7-label {
+        margin-bottom:
+            21px !important;
+
+        font-size:
+            .72rem !important;
+
+        letter-spacing:
+            .30em !important;
+    }
+
+    .trauma-banner-v7 h2 {
+        max-width:
+            1250px !important;
+    }
+
+    .trauma-banner-v7 h2 span {
+        display:
+            block !important;
+
+        font-size:
+            clamp(2.8rem, 3.7vw, 4.1rem) !important;
+
+        line-height:
+            1.05 !important;
+    }
+
+    .trauma-banner-v7 h2 strong {
+        display:
+            block !important;
+
+        margin:
+            9px 0 0 !important;
+
+        font-size:
+            clamp(2.7rem, 3.6vw, 4rem) !important;
+
+        line-height:
+            1.05 !important;
+    }
+
+}
+
+
+/* Slightly stronger graphical glow */
+
+.trauma-banner-v7::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -110px;
+
+    width: 680px;
+    height: 220px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        50%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(223,168,85,.11),
+            transparent 68%
+        );
+
+    pointer-events:
+        none;
+}
+
+
+/* Gold transition line into next section */
+
+.trauma-banner-v7::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: min(760px, 65%);
+    height: 1px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(223,168,85,.18),
+            rgba(223,168,85,.78),
+            rgba(223,168,85,.18),
+            transparent
+        );
+
+    box-shadow:
+        0 0 18px rgba(223,168,85,.18);
+}
+
+
+/* Tablet */
+
+@media (min-width: 681px) and (max-width: 991px) {
+
+    .trauma-banner-v7 {
+        min-height:
+            250px !important;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 680px) {
+
+    .trauma-banner-v7 {
+        min-height:
+            220px !important;
+    }
+
+}
