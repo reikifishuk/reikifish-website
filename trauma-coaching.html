@@ -335,6 +335,170 @@
     }
 }
 </style>
+<style id="TRAUMA_IMPACT_LAYOUT_FINAL">
+
+/* ==========================================================
+   TRAUMA IMPACT SECTION - FINAL FULL WIDTH LAYOUT
+   ========================================================== */
+
+:is(section, div):has(> .trauma-impact-visual) {
+    box-sizing: border-box !important;
+
+    width: calc(100vw - 96px) !important;
+    max-width: 1480px !important;
+
+    margin-left: calc(50% - 50vw + 48px) !important;
+    margin-right: 0 !important;
+
+    padding: 68px 72px !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr) !important;
+    column-gap: 72px !important;
+    row-gap: 22px !important;
+
+    align-items: center !important;
+
+    background:
+        radial-gradient(circle at 78% 28%, rgba(223,166,76,.10), transparent 28%),
+        linear-gradient(115deg,
+            rgba(7,31,31,.96) 0%,
+            rgba(14,19,20,.98) 53%,
+            rgba(39,28,17,.96) 100%) !important;
+
+    border: 1px solid rgba(223,166,76,.28) !important;
+    border-radius: 26px !important;
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,.22),
+        inset 0 1px rgba(255,255,255,.025) !important;
+
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+/* Everything except the visual panel belongs on the left */
+:is(section, div):has(> .trauma-impact-visual)
+> *:not(.trauma-impact-visual) {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 720px !important;
+}
+
+/* Main heading */
+:is(section, div):has(> .trauma-impact-visual) h2 {
+    font-size: clamp(42px, 4.3vw, 70px) !important;
+    line-height: 1.04 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 24px !important;
+}
+
+/* Copy */
+:is(section, div):has(> .trauma-impact-visual) p {
+    font-size: clamp(17px, 1.25vw, 20px) !important;
+    line-height: 1.72 !important;
+    max-width: 700px !important;
+}
+
+/* Right visual */
+:is(section, div):has(> .trauma-impact-visual)
+> .trauma-impact-visual {
+    grid-column: 2 !important;
+    grid-row: 1 / span 20 !important;
+
+    width: 100% !important;
+    max-width: 500px !important;
+    min-width: 0 !important;
+
+    justify-self: end !important;
+    align-self: center !important;
+
+    margin: 0 !important;
+    padding: 38px 36px !important;
+
+    border-radius: 22px !important;
+
+    background:
+        radial-gradient(circle at 78% 18%, rgba(223,166,76,.11), transparent 32%),
+        rgba(7,12,12,.90) !important;
+
+    border: 1px solid rgba(223,166,76,.35) !important;
+
+    box-shadow:
+        0 24px 55px rgba(0,0,0,.30),
+        inset 0 1px rgba(255,255,255,.025) !important;
+}
+
+/* Give the three stages breathing room */
+.trauma-impact-visual .impact-path {
+    display: grid !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.trauma-impact-visual .impact-statement {
+    margin-top: 30px !important;
+    padding-top: 24px !important;
+}
+
+/* Desktop safety */
+@media (min-width: 1500px) {
+    :is(section, div):has(> .trauma-impact-visual) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        width: calc(100vw - 48px) !important;
+        margin-left: calc(50% - 50vw + 24px) !important;
+
+        grid-template-columns: 1fr !important;
+        padding: 48px 38px !important;
+        gap: 38px !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    > *:not(.trauma-impact-visual),
+    :is(section, div):has(> .trauma-impact-visual)
+    > .trauma-impact-visual {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        max-width: none !important;
+        width: 100% !important;
+        justify-self: stretch !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        width: calc(100vw - 24px) !important;
+        margin-left: calc(50% - 50vw + 12px) !important;
+
+        padding: 34px 22px !important;
+        border-radius: 18px !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual) h2 {
+        font-size: clamp(36px, 11vw, 48px) !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual) p {
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+    }
+
+    .trauma-impact-visual {
+        padding: 28px 22px !important;
+    }
+}
+
+</style>
 </head>
   <body class="coaching-page">
     <header class="inner-header">
