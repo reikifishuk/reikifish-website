@@ -11952,3 +11952,32 @@ body:has(.pa-visual-hero) .pa-page {
         padding-top: 22px !important;
     }
 }
+
+
+/* PA_BLOCK2_RIGHT_ALIGNMENT_FINAL */
+
+/* Align right title vertically with main left heading */
+.pa-block2-spacing h1:has(.pa-block2-right-title),
+.pa-block2-spacing h2:has(.pa-block2-right-title),
+.pa-block2-spacing h3:has(.pa-block2-right-title) {
+    margin-top: 82px !important;
+    padding-top: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+}
+
+/* Previous span padding no longer required */
+.pa-block2-spacing .pa-block2-right-title {
+    padding-top: 0 !important;
+    padding-bottom: 8px !important;
+}
+
+/* Mobile should stack naturally */
+@media (max-width: 900px) {
+    .pa-block2-spacing h1:has(.pa-block2-right-title),
+    .pa-block2-spacing h2:has(.pa-block2-right-title),
+    .pa-block2-spacing h3:has(.pa-block2-right-title) {
+        margin-top: 25px !important;
+    }
+}
