@@ -10836,3 +10836,48 @@ body:has(.pa-visual-hero) .pa-page {
         z-index: 2;
     }
 }
+
+
+/* ==========================================================
+   PA_PAGE_POSITION_MASTER_FIX
+   Diagnostic confirmed hero is first element in main.
+   Move complete page rather than individual hero content.
+   ========================================================== */
+
+@media (min-width: 1201px) {
+
+    html body main.pa-page {
+        position: relative !important;
+        top: -255px !important;
+        margin-top: 0 !important;
+        margin-bottom: -255px !important;
+        padding-top: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Existing hero lift remains intact */
+    html body main.pa-page .pa-visual-hero {
+        overflow: hidden !important;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+
+    html body main.pa-page {
+        position: relative !important;
+        top: -130px !important;
+        margin-bottom: -130px !important;
+        padding-top: 0 !important;
+        overflow: visible !important;
+    }
+}
+
+@media (max-width: 800px) {
+
+    html body main.pa-page {
+        position: relative !important;
+        top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+    }
+}
