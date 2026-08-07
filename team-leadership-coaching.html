@@ -1104,6 +1104,224 @@
 </style>
 
 
+
+
+<style id="TEAM_EXPERIENCE_PREMIUM_V1">
+
+/* ==========================================================
+   TEAM LEADERSHIP - EXPERIENCE
+   ========================================================== */
+
+.tl-experience-premium {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 0 64px;
+    background:
+        radial-gradient(
+            circle at 88% 15%,
+            rgba(223,166,76,.07),
+            transparent 25%
+        ),
+        #0b1010;
+    border-bottom: 1px solid rgba(223,166,76,.14);
+}
+
+.tl-experience-inner {
+    width: min(1480px, calc(100% - 96px));
+    margin: 0 auto;
+}
+
+.tl-experience-heading {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 38px;
+}
+
+.tl-experience-eyebrow {
+    display: block;
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .25em;
+}
+
+.tl-experience-rule {
+    width: 72px;
+    height: 2px;
+    margin: 18px 0 22px;
+    background: #dfa64c;
+}
+
+.tl-experience-heading h2 {
+    max-width: 620px;
+    margin: 0;
+    color: #f1ede5;
+    font-size: clamp(36px, 3.4vw, 55px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+}
+
+.tl-experience-heading h2 em {
+    display: inline;
+    color: #dfa64c;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tl-experience-heading > p {
+    max-width: 700px;
+    margin: 0 0 4px;
+    color: rgba(241,237,229,.70);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* FOUR PROOF CARDS */
+
+.tl-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 14px;
+}
+
+.tl-experience-card {
+    position: relative;
+    min-height: 245px;
+    padding: 26px 25px 25px;
+    border: 1px solid rgba(223,166,76,.24);
+    border-radius: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.018),
+            rgba(223,166,76,.025)
+        ),
+        #090e0e;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.tl-experience-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(223,166,76,.48);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,166,76,.055),
+            rgba(10,19,18,.9)
+        );
+}
+
+.tl-experience-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border: 1px solid rgba(223,166,76,.36);
+    border-radius: 15px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,166,76,.13),
+            rgba(223,166,76,.025)
+        );
+    color: #dfa64c;
+}
+
+.tl-experience-icon span {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.tl-experience-card small {
+    display: block;
+    margin-bottom: 7px;
+    color: #dfa64c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.tl-experience-card h3 {
+    margin: 0 0 11px;
+    color: #f1ede5;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.tl-experience-card p {
+    margin: 0;
+    color: rgba(241,237,229,.64);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .tl-experience-inner {
+        width: min(100% - 48px, 1480px);
+    }
+
+    .tl-experience-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tl-experience-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .tl-experience-premium {
+        padding: 45px 0 50px;
+    }
+
+    .tl-experience-inner {
+        width: calc(100% - 28px);
+    }
+
+    .tl-experience-heading {
+        margin-bottom: 28px;
+    }
+
+    .tl-experience-heading h2 {
+        font-size: 39px;
+    }
+
+    .tl-experience-heading > p {
+        font-size: 15px;
+    }
+
+    .tl-experience-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tl-experience-card {
+        min-height: 0;
+        padding: 23px;
+    }
+}
+
+</style>
+
+
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -1113,7 +1331,7 @@
             <img
               class="site-logo"
               src="assets/images/logo.png"
-              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              alt="Andy Fish Ã¢â‚¬â€œ Author, Psychology & Mindset Coach"
               width="1681"
               height="935"
             />
@@ -1305,69 +1523,117 @@
 </section>
 
 
-<section class="tl-section tl-experience">
-  <div class="tl-container">
 
-    <span class="tl-eyebrow">Experience That Has Been Lived</span>
-    <div class="tl-rule"></div>
 
-    <div class="tl-section-heading">
+<section class="tl-experience-premium">
 
-      <h2>
-        More than 20 years of
-        <em>leading in the real world.</em>
-      </h2>
+  <div class="tl-experience-inner">
 
-      <div class="tl-copy">
-        <p>
-          For more than two decades I have worked across leadership, management,
-          marketing and performance, from highly successful marketing projects to
-          leading multiple departments and bringing different teams together around
-          a common objective.
-        </p>
+    <div class="tl-experience-heading">
 
-        <p>
-          My background includes both agency and in-house environments. That matters
-          because the pressures are different: agencies need pace, prioritisation and
-          client delivery, while internal teams need alignment, stakeholder management,
-          process and long-term ownership.
-        </p>
+      <div>
+        <span class="tl-experience-eyebrow">
+          EXPERIENCE BEHIND THE COACHING
+        </span>
 
-        <p>
-          I bring those worlds together. The aim is not management theory for its own
-          sake. It is practical leadership that improves how people communicate, solve
-          problems, handle conflict and deliver together.
-        </p>
+        <div class="tl-experience-rule"></div>
+
+        <h2>
+          Leadership built in the
+          <em>real world.</em>
+        </h2>
       </div>
+
+      <p>
+        More than two decades working across agency and in-house
+        environments has taught me that strong leadership is not
+        about titles. It is about creating clarity, raising standards
+        and helping people perform together when the pressure is real.
+      </p>
 
     </div>
 
-    <div class="tl-experience-strip">
 
-      <div class="tl-experience-item">
-        <span>01</span>
-        <strong>20+ Years Leadership</strong>
-      </div>
+    <div class="tl-experience-grid">
 
-      <div class="tl-experience-item">
-        <span>02</span>
-        <strong>Agency Experience</strong>
-      </div>
+      <article class="tl-experience-card">
 
-      <div class="tl-experience-item">
-        <span>03</span>
-        <strong>In-House Leadership</strong>
-      </div>
+        <div class="tl-experience-icon">
+          <span>20+</span>
+        </div>
 
-      <div class="tl-experience-item">
-        <span>04</span>
-        <strong>Multi-Department Teams</strong>
-      </div>
+        <div>
+          <small>01</small>
+          <h3>Years of Leadership</h3>
+          <p>
+            Leading people, projects and teams through growth,
+            pressure, change and demanding commercial targets.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>&nearr;</span>
+        </div>
+
+        <div>
+          <small>02</small>
+          <h3>Agency Experience</h3>
+          <p>
+            Fast-moving environments where priorities compete,
+            clients expect results and teams need to adapt quickly.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>&nearr;</span>
+        </div>
+
+        <div>
+          <small>03</small>
+          <h3>In-House Leadership</h3>
+          <p>
+            Building sustainable performance, developing people and
+            turning strategy into consistent day-to-day execution.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>&nearr;</span>
+        </div>
+
+        <div>
+          <small>04</small>
+          <h3>Multi-Department Teams</h3>
+          <p>
+            Bringing different personalities, functions and priorities
+            together around shared outcomes and clearer accountability.
+          </p>
+        </div>
+
+      </article>
 
     </div>
 
   </div>
+
 </section>
+
+
 
 
 <section class="tl-section tl-capabilities">
@@ -1616,7 +1882,7 @@
 
     <footer class="footer">
       <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <p class="mb-0">Ã‚Â© <span id="year"></span> Andy Fish. All rights reserved.</p>
         <div class="footer-links">
           <a href="about.html">About</a>
           <a href="books.html">Books</a>
