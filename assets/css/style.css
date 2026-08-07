@@ -11900,3 +11900,15 @@ body:has(.pa-visual-hero) .pa-page {
         text-align: center;
     }
 }
+
+
+/* PA_BLOCK2_SPACING_FINAL */
+.pa-block2-spacing {
+    padding-top: 48px !important;
+}
+
+@media (max-width: 900px) {
+    .pa-block2-spacing {
+        padding-top: 35px !important;
+    }
+}
