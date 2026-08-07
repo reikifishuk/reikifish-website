@@ -336,73 +336,114 @@
 }
 </style>
 
-<style id="TRAUMA_IMPACT_LAYOUT_CLEAN_FINAL">
+
+
+<style id="TRAUMA_IMPACT_OPEN_FLOW_FINAL">
 
 /* ==========================================================
-   TRAUMA IMPACT SECTION - CLEAN FINAL LAYOUT
+   UNDERSTANDING THE IMPACT
+   OPEN EDITORIAL SECTION
    ========================================================== */
+
+/*
+   The outside is deliberately NOT a card.
+   It becomes a normal full-width section like the rest
+   of the Trauma page.
+*/
 
 :is(section, div):has(> .trauma-impact-visual) {
 
     box-sizing: border-box !important;
 
-    /*
-       Match the visual width of the other premium sections.
-       Centre against the page rather than the old narrow parent.
-    */
+    width: 100vw !important;
+    max-width: none !important;
 
-    width: min(1500px, calc(100vw - 120px)) !important;
-    max-width: 1500px !important;
-
-    margin-top: 34px !important;
-    margin-bottom: 34px !important;
-
-    margin-left: 50% !important;
+    margin-left: calc(50% - 50vw) !important;
     margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 
-    transform: translateX(-50%) !important;
+    transform: none !important;
 
-    padding: 62px 68px !important;
+    padding:
+        76px
+        clamp(55px, 8vw, 150px)
+        76px !important;
+
+    min-height: 0 !important;
+    height: auto !important;
 
     display: grid !important;
 
     grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(390px, .92fr) !important;
+        minmax(0, 1.1fr)
+        minmax(390px, .9fr) !important;
 
-    column-gap: 72px !important;
-    row-gap: 18px !important;
+    grid-template-rows:
+        repeat(5, auto) !important;
+
+    column-gap:
+        clamp(55px, 6vw, 100px) !important;
+
+    row-gap:
+        17px !important;
 
     align-items: center !important;
 
-    position: relative !important;
-    overflow: hidden !important;
+    /*
+       NO giant outer card
+    */
 
-    border-radius: 24px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
 
-    border:
-        1px solid rgba(223,166,76,.30) !important;
+    box-shadow: none !important;
 
     background:
         radial-gradient(
-            circle at 88% 42%,
-            rgba(223,166,76,.10),
-            transparent 30%
+            circle at 82% 44%,
+            rgba(223,166,76,.035),
+            transparent 27%
         ),
         linear-gradient(
-            115deg,
-            #071b1b 0%,
-            #0c1515 44%,
-            #151511 70%,
-            #251b12 100%
+            90deg,
+            rgba(5,25,25,.30),
+            transparent 47%
         ) !important;
 
-    box-shadow:
-        0 28px 70px rgba(0,0,0,.22) !important;
+    overflow: hidden !important;
+    position: relative !important;
 }
 
 
-/* LEFT COLUMN */
+/* Subtle separator between sections */
+
+:is(section, div):has(> .trauma-impact-visual)::after {
+
+    content: "" !important;
+
+    position: absolute !important;
+
+    bottom: 0 !important;
+    left: clamp(55px, 8vw, 150px) !important;
+    right: clamp(55px, 8vw, 150px) !important;
+
+    height: 1px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(223,166,76,.35),
+            rgba(223,166,76,.07),
+            transparent
+        ) !important;
+
+}
+
+
+/* ==========================================================
+   LEFT EDITORIAL CONTENT
+   ========================================================== */
 
 :is(section, div):has(> .trauma-impact-visual)
 > *:not(.trauma-impact-visual) {
@@ -417,144 +458,271 @@
 }
 
 
-/* EYEBROW */
+/* Eyebrow */
 
 :is(section, div):has(> .trauma-impact-visual)
 .section-label,
+
 :is(section, div):has(> .trauma-impact-visual)
 .eyebrow {
 
-    letter-spacing: .24em !important;
+    color: #dfa64c !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .25em !important;
+
+    text-transform: uppercase !important;
 }
 
 
-/* MAIN HEADING */
+/* Main heading */
 
-:is(section, div):has(> .trauma-impact-visual) h2 {
+:is(section, div):has(> .trauma-impact-visual)
+h2 {
 
+    width: 100% !important;
     max-width: 720px !important;
 
+    margin:
+        15px 0 27px !important;
+
     font-size:
-        clamp(44px, 4vw, 64px) !important;
+        clamp(44px, 4.1vw, 66px) !important;
 
-    line-height: 1.05 !important;
+    line-height:
+        1.04 !important;
 
-    letter-spacing: -.025em !important;
+    letter-spacing:
+        -.025em !important;
 
-    margin-top: 20px !important;
-    margin-bottom: 28px !important;
+    color:
+        #f1ede5 !important;
 }
 
 
-/* BODY COPY */
+/* Paragraphs */
 
-:is(section, div):has(> .trauma-impact-visual) p {
+:is(section, div):has(> .trauma-impact-visual)
+p {
 
-    max-width: 700px !important;
+    max-width:
+        700px !important;
+
+    margin:
+        0 0 20px !important;
 
     font-size:
-        clamp(17px, 1.2vw, 20px) !important;
+        clamp(17px, 1.25vw, 20px) !important;
 
-    line-height: 1.7 !important;
+    line-height:
+        1.7 !important;
 
-    margin-bottom: 21px !important;
+    color:
+        rgba(241,237,229,.79) !important;
 }
 
 
 /* ==========================================================
-   RIGHT VISUAL
+   RIGHT FEATURE PANEL
    ========================================================== */
 
 :is(section, div):has(> .trauma-impact-visual)
 > .trauma-impact-visual {
 
-    grid-column: 2 !important;
-    grid-row: 1 / span 20 !important;
+    grid-column:
+        2 !important;
 
-    align-self: center !important;
-    justify-self: stretch !important;
+    grid-row:
+        1 / span 5 !important;
 
-    width: 100% !important;
-    max-width: 520px !important;
+    align-self:
+        center !important;
 
-    min-width: 0 !important;
+    justify-self:
+        end !important;
 
-    margin: 0 0 0 auto !important;
+    box-sizing:
+        border-box !important;
 
-    padding: 38px 40px !important;
+    width:
+        100% !important;
 
-    box-sizing: border-box !important;
+    max-width:
+        510px !important;
 
-    border-radius: 22px !important;
+    min-width:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        38px 40px !important;
+
+    position:
+        relative !important;
+
+    overflow:
+        hidden !important;
 
     border:
-        1px solid rgba(223,166,76,.38) !important;
+        1px solid rgba(223,166,76,.34) !important;
+
+    border-radius:
+        22px !important;
 
     background:
         linear-gradient(
             145deg,
-            rgba(5,15,15,.98),
-            rgba(9,13,12,.96)
+            rgba(5,14,14,.98),
+            rgba(10,14,13,.98)
         ) !important;
 
     box-shadow:
-        0 24px 60px rgba(0,0,0,.30) !important;
-
-    position: relative !important;
-    overflow: hidden !important;
+        0 24px 55px rgba(0,0,0,.28) !important;
 }
 
 
-/* RINGS STAY INSIDE THE PANEL */
+/* Decorative rings stay INSIDE right panel */
 
 .trauma-impact-visual::before {
 
     content: "" !important;
 
-    position: absolute !important;
+    position:
+        absolute !important;
 
-    width: 220px !important;
-    height: 220px !important;
+    width:
+        210px !important;
 
-    top: -75px !important;
-    right: -65px !important;
+    height:
+        210px !important;
 
-    border-radius: 50% !important;
+    right:
+        -68px !important;
+
+    top:
+        -72px !important;
+
+    border-radius:
+        50% !important;
 
     border:
         1px solid rgba(223,166,76,.14) !important;
 
     box-shadow:
-        0 0 0 48px rgba(223,166,76,.035),
-        0 0 0 96px rgba(37,105,100,.025) !important;
+        0 0 0 46px rgba(41,110,104,.035),
+        0 0 0 92px rgba(223,166,76,.025) !important;
 
-    pointer-events: none !important;
+    pointer-events:
+        none !important;
 }
 
 
-/* PATH CONTENT */
+/* Panel label */
+
+.trauma-impact-visual
+.impact-visual-label {
+
+    display:
+        block !important;
+
+    position:
+        relative !important;
+
+    z-index:
+        2 !important;
+
+    margin-bottom:
+        25px !important;
+
+    color:
+        #dfa64c !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        .22em !important;
+
+    text-transform:
+        uppercase !important;
+}
+
+
+/* Path */
 
 .trauma-impact-visual
 .impact-path {
 
-    position: relative !important;
-    z-index: 2 !important;
+    position:
+        relative !important;
 
-    width: 100% !important;
+    z-index:
+        2 !important;
+
+    width:
+        100% !important;
+
+    display:
+        grid !important;
+
+    gap:
+        0 !important;
 }
 
+
+/* Final statement */
 
 .trauma-impact-visual
 .impact-statement {
 
-    position: relative !important;
-    z-index: 2 !important;
+    position:
+        relative !important;
 
-    margin-top: 28px !important;
-    padding-top: 23px !important;
+    z-index:
+        2 !important;
+
+    margin-top:
+        25px !important;
+
+    padding-top:
+        22px !important;
 
     border-top:
         1px solid rgba(223,166,76,.18) !important;
+
+    color:
+        rgba(241,237,229,.88) !important;
+
+    font-family:
+        Georgia, serif !important;
+
+    font-style:
+        italic !important;
+
+    line-height:
+        1.55 !important;
+}
+
+
+/* ==========================================================
+   SECTION AFTER IT
+   ========================================================== */
+
+:is(section, div):has(> .trauma-impact-visual)
++ section {
+
+    margin-top:
+        0 !important;
+
+    padding-top:
+        65px !important;
 }
 
 
@@ -566,16 +734,17 @@
 
     :is(section, div):has(> .trauma-impact-visual) {
 
-        width:
-            calc(100vw - 48px) !important;
-
         padding:
-            48px 40px !important;
+            58px 38px !important;
 
         grid-template-columns:
             1fr !important;
 
-        gap: 38px !important;
+        grid-template-rows:
+            auto !important;
+
+        gap:
+            38px !important;
     }
 
     :is(section, div):has(> .trauma-impact-visual)
@@ -584,14 +753,20 @@
     :is(section, div):has(> .trauma-impact-visual)
     > .trauma-impact-visual {
 
-        grid-column: 1 !important;
-        grid-row: auto !important;
+        grid-column:
+            1 !important;
 
-        width: 100% !important;
-        max-width: none !important;
+        grid-row:
+            auto !important;
 
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        width:
+            100% !important;
+
+        max-width:
+            none !important;
+
+        justify-self:
+            stretch !important;
     }
 
 }
@@ -605,24 +780,15 @@
 
     :is(section, div):has(> .trauma-impact-visual) {
 
-        width:
-            calc(100vw - 24px) !important;
-
-        margin-top: 20px !important;
-        margin-bottom: 20px !important;
-
         padding:
-            34px 22px !important;
-
-        border-radius:
-            18px !important;
+            44px 22px !important;
     }
 
     :is(section, div):has(> .trauma-impact-visual)
     h2 {
 
         font-size:
-            clamp(36px, 10.5vw, 48px) !important;
+            clamp(36px, 11vw, 48px) !important;
     }
 
     :is(section, div):has(> .trauma-impact-visual)
@@ -639,84 +805,10 @@
     > .trauma-impact-visual {
 
         padding:
-            28px 22px !important;
-    }
+            28px 23px !important;
 
-}
-
-</style>
-<style id="TRAUMA_IMPACT_GAP_FIX_FINAL">
-
-/* REMOVE ARTIFICIAL GRID HEIGHT */
-
-:is(section, div):has(> .trauma-impact-visual) {
-    grid-template-rows:
-        repeat(5, auto) !important;
-
-    grid-auto-rows:
-        auto !important;
-
-    row-gap:
-        18px !important;
-
-    min-height:
-        0 !important;
-
-    height:
-        auto !important;
-
-    padding-bottom:
-        56px !important;
-
-    margin-bottom:
-        0 !important;
-}
-
-
-/* Right panel spans only the REAL content rows */
-
-:is(section, div):has(> .trauma-impact-visual)
-> .trauma-impact-visual {
-
-    grid-row:
-        1 / span 5 !important;
-
-    align-self:
-        center !important;
-}
-
-
-/* Tighten transition into following section */
-
-:is(section, div):has(> .trauma-impact-visual)
-+ section,
-
-:is(section, div):has(> .trauma-impact-visual)
-+ div {
-
-    margin-top:
-        0 !important;
-
-    padding-top:
-        48px !important;
-}
-
-
-@media (max-width: 1050px) {
-
-    :is(section, div):has(> .trauma-impact-visual) {
-        grid-template-rows:
-            auto !important;
-
-        padding-bottom:
-            42px !important;
-    }
-
-    :is(section, div):has(> .trauma-impact-visual)
-    > .trauma-impact-visual {
-
-        grid-row:
-            auto !important;
+        border-radius:
+            18px !important;
     }
 
 }
