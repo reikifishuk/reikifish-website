@@ -1,6 +1,33 @@
 {
   "items": [
     {
+      "title": "My Ex Won’t Let Me See My Children: What Can I Do as a Dad?",
+      "slug": "ex-wont-let-me-see-my-child-what-dads-can-do",
+      "url": "articles/ex-wont-let-me-see-my-child-what-dads-can-do.html",
+      "date": "2026-08-07",
+      "dateLabel": "7 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "Has your ex stopped you seeing your children after separation? A practical guide for dads on acting early, documenting evidence, domestic abuse, DARVO, child contact and protecting your relationship with your children.",
+      "category": "Parental Alienation & DARVO",
+      "categories": [
+        "Parental Alienation & DARVO"
+      ],
+      "tags": [
+        "['Separated Fathers'",
+        "'Child Contact'",
+        "'Fathers Rights'",
+        "'DARVO'",
+        "'Domestic Abuse'",
+        "'Parental Alienation'",
+        "'Family Separation'",
+        "'Coercive Control']"
+      ],
+      "image": "assets/images/blog/parental_alienation_i_cant_se_my_kids.png",
+      "imageAlt": "Separated father seeking help after his ex stops contact with his children following a relationship breakdown",
+      "readingTime": "20 min read",
+      "featured": false
+    },
+    {
       "title": "Not Everything Is Narcissism: Understanding the Overlap Between Cluster B Personality Disorders",
       "slug": "cluster-b-personality-disorders-overlap",
       "url": "articles/cluster-b-personality-disorders-overlap.html",
