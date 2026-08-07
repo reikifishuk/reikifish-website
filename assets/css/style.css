@@ -7957,3 +7957,573 @@ space and allow following content to move with it.
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_BANNER_V6_FINAL
+   ========================================================== */
+
+html body main.trauma-page {
+    overflow: visible !important;
+}
+
+
+/* Move it somewhat further upward */
+
+@media (min-width: 992px) {
+
+    html body main.trauma-page
+    > .trauma-banner-v6:first-child {
+        margin-top: -315px !important;
+    }
+
+}
+
+
+/* ==========================================================
+   BANNER
+   ========================================================== */
+
+.trauma-banner-v6 {
+    position: relative !important;
+
+    width: 100% !important;
+    min-height: 410px !important;
+
+    overflow: hidden !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    border-top:
+        1px solid rgba(223,168,85,.20) !important;
+
+    border-bottom:
+        1px solid rgba(223,168,85,.20) !important;
+
+    background:
+        radial-gradient(
+            circle at 12% 40%,
+            rgba(26,105,102,.24),
+            transparent 34%
+        ),
+        radial-gradient(
+            circle at 82% 35%,
+            rgba(223,168,85,.18),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 75% 110%,
+            rgba(126,58,38,.20),
+            transparent 38%
+        ),
+        linear-gradient(
+            115deg,
+            #0c1718 0%,
+            #111719 37%,
+            #1d1814 68%,
+            #151312 100%
+        ) !important;
+}
+
+
+/* Fine atmospheric grid */
+
+.trauma-banner-noise {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .25;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
+
+    background-size:
+        58px 58px;
+
+    mask-image:
+        linear-gradient(
+            90deg,
+            black,
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   TWO COLUMN LAYOUT
+   ========================================================== */
+
+.trauma-banner-v6-inner {
+    position: relative !important;
+    z-index: 3 !important;
+
+    width:
+        min(1200px, calc(100% - 70px)) !important;
+
+    margin:
+        0 auto !important;
+
+    padding:
+        52px 0 !important;
+
+    display:
+        grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.15fr)
+        minmax(380px, .85fr) !important;
+
+    gap:
+        70px !important;
+
+    align-items:
+        center !important;
+
+    text-align:
+        left !important;
+}
+
+
+/* ==========================================================
+   LEFT COPY
+   ========================================================== */
+
+.trauma-banner-v6 .trauma-banner-kicker {
+    display: block !important;
+
+    margin:
+        0 0 20px !important;
+
+    color:
+        #dfa855 !important;
+
+    font-size:
+        .69rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        .25em !important;
+}
+
+.trauma-banner-v6 h2 {
+    margin:
+        0 0 21px !important;
+
+    max-width:
+        700px !important;
+
+    line-height:
+        1.03 !important;
+}
+
+.trauma-banner-v6 h2 span {
+    display: block !important;
+
+    color:
+        #f0ede7 !important;
+
+    font-family:
+        inherit !important;
+
+    font-size:
+        clamp(2.7rem, 4vw, 4.5rem) !important;
+
+    font-weight:
+        500 !important;
+
+    letter-spacing:
+        -.04em !important;
+}
+
+.trauma-banner-v6 h2 strong {
+    display: block !important;
+
+    margin-top:
+        9px !important;
+
+    color:
+        #e6a94f !important;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif !important;
+
+    font-size:
+        clamp(2.25rem, 3.35vw, 3.8rem) !important;
+
+    font-weight:
+        400 !important;
+
+    font-style:
+        italic !important;
+
+    line-height:
+        1.05 !important;
+}
+
+.trauma-banner-v6 .trauma-banner-message p {
+    margin:
+        0 !important;
+
+    color:
+        #b6b3ad !important;
+
+    font-size:
+        1rem !important;
+
+    line-height:
+        1.65 !important;
+}
+
+
+/* ==========================================================
+   RIGHT GRAPHICAL ART
+   ========================================================== */
+
+.trauma-banner-art {
+    position: relative;
+
+    width: 100%;
+    height: 290px;
+}
+
+
+/* Warm atmospheric centre */
+
+.trauma-art-glow {
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    top: 28px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223,168,85,.17),
+            rgba(223,168,85,.05) 42%,
+            transparent 70%
+        );
+}
+
+
+/* Rings */
+
+.trauma-art-ring {
+    position: absolute;
+
+    left: 50%;
+
+    border-radius:
+        50%;
+
+    transform:
+        translateX(-50%);
+
+    pointer-events:
+        none;
+}
+
+.trauma-art-ring-one {
+    width: 245px;
+    height: 245px;
+
+    top: 20px;
+
+    border:
+        1px solid rgba(223,168,85,.21);
+}
+
+.trauma-art-ring-two {
+    width: 175px;
+    height: 175px;
+
+    top: 55px;
+
+    border:
+        1px solid rgba(62,137,132,.25);
+}
+
+
+/* Journey line */
+
+.trauma-art-path {
+    position: absolute;
+
+    left: 12%;
+    right: 12%;
+    top: 50%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(223,168,85,.25),
+            rgba(223,168,85,.85),
+            rgba(223,168,85,.25),
+            transparent
+        );
+}
+
+
+/* Floating stages */
+
+.trauma-art-stage {
+    position: absolute;
+
+    z-index: 5;
+
+    min-width: 128px;
+
+    padding:
+        13px 17px;
+
+    border:
+        1px solid rgba(223,168,85,.27);
+
+    border-radius:
+        13px;
+
+    background:
+        rgba(13,17,18,.83);
+
+    backdrop-filter:
+        blur(10px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+}
+
+.trauma-art-stage span {
+    display: block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #dfa855;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        .72rem;
+}
+
+.trauma-art-stage strong {
+    color:
+        #ddd9d2;
+
+    font-size:
+        .82rem;
+
+    font-weight:
+        600;
+}
+
+.trauma-art-stage-one {
+    left: 1%;
+    top: 42px;
+}
+
+.trauma-art-stage-two {
+    right: 2%;
+    top: 109px;
+}
+
+.trauma-art-stage-three {
+    left: 9%;
+    bottom: 31px;
+}
+
+
+/* Central glowing point */
+
+.trauma-art-core {
+    position: absolute;
+
+    z-index: 7;
+
+    left: 50%;
+    top: 50%;
+
+    width: 66px;
+    height: 66px;
+
+    transform:
+        translate(-50%, -50%);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+    justify-content:
+        center;
+
+    border:
+        1px solid rgba(223,168,85,.50);
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(223,168,85,.07);
+
+    box-shadow:
+        0 0 45px rgba(223,168,85,.17);
+}
+
+.trauma-art-core::before,
+.trauma-art-core::after {
+    content: "";
+
+    position: absolute;
+
+    background:
+        rgba(223,168,85,.55);
+}
+
+.trauma-art-core::before {
+    width: 1px;
+    height: 31px;
+}
+
+.trauma-art-core::after {
+    width: 31px;
+    height: 1px;
+}
+
+.trauma-art-core span {
+    width: 9px;
+    height: 9px;
+
+    border-radius:
+        50%;
+
+    background:
+        #dfa855;
+
+    box-shadow:
+        0 0 18px #dfa855;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    html body main.trauma-page
+    > .trauma-banner-v6:first-child {
+
+        margin-top:
+            -155px !important;
+    }
+
+    .trauma-banner-v6 {
+        min-height:
+            470px !important;
+    }
+
+    .trauma-banner-v6-inner {
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            25px !important;
+
+        padding:
+            55px 0 !important;
+    }
+
+    .trauma-banner-art {
+        max-width:
+            520px;
+
+        height:
+            230px;
+
+        margin:
+            0 auto;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 680px) {
+
+    html body main.trauma-page
+    > .trauma-banner-v6:first-child {
+
+        margin-top:
+            -80px !important;
+    }
+
+    .trauma-banner-v6 {
+        min-height:
+            0 !important;
+    }
+
+    .trauma-banner-v6-inner {
+        width:
+            calc(100% - 34px) !important;
+
+        padding:
+            48px 0 !important;
+    }
+
+    .trauma-banner-v6 h2 span {
+        font-size:
+            clamp(2.35rem, 11vw, 3.3rem) !important;
+    }
+
+    .trauma-banner-v6 h2 strong {
+        font-size:
+            clamp(2rem, 9vw, 2.8rem) !important;
+    }
+
+    .trauma-banner-art {
+        height:
+            220px;
+    }
+
+    .trauma-art-stage {
+        min-width:
+            105px;
+
+        padding:
+            10px 12px;
+    }
+
+}
