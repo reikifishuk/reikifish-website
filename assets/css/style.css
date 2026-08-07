@@ -9148,3 +9148,480 @@ around it.
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_BOUNDARY_PREMIUM_V2
+   ========================================================== */
+
+.trauma-page .trauma-boundary-section {
+    padding:
+        90px 0 !important;
+
+    background:
+        radial-gradient(
+            circle at 82% 45%,
+            rgba(223,168,85,.055),
+            transparent 29%
+        ),
+        #101415 !important;
+}
+
+
+/* Main premium panel */
+
+.trauma-page .trauma-boundary-panel {
+    position:
+        relative !important;
+
+    overflow:
+        hidden !important;
+
+    display:
+        grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(380px, .75fr) !important;
+
+    gap:
+        80px !important;
+
+    align-items:
+        center !important;
+
+    padding:
+        58px 64px !important;
+
+    border:
+        1px solid rgba(223,168,85,.26) !important;
+
+    border-radius:
+        27px !important;
+
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            rgba(223,168,85,.07),
+            transparent 30%
+        ),
+        linear-gradient(
+            125deg,
+            rgba(16,21,22,.98),
+            rgba(11,15,16,.99)
+        ) !important;
+
+    box-shadow:
+        0 30px 75px rgba(0,0,0,.18) !important;
+}
+
+
+/* Fine accent along top */
+
+.trauma-page .trauma-boundary-panel::before {
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        64px;
+
+    top:
+        0;
+
+    width:
+        90px;
+
+    height:
+        2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #dfa855,
+            rgba(223,168,85,.15)
+        );
+}
+
+
+/* Left copy */
+
+.trauma-page .trauma-boundary-panel
+> div:first-child {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+}
+
+.trauma-page .trauma-boundary-panel
+> div:first-child::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    right:
+        -40px;
+
+    top:
+        5%;
+
+    width:
+        1px;
+
+    height:
+        90%;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(223,168,85,.22),
+            transparent
+        );
+}
+
+.trauma-page .trauma-boundary-panel h2 {
+    max-width:
+        720px !important;
+
+    margin:
+        0 0 28px !important;
+
+    font-size:
+        clamp(2.6rem, 3.5vw, 4rem) !important;
+
+    line-height:
+        1.08 !important;
+}
+
+.trauma-page .trauma-boundary-panel
+> div:first-child > p {
+
+    max-width:
+        760px !important;
+
+    color:
+        #aaa9a5 !important;
+
+    font-size:
+        1rem !important;
+
+    line-height:
+        1.78 !important;
+}
+
+
+/* ==========================================================
+   RIGHT FRAMEWORK
+   ========================================================== */
+
+.trauma-boundary-mark-v2 {
+    position:
+        relative;
+
+    display:
+        block !important;
+
+    padding:
+        6px 0 !important;
+}
+
+.trauma-boundary-side-label {
+    display:
+        block !important;
+
+    margin:
+        0 0 21px !important;
+
+    padding:
+        0 !important;
+
+    border:
+        0 !important;
+
+    color:
+        #dfa855 !important;
+
+    background:
+        transparent !important;
+
+    text-align:
+        left !important;
+
+    font-size:
+        .66rem !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        .23em !important;
+
+    white-space:
+        normal !important;
+}
+
+
+/* Vertical connecting line */
+
+.trauma-boundary-track {
+    position:
+        relative;
+
+    display:
+        grid;
+
+    gap:
+        13px;
+}
+
+.trauma-boundary-track::before {
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        24px;
+
+    top:
+        42px;
+
+    bottom:
+        42px;
+
+    width:
+        1px;
+
+    background:
+        linear-gradient(
+            #dfa855,
+            rgba(223,168,85,.18),
+            #dfa855
+        );
+
+    opacity:
+        .45;
+}
+
+
+/* Individual value */
+
+.trauma-boundary-value {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        50px 1fr;
+
+    gap:
+        17px;
+
+    align-items:
+        center;
+
+    padding:
+        17px 18px;
+
+    border:
+        1px solid rgba(223,168,85,.18);
+
+    border-radius:
+        16px;
+
+    background:
+        rgba(10,14,15,.72);
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        background .22s ease;
+}
+
+.trauma-boundary-value:hover {
+    transform:
+        translateX(4px);
+
+    border-color:
+        rgba(223,168,85,.38);
+
+    background:
+        rgba(223,168,85,.035);
+}
+
+
+/* Icons */
+
+.trauma-boundary-icon {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    color:
+        #dfa855;
+
+    border:
+        1px solid rgba(223,168,85,.36);
+
+    border-radius:
+        14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,168,85,.11),
+            rgba(223,168,85,.025)
+        );
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.17);
+}
+
+.trauma-boundary-icon svg {
+    width:
+        24px;
+
+    height:
+        24px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.5;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+/* Card typography */
+
+.trauma-boundary-value h3 {
+    margin:
+        0 0 4px !important;
+
+    color:
+        #e9e5de !important;
+
+    font-family:
+        inherit !important;
+
+    font-size:
+        1rem !important;
+
+    font-weight:
+        650 !important;
+}
+
+.trauma-boundary-value p {
+    margin:
+        0 !important;
+
+    color:
+        #92928e !important;
+
+    font-size:
+        .83rem !important;
+
+    line-height:
+        1.48 !important;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    .trauma-page .trauma-boundary-panel {
+        grid-template-columns:
+            1fr !important;
+
+        gap:
+            45px !important;
+
+        padding:
+            48px !important;
+    }
+
+    .trauma-page .trauma-boundary-panel
+    > div:first-child::after {
+
+        display:
+            none;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 680px) {
+
+    .trauma-page .trauma-boundary-section {
+        padding:
+            65px 0 !important;
+    }
+
+    .trauma-page .trauma-boundary-panel {
+        padding:
+            34px 26px !important;
+    }
+
+    .trauma-page .trauma-boundary-panel::before {
+        left:
+            26px;
+    }
+
+    .trauma-boundary-value {
+        grid-template-columns:
+            44px 1fr;
+
+        gap:
+            14px;
+
+        padding:
+            15px;
+    }
+
+    .trauma-boundary-icon {
+        width:
+            42px;
+
+        height:
+            42px;
+    }
+
+}
