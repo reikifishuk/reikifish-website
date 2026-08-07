@@ -12018,3 +12018,29 @@ body:has(.pa-visual-hero) .pa-page {
         padding-top: 45px !important;
     }
 }
+
+
+/* PA_REALITY_PULLUP_FINAL */
+
+/* Use the unused space beneath Block 2 */
+@media (min-width: 1200px) {
+    .pa-reality-section {
+        position: relative !important;
+        z-index: 3 !important;
+        margin-top: -150px !important;
+    }
+}
+
+/* More conservative adjustment for tablets */
+@media (min-width: 901px) and (max-width: 1199px) {
+    .pa-reality-section {
+        margin-top: -80px !important;
+    }
+}
+
+/* Natural stacking on mobile */
+@media (max-width: 900px) {
+    .pa-reality-section {
+        margin-top: 0 !important;
+    }
+}
