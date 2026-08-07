@@ -1323,35 +1323,46 @@
 
 
 
+
 <style id="TL_EXPERIENCE_ICON_ALIGNMENT">
 
-/* PERFECTLY CENTRE EXPERIENCE CARD ICONS */
+/* CENTRE THE COMPLETE ICON BOX ACROSS EACH CARD */
 
-.tl-experience-icon {
+.tl-experience-card .tl-experience-icon {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    text-align: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+
     padding: 0 !important;
     box-sizing: border-box !important;
 }
 
-.tl-experience-icon span {
+/* Centre the character inside the box */
+
+.tl-experience-card .tl-experience-icon span {
     width: 100% !important;
     height: 100% !important;
+
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    text-align: center !important;
-    line-height: 1 !important;
+
     margin: 0 !important;
     padding: 0 !important;
+
+    line-height: 1 !important;
+    text-align: center !important;
 }
 
-/* Keep every icon block aligned identically */
-.tl-experience-card .tl-experience-icon {
-    flex: 0 0 auto !important;
-    align-self: flex-start !important;
+/* Keep all four card numbers consistently aligned */
+
+.tl-experience-card small {
+    display: block !important;
+    margin-top: 0 !important;
 }
 
 </style>
