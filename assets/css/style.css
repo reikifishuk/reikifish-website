@@ -10716,3 +10716,69 @@ main.pa-page {
         margin-top: 0 !important;
     }
 }
+
+
+/* ==========================================================
+   PA_REMOVE_TOP_GAP_FINAL
+   Remove inherited spacer above Parental Alienation hero
+   ========================================================== */
+
+/* Target page regardless of exact main wrapper */
+.pa-page {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Modern browsers - target the actual parent containing our hero */
+main:has(.pa-visual-hero) {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+    min-height: 0 !important;
+}
+
+/* Remove inherited top spacer/pseudo element if present */
+main:has(.pa-visual-hero)::before {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Banner itself stays complete and starts at the top */
+main:has(.pa-visual-hero) .pa-visual-hero,
+.pa-page .pa-visual-hero {
+    margin-top: 0 !important;
+    top: auto !important;
+    transform: none !important;
+}
+
+/* Prevent first-child margin creating artificial space */
+main:has(.pa-visual-hero) > :first-child,
+.pa-page > :first-child {
+    margin-top: 0 !important;
+}
+
+/* Desktop: only a small deliberate breathing space below nav */
+@media (min-width: 1201px) {
+
+    main:has(.pa-visual-hero) {
+        padding-top: 12px !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 801px) and (max-width: 1200px) {
+
+    main:has(.pa-visual-hero) {
+        padding-top: 8px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    main:has(.pa-visual-hero) {
+        padding-top: 0 !important;
+    }
+}
