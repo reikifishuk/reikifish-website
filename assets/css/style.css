@@ -12168,3 +12168,15 @@ body:has(.pa-visual-hero) .pa-page {
         font-size: 14px !important;
     }
 }
+
+/* PA_COACHING_HELP_GAP_FINAL */
+
+.pa-coaching-help-tight {
+    padding-top: 62px !important;
+}
+
+@media (max-width: 1000px) {
+    .pa-coaching-help-tight {
+        padding-top: 42px !important;
+    }
+}
