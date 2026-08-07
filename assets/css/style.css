@@ -7827,3 +7827,82 @@ Large atmospheric glow
     }
 
 }
+
+
+/* ==========================================================
+   TRAUMA_TOP_GAP_FINAL
+   Remove inherited Coaching-page spacing
+   ========================================================== */
+
+html body main.trauma-page {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    top: auto !important;
+    transform: none !important;
+}
+
+html body main.trauma-page::before {
+    content: none !important;
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+html body main.trauma-page > .trauma-impact-banner:first-child {
+    position: relative !important;
+    top: 0 !important;
+
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    padding-top: 0;
+
+    transform: none !important;
+}
+
+
+/*
+Make sure nothing creates an artificial spacer between
+the navigation/header and the Trauma page.
+*/
+
+body:has(main.trauma-page) header {
+    margin-bottom: 0 !important;
+}
+
+body:has(main.trauma-page) header + main.trauma-page {
+    margin-top: 0 !important;
+}
+
+
+/*
+Slightly reduce banner height now it sits correctly.
+*/
+
+.trauma-impact-banner {
+    min-height: 330px !important;
+}
+
+
+/*
+Keep actual Trauma content nicely separated from banner.
+*/
+
+.trauma-page .trauma-hero {
+    margin-top: 0 !important;
+    padding-top: 78px !important;
+}
+
+
+@media (max-width: 680px) {
+
+    .trauma-impact-banner {
+        min-height: 300px !important;
+    }
+
+    .trauma-page .trauma-hero {
+        padding-top: 58px !important;
+    }
+
+}
