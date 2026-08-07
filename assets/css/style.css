@@ -10782,3 +10782,57 @@ main:has(.pa-visual-hero) > :first-child,
         padding-top: 0 !important;
     }
 }
+
+
+/* ==========================================================
+   PA_HERO_VISUAL_LIFT_FINAL
+   Lift WHOLE hero without clipping its content
+   ========================================================== */
+
+body:has(.pa-visual-hero),
+body:has(.pa-visual-hero) main,
+body:has(.pa-visual-hero) .pa-page {
+    overflow: visible !important;
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+
+    .pa-visual-hero {
+        position: relative !important;
+        top: -245px !important;
+        margin-top: 0 !important;
+        margin-bottom: -245px !important;
+        z-index: 2;
+        overflow: hidden !important;
+    }
+
+    .pa-visual-copy,
+    .pa-visual-inner {
+        overflow: visible !important;
+    }
+}
+
+/* Tablet */
+@media (min-width: 801px) and (max-width: 1200px) {
+
+    .pa-visual-hero {
+        position: relative !important;
+        top: -150px !important;
+        margin-top: 0 !important;
+        margin-bottom: -150px !important;
+        z-index: 2;
+    }
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+
+    .pa-visual-hero {
+        position: relative !important;
+        top: -45px !important;
+        margin-top: 0 !important;
+        margin-bottom: -45px !important;
+        z-index: 2;
+    }
+}
