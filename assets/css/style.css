@@ -10639,3 +10639,25 @@ around it.
             );
     }
 }
+
+
+/* PARENTAL_ALIENATION_HERO_POSITION_V2 */
+
+/* Pull visual hero closer to navigation */
+@media (min-width: 1201px) {
+    .pa-visual-hero {
+        margin-top: -440px !important;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .pa-visual-hero {
+        margin-top: -280px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .pa-visual-hero {
+        margin-top: -80px !important;
+    }
+}
