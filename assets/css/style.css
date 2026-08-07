@@ -9625,3 +9625,741 @@ around it.
     }
 
 }
+
+
+/* ==========================================================
+   PARENTAL_ALIENATION_PAGE_V1
+   ========================================================== */
+
+.pa-page {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden;
+
+    color: #ece9e3;
+
+    background: #101415;
+}
+
+.pa-page *,
+.pa-page *::before,
+.pa-page *::after {
+    box-sizing: border-box;
+}
+
+.pa-container {
+    width: min(1180px, calc(100% - 64px));
+    margin: 0 auto;
+}
+
+.pa-eyebrow {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #dfa855;
+
+    font-size: .72rem;
+    font-weight: 700;
+
+    letter-spacing: .27em;
+    text-transform: uppercase;
+}
+
+.pa-line {
+    display: block;
+
+    width: 72px;
+    height: 2px;
+
+    margin-bottom: 30px;
+
+    background: #dfa855;
+}
+
+
+/* ==========================================================
+   STATEMENT
+   ========================================================== */
+
+.pa-statement {
+    position: relative;
+
+    min-height: 245px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid rgba(223,168,85,.18);
+
+    background:
+        radial-gradient(
+            circle at 14% 40%,
+            rgba(43,111,106,.22),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 86% 30%,
+            rgba(223,168,85,.16),
+            transparent 29%
+        ),
+        linear-gradient(
+            110deg,
+            #0d1718,
+            #151819 48%,
+            #211812 100%
+        );
+}
+
+.pa-statement-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(1100px, calc(100% - 64px));
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.pa-statement-inner > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #dfa855;
+
+    font-size: .66rem;
+    font-weight: 700;
+
+    letter-spacing: .25em;
+}
+
+.pa-statement h2 {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    color: #efebe5;
+
+    font-size: clamp(2.5rem, 3.5vw, 3.8rem);
+
+    font-weight: 500;
+
+    line-height: 1.08;
+
+    letter-spacing: -.035em;
+}
+
+.pa-statement h2 strong {
+    color: #dfa855;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+.pa-statement-ring {
+    position: absolute;
+
+    border: 1px solid rgba(223,168,85,.12);
+    border-radius: 50%;
+}
+
+.pa-ring-one {
+    width: 300px;
+    height: 300px;
+
+    left: -170px;
+    top: -150px;
+
+    border-color: rgba(62,133,128,.16);
+}
+
+.pa-ring-two {
+    width: 370px;
+    height: 370px;
+
+    right: -220px;
+    bottom: -280px;
+}
+
+
+/* ==========================================================
+   HERO
+   ========================================================== */
+
+.pa-hero {
+    padding: 105px 0;
+
+    background:
+        radial-gradient(
+            circle at 88% 30%,
+            rgba(223,168,85,.055),
+            transparent 27%
+        ),
+        #1a1e20;
+}
+
+.pa-hero-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.12fr)
+        minmax(380px, .88fr);
+
+    gap: 85px;
+
+    align-items: center;
+}
+
+.pa-hero-copy h1 {
+    max-width: 760px;
+
+    margin: 0 0 27px;
+
+    color: #f0ede7;
+
+    font-size: clamp(3.1rem, 4.8vw, 5rem);
+
+    line-height: 1.02;
+
+    letter-spacing: -.04em;
+}
+
+.pa-hero-copy p {
+    max-width: 760px;
+
+    margin: 0 0 18px;
+
+    color: #b7b5b0;
+
+    line-height: 1.8;
+}
+
+.pa-hero-copy .pa-lead {
+    color: #ddd9d2;
+
+    font-size: 1.14rem;
+}
+
+.pa-hero-copy .btn {
+    margin-top: 18px;
+}
+
+
+/* ==========================================================
+   CONTROL PANEL
+   ========================================================== */
+
+.pa-control-panel {
+    padding: 42px;
+
+    border: 1px solid rgba(223,168,85,.28);
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,168,85,.055),
+            transparent 45%
+        ),
+        #0d1112;
+
+    box-shadow: 0 28px 70px rgba(0,0,0,.23);
+}
+
+.pa-panel-label {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: #dfa855;
+
+    font-size: .68rem;
+    font-weight: 700;
+
+    letter-spacing: .22em;
+}
+
+.pa-control-item {
+    display: grid;
+
+    grid-template-columns: 46px 1fr;
+
+    gap: 17px;
+
+    padding: 19px 0;
+
+    border-bottom: 1px solid rgba(223,168,85,.14);
+}
+
+.pa-control-item:last-child {
+    border-bottom: 0;
+}
+
+.pa-control-item > span {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    color: #dfa855;
+
+    border: 1px solid rgba(223,168,85,.33);
+
+    border-radius: 50%;
+
+    font-family: Georgia, serif;
+    font-size: .8rem;
+}
+
+.pa-control-item h3 {
+    margin: 0 0 4px;
+
+    color: #e9e5df;
+
+    font-size: 1.05rem;
+}
+
+.pa-control-item p {
+    margin: 0;
+
+    color: #969590;
+
+    font-size: .88rem;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   UNDERSTANDING
+   ========================================================== */
+
+.pa-understanding {
+    padding: 105px 0;
+
+    background: #0d1112;
+}
+
+.pa-understanding-grid {
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 95px;
+}
+
+.pa-understanding h2,
+.pa-support-heading h2,
+.pa-behaviour-heading h2,
+.pa-guidance-panel h2,
+.pa-final h2 {
+
+    color: #efebe5;
+
+    letter-spacing: -.03em;
+
+    line-height: 1.1;
+}
+
+.pa-understanding h2 {
+    margin: 0;
+
+    font-size: clamp(2.5rem, 3.7vw, 3.8rem);
+}
+
+.pa-understanding-copy p {
+    margin: 0 0 22px;
+
+    color: #aaa9a4;
+
+    line-height: 1.85;
+}
+
+
+/* ==========================================================
+   SUPPORT CARDS
+   ========================================================== */
+
+.pa-support {
+    padding: 105px 0;
+
+    background: #131718;
+}
+
+.pa-support-heading {
+    max-width: 900px;
+
+    margin-bottom: 55px;
+}
+
+.pa-support-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(2.5rem, 3.8vw, 4rem);
+}
+
+.pa-support-heading p {
+    max-width: 770px;
+
+    color: #a8a7a2;
+
+    line-height: 1.75;
+}
+
+.pa-card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 21px;
+}
+
+.pa-card {
+    min-height: 260px;
+
+    padding: 33px;
+
+    border: 1px solid rgba(223,168,85,.22);
+
+    border-radius: 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 0,
+            rgba(223,168,85,.055),
+            transparent 30%
+        ),
+        #0d1112;
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease;
+}
+
+.pa-card:hover {
+    transform: translateY(-4px);
+
+    border-color: rgba(223,168,85,.42);
+}
+
+.pa-card-number {
+    margin-bottom: 28px;
+
+    color: #dfa855;
+
+    font-family: Georgia, serif;
+
+    font-size: 1rem;
+}
+
+.pa-card h3 {
+    margin: 0 0 14px;
+
+    color: #e9e5df;
+
+    font-size: 1.25rem;
+}
+
+.pa-card p {
+    margin: 0;
+
+    color: #999893;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   BEHAVIOURS
+   ========================================================== */
+
+.pa-behaviours {
+    padding: 105px 0;
+
+    background: #0b0f10;
+}
+
+.pa-behaviour-grid {
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.pa-behaviour-heading h2 {
+    margin: 0 0 25px;
+
+    font-size: clamp(2.4rem, 3.6vw, 3.7rem);
+}
+
+.pa-behaviour-heading p {
+    color: #aaa9a4;
+
+    line-height: 1.8;
+}
+
+.pa-behaviour-list {
+    display: grid;
+}
+
+.pa-behaviour-row {
+    display: grid;
+
+    grid-template-columns: 52px 1fr;
+
+    gap: 22px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid rgba(223,168,85,.16);
+}
+
+.pa-behaviour-row > span {
+    color: #dfa855;
+
+    font-family: Georgia, serif;
+}
+
+.pa-behaviour-row p {
+    margin: 0;
+
+    color: #aaa9a5;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   GUIDANCE PANEL
+   ========================================================== */
+
+.pa-guidance {
+    padding: 95px 0;
+
+    background: #131718;
+}
+
+.pa-guidance-panel {
+    display: grid;
+
+    grid-template-columns: 1.25fr .75fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    padding: 55px 60px;
+
+    border: 1px solid rgba(223,168,85,.27);
+
+    border-radius: 26px;
+
+    background: #0c1011;
+}
+
+.pa-guidance-panel h2 {
+    margin: 0 0 23px;
+
+    font-size: clamp(2.3rem, 3.3vw, 3.4rem);
+}
+
+.pa-guidance-panel p {
+    color: #a4a39f;
+
+    line-height: 1.77;
+}
+
+.pa-guidance-source {
+    padding: 31px;
+
+    border: 1px solid rgba(223,168,85,.24);
+
+    border-radius: 18px;
+
+    background:
+        rgba(223,168,85,.035);
+}
+
+.pa-guidance-source > span {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #dfa855;
+
+    font-size: .65rem;
+    font-weight: 700;
+
+    letter-spacing: .2em;
+}
+
+.pa-guidance-source strong {
+    display: block;
+
+    margin-bottom: 25px;
+
+    color: #e5e1db;
+
+    font-family: Georgia, serif;
+
+    font-size: 1.45rem;
+    font-weight: 400;
+
+    line-height: 1.55;
+}
+
+.pa-guidance-source a {
+    color: #dfa855;
+
+    font-size: .86rem;
+
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   FINAL CTA
+   ========================================================== */
+
+.pa-final {
+    padding: 110px 0;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(223,168,85,.08),
+            transparent 34%
+        ),
+        #0b0f10;
+}
+
+.pa-final-inner {
+    width: min(840px, calc(100% - 40px));
+
+    margin: 0 auto;
+}
+
+.pa-line-centred {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pa-final h2 {
+    margin: 0 auto 25px;
+
+    font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.pa-final p {
+    max-width: 690px;
+
+    margin: 0 auto 31px;
+
+    color: #aaa9a5;
+
+    line-height: 1.78;
+}
+
+.pa-final small {
+    display: block;
+
+    margin-top: 21px;
+
+    color: #888985;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 991px) {
+
+    .pa-hero-grid,
+    .pa-understanding-grid,
+    .pa-behaviour-grid,
+    .pa-guidance-panel {
+
+        grid-template-columns: 1fr;
+    }
+
+    .pa-hero-grid,
+    .pa-understanding-grid,
+    .pa-behaviour-grid {
+
+        gap: 50px;
+    }
+
+    .pa-card-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 680px) {
+
+    .pa-container {
+        width: calc(100% - 34px);
+    }
+
+    .pa-statement {
+        min-height: 210px;
+    }
+
+    .pa-statement-inner {
+        width: calc(100% - 34px);
+    }
+
+    .pa-statement h2 {
+        font-size: clamp(2rem, 9vw, 2.8rem);
+    }
+
+    .pa-hero,
+    .pa-understanding,
+    .pa-support,
+    .pa-behaviours,
+    .pa-guidance,
+    .pa-final {
+
+        padding: 70px 0;
+    }
+
+    .pa-control-panel {
+        padding: 30px 26px;
+    }
+
+    .pa-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pa-card {
+        min-height: 0;
+    }
+
+    .pa-guidance-panel {
+        padding: 34px 26px;
+    }
+
+}
