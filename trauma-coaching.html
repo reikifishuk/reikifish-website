@@ -645,6 +645,83 @@
 }
 
 </style>
+<style id="TRAUMA_IMPACT_GAP_FIX_FINAL">
+
+/* REMOVE ARTIFICIAL GRID HEIGHT */
+
+:is(section, div):has(> .trauma-impact-visual) {
+    grid-template-rows:
+        repeat(5, auto) !important;
+
+    grid-auto-rows:
+        auto !important;
+
+    row-gap:
+        18px !important;
+
+    min-height:
+        0 !important;
+
+    height:
+        auto !important;
+
+    padding-bottom:
+        56px !important;
+
+    margin-bottom:
+        0 !important;
+}
+
+
+/* Right panel spans only the REAL content rows */
+
+:is(section, div):has(> .trauma-impact-visual)
+> .trauma-impact-visual {
+
+    grid-row:
+        1 / span 5 !important;
+
+    align-self:
+        center !important;
+}
+
+
+/* Tighten transition into following section */
+
+:is(section, div):has(> .trauma-impact-visual)
++ section,
+
+:is(section, div):has(> .trauma-impact-visual)
++ div {
+
+    margin-top:
+        0 !important;
+
+    padding-top:
+        48px !important;
+}
+
+
+@media (max-width: 1050px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        grid-template-rows:
+            auto !important;
+
+        padding-bottom:
+            42px !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    > .trauma-impact-visual {
+
+        grid-row:
+            auto !important;
+    }
+
+}
+
+</style>
 </head>
   <body class="coaching-page">
     <header class="inner-header">
