@@ -12180,3 +12180,116 @@ body:has(.pa-visual-hero) .pa-page {
         padding-top: 42px !important;
     }
 }
+
+/* PA_COACHING_VISUAL_FIELD_FINAL */
+
+.pa-coaching-help-tight {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    padding-top: 70px !important;
+    padding-bottom: 78px !important;
+
+    background:
+        radial-gradient(
+            circle at 88% 46%,
+            rgba(223,166,76,.13) 0%,
+            rgba(223,166,76,.045) 16%,
+            transparent 38%
+        ),
+        linear-gradient(
+            108deg,
+            #0b2020 0%,
+            #101a1a 32%,
+            #121717 57%,
+            #191713 78%,
+            #211a12 100%
+        ) !important;
+
+    border-top: 1px solid rgba(223,166,76,.26) !important;
+    border-bottom: 1px solid rgba(223,166,76,.22) !important;
+}
+
+/* Large quiet graphic on right */
+.pa-coaching-help-tight::before {
+    content: "" !important;
+
+    position: absolute !important;
+    z-index: -1 !important;
+
+    width: 620px !important;
+    height: 620px !important;
+
+    right: -105px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223,166,76,.55) 0 4px,
+            transparent 5px 72px,
+            rgba(223,166,76,.14) 73px 74px,
+            transparent 75px 142px,
+            rgba(87,145,139,.14) 143px 144px,
+            transparent 145px 214px,
+            rgba(223,166,76,.09) 215px 216px,
+            transparent 217px 100%
+        ) !important;
+
+    opacity: .9 !important;
+}
+
+/* Soft light moving across background */
+.pa-coaching-help-tight::after {
+    content: "" !important;
+
+    position: absolute !important;
+    z-index: -2 !important;
+
+    width: 46% !important;
+    height: 180% !important;
+
+    right: 7% !important;
+    top: -40% !important;
+
+    transform: rotate(17deg) !important;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(223,166,76,.035),
+        rgba(223,166,76,.075),
+        transparent
+    ) !important;
+
+    filter: blur(8px) !important;
+}
+
+/* Keep the writing comfortably away from the graphic */
+@media (min-width: 1101px) {
+
+    .pa-coaching-help-tight > * {
+        position: relative !important;
+        z-index: 2 !important;
+        max-width: 1120px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .pa-coaching-help-tight {
+        padding-top: 48px !important;
+        padding-bottom: 55px !important;
+    }
+
+    .pa-coaching-help-tight::before {
+        width: 390px !important;
+        height: 390px !important;
+        right: -210px !important;
+        opacity: .55 !important;
+    }
+}
