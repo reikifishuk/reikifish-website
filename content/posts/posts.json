@@ -1,6 +1,35 @@
 {
   "items": [
     {
+      "title": "What Is a Narcissist? The Evidence-Led Guide to Narcissism, Traits and NPD",
+      "slug": "what-is-a-narcissist",
+      "url": "articles/what-is-a-narcissist.html",
+      "date": "2026-08-08",
+      "dateLabel": "8 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "<p>The word <strong>narcissist</strong> is everywhere. It is used for selfish partners, difficult exes, arrogant bosses, attention-seeking influencers, controlling parents and almo...",
+      "category": "Psychology",
+      "categories": [
+        "Psychology"
+      ],
+      "tags": [
+        "['Narcissism'",
+        "'Narcissist'",
+        "'Narcissistic Personality Disorder'",
+        "'NPD'",
+        "'Psychology'",
+        "'Narcissistic Traits'",
+        "'Covert Narcissism'",
+        "'Vulnerable Narcissism'",
+        "'Grandiose Narcissism'",
+        "'Empathy']"
+      ],
+      "image": "assets/images/blog/What_Is_a_Narcissist.png",
+      "imageAlt": "Narcissism and NPD illustrated through contrasting grandiose and vulnerable self-image",
+      "readingTime": "44 min read",
+      "featured": false
+    },
+    {
       "title": "My Ex Won’t Let Me See My Children: What Can I Do as a Dad?",
       "slug": "ex-wont-let-me-see-my-child-what-dads-can-do",
       "url": "articles/ex-wont-let-me-see-my-child-what-dads-can-do.html",
