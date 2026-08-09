@@ -1502,7 +1502,692 @@
   </p>
 
 
-  <section class="ke-faq" id="questions">
+  <!-- CD_MASTER_EXPANSION -->
+<style id="CD_MASTER_EXPANSION_STYLES">
+.cd-master {
+  border-top: 1px solid rgba(211, 160, 53, .28);
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.cd-master-inner {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.cd-master-intro {
+  max-width: 900px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.cd-kicker {
+  color: #dfa62f;
+  font-size: .82rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.cd-master h2 {
+  color: #f1eee6;
+  font-family: Georgia, serif;
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.04;
+  margin: .7rem 0 1.4rem;
+}
+
+.cd-master h3 {
+  color: #f1eee6;
+  font-family: Georgia, serif;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+.cd-master h4 {
+  color: #e3aa34;
+  font-size: 1rem;
+  letter-spacing: .04em;
+  margin: 0 0 .55rem;
+}
+
+.cd-master p,
+.cd-master li,
+.cd-master td,
+.cd-master th {
+  color: #c9c5bc;
+  font-size: clamp(1rem, 1.35vw, 1.14rem);
+  line-height: 1.78;
+}
+
+.cd-master strong {
+  color: #f1eee6;
+}
+
+.cd-contents,
+.cd-panel,
+.cd-example,
+.cd-caution {
+  background: rgba(12, 17, 17, .82);
+  border: 1px solid rgba(211, 160, 53, .34);
+  border-radius: 18px;
+}
+
+.cd-contents {
+  padding: clamp(1.5rem, 3vw, 2.2rem);
+  margin: 2rem 0 4rem;
+}
+
+.cd-contents-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem 2rem;
+  margin-top: 1.2rem;
+}
+
+.cd-contents a,
+.cd-source-list a {
+  color: #dfa62f;
+  text-decoration: none;
+}
+
+.cd-contents a:hover,
+.cd-source-list a:hover {
+  text-decoration: underline;
+}
+
+.cd-section {
+  scroll-margin-top: 150px;
+  margin: 0 0 clamp(4rem, 8vw, 7rem);
+}
+
+.cd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cd-panel {
+  padding: clamp(1.4rem, 3vw, 2rem);
+}
+
+.cd-example,
+.cd-caution {
+  margin: 1.7rem 0;
+  padding: clamp(1.3rem, 3vw, 2rem);
+}
+
+.cd-example {
+  border-left: 3px solid #dfa62f;
+}
+
+.cd-caution {
+  background: rgba(45, 31, 12, .2);
+}
+
+.cd-table-wrap {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.cd-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cd-table th,
+.cd-table td {
+  border-bottom: 1px solid rgba(211, 160, 53, .22);
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.cd-table th {
+  color: #dfa62f;
+  font-size: .82rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.cd-steps {
+  counter-reset: cd-step;
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.cd-steps li {
+  counter-increment: cd-step;
+  background: rgba(12, 17, 17, .82);
+  border: 1px solid rgba(211, 160, 53, .28);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem 1.25rem 4.4rem;
+  position: relative;
+}
+
+.cd-steps li::before {
+  content: counter(cd-step);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.2rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid #dfa62f;
+  border-radius: 50%;
+  color: #dfa62f;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .cd-grid,
+  .cd-contents-links {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-master-inner {
+    width: min(100% - 28px, 1180px);
+  }
+}
+</style>
+
+<section class="cd-master" aria-labelledby="cd-complete-guide">
+  <div class="cd-master-inner">
+
+    <header class="cd-master-intro">
+      <p class="cd-kicker">The complete evidence led guide</p>
+      <h2 id="cd-complete-guide">Understanding cognitive dissonance in depth</h2>
+      <p>
+        Cognitive dissonance is one of psychology's most influential explanations
+        of what can happen when a person's beliefs, behaviour, decisions or sense
+        of identity do not fit comfortably together. The resulting tension can
+        encourage honest reflection and change, but it can also lead to denial,
+        rationalisation, blame, selective attention or increasingly elaborate
+        attempts to defend an existing position.
+      </p>
+      <p>
+        It is not a diagnosis, a personality disorder or proof that somebody is
+        lying. It is a proposed psychological process that may help explain why
+        otherwise intelligent people sometimes defend decisions that conflict
+        with their values or resist information that threatens an important
+        belief.
+      </p>
+    </header>
+
+    <nav class="cd-contents" aria-label="Complete guide contents">
+      <p class="cd-kicker">In this complete guide</p>
+      <div class="cd-contents-links">
+        <a href="#cd-definition">Definition and origins</a>
+        <a href="#cd-anatomy">How dissonance develops</a>
+        <a href="#cd-strongest">When it becomes strongest</a>
+        <a href="#cd-paradigms">Classic research paradigms</a>
+        <a href="#cd-reduction">How people reduce dissonance</a>
+        <a href="#cd-examples">Everyday examples</a>
+        <a href="#cd-relationships">Relationships and manipulation</a>
+        <a href="#cd-trauma">Trauma and self-protection</a>
+        <a href="#cd-misinformation">Misinformation and groups</a>
+        <a href="#cd-response">How to respond constructively</a>
+        <a href="#cd-differences">Related concepts</a>
+        <a href="#cd-limitations">Research limitations</a>
+      </div>
+    </nav>
+
+    <section class="cd-section" id="cd-definition">
+      <p class="cd-kicker">Definition and origins</p>
+      <h2>What does cognitive dissonance actually mean?</h2>
+      <p>
+        Leon Festinger introduced cognitive dissonance theory in 1957. At its
+        centre was the proposal that inconsistency among psychologically relevant
+        cognitions can create an uncomfortable motivational state. A cognition
+        can include knowledge, an opinion, a value, an expectation, an awareness
+        of one's behaviour or a belief about oneself.
+      </p>
+      <p>
+        The important issue is not simply holding two different thoughts.
+        People regularly tolerate complexity and uncertainty. Dissonance becomes
+        more relevant when the elements feel personally inconsistent and the
+        inconsistency matters to the person.
+      </p>
+
+      <div class="cd-example">
+        <h3>A simple example</h3>
+        <p>
+          Someone thinks, <strong>"I make careful financial decisions"</strong>,
+          but makes an expensive purchase they cannot comfortably afford. The
+          conflict is not merely between two abstract ideas. Their behaviour
+          threatens a valued view of themselves as responsible. They could return
+          the purchase, revise their future spending, admit the decision was
+          impulsive, or convince themselves that the purchase was necessary and
+          unusually good value.
+        </p>
+      </div>
+
+      <div class="cd-caution">
+        <h3>Dissonance is not the same as discomfort</h3>
+        <p>
+          Anxiety, shame, regret, grief, uncertainty and ordinary indecision can
+          all feel uncomfortable. Cognitive dissonance is a theoretical
+          explanation for discomfort connected specifically with meaningful
+          inconsistency. A person's feelings alone cannot prove which process is
+          operating.
+        </p>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-anatomy">
+      <p class="cd-kicker">The psychological process</p>
+      <h2>How cognitive dissonance develops</h2>
+
+      <div class="cd-grid">
+        <article class="cd-panel">
+          <h3>1. Inconsistency appears</h3>
+          <p>
+            A decision, action or piece of information conflicts with an existing
+            belief, value, commitment or self-image.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>2. The conflict matters</h3>
+          <p>
+            The issue touches something important, such as morality, competence,
+            loyalty, identity, safety or belonging.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>3. Tension is experienced</h3>
+          <p>
+            The person may feel unease, agitation, defensiveness, guilt, regret
+            or a strong urge to resolve the contradiction.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>4. Regulation begins</h3>
+          <p>
+            The person changes behaviour, changes a belief, adds a justification,
+            minimises the issue, avoids information or attacks its source.
+          </p>
+        </article>
+      </div>
+
+      <p>
+        This process is not necessarily conscious. A person may sincerely
+        experience a justification as convincing rather than deliberately
+        inventing it. That distinction matters: motivated reasoning can produce
+        inaccurate conclusions without requiring calculated deception.
+      </p>
+    </section>
+
+    <section class="cd-section" id="cd-strongest">
+      <p class="cd-kicker">Intensity and importance</p>
+      <h2>When is dissonance likely to become strongest?</h2>
+      <p>
+        Not every contradiction produces the same response. Dissonance is
+        generally expected to become more significant when the conflict concerns
+        a central value, when the person feels responsible for the choice, when
+        the decision is difficult to reverse, or when admitting error could carry
+        emotional, social or financial costs.
+      </p>
+
+      <ul>
+        <li><strong>Identity:</strong> the information threatens who the person believes they are.</li>
+        <li><strong>Commitment:</strong> they have publicly defended the position or invested heavily in it.</li>
+        <li><strong>Choice:</strong> they believe they freely selected the behaviour.</li>
+        <li><strong>Consequences:</strong> the decision may have harmed themselves or somebody else.</li>
+        <li><strong>Irreversibility:</strong> changing course feels costly, humiliating or impossible.</li>
+        <li><strong>Belonging:</strong> accepting the evidence could threaten membership of an important group.</li>
+      </ul>
+
+      <div class="cd-example">
+        <h3>Why intelligent people are not immune</h3>
+        <p>
+          Intelligence can help people evaluate evidence, but it can also help
+          them construct sophisticated explanations for a preferred conclusion.
+          Education and expertise therefore do not automatically remove
+          dissonance. The key question is whether reasoning is being used to
+          investigate a belief or primarily to protect it.
+        </p>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-paradigms">
+      <p class="cd-kicker">Research traditions</p>
+      <h2>Classic ways cognitive dissonance has been studied</h2>
+
+      <div class="cd-grid">
+        <article class="cd-panel">
+          <h3>Free choice</h3>
+          <p>
+            After choosing between similarly valued alternatives, people may
+            later evaluate the selected option more positively and the rejected
+            option less positively. This is often called spreading the
+            alternatives. Modern researchers have also identified methodological
+            problems in traditional versions of this experiment, so findings
+            require careful interpretation.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Induced compliance</h3>
+          <p>
+            A person performs or argues for something that conflicts with their
+            attitude. When there is insufficient external justification, attitude
+            change may help explain the behaviour and reduce inconsistency.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Effort justification</h3>
+          <p>
+            When somebody undergoes substantial effort, discomfort or sacrifice
+            to obtain an outcome, they may value that outcome more highly. This
+            can help reconcile the cost with the belief that their effort was
+            sensible.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Belief disconfirmation</h3>
+          <p>
+            Evidence that contradicts a deeply held prediction does not always
+            produce immediate abandonment. People may reinterpret events, add
+            explanations or seek social support that protects the wider belief
+            system.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-reduction">
+      <p class="cd-kicker">Restoring consistency</p>
+      <h2>How people reduce cognitive dissonance</h2>
+
+      <div class="cd-table-wrap">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>Example</th>
+              <th>Possible outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Change behaviour</td>
+              <td>"My actions conflict with my values, so I will act differently."</td>
+              <td>Can create genuine learning and repair.</td>
+            </tr>
+            <tr>
+              <td>Change a belief</td>
+              <td>"The evidence has changed, so my previous conclusion needs revising."</td>
+              <td>Can represent healthy updating.</td>
+            </tr>
+            <tr>
+              <td>Add justification</td>
+              <td>"I normally oppose this, but my circumstances made it acceptable."</td>
+              <td>May add fair context or become rationalisation.</td>
+            </tr>
+            <tr>
+              <td>Minimise importance</td>
+              <td>"It does not really matter."</td>
+              <td>May restore proportion or dismiss genuine harm.</td>
+            </tr>
+            <tr>
+              <td>Avoid information</td>
+              <td>Ignoring evidence or only consuming supportive material.</td>
+              <td>Reduces discomfort while preserving possible error.</td>
+            </tr>
+            <tr>
+              <td>Discredit the source</td>
+              <td>Attacking the person presenting evidence rather than examining it.</td>
+              <td>Protects the belief without resolving the evidence.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        Dissonance reduction is not automatically irrational. Changing behaviour
+        after recognising inconsistency can be adaptive. Revising an outdated
+        belief is central to learning. The problem arises when immediate
+        psychological relief becomes more important than accuracy, accountability
+        or safety.
+      </p>
+    </section>
+
+    <section class="cd-section" id="cd-examples">
+      <p class="cd-kicker">Everyday life</p>
+      <h2>Examples of cognitive dissonance</h2>
+
+      <div class="cd-grid">
+        <article class="cd-panel">
+          <h3>Health</h3>
+          <p>
+            A person values their health but continues a behaviour they know may
+            be harmful. They might change the behaviour, minimise the risk or
+            focus on examples of people who appeared unaffected.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Work</h3>
+          <p>
+            An employee sees themselves as ethical but follows an instruction
+            they consider unfair. They may challenge it, leave, reinterpret it as
+            unavoidable or shift responsibility entirely to management.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Purchasing</h3>
+          <p>
+            After an expensive decision, a buyer selectively notices positive
+            reviews and avoids comparisons that might create regret.
+          </p>
+        </article>
+
+        <article class="cd-panel">
+          <h3>Relationships</h3>
+          <p>
+            Someone believes a partner is consistently caring but encounters
+            repeated harmful conduct. They may revise their understanding, create
+            exceptions or blame themselves to preserve the original belief.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-relationships">
+      <p class="cd-kicker">Relationships and accountability</p>
+      <h2>Cognitive dissonance in unhealthy relationships</h2>
+      <p>
+        Relationship dissonance can become especially powerful because attachment,
+        hope, shared history, practical dependence and fear of loss may all be
+        involved. A person can simultaneously recognise harmful behaviour and
+        retain a strong belief that the relationship is safe, loving or about to
+        improve.
+      </p>
+      <p>
+        Possible attempts to reduce that conflict include minimising incidents,
+        treating each event as isolated, concentrating exclusively on positive
+        periods, assuming personal responsibility for another person's conduct or
+        believing that sufficient patience will permanently change the pattern.
+        None of these responses proves abuse, and cognitive dissonance should
+        never be used as a remote diagnosis.
+      </p>
+
+      <div class="cd-caution">
+        <h3>Dissonance is not permission to label somebody</h3>
+        <p>
+          The term should not be used to dismiss disagreement by saying,
+          "You only disagree because you have cognitive dissonance." That claim is
+          unfalsifiable unless evidence is carefully examined. It can itself
+          become a way of avoiding the substance of another person's position.
+        </p>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-trauma">
+      <p class="cd-kicker">Safety and self-protection</p>
+      <h2>Trauma, attachment and conflicting beliefs</h2>
+      <p>
+        Following frightening, coercive or destabilising experiences, people may
+        hold beliefs that appear contradictory from outside. They may recognise
+        danger while longing for connection, understand that conduct was harmful
+        while blaming themselves, or feel relief after leaving while still
+        grieving the relationship.
+      </p>
+      <p>
+        These experiences should not be reduced to cognitive dissonance alone.
+        Trauma responses, attachment, conditioning, practical dependence, social
+        pressure, memory, fear and cultural expectations may all be relevant.
+        A theory of consistency cannot replace an individual, trauma informed
+        assessment.
+      </p>
+    </section>
+
+    <section class="cd-section" id="cd-misinformation">
+      <p class="cd-kicker">Groups and information</p>
+      <h2>Misinformation, identity and social belonging</h2>
+      <p>
+        Correcting misinformation is not always a simple transfer of facts. If a
+        claim has become connected to identity, loyalty or community, contrary
+        evidence may threaten more than the belief itself. It can threaten the
+        person's relationships and sense of belonging.
+      </p>
+      <p>
+        Selective exposure can reduce this discomfort. People may favour sources
+        that support their existing position and avoid material that challenges
+        it. Research has linked dissonance with selective exposure, although the
+        size and conditions of the effect vary.
+      </p>
+
+      <div class="cd-example">
+        <h3>A more productive correction</h3>
+        <p>
+          Evidence is more likely to be considered when people are allowed to
+          preserve dignity, uncertainty is acknowledged and changing one's mind
+          is presented as intellectual strength rather than humiliation.
+        </p>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-response">
+      <p class="cd-kicker">Practical application</p>
+      <h2>How to respond constructively</h2>
+
+      <ol class="cd-steps">
+        <li><strong>Name the inconsistency precisely.</strong> Write down the belief, behaviour or evidence that appears not to fit.</li>
+        <li><strong>Separate facts from identity.</strong> Being wrong about one issue does not make somebody worthless or unintelligent.</li>
+        <li><strong>Notice the immediate defence.</strong> Look for minimising, source attacks, selective evidence or rapidly changing explanations.</li>
+        <li><strong>Ask what evidence would change the conclusion.</strong> If the honest answer is "nothing", investigation has become belief protection.</li>
+        <li><strong>Consider alternative explanations.</strong> Generate more than one interpretation and identify what each predicts.</li>
+        <li><strong>Check independent evidence.</strong> Prefer primary sources, transparent methods and information that can be verified.</li>
+        <li><strong>Allow proportionate revision.</strong> Updating a belief does not require rejecting every part of a previous understanding.</li>
+        <li><strong>Change behaviour where necessary.</strong> Insight without action may leave the original contradiction intact.</li>
+        <li><strong>Repair harm.</strong> If defensive reasoning affected somebody else, accountability may include acknowledgement, apology and changed conduct.</li>
+      </ol>
+    </section>
+
+    <section class="cd-section" id="cd-differences">
+      <p class="cd-kicker">Important distinctions</p>
+      <h2>What cognitive dissonance is often confused with</h2>
+
+      <div class="cd-table-wrap">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th>Concept</th>
+              <th>Key distinction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ambivalence</td>
+              <td>Holding mixed positive and negative feelings, which may not involve a strong need for consistency.</td>
+            </tr>
+            <tr>
+              <td>Confirmation bias</td>
+              <td>A tendency to seek, interpret or remember information in ways that support an existing belief.</td>
+            </tr>
+            <tr>
+              <td>Denial</td>
+              <td>Refusal or inability to accept a distressing reality; it may sometimes function as dissonance reduction but is not identical to it.</td>
+            </tr>
+            <tr>
+              <td>Hypocrisy</td>
+              <td>Behaviour that conflicts with stated standards. Dissonance theory may help explain responses to hypocrisy but does not make the terms equivalent.</td>
+            </tr>
+            <tr>
+              <td>Gaslighting</td>
+              <td>A pattern of behaviour that may undermine another person's confidence in their perception. Cognitive dissonance describes an internal inconsistency process.</td>
+            </tr>
+            <tr>
+              <td>Delusion</td>
+              <td>A clinical phenomenon requiring professional assessment. Cognitive dissonance is not a psychiatric diagnosis.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cd-section" id="cd-limitations">
+      <p class="cd-kicker">Scientific caution</p>
+      <h2>Limitations and debates in the research</h2>
+      <p>
+        Cognitive dissonance theory has generated a substantial research
+        tradition, but it is not beyond criticism. Researchers have questioned
+        how the dissonance state is defined and measured, whether some classic
+        experiments adequately distinguish genuine preference change from
+        statistical artefacts, and how alternative theories such as
+        self-perception, self-affirmation and impression management account for
+        particular findings.
+      </p>
+      <p>
+        Experimental tasks also vary considerably. Differences in choice,
+        personal importance, cultural context, emotional involvement and
+        measurement can make studies difficult to compare. Responsible use of
+        the theory therefore requires more than applying the label whenever
+        somebody behaves inconsistently.
+      </p>
+
+      <div class="cd-caution">
+        <h3>The careful conclusion</h3>
+        <p>
+          Cognitive dissonance remains an influential framework for investigating
+          belief and behaviour inconsistency. It should be treated as a
+          scientifically debated explanatory theory, not as a mind reading tool
+          or a complete explanation for every contradiction.
+        </p>
+      </div>
+    </section>
+
+    <section class="cd-section cd-source-list" id="cd-research-sources">
+      <p class="cd-kicker">Research and further reading</p>
+      <h2>Selected authoritative sources</h2>
+      <ul>
+        <li><a href="https://dictionary.apa.org/cognitive-dissonance-theory" rel="noopener noreferrer">American Psychological Association: Cognitive dissonance theory</a></li>
+        <li><a href="https://dictionary.apa.org/dissonance-reduction" rel="noopener noreferrer">American Psychological Association: Dissonance reduction</a></li>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6549475/" rel="noopener noreferrer">Vaidis and colleagues: Methodological challenges in cognitive dissonance research</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/12416847/" rel="noopener noreferrer">Meta-analysis of selective exposure and dissonance after decisions</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/23404185/" rel="noopener noreferrer">Critical methodological review of choice induced preference change</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/28438968/" rel="noopener noreferrer">EEG research into neural mechanisms associated with cognitive dissonance</a></li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/23480429/" rel="noopener noreferrer">Systematic review of dissonance based health interventions</a></li>
+      </ul>
+    </section>
+
+  </div>
+</section>
+<!-- /CD_MASTER_EXPANSION -->
+<section class="ke-faq" id="questions">
 
     <div class="ke-section-label">QUICK KNOWLEDGE</div>
 
