@@ -2332,5 +2332,75 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+  <!-- CD_GUIDE_LINK_FIX -->
+<style id="CD_GUIDE_LINK_FIX_STYLES">
+.cd-contents {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+}
+
+.cd-contents-links,
+.cd-contents-links a {
+  position: relative;
+  z-index: 21;
+  pointer-events: auto !important;
+}
+
+.cd-contents-links a {
+  display: block;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.cd-section {
+  scroll-margin-top: 170px;
+}
+</style>
+
+<script id="CD_GUIDE_LINK_FIX_SCRIPT">
+document.addEventListener("DOMContentLoaded", function () {
+  const guide = document.querySelector(".cd-contents");
+
+  if (!guide) {
+    return;
+  }
+
+  guide.querySelectorAll('a[href^="#cd-"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const navbar = document.querySelector(".navbar.fixed-top, .navbar");
+      const navHeight = navbar ? navbar.offsetHeight : 0;
+      const top = target.getBoundingClientRect().top +
+        window.pageYOffset -
+        navHeight -
+        28;
+
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: "smooth"
+      });
+
+      if (history.pushState) {
+        history.pushState(null, "", targetId);
+      } else {
+        window.location.hash = targetId;
+      }
+
+      target.setAttribute("tabindex", "-1");
+      target.focus({ preventScroll: true });
+    });
+  });
+});
+</script>
+<!-- /CD_GUIDE_LINK_FIX -->
+</body>
 </html>
