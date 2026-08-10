@@ -1947,6 +1947,121 @@
 <meta name="twitter:title" content="Business and Leadership Coaching | Andy Fish">
 <meta name="twitter:description" content="Improve leadership clarity, communication, team mindset and sustainable performance.">
 <!-- BUSINESS COACHING SEO END -->
+<style id="business-leadership-spacing-fix">
+/*
+ * The original Team Leadership header held a large page hero.
+ * The navigation is now fixed and the new hero belongs to main,
+ * so the obsolete header container must not retain that height.
+ */
+
+body.coaching-page > header.inner-header {
+    display: block !important;
+    width: 100% !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+body.coaching-page > header.inner-header > .navbar {
+    min-height: auto;
+}
+
+/* Compact but comfortable page rhythm. */
+
+.blc-hero {
+    padding-top: clamp(7rem, 8vw, 8.5rem) !important;
+    padding-bottom: clamp(3.25rem, 5vw, 5rem) !important;
+}
+
+.blc-breadcrumb {
+    margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem) !important;
+}
+
+.blc-page h1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1.15rem !important;
+}
+
+.blc-lead {
+    margin-bottom: 1.25rem !important;
+}
+
+.blc-section {
+    padding-top: clamp(3rem, 4.8vw, 5rem) !important;
+    padding-bottom: clamp(3rem, 4.8vw, 5rem) !important;
+}
+
+.blc-section-head {
+    margin-bottom: clamp(1.5rem, 2.8vw, 2.5rem) !important;
+}
+
+.blc-section-head h2 {
+    margin-top: 0.6rem !important;
+    margin-bottom: 0.8rem !important;
+}
+
+.blc-card {
+    padding: clamp(1.2rem, 2vw, 1.75rem) !important;
+}
+
+.blc-card h3 {
+    margin-bottom: 0.5rem !important;
+}
+
+.blc-card p:last-child,
+.blc-card ul:last-child,
+.blc-boundary p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.blc-figure {
+    padding: clamp(1rem, 2vw, 1.8rem) !important;
+}
+
+.blc-proof-item {
+    padding-top: 1.15rem !important;
+    padding-bottom: 1.15rem !important;
+}
+
+.blc-nav ul {
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important;
+}
+
+@media (max-width: 720px) {
+    .blc-hero {
+        padding-top: 6.2rem !important;
+        padding-bottom: 2.8rem !important;
+    }
+
+    .blc-section {
+        padding-top: 2.6rem !important;
+        padding-bottom: 2.6rem !important;
+    }
+
+    .blc-section-head {
+        margin-bottom: 1.35rem !important;
+    }
+
+    .blc-hero-visual {
+        margin-top: 0.5rem !important;
+    }
+}
+
+@media (max-width: 430px) {
+    .blc-hero {
+        padding-top: 5.7rem !important;
+    }
+
+    .blc-section {
+        padding-top: 2.25rem !important;
+        padding-bottom: 2.25rem !important;
+    }
+}
+</style>
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -1978,7 +2093,15 @@
 <a href="team-leadership-coaching.html">Business Coaching</a>
     </div>
 </div></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <!-- BUSINESS PAGE MISSING NAV START -->
+<li class="nav-item">
+    <a class="nav-link" href="knowledge.html">Knowledge Hub</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="blog.html">Blog</a>
+</li>
+<!-- BUSINESS PAGE MISSING NAV END -->
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
           </div>
         </div>
