@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Leadership Coaching | Performance & Management | Andy Fish</title>
-    <meta name="description" content="Team leadership coaching for managers and organisations seeking stronger performance, communication, conflict management, efficiency and team alignment.">
+    <title>Business and Leadership Coaching | Andy Fish</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -1368,6 +1367,586 @@
 </style>
 
     <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<style id="business-leadership-page-style">
+:root {
+    --blc-gold: #e1a82e;
+    --blc-gold-light: #ffd778;
+    --blc-cream: #f5f1e9;
+    --blc-muted: #c8c5bd;
+    --blc-ink: #070c0c;
+    --blc-panel: #0d1414;
+    --blc-line: rgba(225, 168, 46, 0.34);
+    --blc-green: #72bb8d;
+    --blc-purple: #9874b8;
+}
+
+.blc-page {
+    overflow: hidden;
+    color: var(--blc-cream);
+    background:
+        radial-gradient(circle at 12% 8%, rgba(225,168,46,.08), transparent 28rem),
+        radial-gradient(circle at 88% 28%, rgba(114,187,141,.055), transparent 30rem),
+        var(--blc-ink);
+}
+
+.blc-wrap {
+    width: min(1420px, calc(100% - 44px));
+    margin-inline: auto;
+}
+
+.blc-hero {
+    padding: clamp(7rem, 10vw, 10rem) 0 clamp(4rem, 7vw, 7rem);
+    border-bottom: 1px solid var(--blc-line);
+}
+
+.blc-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.blc-hub-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .55rem .9rem;
+    border: 1px solid rgba(225,168,46,.72);
+    border-radius: 999px;
+    color: #fff8e8;
+    background: linear-gradient(135deg, rgba(225,168,46,.19), rgba(225,168,46,.04));
+    font: 700 .78rem/1 Arial, sans-serif;
+    text-decoration: none;
+}
+
+.blc-hub-button::before {
+    content: "\2190";
+    display: grid;
+    place-items: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 50%;
+    color: #090c0b;
+    background: linear-gradient(135deg, #ffdb82, #dfa431);
+}
+
+.blc-current {
+    color: var(--blc-gold);
+    font: 500 .82rem/1.4 Arial, sans-serif;
+}
+
+.blc-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(390px, .8fr);
+    gap: clamp(3rem, 7vw, 8rem);
+    align-items: center;
+}
+
+.blc-kicker,
+.blc-section-kicker {
+    color: var(--blc-gold);
+    font: 800 .82rem/1.3 Arial, sans-serif;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.blc-page h1,
+.blc-page h2,
+.blc-page h3 {
+    margin-top: 0;
+    color: var(--blc-cream);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.blc-page h1 {
+    max-width: 950px;
+    margin: 1.2rem 0 1.5rem;
+    font-size: clamp(3.7rem, 7vw, 7.8rem);
+    line-height: .94;
+    letter-spacing: -.045em;
+}
+
+.blc-page h1 span {
+    color: var(--blc-gold-light);
+}
+
+.blc-lead {
+    max-width: 880px;
+    margin-bottom: 1.7rem;
+    color: #ddd9d0;
+    font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+    line-height: 1.7;
+}
+
+.blc-hero-note {
+    max-width: 850px;
+    padding: 1.15rem 1.35rem;
+    border-left: 3px solid var(--blc-gold);
+    background: rgba(225,168,46,.075);
+    color: #e7e2d8;
+    line-height: 1.65;
+}
+
+.blc-hero-visual {
+    padding: clamp(1rem, 2vw, 2rem);
+}
+
+.blc-hero-visual svg,
+.blc-figure svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blc-proof {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--blc-line);
+    background: #0a1010;
+}
+
+.blc-proof-item {
+    padding: 1.5rem;
+    border-right: 1px solid var(--blc-line);
+    text-align: center;
+}
+
+.blc-proof-item:last-child {
+    border-right: 0;
+}
+
+.blc-proof strong {
+    display: block;
+    color: var(--blc-gold-light);
+    font: 700 1.6rem/1.2 Georgia, serif;
+}
+
+.blc-proof span {
+    display: block;
+    margin-top: .4rem;
+    color: var(--blc-muted);
+    font-size: .88rem;
+}
+
+.blc-nav {
+    border-bottom: 1px solid var(--blc-line);
+    background: #091010;
+}
+
+.blc-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin: 0;
+    padding: 1.2rem 0;
+    list-style: none;
+}
+
+.blc-nav a {
+    display: block;
+    padding: .65rem .95rem;
+    border: 1px solid rgba(225,168,46,.42);
+    border-radius: 999px;
+    color: #eee8dc;
+    text-decoration: none;
+}
+
+.blc-section {
+    padding: clamp(4rem, 7vw, 7rem) 0;
+    border-bottom: 1px solid rgba(225,168,46,.2);
+}
+
+.blc-section-alt {
+    background: linear-gradient(135deg, rgba(255,255,255,.018), rgba(225,168,46,.025));
+}
+
+.blc-section-head {
+    max-width: 950px;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.blc-page h2 {
+    margin: .75rem 0 1rem;
+    font-size: clamp(2.4rem, 4vw, 4.7rem);
+    line-height: 1.03;
+}
+
+.blc-section-intro {
+    color: #d2cec5;
+    font-size: 1.12rem;
+    line-height: 1.75;
+}
+
+.blc-grid-2,
+.blc-grid-3,
+.blc-grid-4 {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.blc-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blc-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.blc-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.blc-card {
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border: 1px solid var(--blc-line);
+    border-radius: 1rem;
+    background: rgba(13,20,20,.88);
+    box-shadow: 0 18px 42px rgba(0,0,0,.18);
+}
+
+.blc-card-number {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--blc-gold);
+    border-radius: 50%;
+    color: var(--blc-gold-light);
+    font-weight: 800;
+}
+
+.blc-card h3 {
+    margin-bottom: .65rem;
+    font-size: 1.45rem;
+}
+
+.blc-card p,
+.blc-card li {
+    color: #c9c6be;
+    line-height: 1.65;
+}
+
+.blc-card ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.blc-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--blc-line);
+    border-radius: 1rem;
+}
+
+.blc-table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    background: #0b1212;
+}
+
+.blc-table th,
+.blc-table td {
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid rgba(225,168,46,.2);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.55;
+}
+
+.blc-table th {
+    color: #0a0d0c;
+    background: var(--blc-gold);
+    font-weight: 800;
+}
+
+.blc-table td {
+    color: #cbc8c0;
+}
+
+.blc-table td:first-child {
+    color: var(--blc-cream);
+    font-weight: 700;
+}
+
+.blc-figure {
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+    border: 1px solid var(--blc-line);
+    border-radius: 1.2rem;
+    background: #091010;
+}
+
+.blc-figure figcaption {
+    margin-top: 1.2rem;
+    color: #aaa79f;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.blc-process {
+    counter-reset: blc-step;
+}
+
+.blc-process .blc-card {
+    position: relative;
+}
+
+.blc-process .blc-card::before {
+    counter-increment: blc-step;
+    content: counter(blc-step);
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    color: #080b0b;
+    background: var(--blc-gold);
+    font-weight: 900;
+}
+
+.blc-boundary {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(114,187,141,.5);
+    border-left: 4px solid var(--blc-green);
+    border-radius: .9rem;
+    background: rgba(114,187,141,.055);
+}
+
+.blc-boundary p {
+    color: #d4d6d0;
+    line-height: 1.7;
+}
+
+.blc-faq details {
+    margin-bottom: .8rem;
+    border: 1px solid var(--blc-line);
+    border-radius: .8rem;
+    background: #0b1212;
+}
+
+.blc-faq summary {
+    padding: 1.15rem 1.25rem;
+    color: var(--blc-cream);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.blc-faq details p {
+    margin: 0;
+    padding: 0 1.25rem 1.25rem;
+    color: #c9c6be;
+    line-height: 1.7;
+}
+
+.blc-cta {
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(225,168,46,.14), transparent 35rem),
+        #080e0e;
+}
+
+.blc-cta .blc-section-head {
+    margin-inline: auto;
+}
+
+.blc-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.blc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: .8rem 1.25rem;
+    border: 1px solid var(--blc-gold);
+    border-radius: 999px;
+    color: #090c0b;
+    background: linear-gradient(135deg, #ffd778, #dfa431);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blc-button-secondary {
+    color: var(--blc-cream);
+    background: transparent;
+}
+
+@media (max-width: 1050px) {
+    .blc-hero-grid,
+    .blc-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .blc-hero-copy {
+        grid-column: 1 / -1;
+    }
+
+    .blc-hero-visual {
+        grid-column: 1 / -1;
+        width: min(620px, 100%);
+        margin-inline: auto;
+    }
+
+    .blc-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .blc-wrap {
+        width: min(100% - 28px, 1420px);
+    }
+
+    .blc-hero {
+        padding-top: 6.4rem;
+    }
+
+    .blc-hero-grid,
+    .blc-grid-2,
+    .blc-grid-3,
+    .blc-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .blc-proof {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blc-proof-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .blc-proof-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--blc-line);
+    }
+
+    .blc-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .blc-nav a {
+        text-align: center;
+    }
+
+    .blc-page h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+}
+
+@media (max-width: 430px) {
+    .blc-proof,
+    .blc-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .blc-proof-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--blc-line);
+    }
+}
+</style>
+<script id="business-leadership-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://reikifish.com/team-leadership-coaching.html#service",
+      "name": "Business and Leadership Coaching",
+      "url": "https://reikifish.com/team-leadership-coaching.html",
+      "description": "Business and leadership coaching for owners, managers, teams and departments, focused on clarity, communication, mindset and sustainable performance.",
+      "provider": {
+        "@type": "Person",
+        "name": "Andy Fish",
+        "url": "https://reikifish.com/about.html"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": [
+        "Business coaching",
+        "Leadership coaching",
+        "Management coaching",
+        "Team coaching",
+        "Performance mindset coaching"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://reikifish.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Coaching",
+          "item": "https://reikifish.com/coaching.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Business and Leadership Coaching",
+          "item": "https://reikifish.com/team-leadership-coaching.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is business and leadership coaching for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Business and leadership coaching can support business owners, directors, managers, emerging leaders, teams and departments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you coach a complete team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Team coaching can focus on communication, priorities, role clarity, accountability, decision making and constructive disagreement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does coaching replace management training?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Training teaches knowledge or skills, while coaching helps people examine how they think, behave and apply what they know."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- BUSINESS COACHING SEO START -->
+<meta name="description" content="Business and leadership coaching for owners, managers, teams and departments. Improve clarity, communication, mindset and performance.">
+<link rel="canonical" href="https://reikifish.com/team-leadership-coaching.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Business and Leadership Coaching | Andy Fish">
+<meta property="og:description" content="Performance mindset coaching for business owners, managers, teams and departments.">
+<meta property="og:url" content="https://reikifish.com/team-leadership-coaching.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Business and Leadership Coaching | Andy Fish">
+<meta name="twitter:description" content="Improve leadership clarity, communication, team mindset and sustainable performance.">
+<!-- BUSINESS COACHING SEO END -->
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -1396,7 +1975,7 @@
         <a href="trauma-coaching.html">Trauma</a>
 
         <a href="parental-alienation-coaching.html">Parental Alienation</a>
-<a href="team-leadership-coaching.html">Team Leadership</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
     </div>
 </div></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -1406,521 +1985,589 @@
       </nav>
 
 
-
-<section class="tl-intro-feature">
-
-  <div class="tl-intro-inner">
-
-    <div class="tl-intro-copy">
-
-      <span class="tl-intro-eyebrow">
-        LEADERSHIP IN PRACTICE
-      </span>
-
-      <div class="tl-intro-rule"></div>
-
-      <h1>
-        Great teams do not
-        happen by accident.
-        <em>They are led with clarity.</em>
-      </h1>
-
-      <p class="tl-intro-lead">
-        Strong leadership creates the conditions in which people
-        can perform at their best: clear expectations, honest
-        communication, useful accountability and the confidence
-        to deal with problems before they become bigger ones.
-      </p>
-
-      <p>
-        I bring more than 20 years of practical leadership
-        experience across agency and in-house environments,
-        successful marketing projects and the management of
-        multiple departments. I understand both the pressure
-        to deliver and the human dynamics behind the result.
-      </p>
-
-      <p>
-        Whether you are taking responsibility for a team for the
-        first time or working at senior or enterprise level, the
-        focus is the same: remove unnecessary friction, raise
-        standards and help capable people work together more
-        effectively.
-      </p>
-
-      <a href="contact.html" class="tl-intro-button">
-        Talk About Your Team
-        <span>?</span>
-      </a>
-
-    </div>
-
-
-    <div class="tl-intro-visual">
-
-      <img
-        src="assets/images/coaching.webp"
-        alt="Professional leadership coaching and team development"
-      >
-
-      <div class="tl-image-shade"></div>
-
-      <div class="tl-image-label">
-        <span></span>
-        Leadership that turns direction into performance.
-      </div>
-
-      <div class="tl-image-metrics">
-
-        <div>
-          <strong>01</strong>
-          <span>Clarity</span>
-        </div>
-
-        <div>
-          <strong>02</strong>
-          <span>Alignment</span>
-        </div>
-
-        <div>
-          <strong>03</strong>
-          <span>Performance</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
     </header>
 
 
-<main class="team-leadership-page">
+<main class="blc-page" id="main-content">
 
-<section class="tl-hero">
-  <div class="tl-container tl-hero-grid">
+<section class="blc-hero">
+    <div class="blc-wrap">
+        <nav class="blc-breadcrumb" aria-label="Breadcrumb">
+            <a class="blc-hub-button" href="/coaching.html">Coaching</a>
+            <span aria-hidden="true">›</span>
+            <span class="blc-current" aria-current="page">Business and Leadership Coaching</span>
+        </nav>
 
-    <div>
-      <span class="tl-eyebrow">Team Leadership & Performance</span>
-      <div class="tl-rule"></div>
+        <div class="blc-hero-grid">
+            <div class="blc-hero-copy">
+                <p class="blc-kicker">Business coaching · Leadership · Team performance</p>
 
-      <h1>
-        Raise the bar.
-        <em>Bring the team with you.</em>
-      </h1>
+                <h1>Business and <span>Leadership Coaching</span></h1>
 
-      <p class="tl-hero-copy">
-        Leadership is more than asking people to work harder. Strong teams need clarity,
-        trust, accountability, efficient communication and leaders who know how to deal
-        with pressure and conflict without creating more of it.
-      </p>
+                <p class="blc-lead">
+                    Performance mindset coaching for business owners, managers, teams and
+                    departments who want clearer thinking, stronger communication, better
+                    working habits and more consistent performance.
+                </p>
 
-      <p class="tl-hero-copy">
-        I work with managers, team leaders and organisations to turn friction into focus,
-        strengthen performance and create teams that work together rather than simply
-        working alongside one another.
-      </p>
+                <div class="blc-hero-note">
+                    Coaching creates structured space to think, challenge assumptions and
+                    turn intentions into action. It does not replace professional training,
+                    HR procedures, clinical care or specialist organisational advice.
+                </div>
+            </div>
 
-      <a class="tl-button" href="contact.html">
-        Discuss Your Team
-        <span>?</span>
-      </a>
+            <figure class="blc-hero-visual">
+                <svg viewBox="0 0 620 540" role="img" aria-labelledby="blcHeroTitle blcHeroDesc">
+                    <title id="blcHeroTitle">Business and leadership performance system</title>
+                    <desc id="blcHeroDesc">Connected circles show mindset, leadership, communication, systems and performance.</desc>
+
+                    <circle cx="310" cy="270" r="225" fill="#0b1313" stroke="#e1a82e" stroke-width="2"/>
+                    <circle cx="310" cy="270" r="165" fill="#101919" stroke="#72bb8d" stroke-width="2"/>
+                    <circle cx="310" cy="270" r="92" fill="#1d1810" stroke="#ffd778" stroke-width="3"/>
+
+                    <g fill="#f5f1e9" text-anchor="middle" font-family="Arial" font-weight="700">
+                        <text x="310" y="258" font-size="25">CLEAR</text>
+                        <text x="310" y="290" font-size="25">THINKING</text>
+
+                        <text x="310" y="76" font-size="18">LEADERSHIP</text>
+                        <text x="310" y="480" font-size="18">PERFORMANCE</text>
+                        <text x="105" y="278" font-size="18">PEOPLE</text>
+                        <text x="515" y="278" font-size="18">SYSTEMS</text>
+
+                        <text x="170" y="150" font-size="16">COMMUNICATION</text>
+                        <text x="450" y="150" font-size="16">DECISIONS</text>
+                        <text x="170" y="405" font-size="16">ACCOUNTABILITY</text>
+                        <text x="450" y="405" font-size="16">RESILIENCE</text>
+                    </g>
+
+                    <g stroke="#e1a82e" stroke-width="2" opacity=".75">
+                        <line x1="310" y1="178" x2="310" y2="104"/>
+                        <line x1="310" y1="362" x2="310" y2="436"/>
+                        <line x1="218" y1="270" x2="135" y2="270"/>
+                        <line x1="402" y1="270" x2="485" y2="270"/>
+                    </g>
+                </svg>
+            </figure>
+        </div>
     </div>
-
-    <aside class="tl-performance-panel">
-
-      <span class="tl-panel-label">The performance equation</span>
-
-      <div class="tl-panel-title">
-        High performance needs more than high expectations.
-      </div>
-
-      <div class="tl-performance-item">
-        <div class="tl-performance-number">01</div>
-        <div>
-          <strong>Clarity</strong>
-          <span>People understand the objective, their role and what good looks like.</span>
-        </div>
-      </div>
-
-      <div class="tl-performance-item">
-        <div class="tl-performance-number">02</div>
-        <div>
-          <strong>Capability</strong>
-          <span>The team has the confidence, skills and support to deliver.</span>
-        </div>
-      </div>
-
-      <div class="tl-performance-item">
-        <div class="tl-performance-number">03</div>
-        <div>
-          <strong>Accountability</strong>
-          <span>Standards are clear, ownership is real and problems are addressed.</span>
-        </div>
-      </div>
-
-    </aside>
-
-  </div>
 </section>
 
-
-
-
-<section class="tl-experience-premium">
-
-  <div class="tl-experience-inner">
-
-    <div class="tl-experience-heading">
-
-      <div>
-        <span class="tl-experience-eyebrow">
-          EXPERIENCE BEHIND THE COACHING
-        </span>
-
-        <div class="tl-experience-rule"></div>
-
-        <h2>
-          Leadership built in the
-          <em>real world.</em>
-        </h2>
-      </div>
-
-      <p>
-        More than two decades working across agency and in-house
-        environments has taught me that strong leadership is not
-        about titles. It is about creating clarity, raising standards
-        and helping people perform together when the pressure is real.
-      </p>
-
+<section class="blc-proof" aria-label="Professional experience">
+    <div class="blc-proof-item">
+        <strong>25 years</strong>
+        <span>Leadership experience</span>
     </div>
-
-
-    <div class="tl-experience-grid">
-
-      <article class="tl-experience-card">
-
-        <div class="tl-experience-icon">
-          <span>25+</span>
-        </div>
-
-        <div>
-          <small>01</small>
-          <h3>Years of Leadership</h3>
-          <p>
-            Leading people, projects and teams through growth,
-            pressure, change and demanding commercial targets.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="tl-experience-card">
-
-        <div class="tl-experience-icon">
-          <span>10+</span>
-        </div>
-
-        <div>
-          <small>02</small>
-          <h3>Agency Experience</h3>
-          <p>
-            Fast-moving environments where priorities compete,
-            clients expect results and teams need to adapt quickly.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="tl-experience-card">
-
-        <div class="tl-experience-icon">
-          <span>15+</span>
-        </div>
-
-        <div>
-          <small>03</small>
-          <h3>In-House Leadership</h3>
-          <p>
-            Building sustainable performance, developing people and
-            turning strategy into consistent day-to-day execution.
-          </p>
-        </div>
-
-      </article>
-
-
-      <article class="tl-experience-card">
-
-        <div class="tl-experience-icon">
-          <span>12+</span>
-        </div>
-
-        <div>
-          <small>04</small>
-          <h3>Multi-Department Teams</h3>
-          <p>
-            Bringing different personalities, functions and priorities
-            together around shared outcomes and clearer accountability.
-          </p>
-        </div>
-
-      </article>
-
+    <div class="blc-proof-item">
+        <strong>10 years</strong>
+        <span>Agency experience</span>
     </div>
-
-  </div>
-
+    <div class="blc-proof-item">
+        <strong>15 years</strong>
+        <span>In-house leadership</span>
+    </div>
+    <div class="blc-proof-item">
+        <strong>12 years</strong>
+        <span>Working across departments</span>
+    </div>
 </section>
 
-
-
-
-<section class="tl-section tl-capabilities">
-  <div class="tl-container">
-
-    <span class="tl-eyebrow">Where We Raise The Bar</span>
-    <div class="tl-rule"></div>
-
-    <div class="tl-section-heading">
-
-      <h2>
-        Better leadership creates
-        <em>better conditions to perform.</em>
-      </h2>
-
-      <div class="tl-copy">
-        <p>
-          Performance problems are rarely solved by pressure alone. We look underneath
-          the numbers at the communication, expectations, processes, relationships and
-          leadership behaviours shaping the result.
-        </p>
-      </div>
-
+<nav class="blc-nav" aria-label="Business coaching sections">
+    <div class="blc-wrap">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#leaders">Leaders</a></li>
+            <li><a href="#managers">Managers</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#departments">Departments</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
     </div>
+</nav>
 
-    <div class="tl-card-grid">
+<section class="blc-section" id="overview">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">A practical coaching partnership</p>
+            <h2>What business and leadership coaching actually does</h2>
+            <p class="blc-section-intro">
+                Business coaching is not somebody arriving with a collection of slogans
+                and telling experienced people how to do their jobs. It is a structured
+                thinking partnership that helps individuals and groups examine how they
+                make decisions, communicate, prioritise, respond to pressure and convert
+                strategy into repeatable action.
+            </p>
+        </header>
 
-      <article class="tl-card">
-        <span class="tl-card-number">01</span>
-        <h3>Performance & Standards</h3>
-        <p>
-          Define what strong performance actually means, set expectations clearly and
-          create accountability without turning leadership into constant policing.
-        </p>
-      </article>
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <span class="blc-card-number">1</span>
+                <h3>Clarify the real issue</h3>
+                <p>
+                    Teams can spend significant energy solving the visible symptom while
+                    the actual barrier remains untouched. Coaching helps separate facts,
+                    assumptions, reactions, systems and responsibilities.
+                </p>
+            </article>
 
-      <article class="tl-card">
-        <span class="tl-card-number">02</span>
-        <h3>Conflict & Difficult Conversations</h3>
-        <p>
-          Deal with disagreement earlier, communicate directly and stop unresolved
-          tension from quietly damaging performance and trust.
-        </p>
-      </article>
+            <article class="blc-card">
+                <span class="blc-card-number">2</span>
+                <h3>Improve thinking quality</h3>
+                <p>
+                    The work encourages reflection without paralysis: testing assumptions,
+                    widening options, recognising biases and making decisions with clearer
+                    reasoning.
+                </p>
+            </article>
 
-      <article class="tl-card">
-        <span class="tl-card-number">03</span>
-        <h3>Communication & Role Clarity</h3>
-        <p>
-          Reduce crossed wires, duplicated work and uncertainty by making ownership,
-          priorities and decision-making clearer.
-        </p>
-      </article>
-
-      <article class="tl-card">
-        <span class="tl-card-number">04</span>
-        <h3>Efficiency & Workflow</h3>
-        <p>
-          Identify friction, unnecessary complexity and bottlenecks so that people can
-          spend more time delivering useful work.
-        </p>
-      </article>
-
-      <article class="tl-card">
-        <span class="tl-card-number">05</span>
-        <h3>Team Culture & Synergy</h3>
-        <p>
-          Help individuals and departments understand how their work connects, building
-          cooperation instead of silos.
-        </p>
-      </article>
-
-      <article class="tl-card">
-        <span class="tl-card-number">06</span>
-        <h3>Change, Pressure & Growth</h3>
-        <p>
-          Lead more steadily when expectations rise, structures change or a growing
-          organisation needs its leadership to mature with it.
-        </p>
-      </article>
-
+            <article class="blc-card">
+                <span class="blc-card-number">3</span>
+                <h3>Turn insight into action</h3>
+                <p>
+                    Insight matters only when it changes behaviour. Coaching connects
+                    conclusions to specific commitments, ownership, review points and
+                    measurable signs of progress.
+                </p>
+            </article>
+        </div>
     </div>
-
-  </div>
 </section>
 
+<section class="blc-section blc-section-alt" id="leaders">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Owners and senior leaders</p>
+            <h2>Clearer leadership when the decisions carry weight</h2>
+            <p class="blc-section-intro">
+                Senior roles can be isolating. People may expect certainty even when the
+                available information is incomplete. Coaching provides a confidential,
+                challenging space to organise thinking without simply echoing what the
+                leader already believes.
+            </p>
+        </header>
 
-<section class="tl-section">
-  <div class="tl-container">
+        <div class="blc-grid-2">
+            <article class="blc-card">
+                <h3>Strategic clarity</h3>
+                <ul>
+                    <li>Separating urgent activity from important direction</li>
+                    <li>Testing assumptions before committing resources</li>
+                    <li>Identifying competing priorities and hidden trade-offs</li>
+                    <li>Turning broad ambition into a practical sequence</li>
+                </ul>
+            </article>
 
-    <span class="tl-eyebrow">Leadership At Your Level</span>
-    <div class="tl-rule"></div>
-
-    <div class="tl-section-heading">
-
-      <h2>
-        Start where you are.
-        <em>Go as advanced as you need.</em>
-      </h2>
-
-      <div class="tl-copy">
-        <p>
-          Leadership coaching should meet the reality of the person or organisation.
-          Someone managing people for the first time needs something different from a
-          senior leader coordinating multiple functions.
-        </p>
-
-        <p>
-          I can work at either level ? from helping somebody build their foundations to
-          working through advanced team performance and enterprise-level leadership
-          challenges.
-        </p>
-      </div>
-
+            <article class="blc-card">
+                <h3>Leadership presence</h3>
+                <ul>
+                    <li>Communicating decisions with appropriate clarity</li>
+                    <li>Remaining measured during disagreement and uncertainty</li>
+                    <li>Balancing authority with curiosity and accountability</li>
+                    <li>Creating confidence without pretending to know everything</li>
+                </ul>
+            </article>
+        </div>
     </div>
-
-    <div class="tl-level-grid">
-
-      <article class="tl-level">
-        <span class="tl-level-label">FOUNDATION</span>
-        <h3>New & Emerging Leaders</h3>
-        <p>
-          Build confidence, delegate properly, set standards, give feedback and learn
-          how to handle difficult conversations without avoiding them.
-        </p>
-      </article>
-
-      <article class="tl-level">
-        <span class="tl-level-label">GROWTH</span>
-        <h3>Established Managers & Teams</h3>
-        <p>
-          Improve performance, accountability, communication and efficiency while
-          developing a leadership style people can actually work with.
-        </p>
-      </article>
-
-      <article class="tl-level">
-        <span class="tl-level-label">ADVANCED</span>
-        <h3>Senior & Enterprise Leadership</h3>
-        <p>
-          Work across departments, priorities and stakeholders to strengthen strategic
-          alignment, organisational performance and leadership through complexity.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
 </section>
 
+<section class="blc-section" id="managers">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Management mindset</p>
+            <h2>Helping managers move from constant reaction to purposeful leadership</h2>
+            <p class="blc-section-intro">
+                Many managers are promoted because they are technically capable, then
+                discover that leading people demands a different set of habits. Coaching
+                helps managers develop judgement, consistency, self-awareness and the
+                confidence to hold useful conversations.
+            </p>
+        </header>
 
-<section class="tl-section tl-synergy">
-  <div class="tl-container">
+        <div class="blc-grid-4">
+            <article class="blc-card">
+                <h3>Delegation</h3>
+                <p>
+                    Move beyond either doing everything personally or handing over work
+                    without enough context, support or ownership.
+                </p>
+            </article>
 
-    <span class="tl-eyebrow">Creating Synergy</span>
-    <div class="tl-rule"></div>
+            <article class="blc-card">
+                <h3>Feedback</h3>
+                <p>
+                    Give specific, proportionate feedback that addresses behaviour and
+                    impact without humiliating, labelling or avoiding the issue.
+                </p>
+            </article>
 
-    <div class="tl-section-heading">
+            <article class="blc-card">
+                <h3>Boundaries</h3>
+                <p>
+                    Establish clear expectations, responsibilities and decision rights
+                    while remaining approachable and fair.
+                </p>
+            </article>
 
-      <h2>
-        Stop managing departments.
-        <em>Start connecting them.</em>
-      </h2>
-
-      <div class="tl-copy">
-        <p>
-          Some of the biggest performance losses happen between teams rather than
-          inside them. Different priorities, unclear ownership and poor handovers turn
-          capable people into a fragmented organisation.
-        </p>
-
-        <p>
-          My approach looks at the whole system: where friction begins, where
-          communication breaks down and what needs to align so that individual talent
-          becomes collective performance.
-        </p>
-      </div>
-
+            <article class="blc-card">
+                <h3>Self-management</h3>
+                <p>
+                    Recognise personal pressure patterns before frustration, urgency or
+                    defensiveness begins to shape the whole team.
+                </p>
+            </article>
+        </div>
     </div>
-
-    <div class="tl-synergy-flow">
-
-      <article class="tl-flow-card">
-        <span>01 ? DIAGNOSE</span>
-        <h3>Find the friction</h3>
-        <p>
-          Identify where communication, process, expectations or relationships are
-          slowing the team down.
-        </p>
-      </article>
-
-      <div class="tl-flow-line"></div>
-
-      <article class="tl-flow-card">
-        <span>02 ? ALIGN</span>
-        <h3>Create shared clarity</h3>
-        <p>
-          Bring priorities, responsibilities and standards into a structure people can
-          understand and act on.
-        </p>
-      </article>
-
-      <div class="tl-flow-line"></div>
-
-      <article class="tl-flow-card">
-        <span>03 ? EMBED</span>
-        <h3>Turn insight into behaviour</h3>
-        <p>
-          Make the changes practical enough to survive beyond the coaching conversation
-          and become part of how the team operates.
-        </p>
-      </article>
-
-    </div>
-
-  </div>
 </section>
 
+<section class="blc-section blc-section-alt" id="teams">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Team mindset coaching</p>
+            <h2>A team is more than several capable people in the same meeting</h2>
+            <p class="blc-section-intro">
+                Team coaching examines how the group functions together: how information
+                travels, how disagreement is handled, how decisions are made and whether
+                accountability is shared or quietly passed around.
+            </p>
+        </header>
 
-<section class="tl-cta">
-  <div class="tl-container tl-cta-inner">
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <h3>Shared direction</h3>
+                <p>
+                    Create a common understanding of priorities, success measures and what
+                    each person contributes to the larger result.
+                </p>
+            </article>
 
-    <span class="tl-eyebrow">Team Leadership Coaching</span>
+            <article class="blc-card">
+                <h3>Constructive challenge</h3>
+                <p>
+                    Help people raise concerns, test ideas and disagree professionally
+                    without turning challenge into personal conflict.
+                </p>
+            </article>
 
-    <h2>
-      Better teams start with
-      <em>better leadership conversations.</em>
-    </h2>
+            <article class="blc-card">
+                <h3>Reliable accountability</h3>
+                <p>
+                    Replace vague collective responsibility with clear ownership, realistic
+                    deadlines and review points that people understand.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
 
-    <p>
-      Whether you are stepping into management for the first time, trying to unlock
-      more from an established team or dealing with leadership complexity across an
-      organisation, we can start with the problem in front of you.
-    </p>
+<section class="blc-section" id="departments">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Cross-department performance</p>
+            <h2>Coaching the connections between departments</h2>
+            <p class="blc-section-intro">
+                Performance problems often appear between departments rather than inside
+                one of them. Marketing may optimise demand that operations cannot fulfil.
+                Sales may promise what service teams cannot sustain. Leadership may expect
+                outcomes without resolving competing measures or ownership.
+            </p>
+        </header>
 
-    <a class="tl-button" href="contact.html">
-      Start a Leadership Conversation
-      <span>?</span>
-    </a>
+        <div class="blc-table-wrap">
+            <table class="blc-table">
+                <thead>
+                    <tr>
+                        <th>Department or function</th>
+                        <th>Common pressure</th>
+                        <th>Coaching focus</th>
+                        <th>Potential improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leadership</td>
+                        <td>Competing priorities and incomplete information</td>
+                        <td>Decision quality, communication and strategic alignment</td>
+                        <td>Clearer direction and fewer contradictory instructions</td>
+                    </tr>
+                    <tr>
+                        <td>Management</td>
+                        <td>Constant escalation and operational pressure</td>
+                        <td>Delegation, boundaries, feedback and ownership</td>
+                        <td>More consistent management and stronger team confidence</td>
+                    </tr>
+                    <tr>
+                        <td>Marketing</td>
+                        <td>Activity without clear commercial connection</td>
+                        <td>Prioritisation, audience thinking and performance interpretation</td>
+                        <td>Better focus and more meaningful measures</td>
+                    </tr>
+                    <tr>
+                        <td>Sales</td>
+                        <td>Targets, rejection and inconsistent pipeline behaviour</td>
+                        <td>Preparation, resilience, communication and review habits</td>
+                        <td>More disciplined activity and learning</td>
+                    </tr>
+                    <tr>
+                        <td>Operations</td>
+                        <td>Interruptions, bottlenecks and unclear ownership</td>
+                        <td>Process thinking, escalation rules and collaboration</td>
+                        <td>Fewer avoidable delays and clearer responsibility</td>
+                    </tr>
+                    <tr>
+                        <td>Customer service</td>
+                        <td>Emotional demand and repeated difficult conversations</td>
+                        <td>Regulation, boundaries, empathy and recovery habits</td>
+                        <td>More measured responses and reduced emotional carry-over</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
-  </div>
+<section class="blc-section blc-section-alt" id="performance">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Performance mindset</p>
+            <h2>Becoming clearer and more effective without creating a pressure culture</h2>
+            <p class="blc-section-intro">
+                Sustainable performance is not produced by keeping people permanently
+                anxious. It depends on clarity, appropriate challenge, useful feedback,
+                recovery and systems that allow good work to be repeated.
+            </p>
+        </header>
+
+        <figure class="blc-figure">
+            <svg viewBox="0 0 1100 420" role="img" aria-labelledby="performanceTitle performanceDesc">
+                <title id="performanceTitle">Five connected elements of sustainable performance</title>
+                <desc id="performanceDesc">Clarity leads through capability, communication, accountability and review to sustainable performance.</desc>
+
+                <g font-family="Arial" text-anchor="middle">
+                    <g transform="translate(110 210)">
+                        <circle r="78" fill="#19170f" stroke="#e1a82e" stroke-width="3"/>
+                        <text y="7" fill="#ffd778" font-size="21" font-weight="700">CLARITY</text>
+                    </g>
+
+                    <g transform="translate(330 210)">
+                        <circle r="78" fill="#101918" stroke="#72bb8d" stroke-width="3"/>
+                        <text y="7" fill="#f5f1e9" font-size="21" font-weight="700">CAPABILITY</text>
+                    </g>
+
+                    <g transform="translate(550 210)">
+                        <circle r="78" fill="#15121a" stroke="#9874b8" stroke-width="3"/>
+                        <text y="-5" fill="#f5f1e9" font-size="19" font-weight="700">CLEAR</text>
+                        <text y="21" fill="#f5f1e9" font-size="19" font-weight="700">COMMUNICATION</text>
+                    </g>
+
+                    <g transform="translate(770 210)">
+                        <circle r="78" fill="#101918" stroke="#72bb8d" stroke-width="3"/>
+                        <text y="7" fill="#f5f1e9" font-size="19" font-weight="700">OWNERSHIP</text>
+                    </g>
+
+                    <g transform="translate(990 210)">
+                        <circle r="78" fill="#19170f" stroke="#e1a82e" stroke-width="3"/>
+                        <text y="-5" fill="#ffd778" font-size="20" font-weight="700">REVIEW &amp;</text>
+                        <text y="21" fill="#ffd778" font-size="20" font-weight="700">LEARNING</text>
+                    </g>
+
+                    <g stroke="#d5a43b" stroke-width="3">
+                        <line x1="190" y1="210" x2="250" y2="210"/>
+                        <line x1="410" y1="210" x2="470" y2="210"/>
+                        <line x1="630" y1="210" x2="690" y2="210"/>
+                        <line x1="850" y1="210" x2="910" y2="210"/>
+                    </g>
+                </g>
+            </svg>
+
+            <figcaption>
+                Performance improves when expectations, capability, communication,
+                ownership and review reinforce one another.
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<section class="blc-section" id="process">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">How the work progresses</p>
+            <h2>A structured coaching process</h2>
+        </header>
+
+        <div class="blc-grid-4 blc-process">
+            <article class="blc-card">
+                <h3>Discovery</h3>
+                <p>
+                    Clarify the context, desired outcomes, stakeholders, constraints and
+                    whether coaching is the appropriate form of support.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Focus</h3>
+                <p>
+                    Identify the thinking patterns, behaviours, communication habits or
+                    working relationships most relevant to progress.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Action</h3>
+                <p>
+                    Agree practical experiments and commitments that can be tested in real
+                    working situations rather than left as abstract intentions.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Review</h3>
+                <p>
+                    Examine evidence of change, learn from setbacks and decide what should
+                    be continued, adjusted or concluded.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-section-alt">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Formats</p>
+            <h2>Coaching designed around the organisation</h2>
+        </header>
+
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <h3>One-to-one leadership coaching</h3>
+                <p>
+                    Confidential sessions for owners, directors and managers working on
+                    decisions, leadership behaviour, confidence and accountability.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Team coaching</h3>
+                <p>
+                    Facilitated work on team purpose, communication, trust, role clarity,
+                    conflict, decision making and collective performance.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Department workshops</h3>
+                <p>
+                    Focused sessions addressing a defined challenge such as collaboration,
+                    customer communication, pressure, priorities or cross-team working.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section">
+    <div class="blc-wrap">
+        <div class="blc-boundary">
+            <h2>Professional scope and responsible practice</h2>
+            <p>
+                Business coaching is not psychotherapy, psychiatric treatment, legal
+                advice, financial advice, formal HR investigation or disciplinary
+                management. Where a concern requires specialist expertise, safeguarding,
+                clinical support or a formal organisational process, that boundary should
+                be recognised rather than disguised as coaching.
+            </p>
+            <p>
+                Coaching also cannot guarantee revenue, promotion, productivity or a
+                particular commercial outcome. It can improve the quality of reflection,
+                planning, communication and follow-through that contribute to better work.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-faq" id="faqs">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Frequently asked questions</p>
+            <h2>Business and leadership coaching FAQs</h2>
+        </header>
+
+        <details>
+            <summary>Who is business and leadership coaching for?</summary>
+            <p>
+                It can support business owners, directors, managers, emerging leaders,
+                teams and departments. The specific format depends on the challenge,
+                responsibilities and desired outcome.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can you coach a complete team?</summary>
+            <p>
+                Yes. Team coaching focuses on how the group works together, including
+                communication, priorities, role clarity, accountability, decision making
+                and constructive disagreement.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can different departments be coached together?</summary>
+            <p>
+                Yes. Cross-department coaching can be useful when performance is being
+                affected by conflicting priorities, weak handovers, unclear ownership or
+                communication barriers between functions.
+            </p>
+        </details>
+
+        <details>
+            <summary>Does coaching replace management training?</summary>
+            <p>
+                No. Training teaches knowledge or skills. Coaching helps people examine
+                how they think, behave and apply what they know within their own context.
+                The two can complement one another.
+            </p>
+        </details>
+
+        <details>
+            <summary>Will coaching make employees more productive?</summary>
+            <p>
+                No responsible coach should guarantee productivity. Coaching may help
+                clarify priorities, improve working habits and remove avoidable barriers,
+                but performance is also shaped by workload, resources, capability,
+                systems, leadership and organisational conditions.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is the coaching confidential?</summary>
+            <p>
+                Confidentiality, reporting boundaries and organisational expectations
+                should be agreed before coaching begins. Team and employer-sponsored work
+                requires especially clear contracting.
+            </p>
+        </details>
+    </div>
+</section>
+
+<section class="blc-section blc-cta">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Start a conversation</p>
+            <h2>Explore what stronger thinking and leadership could change</h2>
+            <p class="blc-section-intro">
+                Tell me about the organisation, team or leadership challenge. We can
+                discuss whether coaching is appropriate and what a useful first step
+                might look like.
+            </p>
+        </header>
+
+        <div class="blc-buttons">
+            <a class="blc-button" href="/contact.html">Enquire about business coaching</a>
+            <a class="blc-button blc-button-secondary" href="/coaching.html">Explore all coaching</a>
+        </div>
+    </div>
 </section>
 
 </main>
