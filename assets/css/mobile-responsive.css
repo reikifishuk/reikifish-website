@@ -1,0 +1,574 @@
+/*
+  ReikiFish site-wide responsive layer.
+  Existing desktop styling remains authoritative.
+*/
+
+/* Repair the confirmed About-page containment failure. */
+
+.about-page .about-hero-grid,
+.about-page .about-hero-stage,
+.about-page .about-story-layout,
+.about-page .about-story-stage,
+.about-page .about-philosophy-layout,
+.about-page .about-philosophy-book {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.about-page .about-hero-stage {
+    width: 100%;
+    aspect-ratio: auto;
+}
+
+@media (max-width: 991.98px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    *,
+    *::before,
+    *::after {
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    iframe,
+    object,
+    embed,
+    svg {
+        max-width: 100%;
+    }
+
+    img,
+    video {
+        height: auto;
+    }
+
+    main,
+    header,
+    footer,
+    nav,
+    section,
+    article,
+    figure,
+    .container,
+    .container-fluid,
+    [class*="-wrap"],
+    [class*="-inner"],
+    [class*="-layout"] {
+        max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    a,
+    button,
+    label,
+    summary,
+    blockquote,
+    figcaption {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    pre,
+    code {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    /* Header and navigation */
+
+    .site-nav,
+    .navbar,
+    .navbar > .container,
+    .navbar > .container-fluid,
+    .navbar-collapse,
+    .site-nav-links,
+    .mobile-menu,
+    .nav-menu {
+        max-width: 100%;
+    }
+
+    .navbar-toggler,
+    .menu-toggle,
+    .mobile-menu-toggle {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* About page */
+
+    .about-page .about-hero-grid,
+    .about-page .about-story-layout,
+    .about-page .about-philosophy-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .about-page .about-hero-stage {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        aspect-ratio: 16 / 11 !important;
+    }
+
+    .about-page .about-hero-stage img {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 0 !important;
+        object-fit: cover;
+    }
+
+    .about-page .about-hero-visual,
+    .about-page .about-story-stage,
+    .about-page .about-philosophy-book {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+    }
+
+    /* Coaching pages and decorative graphics */
+
+    .trauma-banner,
+    .trauma-section-heading,
+    .pa-visual-hero,
+    .pa-grounded-section,
+    .pa-context-section,
+    .pa-coercion-section,
+    .pa-reality-section,
+    .team-hero,
+    body.coaching-page main {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .trauma-banner-shape,
+    .pa-visual-glow,
+    [class*="decorative"],
+    [class*="-glow"],
+    [class*="-orb"] {
+        pointer-events: none;
+    }
+
+    .trauma-page [class*="grid"],
+    .parental-alienation-page [class*="grid"],
+    .team-leadership-page [class*="grid"],
+    body.coaching-page [class*="grid"] {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    /* Knowledge Hub landing and search pages */
+
+    .kb-hero-grid,
+    .kb-main-grid,
+    .kb-explore-layout,
+    .kb-featured-grid,
+    .kb-category-grid,
+    .kb-search-layout,
+    .knowledge-grid,
+    .search-results-layout {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .kb-search-form,
+    .knowledge-search-form,
+    .kb-search-input-wrap,
+    .knowledge-search-input-wrap,
+    .kb-featured-card,
+    .kb-category-card,
+    .kb-result-card,
+    .search-result-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Knowledge article families */
+
+    .ke-hero-grid,
+    .ke-layout,
+    .ke-deep-grid,
+    .ke-three,
+    .ke-spectrum,
+    .ke-compare-grid,
+    .ke-red-grid,
+    .ke-myth-grid,
+    .cb-hero-grid,
+    .cb-layout,
+    .cb-disorders,
+    .cb-trait-grid,
+    .dh-hero-grid,
+    .dh-grid,
+    .dh-grid-2,
+    .dh-grid-3,
+    .dh-grid-4,
+    .pe-hero-grid,
+    .pe-grid-2,
+    .pe-grid-3,
+    .pe-grid-4,
+    .c4-grid,
+    .c4-two {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .ke-side,
+    .cb-toc,
+    .dh-toc,
+    .pe-toc,
+    .c4-toc {
+        position: static !important;
+        top: auto !important;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .ke-hero-visual,
+    .cb-emblem,
+    .dh-visual,
+    .pe-visual,
+    .c4-figure {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .ke-hero-visual svg,
+    .cb-emblem svg,
+    .dh-visual svg,
+    .pe-visual svg,
+    .c4-figure svg,
+    .knowledge-figure svg,
+    figure svg {
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+    }
+
+    /* Horizontal article navigation */
+
+    .ke-nav,
+    .cb-nav,
+    .dh-nav,
+    .pe-nav,
+    .c4-nav,
+    .article-nav,
+    .topic-nav,
+    [class*="jump-nav"] {
+        position: relative !important;
+        top: auto !important;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .ke-nav > div,
+    .cb-nav > div,
+    .dh-nav > div,
+    .pe-nav > div,
+    .c4-nav > div,
+    .article-nav > div,
+    .topic-nav > div,
+    [class*="jump-nav"] > div {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 8px;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 5px;
+    }
+
+    .ke-nav a,
+    .cb-nav a,
+    .dh-nav a,
+    .pe-nav a,
+    .c4-nav a,
+    .article-nav a,
+    .topic-nav a,
+    [class*="jump-nav"] a {
+        flex: 0 0 auto;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    /* Tables remain inside the page */
+
+    .ke-table,
+    .cb-table,
+    .dh-table,
+    .pe-table,
+    .c4-table,
+    .table-wrap,
+    .comparison-table,
+    .responsive-table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    main table,
+    article table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        white-space: normal;
+    }
+
+    main table th,
+    main table td,
+    article table th,
+    article table td {
+        min-width: 150px;
+    }
+
+    .row > [class*="col-"],
+    .card,
+    [class*="-card"],
+    [class*="-panel"] {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* Footer */
+
+    .footer,
+    .site-footer {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .footer-links,
+    .site-footer-links,
+    .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    .footer-links a,
+    .site-footer-links a,
+    .footer-nav a {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    h1,
+    .hero-title,
+    .about-hero-title,
+    .books-hero-title,
+    .ke-hero h1,
+    .cb-page h1,
+    .dh-page h1,
+    .pe-hero h1,
+    .c4-hero h1 {
+        font-size: clamp(2.45rem, 12vw, 4rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.025em;
+        max-width: 100%;
+    }
+
+    h2,
+    .section-heading-xl,
+    .section-heading-lg,
+    .ke-section h2,
+    .cb-section h2,
+    .dh-section h2,
+    .pe-section h2,
+    .c4-section h2 {
+        font-size: clamp(2rem, 9vw, 3rem) !important;
+        line-height: 1.08;
+        max-width: 100%;
+    }
+
+    .btn,
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 48px;
+    }
+
+    .hero-actions,
+    .home-actions,
+    .books-actions,
+    .about-cta-actions,
+    .contact-actions {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        width: 100%;
+    }
+
+    .hero-actions .btn,
+    .home-actions .btn,
+    .books-actions .btn,
+    .about-cta-actions .btn,
+    .contact-actions .btn {
+        width: 100%;
+    }
+
+    .kb-search-form,
+    .knowledge-search-form {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 10px;
+    }
+
+    .kb-search-form button,
+    .knowledge-search-form button {
+        width: 100%;
+    }
+
+    .kb-category-grid,
+    .kb-featured-grid,
+    .kb-results-grid,
+    .knowledge-grid,
+    .search-results-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    .ke-page,
+    .cb-page,
+    .dh-page,
+    .pe-page,
+    .c4-page {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .ke-section,
+    .cb-section,
+    .dh-section,
+    .pe-section,
+    .c4-section {
+        padding-top: 38px !important;
+        padding-bottom: 38px !important;
+    }
+
+    .ke-card,
+    .cb-card,
+    .dh-card,
+    .pe-card,
+    .c4-card,
+    .kb-featured-card,
+    .kb-category-card {
+        padding: 20px !important;
+    }
+
+    figure,
+    .ke-figure,
+    .cb-figure,
+    .dh-figure,
+    .pe-figure,
+    .c4-figure {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: clamp(12px, 4vw, 20px) !important;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .about-page .about-hero-stage {
+        aspect-ratio: 4 / 3 !important;
+    }
+
+    .site-logo {
+        max-width: min(42vw, 170px) !important;
+        height: auto !important;
+    }
+
+    .kb-popular-searches,
+    .popular-searches {
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap !important;
+        gap: 8px;
+        padding-bottom: 6px;
+    }
+
+    .kb-popular-searches a,
+    .popular-searches a {
+        flex: 0 0 auto;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    main table th,
+    main table td,
+    article table th,
+    article table td {
+        min-width: 135px;
+        padding: 12px !important;
+        font-size: 0.92rem;
+    }
+}
+
+@media (max-width: 359.98px) {
+
+    h1,
+    .hero-title,
+    .about-hero-title,
+    .books-hero-title,
+    .ke-hero h1,
+    .cb-page h1,
+    .dh-page h1,
+    .pe-hero h1,
+    .c4-hero h1 {
+        font-size: clamp(2.15rem, 11vw, 3rem) !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
