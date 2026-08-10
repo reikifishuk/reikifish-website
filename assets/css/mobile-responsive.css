@@ -572,3 +572,202 @@
         transition-duration: 0.01ms !important;
     }
 }
+/* KNOWLEDGE BREADCRUMB CTA START */
+
+/*
+ * Shared return CTA for Knowledge article breadcrumbs.
+ * It remains in normal document flow and never follows the reader.
+ */
+
+a.knowledge-breadcrumb-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.55rem !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    min-height: 2.45rem !important;
+    padding: 0.56rem 0.9rem !important;
+    border: 1px solid rgba(222, 164, 49, 0.74) !important;
+    border-radius: 999px !important;
+    color: #fff8e8 !important;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(222, 164, 49, 0.18),
+            rgba(222, 164, 49, 0.045)
+        ) !important;
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.055) !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.035em !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    position: relative !important;
+    inset: auto !important;
+    transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease !important;
+}
+
+a.knowledge-breadcrumb-cta::before {
+    content: "\2190" !important;
+    display: grid !important;
+    place-items: center !important;
+    width: 1.55rem !important;
+    height: 1.55rem !important;
+    flex: 0 0 1.55rem !important;
+    border-radius: 50% !important;
+    color: #0a0c0b !important;
+    background:
+        linear-gradient(
+            135deg,
+            #ffdb82,
+            #dfa431
+        ) !important;
+    font-size: 0.9rem !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    box-shadow:
+        0 4px 12px rgba(223, 164, 49, 0.22) !important;
+}
+
+a.knowledge-breadcrumb-cta:hover,
+a.knowledge-breadcrumb-cta:focus-visible {
+    color: #ffffff !important;
+    border-color: #ffda80 !important;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(222, 164, 49, 0.28),
+            rgba(222, 164, 49, 0.08)
+        ) !important;
+    box-shadow:
+        0 13px 30px rgba(0, 0, 0, 0.27),
+        0 0 0 3px rgba(222, 164, 49, 0.09) !important;
+    transform: translateY(-2px) !important;
+    outline: none !important;
+}
+
+a.knowledge-breadcrumb-cta:active {
+    transform: translateY(0) !important;
+}
+
+nav[aria-label="Breadcrumb"],
+nav[aria-label="breadcrumb"],
+[class*="breadcrumb"] {
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.65rem;
+}
+
+@media (max-width: 560px) {
+    a.knowledge-breadcrumb-cta {
+        min-height: 2.3rem !important;
+        padding: 0.48rem 0.78rem !important;
+        font-size: 0.73rem !important;
+    }
+
+    a.knowledge-breadcrumb-cta::before {
+        width: 1.4rem !important;
+        height: 1.4rem !important;
+        flex-basis: 1.4rem !important;
+        font-size: 0.82rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a.knowledge-breadcrumb-cta {
+        transition: none !important;
+    }
+}
+
+/* KNOWLEDGE BREADCRUMB CTA END */
+/* KNOWLEDGE ADDED BREADCRUMBS START */
+
+/*
+ * Breadcrumb region for article templates that originally had none.
+ * The generous top padding protects it from the fixed site header.
+ */
+
+.knowledge-added-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    width: min(1480px, calc(100% - 40px));
+    margin: 0 auto;
+    padding-top: clamp(7.25rem, 9vw, 8.75rem);
+    padding-bottom: clamp(1rem, 2vw, 1.5rem);
+    color: #d99d2d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.3;
+}
+
+.knowledge-added-breadcrumb__separator {
+    color: rgba(222, 164, 49, 0.7);
+    font-size: 1rem;
+}
+
+/*
+ * Cluster B had a breadcrumb, but a later design override reduced
+ * the hero padding and moved it underneath the fixed header.
+ */
+
+.cb-page .cb-hero {
+    padding-top: clamp(7.25rem, 9vw, 9rem) !important;
+}
+
+@media (max-width: 700px) {
+    .knowledge-added-breadcrumb {
+        width: min(100% - 28px, 1480px);
+        gap: 0.55rem;
+        padding-top: 6.4rem;
+        padding-bottom: 0.9rem;
+    }
+
+    .cb-page .cb-hero {
+        padding-top: 6.4rem !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .knowledge-added-breadcrumb {
+        width: min(100% - 22px, 1480px);
+        padding-top: 5.9rem;
+    }
+
+    .cb-page .cb-hero {
+        padding-top: 5.9rem !important;
+    }
+}
+
+/* KNOWLEDGE ADDED BREADCRUMBS END */
+/* KNOWLEDGE CURRENT BREADCRUMB START */
+
+.knowledge-added-breadcrumb__current {
+    display: inline;
+    min-width: 0;
+    color: #d99d2d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+    .knowledge-added-breadcrumb__current {
+        flex: 1 1 10rem;
+        font-size: 0.76rem;
+    }
+}
+
+/* KNOWLEDGE CURRENT BREADCRUMB END */
