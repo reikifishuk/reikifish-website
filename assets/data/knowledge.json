@@ -245,5 +245,28 @@
                          "personality"
                      ],
         "url":  "knowledge/what-are-cluster-b-personality-disorders.html"
+    },
+    {
+        "slug":  "what-is-the-dark-hexad",
+        "title":  "What Is the Dark Hexad? Six Dark Personality Traits Explained",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "A comprehensive evidence based guide to Machiavellianism, narcissism, psychopathy, everyday sadism, spitefulness, greed and the proposed Dark Hexad model.",
+        "keywords":  [
+                         "Dark Hexad",
+                         "Dark Triad",
+                         "Dark Tetrad",
+                         "dark personality traits",
+                         "Machiavellianism",
+                         "narcissism",
+                         "psychopathy",
+                         "everyday sadism",
+                         "spitefulness",
+                         "greed",
+                         "Dark Factor of Personality",
+                         "moral disengagement",
+                         "personality psychology"
+                     ],
+        "url":  "knowledge/what-is-the-dark-hexad.html"
     }
 ]
