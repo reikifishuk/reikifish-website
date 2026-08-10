@@ -1149,6 +1149,323 @@
 }
 </style>
 <!-- /KB_BRAIN_VISIBILITY_ENHANCEMENT -->
+<style id="kb-featured-guides-styles">
+.kb-featured-guides {
+    padding: 38px 0 42px;
+    border-bottom: 1px solid rgba(212,160,23,.24);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(212,160,23,.07), transparent 26rem),
+        linear-gradient(180deg, #071010 0%, #050b0b 100%);
+}
+
+.kb-featured-wrap {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.kb-featured-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+    margin-bottom: 22px;
+}
+
+.kb-featured-heading-copy {
+    max-width: 760px;
+}
+
+.kb-featured-kicker {
+    display: block;
+    margin-bottom: 7px;
+    color: #e7ad33;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.kb-featured-heading h2 {
+    margin: 0 0 8px;
+    color: #f5f0e7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.9rem, 4vw, 2.8rem);
+    line-height: 1.08;
+}
+
+.kb-featured-heading p {
+    margin: 0;
+    color: #c8cbc7;
+    line-height: 1.6;
+}
+
+.kb-featured-view-all {
+    flex: 0 0 auto;
+    color: #e7ad33;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.kb-featured-view-all:hover,
+.kb-featured-view-all:focus {
+    color: #f6ca69;
+    text-decoration: underline;
+}
+
+.kb-featured-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 1fr;
+    gap: 15px;
+}
+
+.kb-featured-card {
+    position: relative;
+    display: flex;
+    min-height: 254px;
+    flex-direction: column;
+    padding: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(212,160,23,.48);
+    border-radius: 9px;
+    color: #f5f0e7;
+    text-decoration: none;
+    background:
+        linear-gradient(145deg, rgba(212,160,23,.08), transparent 45%),
+        #0a1212;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.kb-featured-card:hover,
+.kb-featured-card:focus {
+    transform: translateY(-3px);
+    border-color: #f0bc4f;
+    box-shadow: 0 16px 35px rgba(0,0,0,.28);
+}
+
+.kb-featured-card-primary {
+    background:
+        radial-gradient(circle at 85% 10%, rgba(118,82,168,.23), transparent 14rem),
+        linear-gradient(145deg, rgba(212,160,23,.1), transparent 50%),
+        #0a1212;
+}
+
+.kb-featured-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+
+.kb-featured-badge {
+    display: inline-flex;
+    padding: 5px 9px;
+    border: 1px solid rgba(212,160,23,.6);
+    border-radius: 999px;
+    color: #f1bd4e;
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.kb-featured-badge-new {
+    border-color: #c492ee;
+    color: #d6b5f5;
+    background: rgba(118,82,168,.12);
+}
+
+.kb-featured-icon {
+    display: grid;
+    width: 53px;
+    height: 53px;
+    margin-bottom: 16px;
+    place-items: center;
+    border: 1px solid #d4a017;
+    border-radius: 50%;
+    color: #f3c45e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+}
+
+.kb-featured-card h3 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+    line-height: 1.16;
+}
+
+.kb-featured-card p {
+    margin: 0 0 20px;
+    color: #c9ccc8;
+    line-height: 1.58;
+}
+
+.kb-featured-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    margin-top: auto;
+    color: #efb842;
+    font-weight: 800;
+}
+
+.kb-featured-arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+    transition: transform .2s ease;
+}
+
+.kb-featured-card:hover .kb-featured-arrow,
+.kb-featured-card:focus .kb-featured-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+    .kb-featured-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kb-featured-card-primary {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 620px) {
+    .kb-featured-guides {
+        padding: 30px 0 34px;
+    }
+
+    .kb-featured-heading {
+        display: block;
+    }
+
+    .kb-featured-view-all {
+        display: inline-block;
+        margin-top: 12px;
+    }
+
+    .kb-featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-featured-card-primary {
+        grid-column: auto;
+    }
+
+    .kb-featured-card {
+        min-height: 0;
+        padding: 21px;
+    }
+}
+</style>
+<style id="kb-featured-compact-styles">
+.kb-featured-guides {
+    padding: 27px 0 30px !important;
+}
+
+.kb-featured-heading {
+    margin-bottom: 17px !important;
+}
+
+.kb-featured-kicker {
+    margin-bottom: 5px !important;
+    font-size: .7rem !important;
+}
+
+.kb-featured-heading h2 {
+    margin-bottom: 6px !important;
+    font-size: clamp(1.65rem, 3vw, 2.2rem) !important;
+}
+
+.kb-featured-heading p {
+    max-width: 670px;
+    font-size: .95rem !important;
+    line-height: 1.48 !important;
+}
+
+.kb-featured-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+}
+
+.kb-featured-card,
+.kb-featured-card-primary {
+    min-height: 205px !important;
+    padding: 18px !important;
+}
+
+.kb-featured-badges {
+    gap: 5px !important;
+    margin-bottom: 11px !important;
+}
+
+.kb-featured-badge {
+    padding: 4px 7px !important;
+    font-size: .61rem !important;
+}
+
+.kb-featured-icon {
+    width: 42px !important;
+    height: 42px !important;
+    margin-bottom: 11px !important;
+    font-size: 1.2rem !important;
+}
+
+.kb-featured-card h3 {
+    margin-bottom: 7px !important;
+    font-size: clamp(1.12rem, 1.8vw, 1.42rem) !important;
+    line-height: 1.14 !important;
+}
+
+.kb-featured-card p {
+    margin-bottom: 13px !important;
+    font-size: .91rem !important;
+    line-height: 1.45 !important;
+}
+
+.kb-featured-action {
+    font-size: .88rem !important;
+}
+
+.kb-featured-arrow {
+    font-size: 1.25rem !important;
+}
+
+@media (max-width: 900px) {
+    .kb-featured-grid {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .kb-featured-card-primary {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+@media (max-width: 620px) {
+    .kb-featured-guides {
+        padding: 24px 0 27px !important;
+    }
+
+    .kb-featured-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kb-featured-card-primary {
+        grid-column: auto !important;
+    }
+
+    .kb-featured-card,
+    .kb-featured-card-primary {
+        min-height: 0 !important;
+        padding: 17px !important;
+    }
+}
+</style>
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -1203,7 +1520,9 @@
 
   <!-- Decorative SVG artwork belongs ONLY to Knowledge Hub body -->
 
-  <section class="kb-concept-hero">
+
+
+<section class="kb-concept-hero">
 
     <svg class="kb-brain-art kb-brain-left"
          viewBox="0 0 260 260"
@@ -1369,7 +1688,8 @@
        KNOWLEDGE EXPLORER
        ====================================================== -->
 
-  <section class="kb-explorer">
+
+<section class="kb-explorer">
 
     <div class="kb-explorer-left">
 
@@ -1616,7 +1936,261 @@
 
 </main>
 
-    <footer class="footer home-footer">
+    <!-- KNOWLEDGE FEATURED GUIDES START -->
+<section class="kb-featured-guides" aria-labelledby="kbFeaturedTitle">
+    <div class="kb-featured-wrap">
+        <div class="kb-featured-heading">
+            <div class="kb-featured-heading-copy">
+                <span class="kb-featured-kicker">New and featured</span>
+                <h2 id="kbFeaturedTitle">Explore our latest complete guides</h2>
+                <p>
+                    Start with the newest evidence based resources, or browse the established
+                    Knowledge Base categories below.
+                </p>
+            </div>
+
+            <a class="kb-featured-view-all"
+               href="/knowledge-search.html"
+               aria-label="Explore every Knowledge Base guide">
+                View all guides →
+            </a>
+        </div>
+
+        <div class="kb-featured-grid">
+<!-- SCHIZOID SCHIZOTYPAL NEWEST CARDS START -->
+<a class="kb-featured-card kb-featured-card-primary" href="/knowledge/schizoid-personality-disorder.html">
+<div class="kb-featured-badges"><span class="kb-featured-badge kb-featured-badge-new">New</span><span class="kb-featured-badge">Complete guide</span></div>
+<span class="kb-featured-icon" aria-hidden="true">○</span>
+<h3>Schizoid Personality Disorder</h3>
+<p>Explore detachment, restricted emotional expression, relationships, assessment, differences and treatment.</p>
+<span class="kb-featured-action">Explore schizoid personality <span class="kb-featured-arrow">→</span></span>
+</a>
+
+<a class="kb-featured-card" href="/knowledge/schizotypal-personality-disorder.html">
+<div class="kb-featured-badges"><span class="kb-featured-badge kb-featured-badge-new">New</span><span class="kb-featured-badge">Complete guide</span></div>
+<span class="kb-featured-icon" aria-hidden="true">△</span>
+<h3>Schizotypal Personality Disorder</h3>
+<p>Explore unusual beliefs and perceptions, social anxiety, spectrum relationships, assessment and treatment.</p>
+<span class="kb-featured-action">Explore schizotypal personality <span class="kb-featured-arrow">→</span></span>
+</a>
+<!-- SCHIZOID SCHIZOTYPAL NEWEST CARDS END -->
+<!-- CLUSTER A NEWEST FEATURED CARDS START -->
+<a class="kb-featured-card kb-featured-card-primary"
+   href="/knowledge/what-are-cluster-a-personality-disorders.html">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge kb-featured-badge-new">New</span>
+        <span class="kb-featured-badge">Complete guide</span>
+    </div>
+    <span class="kb-featured-icon" aria-hidden="true">A</span>
+    <h3>What Are Cluster A Personality Disorders?</h3>
+    <p>Explore paranoid, schizoid and schizotypal personality disorders, their differences, assessment and treatment.</p>
+    <span class="kb-featured-action">Explore Cluster A <span class="kb-featured-arrow">→</span></span>
+</a>
+
+<a class="kb-featured-card"
+   href="/knowledge/paranoid-personality-disorder.html">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge kb-featured-badge-new">New</span>
+        <span class="kb-featured-badge">Complete guide</span>
+    </div>
+    <span class="kb-featured-icon" aria-hidden="true">◉</span>
+    <h3>Paranoid Personality Disorder</h3>
+    <p>Understand persistent mistrust, suspicious interpretation, differential diagnosis, relationships and treatment.</p>
+    <span class="kb-featured-action">Explore PPD <span class="kb-featured-arrow">→</span></span>
+</a>
+<!-- CLUSTER A NEWEST FEATURED CARDS END -->
+            <a class="kb-featured-card kb-featured-card-primary"
+               href="/knowledge/what-is-the-dark-hexad.html"
+               aria-label="Read What Is the Dark Hexad">
+                <div class="kb-featured-badges">
+                    <span class="kb-featured-badge kb-featured-badge-new">New</span>
+                    <span class="kb-featured-badge">Complete guide</span>
+                </div>
+
+                <span class="kb-featured-icon" aria-hidden="true">⬡</span>
+
+                <h3>What Is the Dark Hexad?</h3>
+
+                <p>
+                    Explore Machiavellianism, narcissism, psychopathy, everyday sadism,
+                    spitefulness and greed, including the evidence, measurement problems
+                    and shared dark core.
+                </p>
+
+                <span class="kb-featured-action">
+                    Explore the Dark Hexad
+                    <span class="kb-featured-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+
+            <a class="kb-featured-card"
+               href="/knowledge/what-are-cluster-b-personality-disorders.html"
+               aria-label="Read What Are Cluster B Personality Disorders">
+                <div class="kb-featured-badges">
+                    <span class="kb-featured-badge">Flagship guide</span>
+                </div>
+
+                <span class="kb-featured-icon" aria-hidden="true">Ψ</span>
+
+                <h3>What Are Cluster B Personality Disorders?</h3>
+
+                <p>
+                    Understand borderline, antisocial, histrionic and narcissistic
+                    personality disorders without stereotypes or amateur diagnosis.
+                </p>
+
+                <span class="kb-featured-action">
+                    Explore Cluster B
+                    <span class="kb-featured-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+
+            <a class="kb-featured-card"
+               href="/knowledge/what-is-narcissism.html"
+               aria-label="Read What Is Narcissism">
+                <div class="kb-featured-badges">
+                    <span class="kb-featured-badge">Essential guide</span>
+                </div>
+
+                <span class="kb-featured-icon" aria-hidden="true">N</span>
+
+                <h3>What Is Narcissism?</h3>
+
+                <p>
+                    Separate narcissistic traits, everyday self focus and Narcissistic
+                    Personality Disorder using careful, evidence based psychology.
+                </p>
+
+                <span class="kb-featured-action">
+                    Explore narcissism
+                    <span class="kb-featured-arrow" aria-hidden="true">→</span>
+                </span>
+            </a>
+
+<!-- KNOWLEDGE FEATURED ROW TWO START -->
+
+<a class="kb-featured-card"
+   href="/knowledge/what-is-darvo.html"
+   aria-label="Read What Is DARVO">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge">Definition</span>
+    </div>
+
+    <span class="kb-featured-icon" aria-hidden="true">D↔O</span>
+
+    <h3>What Is DARVO?</h3>
+
+    <p>
+        Understand denial, attack and reversal of victim and offender roles,
+        including its origins, limitations and relationship to blame shifting.
+    </p>
+
+    <span class="kb-featured-action">
+        Explore DARVO
+        <span class="kb-featured-arrow" aria-hidden="true">→</span>
+    </span>
+</a>
+
+<a class="kb-featured-card"
+   href="/knowledge/what-is-gaslighting.html"
+   aria-label="Read What Is Gaslighting">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge">Complete guide</span>
+    </div>
+
+    <span class="kb-featured-icon" aria-hidden="true">◐</span>
+
+    <h3>What Is Gaslighting?</h3>
+
+    <p>
+        Learn what gaslighting means, how persistent reality manipulation differs
+        from disagreement and why context and repeated patterns matter.
+    </p>
+
+    <span class="kb-featured-action">
+        Explore gaslighting
+        <span class="kb-featured-arrow" aria-hidden="true">→</span>
+    </span>
+</a>
+
+<a class="kb-featured-card"
+   href="/knowledge/what-is-cognitive-dissonance.html"
+   aria-label="Read What Is Cognitive Dissonance">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge">Quick answer</span>
+    </div>
+
+    <span class="kb-featured-icon" aria-hidden="true">≠</span>
+
+    <h3>What Is Cognitive Dissonance?</h3>
+
+    <p>
+        Explore the discomfort created by conflicting beliefs, values and actions,
+        together with the ways people try to reduce that inconsistency.
+    </p>
+
+    <span class="kb-featured-action">
+        Explore cognitive dissonance
+        <span class="kb-featured-arrow" aria-hidden="true">→</span>
+    </span>
+</a>
+
+<!-- KNOWLEDGE FEATURED ROW TWO END -->
+<!-- KNOWLEDGE FEATURED PSYCHOPATHY CARDS START -->
+
+<a class="kb-featured-card kb-featured-card-primary"
+   href="/knowledge/what-is-psychopathy.html"
+   aria-label="Read What Is Psychopathy">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge kb-featured-badge-new">New</span>
+        <span class="kb-featured-badge">Flagship guide</span>
+    </div>
+
+    <span class="kb-featured-icon" aria-hidden="true">Ψ</span>
+
+    <h3>What Is Psychopathy?</h3>
+
+    <p>
+        Explore psychopathic traits, competing models, professional assessment,
+        development, emotion, empathy, risk, treatment and major misconceptions.
+    </p>
+
+    <span class="kb-featured-action">
+        Explore psychopathy
+        <span class="kb-featured-arrow" aria-hidden="true">→</span>
+    </span>
+</a>
+
+<a class="kb-featured-card"
+   href="/knowledge/psychopathy-vs-aspd-vs-sociopathy.html"
+   aria-label="Read Psychopathy vs ASPD vs Sociopathy">
+    <div class="kb-featured-badges">
+        <span class="kb-featured-badge kb-featured-badge-new">New</span>
+        <span class="kb-featured-badge">Comparison guide</span>
+    </div>
+
+    <span class="kb-featured-icon" aria-hidden="true">≍</span>
+
+    <h3>Psychopathy vs ASPD vs Sociopathy</h3>
+
+    <p>
+        Compare a forensic personality construct, a recognised diagnosis and
+        an informal term that has no single agreed clinical definition.
+    </p>
+
+    <span class="kb-featured-action">
+        Compare the differences
+        <span class="kb-featured-arrow" aria-hidden="true">→</span>
+    </span>
+</a>
+
+<!-- KNOWLEDGE FEATURED PSYCHOPATHY CARDS END -->
+</div>
+    </div>
+</section>
+<!-- KNOWLEDGE FEATURED GUIDES END -->
+
+<footer class="footer home-footer">
       <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
         <p class="mb-0">© <span id="year"></span> Andy Fish</p>
         <div class="footer-links">

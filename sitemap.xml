@@ -136,4 +136,36 @@
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-  </url></urlset>
+  </url>  <url>
+    <loc>https://reikifish.com/knowledge/what-is-psychopathy.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>  <url>
+    <loc>https://reikifish.com/knowledge/psychopathy-vs-aspd-vs-sociopathy.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>  <url>
+    <loc>https://reikifish.com/knowledge/what-are-cluster-a-personality-disorders.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>  <url>
+    <loc>https://reikifish.com/knowledge/paranoid-personality-disorder.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>  <url>
+    <loc>https://reikifish.com/knowledge/schizoid-personality-disorder.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://reikifish.com/knowledge/schizotypal-personality-disorder.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

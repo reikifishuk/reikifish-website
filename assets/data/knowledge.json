@@ -268,5 +268,109 @@
                          "personality psychology"
                      ],
         "url":  "knowledge/what-is-the-dark-hexad.html"
+    },
+    {
+        "slug":  "what-is-psychopathy",
+        "title":  "What Is Psychopathy? The Complete Evidence Based Guide",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "A comprehensive guide to psychopathic traits, competing models, assessment, development, emotion, empathy, risk, treatment and misconceptions.",
+        "keywords":  [
+                         "psychopathy",
+                         "psychopath",
+                         "psychopathic traits",
+                         "PCL-R",
+                         "Triarchic model",
+                         "boldness",
+                         "meanness",
+                         "disinhibition",
+                         "empathy",
+                         "ASPD",
+                         "antisocial personality disorder",
+                         "personality psychology"
+                     ],
+        "url":  "knowledge/what-is-psychopathy.html"
+    },
+    {
+        "slug":  "psychopathy-vs-aspd-vs-sociopathy",
+        "title":  "Psychopathy vs ASPD vs Sociopathy",
+        "type":  "Comparison Guide",
+        "category":  "Personality",
+        "summary":  "Compare psychopathy, Antisocial Personality Disorder and sociopathy, including diagnostic status, assessment, overlap and important differences.",
+        "keywords":  [
+                         "psychopathy vs ASPD",
+                         "psychopath vs sociopath",
+                         "ASPD",
+                         "antisocial personality disorder",
+                         "sociopathy",
+                         "sociopath",
+                         "psychopathy differences",
+                         "personality disorder comparison"
+                     ],
+        "url":  "knowledge/psychopathy-vs-aspd-vs-sociopathy.html"
+    },
+    {
+        "slug":  "what-are-cluster-a-personality-disorders",
+        "title":  "What Are Cluster A Personality Disorders?",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "A complete guide to paranoid, schizoid and schizotypal personality disorders, their differences, assessment and treatment.",
+        "keywords":  [
+                         "Cluster A",
+                         "Cluster A personality disorders",
+                         "paranoid",
+                         "schizoid",
+                         "schizotypal",
+                         "personality disorders"
+                     ],
+        "url":  "knowledge/what-are-cluster-a-personality-disorders.html"
+    },
+    {
+        "slug":  "paranoid-personality-disorder",
+        "title":  "Paranoid Personality Disorder",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "Understand persistent mistrust, suspicious interpretation, assessment, differential diagnosis, relationships and treatment.",
+        "keywords":  [
+                         "Paranoid Personality Disorder",
+                         "PPD",
+                         "paranoid personality",
+                         "mistrust",
+                         "suspicion",
+                         "Cluster A"
+                     ],
+        "url":  "knowledge/paranoid-personality-disorder.html"
+    },
+    {
+        "slug":  "schizoid-personality-disorder",
+        "title":  "Schizoid Personality Disorder",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "A complete guide to detachment, restricted emotional expression, relationships, assessment and treatment.",
+        "keywords":  [
+                         "Schizoid Personality Disorder",
+                         "SPD",
+                         "schizoid personality",
+                         "detachment",
+                         "Cluster A",
+                         "introversion"
+                     ],
+        "url":  "knowledge/schizoid-personality-disorder.html"
+    },
+    {
+        "slug":  "schizotypal-personality-disorder",
+        "title":  "Schizotypal Personality Disorder",
+        "type":  "Complete Guide",
+        "category":  "Personality",
+        "summary":  "A complete guide to unusual beliefs and perceptions, social anxiety, assessment, spectrum relationships and treatment.",
+        "keywords":  [
+                         "Schizotypal Personality Disorder",
+                         "STPD",
+                         "schizotypal",
+                         "schizotypy",
+                         "Cluster A",
+                         "schizophrenia spectrum"
+                     ],
+        "url":  "knowledge/schizotypal-personality-disorder.html"
     }
 ]
