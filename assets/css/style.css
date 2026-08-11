@@ -12892,3 +12892,415 @@ body:has(.pa-visual-hero) .pa-page {
         padding: 27px 24px;
     }
 }
+
+/* RF_COACHING_SUBPAGE_CLEAN_FIX_START */
+
+/*
+ * Trauma and Parental Alienation previously inherited the generic
+ * 46vh inner-header height and then compensated with negative offsets.
+ * These pages now use a normal fixed-header clearance.
+ */
+body:has(main.trauma-page) > header.inner-header,
+body:has(main.pa-page) > header.inner-header {
+    width: 100% !important;
+    height: 74px !important;
+    min-height: 74px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #181a1d !important;
+}
+
+body:has(main.trauma-page) > header.inner-header + main.trauma-page,
+body:has(main.pa-page) > header.inner-header + main.pa-page {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+}
+
+/* Reset earlier negative banner-position corrections. */
+html body main.trauma-page > .trauma-impact-banner:first-child,
+html body main.trauma-page > .trauma-banner-v7:first-child,
+html body main.pa-page > .pa-visual-hero:first-child,
+.pa-page .pa-visual-hero {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    transform: none !important;
+}
+
+/* Shared visual breadcrumb */
+.rf-coaching-subpage-breadcrumb {
+    position: relative;
+    z-index: 20;
+    width: min(1680px, calc(100% - 64px));
+    margin: 0 auto;
+    padding: 16px 0 8px;
+}
+
+.rf-coaching-subpage-breadcrumb__inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.rf-coaching-subpage-breadcrumb__hub {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 15px 7px 7px;
+    border: 1px solid rgba(226, 172, 66, 0.72);
+    border-radius: 999px;
+    color: #f5f1e9;
+    background: rgba(7, 12, 12, 0.72);
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        border-color 180ms ease,
+        background-color 180ms ease,
+        transform 180ms ease;
+}
+
+.rf-coaching-subpage-breadcrumb__hub:hover,
+.rf-coaching-subpage-breadcrumb__hub:focus-visible {
+    color: #ffffff;
+    border-color: #efb548;
+    background: rgba(239, 181, 72, 0.12);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.rf-coaching-subpage-breadcrumb__hub:focus-visible {
+    outline: 3px solid rgba(239, 181, 72, 0.35);
+    outline-offset: 3px;
+}
+
+.rf-coaching-subpage-breadcrumb__back {
+    display: inline-grid;
+    width: 32px;
+    height: 32px;
+    place-items: center;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    color: #111515;
+    background: #efb548;
+    font-size: 1.05rem;
+    font-weight: 800;
+}
+
+.rf-coaching-subpage-breadcrumb__separator {
+    color: rgba(245, 241, 233, 0.88);
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.rf-coaching-subpage-breadcrumb__current {
+    color: #efad3b;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+/* Trauma: compact the decorative banner without clipping it. */
+.trauma-page .trauma-banner-v7 {
+    min-height: 250px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.trauma-page .trauma-banner-v7-inner {
+    min-height: 190px !important;
+    padding-top: 28px !important;
+    padding-bottom: 38px !important;
+}
+
+/* Trauma: one consistent section rhythm. */
+.trauma-page .trauma-hero,
+.trauma-page .trauma-understanding,
+.trauma-page .trauma-support-section,
+.trauma-page .trauma-process,
+.trauma-page .trauma-boundary-section,
+.trauma-page .trauma-final-cta {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+/*
+ * The Understanding block had outer section padding plus another
+ * large padding declaration on its inner heading/grid.
+ */
+.trauma-page .trauma-understanding .trauma-section-inner,
+.trauma-page .trauma-understanding .trauma-section-heading,
+.trauma-page .trauma-understanding
+:is(section, div):has(> .trauma-impact-visual) {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Preserve sensible space inside actual panels and cards. */
+.trauma-page .trauma-boundary-panel {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.trauma-page .trauma-support-intro {
+    margin-bottom: 40px !important;
+}
+
+/* Parental Alienation: allow the hero to size from its content. */
+.pa-page .pa-visual-hero {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pa-page .pa-visual-inner {
+    height: auto !important;
+    min-height: 430px !important;
+}
+
+/* Remove the later page-wide negative positioning corrections. */
+html body main.pa-page {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    transform: none !important;
+}
+
+/* Parental Alienation: remove doubled spacing between content blocks. */
+.pa-page .pa-grounded-section {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.pa-page .pa-grounded-inner {
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.pa-page .pa-reality-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.pa-page .pa-reality-inner {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.pa-page #pa-help-premium {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.pa-page .pa-behaviours,
+.pa-page .pa-guidance,
+.pa-page .pa-final {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+}
+
+.pa-page .pa-guidance-panel,
+.pa-page .pa-final-inner {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 991.98px) {
+    body:has(main.trauma-page) > header.inner-header,
+    body:has(main.pa-page) > header.inner-header {
+        height: 68px !important;
+        min-height: 68px !important;
+    }
+
+    .trauma-page .trauma-hero,
+    .trauma-page .trauma-understanding,
+    .trauma-page .trauma-support-section,
+    .trauma-page .trauma-process,
+    .trauma-page .trauma-boundary-section,
+    .trauma-page .trauma-final-cta,
+    .pa-page .pa-grounded-inner,
+    .pa-page .pa-reality-inner,
+    .pa-page #pa-help-premium,
+    .pa-page .pa-behaviours,
+    .pa-page .pa-guidance,
+    .pa-page .pa-final {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+
+    .pa-page .pa-visual-inner {
+        min-height: 0 !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body:has(main.trauma-page) > header.inner-header,
+    body:has(main.pa-page) > header.inner-header {
+        height: 64px !important;
+        min-height: 64px !important;
+    }
+
+    .rf-coaching-subpage-breadcrumb {
+        width: calc(100% - 32px);
+        padding-top: 12px;
+    }
+
+    .rf-coaching-subpage-breadcrumb__inner {
+        gap: 8px;
+    }
+
+    .rf-coaching-subpage-breadcrumb__hub {
+        padding-right: 12px;
+        font-size: 0.84rem;
+    }
+
+    .rf-coaching-subpage-breadcrumb__current {
+        max-width: calc(100% - 135px);
+        font-size: 0.78rem;
+    }
+
+    .trauma-page .trauma-banner-v7 {
+        min-height: 0 !important;
+    }
+
+    .trauma-page .trauma-banner-v7-inner {
+        min-height: 0 !important;
+        padding-top: 24px !important;
+        padding-bottom: 32px !important;
+    }
+
+    .trauma-page .trauma-hero,
+    .trauma-page .trauma-understanding,
+    .trauma-page .trauma-support-section,
+    .trauma-page .trauma-process,
+    .trauma-page .trauma-boundary-section,
+    .trauma-page .trauma-final-cta,
+    .pa-page .pa-grounded-inner,
+    .pa-page .pa-reality-inner,
+    .pa-page #pa-help-premium,
+    .pa-page .pa-behaviours,
+    .pa-page .pa-guidance,
+    .pa-page .pa-final {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rf-coaching-subpage-breadcrumb__hub {
+        transition: none;
+    }
+}
+
+/* RF_COACHING_SUBPAGE_CLEAN_FIX_END */
+
+/* PA_VISIBLE_H1_STYLE_START */
+.pa-page .pa-visual-copy h1 {
+    max-width: 800px;
+    margin: 0;
+    color: #f2efea;
+    font-size: clamp(42px, 4vw, 68px);
+    font-weight: 500;
+    line-height: 1.03;
+    letter-spacing: -.035em;
+}
+
+.pa-page .pa-visual-copy h1 em {
+    display: block;
+    margin-top: 10px;
+    color: #e5a94e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: .92em;
+    font-weight: 400;
+    line-height: 1.05;
+}
+/* PA_VISIBLE_H1_STYLE_END */
+
+/* RF_BREADCRUMB_CLEARANCE_START */
+
+/*
+ * The rendered desktop navigation is taller than the earlier
+ * calculated placeholder. Reserve its actual height so neither
+ * breadcrumb can sit underneath it.
+ */
+body:has(main.trauma-page) > header.inner-header,
+body:has(main.pa-page) > header.inner-header {
+    height: 108px !important;
+    min-height: 108px !important;
+}
+
+.trauma-page > .trauma-banner-v7:first-child
+> .rf-coaching-subpage-breadcrumb,
+.pa-page > .pa-visual-hero:first-child
+> .rf-coaching-subpage-breadcrumb {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    z-index: 50 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    padding-top: 18px !important;
+    padding-bottom: 10px !important;
+}
+
+@media (max-width: 991.98px) {
+    body:has(main.trauma-page) > header.inner-header,
+    body:has(main.pa-page) > header.inner-header {
+        height: 84px !important;
+        min-height: 84px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body:has(main.trauma-page) > header.inner-header,
+    body:has(main.pa-page) > header.inner-header {
+        height: 76px !important;
+        min-height: 76px !important;
+    }
+
+    .trauma-page > .trauma-banner-v7:first-child
+    > .rf-coaching-subpage-breadcrumb,
+    .pa-page > .pa-visual-hero:first-child
+    > .rf-coaching-subpage-breadcrumb {
+        padding-top: 12px !important;
+    }
+}
+
+/* RF_BREADCRUMB_CLEARANCE_END */
