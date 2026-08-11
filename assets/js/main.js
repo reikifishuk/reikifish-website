@@ -339,3 +339,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+/* RF_FOOTER_PRIVACY_LINK_START */
+
+(function () {
+    function installPrivacyFooterLinks() {
+        document.querySelectorAll(".footer-links").forEach(function (footer) {
+            var privacyLink = footer.querySelector(
+                'a[href="privacy-policy.html"]'
+            );
+
+            if (!privacyLink) {
+                privacyLink = document.createElement("a");
+                privacyLink.href = "privacy-policy.html";
+                privacyLink.textContent = "Privacy";
+                privacyLink.setAttribute(
+                    "data-footer-privacy-link",
+                    "true"
+                );
+            }
+
+            /*
+             * Appending an existing element moves it to the end.
+             * This guarantees Privacy is always the final footer link.
+             */
+            footer.appendChild(privacyLink);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            installPrivacyFooterLinks
+        );
+    }
+    else {
+        installPrivacyFooterLinks();
+    }
+})();
+
+/* RF_FOOTER_PRIVACY_LINK_END */
