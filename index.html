@@ -184,195 +184,6 @@ body:has(#rf-support-feature) main > #meet-andy > :first-child {
     }
 }
 </style>
-<style id="reikifish-balanced-navigation">
-/*
-   Balanced homepage navigation:
-   96px desktop bar, clearly visible centred logo and safe hero clearance.
-   No transforms affect the hero or later sections.
-*/
-
-@media (min-width: 992px) {
-    body.home-page .site-nav.navbar {
-        height: 96px !important;
-        min-height: 96px !important;
-        padding: 0 28px !important;
-    }
-
-    body.home-page .site-nav > .container,
-    body.home-page .site-nav > .container-fluid {
-        height: 96px !important;
-        min-height: 96px !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-        align-items: center !important;
-    }
-
-    body.home-page .site-nav .navbar-brand {
-        display: flex !important;
-        flex: 0 0 260px !important;
-        width: 260px !important;
-        height: 96px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        align-items: center !important;
-        justify-content: flex-start !important;
-    }
-
-    body.home-page .site-nav .site-logo {
-        display: block !important;
-        width: 178px !important;
-        height: auto !important;
-        max-width: none !important;
-        max-height: none !important;
-        margin: 0 !important;
-        object-fit: contain !important;
-        transform: translateY(2px) scale(1.72) !important;
-        transform-origin: left center !important;
-    }
-
-    body.home-page .site-nav .navbar-collapse,
-    body.home-page .site-nav .navbar-nav {
-        min-height: 96px !important;
-        align-items: center !important;
-    }
-
-    /*
-       96px navigation plus 24px safe clearance.
-       Content remains fully below the fixed navigation.
-    */
-    body.home-page .home-hero {
-        min-height: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
-        padding-top: 120px !important;
-    }
-
-    body.home-page .home-hero-grid {
-        align-items: center !important;
-    }
-}
-
-/* Tablet and mobile keep a safe menu-button area. */
-@media (max-width: 991.98px) {
-    body.home-page .site-nav.navbar {
-        min-height: 72px !important;
-        padding-top: 7px !important;
-        padding-bottom: 7px !important;
-    }
-
-    body.home-page .site-nav .navbar-brand {
-        display: flex !important;
-        width: 165px !important;
-        min-height: 58px !important;
-        padding: 0 !important;
-        overflow: visible !important;
-        align-items: center !important;
-    }
-
-    body.home-page .site-nav .site-logo {
-        width: 142px !important;
-        height: auto !important;
-        max-width: none !important;
-        max-height: none !important;
-        transform: scale(1.22) !important;
-        transform-origin: left center !important;
-    }
-
-    body.home-page .home-hero {
-        min-height: 0 !important;
-        height: auto !important;
-        overflow: visible !important;
-        padding-top: 96px !important;
-    }
-}
-
-@media (max-width: 600px) {
-    body.home-page .site-nav .navbar-brand {
-        width: 145px !important;
-    }
-
-    body.home-page .site-nav .site-logo {
-        width: 128px !important;
-        transform: scale(1.15) !important;
-    }
-
-    body.home-page .home-hero {
-        padding-top: 92px !important;
-    }
-}
-</style>
-<style id="reikifish-responsive-book-image">
-/*
-   Responsive hero-book enhancement.
-
-   The frame, columns and hero position are unchanged.
-   Only the image inside its existing frame is enlarged.
-*/
-
-/* Preserve the frame’s shape and contain the enlarged image. */
-body.home-page .home-hero .hero-frame {
-    position: relative;
-    overflow: hidden !important;
-    isolation: isolate;
-}
-
-/* Desktop: make the book and scene approximately 8% larger. */
-@media (min-width: 1200px) {
-    body.home-page .home-hero .hero-frame .media-image,
-    body.home-page .home-hero .hero-frame img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        transform: scale(1.08) !important;
-        transform-origin: center center !important;
-    }
-}
-
-/* Smaller desktop and tablet: use a gentler enlargement. */
-@media (min-width: 768px) and (max-width: 1199.98px) {
-    body.home-page .home-hero .hero-frame .media-image,
-    body.home-page .home-hero .hero-frame img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        transform: scale(1.04) !important;
-        transform-origin: center center !important;
-    }
-}
-
-/*
-   Mobile: preserve the complete composition.
-   No enlargement or cropping is introduced.
-*/
-@media (max-width: 767.98px) {
-    body.home-page .home-hero .hero-frame {
-        width: 100% !important;
-        height: auto !important;
-        aspect-ratio: 16 / 9;
-    }
-
-    body.home-page .home-hero .hero-frame .media-image,
-    body.home-page .home-hero .hero-frame img {
-        display: block !important;
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        object-fit: cover !important;
-        object-position: center center !important;
-        transform: none !important;
-    }
-}
-
-/* Very small phones retain natural responsive width. */
-@media (max-width: 420px) {
-    body.home-page .home-hero .hero-frame {
-        border-radius: 16px;
-    }
-}
-</style>
 </head>
   <body class="home-page">
     <header class="home-shell">
@@ -414,6 +225,7 @@ body.home-page .home-hero .hero-frame {
 </div></li>
               <li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 
             </ul>
           </div>
@@ -440,7 +252,8 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
               </div>
               <div class="home-quote-panel">
                 <p class="mb-0">
-                  "Stillness is not emptiness. It is where the mind learns to hear itself."
+                  "Stillness is not emptiness.<br>
+                  It is where the mind learns to hear itself."
                 </p>
               </div>
             </div>
