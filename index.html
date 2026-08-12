@@ -184,6 +184,77 @@ body:has(#rf-support-feature) main > #meet-andy > :first-child {
     }
 }
 </style>
+<style id="reikifish-responsive-book-image">
+/*
+   Responsive hero-book enhancement.
+
+   The frame, columns and hero position are unchanged.
+   Only the image inside its existing frame is enlarged.
+*/
+
+/* Preserve the frame’s shape and contain the enlarged image. */
+body.home-page .home-hero .hero-frame {
+    position: relative;
+    overflow: hidden !important;
+    isolation: isolate;
+}
+
+/* Desktop: make the book and scene approximately 8% larger. */
+@media (min-width: 1200px) {
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.08) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/* Smaller desktop and tablet: use a gentler enlargement. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.04) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/*
+   Mobile: preserve the complete composition.
+   No enlargement or cropping is introduced.
+*/
+@media (max-width: 767.98px) {
+    body.home-page .home-hero .hero-frame {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+    }
+}
+
+/* Very small phones retain natural responsive width. */
+@media (max-width: 420px) {
+    body.home-page .home-hero .hero-frame {
+        border-radius: 16px;
+    }
+}
+</style>
 </head>
   <body class="home-page">
     <header class="home-shell">
@@ -252,8 +323,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
               </div>
               <div class="home-quote-panel">
                 <p class="mb-0">
-                  "Stillness is not emptiness.<br>
-                  It is where the mind learns to hear itself."
+                  "Stillness is not emptiness. It is where the mind learns to hear itself."
                 </p>
               </div>
             </div>
