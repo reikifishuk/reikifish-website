@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
 
-    const response = await fetch("assets/data/knowledge.json?v=15");
+    const response = await fetch("assets/data/knowledge.json?v=16");
 
     if (!response.ok) {
       throw new Error("Knowledge database could not be loaded.");
