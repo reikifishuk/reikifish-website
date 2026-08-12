@@ -1,6 +1,37 @@
 {
   "items": [
     {
+      "title": "The Grey Method: Staying Regulated When Someone Wants a Reaction",
+      "slug": "the-grey-method-staying-regulated-under-provocation",
+      "url": "articles/the-grey-method-staying-regulated-under-provocation.html",
+      "date": "2026-08-12",
+      "dateLabel": "12 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "When someone wants an emotional reaction, remaining calm can feel almost impossible. The Grey Method, guided by Andy Fish’s Walking the Grey, offers a structured way to pause, regulate fear, protect your boundaries and respond without surrendering truth or identity.",
+      "category": "Psychology",
+      "categories": [
+        "Psychology"
+      ],
+      "tags": [
+        "['The Grey Method'",
+        "'Walking the Grey'",
+        "'Emotional Regulation'",
+        "'Emotional Triggers'",
+        "'Conflict'",
+        "'Boundaries'",
+        "'Trauma Recovery'",
+        "'Self Control'",
+        "'Reiki'",
+        "'Mindfulness'",
+        "'Personal Development'",
+        "'Andy Fish']"
+      ],
+      "image": "assets/images/blog/the-grey-method-staying-regulated-under-provocation.png",
+      "imageAlt": "The Grey Method showing a calm person remaining emotionally regulated while surrounded by conflict and provocation",
+      "readingTime": "21 min read",
+      "featured": true
+    },
+    {
       "title": "What Is a Narcissist? The Evidence-Led Guide to Narcissism, Traits and NPD",
       "slug": "what-is-a-narcissist",
       "url": "articles/what-is-a-narcissist.html",
@@ -147,7 +178,7 @@
       "image": "assets/images/blog/book_of_darvo.png",
       "imageAlt": "The Book of DARVO by Andy Fish explores blame reversal, smear campaigns, coercive control and psychological abuse.",
       "readingTime": "14 min read",
-      "featured": true
+      "featured": false
     },
     {
       "title": "DARVO: When the Person Who Hurt You Claims to Be the Victim",
