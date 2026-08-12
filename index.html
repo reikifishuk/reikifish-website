@@ -18,6 +18,172 @@ N<!DOCTYPE html>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
     <link rel="stylesheet" href="assets/css/style.css?v=20260811-support-nav-v2" />
       <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<style id="reikifish-home-equal-gaps">
+/* HOMEPAGE EQUAL-GAP RULES START */
+
+/*
+   Sections retain their own background and internal layouts.
+   Their outer vertical spacing is replaced by one consistent gap.
+*/
+
+body:has(#rf-support-feature) main {
+    --home-block-gap: 64px;
+}
+
+/* Remove the causes of the excessive empty areas. */
+body:has(#rf-support-feature) main > section {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+   Standardise the outer space between every direct section.
+   Half above plus half below produces exactly 64px between blocks.
+   The first homepage section is excluded to preserve the hero.
+*/
+body:has(#rf-support-feature) main > section:not(:first-child) {
+    padding-top: calc(var(--home-block-gap) / 2) !important;
+    padding-bottom: calc(var(--home-block-gap) / 2) !important;
+}
+
+/*
+   The Support Finder's original section padding is overridden,
+   while the card's internal padding remains unchanged.
+*/
+body:has(#rf-support-feature) main > #rf-support-feature {
+    padding-top: calc(var(--home-block-gap) / 2) !important;
+    padding-right: clamp(16px, 3vw, 32px) !important;
+    padding-bottom: calc(var(--home-block-gap) / 2) !important;
+    padding-left: clamp(16px, 3vw, 32px) !important;
+}
+
+/* Prevent content margins from creating extra space at section edges. */
+body:has(#rf-support-feature) main > section:not(:first-child) > :first-child {
+    margin-top: 0 !important;
+}
+
+body:has(#rf-support-feature) main > section:not(:first-child) > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Keep all main block containers centred consistently. */
+body:has(#rf-support-feature) main > section > :is(
+    .container,
+    .section-container,
+    .content-container,
+    .section-inner,
+    .inner,
+    .wrapper,
+    .wrap
+) {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* Equalise cards only within their own rows. */
+body:has(#rf-support-feature) main :is(
+    .card-grid,
+    .feature-grid,
+    .services-grid,
+    .testimonial-grid,
+    .testimonials-grid,
+    .topics-grid,
+    .patterns-grid
+) {
+    align-items: stretch !important;
+}
+
+body:has(#rf-support-feature) main :is(
+    .card-grid,
+    .feature-grid,
+    .services-grid,
+    .testimonial-grid,
+    .testimonials-grid,
+    .topics-grid,
+    .patterns-grid
+) > * {
+    height: 100%;
+}
+
+/* Tablet: slightly tighter but still equal. */
+@media (max-width: 900px) {
+    body:has(#rf-support-feature) main {
+        --home-block-gap: 48px;
+    }
+}
+
+/* Mobile: consistent compact spacing between stacked blocks. */
+@media (max-width: 600px) {
+    body:has(#rf-support-feature) main {
+        --home-block-gap: 36px;
+    }
+
+    body:has(#rf-support-feature) main > #rf-support-feature {
+        padding-right: 14px !important;
+        padding-left: 14px !important;
+    }
+}
+
+/* HOMEPAGE EQUAL-GAP RULES END */
+</style>
+<style id="reikifish-hero-gap-fix">
+/* HERO TO MEET ANDY EQUAL-GAP FIX */
+
+body:has(#rf-support-feature) .home-hero,
+body:has(#rf-support-feature) header .home-hero {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/*
+   Remove surplus space at the bottom of the hero.
+   Meet Andy supplies half of the shared gap.
+*/
+body:has(#rf-support-feature) header .home-hero {
+    padding-bottom: 32px !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+   Meet Andy is the first section in main and was excluded from
+   the earlier rule. Give it the other half of the 64px gap.
+*/
+body:has(#rf-support-feature) main > #meet-andy {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+body:has(#rf-support-feature) main > #meet-andy > :first-child {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+    body:has(#rf-support-feature) header .home-hero {
+        padding-bottom: 24px !important;
+    }
+
+    body:has(#rf-support-feature) main > #meet-andy {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body:has(#rf-support-feature) header .home-hero {
+        padding-bottom: 18px !important;
+    }
+
+    body:has(#rf-support-feature) main > #meet-andy {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+}
+</style>
 </head>
   <body class="home-page">
     <header class="home-shell">
@@ -45,23 +211,22 @@ N<!DOCTYPE html>
           </button>
           <div class="collapse navbar-collapse justify-content-end" id="siteNav">
             <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
-<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-<li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
-<li class="nav-item">
-<div class="coaching-nav-dropdown">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
 <a class="nav-link" href="coaching.html">Coaching</a>
-<div class="coaching-nav-submenu">
-<a href="trauma-coaching.html">Trauma</a>
-<a href="parental-alienation-coaching.html">Parental Alienation</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
 <a href="team-leadership-coaching.html">Business Coaching</a>
-</div>
-</div>
-</li>
-<li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
-<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-</ul>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+
+            </ul>
           </div>
         </div>
       </nav>
@@ -407,6 +572,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
         </div>
       </section>
 <!-- RF_SUPPORT_FINDER_HOME_START -->
+<!-- SUPPORT_FINDER_PROMO_START -->
 <section id="rf-support-feature" aria-labelledby="rf-support-title">
     <style>
         #rf-support-feature {
@@ -764,6 +930,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
         </div>
     </div>
 </section>
+<!-- SUPPORT_FINDER_PROMO_END -->
 <!-- RF_SUPPORT_FINDER_HOME_END -->
 
 
