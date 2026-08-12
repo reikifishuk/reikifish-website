@@ -1,5 +1,37 @@
 [
     {
+        "slug":  "what-is-the-fawn-response",
+        "title":  "What Is the Fawn Response?",
+        "type":  "Definition",
+        "category":  "Trauma",
+        "summary":  "Understand the fawn response, including trauma-related appeasement, people pleasing, common signs, boundaries and ways to regain personal choice.",
+        "keywords":  [
+                         "fawn response",
+                         "trauma response",
+                         "people pleasing",
+                         "appeasement",
+                         "fight flight freeze fawn",
+                         "boundaries"
+                     ],
+        "url":  "knowledge/what-is-the-fawn-response.html"
+    },
+    {
+        "slug":  "what-is-reactive-abuse",
+        "title":  "What Is Reactive Abuse?",
+        "type":  "Definition",
+        "category":  "Manipulation",
+        "summary":  "Understand reactive abuse, prolonged provocation, coercive control, DARVO, harmful reactions and why the complete behavioural pattern matters.",
+        "keywords":  [
+                         "reactive abuse",
+                         "reactive behaviour",
+                         "prolonged provocation",
+                         "coercive control",
+                         "DARVO",
+                         "blame shifting"
+                     ],
+        "url":  "knowledge/what-is-reactive-abuse.html"
+    },
+    {
         "slug":  "what-is-narcissism",
         "title":  "What is narcissism?",
         "type":  "Definition",
