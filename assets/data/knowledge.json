@@ -1,5 +1,95 @@
 [
   {
+    "slug": "what-is-emotional-dysregulation",
+    "title": "What Is Emotional Dysregulation?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand emotional dysregulation, including intense responses, recovery difficulties, possible causes and practical ways to develop steadier regulation.",
+    "keywords": [
+      "emotional dysregulation",
+      "emotion regulation",
+      "intense emotions",
+      "emotional recovery",
+      "coping skills"
+    ],
+    "url": "knowledge/what-is-emotional-dysregulation.html"
+  },
+  {
+    "slug": "what-is-rumination",
+    "title": "What Is Rumination?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand rumination, why distressing thoughts repeat, how it differs from reflection and practical ways to interrupt unhelpful thinking cycles.",
+    "keywords": [
+      "rumination",
+      "repetitive thinking",
+      "overthinking",
+      "negative thoughts",
+      "emotional health"
+    ],
+    "url": "knowledge/what-is-rumination.html"
+  },
+  {
+    "slug": "what-is-emotional-numbness",
+    "title": "What Is Emotional Numbness?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand emotional numbness, including possible causes, disconnection, trauma, depression, assessment and gentle ways to reconnect with experience.",
+    "keywords": [
+      "emotional numbness",
+      "feeling numb",
+      "emotional disconnection",
+      "trauma",
+      "depression"
+    ],
+    "url": "knowledge/what-is-emotional-numbness.html"
+  },
+  {
+    "slug": "what-is-distress-tolerance",
+    "title": "What Is Distress Tolerance?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand distress tolerance and learn practical ways to remain safe, grounded and intentional when difficult feelings cannot immediately be resolved.",
+    "keywords": [
+      "distress tolerance",
+      "coping with distress",
+      "emotional regulation",
+      "grounding",
+      "difficult emotions"
+    ],
+    "url": "knowledge/what-is-distress-tolerance.html"
+  },
+  {
+    "slug": "what-is-chronic-shame",
+    "title": "What Is Chronic Shame?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand chronic shame, how it differs from guilt, its possible roots and practical ways to develop self-respect, connection and emotional safety.",
+    "keywords": [
+      "chronic shame",
+      "toxic shame",
+      "shame and guilt",
+      "self worth",
+      "emotional healing"
+    ],
+    "url": "knowledge/what-is-chronic-shame.html"
+  },
+  {
+    "slug": "what-is-burnout",
+    "title": "What Is Burnout?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand burnout, including exhaustion, reduced effectiveness, workplace causes, warning signs, recovery and when professional support may help.",
+    "keywords": [
+      "burnout",
+      "workplace burnout",
+      "emotional exhaustion",
+      "burnout recovery",
+      "occupational stress"
+    ],
+    "url": "knowledge/what-is-burnout.html"
+  },
+  {
     "slug": "what-is-emotional-overwhelm",
     "title": "What Is Emotional Overwhelm?",
     "type": "Complete Guide",
