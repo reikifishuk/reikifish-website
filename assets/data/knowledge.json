@@ -1,5 +1,22 @@
 [
   {
+    "slug": "what-is-emotional-overwhelm",
+    "title": "What Is Emotional Overwhelm?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand emotional overwhelm, its common signs, causes, nervous system responses and practical ways to regain steadiness and choice.",
+    "keywords": [
+      "emotional overwhelm",
+      "feeling overwhelmed",
+      "emotional regulation",
+      "stress",
+      "nervous system",
+      "sensory overload",
+      "coping with overwhelm"
+    ],
+    "url": "knowledge/what-is-emotional-overwhelm.html"
+  },
+  {
     "slug": "what-is-self-awareness",
     "title": "What Is Self-Awareness?",
     "type": "Complete Guide",
@@ -15,22 +32,6 @@
       "metacognition"
     ],
     "url": "knowledge/what-is-self-awareness.html"
-  },
-  {
-    "slug": "what-is-emotional-overwhelm",
-    "title": "What Is Emotional Overwhelm?",
-    "type": "Complete Guide",
-    "category": "Emotional Health",
-    "summary": "Understand emotional overwhelm, its common signs, possible causes and practical ways to regain steadiness without judging normal emotional responses.",
-    "keywords": [
-      "emotional overwhelm",
-      "overwhelmed emotions",
-      "emotional flooding",
-      "stress response",
-      "coping with overwhelm",
-      "emotional health"
-    ],
-    "url": "knowledge/what-is-emotional-overwhelm.html"
   },
   {
     "slug": "what-is-self-compassion",
