@@ -72,10 +72,38 @@
     }, 420);
   }
 
+  function normaliseNavigation() {
+    var navigation = document.querySelector('header nav .navbar-nav');
+    if (!navigation) return;
+
+    var links = [
+      ['Home', 'index.html'],
+      ['About', 'about.html'],
+      ['Books', 'books.html'],
+      ['Coaching', 'coaching.html'],
+      ['Knowledge Hub', 'knowledge.html'],
+      ['Blog', 'blog.html'],
+      ['Contact', 'contact.html']
+    ];
+
+    links.forEach(function (entry) {
+      var exists = Array.prototype.some.call(navigation.querySelectorAll('a'), function (link) {
+        return link.getAttribute('href') === entry[1];
+      });
+      if (exists) return;
+
+      var item = document.createElement('li');
+      item.className = 'nav-item';
+      item.innerHTML = '<a class="nav-link" href="' + entry[1] + '">' + entry[0] + '</a>';
+      navigation.appendChild(item);
+    });
+  }
+
   function start() {
     document.querySelectorAll('header > nav, header .navbar').forEach(function (nav) {
       nav.classList.add('site-nav');
     });
+    normaliseNavigation();
     stripLegacy();
     document.addEventListener('pointerover', function (event) {
       var trigger = findTrigger(event.target);
