@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relationship Coaching | Andy Fish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811-support-nav-v2" />
+
+<style id="relationship-coaching-page-style">
+:root {
+    --blc-gold: #e1a82e;
+    --blc-gold-light: #ffd778;
+    --blc-cream: #f5f1e9;
+    --blc-muted: #c8c5bd;
+    --blc-ink: #070c0c;
+    --blc-panel: #0d1414;
+    --blc-line: rgba(225, 168, 46, 0.34);
+    --blc-green: #72bb8d;
+    --blc-purple: #9874b8;
+}
+
+.blc-page {
+    overflow: hidden;
+    color: var(--blc-cream);
+    background:
+        radial-gradient(circle at 12% 8%, rgba(225,168,46,.08), transparent 28rem),
+        radial-gradient(circle at 88% 28%, rgba(114,187,141,.055), transparent 30rem),
+        var(--blc-ink);
+}
+
+.blc-wrap {
+    width: min(1420px, calc(100% - 44px));
+    margin-inline: auto;
+}
+
+.blc-hero {
+    padding: clamp(7rem, 8vw, 8.5rem) 0 clamp(3.25rem, 5vw, 5rem);
+    border-bottom: 1px solid var(--blc-line);
+}
+
+.blc-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.blc-hub-button {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .55rem .9rem;
+    border: 1px solid rgba(225,168,46,.72);
+    border-radius: 999px;
+    color: #fff8e8;
+    background: linear-gradient(135deg, rgba(225,168,46,.19), rgba(225,168,46,.04));
+    font: 700 .78rem/1 Arial, sans-serif;
+    text-decoration: none;
+}
+
+.blc-hub-button::before {
+    content: "\2190";
+    display: grid;
+    place-items: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 50%;
+    color: #090c0b;
+    background: linear-gradient(135deg, #ffdb82, #dfa431);
+}
+
+.blc-current {
+    color: var(--blc-gold);
+    font: 500 .82rem/1.4 Arial, sans-serif;
+}
+
+.blc-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(390px, .8fr);
+    gap: clamp(3rem, 7vw, 8rem);
+    align-items: center;
+}
+
+.blc-kicker,
+.blc-section-kicker {
+    color: var(--blc-gold);
+    font: 800 .82rem/1.3 Arial, sans-serif;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.blc-page h1,
+.blc-page h2,
+.blc-page h3 {
+    margin-top: 0;
+    color: var(--blc-cream);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.blc-page h1 {
+    max-width: 950px;
+    margin: 1rem 0 1.15rem;
+    font-size: clamp(3.7rem, 7vw, 7.8rem);
+    line-height: .94;
+    letter-spacing: -.045em;
+}
+
+.blc-page h1 span {
+    color: var(--blc-gold-light);
+}
+
+.blc-lead {
+    max-width: 880px;
+    margin-bottom: 1.25rem;
+    color: #ddd9d0;
+    font-size: clamp(1.15rem, 1.6vw, 1.45rem);
+    line-height: 1.7;
+}
+
+.blc-hero-note {
+    max-width: 850px;
+    padding: 1.15rem 1.35rem;
+    border-left: 3px solid var(--blc-gold);
+    background: rgba(225,168,46,.075);
+    color: #e7e2d8;
+    line-height: 1.65;
+}
+
+.blc-hero-visual {
+    padding: clamp(1rem, 2vw, 2rem);
+}
+
+.blc-hero-visual svg,
+.blc-figure svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blc-proof {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--blc-line);
+    background: #0a1010;
+}
+
+.blc-proof-item {
+    padding: 1.5rem;
+    border-right: 1px solid var(--blc-line);
+    text-align: center;
+}
+
+.blc-proof-item:last-child {
+    border-right: 0;
+}
+
+.blc-proof strong {
+    display: block;
+    color: var(--blc-gold-light);
+    font: 700 1.6rem/1.2 Georgia, serif;
+}
+
+.blc-proof span {
+    display: block;
+    margin-top: .4rem;
+    color: var(--blc-muted);
+    font-size: .88rem;
+}
+
+.blc-nav {
+    border-bottom: 1px solid var(--blc-line);
+    background: #091010;
+}
+
+.blc-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin: 0;
+    padding: 1.2rem 0;
+    list-style: none;
+}
+
+.blc-nav a {
+    display: block;
+    padding: .65rem .95rem;
+    border: 1px solid rgba(225,168,46,.42);
+    border-radius: 999px;
+    color: #eee8dc;
+    text-decoration: none;
+}
+
+.blc-section {
+    padding: clamp(3rem, 4.8vw, 5rem) 0;
+    border-bottom: 1px solid rgba(225,168,46,.2);
+}
+
+.blc-section-alt {
+    background: linear-gradient(135deg, rgba(255,255,255,.018), rgba(225,168,46,.025));
+}
+
+.blc-section-head {
+    max-width: 950px;
+    margin-bottom: clamp(1.5rem, 2.8vw, 2.5rem);
+}
+
+.blc-page h2 {
+    margin: .75rem 0 1rem;
+    font-size: clamp(2.4rem, 4vw, 4.7rem);
+    line-height: 1.03;
+}
+
+.blc-section-intro {
+    color: #d2cec5;
+    font-size: 1.12rem;
+    line-height: 1.75;
+}
+
+.blc-grid-2,
+.blc-grid-3,
+.blc-grid-4 {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.blc-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.blc-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.blc-grid-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.blc-card {
+    padding: clamp(1.35rem, 2.5vw, 2rem);
+    border: 1px solid var(--blc-line);
+    border-radius: 1rem;
+    background: rgba(13,20,20,.88);
+    box-shadow: 0 18px 42px rgba(0,0,0,.18);
+}
+
+.blc-card-number {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--blc-gold);
+    border-radius: 50%;
+    color: var(--blc-gold-light);
+    font-weight: 800;
+}
+
+.blc-card h3 {
+    margin-bottom: .65rem;
+    font-size: 1.45rem;
+}
+
+.blc-card p,
+.blc-card li {
+    color: #c9c6be;
+    line-height: 1.65;
+}
+
+.blc-card ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+}
+
+.blc-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--blc-line);
+    border-radius: 1rem;
+}
+
+.blc-table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    background: #0b1212;
+}
+
+.blc-table th,
+.blc-table td {
+    padding: 1rem 1.1rem;
+    border-bottom: 1px solid rgba(225,168,46,.2);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.55;
+}
+
+.blc-table th {
+    color: #0a0d0c;
+    background: var(--blc-gold);
+    font-weight: 800;
+}
+
+.blc-table td {
+    color: #cbc8c0;
+}
+
+.blc-table td:first-child {
+    color: var(--blc-cream);
+    font-weight: 700;
+}
+
+.blc-figure {
+    padding: clamp(1.2rem, 3vw, 2.5rem);
+    border: 1px solid var(--blc-line);
+    border-radius: 1.2rem;
+    background: #091010;
+}
+
+.blc-figure figcaption {
+    margin-top: 1.2rem;
+    color: #aaa79f;
+    line-height: 1.55;
+    text-align: center;
+}
+
+.blc-process {
+    counter-reset: blc-step;
+}
+
+.blc-process .blc-card {
+    position: relative;
+}
+
+.blc-process .blc-card::before {
+    counter-increment: blc-step;
+    content: counter(blc-step);
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    color: #080b0b;
+    background: var(--blc-gold);
+    font-weight: 900;
+}
+
+.blc-boundary {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(114,187,141,.5);
+    border-left: 4px solid var(--blc-green);
+    border-radius: .9rem;
+    background: rgba(114,187,141,.055);
+}
+
+.blc-boundary p {
+    color: #d4d6d0;
+    line-height: 1.7;
+}
+
+.blc-faq details {
+    margin-bottom: .8rem;
+    border: 1px solid var(--blc-line);
+    border-radius: .8rem;
+    background: #0b1212;
+}
+
+.blc-faq summary {
+    padding: 1.15rem 1.25rem;
+    color: var(--blc-cream);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.blc-faq details p {
+    margin: 0;
+    padding: 0 1.25rem 1.25rem;
+    color: #c9c6be;
+    line-height: 1.7;
+}
+
+.blc-cta {
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(225,168,46,.14), transparent 35rem),
+        #080e0e;
+}
+
+.blc-cta .blc-section-head {
+    margin-inline: auto;
+}
+
+.blc-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.blc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.2rem;
+    padding: .8rem 1.25rem;
+    border: 1px solid var(--blc-gold);
+    border-radius: 999px;
+    color: #090c0b;
+    background: linear-gradient(135deg, #ffd778, #dfa431);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.blc-button-secondary {
+    color: var(--blc-cream);
+    background: transparent;
+}
+
+body.coaching-page > header.inner-header {
+    display: block !important;
+    width: 100% !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+body.coaching-page > header.inner-header > .navbar {
+    min-height: auto;
+}
+
+@media (max-width: 1050px) {
+    .blc-hero-grid,
+    .blc-grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .blc-hero-copy {
+        grid-column: 1 / -1;
+    }
+
+    .blc-hero-visual {
+        grid-column: 1 / -1;
+        width: min(620px, 100%);
+        margin-inline: auto;
+    }
+
+    .blc-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .blc-wrap {
+        width: min(100% - 28px, 1420px);
+    }
+
+    .blc-hero {
+        padding-top: 6.4rem;
+    }
+
+    .blc-hero-grid,
+    .blc-grid-2,
+    .blc-grid-3,
+    .blc-grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .blc-proof {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blc-proof-item:nth-child(2) {
+        border-right: 0;
+    }
+
+    .blc-proof-item:nth-child(-n+2) {
+        border-bottom: 1px solid var(--blc-line);
+    }
+
+    .blc-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .blc-nav a {
+        text-align: center;
+    }
+
+    .blc-page h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+}
+
+@media (max-width: 430px) {
+    .blc-proof,
+    .blc-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .blc-proof-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--blc-line);
+    }
+}
+</style>
+<script id="relationship-coaching-schema" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://reikifish.com/relationship-coaching.html#service",
+      "name": "Relationship Coaching",
+      "url": "https://reikifish.com/relationship-coaching.html",
+      "description": "Relationship coaching for individuals and couples who want clearer communication, stronger boundaries and healthier relationship habits, drawing on coaching training and over 20 years of leadership experience.",
+      "provider": {
+        "@type": "Person",
+        "name": "Andy Fish",
+        "url": "https://reikifish.com/about.html"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "serviceType": [
+        "Relationship coaching",
+        "Couples communication coaching",
+        "Individual relationship coaching",
+        "Boundaries coaching"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://reikifish.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Coaching",
+          "item": "https://reikifish.com/coaching.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Relationship Coaching",
+          "item": "https://reikifish.com/relationship-coaching.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is relationship coaching the same as couples therapy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Relationship coaching is forward-focused and practical. Couples therapy addresses clinical issues, deeper trauma or crises and should be led by a licensed therapist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do both partners need to attend?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Many clients work individually on their own patterns, communication and boundaries. Joint sessions can also be arranged when both partners want to take part."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What experience does the coach bring to relationship work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Professional coaching qualifications combined with over 20 years of leadership and people-management experience, including communication, conflict resolution and mentoring across teams and relationships."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<!-- RELATIONSHIP COACHING SEO START -->
+<meta name="description" content="Relationship coaching for individuals and couples who want clearer communication, stronger boundaries and healthier relationship patterns.">
+<link rel="canonical" href="https://reikifish.com/relationship-coaching.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Relationship Coaching | Andy Fish">
+<meta property="og:description" content="Clearer communication, stronger boundaries and healthier relationship habits, built on certified coaching training and 20+ years of leadership experience.">
+<meta property="og:url" content="https://reikifish.com/relationship-coaching.html">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Relationship Coaching | Andy Fish">
+<meta name="twitter:description" content="Practical relationship coaching for individuals and couples, grounded in coaching training and 20+ years of leadership experience.">
+<!-- RELATIONSHIP COACHING SEO END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
+</head>
+  <body class="coaching-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link active" href="coaching.html">Coaching</a>
+</div></li>
+              <li class="nav-item">
+    <a class="nav-link" href="knowledge.html">Knowledge Hub</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="blog.html">Blog</a>
+</li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+
+<main class="blc-page" id="main-content">
+
+<section class="blc-hero">
+    <div class="blc-wrap">
+        <nav class="blc-breadcrumb rf-coaching-subpage-breadcrumb" aria-label="Breadcrumb">
+            <a class="blc-hub-button rf-coaching-subpage-breadcrumb__hub" href="/coaching.html">
+                <span class="rf-coaching-subpage-breadcrumb__back" aria-hidden="true">&larr;</span>
+                <span>Coaching</span>
+            </a>
+            <span class="rf-coaching-subpage-breadcrumb__separator" aria-hidden="true">&rsaquo;</span>
+            <span class="blc-current rf-coaching-subpage-breadcrumb__current" aria-current="page">Relationship Coaching</span>
+        </nav>
+
+        <div class="blc-hero-grid">
+            <div class="blc-hero-copy">
+                <p class="blc-kicker">Relationship coaching · Communication · Boundaries</p>
+
+                <h1>Relationship <span>Coaching</span></h1>
+
+                <p class="blc-lead">
+                    Practical coaching for individuals and couples who want clearer
+                    communication, healthier boundaries and more consistent, respectful
+                    ways of relating, built on certified coaching training and over 20
+                    years of leadership and people experience.
+                </p>
+
+                <div class="blc-hero-note">
+                    Relationship coaching is a structured, forward-focused space to think
+                    and practise. It does not replace couples therapy, clinical treatment,
+                    legal advice or specialist support where there is abuse, crisis or
+                    safeguarding risk.
+                </div>
+            </div>
+
+            <figure class="blc-hero-visual">
+                <svg viewBox="0 0 620 540" role="img" aria-labelledby="rcHeroTitle rcHeroDesc">
+                    <title id="rcHeroTitle">Relationship coaching system</title>
+                    <desc id="rcHeroDesc">Two overlapping circles representing two people meeting in shared connection, surrounded by trust, communication, boundaries, empathy, consistency and repair.</desc>
+
+                    <circle cx="245" cy="270" r="168" fill="#101919" stroke="#72bb8d" stroke-width="2"/>
+                    <circle cx="375" cy="270" r="168" fill="#0b1313" stroke="#e1a82e" stroke-width="2"/>
+
+                    <g fill="#f5f1e9" text-anchor="middle" font-family="Arial" font-weight="700">
+                        <text x="185" y="264" font-size="19">YOU</text>
+                        <text x="435" y="264" font-size="19">PARTNER</text>
+
+                        <text x="310" y="258" font-size="21" fill="#ffd778">SHARED</text>
+                        <text x="310" y="288" font-size="21" fill="#ffd778">CONNECTION</text>
+
+                        <text x="310" y="66" font-size="18">TRUST</text>
+                        <text x="310" y="490" font-size="18">REPAIR</text>
+                        <text x="88" y="150" font-size="16">COMMUNICATION</text>
+                        <text x="532" y="150" font-size="16">BOUNDARIES</text>
+                        <text x="88" y="410" font-size="16">EMPATHY</text>
+                        <text x="532" y="410" font-size="16">CONSISTENCY</text>
+                    </g>
+
+                    <g stroke="#e1a82e" stroke-width="2" opacity=".75">
+                        <line x1="310" y1="98" x2="310" y2="150"/>
+                        <line x1="310" y1="442" x2="310" y2="390"/>
+                        <line x1="130" y1="170" x2="175" y2="205"/>
+                        <line x1="490" y1="170" x2="445" y2="205"/>
+                        <line x1="130" y1="390" x2="175" y2="355"/>
+                        <line x1="490" y1="390" x2="445" y2="355"/>
+                    </g>
+                </svg>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<section class="blc-proof" aria-label="Professional experience">
+    <div class="blc-proof-item">
+        <strong>20+ years</strong>
+        <span>Leadership and people experience</span>
+    </div>
+    <div class="blc-proof-item">
+        <strong>Certified</strong>
+        <span>Professional coaching training</span>
+    </div>
+    <div class="blc-proof-item">
+        <strong>1:1 &amp; couples</strong>
+        <span>Individual and joint sessions</span>
+    </div>
+    <div class="blc-proof-item">
+        <strong>Confidential</strong>
+        <span>Non-judgemental space</span>
+    </div>
+</section>
+
+<nav class="blc-nav" aria-label="Relationship coaching sections">
+    <div class="blc-wrap">
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#individuals">Individuals</a></li>
+            <li><a href="#couples">Couples</a></li>
+            <li><a href="#patterns">Patterns</a></li>
+            <li><a href="#how-i-help">How I help</a></li>
+            <li><a href="#grey-method">The Grey Method</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="blc-section" id="overview">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">A practical coaching partnership</p>
+            <h2>What relationship coaching actually does</h2>
+            <p class="blc-section-intro">
+                Relationships rarely struggle because people do not care. They struggle
+                because communication breaks down under pressure, boundaries are unclear,
+                old patterns repeat, or two reasonable people keep having the same
+                argument in different words. Relationship coaching helps you slow that
+                down, see it clearly and build steadier habits going forward.
+            </p>
+        </header>
+
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <span class="blc-card-number">1</span>
+                <h3>See the pattern, not just the row</h3>
+                <p>
+                    Coaching separates the immediate argument from the underlying pattern
+                    driving it, so the same disagreement stops resurfacing in slightly
+                    different clothes.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <span class="blc-card-number">2</span>
+                <h3>Communicate with more intention</h3>
+                <p>
+                    Learn to raise concerns, listen under pressure and disagree without
+                    the conversation tipping into blame, withdrawal or escalation.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <span class="blc-card-number">3</span>
+                <h3>Build habits that hold under pressure</h3>
+                <p>
+                    Insight is only useful once it becomes a repeatable habit. Coaching
+                    turns understanding into small, practical changes you can sustain.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-section-alt" id="individuals">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Working on your part of the relationship</p>
+            <h2>Coaching for individuals, with or without a partner in the room</h2>
+            <p class="blc-section-intro">
+                Many clients come alone, whether they are single, dating, in a
+                relationship, or navigating separation. The focus is on what you can
+                influence directly: your communication, boundaries, expectations and
+                responses.
+            </p>
+        </header>
+
+        <div class="blc-grid-2">
+            <article class="blc-card">
+                <h3>Clarity and confidence</h3>
+                <ul>
+                    <li>Understanding your own patterns, triggers and needs</li>
+                    <li>Recognising what you will and will not accept</li>
+                    <li>Building confidence to raise difficult topics early</li>
+                    <li>Making clearer decisions about a relationship's direction</li>
+                </ul>
+            </article>
+
+            <article class="blc-card">
+                <h3>Dating and new relationships</h3>
+                <ul>
+                    <li>Setting expectations and pace with more intention</li>
+                    <li>Spotting red and green flags without overreacting</li>
+                    <li>Communicating needs before resentment builds</li>
+                    <li>Recovering confidence after a difficult past relationship</li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section" id="couples">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Joint sessions</p>
+            <h2>Coaching for couples who want to improve how they work together</h2>
+            <p class="blc-section-intro">
+                Couples coaching is practical and forward-focused. It is designed for
+                partners who are broadly committed to the relationship but want better
+                tools for communication, decision-making and resolving disagreement, not
+                for couples in crisis or where there is abuse.
+            </p>
+        </header>
+
+        <div class="blc-grid-4">
+            <article class="blc-card">
+                <h3>Communication</h3>
+                <p>
+                    Structured ways to raise concerns, listen without defensiveness and
+                    stay in the conversation instead of shutting down or escalating.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Conflict repair</h3>
+                <p>
+                    Practical tools for arguing better: pausing well, returning to the
+                    topic and repairing afterwards instead of letting things fester.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Roles and expectations</h3>
+                <p>
+                    Clarify who does what, what each person expects and where
+                    assumptions have quietly been doing the damage.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Shared decisions</h3>
+                <p>
+                    Build a workable way to make joint decisions, from everyday choices
+                    to bigger life changes, without one person carrying it all.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-section-alt" id="patterns">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Common patterns coaching addresses</p>
+            <h2>Recognisable patterns behind many relationship struggles</h2>
+            <p class="blc-section-intro">
+                These are common, everyday relationship patterns coaching can help with.
+                They are separate from clinical mental health conditions, abuse or crisis
+                situations, which need different, specialist support.
+            </p>
+        </header>
+
+        <div class="blc-table-wrap">
+            <table class="blc-table">
+                <thead>
+                    <tr>
+                        <th>Pattern</th>
+                        <th>What it often looks like</th>
+                        <th>Coaching focus</th>
+                        <th>Potential improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Repeating arguments</td>
+                        <td>The same disagreement resurfaces in different forms</td>
+                        <td>Naming the underlying pattern rather than the surface topic</td>
+                        <td>Fewer circular arguments and faster resolution</td>
+                    </tr>
+                    <tr>
+                        <td>Withdrawal or shutting down</td>
+                        <td>One or both partners disengage under pressure</td>
+                        <td>Building tolerance for difficult conversations</td>
+                        <td>More conversations reach a real resolution</td>
+                    </tr>
+                    <tr>
+                        <td>Blurred boundaries</td>
+                        <td>Resentment builds from unclear expectations</td>
+                        <td>Naming needs and limits clearly and respectfully</td>
+                        <td>Less resentment and more mutual respect</td>
+                    </tr>
+                    <tr>
+                        <td>People-pleasing</td>
+                        <td>Needs are hidden to avoid conflict</td>
+                        <td>Building confidence to speak up early</td>
+                        <td>More honest, sustainable relationships</td>
+                    </tr>
+                    <tr>
+                        <td>Mismatched expectations</td>
+                        <td>Assumptions about roles are never discussed</td>
+                        <td>Making expectations explicit and negotiable</td>
+                        <td>Fewer surprises and less quiet resentment</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section" id="how-i-help">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Why this background helps</p>
+            <h2>Coaching training, plus 20+ years of real leadership experience</h2>
+            <p class="blc-section-intro">
+                Relationship coaching benefits from more than good intentions. It draws
+                on qualified coaching skills and a genuine track record of helping people
+                communicate, resolve conflict and work through pressure together.
+            </p>
+        </header>
+
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <h3>Certified coaching training</h3>
+                <p>
+                    Professional coaching qualifications provide a structured, ethical
+                    framework for listening, asking useful questions and helping people
+                    reach their own conclusions rather than being told what to do.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Over 20 years leading people</h3>
+                <p>
+                    Two decades of leadership and management experience means handling
+                    difficult conversations, mediating disagreements and helping people
+                    communicate under real pressure is not theoretical.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Skills that transfer directly</h3>
+                <p>
+                    Feedback, boundary-setting, conflict resolution, active listening and
+                    staying calm under pressure are leadership skills that apply just as
+                    strongly at home as they do at work.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section" id="grey-method">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">The philosophy behind the coaching</p>
+            <h2>Bringing calm and clarity through the Grey Method</h2>
+            <p class="blc-section-intro">
+                Relationships rarely fall apart in a single moment. They erode
+                through repeated reactions: the sharp reply, the shutdown, the
+                story each partner starts believing about the other. The Grey
+                Method, drawn from the philosophy of <em>Walking the Grey</em>,
+                is the discipline of pausing between reaction and response so
+                that calm, not pressure, decides what happens next.
+            </p>
+        </header>
+
+        <div class="blc-grid-3">
+            <article class="blc-card">
+                <h3>Calm under pressure</h3>
+                <p>
+                    Arguments escalate when both people are speaking from
+                    reaction. The Grey Method builds the pause that lets you
+                    stay regulated when a conversation gets heated, so you
+                    respond to what is actually happening rather than to fear,
+                    old wounds or the worst version of your partner.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Seeing reality clearly</h3>
+                <p>
+                    Distress can distort what is really going on: an
+                    off-hand comment becomes proof of rejection, silence
+                    becomes proof of guilt. This work helps you separate the
+                    facts of a situation from the story your nervous system
+                    is telling you about it, so decisions are grounded in
+                    reality rather than assumption.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Strength without force</h3>
+                <p>
+                    The Grey is not passivity and it is not confrontation. It
+                    is holding a boundary, telling the truth and staying
+                    connected to your own values, without needing to win the
+                    argument or disappear from it entirely.
+                </p>
+            </article>
+        </div>
+
+        <div class="blc-hero-note" style="margin-top: 2rem;">
+            This philosophy sits alongside certified coaching training and
+            20+ years of leadership experience, giving relationship coaching
+            here a grounded, practical edge: not just theory, but a tested
+            way of staying steady when a relationship feels anything but
+            calm. Explore the thinking further in
+            <a href="/books.html" style="color:#ffd778;">Walking the Grey</a>
+            or read
+            <a href="/articles/the-grey-method-staying-regulated-under-provocation.html" style="color:#ffd778;">The Grey Method</a>.
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-section-alt" id="process">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">How the work progresses</p>
+            <h2>A structured coaching process</h2>
+        </header>
+
+        <div class="blc-grid-4 blc-process">
+            <article class="blc-card">
+                <h3>Discovery</h3>
+                <p>
+                    Understand the relationship, the history, what has been tried
+                    already and whether coaching is the right form of support.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Focus</h3>
+                <p>
+                    Identify the communication habits, patterns or boundaries most
+                    relevant to progress right now.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Practice</h3>
+                <p>
+                    Agree practical changes and conversations to try in real life, not
+                    just discuss in the session.
+                </p>
+            </article>
+
+            <article class="blc-card">
+                <h3>Review</h3>
+                <p>
+                    Reflect on what worked, what did not, and adjust the approach as the
+                    relationship changes.
+                </p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section">
+    <div class="blc-wrap">
+        <div class="blc-boundary">
+            <h2>Professional scope and responsible practice</h2>
+            <p>
+                Relationship coaching is not couples therapy, psychiatric treatment,
+                legal advice or mediation. It is not appropriate where there is domestic
+                abuse, coercive control, active addiction or a mental health crisis. Where
+                those concerns are present, specialist clinical, legal or safeguarding
+                support should be sought instead of, or alongside, coaching.
+            </p>
+            <p>
+                Coaching cannot guarantee that a relationship will be saved, repaired or
+                ended in any particular way. It can improve communication, clarity and
+                the quality of the conversations that help you decide what is right for
+                you.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="blc-section blc-faq" id="faqs">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Frequently asked questions</p>
+            <h2>Relationship coaching FAQs</h2>
+        </header>
+
+        <details>
+            <summary>Is relationship coaching the same as couples therapy?</summary>
+            <p>
+                No. Relationship coaching is forward-focused and practical, aimed at
+                communication, boundaries and habits. Couples therapy addresses clinical
+                issues, deeper trauma or crises and should be led by a licensed therapist.
+            </p>
+        </details>
+
+        <details>
+            <summary>Do both partners need to attend?</summary>
+            <p>
+                No. Many clients work individually on their own patterns, communication
+                and boundaries. Joint sessions can also be arranged when both partners
+                want to take part.
+            </p>
+        </details>
+
+        <details>
+            <summary>What experience do you bring to relationship coaching?</summary>
+            <p>
+                Professional coaching qualifications combined with over 20 years of
+                leadership and people-management experience, including communication,
+                conflict resolution and mentoring across teams and relationships.
+            </p>
+        </details>
+
+        <details>
+            <summary>Can coaching help if my relationship has ended or is ending?</summary>
+            <p>
+                Yes. Coaching can help you communicate through separation, understand
+                what happened, and approach future relationships with more clarity and
+                confidence.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is this suitable if there is abuse in the relationship?</summary>
+            <p>
+                No. Coaching is not appropriate where there is domestic abuse or coercive
+                control. Specialist support services should be contacted instead, and I
+                can help point you toward appropriate resources.
+            </p>
+        </details>
+
+        <details>
+            <summary>Is the coaching confidential?</summary>
+            <p>
+                Yes. Individual sessions are confidential. For couples work, confidentiality
+                and how information is handled between partners is agreed at the outset.
+            </p>
+        </details>
+    </div>
+</section>
+
+<section class="blc-section blc-cta">
+    <div class="blc-wrap">
+        <header class="blc-section-head">
+            <p class="blc-section-kicker">Start a conversation</p>
+            <h2>Explore what clearer communication could change</h2>
+            <p class="blc-section-intro">
+                Tell me about the relationship, whether it is with a partner, an ex, or
+                simply your own patterns in relationships. We can discuss whether
+                coaching is appropriate and what a useful first step might look like.
+            </p>
+        </header>
+
+        <div class="blc-buttons">
+            <a class="blc-button" href="/booking.html">Book relationship coaching</a>
+            <a class="blc-button blc-button-secondary" href="/coaching.html">Explore all coaching</a>
+        </div>
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">&copy; <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+<script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
+</body>
+</html>

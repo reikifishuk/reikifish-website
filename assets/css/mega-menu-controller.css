@@ -1,0 +1,18 @@
+/* RF_FORCE_MENU_REPLACEMENT_V2 */
+@media (min-width: 768px) {
+  body .dropdown-menu,
+  body .coaching-nav-submenu,
+  body .coaching-nav-dropdown > ul,
+  body .coaching-nav-dropdown > div.dropdown-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  body .rf-premium-menu { z-index: 2147483646 !important; }
+  body .rf-premium-backdrop { z-index: 2147483645 !important; }
+}
+@media (max-width: 767.98px) {
+  body .rf-premium-menu,
+  body .rf-premium-backdrop { display: none !important; }
+}

@@ -85,7 +85,7 @@
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.4rem;
   }
 
@@ -405,6 +405,9 @@
   }
 </style>
 <!-- COACHING_FINAL_GAP_FIX_END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
 </head>
   <body class="coaching-page">
     <header class="inner-header">
@@ -429,15 +432,8 @@
               <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
               <li class="nav-item"><div class="coaching-nav-dropdown">
 <a class="nav-link active" href="coaching.html">Coaching</a>
-    <div class="coaching-nav-submenu">
-        <a href="trauma-coaching.html">Trauma</a>
-
-        <a href="parental-alienation-coaching.html">Parental Alienation</a>
-<a href="team-leadership-coaching.html">Business Coaching</a>
-    </div>
 </div></li>
-              <li class="nav-item"><a class="nav-link" href="support-finder.html">Support Finder</a>
-<a class="nav-link" href="contact.html">Contact</a></li>
+
             </ul>
           </div>
         </div>
@@ -584,9 +580,9 @@ Sessions are shaped around what is happening in your life now. We can explore pa
 
       <p class="coaching-pathways-intro">
         Difficult experiences rarely fit neatly into one category. Explore
-        focused coaching support for trauma, parental alienation and workplace
-        leadership, each grounded in calm reflection, clearer boundaries and
-        practical next steps.
+        focused coaching support for trauma, parental alienation, workplace
+        leadership and relationships, each grounded in calm reflection, clearer
+        boundaries and practical next steps.
       </p>
     </div>
 
@@ -683,13 +679,46 @@ Sessions are shaped around what is happening in your life now. We can explore pa
           </div>
         </article>
       </a>
+
+      <a
+        class="coaching-pathway-card"
+        href="relationship-coaching.html"
+        aria-label="Explore relationship coaching"
+      >
+        <article class="coaching-pathway-inner">
+          <div class="coaching-pathway-image">
+            <img
+              src="assets/images/coaching.webp"
+              alt="A warm visual representing relationship coaching and healthier communication"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="coaching-pathway-content">
+            <span class="coaching-pathway-number">04 &middot; Relationship support</span>
+            <h3>Relationship Coaching</h3>
+            <p>
+              Practical support for individuals and couples who want clearer
+              communication, stronger boundaries and healthier relationship
+              habits, built on coaching training and 20+ years of leadership
+              experience.
+            </p>
+            <span class="coaching-pathway-link">
+              Explore relationship coaching
+              <span aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </article>
+      </a>
     </div>
 
     <p class="coaching-pathways-note">
       These areas often overlap. Trauma can affect confidence and decision
-      making, family conflict can influence work and wellbeing, and leadership
-      pressure can follow people home. The starting point is not choosing the
-      perfect label. It is identifying what feels most important now.
+      making, family conflict can influence work and wellbeing, leadership
+      pressure can follow people home, and relationship strain can touch every
+      part of life. The starting point is not choosing the perfect label. It
+      is identifying what feels most important now.
     </p>
   </div>
 </section>
@@ -750,5 +779,8 @@ Sessions are shaped around what is happening in your life now. We can explore pa
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+
+<script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
+</body>
 </html>

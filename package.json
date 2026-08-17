@@ -1,0 +1,11 @@
+{
+  "name": "reikifish-booking-system",
+  "private": true,
+  "scripts": {
+    "booking:db:local": "wrangler d1 migrations apply reikifish-bookings --local",
+    "booking:dev": "wrangler pages dev . --port 8000"
+  },
+  "devDependencies": {
+    "wrangler": "^4.32.0"
+  }
+}
