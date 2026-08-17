@@ -73,6 +73,9 @@
   }
 
   function start() {
+    document.querySelectorAll('header > nav, header .navbar').forEach(function (nav) {
+      nav.classList.add('site-nav');
+    });
     stripLegacy();
     document.addEventListener('pointerover', function (event) {
       var trigger = findTrigger(event.target);
