@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Book Coaching with Andy Fish | ReikiFish</title>
+  <meta name="description" content="Choose a coaching session, view Andy Fish's live availability and book securely through PayPal.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://reikifish.com/booking.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/booking.css">
+</head>
+<body class="booking-page">
+  <header class="booking-header">
+    <a class="booking-brand" href="index.html" aria-label="ReikiFish home"><span class="booking-brand-mark">AF</span><span><strong>Andy Fish</strong><small>Author &amp; Transformational Coach</small></span></a>
+    <a class="booking-return" href="coaching.html">Back to coaching <span aria-hidden="true">&rarr;</span></a>
+  </header>
+
+  <main>
+    <section class="booking-hero">
+      <div>
+        <p class="booking-kicker">Private online coaching</p>
+        <h1>Choose a time to<br>stand in the Grey.</h1>
+        <p class="booking-intro">Select the kind of support you need, choose an available UK time and confirm securely through PayPal.</p>
+      </div>
+      <aside class="booking-trust">
+        <span>Secure PayPal checkout</span><span>Private and confidential</span><span>Confirmation by email</span>
+      </aside>
+    </section>
+
+    <section class="booking-shell" aria-labelledby="booking-title">
+      <div class="booking-progress" aria-label="Booking progress">
+        <span class="is-active" data-progress="1"><b>1</b> Session</span><span data-progress="2"><b>2</b> Date &amp; time</span><span data-progress="3"><b>3</b> Your details</span><span data-progress="4"><b>4</b> Payment</span>
+      </div>
+
+      <form id="booking-form" novalidate>
+        <section class="booking-step" data-step="1">
+          <div class="booking-step-heading"><p>Step 01</p><h2 id="booking-title">What would help you today?</h2></div>
+          <div id="service-options" class="booking-services" aria-live="polite"><p class="booking-loading">Loading sessions…</p></div>
+          <button class="booking-next" type="button" data-next disabled>Choose a date <span>&rarr;</span></button>
+        </section>
+
+        <section class="booking-step" data-step="2" hidden>
+          <div class="booking-step-heading"><p>Step 02</p><h2>Choose your date and time</h2><span>Times automatically follow UK daylight saving.</span></div>
+          <div class="booking-calendar-grid">
+            <label class="booking-date-card"><span>Select a date</span><input id="booking-date" name="date" type="date" required><small>Monday to Friday · 2:45pm–6:00pm</small></label>
+            <div class="booking-time-card"><span>Available times</span><div id="slot-options" class="booking-slots"><p>Choose a date to see availability.</p></div></div>
+          </div>
+          <div class="booking-actions"><button type="button" class="booking-back" data-back>Back</button><button class="booking-next" type="button" data-next disabled>Enter your details <span>&rarr;</span></button></div>
+        </section>
+
+        <section class="booking-step" data-step="3" hidden>
+          <div class="booking-step-heading"><p>Step 03</p><h2>Who is the booking for?</h2></div>
+          <div class="booking-fields">
+            <label><span>Full name *</span><input name="name" autocomplete="name" maxlength="120" required></label>
+            <label><span>Email address *</span><input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+            <label><span>Telephone</span><input name="phone" type="tel" autocomplete="tel" maxlength="80"></label>
+            <label class="booking-field-wide"><span>What would you like support with? <em>Optional</em></span><textarea name="notes" rows="4" maxlength="2000"></textarea></label>
+            <label class="booking-consent booking-field-wide"><input name="consent" type="checkbox" required><span>I understand this is non-clinical coaching and not therapy, medical care, crisis support or legal advice.</span></label>
+          </div>
+          <div class="booking-actions"><button type="button" class="booking-back" data-back>Back</button><button class="booking-next" type="button" data-next>Review booking <span>&rarr;</span></button></div>
+        </section>
+
+        <section class="booking-step" data-step="4" hidden>
+          <div class="booking-step-heading"><p>Step 04</p><h2>Review and confirm</h2></div>
+          <div class="booking-review-layout">
+            <div id="booking-summary" class="booking-summary"></div>
+            <div class="booking-payment"><h3>Secure checkout</h3><p>Your slot is held for 15 minutes once PayPal opens.</p><div id="paypal-buttons"></div><button type="button" id="free-confirm" class="booking-next" hidden>Confirm free call <span>&rarr;</span></button><p class="booking-payment-note">Payment is processed by PayPal. ReikiFish never receives your card details.</p></div>
+          </div>
+          <div class="booking-actions"><button type="button" class="booking-back" data-back>Back</button></div>
+        </section>
+      </form>
+      <div id="booking-status" class="booking-status" role="status" aria-live="polite"></div>
+    </section>
+
+    <section class="booking-note"><p>Before you book</p><h2>A clear boundary creates safer work.</h2><div><p>Coaching offers calm, structured and non-judgemental support. It does not diagnose conditions, replace qualified healthcare or provide legal representation.</p><p>If you are in immediate danger or experiencing a crisis, contact the emergency services or an appropriate crisis service instead of waiting for a coaching appointment.</p></div></section>
+  </main>
+  <footer class="booking-footer"><span>© 2026 Andy Fish</span><a href="privacy-policy.html">Privacy</a><a href="contact.html">Contact</a></footer>
+  <script src="assets/js/booking.js" defer></script>
+</body>
+</html>

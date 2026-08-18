@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reiki Fish CMS</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/tinymce@7.9.1/tinymce.min.js">
+
+</script>
+
+    <style>
+        :root {
+            --gold: #c9a968;
+            --gold-dark: #a98749;
+            --ink: #171717;
+            --muted: #6b6b6b;
+            --cream: #f5f2ec;
+            --white: #ffffff;
+            --border: #ded8cd;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 32px;
+            background: #111;
+            color: #fff;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        header strong {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+        }
+
+        .layout {
+            width: min(1450px, 96%);
+            margin: 32px auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 330px;
+            gap: 26px;
+            align-items: start;
+        }
+
+        .panel {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+        }
+
+        label {
+            display: block;
+            margin: 0 0 7px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            margin: 0 0 18px;
+            padding: 12px 13px;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            background: #fff;
+            color: var(--ink);
+            font: inherit;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: 2px solid rgba(201, 169, 104, .3);
+            border-color: var(--gold);
+        }
+
+        #title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        button {
+            border: 0;
+            border-radius: 7px;
+            padding: 13px 24px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .publish {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .publish:hover { background: var(--gold-dark); }
+
+        .draft {
+            background: #ece8df;
+            color: #222;
+        }
+
+        .counter {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .status {
+            min-height: 24px;
+            margin-top: 12px;
+            font-weight: 700;
+        }
+
+        .tox-tinymce {
+            border: 1px solid var(--border) !important;
+            border-radius: 8px !important;
+        }
+
+        @media (max-width: 900px) {
+            .layout { grid-template-columns: 1fr; }
+            header { padding: 16px 20px; }
+        }
+    </style>
+
+<link rel="stylesheet" href="../../assets/css/mega-menu.css?v=20260813-clean1">
+</head>
+
+<body>
+<header>
+    <strong>Reiki Fish CMS</strong>
+    <span>Professional Article Editor</span>
+</header>
+
+<main class="layout">
+    <section class="panel">
+        <label for="title">Article title</label>
+        <input id="title" type="text" placeholder="Enter your article title">
+
+        <label for="editor">Article content</label>
+        <textarea id="editor"></textarea>
+
+        <div class="counter">
+            <span id="wordCount">0 words</span> ·
+            <span id="readTime">1 minute read</span>
+        </div>
+
+        <div class="button-row">
+            <button class="draft" type="button" id="saveDraft">Save Draft</button>
+            <button class="publish" type="button" id="publishArticle">Publish Article</button>
+        </div>
+
+        <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <aside class="panel">
+        <h2>Publishing & SEO</h2>
+
+        <label for="slug">URL slug</label>
+        <input id="slug" type="text" placeholder="article-url-slug">
+
+        <label for="seoTitle">SEO title</label>
+        <input id="seoTitle" type="text" maxlength="60" placeholder="SEO title">
+
+        <label for="meta">Meta description</label>
+        <textarea id="meta" rows="5" maxlength="160" placeholder="Search description"></textarea>
+
+        <label for="excerpt">Article excerpt</label>
+        <textarea id="excerpt" rows="4" placeholder="Short introduction for article cards"></textarea>
+
+<label>Featured Image</label>
+
+<input
+type="file"
+id="featuredImageUpload"
+accept="image/png,image/jpeg,image/webp">
+
+<div id="imagePreview"
+style="display:none;margin:15px 0;">
+<img id="previewImage" style="max-width:100%;border-radius:8px;">
+</div>
+
+<script>
+const upload=document.getElementById("featuredImageUpload");
+const preview=document.getElementById("imagePreview");
+const img=document.getElementById("previewImage");
+
+upload.addEventListener("change",e=>{
+    const file=e.target.files[0];
+    if(!file) return;
+    
+img.src="";
+
+img.src="";
+img.src=URL.createObjectURL(file);
+
+
+    preview.style.display="block";
+});
+</script>
+
+<label>Image Alt Text *</label>
+
+<input
+id="featuredAlt"
+placeholder="Describe the image for accessibility and SEO">
+
+<label>Image Caption</label>
+
+<input
+id="featuredCaption"
+placeholder="Optional image caption">
+
+        <label for="category">Category</label>
+        <select id="category" required>
+            <option value="">Select a category</option>
+            <option value="Updates">Updates</option>
+            <option value="Psychology">Psychology</option>
+            <option value="Reiki">Reiki</option>
+            <option value="Events">Events</option>
+            <option value="Coaching">Coaching</option>
+            <option value="Parental Alienation &amp; DARVO">Parental Alienation &amp; DARVO</option>
+            <option value="Social Science">Social Science</option>
+        </select>
+
+        <label for="tags">Tags</label>
+        <input id="tags" type="text" placeholder="trauma, coaching, mindset">
+
+        <label for="author">Author</label>
+        <input id="author" type="text" value="Reiki Fish">
+
+        <label for="publishStatus">Status</label>
+        <select id="publishStatus">
+            <option value="draft">Draft</option>
+            <option value="published">Published</option>
+        </select>
+
+        <label style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+            <input
+                id="featured"
+                type="checkbox"
+                style="width:auto;margin:0;"
+            >
+            Feature this article at the top of the blog
+        </label>
+    </aside>
+<input type="hidden" id="featuredImage">
+</main>
+
+<script>
+    const existingPost = {{ post|default({})|tojson|safe }};
+
+    const slugify = value => value
+        .toLowerCase()
+        .trim()
+        .replace(/['"]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+
+    const titleInput = document.getElementById("title");
+    const slugInput = document.getElementById("slug");
+    const seoTitleInput = document.getElementById("seoTitle");
+    let slugEdited = false;
+
+    const setField = (id, value) => {
+        const field = document.getElementById(id);
+        if (field) field.value = value || "";
+    };
+
+    if (existingPost && existingPost.slug) {
+        slugEdited = true;
+
+        setField("title", existingPost.title);
+        setField("slug", existingPost.slug);
+        setField("seoTitle", existingPost.seoTitle);
+        setField("meta", existingPost.metaDescription);
+        setField("excerpt", existingPost.excerpt);
+        setField("category", existingPost.category);
+        setField("tags", existingPost.tags);
+        setField("author", existingPost.author);
+        setField("featuredImage", existingPost.featuredImage);
+        setField("featuredAlt", existingPost.featuredImageAlt);
+        setField("publishStatus", "published");
+
+        const featuredField = document.getElementById("featured");
+        if (featuredField) {
+            featuredField.checked = Boolean(existingPost.featured);
+        }
+
+        if (existingPost.featuredImage) {
+            const preview = document.getElementById("imagePreview");
+
+            if (preview) {
+                preview.style.display = "block";
+                preview.innerHTML =
+                    '<img src="' + existingPost.featuredImage +
+                    '" style="max-width:100%;border-radius:8px;" ' +
+                    'alt="' + (existingPost.featuredImageAlt || "") + '">' +
+                    '<p><strong>ALT:</strong> ' +
+                    (existingPost.featuredImageAlt || "") + '</p>';
+            }
+        }
+    }
+
+    slugInput.addEventListener("input", () => {
+        slugEdited = true;
+    });
+
+    titleInput.addEventListener("input", () => {
+        if (!slugEdited) slugInput.value = slugify(titleInput.value);
+        if (!seoTitleInput.value) seoTitleInput.value = titleInput.value.slice(0, 60);
+    });
+
+    tinymce.init({
+        selector: "#editor",
+        height: 720,
+        menubar: "file edit view insert format tools table help",
+        branding: false,
+        promotion: false,
+        browser_spellcheck: true,
+        contextmenu: false,
+
+        plugins: [
+            "advlist", "autolink", "lists", "link", "image", "media",
+            "table", "code", "fullscreen", "preview", "searchreplace",
+            "wordcount", "visualblocks", "charmap", "anchor",
+            "insertdatetime", "help", "emoticons", "pagebreak"
+        ],
+
+        toolbar: [
+            "undo redo | blocks fontfamily fontsize",
+            "bold italic underline strikethrough | forecolor backcolor",
+            "alignleft aligncenter alignright alignjustify",
+            "bullist numlist outdent indent | blockquote",
+            "link image media table | hr pagebreak",
+            "removeformat | searchreplace code preview fullscreen"
+        ].join(" | "),
+
+        block_formats:
+            "Paragraph=p; Heading 1=h1; Heading 2=h2; Heading 3=h3; Heading 4=h4; Preformatted=pre",
+
+        content_style: `
+            body {
+                max-width: 820px;
+                margin: 0 auto;
+                padding: 35px;
+                font-family: Georgia, "Times New Roman", serif;
+                font-size: 19px;
+                line-height: 1.8;
+                color: #222;
+            }
+            h1 { font-size: 42px; line-height: 1.15; }
+            h2 { font-size: 32px; line-height: 1.25; margin-top: 1.5em; }
+            h3 { font-size: 25px; line-height: 1.3; margin-top: 1.4em; }
+            blockquote {
+                margin: 28px 0;
+                padding: 8px 22px;
+                border-left: 5px solid #c9a968;
+                color: #555;
+                font-style: italic;
+            }
+            img { max-width: 100%; height: auto; }
+        `,
+
+        init_instance_callback(editor) {
+            if (existingPost && existingPost.content) {
+                editor.setContent(existingPost.content);
+                editor.fire("change");
+            }
+        },
+
+        setup(editor) {
+            const updateCount = () => {
+                const text = editor.getContent({ format: "text" }).trim();
+                const words = text ? text.split(/\s+/).length : 0;
+                const minutes = Math.max(1, Math.ceil(words / 220));
+
+                document.getElementById("wordCount").textContent =
+                    `${words.toLocaleString()} words`;
+
+                document.getElementById("readTime").textContent =
+                    `${minutes} minute${minutes === 1 ? "" : "s"} read`;
+            };
+
+            editor.on("init input change undo redo", updateCount);
+        }
+    });
+
+    async function submitArticle(status) {
+        const statusBox = document.getElementById("status");
+        const title = titleInput.value.trim();
+        const content = tinymce.get("editor").getContent();
+
+        if (!title) {
+            statusBox.textContent = "Please enter an article title.";
+            return;
+        }
+
+        if (!content.trim()) {
+            statusBox.textContent = "Please add some article content.";
+            return;
+        }
+
+        const payload = {
+            title,
+            slug: slugInput.value.trim() || slugify(title),
+            seo_title: seoTitleInput.value.trim() || title,
+            meta: document.getElementById("meta").value.trim(),
+            excerpt: document.getElementById("excerpt").value.trim(),
+            featured_image: document.getElementById("featuredImage").value.trim(),
+            image_alt: document.getElementById("featuredAlt").value.trim(),
+            category: document.getElementById("category").value.trim(),
+            tags: document.getElementById("tags").value
+                .split(",")
+                .map(tag => tag.trim())
+                .filter(Boolean),
+            author: document.getElementById("author").value.trim(),
+            featured: document.getElementById("featured").checked,
+            status,
+            content
+        };
+
+        statusBox.textContent = status === "published"
+            ? "Publishing…"
+            : "Saving draft…";
+
+        try {
+            const response = await fetch("/publish-v2", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json().catch(() => ({}));
+
+            if (!response.ok) {
+                throw new Error(result.message || result.error || `Server returned ${response.status}`);
+            }
+
+            statusBox.textContent = result.message ||
+                (status === "published"
+                    ? "Article published successfully."
+                    : "Draft saved successfully.");
+        } catch (error) {
+            statusBox.textContent = `Could not save: ${error.message}`;
+        }
+    }
+
+    document.getElementById("saveDraft").addEventListener("click", () => {
+        document.getElementById("publishStatus").value = "draft";
+        submitArticle("draft");
+    });
+
+    document.getElementById("publishArticle").addEventListener("click", () => {
+        document.getElementById("publishStatus").value = "published";
+        submitArticle("published");
+    });
+
+
+const imageInput=document.getElementById("featuredImageUpload");
+
+if(imageInput){
+
+imageInput.addEventListener("change",async()=>{
+
+const file=imageInput.files[0];
+
+if(!file) return;
+
+const alt=document.getElementById("featuredAlt").value.trim();
+
+if(!alt){
+
+alert("Image Alt Text is required.");
+
+imageInput.value="";
+
+return;
+
+}
+
+const fd=new FormData();
+
+fd.append("image",file);
+
+fd.append("alt",alt);
+
+fd.append("caption",document.getElementById("featuredCaption").value);
+
+const r=await fetch("/upload-image",{
+
+method:"POST",
+
+body:fd
+
+});
+
+const data=await r.json();
+
+if(data.success){
+
+const imagePath = data.url || data.image || data.path || data.filename || "";
+
+document.getElementById("featuredImage").value = imagePath;
+
+if(imagePath){
+    document.getElementById("imagePreview").style.display="block";
+    document.getElementById("imagePreview").innerHTML =
+        '<img src="' + imagePath + '" style="max-width:100%;border-radius:8px;"><p><strong>ALT:</strong> ' + (data.alt || alt) + '</p>';
+}
+
+}else{
+
+alert(data.error);
+
+}
+
+});
+
+}
+
+
+</script>
+<!-- RF_EDITOR_SITEMAP_UI_START -->
+<style>
+.rf-sitemap-panel{margin:18px 0;padding:18px;border:1px solid #b78319;border-radius:12px;background:#0a1211;color:#f5f1e8}.rf-sitemap-button{padding:11px 18px;border:1px solid #efb126;border-radius:8px;background:#efb126;color:#09100f;font-weight:800;cursor:pointer}.rf-sitemap-button:disabled{opacity:.55;cursor:wait}.rf-sitemap-result{margin-top:12px;line-height:1.55;white-space:pre-wrap}.rf-sitemap-result a{color:#efb126}
+</style>
+<section class="rf-sitemap-panel" aria-labelledby="rf-sitemap-title">
+  <h2 id="rf-sitemap-title">Live XML Sitemap</h2>
+  <p>Scan every public page on the current live website, regenerate the sitemap and publish only <code>sitemap.xml</code>.</p>
+  <button type="button" class="rf-sitemap-button" id="rf-generate-sitemap">Generate &amp; Publish Live Sitemap</button>
+  <div class="rf-sitemap-result" id="rf-sitemap-result" aria-live="polite"></div>
+</section>
+<script>
+document.getElementById('rf-generate-sitemap').addEventListener('click',async function(){
+ const button=this,result=document.getElementById('rf-sitemap-result');
+ button.disabled=true;result.textContent='Synchronising with live main and generating sitemap...';
+ try{
+  const response=await fetch('/admin/generate-live-sitemap',{method:'POST',headers:{'Accept':'application/json'}});
+  const data=await response.json();
+  if(!response.ok||!data.ok)throw new Error(data.error||'Sitemap generation failed.');
+  const counts=Object.entries(data.counts||{}).map(([key,value])=>key+': '+value).join('
+');
+  result.innerHTML='<strong>'+data.status+'</strong><br>Total live URLs: '+data.total+'<br>'+counts.replaceAll('
+','<br>')+'<br><a href="'+data.sitemap_url+'" target="_blank" rel="noopener">Open live sitemap</a>';
+ }catch(error){result.textContent='ERROR: '+error.message;}
+ finally{button.disabled=false;}
+});
+</script>
+<!-- RF_EDITOR_SITEMAP_UI_END -->
+
+<script src="../../assets/js/mega-menu.js?v=20260813-clean1"></script>
+</body>
+</html>

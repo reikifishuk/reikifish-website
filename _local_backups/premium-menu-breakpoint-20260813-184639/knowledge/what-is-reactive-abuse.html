@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <base href="../">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is Reactive Abuse? Meaning and Context | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<meta name="description" content="Understand reactive abuse, prolonged provocation, DARVO and why reactions must be assessed within the complete pattern of power, control and harm.">
+<link rel="canonical" href="https://www.reikifish.com/knowledge/what-is-reactive-abuse">
+    <link rel="stylesheet" href="../assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-sync1">
+</head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="/assets/images/logo.png"
+              alt="Andy Fish ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="/coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="/trauma-coaching.html">Trauma</a>
+
+        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
+<a href="/team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
+<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="ke-page">
+<section class="ke-hero">
+<div class="ke-wrap">
+<nav class="ke-breadcrumb" aria-label="Breadcrumb">
+<a href="/knowledge.html" class="knowledge-breadcrumb-cta">Knowledge Hub</a>
+<span>›</span>
+<a href="/knowledge-search.html?category=Abuse%20and%20Manipulation">Abuse and Manipulation</a>
+</nav>
+
+<div class="ke-hero-grid">
+<div class="ke-hero-copy">
+<div class="ke-type">EXPLANATION · ABUSE AND MANIPULATION</div>
+<h1>What is reactive abuse?</h1>
+<p class="ke-lead">Reactive abuse is an informal term used when harmful or distressed behaviour occurs in response to sustained provocation, coercion or abuse.</p>
+<div class="ke-reading">Evidence led explanation · Pattern and context · Knowledge reference</div>
+</div>
+
+<div class="ke-hero-visual" aria-hidden="true">
+<div class="ke-visual-glow"></div>
+<svg class="ke-darvo-art" viewBox="0 0 420 420">
+<circle cx="210" cy="210" r="174" class="ke-art-faint"></circle>
+<circle cx="210" cy="210" r="150" class="ke-art-dashed"></circle>
+<path d="M105 210 C145 145 185 145 210 210 C235 275 275 275 315 210" class="ke-art-brain"></path>
+<path d="M105 210 C145 275 185 275 210 210 C235 145 275 145 315 210" class="ke-art-brain"></path>
+<circle cx="105" cy="210" r="7" class="ke-art-node"></circle>
+<circle cx="315" cy="210" r="7" class="ke-art-node"></circle>
+<text x="210" y="375" text-anchor="middle" class="ke-art-subtitle">REIKIFISH KNOWLEDGE</text>
+</svg>
+<div class="ke-visual-caption">Pattern, Context and Responsibility</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="ke-layout">
+<article class="ke-article">
+
+<div class="ke-answer-box">
+<div class="ke-answer-label">QUICK ANSWER</div>
+<p>Reactive abuse is not a formal diagnosis. The phrase commonly describes a distressed or harmful reaction to repeated provocation or coercion, particularly when that reaction is later presented without the events that preceded it.</p>
+</div>
+
+<style>
+.kh-new-guide h2{scroll-margin-top:160px}
+.kh-new-nav{position:relative!important;z-index:2;background:#0c1111;border:1px solid rgba(211,160,53,.35);border-radius:18px;padding:1.5rem;margin:2rem 0 3rem;max-height:none!important;overflow:visible!important}
+.kh-new-nav p{color:#dfa62f;font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.kh-new-nav div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem 1.25rem}
+.kh-new-nav a{color:#dfa62f;text-decoration:none;display:block}
+.kh-new-note{background:#0c1111;border:1px solid rgba(211,160,53,.35);border-radius:18px;padding:1.5rem;margin:2rem 0}
+@media(max-width:760px){
+html,body{height:auto!important;min-height:100%!important;overflow-x:hidden!important;overflow-y:auto!important}
+.ke-page,.ke-layout,.ke-article{height:auto!important;max-height:none!important;overflow:visible!important}
+.kh-new-nav div{grid-template-columns:1fr}
+}
+</style>
+
+<section class="ke-deep-dive kh-new-guide">
+<div class="ke-section-label">IN DEPTH</div>
+
+<h2 id="meaning">Understanding reactive abuse</h2>
+<p>The term is commonly used when somebody exposed to continuing humiliation, intimidation, control or provocation eventually shouts, sends angry messages, damages property, pushes back or behaves in another uncharacteristic way.</p>
+<p>The reaction may then be isolated from everything that happened beforehand and used to claim that the reacting person caused the entire problem. This can overlap with blame shifting or DARVO, but the term itself cannot prove who is responsible.</p>
+
+<nav class="kh-new-nav" aria-label="Article contents">
+<p>In this complete guide</p>
+<div>
+<a href="#meaning">What reactive abuse means</a>
+<a href="#terminology">Why terminology matters</a>
+<a href="#pattern">Reaction or pattern?</a>
+<a href="#cycle">How reactive incidents develop</a>
+<a href="#context">How context disappears</a>
+<a href="#recording">Selective recording</a>
+<a href="#darvo">DARVO and reversed blame</a>
+<a href="#mutual">Claims of mutual abuse</a>
+<a href="#responsibility">Context and responsibility</a>
+<a href="#evidence">Recording a complete chronology</a>
+<a href="#children">Children and family conflict</a>
+<a href="#response">Responding more safely</a>
+<a href="#recovery">Recovery after repeated provocation</a>
+<a href="#myths">Common misconceptions</a>
+<a href="#questions">Frequently asked questions</a>
+</div>
+</nav>
+
+<h2 id="terminology">Why the terminology matters</h2>
+<p>Reactive abuse is not a recognised clinical diagnosis. Some specialists prefer terms such as reactive behaviour, retaliatory behaviour or a trauma-related reaction because describing the response itself as abuse can obscure the wider pattern of power and control.</p>
+<p>Experiencing mistreatment does not make every later action harmless. A complete explanation can recognise that a reaction occurred within sustained abuse while also acknowledging that harmful behaviour may require accountability and support.</p>
+
+<h2 id="pattern">How is a reaction different from a pattern of abuse?</h2>
+<p>Domestic abuse is better understood through patterns, context, impact, intention and control than through a competition over who behaved worst during one recorded moment.</p>
+<ul>
+<li>Who repeatedly creates fear or restricts the other person’s freedom?</li>
+<li>Is there monitoring, isolation, humiliation or financial control?</li>
+<li>Who continually changes their behaviour to prevent escalation?</li>
+<li>What happened immediately before the recorded incident?</li>
+<li>Is one person attempting to leave while the other obstructs separation?</li>
+<li>Are selected messages or recordings presented without context?</li>
+<li>Does the behaviour continue across time and different situations?</li>
+</ul>
+<p>These questions cannot be resolved through an online checklist. They demonstrate why a complete chronology is more informative than one confrontation.</p>
+
+<div class="kh-new-note">
+<h3>There is no required appearance of a victim</h3>
+<p>A person experiencing abuse may appear frightened, detached, angry, inconsistent or retaliatory. Anger does not automatically disprove victimisation, just as calm presentation does not automatically establish innocence.</p>
+</div>
+
+<h2 id="context">How reactions can be separated from context</h2>
+<p>Someone may provoke an argument privately and begin recording only when the other person becomes distressed. Screenshots may begin halfway through an exchange. A prolonged period of coercion may be reduced to the final angry message.</p>
+<p>This does not mean every recording or allegation is deceptive. Evidence should be preserved and assessed rather than interpreted according to whichever person uses a psychological label first.</p>
+<p>A useful chronology records dates, observable behaviour, exact language where available, witnesses, original communications and what occurred before and after each incident.</p>
+
+<h2 id="responsibility">Context and responsibility can coexist</h2>
+<p>Understanding why somebody reacted does not make every reaction acceptable. Physical aggression, threats, harassment and property damage can cause harm regardless of the surrounding history.</p>
+<p>The useful question is not only, “Who reacted?” It is also, “What complete pattern produced this situation, who exercised power and control, what harm occurred and what is required to prevent further harm?”</p>
+<p>Someone can take responsibility for an inappropriate reaction without accepting a false account that erases prolonged coercion.</p>
+
+<h2 id="response">How to respond more safely</h2>
+<ol>
+<li>Prioritise immediate safety instead of trying to win the argument.</li>
+<li>Leave or pause the interaction where doing so is safe and lawful.</li>
+<li>Avoid threats, insults, repeated messages or physical confrontation.</li>
+<li>Preserve complete original evidence rather than edited fragments.</li>
+<li>Write a factual chronology while events remain fresh.</li>
+<li>Speak to an appropriate domestic abuse service or qualified legal adviser.</li>
+<li>Call 999 if anyone is in immediate danger in the UK.</li>
+</ol>
+<p>Techniques such as grey rock or reduced communication are not universally safe. A sudden change in engagement can sometimes cause escalation, so safety planning should be individual.</p>
+
+<!-- FLAGSHIP_EXPANSION_START -->
+
+<h2 id="cycle">How reactive incidents can develop</h2>
+<p>A reactive incident rarely begins at the moment visible to an outsider. It may follow repeated criticism, accusations, sleep disruption, monitoring, humiliation, threats, blocked exits, interference with parenting, financial restriction or persistent demands for an answer.</p>
+<p>Stress accumulates. The targeted person may initially explain, appease, withdraw or attempt to calm the situation. When these responses fail, emotional and physiological arousal can continue rising until judgement becomes impaired and the person shouts, sends hostile messages, breaks an object or acts physically.</p>
+<p>This sequence explains context; it does not make every action safe or acceptable. Understanding the full chain makes prevention more effective because it identifies both the sustained pattern and the final reaction.</p>
+
+<div class="kh-new-note">
+<h3>The visible moment may not be the beginning</h3>
+<p>A recording of the final outburst may be genuine while still presenting an incomplete account. Accuracy requires examining what happened before, during and after the recorded incident.</p>
+</div>
+
+<h2 id="recording">Selective recording and fragmented evidence</h2>
+<p>Phones, doorbell cameras, messages and social media create extensive records of modern relationships. Evidence can improve accountability, but fragments can also distort chronology.</p>
+<p>Someone may begin recording after prolonged provocation, submit only selected messages or describe a reaction without disclosing their preceding conduct. Conversely, a person accused of provocation may say that context is missing when the available evidence supports a different conclusion. Neither claim should be accepted automatically.</p>
+<p>Original files, full message threads, dates, metadata, witnesses and surrounding events are more useful than cropped screenshots or edited compilations. Psychological language should never replace careful evidence assessment.</p>
+
+<h2 id="darvo">Reactive behaviour and DARVO</h2>
+<p>DARVO refers to deny, attack, and reverse victim and offender. A person confronted about harmful behaviour may deny it, attack the credibility of the person raising the concern and present themselves as the true victim.</p>
+<p>A recorded reaction can become useful within that reversal. Attention shifts from a prolonged pattern towards the most dramatic response. The reacting person may then feel compelled to defend every word while the original conduct disappears from discussion.</p>
+<p>However, calling something DARVO does not prove deception. The concept describes a possible pattern and must be supported by evidence, chronology and context. Both parties may accuse each other of reversing blame, which makes precise behavioural description essential.</p>
+
+<h2 id="mutual">Is mutual abuse an accurate description?</h2>
+<p>Both people in a relationship can behave harmfully. They may shout, insult, threaten or use physical force. Recognising this does not necessarily mean that the relationship contains equal power, equal fear or identical patterns of control.</p>
+<p>The phrase mutual abuse can flatten important differences between coercive control, self-defence, retaliation, resistance and isolated misconduct. Assessment should examine who establishes the controlling environment, who changes daily behaviour through fear and whether one person has meaningful freedom to leave, disagree or seek support.</p>
+<p>It is also possible for both people to engage in serious harmful behaviour without one simple explanatory label resolving the situation. Safety and accountability remain important even when the pattern is complex.</p>
+
+<h2 id="evidence">Building a complete and factual chronology</h2>
+<p>A chronology can help preserve context without relying entirely on memory during stress. It should separate observation from interpretation and avoid speculative diagnoses.</p>
+<ul>
+<li>Record the date, time and location where possible</li>
+<li>Describe observable behaviour and exact words</li>
+<li>Record what occurred before and after the incident</li>
+<li>Retain complete original messages and files</li>
+<li>Identify witnesses without pressuring them</li>
+<li>Record injuries or damage through appropriate lawful methods</li>
+<li>Note reports made to services and reference numbers</li>
+<li>Store records somewhere safe and secure</li>
+</ul>
+<p>A factual entry such as “twenty-seven messages arrived between 11 p.m. and 2 a.m.” is generally more useful than “the person was acting like a narcissist”. The first records evidence. The second offers an interpretation that may be disputed.</p>
+
+<h2 id="children">Reactive incidents, children and family conflict</h2>
+<p>Children can be harmed by hearing, seeing or experiencing the effects of domestic abuse and repeated high-conflict incidents. Adults should avoid involving children as messengers, investigators, witnesses or emotional supporters.</p>
+<p>A child’s words and behaviour should be considered carefully without assuming that every reluctance, allegation or change has one cause. Family separation may involve fear, loyalty conflict, developmental needs, direct experiences, adult influence or several factors together.</p>
+<p>Where proceedings are active, public accusations and amateur diagnosis can create additional harm. Legal restrictions and court orders must be followed even when someone believes the wider account is unfair.</p>
+
+<h2 id="recovery">Recovery after prolonged provocation</h2>
+<p>Someone who has reacted in ways they regret may experience shame, confusion and fear that the incident defines their character. Recovery requires honest responsibility without accepting a distorted account of the complete relationship.</p>
+<p>This may involve ending direct arguments, using a safe and lawful communication channel, obtaining legal advice, addressing trauma symptoms and learning to recognise rising arousal earlier. Alcohol or substances that worsen impulsivity may need attention.</p>
+<p>Regulation is not a demand to tolerate abuse calmly. Its purpose is to preserve choice, safety and clarity. Sometimes the regulated response is to disengage, leave, seek help or create a formal record rather than continue the conversation.</p>
+
+<h2 id="myths">Common misconceptions about reactive abuse</h2>
+<div class="kh-new-note">
+<h3>“A victim would never become angry.”</h3>
+<p>False. People experiencing abuse may respond with fear, anger, detachment, resistance or retaliation.</p>
+</div>
+<div class="kh-new-note">
+<h3>“Provocation excuses every reaction.”</h3>
+<p>False. Context matters, but threats, aggression and harassment can still cause serious harm.</p>
+</div>
+<div class="kh-new-note">
+<h3>“The calmest person must be telling the truth.”</h3>
+<p>False. Presentation style alone cannot establish responsibility or accuracy.</p>
+</div>
+<div class="kh-new-note">
+<h3>“One video reveals the whole relationship.”</h3>
+<p>Usually false. A video may provide important evidence while still requiring chronology and surrounding context.</p>
+</div>
+<div class="kh-new-note">
+<h3>“Reactive abuse is an official diagnosis.”</h3>
+<p>False. It is informal terminology and should be explained rather than treated as a clinical finding.</p>
+</div>
+
+<!-- FLAGSHIP_EXPANSION_END -->
+<section class="ke-faq" id="questions">
+<div class="ke-section-label">QUICK KNOWLEDGE</div>
+<h2>Frequently asked questions</h2>
+
+<details>
+<summary>Is reactive abuse a formal diagnosis?</summary>
+<p>No. It is informal terminology and should not replace a professional assessment of behaviour, context and safety.</p>
+</details>
+
+<details>
+<summary>Does reacting mean somebody is the primary abuser?</summary>
+<p>Not automatically. One incident cannot reliably establish the complete pattern, although harmful behaviour should still be taken seriously.</p>
+</details>
+
+<details>
+<summary>Can a reaction be used within DARVO?</summary>
+<p>Sometimes a reaction is isolated and used to reverse blame. DARVO remains a behavioural framework and is not automatic proof of another person’s intentions.</p>
+</details>
+
+<details>
+<summary>Should somebody secretly record another person?</summary>
+<p>Recording and privacy rules depend on the circumstances and jurisdiction. Advice relevant to the person’s location should be obtained.</p>
+</details>
+</section>
+
+<section class="ke-sources">
+<div class="ke-section-label">EVIDENCE &amp; FURTHER READING</div>
+<h2>Evidence and UK guidance</h2>
+<p>UK guidance on controlling or coercive behaviour emphasises patterns and serious effects. Crown Prosecution Service guidance also cautions against assumptions about how a typical victim should behave and recognises that victims may display anger or retaliation.</p>
+<ul>
+<li><a href="https://www.gov.uk/government/publications/controlling-or-coercive-behaviour-statutory-guidance-framework/controlling-or-coercive-behaviour-statutory-guidance-framework-accessible">Home Office guidance on controlling or coercive behaviour</a></li>
+<li><a href="https://www.cps.gov.uk/prosecution-guidance/controlling-or-coercive-behaviour-intimate-or-family-relationship">CPS guidance on controlling or coercive behaviour</a></li>
+<li><a href="https://www.gov.uk/government/publications/domestic-abuse-act-2021/domestic-abuse-statutory-guidance-accessible-version">Domestic Abuse Act statutory guidance</a></li>
+</ul>
+</section>
+
+<div class="ke-review">
+<span>✓</span>
+<div>
+<strong>Evidence led Knowledge Base</strong>
+<p>Careful terminology with clear distinctions between explanation, responsibility and diagnosis.</p>
+</div>
+</div>
+
+<div class="ke-disclaimer">General education only. This page is not a diagnosis, determination of responsibility, legal assessment, safety plan or substitute for professional advice.</div>
+</section>
+</article>
+
+<aside class="ke-side">
+<div class="ke-side-box">
+<div class="ke-side-label">ON THIS PAGE</div>
+<a href="#meaning">Understanding</a>
+<a href="#terminology">Terminology</a>
+<a href="#pattern">The wider pattern</a>
+<a href="#context">Missing context</a>
+<a href="#responsibility">Responsibility</a>
+<a href="#response">Responding safely</a>
+<a href="#questions">Questions</a>
+</div>
+
+<div class="ke-side-box">
+<div class="ke-side-label">RELATED KNOWLEDGE</div>
+<a href="/knowledge/what-is-darvo.html">What is DARVO? <span>→</span></a>
+<a href="/knowledge/emotional-regulation.html">Emotional regulation <span>→</span></a>
+<a href="/knowledge/what-is-darvo.html">What is DARVO? <span>→</span></a>
+</div>
+
+<a class="ke-back-hub" href="/knowledge.html">← Back to Knowledge Hub</a>
+</aside>
+</section>
+</main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <!-- ER_FLAGSHIP_DEPTH -->
+<!-- NEW_KNOWLEDGE_LINK_FIX -->
+<style>
+.kh-new-nav a,
+.ke-side a[href^="#"] {
+    position: relative !important;
+    z-index: 20 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const pageLinks = document.querySelectorAll(
+        '.kh-new-nav a[href^="#"], .ke-side a[href^="#"]'
+    );
+
+    pageLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const targetId = link.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            const navbar = document.querySelector(
+                ".navbar.fixed-top, .navbar"
+            );
+
+            const navbarHeight = navbar ? navbar.offsetHeight : 0;
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                navbarHeight -
+                24;
+
+            document.documentElement.style.overflowY = "auto";
+            document.body.style.overflowY = "auto";
+            document.body.classList.remove("menu-open");
+            document.body.classList.remove("nav-open");
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: "smooth"
+            });
+
+            history.replaceState(null, "", targetId);
+        });
+    });
+});
+</script>
+<!-- /NEW_KNOWLEDGE_LINK_FIX -->
+<!-- FLAGSHIP_MOBILE_LINKS_START -->
+<style>
+.kh-new-nav {
+    position: relative !important;
+    z-index: 5 !important;
+    max-height: none !important;
+    overflow: visible !important;
+}
+
+.kh-new-nav a,
+.ke-side a[href^="#"] {
+    position: relative !important;
+    z-index: 10 !important;
+    display: block;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    touch-action: manipulation !important;
+}
+
+.kh-new-guide [id] {
+    scroll-margin-top: 150px;
+}
+
+@media (max-width: 760px) {
+    html,
+    body {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 100% !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        overscroll-behavior-y: auto !important;
+        touch-action: pan-y !important;
+    }
+
+    .ke-page,
+    .ke-layout,
+    .ke-article,
+    .ke-deep-dive,
+    .kh-new-guide {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+
+    .kh-new-nav {
+        position: relative !important;
+        inset: auto !important;
+        width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+        touch-action: pan-y !important;
+    }
+
+    .kh-new-nav div {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kh-new-nav a {
+        min-height: 44px;
+        display: flex !important;
+        align-items: center;
+        padding: 0.35rem 0;
+    }
+
+    .kh-new-guide [id] {
+        scroll-margin-top: 125px;
+    }
+}
+</style>
+
+<script>
+(function () {
+    function unlockPage() {
+        document.documentElement.style.overflowY = "auto";
+        document.documentElement.style.height = "auto";
+        document.body.style.overflowY = "auto";
+        document.body.style.height = "auto";
+        document.body.classList.remove("menu-open", "nav-open", "modal-open");
+    }
+
+    function moveToSection(event) {
+        const link = event.currentTarget;
+        const reference = link.getAttribute("href");
+
+        if (!reference || reference.charAt(0) !== "#") {
+            return;
+        }
+
+        const target = document.getElementById(reference.substring(1));
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+        unlockPage();
+
+        const navbar = document.querySelector(".navbar.fixed-top, .navbar");
+        const offset = navbar ? navbar.offsetHeight + 22 : 22;
+
+        const destination =
+            target.getBoundingClientRect().top +
+            window.pageYOffset -
+            offset;
+
+        window.scrollTo({
+            top: Math.max(0, destination),
+            behavior: "smooth"
+        });
+
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, "", reference);
+        }
+    }
+
+    function initialiseGuideLinks() {
+        unlockPage();
+
+        const links = document.querySelectorAll(
+            '.kh-new-nav a[href^="#"], .ke-side a[href^="#"]'
+        );
+
+        links.forEach(function (link) {
+            link.removeEventListener("click", moveToSection);
+            link.addEventListener("click", moveToSection);
+        });
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initialiseGuideLinks);
+    } else {
+        initialiseGuideLinks();
+    }
+
+    window.addEventListener("pageshow", unlockPage);
+    window.addEventListener("orientationchange", unlockPage);
+})();
+</script>
+<!-- FLAGSHIP_MOBILE_LINKS_END -->
+<!-- KH_LIVE_NATIVE_LINKS_START -->
+<style class="KH_LIVE_NATIVE_LINKS_STYLES">
+.ke-page a[href],
+.ke-page .ke-side a[href],
+.ke-page .ke-side-box a[href],
+.ke-page .kh-cptsd-on-page a[href],
+.ke-page .kh-depth-contents a[href],
+.ke-page .ke-back-hub,
+.ke-page .knowledge-breadcrumb-cta {
+    position: relative !important;
+    z-index: 200 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.ke-page .ke-side {
+    z-index: 500 !important;
+    pointer-events: auto !important;
+}
+
+.ke-page .ke-side-box,
+.ke-page .ke-side-box nav,
+.ke-page .kh-cptsd-on-page,
+.ke-page .kh-cptsd-on-page nav {
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+.ke-page .ke-side::before,
+.ke-page .ke-side::after,
+.ke-page .ke-side-box::before,
+.ke-page .ke-side-box::after,
+.ke-page .kh-cptsd-on-page::before,
+.ke-page .kh-cptsd-on-page::after {
+    pointer-events: none !important;
+}
+
+.ke-page section[id],
+.ke-page article[id],
+.ke-page div[id] {
+    scroll-margin-top: 125px;
+}
+</style>
+<!-- KH_LIVE_NATIVE_LINKS_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-sync1"></script>
+</body>
+</html>

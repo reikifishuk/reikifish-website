@@ -1,0 +1,2637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <base href="../">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Narcissistic Personality Disorder: Symptoms & NPD Guide | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_NPD_FLAGSHIP_V1">
+
+.npd-levels{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin:27px 0 42px;
+}
+
+.npd-levels > div{
+  padding:20px;
+  border-top:2px solid #c99234;
+  background:#0b1112;
+}
+
+.npd-levels span,
+.npd-myths span{
+  color:#d69e39;
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.npd-levels h3{
+  margin:8px 0;
+  color:#e5e1d9;
+  font-size:15px;
+}
+
+.npd-levels p{
+  margin:0;
+  font-size:12px;
+  line-height:1.55;
+}
+
+
+.npd-four,
+.npd-two{
+  display:grid;
+  gap:10px;
+  margin:25px 0 40px;
+}
+
+.npd-four{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.npd-two{
+  grid-template-columns:repeat(2,1fr);
+}
+
+.npd-four > div,
+.npd-two > div{
+  padding:24px;
+  border:1px solid rgba(204,149,41,.32);
+  border-radius:7px;
+  background:#0b1112;
+}
+
+.npd-four span{
+  color:#d69d37;
+  font-size:10px;
+}
+
+.npd-four h3,
+.npd-two h3{
+  margin:8px 0;
+  color:#e8e4dc;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.npd-four p{
+  margin:0;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.npd-two ul{
+  margin:12px 0 0;
+  padding-left:18px;
+  color:#aaa7a1;
+}
+
+.npd-two li{
+  margin:7px 0;
+}
+
+
+.npd-myths{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin:25px 0 45px;
+}
+
+.npd-myths > div{
+  padding:22px;
+  border-left:2px solid #ca9233;
+  background:#0b1112;
+}
+
+.npd-myths strong{
+  display:block;
+  margin:8px 0;
+  color:#e5e1da;
+}
+
+.npd-myths p{
+  margin:0;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.ke-seo-byline{
+  margin-top:8px;
+  color:#79766f;
+  font-size:11px;
+}
+
+.ke-article a{
+  color:#d5a03f;
+}
+
+@media(max-width:760px){
+
+  .npd-levels{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .npd-four,
+  .npd-two,
+  .npd-myths{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+<meta name="description" content="Evidence led guide to Narcissistic Personality Disorder: NPD symptoms, diagnosis, grandiosity, vulnerability, empathy, relationships, causes and treatment.">
+
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+
+<link rel="canonical" href="https://reikifish.com/knowledge/narcissistic-personality-disorder.html">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ReikiFish">
+<meta property="og:title" content="Narcissistic Personality Disorder: Complete NPD Guide">
+<meta property="og:description" content="An evidence led guide to NPD, including diagnosis, symptoms, grandiosity, vulnerability, empathy, relationships, causes, treatment and common myths.">
+<meta property="og:url" content="https://reikifish.com/knowledge/narcissistic-personality-disorder.html">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Narcissistic Personality Disorder: Complete NPD Guide">
+<meta name="twitter:description" content="Evidence led clinical guide to NPD, diagnosis, empathy, grandiosity, vulnerability, relationships and treatment.">
+<script id="KB_NPD_SCHEMA_V1" type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://reikifish.com/knowledge/narcissistic-personality-disorder.html#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://reikifish.com/knowledge/narcissistic-personality-disorder.html"
+      },
+      "headline": "Narcissistic Personality Disorder: Complete Evidence Led NPD Guide",
+      "description": "Evidence led guide to Narcissistic Personality Disorder including diagnosis, narcissistic grandiosity and vulnerability, empathy, relationships, causes and treatment.",
+      "inLanguage": "en-GB",
+      "author": {
+        "@type": "Person",
+        "name": "Andy Fish",
+        "url": "https://reikifish.com/about.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ReikiFish",
+        "url": "https://reikifish.com/"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Narcissistic Personality Disorder"
+      },
+      "citation": [
+        "https://www.psychiatry.org/news-room/apa-blogs/what-is-narcissistic-personality-disorder",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10187400/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4415495/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8170532/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://reikifish.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Knowledge Hub",
+          "item": "https://reikifish.com/knowledge.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Personality",
+          "item": "https://reikifish.com/knowledge-search.html?category=Personality"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Narcissistic Personality Disorder",
+          "item": "https://reikifish.com/knowledge/narcissistic-personality-disorder.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+    <link rel="stylesheet" href="../assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+</head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="/assets/images/logo.png"
+              alt="Andy Fish ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="/coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="/trauma-coaching.html">Trauma</a>
+
+        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
+<a href="/team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
+<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="ke-page">
+
+<section class="ke-hero">
+
+<div class="ke-wrap">
+
+<nav class="ke-breadcrumb" aria-label="Breadcrumb">
+  <a href="/knowledge.html" class="knowledge-breadcrumb-cta">Knowledge Hub</a>
+  <span>›</span>
+  <a href="/knowledge-search.html?category=Personality">Personality</a>
+</nav>
+
+
+<div class="ke-hero-grid">
+
+<div class="ke-hero-copy">
+
+  <div class="ke-type">
+    CLINICAL GUIDE · PERSONALITY
+  </div>
+
+  <h1>Narcissistic Personality Disorder</h1>
+
+  <p class="ke-lead">
+    Narcissistic Personality Disorder, or NPD, is a recognised personality
+    disorder involving persistent difficulties in self functioning,
+    grandiosity, need for admiration, empathy and relationships.
+  </p>
+
+  <div class="ke-reading">
+    Evidence led · Clinical distinctions · Primary sources included
+  </div>
+
+  <div class="ke-seo-byline">
+    Prepared by Andy Fish · ReikiFish Knowledge Base · Psychology education
+  </div>
+
+</div>
+
+
+<div class="ke-hero-visual">
+
+  <div class="ke-visual-glow"></div>
+
+  <svg
+    class="ke-darvo-art"
+    viewBox="0 0 420 420"
+    role="img"
+    aria-labelledby="npdHeroTitle npdHeroDesc"
+  >
+
+    <title id="npdHeroTitle">
+      Narcissistic Personality Disorder psychology illustration
+    </title>
+
+    <desc id="npdHeroDesc">
+      Gold line illustration representing identity, grandiosity,
+      vulnerability and interpersonal functioning in narcissistic
+      personality disorder.
+    </desc>
+
+    <circle cx="210" cy="210" r="174"
+            class="ke-art-faint"/>
+
+    <circle cx="210" cy="210" r="151"
+            class="ke-art-dashed"/>
+
+    <circle cx="210" cy="210" r="111"
+            class="ke-art-ring"/>
+
+    <path
+      d="M210 112
+         C169 108 142 140 146 178
+         C122 194 130 228 151 239
+         C145 270 170 291 201 282
+         L210 305"
+      class="ke-art-brain"
+    />
+
+    <path
+      d="M210 112
+         C251 108 278 140 274 178
+         C298 194 290 228 269 239
+         C275 270 250 291 219 282
+         L210 305"
+      class="ke-art-brain"
+    />
+
+    <path d="M210 113 L210 305"
+          class="ke-art-line"/>
+
+    <path d="M163 175 C184 162 199 176 191 197"
+          class="ke-art-brain"/>
+
+    <path d="M257 175 C236 162 221 176 229 197"
+          class="ke-art-brain"/>
+
+    <circle cx="210" cy="67" r="27"
+            class="ke-art-node"/>
+
+    <circle cx="337" cy="210" r="10"
+            class="ke-art-node"/>
+
+    <circle cx="83" cy="210" r="10"
+            class="ke-art-node"/>
+
+    <text x="210" y="72"
+          text-anchor="middle"
+          class="ke-art-number">
+      SELF
+    </text>
+
+    <text x="210" y="347"
+          text-anchor="middle"
+          class="ke-art-title">
+      NPD
+    </text>
+
+    <text x="210" y="368"
+          text-anchor="middle"
+          class="ke-art-subtitle">
+      IDENTITY · EMPATHY · INTIMACY
+    </text>
+
+  </svg>
+
+  <div class="ke-visual-caption">
+    Personality functioning is more complex than a checklist
+  </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="ke-layout">
+
+<article class="ke-article">
+
+
+<div class="ke-answer-box">
+
+<div class="ke-answer-label">QUICK ANSWER</div>
+
+<p>
+  <strong>Narcissistic Personality Disorder (NPD)</strong> is a clinical
+  personality disorder. It involves a pervasive pattern associated with
+  grandiosity, need for admiration, difficulties involving empathy and
+  problems in self and interpersonal functioning.
+</p>
+
+<p>
+  NPD is not the same as having narcissistic traits. Diagnosis requires
+  substantially more than noticing arrogance, selfishness, entitlement
+  or one unhealthy relationship.
+</p>
+
+</div>
+
+
+<section class="ke-deep-dive">
+
+<div class="ke-section-label">IN DEPTH</div>
+
+<h2 id="meaning">Understanding NPD properly</h2>
+
+<p>
+  Narcissistic Personality Disorder is one of the most discussed and
+  most misrepresented diagnoses online.
+</p>
+
+<p>
+  Social media often presents NPD as a synonym for an abusive,
+  manipulative or selfish person. Clinical psychology is considerably
+  more nuanced.
+</p>
+
+<p>
+  Personality disorders concern enduring patterns in how a person
+  experiences themselves, relates to others, regulates emotions and
+  responds across different situations.
+</p>
+
+<p>
+  NPD therefore cannot be established from a single behaviour, argument,
+  relationship or online checklist.
+</p>
+
+</section>
+
+
+<h2>Narcissistic traits vs Narcissistic Personality Disorder</h2>
+
+<p>
+  Narcissistic traits exist dimensionally in the general population.
+  People can display ambition, self importance, entitlement,
+  admiration seeking or defensiveness without having NPD.
+</p>
+
+<p>
+  The clinical distinction involves persistence, severity, breadth and
+  impairment.
+</p>
+
+<div class="npd-levels">
+
+<div>
+  <span>TRAIT</span>
+  <h3>Narcissistic characteristic</h3>
+  <p>
+    An individual characteristic such as entitlement, grandiosity or
+    admiration seeking.
+  </p>
+</div>
+
+<div>
+  <span>PATTERN</span>
+  <h3>Elevated narcissistic traits</h3>
+  <p>
+    Multiple characteristics may become more prominent without
+    necessarily constituting a personality disorder.
+  </p>
+</div>
+
+<div>
+  <span>PATHOLOGY</span>
+  <h3>Pathological narcissism</h3>
+  <p>
+    Significant difficulties regulating self esteem alongside
+    narcissistic grandiosity and vulnerability.
+  </p>
+</div>
+
+<div>
+  <span>DIAGNOSIS</span>
+  <h3>NPD</h3>
+  <p>
+    A clinical diagnosis requiring an enduring and impairing personality
+    pattern assessed by an appropriately qualified clinician.
+  </p>
+</div>
+
+</div>
+
+
+<div class="ke-important">
+
+<div class="ke-important-title">
+  The word “narcissist” is not a diagnosis
+</div>
+
+<p>
+  Calling somebody “a narcissist” after observing harmful behaviour
+  does not establish NPD. It is more accurate to describe the behaviour
+  unless a genuine clinical diagnosis is known.
+</p>
+
+</div>
+
+
+<h2 id="diagnosis">How is NPD conceptualised clinically?</h2>
+
+<p>
+  The DSM-5-TR includes Narcissistic Personality Disorder as a recognised
+  personality disorder.
+</p>
+
+<p>
+  Its traditional diagnostic description centres on a pervasive pattern
+  involving grandiosity, need for admiration and difficulties with
+  empathy, beginning by early adulthood and occurring across different
+  contexts.
+</p>
+
+<p>
+  Features considered during clinical assessment can include persistent
+  patterns involving:
+</p>
+
+<ul class="ke-list">
+
+<li>
+  exaggerated self importance or grandiosity
+</li>
+
+<li>
+  fantasies concerning exceptional success, power, status, beauty
+  or idealised achievement
+</li>
+
+<li>
+  beliefs about being unusually special or exceptional
+</li>
+
+<li>
+  strong needs for admiration
+</li>
+
+<li>
+  entitlement or expectation of special treatment
+</li>
+
+<li>
+  exploitative interpersonal behaviour
+</li>
+
+<li>
+  impaired or limited empathic functioning
+</li>
+
+<li>
+  envy and status comparison
+</li>
+
+<li>
+  arrogant or haughty behaviour and attitudes
+</li>
+
+</ul>
+
+<p class="ke-note">
+  This is an educational overview, not a diagnostic instrument. Formal
+  diagnostic criteria must be interpreted by appropriately qualified
+  clinicians within a complete assessment.
+</p>
+
+
+<h2>The dimensional view of NPD</h2>
+
+<p>
+  Modern personality research increasingly looks beyond simple
+  yes-or-no categories.
+</p>
+
+<p>
+  The DSM alternative model for personality disorders considers
+  impairment in personality functioning alongside pathological
+  personality traits.
+</p>
+
+<div class="npd-four">
+
+<div>
+  <span>01</span>
+  <h3>Identity</h3>
+  <p>
+    How stable and realistic a person's sense of self is and how strongly
+    self definition depends on other people's reactions.
+  </p>
+</div>
+
+<div>
+  <span>02</span>
+  <h3>Self direction</h3>
+  <p>
+    Goals and personal standards may become strongly connected to
+    approval, exceptionalism, status or entitlement.
+  </p>
+</div>
+
+<div>
+  <span>03</span>
+  <h3>Empathy</h3>
+  <p>
+    Difficulties recognising, responding to or identifying with other
+    people's feelings and needs can affect interpersonal functioning.
+  </p>
+</div>
+
+<div>
+  <span>04</span>
+  <h3>Intimacy</h3>
+  <p>
+    Relationships may become disproportionately organised around
+    self esteem regulation, validation or personal gain.
+  </p>
+</div>
+
+</div>
+
+
+<h2>Grandiosity and vulnerability in NPD</h2>
+
+<p>
+  One of the most important developments in modern narcissism research
+  is recognition that narcissistic functioning is not always loudly
+  grandiose.
+</p>
+
+<p>
+  Clinical and empirical research describes both grandiose and
+  vulnerable narcissistic states.
+</p>
+
+<div class="npd-two">
+
+<div>
+
+<div class="ke-section-label">GRANDIOSITY</div>
+
+<h3>More externally grandiose states</h3>
+
+<ul>
+  <li>superiority</li>
+  <li>dominance</li>
+  <li>entitlement</li>
+  <li>self enhancement</li>
+  <li>admiration seeking</li>
+  <li>status focus</li>
+  <li>arrogance</li>
+</ul>
+
+</div>
+
+
+<div>
+
+<div class="ke-section-label">VULNERABILITY</div>
+
+<h3>More vulnerable states</h3>
+
+<ul>
+  <li>shame</li>
+  <li>insecurity</li>
+  <li>hypersensitivity</li>
+  <li>withdrawal</li>
+  <li>resentment</li>
+  <li>negative emotionality</li>
+  <li>fragile self esteem</li>
+</ul>
+
+</div>
+
+</div>
+
+<p>
+  These presentations are not necessarily permanently separate.
+  Research and clinical observation indicate that some individuals
+  fluctuate between grandiose and vulnerable states.
+</p>
+
+
+<h2>NPD and self esteem regulation</h2>
+
+<p>
+  NPD is sometimes described as excessive self love, but that description
+  misses an important part of the disorder.
+</p>
+
+<p>
+  Contemporary models emphasise problems maintaining stable, realistic
+  self esteem.
+</p>
+
+<p>
+  Approval, admiration, achievement, status and comparison with other
+  people may become important ways of maintaining a desired sense of
+  self.
+</p>
+
+<p>
+  Experiences such as criticism, rejection, humiliation or failure may
+  therefore carry unusually strong psychological significance.
+</p>
+
+
+<h2 id="empathy">Does someone with NPD have empathy?</h2>
+
+<p>
+  This question requires much more nuance than it usually receives
+  online.
+</p>
+
+<p>
+  Empathy is multidimensional. It includes processes involved in
+  recognising another person's state, understanding their perspective
+  and emotionally responding to their experience.
+</p>
+
+<p>
+  Research supports <strong>compromised empathic functioning</strong>
+  in pathological narcissism and NPD, but does not justify the universal
+  claim that every person with NPD possesses absolutely no empathy.
+</p>
+
+<p>
+  Empathic responding can vary according to motivation, emotional
+  regulation, self relevance and context.
+</p>
+
+<div class="ke-analysis-box">
+
+<div class="ke-section-label">MYTH CHECK</div>
+
+<h3>NPD does not equal “zero empathy”</h3>
+
+<p>
+  Empathy difficulties are clinically important, but reducing a complex
+  interpersonal function to either “has empathy” or “has none” loses
+  important psychological information.
+</p>
+
+</div>
+
+
+<h2>NPD in relationships</h2>
+
+<p>
+  NPD can create significant relationship difficulties when admiration,
+  entitlement, self esteem regulation or limited mutuality repeatedly
+  interfere with reciprocity.
+</p>
+
+<p>
+  Difficulties may become particularly visible during criticism,
+  disagreement, perceived rejection or threats to status and self image.
+</p>
+
+<p>
+  However, no single relationship pattern establishes NPD.
+</p>
+
+
+<h2>NPD does not automatically mean abuse</h2>
+
+<p>
+  This distinction matters ethically and scientifically.
+</p>
+
+<p>
+  Narcissistic Personality Disorder is a mental health diagnosis.
+  Abuse describes harmful behaviour.
+</p>
+
+<p>
+  Someone can behave abusively without NPD. Someone can have NPD without
+  every behaviour they display being abusive.
+</p>
+
+<p>
+  Serious behaviour should be evaluated directly rather than assuming
+  that a psychiatric label is required to explain it.
+</p>
+
+
+<h2>Does gaslighting prove NPD?</h2>
+
+<p>
+  No.
+</p>
+
+<p>
+  Gaslighting describes behaviour that undermines another person's
+  confidence in their perception, memory or reality. It cannot be used
+  as a stand-alone diagnostic test for NPD.
+</p>
+
+<p>
+  <a href="/knowledge/what-is-gaslighting.html">
+    Explore the full Gaslighting guide →
+  </a>
+</p>
+
+
+<h2>Does DARVO prove NPD?</h2>
+
+<p>
+  No.
+</p>
+
+<p>
+  DARVO describes denial, attack and reversal of victim and offender
+  roles. It is not a personality disorder diagnosis.
+</p>
+
+<p>
+  <a href="/knowledge/what-is-darvo.html">
+    Explore the full DARVO guide →
+  </a>
+</p>
+
+
+<h2>What causes Narcissistic Personality Disorder?</h2>
+
+<p>
+  There is no single established cause of NPD.
+</p>
+
+<p>
+  Personality development reflects complex interactions involving
+  temperament, genetic influences, developmental experiences and wider
+  environmental factors.
+</p>
+
+<p>
+  Research provides evidence for both heritable and environmental
+  contributions to personality and narcissistic traits.
+</p>
+
+<p>
+  Claims that NPD always comes from one particular parenting style,
+  childhood trauma or one specific event are therefore too simplistic.
+</p>
+
+
+<h2 id="assessment">How is NPD assessed?</h2>
+
+<p>
+  Appropriate assessment is much more extensive than counting “red
+  flags”.
+</p>
+
+<p>
+  A clinician may examine:
+</p>
+
+<ul class="ke-list">
+
+<li>long term personality functioning</li>
+
+<li>self image and self esteem regulation</li>
+
+<li>interpersonal functioning</li>
+
+<li>empathy and intimacy</li>
+
+<li>grandiose and vulnerable states</li>
+
+<li>patterns across different relationships and environments</li>
+
+<li>functional impairment</li>
+
+<li>developmental history</li>
+
+<li>co-occurring mental health conditions</li>
+
+<li>alternative explanations for the presentation</li>
+
+</ul>
+
+
+<h2>Why differential diagnosis matters</h2>
+
+<p>
+  Some features associated with narcissistic functioning can overlap
+  with other clinical presentations.
+</p>
+
+<p>
+  Mood disturbance, trauma related difficulties, other personality
+  disorders, substance use and situational crises can influence
+  behaviour, self perception and relationships.
+</p>
+
+<p>
+  This is another reason why remote diagnosis based on social media,
+  relationship stories or checklists is unreliable.
+</p>
+
+
+<h2 id="research">What does current research tell us?</h2>
+
+<p>
+  Research during recent decades has considerably expanded the
+  traditional picture of NPD.
+</p>
+
+<p>
+  Current literature increasingly recognises variability, fluctuations
+  between grandiose and vulnerable states, complex empathic functioning,
+  self esteem regulation and different levels of psychosocial
+  functioning.
+</p>
+
+<p>
+  Neuroscience research has also investigated narcissistic traits and
+  NPD, but brain findings are not currently a diagnostic test for an
+  individual.
+</p>
+
+
+<div class="ke-important">
+
+<div class="ke-important-title">
+  Brain scan claims require caution
+</div>
+
+<p>
+  Group-level neuroscience findings cannot currently be used to look at
+  an individual brain scan and determine that a person “is a narcissist”.
+</p>
+
+</div>
+
+
+<h2 id="treatment">Can NPD be treated?</h2>
+
+<p>
+  The internet frequently claims that NPD cannot be treated and that
+  people with the disorder can never change.
+</p>
+
+<p>
+  That is too absolute.
+</p>
+
+<p>
+  Psychotherapy is the principal treatment approach discussed in the
+  clinical literature. Approaches adapted for narcissistic pathology
+  include psychodynamic, transference-focused, mentalisation-informed
+  and cognitive behavioural formulations.
+</p>
+
+<p>
+  However, the evidence base for NPD-specific treatment remains less
+  developed than for several other disorders, and systematic trials are
+  limited.
+</p>
+
+<p>
+  Treatment may involve work on self esteem regulation, interpersonal
+  functioning, realistic goals, emotional processing, empathy, reflective
+  capacity and the therapeutic relationship.
+</p>
+
+
+<h2>Can someone with NPD change?</h2>
+
+<p>
+  Improvement is possible, but change may be gradual and individual
+  outcomes vary.
+</p>
+
+<p>
+  Personality patterns are often longstanding, which means meaningful
+  change usually involves more than simply learning that a diagnosis
+  exists.
+</p>
+
+<p>
+  Motivation, therapeutic engagement, insight, circumstances and
+  co-occurring difficulties may all influence progress.
+</p>
+
+
+<h2>Common NPD myths</h2>
+
+<div class="npd-myths">
+
+<div>
+<span>MYTH</span>
+<strong>Everyone selfish has NPD.</strong>
+<p>Selfish behaviour alone cannot diagnose a personality disorder.</p>
+</div>
+
+<div>
+<span>MYTH</span>
+<strong>NPD means absolutely no empathy.</strong>
+<p>Empathic functioning is more complex and variable than this claim.</p>
+</div>
+
+<div>
+<span>MYTH</span>
+<strong>Everyone with NPD is abusive.</strong>
+<p>A diagnosis and abusive behaviour are not interchangeable concepts.</p>
+</div>
+
+<div>
+<span>MYTH</span>
+<strong>Gaslighting proves NPD.</strong>
+<p>Gaslighting is a behavioural concept, not a diagnostic test.</p>
+</div>
+
+<div>
+<span>MYTH</span>
+<strong>DARVO proves narcissism.</strong>
+<p>DARVO cannot independently establish a personality disorder.</p>
+</div>
+
+<div>
+<span>MYTH</span>
+<strong>People with NPD can never improve.</strong>
+<p>Clinical literature supports a more nuanced view of treatment and change.</p>
+</div>
+
+</div>
+
+
+<h2 id="response">If someone's behaviour is harming you</h2>
+
+<p>
+  You do not need to establish a diagnosis before responding to harmful
+  behaviour.
+</p>
+
+<ul class="ke-list">
+
+<li>Focus on observable behaviour.</li>
+
+<li>Consider repeated patterns rather than isolated labels.</li>
+
+<li>Maintain appropriate boundaries.</li>
+
+<li>Seek independent perspective where needed.</li>
+
+<li>Seek qualified mental health support if your wellbeing is affected.</li>
+
+<li>Prioritise safety where coercion, threats or violence are involved.</li>
+
+</ul>
+
+
+<section class="ke-faq" id="questions">
+
+<div class="ke-section-label">QUICK KNOWLEDGE</div>
+
+<h2>Frequently asked questions about NPD</h2>
+
+
+<details>
+<summary>Is NPD the same as narcissism?</summary>
+<p>
+  No. Narcissistic traits exist dimensionally. NPD is a clinical
+  personality disorder requiring a much broader pattern and assessment.
+</p>
+</details>
+
+
+<details>
+<summary>Can you have narcissistic traits without NPD?</summary>
+<p>
+  Yes. This is extremely important. Elevated traits do not automatically
+  constitute a personality disorder.
+</p>
+</details>
+
+
+<details>
+<summary>Is vulnerable narcissism NPD?</summary>
+<p>
+  Vulnerable narcissism is a research and clinical dimension. It is not
+  itself a separate NPD diagnosis.
+</p>
+</details>
+
+
+<details>
+<summary>Is “covert NPD” a separate diagnosis?</summary>
+<p>
+  No. “Covert narcissist” is not a separate DSM-5-TR diagnosis, although
+  vulnerable narcissistic presentations are well represented in research.
+</p>
+</details>
+
+
+<details>
+<summary>Can NPD be diagnosed from someone's relationship behaviour?</summary>
+<p>
+  Not reliably. Diagnosis requires a broader clinical assessment across
+  functioning, contexts and time.
+</p>
+</details>
+
+
+<details>
+<summary>Does a person with NPD know they have it?</summary>
+<p>
+  Insight varies. It should not be assumed that everybody with NPD either
+  fully recognises or completely lacks awareness of their difficulties.
+</p>
+</details>
+
+
+<details>
+<summary>Can NPD improve with treatment?</summary>
+<p>
+  Improvement is possible, although treatment can be challenging and the
+  NPD-specific evidence base remains developing.
+</p>
+</details>
+
+
+<details>
+<summary>Is NPD caused by childhood trauma?</summary>
+<p>
+  There is no single established cause. Development appears to involve
+  multiple biological, psychological and environmental influences.
+</p>
+</details>
+
+
+<details>
+<summary>Does NPD make somebody dangerous?</summary>
+<p>
+  A diagnosis alone cannot establish whether a particular individual is
+  dangerous. Risk should be assessed from actual behaviour and relevant
+  circumstances.
+</p>
+</details>
+
+
+<details>
+<summary>Can women have NPD?</summary>
+<p>
+  Yes. NPD is not restricted to men.
+</p>
+</details>
+
+
+</section>
+
+
+<section class="ke-sources">
+
+<div class="ke-section-label">
+  EVIDENCE &amp; CLINICAL SOURCES
+</div>
+
+<h2>Research and further reading</h2>
+
+
+<a
+ href="https://www.psychiatry.org/news-room/apa-blogs/what-is-narcissistic-personality-disorder"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>American Psychiatric Association</strong>
+
+<span>
+  Clinical overview of Narcissistic Personality Disorder based on
+  DSM-5-TR.
+</span>
+
+<b>↗</b>
+
+</a>
+
+
+<a
+ href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10187400/"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>Weinberg &amp; Ronningstam</strong>
+
+<span>
+  Narcissistic Personality Disorder: Progress in Understanding and
+  Treatment.
+</span>
+
+<b>↗</b>
+
+</a>
+
+
+<a
+ href="https://www.psychiatry.org/File%20Library/Psychiatrists/Meetings/Annual-Meeting/presenter-slides/Dimensional-Conceptualization-and-Diagnosis-of-Narcissistic-Personality-Disorder-Ronningstam.pdf"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>American Psychiatric Association</strong>
+
+<span>
+  Dimensional conceptualisation and diagnosis of NPD.
+</span>
+
+<b>↗</b>
+
+</a>
+
+
+<a
+ href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4415495/"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>Baskin-Sommers and colleagues</strong>
+
+<span>
+  Review of empathy and empathic functioning in Narcissistic
+  Personality Disorder.
+</span>
+
+<b>↗</b>
+
+</a>
+
+
+<a
+ href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8170532/"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>Jauk &amp; Kanske</strong>
+
+<span>
+  Systematic review of neuroscience research concerning narcissism
+  and NPD.
+</span>
+
+<b>↗</b>
+
+</a>
+
+
+<a
+ href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10187391/"
+ target="_blank"
+ rel="noopener noreferrer">
+
+<strong>Clinical treatment research</strong>
+
+<span>
+  Cognitive behavioural formulation of narcissistic self esteem
+  dysregulation and review of therapeutic approaches.
+</span>
+
+<b>↗</b>
+
+</a>
+
+</section>
+
+
+<div class="ke-review">
+
+<span>✓</span>
+
+<div>
+
+<strong>Evidence led clinical education</strong>
+
+<p>
+  ReikiFish distinguishes narcissistic traits, pathological narcissism
+  and Narcissistic Personality Disorder and does not diagnose individuals
+  from isolated behaviours.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="ke-disclaimer">
+
+This page provides general psychological education. It does not diagnose
+Narcissistic Personality Disorder and is not a substitute for assessment,
+diagnosis or treatment by an appropriately qualified health professional.
+
+</div>
+
+
+</article>
+
+
+<aside class="ke-side">
+
+<div class="ke-side-box">
+
+<div class="ke-side-label">ON THIS PAGE</div>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#meaning">
+  Understanding NPD
+</a>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#diagnosis">
+  Diagnosis
+</a>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#empathy">
+  Empathy
+</a>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#research">
+  Research
+</a>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#treatment">
+  Treatment
+</a>
+
+<a href="/knowledge/narcissistic-personality-disorder.html#questions">
+  Questions
+</a>
+
+</div>
+
+
+<div class="ke-side-box">
+
+<div class="ke-side-label">RELATED KNOWLEDGE</div>
+
+<a href="/knowledge/what-is-narcissism.html">
+  What is narcissism? <span>→</span>
+</a>
+
+<a href="/knowledge/what-is-gaslighting.html">
+  Gaslighting <span>→</span>
+</a>
+
+<a href="/knowledge/what-is-darvo.html">
+  DARVO <span>→</span>
+</a>
+
+<a href="/knowledge/psychological-projection.html">
+  Psychological projection <span>→</span>
+</a>
+
+</div>
+
+
+<a class="ke-back-hub" href="/knowledge.html">
+  ← Back to Knowledge Hub
+</a>
+
+</aside>
+
+</section>
+
+</main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

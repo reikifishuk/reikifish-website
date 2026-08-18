@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">A portrait reflected through layered glass</title>
+  <desc id="desc">A premium editorial image about concealed vulnerability, identity and relationship patterns.</desc>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1114"/><stop offset=".58" stop-color="#171b2a"/><stop offset="1" stop-color="#302a3d"/></linearGradient>
+    <linearGradient id="veil" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0c873" stop-opacity=".2"/><stop offset=".52" stop-color="#a181b7" stop-opacity=".1"/><stop offset="1" stop-color="#0b1114" stop-opacity=".02"/></linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#11181d"/><stop offset=".5" stop-color="#27303b"/><stop offset="1" stop-color="#101619"/></linearGradient>
+    <radialGradient id="light" cx="55%" cy="28%"><stop stop-color="#f0c873" stop-opacity=".3"/><stop offset="1" stop-color="#f0c873" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="24"/></filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#night)"/>
+  <rect width="1200" height="760" fill="url(#light)"/>
+  <path d="M0 628 C195 563 342 660 520 611 C725 555 937 511 1200 604 V760 H0Z" fill="#091113"/>
+  <path d="M760 70 L1130 180 L1065 670 L690 565Z" fill="#f0c873" opacity=".045" filter="url(#soft)"/>
+
+  <g opacity=".96">
+    <path d="M413 648 C425 500 458 405 548 373 C597 355 655 359 704 392 C784 446 811 535 823 648Z" fill="url(#coat)" stroke="#d4a34e" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M504 414 L548 489 L599 451 L652 489 L703 414" fill="none" stroke="#d4a34e" stroke-opacity=".55" stroke-width="3"/>
+    <path d="M553 478 L599 548 L654 478" fill="#0e1519" stroke="#d4a34e" stroke-opacity=".3" stroke-width="2"/>
+    <path d="M511 242 C526 177 588 150 650 180 C698 203 714 257 698 327 C683 389 643 425 590 414 C531 402 496 345 511 242Z" fill="#202a32" stroke="#d9b56a" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M520 248 C533 178 600 155 660 187 C687 202 701 225 703 257 C665 239 634 225 595 229 C567 231 541 240 520 248Z" fill="#10181d"/>
+    <path d="M548 287 Q570 272 589 285" fill="none" stroke="#e9d6ab" stroke-opacity=".72" stroke-width="5"/>
+    <path d="M633 285 Q651 273 670 285" fill="none" stroke="#e9d6ab" stroke-opacity=".72" stroke-width="5"/>
+    <path d="M576 357 Q604 373 633 356" fill="none" stroke="#d9b56a" stroke-opacity=".72" stroke-width="4"/>
+  </g>
+
+  <g fill="url(#veil)" stroke="#e1b861" stroke-opacity=".52" stroke-width="2">
+    <path d="M334 110 L1015 72 L1102 608 L260 675Z"/>
+    <path d="M477 42 L1118 235 L1002 719 L353 491Z" opacity=".62"/>
+  </g>
+  <path d="M346 111 L1016 73" stroke="#f3d58c" stroke-opacity=".62" stroke-width="2"/>
+  <path d="M477 42 L1118 235" stroke="#f3d58c" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M358 478 L1000 719" stroke="#b995c8" stroke-opacity=".26" stroke-width="12"/>
+  <path d="M702 73 L1114 235" stroke="#f3d58c" stroke-opacity=".2" stroke-width="18"/>
+
+  <g font-family="Georgia,serif">
+    <text x="68" y="104" fill="#efb83e" font-size="22" letter-spacing="5">HIDDEN PATTERNS</text>
+    <text x="68" y="151" fill="#f5f0e7" font-size="47">Look beyond the label</text>
+    <text x="70" y="696" fill="#d4c29e" opacity=".7" font-size="15" letter-spacing="3">IDENTITY · SHAME · RELATIONSHIPS</text>
+  </g>
+</svg>

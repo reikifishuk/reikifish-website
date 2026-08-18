@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reiki Fish Admin</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>Reiki Fish Admin</h1>
+  <span>Content Management</span>
+</header>
+
+<main class="dashboard">
+
+<div class="card">
+<h2>📝 New Article</h2>
+<p>Create a new blog post.</p>
+<button id="new-post">Open Editor</button>
+</div>
+
+<div class="card">
+<h2>📚 Articles</h2>
+<p>View and edit published posts.</p>
+<button>Manage</button>
+</div>
+
+<div class="card">
+<h2>🖼 Media</h2>
+<p>Upload and organise images.</p>
+<button>Open Library</button>
+</div>
+
+<div class="card">
+<h2>🚀 Publish</h2>
+<p>Build and publish the website.</p>
+<button>Publish</button>
+</div>
+
+
+<h2>Posts</h2>
+<div id="post-list"></div>
+
+</main>
+
+
+<script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+
+
+<!-- ARTICLES_MANAGER_DASHBOARD_FIX -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Make the Articles Manage button open the proper manager.
+    const manage = Array.from(
+        document.querySelectorAll("a, button")
+    ).find(function (element) {
+        return element.textContent.trim().toLowerCase() === "manage";
+    });
+
+    if (manage) {
+
+        if (manage.tagName === "A") {
+            manage.setAttribute("href", "/articles");
+        }
+
+        manage.addEventListener(
+            "click",
+            function (event) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                window.location.href = "/articles";
+            },
+            true
+        );
+    }
+
+    // Posts are now managed inside the Articles page.
+    const postsHeading = Array.from(
+        document.querySelectorAll("h1, h2, h3, h4")
+    ).find(function (heading) {
+        return heading.textContent.trim().toLowerCase() === "posts";
+    });
+
+    if (postsHeading) {
+
+        let node = postsHeading;
+
+        while (node) {
+            const next = node.nextElementSibling;
+            node.style.display = "none";
+            node = next;
+        }
+    }
+});
+</script>
+
+</body>
+</html>

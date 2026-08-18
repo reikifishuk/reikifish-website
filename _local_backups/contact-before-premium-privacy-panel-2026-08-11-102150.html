@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Trauma-Informed Coaching | Leadership Coach Andy Fish</title>
+    <meta
+      name="description"
+      content="Book trauma-informed coaching, leadership coaching or a speaking engagement with Andy Fish. Enquire today to begin your journey with confidence."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260806-trauma-v4" />
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+</head>
+  <body class="contact-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container py-6 reveal">
+        <p class="eyebrow">Contact</p>
+        <h1 class="display-4 fw-semibold">Begin with a conversation.</h1>
+        <p class="lead-text">Whether you're looking for trauma-informed coaching, interested in Walking the Grey, planning a speaking or podcast appearance, or simply want to start a conversation around psychology, resilience and personal growth, you're welcome to get in touch.<br><br>
+Use the enquiry form below, or email <a href="mailto:hello@reikifish.com">hello@reikifish.com</a> directly.</p>
+      </section>
+    </header>
+
+    <main class="container py-5">
+      <section class="contact-enquiry reveal" aria-labelledby="contact-enquiry-title">
+        <div class="contact-enquiry-intro">
+          <p class="eyebrow">Enquiry</p>
+          <h2 class="section-heading-lg" id="contact-enquiry-title">Tell me what you need.</h2>
+          <p class="lead-text">
+            You don't need to have everything worked out before you get in touch. Tell me a little about what's happening, what you're looking for and where you'd like to get to. Every enquiry is read personally, and I'll reply with a clear next step.
+          </p>
+        </div>
+
+        <form
+          class="contact-form"
+          data-contact-form
+          data-contact-endpoint="/api/contact"
+          action="/api/contact"
+          method="post"
+          novalidate
+        >
+          <input type="hidden" name="submittedAtClient" data-submitted-at-client />
+          <input type="hidden" name="website" value="" autocomplete="off" tabindex="-1" data-honeypot />
+          <div class="contact-form-status" data-contact-status hidden role="alert" aria-live="polite"></div>
+
+          <div class="contact-form-grid">
+            <div class="contact-field">
+              <label for="fullName">Full Name *</label>
+              <input id="fullName" name="Full Name" type="text" autocomplete="name" required />
+              <p class="contact-field-error" data-error-for="fullName" hidden></p>
+            </div>
+
+            <div class="contact-field">
+              <label for="emailAddress">Email Address *</label>
+              <input id="emailAddress" name="Email" type="email" autocomplete="email" required />
+              <p class="contact-field-error" data-error-for="emailAddress" hidden></p>
+            </div>
+
+            <div class="contact-field">
+              <label for="telephoneNumber">Telephone Number <span class="contact-optional">(optional)</span></label>
+              <input id="telephoneNumber" name="Telephone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="contact-field">
+              <label for="organisation">Organisation / Company <span class="contact-optional">(optional)</span></label>
+              <input id="organisation" name="Organisation" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="contact-field">
+              <label for="enquiryType">Enquiry Type *</label>
+              <select id="enquiryType" name="Enquiry Type" required>
+                <option value="" selected disabled>Select an enquiry type</option>
+                <option>Trauma-Informed Coaching</option>
+                <option>Leadership Coaching</option>
+                <option>Executive Coaching</option>
+                <option>Speaking Engagement</option>
+                <option>Podcast / Media Interview</option>
+                <option>Literary Event</option>
+                <option>Book Enquiry</option>
+                <option>General Enquiry</option>
+              </select>
+              <p class="contact-field-error" data-error-for="enquiryType" hidden></p>
+            </div>
+
+            <div class="contact-field contact-field-span-2 contact-message-field">
+              <label for="message">Tell me a little about your enquiry...</label>
+              <textarea id="message" name="Message" rows="8" minlength="10" required></textarea>
+              <p class="contact-field-error" data-error-for="message" hidden></p>
+            </div>
+          </div>
+
+          <div class="contact-form-actions">
+            <button class="btn btn-gold" type="submit">Send Enquiry</button>
+          </div>
+        </form>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js?v=20260806-contact-mailgun"></script>
+  </body>
+</html>

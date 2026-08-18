@@ -1,0 +1,31 @@
+/* Homepage premium mega-menu stacking repair */
+body.home-page .rf-premium-menu,
+body.home-page #rf-premium-menu,
+body.home-page #rf-mega-menu {
+    position: fixed !important;
+    z-index: 2147483000 !important;
+    overflow: visible !important;
+    isolation: isolate;
+}
+
+body.home-page .rf-premium-menu.is-open,
+body.home-page #rf-premium-menu.is-open,
+body.home-page #rf-mega-menu.is-open {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    display: block !important;
+}
+
+body.home-page .rf-premium-backdrop,
+body.home-page #rf-premium-backdrop,
+body.home-page #rf-mega-backdrop {
+    position: fixed !important;
+    z-index: 2147482999 !important;
+}
+
+body.home-page header,
+body.home-page nav,
+body.home-page .site-nav {
+    overflow: visible !important;
+}

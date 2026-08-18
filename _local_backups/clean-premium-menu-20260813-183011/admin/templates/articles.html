@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles | Reiki Fish Admin</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+<style>
+.articles-page {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px 30px 70px;
+}
+
+.articles-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.articles-head h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.articles-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.cms-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #287761;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font: inherit;
+}
+
+.cms-btn:hover {
+    background: #1f604f;
+}
+
+.cms-btn.secondary {
+    background: #ffffff;
+    color: #174c3e;
+    border: 1px solid #cbd8d4;
+}
+
+.cms-btn.danger {
+    background: #a83e3e;
+}
+
+.articles-panel {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,.07);
+}
+
+.article-row {
+    display: grid;
+    grid-template-columns: minmax(260px, 1fr) 150px 130px 120px 190px;
+    align-items: center;
+    gap: 18px;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5ebe8;
+}
+
+.article-row:last-child {
+    border-bottom: 0;
+}
+
+.article-row.header {
+    background: #edf3f1;
+    color: #214b40;
+    font-weight: 700;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.article-title {
+    font-weight: 700;
+    color: #17211e;
+}
+
+.article-date {
+    white-space: nowrap;
+}
+
+.status {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status.published {
+    background: #dff3e9;
+    color: #176344;
+}
+
+.status.draft {
+    background: #fff0cf;
+    color: #7b5411;
+}
+
+.status.featured {
+    background: #fff4d8;
+    color: #87621c;
+}
+
+.status.normal {
+    background: #eef1f0;
+    color: #66706d;
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.row-actions .cms-btn {
+    padding: 9px 14px;
+}
+
+.empty-state {
+    padding: 40px 24px;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .article-row.header {
+        display: none;
+    }
+
+    .article-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .articles-head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+    <h1>Reiki Fish Admin</h1>
+    <span>Content Management</span>
+</header>
+
+<main class="articles-page">
+
+    <div class="articles-head">
+        <div>
+            <h2>Articles</h2>
+            <p>Manage all published articles and drafts.</p>
+        </div>
+
+        <div class="articles-actions">
+            <a class="cms-btn secondary" href="/">Dashboard</a>
+            <a class="cms-btn" href="/editor">New Article</a>
+        </div>
+    </div>
+
+    <div class="articles-panel">
+
+        <div class="article-row header">
+            <div>Article</div>
+            <div>Date</div>
+            <div>Status</div>
+            <div>Featured</div>
+            <div>Actions</div>
+        </div>
+
+        <div id="articles-list">
+            <div class="empty-state">Loading articles...</div>
+        </div>
+
+    </div>
+
+</main>
+
+<script>
+const list = document.getElementById("articles-list");
+
+function escapeHtml(value) {
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+}
+
+function formatDate(value) {
+    if (!value) return "No date";
+
+    const raw = String(value).trim();
+
+    const date = new Date(
+        /^\d{4}-\d{2}-\d{2}$/.test(raw)
+            ? raw + "T12:00:00"
+            : raw
+    );
+
+    if (Number.isNaN(date.getTime())) {
+        return raw;
+    }
+
+    return new Intl.DateTimeFormat("en-GB", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    }).format(date);
+}
+
+async function loadArticles() {
+
+    try {
+
+        const response = await fetch("/posts", {
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error("Could not load articles");
+        }
+
+        const posts = await response.json();
+
+        posts.sort((a, b) => {
+            return new Date(b.date || 0) - new Date(a.date || 0);
+        });
+
+        if (!posts.length) {
+            list.innerHTML =
+                '<div class="empty-state">No articles have been created yet.</div>';
+            return;
+        }
+
+        list.innerHTML = posts.map(post => {
+
+            const slug = encodeURIComponent(post.slug);
+
+            return `
+                <div class="article-row" data-slug="${escapeHtml(post.slug)}">
+
+                    <div class="article-title">
+                        ${escapeHtml(post.title)}
+                    </div>
+
+                    <div class="article-date">
+                        ${escapeHtml(formatDate(post.date))}
+                    </div>
+
+                    <div>
+                        <span class="status ${post.draft ? "draft" : "published"}">
+                            ${post.draft ? "Draft" : "Published"}
+                        </span>
+                    </div>
+
+                    <div>
+                        <span class="status ${post.featured ? "featured" : "normal"}">
+                            ${post.featured ? "? Featured" : "Normal"}
+                        </span>
+                    </div>
+
+                    <div class="row-actions">
+                        <a
+                            class="cms-btn"
+                            href="/editor?slug=${slug}"
+                        >Edit</a>
+
+                        <button
+                            type="button"
+                            class="cms-btn danger delete-post"
+                            data-slug="${escapeHtml(post.slug)}"
+                        >Delete</button>
+                    </div>
+
+                </div>
+            `;
+        }).join("");
+
+    }
+    catch (error) {
+
+        list.innerHTML =
+            '<div class="empty-state">Unable to load articles.</div>';
+
+        console.error(error);
+    }
+}
+
+list.addEventListener("click", async event => {
+
+    const button = event.target.closest(".delete-post");
+
+    if (!button) return;
+
+    const slug = button.dataset.slug;
+
+    if (!confirm("Delete this article? This cannot be undone.")) {
+        return;
+    }
+
+    button.disabled = true;
+    button.textContent = "Deleting...";
+
+    try {
+
+        const response = await fetch(
+            "/delete/" + encodeURIComponent(slug),
+            {
+                method: "DELETE"
+            }
+        );
+
+        const result = await response.json();
+
+        if (!response.ok || result.success === false) {
+            throw new Error(result.message || "Delete failed");
+        }
+
+        await loadArticles();
+
+    }
+    catch (error) {
+
+        alert(error.message || "Could not delete article");
+
+        button.disabled = false;
+        button.textContent = "Delete";
+    }
+});
+
+loadArticles();
+</script>
+
+</body>
+</html>

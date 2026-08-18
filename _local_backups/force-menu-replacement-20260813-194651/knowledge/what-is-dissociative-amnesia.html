@@ -1,0 +1,3136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is Dissociative Amnesia? Complete Guide | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<meta name="description" content="Understand dissociative amnesia, memory gaps, trauma, diagnosis, differential assessment, treatment, recovery and when to seek professional help.">
+<link rel="canonical" href="https://reikifish.com/knowledge/what-is-dissociative-amnesia.html">
+    <link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "What Is Dissociative Amnesia?",
+  "url": "https://reikifish.com/knowledge/what-is-dissociative-amnesia.html",
+  "description": "Understand dissociative amnesia, memory gaps, trauma, diagnosis, differential assessment, treatment, recovery and when to seek professional help.",
+  "about": {
+    "@type": "MedicalCondition",
+    "name": "Dissociative amnesia"
+  },
+  "audience": {
+    "@type": "MedicalAudience",
+    "audienceType": "Patient"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ReikiFish",
+    "url": "https://reikifish.com"
+  },
+  "inLanguage": "en-GB",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "ReikiFish",
+    "url": "https://reikifish.com"
+  },
+  "dateModified": "2026-08-12",
+  "lastReviewed": "2026-08-12"
+}
+</script>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-sitewide1">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-sitewide1">
+</head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="/assets/images/logo.png"
+              alt="Andy Fish ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="/coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="/trauma-coaching.html">Trauma</a>
+
+        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
+<a href="/team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
+<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="ke-page">
+<style class="KH_CPTSD_PAGE_STYLES">
+.kh-cptsd-page {
+    --kh-space: 2rem;
+    --kh-small-space: 1.1rem;
+    --kh-border: rgba(99, 68, 154, 0.18);
+    --kh-purple: #6945a3;
+    --kh-deep: #33254d;
+    --kh-pink: #c64b90;
+    --kh-soft: #f8f4fc;
+    --kh-blue: #eaf6fb;
+}
+
+.kh-cptsd-page .ke-hero {
+    margin-bottom: var(--kh-space);
+}
+
+.kh-cptsd-page .ke-layout {
+    align-items: start;
+}
+
+.kh-cptsd-page .ke-article > *,
+.kh-cptsd-page .kh-cptsd-section,
+.kh-cptsd-page .kh-cptsd-grid,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-table-wrap,
+.kh-cptsd-page .kh-cptsd-faq,
+.kh-cptsd-page .kh-cptsd-sources {
+    margin-top: 0;
+    margin-bottom: var(--kh-space);
+}
+
+.kh-cptsd-page .kh-cptsd-section > * {
+    margin-top: 0;
+    margin-bottom: var(--kh-small-space);
+}
+
+.kh-cptsd-page .kh-cptsd-section > *:last-child,
+.kh-cptsd-page .kh-cptsd-box > *:last-child,
+.kh-cptsd-page .kh-cptsd-card > *:last-child,
+.kh-cptsd-page .kh-cptsd-faq details > *:last-child {
+    margin-bottom: 0;
+}
+
+.kh-cptsd-page h2 {
+    color: var(--kh-deep);
+    font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+    line-height: 1.25;
+    margin-bottom: var(--kh-small-space);
+}
+
+.kh-cptsd-page h3 {
+    color: var(--kh-deep);
+    font-size: 1.18rem;
+    line-height: 1.35;
+    margin-bottom: 0.65rem;
+}
+
+.kh-cptsd-page p,
+.kh-cptsd-page li {
+    line-height: 1.78;
+}
+
+.kh-cptsd-page ul,
+.kh-cptsd-page ol {
+    padding-left: 1.35rem;
+    margin-bottom: var(--kh-small-space);
+}
+
+.kh-cptsd-page li + li {
+    margin-top: 0.65rem;
+}
+
+.kh-cptsd-page .kh-cptsd-box {
+    padding: clamp(1.2rem, 3vw, 1.8rem);
+    border: 1px solid var(--kh-border);
+    border-radius: 18px;
+    background: var(--kh-soft);
+    box-shadow: 0 12px 32px rgba(51, 37, 77, 0.06);
+}
+
+.kh-cptsd-page .kh-cptsd-box--blue {
+    background: var(--kh-blue);
+}
+
+.kh-cptsd-page .kh-cptsd-box--warning {
+    background: #fff8ed;
+    border-color: rgba(179, 114, 19, 0.24);
+}
+
+.kh-cptsd-page .kh-cptsd-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.kh-cptsd-page .kh-cptsd-card {
+    height: 100%;
+    padding: 1.25rem;
+    border: 1px solid var(--kh-border);
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+.kh-cptsd-page .kh-cptsd-table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--kh-border);
+    border-radius: 16px;
+}
+
+.kh-cptsd-page .kh-cptsd-table {
+    width: 100%;
+    min-width: 680px;
+    margin: 0;
+    border-collapse: collapse;
+}
+
+.kh-cptsd-page .kh-cptsd-table th,
+.kh-cptsd-page .kh-cptsd-table td {
+    padding: 1rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--kh-border);
+    line-height: 1.6;
+}
+
+.kh-cptsd-page .kh-cptsd-table th {
+    color: var(--kh-deep);
+    background: var(--kh-soft);
+}
+
+.kh-cptsd-page .kh-cptsd-table tr:last-child td {
+    border-bottom: 0;
+}
+
+.kh-cptsd-page .kh-cptsd-contents a {
+    color: var(--kh-purple);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.kh-cptsd-page .kh-cptsd-contents a:hover {
+    text-decoration: underline;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--kh-border);
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details + details {
+    margin-top: 0.85rem;
+}
+
+.kh-cptsd-page .kh-cptsd-faq summary {
+    cursor: pointer;
+    color: var(--kh-deep);
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details p {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+}
+
+.kh-cptsd-page .kh-cptsd-note {
+    padding-left: 1rem;
+    border-left: 4px solid var(--kh-pink);
+}
+
+.kh-cptsd-page .kh-cptsd-sources {
+    padding-top: var(--kh-small-space);
+    border-top: 1px solid var(--kh-border);
+}
+
+.kh-cptsd-page section[id] {
+    scroll-margin-top: 120px;
+}
+
+@media (max-width: 767.98px) {
+    .kh-cptsd-page {
+        --kh-space: 1.5rem;
+        --kh-small-space: 0.9rem;
+    }
+
+    .kh-cptsd-page .kh-cptsd-grid {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+
+    .kh-cptsd-page .kh-cptsd-box,
+    .kh-cptsd-page .kh-cptsd-card {
+        padding: 1.05rem;
+        border-radius: 14px;
+    }
+
+    .kh-cptsd-page p,
+    .kh-cptsd-page li {
+        line-height: 1.7;
+    }
+}
+
+/* KH_CPTSD_DARK_REDESIGN_START */
+
+/* Keep decorative layers from blocking links. */
+.kh-cptsd-page *,
+.kh-cptsd-page *::before,
+.kh-cptsd-page *::after {
+    box-sizing: border-box;
+}
+
+.kh-cptsd-page *::before,
+.kh-cptsd-page *::after,
+.kh-cptsd-page .ke-visual-glow,
+.kh-cptsd-page .ke-art-ring,
+.kh-cptsd-page .ke-art-brain,
+.kh-cptsd-page .ke-art-node,
+.kh-cptsd-page .ke-art-line {
+    pointer-events: none !important;
+}
+
+.kh-cptsd-page a,
+.kh-cptsd-page summary {
+    position: relative;
+    z-index: 50;
+    pointer-events: auto !important;
+}
+
+/* Consistent dark Knowledge Hub palette. */
+.kh-cptsd-page {
+    --kh-bg: #080d0d;
+    --kh-panel: #0c1415;
+    --kh-panel-two: #101919;
+    --kh-panel-three: #121710;
+    --kh-gold: #e5ad32;
+    --kh-gold-light: #ffd56b;
+    --kh-text: #e8e3da;
+    --kh-muted: #bdb8ae;
+    --kh-heading: #fffaf0;
+    --kh-line: rgba(229, 173, 50, 0.28);
+    --kh-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+    color: var(--kh-text);
+}
+
+.kh-cptsd-page .ke-wrap {
+    max-width: 1510px;
+    margin-inline: auto;
+}
+
+/* Repair every link colour and interaction state. */
+.kh-cptsd-page a {
+    color: var(--kh-gold-light) !important;
+    text-decoration-color: rgba(255, 213, 107, 0.5);
+    text-underline-offset: 0.22em;
+}
+
+.kh-cptsd-page a:hover,
+.kh-cptsd-page a:focus-visible {
+    color: #ffffff !important;
+    text-decoration-color: var(--kh-gold);
+}
+
+.kh-cptsd-page a:focus-visible,
+.kh-cptsd-page summary:focus-visible {
+    outline: 3px solid var(--kh-gold-light);
+    outline-offset: 4px;
+}
+
+/* Breadcrumb and return button. */
+.kh-cptsd-page .ke-breadcrumb {
+    position: relative;
+    z-index: 60;
+}
+
+.kh-cptsd-page .knowledge-breadcrumb-cta {
+    position: relative;
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: fit-content;
+    margin: 1.5rem 0 2rem;
+    padding: 0.78rem 1.15rem;
+    color: #fffaf0 !important;
+    border: 1px solid rgba(229, 173, 50, 0.7);
+    border-radius: 999px;
+    background: rgba(229, 173, 50, 0.06);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.kh-cptsd-page .knowledge-breadcrumb-cta:hover {
+    color: #11130f !important;
+    background: var(--kh-gold-light);
+    transform: translateY(-1px);
+}
+
+/* Hero rebuilt to remove the empty black area. */
+.kh-cptsd-page .ke-hero {
+    margin-bottom: 2rem !important;
+    padding: clamp(2rem, 5vw, 4.5rem) 0;
+    border-top: 1px solid rgba(229, 173, 50, 0.12);
+    border-bottom: 1px solid var(--kh-line);
+    background:
+        radial-gradient(circle at 78% 45%, rgba(229, 173, 50, 0.11), transparent 25%),
+        linear-gradient(135deg, rgba(15, 21, 17, 0.98), rgba(8, 13, 13, 0.98));
+}
+
+.kh-cptsd-page .ke-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.kh-cptsd-page .ke-hero-copy {
+    max-width: 900px;
+}
+
+.kh-cptsd-page .ke-type,
+.kh-cptsd-page .ke-section-label,
+.kh-cptsd-page .ke-answer-label,
+.kh-cptsd-page .ke-side-label {
+    color: var(--kh-gold) !important;
+}
+
+.kh-cptsd-page .ke-hero h1 {
+    max-width: 900px;
+    margin: 0 0 1.4rem;
+    color: var(--kh-heading) !important;
+    font-size: clamp(3.2rem, 6vw, 6.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+}
+
+.kh-cptsd-page .ke-lead {
+    max-width: 900px;
+    margin: 0;
+    color: #ddd7cd !important;
+    font-size: clamp(1.12rem, 1.65vw, 1.45rem);
+    line-height: 1.72;
+}
+
+/* Visible trauma recovery artwork. */
+.kh-cptsd-page .ke-hero-visual {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    min-height: 390px;
+    overflow: hidden;
+    border: 1px solid rgba(229, 173, 50, 0.33);
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 50% 48%, rgba(255, 213, 107, 0.21), transparent 29%),
+        radial-gradient(circle at 50% 48%, rgba(95, 153, 132, 0.13), transparent 52%),
+        linear-gradient(145deg, #111817, #080d0d);
+    box-shadow: var(--kh-shadow);
+}
+
+.kh-cptsd-page .ke-hero-visual::before {
+    content: "SAFETY";
+    position: absolute;
+    top: 34px;
+    left: 36px;
+    color: var(--kh-gold);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.24em;
+}
+
+.kh-cptsd-page .ke-hero-visual::after {
+    content: "REGULATION  •  CONNECTION  •  RECOVERY";
+    position: absolute;
+    right: 26px;
+    bottom: 26px;
+    left: 26px;
+    color: rgba(255, 250, 240, 0.62);
+    font-size: 0.69rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+}
+
+.kh-cptsd-page .ke-darvo-art {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(255, 213, 107, 0.22);
+    border-radius: 50%;
+    background:
+        radial-gradient(circle, rgba(255, 213, 107, 0.1), transparent 58%);
+}
+
+.kh-cptsd-page .ke-art-ring {
+    position: absolute;
+    inset: 20px;
+    display: block !important;
+    border: 2px solid rgba(229, 173, 50, 0.5);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 15px rgba(229, 173, 50, 0.035),
+        0 0 55px rgba(229, 173, 50, 0.14);
+}
+
+.kh-cptsd-page .ke-art-brain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block !important;
+    width: 112px;
+    height: 138px;
+    border: 2px solid rgba(255, 240, 200, 0.75);
+    border-radius: 52% 48% 45% 55%;
+    background:
+        linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.25) 49%, rgba(255,255,255,0.25) 51%, transparent 52%),
+        radial-gradient(circle at 35% 35%, #f5c968, #8f6520 72%);
+    box-shadow: 0 0 38px rgba(229, 173, 50, 0.28);
+    transform: translate(-50%, -50%);
+}
+
+.kh-cptsd-page .ke-art-brain::before,
+.kh-cptsd-page .ke-art-brain::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background: rgba(255, 250, 240, 0.45);
+}
+
+.kh-cptsd-page .ke-art-brain::before {
+    top: 46px;
+    left: 9px;
+    transform: rotate(28deg);
+}
+
+.kh-cptsd-page .ke-art-brain::after {
+    right: 9px;
+    bottom: 42px;
+    transform: rotate(-28deg);
+}
+
+.kh-cptsd-page .ke-art-node {
+    position: absolute;
+    top: 25px;
+    right: 44px;
+    display: block !important;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: var(--kh-gold-light);
+    box-shadow:
+        -175px 55px 0 rgba(255, 213, 107, 0.75),
+        -128px 175px 0 rgba(255, 213, 107, 0.65),
+        5px 170px 0 rgba(255, 213, 107, 0.8),
+        0 0 20px rgba(255, 213, 107, 0.8);
+}
+
+.kh-cptsd-page .ke-art-line {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    display: block !important;
+    width: 222px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--kh-gold), transparent);
+    transform: rotate(-28deg);
+}
+
+.kh-cptsd-page .ke-visual-caption {
+    position: absolute;
+    top: 34px;
+    right: 32px;
+    left: 130px;
+    z-index: 3;
+    margin: 0;
+    color: rgba(255, 250, 240, 0.68) !important;
+    font-size: 0.68rem;
+    letter-spacing: 0.11em;
+    line-height: 1.6;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+/* Main layout and equal section rhythm. */
+.kh-cptsd-page .ke-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: start;
+    gap: clamp(2rem, 4vw, 5rem);
+}
+
+.kh-cptsd-page .ke-article {
+    min-width: 0;
+}
+
+.kh-cptsd-page .ke-article > * {
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+}
+
+.kh-cptsd-page .ke-article > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section {
+    margin: 0 0 2rem !important;
+    padding: clamp(1.35rem, 3vw, 2rem) 0 2rem;
+    border-bottom: 1px solid rgba(229, 173, 50, 0.16);
+}
+
+.kh-cptsd-page .kh-cptsd-section > * {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Repair heading contrast. */
+.kh-cptsd-page h2,
+.kh-cptsd-page h3,
+.kh-cptsd-page h4 {
+    color: var(--kh-heading) !important;
+}
+
+.kh-cptsd-page h2 {
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    font-size: clamp(1.8rem, 3vw, 2.75rem);
+    line-height: 1.18;
+}
+
+.kh-cptsd-page h3 {
+    margin-top: 0 !important;
+    margin-bottom: 0.7rem !important;
+    font-size: clamp(1.12rem, 1.8vw, 1.32rem);
+}
+
+.kh-cptsd-page p,
+.kh-cptsd-page li,
+.kh-cptsd-page td {
+    color: var(--kh-text);
+}
+
+.kh-cptsd-page p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* Clear answer panel. */
+.kh-cptsd-page .ke-answer-box {
+    padding: clamp(1.4rem, 3vw, 2.2rem);
+    border: 1px solid rgba(229, 173, 50, 0.25);
+    border-left: 4px solid var(--kh-gold);
+    border-radius: 0 20px 20px 0;
+    background:
+        linear-gradient(135deg, rgba(15, 24, 25, 0.98), rgba(10, 17, 18, 0.98)) !important;
+    box-shadow: var(--kh-shadow);
+}
+
+/* Replace every white or pale panel. */
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-box--blue,
+.kh-cptsd-page .kh-cptsd-box--warning,
+.kh-cptsd-page .kh-cptsd-card,
+.kh-cptsd-page .kh-cptsd-faq details {
+    color: var(--kh-text) !important;
+    border: 1px solid rgba(229, 173, 50, 0.27) !important;
+    background:
+        linear-gradient(145deg, #101919, #0a1112) !important;
+    box-shadow: var(--kh-shadow);
+}
+
+.kh-cptsd-page .kh-cptsd-box {
+    padding: clamp(1.35rem, 3vw, 2rem);
+    border-radius: 20px;
+}
+
+.kh-cptsd-page .kh-cptsd-contents {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 92% 5%, rgba(229, 173, 50, 0.11), transparent 25%),
+        linear-gradient(145deg, #111919, #091010) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-contents ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem 2rem;
+    margin: 1.25rem 0 0;
+    padding-left: 1.35rem;
+}
+
+.kh-cptsd-page .kh-cptsd-contents li {
+    margin: 0;
+    padding-left: 0.2rem;
+    color: var(--kh-gold-light);
+}
+
+.kh-cptsd-page .kh-cptsd-contents a {
+    display: inline;
+    color: var(--kh-gold-light) !important;
+    font-weight: 700;
+}
+
+.kh-cptsd-page .kh-cptsd-grid {
+    gap: 1rem !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card {
+    padding: 1.35rem;
+    border-radius: 16px;
+}
+
+.kh-cptsd-page .kh-cptsd-card:hover {
+    border-color: rgba(255, 213, 107, 0.58) !important;
+    transform: translateY(-2px);
+}
+
+/* Dark comparison table. */
+.kh-cptsd-page .kh-cptsd-table-wrap {
+    border-color: rgba(229, 173, 50, 0.3);
+    background: #0b1213;
+}
+
+.kh-cptsd-page .kh-cptsd-table {
+    background: #0b1213;
+}
+
+.kh-cptsd-page .kh-cptsd-table th {
+    color: var(--kh-gold-light) !important;
+    border-color: rgba(229, 173, 50, 0.25);
+    background: #131b18 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-table td {
+    border-color: rgba(229, 173, 50, 0.15);
+    background: #0b1213 !important;
+}
+
+/* FAQ styling. */
+.kh-cptsd-page .kh-cptsd-faq {
+    padding-top: 0.5rem;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details {
+    padding: 1.15rem 1.3rem;
+    border-radius: 14px;
+}
+
+.kh-cptsd-page .kh-cptsd-faq summary {
+    color: var(--kh-heading) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq summary::marker {
+    color: var(--kh-gold);
+}
+
+/* Sidebar follows the existing dark visual language. */
+.kh-cptsd-page .ke-side {
+    position: sticky;
+    top: 110px;
+}
+
+.kh-cptsd-page .ke-side-box {
+    margin: 0 0 1.25rem !important;
+    padding: 1.45rem;
+    border: 1px solid rgba(229, 173, 50, 0.28);
+    border-radius: 16px;
+    background: linear-gradient(145deg, #0d1516, #091011);
+    box-shadow: var(--kh-shadow);
+}
+
+.kh-cptsd-page .ke-side-box li + li {
+    margin-top: 0.8rem;
+}
+
+.kh-cptsd-page .ke-side-box a {
+    display: inline-block;
+    padding: 0.18rem 0;
+    color: #ddd7cd !important;
+}
+
+.kh-cptsd-page .ke-side-box a:hover,
+.kh-cptsd-page .ke-side-box a:focus-visible {
+    color: var(--kh-gold-light) !important;
+}
+
+/* Sources and disclaimer. */
+.kh-cptsd-page .kh-cptsd-sources {
+    padding: 1.5rem;
+    border: 1px solid rgba(229, 173, 50, 0.22);
+    border-radius: 18px;
+    background: #0c1415;
+}
+
+.kh-cptsd-page .ke-disclaimer {
+    padding: 1.35rem;
+    border: 1px solid rgba(229, 173, 50, 0.25);
+    border-radius: 16px;
+    background: rgba(229, 173, 50, 0.055);
+}
+
+/* Responsive design. */
+@media (max-width: 1100px) {
+    .kh-cptsd-page .ke-hero-grid {
+        grid-template-columns: minmax(0, 1fr) 360px;
+        gap: 2rem;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-hero-grid,
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .kh-cptsd-page .ke-hero-visual {
+        min-height: 330px;
+    }
+
+    .kh-cptsd-page .ke-side {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .kh-cptsd-page .ke-side-box {
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .kh-cptsd-page .ke-hero {
+        padding: 2rem 0;
+    }
+
+    .kh-cptsd-page .ke-hero h1 {
+        font-size: clamp(2.65rem, 15vw, 4.25rem);
+    }
+
+    .kh-cptsd-page .ke-hero-visual {
+        min-height: 290px;
+        border-radius: 20px;
+    }
+
+    .kh-cptsd-page .ke-darvo-art {
+        width: 220px;
+        height: 220px;
+    }
+
+    .kh-cptsd-page .ke-art-ring {
+        inset: 18px;
+    }
+
+    .kh-cptsd-page .ke-art-line {
+        width: 184px;
+    }
+
+    .kh-cptsd-page .ke-visual-caption {
+        display: none;
+    }
+
+    .kh-cptsd-page .kh-cptsd-contents ol,
+    .kh-cptsd-page .ke-side {
+        grid-template-columns: 1fr;
+    }
+
+    .kh-cptsd-page .kh-cptsd-section {
+        margin-bottom: 1.5rem !important;
+        padding-bottom: 1.5rem;
+    }
+}
+
+/* KH_CPTSD_DARK_REDESIGN_END */
+</style>
+
+<div class="kh-cptsd-page">
+    <div class="ke-wrap">
+        <nav class="ke-breadcrumb" aria-label="Breadcrumb">
+            <a href="/index.html">Home</a>
+            <span aria-hidden="true">›</span>
+            <a href="/knowledge.html">Knowledge Hub</a>
+            <span aria-hidden="true">›</span>
+            <span>Dissociative amnesia</span>
+        </nav>
+
+        <a class="ke-back-hub knowledge-breadcrumb-cta" href="/knowledge.html">← Knowledge Hub</a>
+
+        <header class="ke-hero">
+            <div class="ke-hero-grid">
+                <div class="ke-hero-copy">
+                    <p class="ke-type">Trauma and dissociation · Complete guide</p>
+                    <h1>What Is Dissociative Amnesia?</h1>
+                    <p class="ke-lead">Dissociative amnesia involves memory gaps for important personal information or events that exceed ordinary forgetting and are not better explained by another medical condition.</p>
+                </div>
+
+                <div class="ke-hero-visual" role="img" aria-label="Abstract gold circular illustration representing fragmented autobiographical memory reconnecting across time">
+                    <div class="ke-darvo-art">
+                        <div class="ke-visual-glow"></div>
+                        <div class="ke-art-ring"></div>
+                        <div class="ke-art-brain"></div>
+                        <div class="ke-art-node"></div>
+                        <div class="ke-art-line"></div>
+                    </div>
+                    <p class="ke-visual-caption">Understanding memory disruption with care, context and clinical caution</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="ke-layout">
+                        <article class="ke-article">
+                <!-- REIKIFISH_LONG_GUIDE_CONTENT_START -->
+                <div class="ke-answer-box">
+                    <p class="ke-answer-label">Clear answer</p>
+                    <p><strong>Dissociative amnesia is a recognised dissociative disorder involving an inability to recall important autobiographical information that would ordinarily be expected to remain available in memory.</strong> The gaps are more extensive than normal forgetfulness and cannot be explained more appropriately by an ordinary memory lapse, substance use, medication, a neurological condition or another medical cause.</p>
+                    <p>The missing information is often connected with traumatic, overwhelming or severely stressful experiences, although assessment must not assume trauma is the only possible explanation. Dissociative amnesia can affect a specific event, a period of life, selected aspects of experience or, more rarely, a much broader range of personal information.</p>
+                    <p>A memory gap does not automatically establish dissociative amnesia. Human memory is imperfect, attention affects what is encoded, and many medical, psychological and situational factors can disrupt recall. Diagnosis therefore requires careful assessment rather than interpretation through an online checklist.</p>
+                </div>
+
+                <section class="kh-cptsd-section" id="definition">
+                    <p class="ke-section-label">Definition</p>
+                    <h2>What does dissociative amnesia mean?</h2>
+                    <p>Dissociative amnesia concerns autobiographical memory: information about the person’s own experiences, history and identity. The difficulty is not simply forgetting where an object was placed, failing to remember an appointment or losing an unimportant detail over time. It involves gaps that are inconsistent with ordinary forgetting and that may cause distress, confusion, disruption or risk.</p>
+                    <p>The World Health Organization includes dissociative amnesia within the dissociative disorders in ICD-11. Classification systems provide a framework for diagnosis, but the name should not replace an individual formulation. A clinician still needs to understand what is missing, when the gap developed, whether the information was encoded in the first place and what other explanations remain possible.</p>
+                    <p>Memory loss may relate to traumatic events, but it can also involve ordinary personal experiences surrounding a stressful period. Some individuals know that a gap exists because other people describe events they cannot recall. Others discover messages, photographs, documents or changes in circumstances that indicate something occurred during an unavailable period.</p>
+                    <p>The experience can be frightening. A person may worry that their mind is permanently damaged, that they cannot trust themselves or that other people will not believe them. A measured assessment avoids both extremes: dismissing the gap as insignificant and treating it as unquestionable proof of a particular hidden event.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="memory-basics">
+                    <p class="ke-section-label">Memory foundations</p>
+                    <h2>How autobiographical memory normally works</h2>
+                    <p>Memory is not a continuous video recording. Experiences must first be attended to and encoded, then stored through changing neural and psychological processes, and later retrieved. Disruption at any stage can produce an apparent gap.</p>
+                    <p>Attention is crucial. When somebody is exhausted, intoxicated, highly distressed, overwhelmed or focused narrowly on immediate survival, parts of an event may never be encoded in an organised way. Failure to retrieve information later does not always mean a fully formed memory was stored and then sealed away.</p>
+                    <p>Autobiographical memory is reconstructive. Each act of remembering combines stored details with present knowledge, expectations, language and context. Memories can be broadly accurate while containing errors in sequence, timing, peripheral detail or interpretation. Confidence and vividness are not perfect measures of accuracy.</p>
+                    <p>Ordinary forgetting also follows patterns. Details fade when they are rarely retrieved, similar events interfere with one another, and childhood memories are often sparse. Stress can impair concentration and retrieval. Depression may produce overgeneral memory, while anxiety can narrow attention towards threat. These processes can be significant without meeting the criteria for dissociative amnesia.</p>
+                    <p>A careful clinician asks several different questions. Was the information noticed and encoded? Was there an injury, seizure, substance or medication effect? Is the difficulty limited to autobiographical information or does it also affect new learning and general knowledge? Does recall return under particular conditions? What is the functional impact?</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="ordinary-forgetting">
+                    <p class="ke-section-label">Comparison</p>
+                    <h2>Dissociative amnesia compared with ordinary forgetting</h2>
+
+                    <div class="kh-cptsd-table-wrap">
+                        <table class="kh-cptsd-table">
+                            <thead>
+                                <tr>
+                                    <th>Area</th>
+                                    <th>Ordinary forgetting</th>
+                                    <th>Possible dissociative amnesia</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Extent</td>
+                                    <td>Usually affects details, names, dates or information that has weakened over time.</td>
+                                    <td>May involve substantial periods, important events or central personal information.</td>
+                                </tr>
+                                <tr>
+                                    <td>Pattern</td>
+                                    <td>Often predictable from time, limited attention, interference or lack of use.</td>
+                                    <td>May be sharply bounded, selective or inconsistent with the person’s otherwise intact memory.</td>
+                                </tr>
+                                <tr>
+                                    <td>Personal importance</td>
+                                    <td>Emotionally important events can still lose details, but the main outline is commonly available.</td>
+                                    <td>Important autobiographical material may be inaccessible despite an expectation that it should be remembered.</td>
+                                </tr>
+                                <tr>
+                                    <td>Cause</td>
+                                    <td>Age, distraction, weak encoding, fatigue and ordinary memory processes.</td>
+                                    <td>Frequently associated with overwhelming stress or trauma after medical and other explanations are considered.</td>
+                                </tr>
+                                <tr>
+                                    <td>Functional effect</td>
+                                    <td>Usually inconvenient but does not fundamentally disrupt identity or personal continuity.</td>
+                                    <td>May create serious confusion, vulnerability, relationship difficulties or interruption of daily life.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>The table describes broad tendencies, not a diagnostic test. Ordinary memory can fail for important events, and severe gaps can occur for reasons unrelated to dissociation. The distinction depends on clinical context.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="patterns">
+                    <p class="ke-section-label">Patterns</p>
+                    <h2>Different patterns of autobiographical memory loss</h2>
+                    <p>Clinicians and textbooks have historically described several patterns of dissociative amnesia. These descriptions can help organise information, but real experiences do not always fit cleanly into one category.</p>
+
+                    <div class="kh-cptsd-grid">
+                        <article class="kh-cptsd-card">
+                            <h3>Localised amnesia</h3>
+                            <p>A person cannot recall events from a particular period, such as several hours, days or a defined traumatic episode.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Selective amnesia</h3>
+                            <p>Some parts of an event or period are available while other significant elements remain inaccessible.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Systematised amnesia</h3>
+                            <p>The memory gap relates to a particular category of information, person, relationship or theme rather than a continuous period.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Continuous amnesia</h3>
+                            <p>The person experiences an ongoing inability to remember successive events after a particular point, requiring especially careful medical assessment.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Generalised amnesia</h3>
+                            <p>A broad range of autobiographical information may be unavailable. This is uncommon and requires urgent exclusion of neurological and other causes.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Dissociative fugue</h3>
+                            <p>Travel or apparently purposeful movement may occur alongside loss of autobiographical identity or memory. Safety and medical assessment are priorities.</p>
+                        </article>
+                    </div>
+
+                    <p>These patterns should not be used for self-classification. A person who unexpectedly finds themselves somewhere without knowing how they arrived may face immediate practical risks and should obtain prompt professional help.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="symptoms">
+                    <p class="ke-section-label">Presentation</p>
+                    <h2>How dissociative amnesia may present</h2>
+                    <p>The most obvious feature is a significant gap in autobiographical recall, but the emotional response varies. Some people are deeply distressed by the missing information. Others initially appear surprisingly unconcerned, perhaps because emotional detachment accompanies the memory disruption. An apparently calm response does not prove that the person is fabricating or unaffected.</p>
+                    <p>A person may repeatedly hear that they attended an event but have no recollection of it. They may know that a relationship existed while lacking accessible memories of important periods. They may remember facts about an experience without the sense that it happened to them, or retain sensory fragments without an organised narrative.</p>
+                    <p>Associated experiences can include depersonalisation, derealisation, emotional numbness, identity confusion, nightmares, hypervigilance, shame, anxiety, depression or unexplained changes in skills and habits. These associated symptoms are not required in every case and may indicate additional conditions needing assessment.</p>
+                    <p>Memory problems can affect work, education, parenting, relationships, healthcare and personal safety. Missing conversations may be interpreted as dishonesty or lack of care. The person may agree to arrangements they later cannot recall, lose track of medication or struggle to provide a consistent account during legal or clinical processes.</p>
+                    <p>In legal contexts, a diagnosis does not make every recollection accurate or every gap evidence of abuse. Memory evidence requires the same careful evaluation applied to other testimony. Clinical support and forensic fact-finding serve different purposes and should not be confused.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="trauma">
+                    <p class="ke-section-label">Trauma and stress</p>
+                    <h2>Why overwhelming experiences may disrupt memory</h2>
+                    <p>During extreme threat, attention may narrow towards immediate survival. Sensory impressions, bodily reactions and fragments of action can receive priority while contextual details such as time, sequence and location are encoded less coherently. High arousal can therefore affect how memories are formed and later retrieved.</p>
+                    <p>Dissociation may reduce the felt intensity of an experience by separating aspects of awareness, emotion, bodily sensation and memory. In the short term this may help somebody endure circumstances they cannot escape. Later, the same separation can interfere with continuity and voluntary recall.</p>
+                    <p>Trauma memory is not always absent. Many people experience the opposite problem: intrusive memories, nightmares and flashbacks that return involuntarily. Avoidance and re-experiencing can coexist with gaps. Somebody may remember selected fragments with painful intensity while remaining unable to reconstruct a continuous sequence.</p>
+                    <p>The association between trauma and dissociative amnesia must be handled carefully. It does not justify searching for assumed hidden memories or treating symptoms as proof of a particular perpetrator or event. Ethical treatment supports present safety and functioning while allowing uncertainty where evidence is incomplete.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="not-proof">
+                    <p class="ke-section-label">Clinical caution</p>
+                    <h2>Why a memory gap is not proof of repressed trauma</h2>
+                    <p>People naturally seek an explanation for missing time. When the gap is frightening, a confident story can feel more tolerable than uncertainty. Yet several mechanisms can produce incomplete recall, and premature certainty can cause harm.</p>
+                    <p>Suggestive questioning, repeated imagination, hypnosis used to recover presumed events, dream interpretation and pressure from authority figures can influence what a person comes to believe. A mental image or bodily sensation may be meaningful without functioning as independently verified historical evidence.</p>
+                    <p>This does not mean reports of trauma should be dismissed. It means support should combine compassion with epistemic care: taking distress seriously, documenting what is known, separating memory from inference and avoiding techniques designed to produce a predetermined narrative.</p>
+                    <p>A trauma-informed approach does not require declaring every memory perfectly accurate or every gap suspicious. It creates enough safety for careful assessment while protecting the person from both disbelief and suggestion.</p>
+                </section>
+                                <!-- AMNESIA_EXPANSION_TWO_START -->
+                <section class="kh-cptsd-section" id="associated-factors">
+                    <p class="ke-section-label">Associated factors</p>
+                    <h2>What circumstances may contribute to dissociative amnesia?</h2>
+                    <p>Dissociative amnesia is frequently discussed in relation to traumatic or overwhelming experiences, but no single event or background automatically produces the condition. Development reflects an interaction between the nature of the experience, the person’s age, previous adversity, available support, present safety and their usual ways of regulating distress.</p>
+                    <p>Trauma that is prolonged, interpersonal or difficult to escape may be especially disruptive because the individual must continue functioning while danger remains active. Attention may narrow towards immediate survival, emotional experience may become separated from conscious awareness, and events may be encoded without an organised autobiographical sequence.</p>
+                    <p>Severe shame can also affect access to memory. Information that conflicts sharply with a person’s identity, relationships or understanding of the world may become difficult to approach voluntarily. This does not mean the information has been deliberately suppressed or that every inaccessible memory contains a hidden traumatic event.</p>
+                    <p>Sudden bereavement, disaster, assault, war, displacement and extreme relational conflict may precede memory disruption. A person may also experience amnesia during a period of overwhelming cumulative stress rather than after one clearly defined incident.</p>
+                    <p>Protective factors matter. Reliable support, physical safety, opportunities to make sense of what happened and compassionate professional care may reduce the extent to which dissociation becomes entrenched. Conversely, continuing danger, disbelief, isolation and repeated coercion may prolong symptoms.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="differential">
+                    <p class="ke-section-label">Differential diagnosis</p>
+                    <h2>What else can cause significant memory gaps?</h2>
+                    <p>A diagnosis of dissociative amnesia should never be made simply because somebody cannot remember an important event. Numerous medical, neurological, psychological and situational processes can impair memory. Differential assessment protects the person from receiving an inaccurate explanation and unsuitable treatment.</p>
+
+                    <div class="kh-cptsd-grid">
+                        <article class="kh-cptsd-card">
+                            <h3>Head injury</h3>
+                            <p>Concussion and more serious brain injuries can affect memory for events before or after an injury. Sudden memory loss following a blow to the head requires medical assessment.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Seizure disorders</h3>
+                            <p>Some seizures can produce periods of altered awareness, automatic behaviour or subsequent amnesia. Neurological investigation may be necessary.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Alcohol and other substances</h3>
+                            <p>Intoxication can prevent memories from being encoded, producing blackouts. Withdrawal and interactions between substances or medication may also impair cognition.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Sleep disorders</h3>
+                            <p>Severe sleep deprivation, parasomnias and disrupted sleep can affect attention, awareness and later recall.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Neurocognitive conditions</h3>
+                            <p>Dementia and other neurocognitive disorders often affect more than autobiographical memory and may show a progressive pattern.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Depression and anxiety</h3>
+                            <p>Reduced concentration, rumination, exhaustion and overgeneral memory can create serious subjective memory difficulties.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>PTSD and complex PTSD</h3>
+                            <p>Trauma conditions may involve fragmented recall, avoidance and dissociation without meeting the separate criteria for dissociative amnesia.</p>
+                        </article>
+
+                        <article class="kh-cptsd-card">
+                            <h3>Dissociative identity disorder</h3>
+                            <p>Recurrent everyday amnesia may occur alongside discontinuity in identity and agency, requiring specialist assessment.</p>
+                        </article>
+                    </div>
+
+                    <p>Deliberate fabrication is another possible explanation in some contexts, but it should not be presumed merely because memory is inconsistent or unusual. Inconsistency occurs in ordinary memory, trauma-related memory and many genuine health conditions.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="medical-warning-signs">
+                    <p class="ke-section-label">Medical caution</p>
+                    <h2>When memory loss requires urgent medical assessment</h2>
+                    <p>Sudden memory loss should not automatically be attributed to stress or trauma. Urgent medical help is appropriate when memory disruption follows a head injury, begins abruptly without an understood psychological context or occurs alongside weakness, facial drooping, speech disturbance, severe headache, seizure, collapse, fever or altered consciousness.</p>
+                    <p>A person who repeatedly becomes lost, cannot recognise familiar people, cannot retain new information or shows rapidly worsening confusion also requires prompt assessment. These patterns may indicate neurological, metabolic, infectious or medication-related causes.</p>
+                    <p>If somebody finds themselves in an unfamiliar location without knowing how they arrived, immediate safety comes first. They should avoid driving or operating equipment, contact a trusted person where possible and obtain medical or mental health support.</p>
+                    <p>Emergency assessment is not an accusation that symptoms are “physical rather than psychological”. Mental and physical health processes interact, and ruling out urgent medical causes is an essential part of responsible dissociative assessment.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="assessment">
+                    <p class="ke-section-label">Professional assessment</p>
+                    <h2>How is dissociative amnesia assessed?</h2>
+                    <p>Assessment begins with the pattern of memory loss. A clinician may ask what information is unavailable, how the person discovered the gap, whether recall changes over time and how the difficulty affects safety and functioning.</p>
+                    <p>The clinician should explore events surrounding the onset without using leading questions. They may ask about trauma, severe stress, sleep, mood, anxiety, dissociation, substance use, medication and physical symptoms. The purpose is to understand possibilities, not to steer the person towards a predetermined explanation.</p>
+                    <p>Medical history is important. Depending on the presentation, assessment may include a neurological examination, blood tests, brain imaging, electroencephalography or referral to another specialist. Not every person requires every investigation, but sudden or extensive amnesia generally warrants careful exclusion of physical causes.</p>
+                    <p>A mental state assessment considers orientation, attention, new learning, general knowledge, autobiographical recall, mood, psychosis and risk. Dissociation questionnaires can support exploration but cannot establish the diagnosis independently.</p>
+                    <p>Collateral information from healthcare records or trusted people may sometimes help establish timing and functional change, provided consent, confidentiality and safety are considered. Other people’s accounts are evidence to evaluate, not automatically definitive versions of events.</p>
+                    <p>A good assessment tolerates uncertainty. It may be more accurate initially to document unexplained autobiographical memory gaps than to assign a confident diagnosis before sufficient evidence is available.</p>
+                </section>
+
+                <section class="kh-cptsd-section" id="memory-return">
+                    <p class="ke-section-label">Memory return</p>
+                    <h2>Can inaccessible memories return?</h2>
+                    <p>Some people experience partial or substantial return of autobiographical memory. Recall may emerge gradually, appear after a reminder or become available when emotional arousal changes. Other gaps remain incomplete.</p>
+                    <p>Returning memories should be approached carefully. A memory may feel vivid, emotionally powerful and personally meaningful while still containing errors. Human recall is reconstructive, especially when events are remote, fragmented or repeatedly imagined.</p>
+                    <p>The person should not be pressured to decide immediately what every fragment means. It can be helpful to record the experience in neutral language, distinguish direct recollection from interpretation and discuss distress with a suitably qualified clinician.</p>
+                    <p>Therapy should not use suggestion to produce memories. Hypnosis, guided imagery or repeated questions framed around presumed abuse can increase confidence in material without independently establishing historical accuracy.</p>
+                    <p>Where a returning memory relates to possible crime or safeguarding concerns, clinical support and legal advice may both be necessary. The therapeutic role is to support wellbeing and safety; investigation belongs to appropriately authorised professionals.</p>
+                </section>
+                <!-- AMNESIA_EXPANSION_TWO_END -->
+
+                <!-- REIKIFISH_LONG_GUIDE_CONTINUATION_POINT -->
+<!-- REIKIFISH_LONG_GUIDE_CONTENT_END -->
+            </article>
+
+            <aside class="ke-side" aria-label="Dissociative amnesia page navigation">
+                <!-- REIKIFISH_LONG_GUIDE_SIDEBAR_START -->
+                <div class="ke-side-box kh-cptsd-on-page">
+                    <p class="ke-side-label">On this page</p>
+
+                    <nav aria-label="Dissociative amnesia page navigation">
+                        <a href="#definition">
+                            Definition
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#memory-basics">
+                            How memory works
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#ordinary-forgetting">
+                            Ordinary forgetting
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#patterns">
+                            Patterns of amnesia
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#symptoms">
+                            Signs and presentation
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#trauma">
+                            Trauma and memory
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="#not-proof">
+                            Clinical caution
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="ke-side-box">
+                    <p class="ke-side-label">Related Knowledge</p>
+
+                    <nav aria-label="Related dissociation guides">
+                        <a href="/knowledge/what-is-dissociation.html">
+                            What is dissociation?
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="/knowledge/what-is-depersonalisation-derealisation.html">
+                            Depersonalisation and derealisation
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="/knowledge/what-is-dissociative-identity-disorder.html">
+                            Dissociative identity disorder
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="/knowledge/what-is-complex-ptsd.html">
+                            What is complex PTSD?
+                            <span aria-hidden="true">→</span>
+                        </a>
+
+                        <a href="/knowledge/understanding-trauma-responses.html">
+                            Understanding trauma responses
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="ke-side-box">
+                    <p class="ke-side-label">Reading note</p>
+                    <p>This guide discusses trauma, memory loss and dissociation. Read at a manageable pace and pause if the material becomes overwhelming.</p>
+                </div>
+
+                <a class="ke-back-hub" href="/knowledge.html">
+                    ← Back to Knowledge Hub
+                </a>
+<!-- REIKIFISH_LONG_GUIDE_SIDEBAR_END -->
+            </aside>
+        </div>
+    </div>
+</div>
+</main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <!-- KH_BATCH_A_LINK_FIX -->
+<style class="KH_BATCH_A_LINK_FIX_STYLES">
+.kh-depth-contents {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents div,
+.kh-depth-contents a {
+  position: relative;
+  z-index: 31;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents a {
+  display: block;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.kh-depth-section[id] {
+  scroll-margin-top: 175px;
+}
+
+.kh-depth-section:focus {
+  outline: none;
+}
+</style>
+<!-- /KH_BATCH_A_LINK_FIX -->
+<!-- DISSOCIATION_FLAGSHIP_DEPTH -->
+<!-- KH_CPTSD_EQUAL_SPACING_START -->
+<style class="KH_CPTSD_EQUAL_SPACING_STYLES">
+.kh-cptsd-page {
+    --cptsd-section-gap: 32px;
+    --cptsd-content-gap: 16px;
+    --cptsd-card-gap: 16px;
+    --cptsd-panel-padding: 28px;
+}
+
+/* Remove unpredictable collapsed margins. */
+.kh-cptsd-page .ke-article,
+.kh-cptsd-page .ke-article section,
+.kh-cptsd-page .ke-article article,
+.kh-cptsd-page .ke-article div,
+.kh-cptsd-page .ke-side,
+.kh-cptsd-page .ke-side-box {
+    min-width: 0;
+}
+
+.kh-cptsd-page .ke-article > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-article > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Equal major section spacing. */
+.kh-cptsd-page .kh-cptsd-section {
+    margin: 0 0 var(--cptsd-section-gap) !important;
+    padding: var(--cptsd-section-gap) 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:first-of-type {
+    padding-top: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:last-of-type {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+/* Equal spacing inside every normal section. */
+.kh-cptsd-page .kh-cptsd-section > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Consistent headings. */
+.kh-cptsd-page .ke-section-label {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page h2 {
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page h3 {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page p {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Lists use the same content rhythm. */
+.kh-cptsd-page ul,
+.kh-cptsd-page ol {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page li + li {
+    margin-top: 10px !important;
+}
+
+/* Equal spacing around major panels. */
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-table-wrap,
+.kh-cptsd-page .kh-cptsd-faq,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    padding: var(--cptsd-panel-padding) !important;
+}
+
+/* Equal two-column card gaps. */
+.kh-cptsd-page .kh-cptsd-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--cptsd-card-gap) !important;
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Contents links have equal rows and columns. */
+.kh-cptsd-page .kh-cptsd-contents ol {
+    gap: 12px 28px !important;
+    margin: var(--cptsd-content-gap) 0 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-contents li,
+.kh-cptsd-page .kh-cptsd-contents li + li {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal FAQ gaps. */
+.kh-cptsd-page .kh-cptsd-faq details {
+    margin: 0 !important;
+    padding: 20px 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details + details {
+    margin-top: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details p {
+    margin-top: var(--cptsd-content-gap) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal sidebar gaps. */
+.kh-cptsd-page .ke-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .ke-side-box > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Keep hero and main-content separation equal. */
+.kh-cptsd-page .ke-hero {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    margin-top: 0 !important;
+}
+
+/* Tablet layout. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--cptsd-card-gap) !important;
+    }
+}
+
+/* Mobile spacing remains equal but more compact. */
+@media (max-width: 650px) {
+    .kh-cptsd-page {
+        --cptsd-section-gap: 24px;
+        --cptsd-content-gap: 14px;
+        --cptsd-card-gap: 14px;
+        --cptsd-panel-padding: 20px;
+    }
+
+    .kh-cptsd-page .kh-cptsd-grid,
+    .kh-cptsd-page .ke-side {
+        grid-template-columns: 1fr;
+    }
+
+    .kh-cptsd-page .kh-cptsd-card,
+    .kh-cptsd-page .ke-side-box {
+        padding: 18px !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-section {
+        padding: var(--cptsd-section-gap) 0 !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_EQUAL_SPACING_END -->
+<!-- KH_CPTSD_WIDTH_SIDEBAR_START -->
+<style class="KH_CPTSD_WIDTH_SIDEBAR_STYLES">
+/* Allow the layout to use the full available desktop width. */
+.kh-cptsd-page .ke-wrap {
+    width: calc(100% - 80px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    overflow: visible !important;
+}
+
+.kh-cptsd-page,
+.kh-cptsd-page .ke-layout,
+.kh-cptsd-page .ke-article {
+    overflow: visible !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 344px !important;
+    align-items: start !important;
+    gap: 48px !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.kh-cptsd-page .ke-article {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.kh-cptsd-page .ke-article > section,
+.kh-cptsd-page .ke-article > div {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Keep readable lines without leaving half the screen unused. */
+.kh-cptsd-page .ke-article p,
+.kh-cptsd-page .ke-article ul,
+.kh-cptsd-page .ke-article ol {
+    max-width: 1080px;
+}
+
+.kh-cptsd-page .ke-article .kh-cptsd-grid,
+.kh-cptsd-page .ke-article .kh-cptsd-table-wrap,
+.kh-cptsd-page .ke-article .kh-cptsd-box,
+.kh-cptsd-page .ke-article .ke-answer-box,
+.kh-cptsd-page .ke-article .kh-cptsd-faq,
+.kh-cptsd-page .ke-article .kh-cptsd-sources,
+.kh-cptsd-page .ke-article .ke-disclaimer {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* The complete right column remains visible during scrolling. */
+.kh-cptsd-page .ke-side {
+    position: sticky !important;
+    top: 105px !important;
+    align-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 344px !important;
+    max-width: 344px !important;
+    max-height: calc(100vh - 125px);
+    margin: 0 !important;
+    padding: 0 5px 20px 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(229, 173, 50, 0.45) transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar {
+    width: 5px;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(229, 173, 50, 0.45);
+}
+
+.kh-cptsd-page .ke-side-box {
+    width: 100% !important;
+    margin: 0 !important;
+    flex: 0 0 auto;
+}
+
+/* Compact On This Page navigation matching the example. */
+.kh-cptsd-page .kh-cptsd-on-page nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 12px 0 !important;
+    color: #c9c4bb !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-decoration: none !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:first-child {
+    padding-top: 4px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:last-child {
+    padding-bottom: 4px !important;
+    border-bottom: 0;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a span {
+    flex: 0 0 auto;
+    color: var(--kh-gold);
+    font-size: 1.05rem;
+    transition: transform 160ms ease;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover,
+.kh-cptsd-page .kh-cptsd-on-page nav a:focus-visible {
+    color: var(--kh-gold-light) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover span {
+    transform: translateX(3px);
+}
+
+/* Match the example's content proportions. */
+.kh-cptsd-page .kh-cptsd-table {
+    width: 100% !important;
+    min-width: 760px;
+}
+
+.kh-cptsd-page .kh-cptsd-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Large desktop screens. */
+@media (min-width: 1500px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 112px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 360px !important;
+        gap: 56px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 360px !important;
+        max-width: 360px !important;
+    }
+}
+
+/* Tablet: narrower sidebar while retaining two columns. */
+@media (max-width: 1150px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 48px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 290px !important;
+        gap: 30px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+}
+
+/* Stack sidebar beneath the article on smaller screens. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 36px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-on-page {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile layout. */
+@media (max-width: 650px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 28px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        gap: 24px !important;
+    }
+
+    .kh-cptsd-page .ke-side,
+    .kh-cptsd-page .kh-cptsd-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-table-wrap {
+        max-width: calc(100vw - 28px) !important;
+        overflow-x: auto !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_WIDTH_SIDEBAR_END -->
+<!-- FOUR_GUIDE_NATIVE_LINKS_START -->
+<style>
+.ke-page::before,
+.ke-page::after,
+.ke-wrap::before,
+.ke-wrap::after,
+.ke-hero::before,
+.ke-hero::after,
+.ke-hero-visual::before,
+.ke-hero-visual::after,
+.ke-side::before,
+.ke-side::after,
+.ke-side-box::before,
+.ke-side-box::after {
+    pointer-events: none !important;
+}
+
+.ke-page a[href],
+.ke-page .ke-breadcrumb a[href],
+.ke-page .knowledge-breadcrumb-cta,
+.ke-page .ke-back-hub,
+.ke-page .ke-article a[href],
+.ke-page .ke-side a[href],
+.ke-page .ke-side-box a[href],
+.ke-page .kh-cptsd-on-page a[href],
+.home-footer a[href] {
+    position: relative !important;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.ke-page .ke-layout {
+    isolation: isolate;
+}
+
+.ke-page .ke-side {
+    z-index: 90 !important;
+    pointer-events: auto !important;
+    isolation: isolate;
+}
+
+.ke-page .ke-side-box,
+.ke-page .ke-side-box nav,
+.ke-page .kh-cptsd-on-page,
+.ke-page .kh-cptsd-on-page nav {
+    position: relative !important;
+    z-index: 91 !important;
+    pointer-events: auto !important;
+}
+
+.ke-page section[id] {
+    scroll-margin-top: 125px;
+}
+</style>
+<!-- FOUR_GUIDE_NATIVE_LINKS_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-sitewide1"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-sitewide1"></script>
+</body>
+</html>

@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-mm1">
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is Emotional Overwhelm? Complete Guide | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<meta name="description" content="Understand emotional overwhelm, common signs, causes, nervous system responses and practical ways to regain steadiness, safety and choice.">
+<link rel="canonical" href="https://reikifish.com/knowledge/what-is-emotional-overwhelm.html">
+    <link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "What Is Emotional Overwhelm?",
+  "headline": "What Is Emotional Overwhelm?",
+  "description": "Understand emotional overwhelm, its common signs and possible causes, with practical ways to regain steadiness without judging normal emotional responses.",
+  "url": "https://reikifish.com/knowledge/what-is-emotional-overwhelm.html",
+  "inLanguage": "en-GB",
+  "publisher": {
+    "@type": "Organization",
+    "name": "ReikiFish",
+    "url": "https://reikifish.com/"
+  }
+}
+</script>
+
+<!-- RF_SOP_STARTER_ARTICLE_STYLES_START -->
+<style id="rf-sop-starter-article-styles">
+.rf-sop-page {
+    --gold: #efb126;
+    --cream: #f5f1e8;
+    --muted: rgba(245,241,232,.76);
+    --border: rgba(239,177,38,.34);
+    background: #080e0d;
+    color: var(--cream);
+}
+.rf-sop-wrap {
+    width: min(1540px, calc(100% - 4rem));
+    margin: 0 auto;
+}
+.rf-sop-back {
+    padding: 2rem 0 1rem;
+}
+.rf-sop-back a {
+    color: var(--gold);
+    font-weight: 700;
+    text-decoration: none;
+}
+.rf-sop-hero {
+    display: grid;
+    grid-template-columns: minmax(0,1.2fr) minmax(340px,.8fr);
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+}
+.rf-sop-kicker,
+.rf-sop-label,
+.rf-sop-side-title {
+    color: var(--gold);
+    font-size: .86rem;
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+.rf-sop-hero h1 {
+    max-width: 850px;
+    margin: 1rem 0 1.3rem;
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.7rem, 6.6vw, 6.8rem);
+    line-height: .95;
+}
+.rf-sop-lead {
+    max-width: 850px;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+    line-height: 1.65;
+}
+.rf-sop-visual {
+    min-height: 390px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    background:
+        radial-gradient(circle, rgba(239,177,38,.18), transparent 38%),
+        linear-gradient(145deg, #0d1715, #070d0c);
+}
+.rf-sop-symbol {
+    width: 190px;
+    height: 190px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    color: var(--gold);
+    font-family: Georgia, serif;
+    font-size: 5.5rem;
+    box-shadow:
+        0 0 0 25px rgba(239,177,38,.05),
+        0 0 70px rgba(239,177,38,.14);
+}
+.rf-sop-layout {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 360px;
+    gap: 4rem;
+    align-items: start;
+    padding: 4rem 0 6rem;
+}
+.rf-sop-answer,
+.rf-sop-section {
+    margin: 0 0 2rem;
+    padding: clamp(1.7rem, 3vw, 2.5rem);
+    border: 1px solid var(--border);
+    border-radius: 1.35rem;
+    background: #0b1413;
+}
+.rf-sop-answer {
+    border-left: 4px solid var(--gold);
+}
+.rf-sop-answer p,
+.rf-sop-section p {
+    margin: 0 0 1rem;
+    color: var(--muted);
+    font-size: 1.13rem;
+    line-height: 1.8;
+}
+.rf-sop-answer p:last-child,
+.rf-sop-section p:last-child {
+    margin-bottom: 0;
+}
+.rf-sop-section h2 {
+    margin: .65rem 0 1.2rem;
+    color: var(--cream);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    line-height: 1.12;
+}
+.rf-sop-section[id],
+.rf-sop-answer[id] {
+    scroll-margin-top: 8rem;
+}
+.rf-sop-side {
+    position: sticky;
+    top: 7rem;
+    max-height: calc(100vh - 8rem);
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(239,177,38,.6) transparent;
+}
+.rf-sop-sidebox {
+    margin: 0 0 1.5rem;
+    padding: 1.65rem;
+    border: 1px solid var(--border);
+    border-radius: 1.35rem;
+    background: #0a1211;
+}
+.rf-sop-sidebox nav,
+.rf-sop-related {
+    display: grid;
+}
+.rf-sop-sidebox a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    padding: .88rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    color: rgba(245,241,232,.76);
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+}
+.rf-sop-sidebox a:last-child {
+    border-bottom: 0;
+}
+.rf-sop-sidebox a:hover,
+.rf-sop-sidebox a:focus-visible {
+    color: var(--gold);
+}
+.rf-sop-arrow {
+    flex: 0 0 auto;
+    color: var(--gold);
+}
+.rf-sop-reading-note {
+    margin: .9rem 0 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+html {
+    scroll-behavior: smooth;
+}
+@media (max-width: 991px) {
+    .rf-sop-wrap {
+        width: min(100% - 2rem, 900px);
+    }
+    .rf-sop-hero,
+    .rf-sop-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .rf-sop-visual {
+        min-height: 290px;
+    }
+    .rf-sop-side {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+@media (max-width: 575px) {
+    .rf-sop-wrap {
+        width: min(100% - 1.25rem, 900px);
+    }
+    .rf-sop-hero {
+        padding: 2.5rem 0;
+    }
+    .rf-sop-layout {
+        padding: 2rem 0 4rem;
+    }
+    .rf-sop-answer,
+    .rf-sop-section,
+    .rf-sop-sidebox {
+        padding: 1.3rem;
+        border-radius: 1rem;
+    }
+}
+</style>
+<!-- RF_SOP_STARTER_ARTICLE_STYLES_END -->
+
+<!-- RF_EMOTIONAL_OVERWHELM_FULL_STYLES_START --><style id="rf-emotional-overwhelm-full-styles">
+.rf-eo-page{--g:#efb126;--c:#f5f1e8;--m:rgba(245,241,232,.76);--b:rgba(239,177,38,.34);background:#080e0d;color:var(--c)}.rf-eo-wrap{width:min(1540px,calc(100% - 4rem));margin:auto}.rf-eo-back{padding:2rem 0 1rem}.rf-eo-back a,.rf-eo-box a{color:var(--g);text-decoration:none}.rf-eo-hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(360px,.8fr);gap:4rem;align-items:center;padding:4rem 0;border-bottom:1px solid var(--b)}.rf-eo-kicker,.rf-eo-label,.rf-eo-box h2{color:var(--g);font-size:.86rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase}.rf-eo-hero h1{margin:1rem 0;font:700 clamp(3.8rem,6.8vw,7rem)/.95 Georgia,serif}.rf-eo-hero p{font-size:1.45rem;line-height:1.65;color:var(--m)}.rf-eo-layout{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:4rem;align-items:start;padding:4rem 0 6rem}.rf-eo-answer,.rf-eo-section{margin:0 0 2rem;padding:2.3rem;border:1px solid var(--b);border-radius:1.35rem;background:#0b1413}.rf-eo-answer{border-left:4px solid var(--g)}.rf-eo-answer h2,.rf-eo-section h2{font:700 clamp(2rem,3.4vw,3rem)/1.12 Georgia,serif}.rf-eo-answer p,.rf-eo-section p,.rf-eo-box p{color:var(--m);font-size:1.12rem;line-height:1.8}.rf-eo-side{position:sticky;top:7rem;max-height:calc(100vh - 8rem);overflow-y:auto;scrollbar-width:thin;scrollbar-color:rgba(239,177,38,.6) transparent}.rf-eo-box{margin-bottom:1.5rem;padding:1.65rem;border:1px solid var(--b);border-radius:1.35rem;background:#0a1211}.rf-eo-box nav{display:grid}.rf-eo-box nav a,.rf-eo-box>a{display:flex;justify-content:space-between;gap:1rem;padding:.88rem 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(245,241,232,.78);font-weight:600}.rf-eo-arrow,.rf-eo-box a span:last-child,.rf-eo-box a:hover{color:var(--g)}.rf-eo-exercise{margin:1rem 0;padding:1.25rem;border:1px solid rgba(239,177,38,.25);border-radius:.9rem}.rf-eo-exercise h3{font:700 1.3rem Georgia,serif}.rf-eo-faq{display:grid;gap:1rem}.rf-eo-faq details{padding:1.15rem;border:1px solid rgba(239,177,38,.25);border-radius:.8rem}.rf-eo-faq summary{cursor:pointer;font:700 1.15rem Georgia,serif}.rf-eo-page [id]{scroll-margin-top:8rem}html{scroll-behavior:smooth}@media(max-width:991px){.rf-eo-wrap{width:min(100% - 2rem,900px)}.rf-eo-hero,.rf-eo-layout{grid-template-columns:1fr;gap:2rem}.rf-eo-side{position:static;max-height:none;overflow:visible}}@media(max-width:575px){.rf-eo-wrap{width:calc(100% - 1.25rem)}.rf-eo-answer,.rf-eo-section,.rf-eo-box{padding:1.3rem}.rf-eo-diagram{min-height:330px}}
+
+/* RF_EO_ORTHOGONAL_DIAGRAM */
+.rf-eo-orthogonal{position:relative;min-height:460px;border:1px solid var(--b);border-radius:2rem;background:radial-gradient(circle at 52% 48%,rgba(239,177,38,.12),transparent 32%),linear-gradient(145deg,#0c1514,#070d0c);overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.32)}
+.rf-eo-map-inputs{position:absolute;left:7%;top:9%;width:34%;display:grid;gap:.72rem}.rf-eo-map-inputs span,.rf-eo-map-reset span{padding:.7rem .8rem;border:1px solid rgba(239,177,38,.35);border-radius:.35rem;background:#0d1716;color:rgba(245,241,232,.82);font-size:.66rem;font-weight:800;letter-spacing:.11em;text-align:center}
+.rf-eo-map-junction{position:absolute;left:41%;top:13%;width:14%;height:39%;border-right:2px solid rgba(239,177,38,.58)}.rf-eo-map-junction i{display:block;height:25%;border-top:2px solid rgba(239,177,38,.58)}
+.rf-eo-map-capacity{position:absolute;left:48%;top:32%;width:30%;aspect-ratio:1;border:1px solid #efb126;border-radius:50%;display:grid;place-content:center;text-align:center;background:radial-gradient(circle,rgba(239,177,38,.25),rgba(239,177,38,.04) 62%,transparent 63%);box-shadow:0 0 55px rgba(239,177,38,.12)}.rf-eo-map-capacity small,.rf-eo-map-overload small{font-size:.61rem;letter-spacing:.14em;color:rgba(245,241,232,.62)}.rf-eo-map-capacity strong{font:700 1.35rem Georgia,serif;color:#f5f1e8}.rf-eo-map-capacity b{margin-top:.45rem;font-size:.55rem;letter-spacing:.09em;color:#efb126}
+.rf-eo-map-route{position:absolute;left:77%;top:47%;width:11%;border-top:2px solid #efb126}.rf-eo-map-route:after{content:'';position:absolute;right:-1px;top:-5px;border-left:8px solid #efb126;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.rf-eo-map-overload{position:absolute;right:5%;top:35%;width:17%;padding:1rem .5rem;border:1px solid rgba(239,177,38,.5);border-radius:.65rem;background:#16180f;text-align:center}.rf-eo-map-overload strong{display:block;margin-top:.35rem;color:#efb126;font-size:.83rem;letter-spacing:.08em}
+.rf-eo-map-reset{position:absolute;left:8%;right:8%;bottom:8%;display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem}.rf-eo-map-reset:before{content:'ROUTE BACK TOWARDS CHOICE';grid-column:1/-1;color:#efb126;font-size:.6rem;font-weight:800;letter-spacing:.14em;text-align:center}
+@media(max-width:575px){.rf-eo-orthogonal{min-height:390px}.rf-eo-map-inputs{left:5%;width:38%}.rf-eo-map-capacity{left:46%;width:39%}.rf-eo-map-overload{display:none}.rf-eo-map-route{display:none}.rf-eo-map-reset{left:5%;right:5%;grid-template-columns:1fr}.rf-eo-map-reset span{padding:.42rem}}
+</style><!-- RF_EMOTIONAL_OVERWHELM_FULL_STYLES_END -->
+<!-- RF_EO_SCHEMA_START --><script type="application/ld+json">[{"@context":"https://schema.org","@type":"MedicalWebPage","name":"What Is Emotional Overwhelm?","headline":"What Is Emotional Overwhelm?","description":"Understand emotional overwhelm, common signs, causes, nervous system responses and practical ways to regain steadiness, safety and choice.","url":"https://reikifish.com/knowledge/what-is-emotional-overwhelm.html","about":{"@type":"Thing","name":"Emotional overwhelm"},"inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"ReikiFish","url":"https://reikifish.com/"},"publisher":{"@type":"Organization","name":"ReikiFish"}},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is emotional overwhelm a diagnosis?","acceptedAnswer":{"@type":"Answer","text":"No. It is a descriptive experience that can occur with ordinary stress, health conditions or several mental health presentations. Context and assessment matter."}},{"@type":"Question","name":"What is the difference between stress and overwhelm?","acceptedAnswer":{"@type":"Answer","text":"Stress may remain manageable while overwhelm substantially reduces the ability to prioritise, process information or respond flexibly."}},{"@type":"Question","name":"Can overwhelm look like numbness?","acceptedAnswer":{"@type":"Answer","text":"Yes. Some people become quiet, disconnected, immobile or emotionally numb rather than visibly distressed."}},{"@type":"Question","name":"Why can small tasks feel impossible?","acceptedAnswer":{"@type":"Answer","text":"Capacity may already be occupied by accumulated demands, threat monitoring, pain, fatigue or strong emotion. The apparent size of the final task does not show the total load."}},{"@type":"Question","name":"Should somebody be told to calm down?","acceptedAnswer":{"@type":"Answer","text":"Commands to calm down often add pressure. Short, respectful choices and reduced stimulation may be more useful."}},{"@type":"Question","name":"Can breathing exercises make things worse?","acceptedAnswer":{"@type":"Answer","text":"They can for some people, particularly when forced or when internal focus intensifies panic or trauma symptoms. Stop and use another grounding option."}},{"@type":"Question","name":"Does overwhelm excuse harmful behaviour?","acceptedAnswer":{"@type":"Answer","text":"No. Context can explain reduced capacity without removing responsibility for threatening, abusive or harmful actions."}},{"@type":"Question","name":"How long does overwhelm last?","acceptedAnswer":{"@type":"Answer","text":"Duration varies according to cause, safety, recovery, health and whether demands continue. Persistent or worsening difficulty merits professional assessment."}},{"@type":"Question","name":"Can sensory overload cause emotional overwhelm?","acceptedAnswer":{"@type":"Answer","text":"Yes. Noise, light, touch, crowds and competing information can contribute, although sensory sensitivity has several possible explanations."}},{"@type":"Question","name":"When is urgent help necessary?","acceptedAnswer":{"@type":"Answer","text":"Seek urgent local assistance when somebody cannot remain safe, may harm themselves or another person, or may be experiencing a medical emergency."}}]}]</script><!-- RF_EO_SCHEMA_END -->
+</head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="/assets/images/logo.png"
+              alt="Andy Fish ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="/coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="/trauma-coaching.html">Trauma</a>
+
+        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
+<a href="/team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
+<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="rf-eo-page"><div class="rf-eo-wrap"><div class="rf-eo-back"><a href="/knowledge.html">&larr; Knowledge Hub</a></div>
+<section class="rf-eo-hero" aria-labelledby="eo-title"><div><span class="rf-eo-kicker">Emotional health Â· Complete guide</span><h1 id="eo-title">What Is Emotional Overwhelm?</h1><p>Emotional overwhelm occurs when feelings, information or demands temporarily exceed a person's available capacity to process them with flexibility and choice.</p></div>
+<div class="rf-eo-diagram rf-eo-orthogonal" role="img" aria-label="An emotional overwhelm capacity map showing four demands converging on available capacity, followed by overload and a route back towards steadiness">
+<div class="rf-eo-map-inputs"><span>EMOTIONAL LOAD</span><span>RESPONSIBILITIES</span><span>SENSORY INPUT</span><span>UNCERTAINTY</span></div>
+<div class="rf-eo-map-junction" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="rf-eo-map-capacity"><small>AVAILABLE</small><strong>CAPACITY</strong><b>CHANGES WITH CONTEXT</b></div>
+<div class="rf-eo-map-route" aria-hidden="true"></div>
+<div class="rf-eo-map-overload"><small>WHEN LOAD EXCEEDS CAPACITY</small><strong>OVERWHELM</strong></div>
+<div class="rf-eo-map-reset"><span>REDUCE LOAD</span><span>RESTORE SAFETY</span><span>ONE NEXT STEP</span></div>
+</div>
+</section>
+<div class="rf-eo-layout"><article><section class="rf-eo-answer" id="clear-answer"><span class="rf-eo-label">Clear answer</span><h2>Emotional overwhelm in plain English</h2><p><strong>Emotional overwhelm is a state in which the intensity or total number of current demands exceeds the capacity presently available to organise thoughts, regulate emotion and choose a response. It can feel urgent, chaotic, frozen, numb or exhausting. It is an experience, not automatically a diagnosis.</strong></p><p>The most useful first response is usually to reduce immediate load, support safety and restore enough steadiness for one proportionate choice.</p></section>
+<section class="rf-eo-section" id="definition"><span class="rf-eo-label">Definition</span><h2>What emotional overwhelm means</h2><p>Emotional overwhelm in this area is best understood through recognising when emotional, cognitive, physical or practical demands exceed present processing capacity. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is accurate understanding without judgement. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is treating overwhelm as a personal weakness or diagnosis by itself. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="stress-overwhelm"><span class="rf-eo-label">Key distinction</span><h2>Stress compared with emotional overwhelm</h2><p>Emotional overwhelm in this area is best understood through distinguishing manageable pressure from a state in which prioritising and flexible thinking become substantially harder. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is earlier and more proportionate support. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is assuming that every period of stress is clinical overwhelm. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="nervous-system"><span class="rf-eo-label">Nervous system</span><h2>What happens in the brain and body</h2><p>Emotional overwhelm in this area is best understood through noticing changes in arousal, attention, breathing, muscle tension, energy and the ability to consider alternatives. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is body-aware regulation. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is presenting one simplified brain explanation as the cause of every response. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="window-tolerance"><span class="rf-eo-label">Capacity</span><h2>Understanding the window of tolerance</h2><p>Emotional overwhelm in this area is best understood through recognising the changing range within which emotion can be processed without severe hyperarousal or shutdown. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is flexible capacity rather than perfect calm. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is using the concept as a rigid measurement or diagnosis. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="signs"><span class="rf-eo-label">Recognition</span><h2>Common signs of emotional overwhelm</h2><p>Emotional overwhelm in this area is best understood through identifying racing thoughts, irritability, indecision, tearfulness, numbness, withdrawal, agitation and reduced concentration. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is earlier recognition. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is assuming that one sign establishes a particular condition. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="physical-signs"><span class="rf-eo-label">Body signals</span><h2>Physical signs and sensations</h2><p>Emotional overwhelm in this area is best understood through observing headaches, nausea, trembling, heat, dizziness, fatigue, pain, rapid heartbeat and altered breathing. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is appropriate physical and psychological care. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is assuming that physical symptoms are psychological without medical consideration. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="thinking"><span class="rf-eo-label">Thinking</span><h2>How overwhelm affects attention and decisions</h2><p>Emotional overwhelm in this area is best understood through recognising narrowed attention, urgency, catastrophic predictions, memory difficulty and reduced ability to sequence tasks. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is simpler and safer decisions. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is demanding complex reasoning during peak activation. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="emotional-flooding"><span class="rf-eo-label">Flooding</span><h2>Emotional flooding and loss of perspective</h2><p>Emotional overwhelm in this area is best understood through understanding rapid emotional escalation in which the immediate experience dominates awareness. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is a pause before irreversible action. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is using flooding to excuse threatening or harmful behaviour. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="shutdown"><span class="rf-eo-label">Shutdown</span><h2>Numbness, freezing and withdrawal</h2><p>Emotional overwhelm in this area is best understood through recognising that overwhelm can appear quiet through reduced speech, disconnection, immobility or emotional numbing. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is gentle reconnection and choice. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is mistaking silence for agreement or lack of feeling. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="causes"><span class="rf-eo-label">Causes</span><h2>Why emotional overwhelm develops</h2><p>Emotional overwhelm in this area is best understood through examining accumulated demands, uncertainty, loss, conflict, illness, sensory load, trauma reminders and insufficient recovery. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is contextual understanding. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is searching for one universal cause. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="cumulative-load"><span class="rf-eo-label">Accumulation</span><h2>The cumulative load of ordinary pressures</h2><p>Emotional overwhelm in this area is best understood through tracking how individually manageable demands combine across work, health, relationships, money and care responsibilities. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is load reduction before crisis. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is dismissing ordinary pressures because none appears dramatic alone. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="trauma"><span class="rf-eo-label">Trauma-informed care</span><h2>Trauma reminders and overwhelm</h2><p>Emotional overwhelm in this area is best understood through approaching intense present-tense reactions with pacing, grounding and attention to current safety. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is choice and stabilisation. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is forcing detailed trauma processing during acute overwhelm. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="sensory"><span class="rf-eo-label">Sensory load</span><h2>Sensory overwhelm and environmental demands</h2><p>Emotional overwhelm in this area is best understood through noticing noise, light, touch, crowds, movement, temperature and competing information. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is environmental adjustment without shame. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is assuming that sensory sensitivity has only one explanation. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="neurodiversity"><span class="rf-eo-label">Neurodiversity</span><h2>Neurodivergence and overwhelm</h2><p>Emotional overwhelm in this area is best understood through considering differences in attention, sensory processing, transitions, communication and executive function. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is individualised support and reasonable adjustment. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is diagnosing autism or ADHD from overwhelm alone. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="hormones-health"><span class="rf-eo-label">Health context</span><h2>Hormones, illness, sleep and physical health</h2><p>Emotional overwhelm in this area is best understood through recognising that pain, infection, medication, hormonal change, nutrition and sleep can alter emotional capacity. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is whole-person assessment. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is psychologising symptoms that may require medical care. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="relationships"><span class="rf-eo-label">Relationships</span><h2>Overwhelm in close relationships</h2><p>Emotional overwhelm in this area is best understood through noticing how fear, expectation, attachment, conflict and responsibility affect capacity and communication. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is safer connection and repair. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is making a partner solely responsible for emotional regulation. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="conflict"><span class="rf-eo-label">Conflict</span><h2>What to do when conflict becomes overwhelming</h2><p>Emotional overwhelm in this area is best understood through tracking escalation, tone, threat responses and the point at which productive conversation stops. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is structured pauses and return agreements. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is using a pause to punish, disappear or avoid accountability. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="boundaries"><span class="rf-eo-label">Boundaries</span><h2>Boundaries that reduce repeated overwhelm</h2><p>Emotional overwhelm in this area is best understood through recognising capacity, consent, workload and patterns of overcommitment before resentment or collapse. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is clear sustainable limits. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is treating boundaries as commands controlling other people. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="work"><span class="rf-eo-label">Work</span><h2>Emotional overwhelm at work</h2><p>Emotional overwhelm in this area is best understood through examining workload, ambiguity, interruption, surveillance, conflict, responsibility and inadequate resources. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is prioritisation and practical adjustment. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is framing an organisational problem solely as individual resilience. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="caregiving"><span class="rf-eo-label">Caregiving</span><h2>Parenting and caregiving under pressure</h2><p>Emotional overwhelm in this area is best understood through recognising interrupted recovery, vigilance, responsibility, guilt and limited personal time. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is shared care and realistic expectations. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is demanding perfection from an exhausted caregiver. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="grief"><span class="rf-eo-label">Grief</span><h2>Grief, loss and emotional capacity</h2><p>Emotional overwhelm in this area is best understood through allowing waves of sadness, anger, numbness and changed functioning after meaningful loss. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is compassionate adaptation. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is imposing a fixed timetable on grief. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="anxiety"><span class="rf-eo-label">Anxiety</span><h2>Anxiety, uncertainty and reassurance cycles</h2><p>Emotional overwhelm in this area is best understood through noticing threat predictions, checking, avoidance and repeated attempts to obtain complete certainty. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is reasonable action alongside uncertainty. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is promising that feared outcomes are impossible. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="depression"><span class="rf-eo-label">Low mood</span><h2>Depression, exhaustion and reduced capacity</h2><p>Emotional overwhelm in this area is best understood through observing changes in energy, hope, concentration, movement, sleep and motivation. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is proportionate steps and qualified support. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is calling clinical symptoms laziness. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="anger"><span class="rf-eo-label">Anger</span><h2>Anger during overwhelm</h2><p>Emotional overwhelm in this area is best understood through separating the validity of an emotional signal from the safety and impact of behaviour. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is firm regulation and constructive boundaries. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is using understandable anger to justify abuse. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="shame"><span class="rf-eo-label">Shame</span><h2>The shame that often follows overwhelm</h2><p>Emotional overwhelm in this area is best understood through recognising self-attack after crying, freezing, withdrawing, forgetting or reacting strongly. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is learning without humiliation. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is turning one difficult episode into a total identity judgement. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="immediate-response"><span class="rf-eo-label">Immediate support</span><h2>What helps during the first few minutes</h2><p>Emotional overwhelm in this area is best understood through reducing demands, orienting to the environment, supporting the body and postponing non-essential decisions. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is restored choice. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is forcing a technique that increases distress. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="grounding"><span class="rf-eo-label">Grounding</span><h2>Grounding without pressure</h2><p>Emotional overwhelm in this area is best understood through using sight, sound, touch, movement, temperature or factual orientation to reconnect with the present. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is individualised present-moment support. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is assuming that every grounding exercise suits trauma or dissociation. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="breathing"><span class="rf-eo-label">Breathing</span><h2>Breathing practices and their limits</h2><p>Emotional overwhelm in this area is best understood through allowing a comfortable slower exhalation while respecting dizziness, panic and respiratory or medical needs. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is gentle regulation. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is forcing large breaths or treating breathwork as emergency medical care. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="communication"><span class="rf-eo-label">Communication</span><h2>Explaining overwhelm to another person</h2><p>Emotional overwhelm in this area is best understood through using short factual language to state capacity, needs, safety and when communication can resume. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is clarity without excessive justification. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is expecting another person to guess what support is needed. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="recovery"><span class="rf-eo-label">Recovery</span><h2>Recovering after an overwhelming episode</h2><p>Emotional overwhelm in this area is best understood through supporting hydration, food, sleep, reduced stimulation, reflection and gradual return to demands. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is replenishment and useful learning. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is immediately resuming the same unsustainable load. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="prevention"><span class="rf-eo-label">Prevention</span><h2>Reducing repeated emotional overwhelm</h2><p>Emotional overwhelm in this area is best understood through mapping triggers and accumulated load, protecting recovery and changing preventable conditions. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is greater capacity and earlier action. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is promising that planning can prevent every episode. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section><section class="rf-eo-section" id="support"><span class="rf-eo-label">Professional support</span><h2>When professional or urgent help is needed</h2><p>Emotional overwhelm in this area is best understood through recognising persistent impairment, trauma symptoms, panic, depression, medical concerns or risk to safety. Overwhelm is not one fixed reaction. It describes a point at which the demands being processed feel greater than the resources currently available. Capacity changes with sleep, health, safety, support, previous experience and the number of pressures already being carried.</p><p>A careful assessment starts with description rather than judgement. What happened immediately before the change? What did the person notice in thought, emotion and the body? Which tasks became harder? What reduced or intensified the experience? Specific observation is more useful than assuming that the reaction proves weakness, manipulation or one particular diagnosis.</p><p>Context matters because similar behaviour can arise for different reasons. Leaving a conversation may be a measured attempt to regulate, an avoidance pattern, a response to danger or a way of controlling communication. Tearfulness may reflect grief, fear, exhaustion, anger or several emotions together. Meaning should be explored rather than declared from appearance alone.</p><p>The constructive goal is appropriate assessment and protection. That usually requires reducing immediate cognitive load before demanding complex reflection. When the nervous system is highly activated or shutting down, shorter language, fewer choices and one manageable next step may preserve more agency than a detailed list of instructions.</p><p>An important caution is expecting self-help to replace qualified care. Emotional-health language should support understanding and safety, not become a shortcut for diagnosis or blame. Behaviour and impact still matter, but responsibility is easier to address when the person&#x27;s actual capacity and circumstances are considered accurately.</p><p>Progress may first appear through earlier recognition. The person notices tension before escalation, communicates a need sooner, delays an impulsive decision or recovers with less shame. These changes do not guarantee that overwhelm never returns. They show that more points of choice are becoming available within the pattern.</p></section>
+<section class="rf-eo-section" id="exercises"><span class="rf-eo-label">Exercises</span><h2>Practical exercises for overwhelm</h2><article class="rf-eo-exercise"><h3>The sixty-second load check</h3><p>List current demands without ranking or solving them. Circle what is urgent, underline what can wait and identify one task that can be removed or delegated.</p></article><article class="rf-eo-exercise"><h3>The body signal map</h3><p>Record the earliest physical signs that appear before overwhelm. Beside each sign, write one small response that is safe and realistic.</p></article><article class="rf-eo-exercise"><h3>The one-choice reset</h3><p>When decisions feel impossible, reduce the question to one immediate choice: stay or step away, speak or write, act now or set a review time.</p></article><article class="rf-eo-exercise"><h3>The recovery review</h3><p>After steadiness returns, record what increased the load, what helped, what caused extra pressure and what could change before the next similar situation.</p></article><article class="rf-eo-exercise"><h3>The support script</h3><p>Prepare one sentence for others: I am overloaded and cannot process this well right now. I need a pause, and I can return at a stated time.</p></article></section>
+<section class="rf-eo-section" id="faq"><span class="rf-eo-label">Questions</span><h2>Frequently asked questions</h2><div class="rf-eo-faq"><details><summary>Is emotional overwhelm a diagnosis?</summary><p>No. It is a descriptive experience that can occur with ordinary stress, health conditions or several mental health presentations. Context and assessment matter.</p></details><details><summary>What is the difference between stress and overwhelm?</summary><p>Stress may remain manageable while overwhelm substantially reduces the ability to prioritise, process information or respond flexibly.</p></details><details><summary>Can overwhelm look like numbness?</summary><p>Yes. Some people become quiet, disconnected, immobile or emotionally numb rather than visibly distressed.</p></details><details><summary>Why can small tasks feel impossible?</summary><p>Capacity may already be occupied by accumulated demands, threat monitoring, pain, fatigue or strong emotion. The apparent size of the final task does not show the total load.</p></details><details><summary>Should somebody be told to calm down?</summary><p>Commands to calm down often add pressure. Short, respectful choices and reduced stimulation may be more useful.</p></details><details><summary>Can breathing exercises make things worse?</summary><p>They can for some people, particularly when forced or when internal focus intensifies panic or trauma symptoms. Stop and use another grounding option.</p></details><details><summary>Does overwhelm excuse harmful behaviour?</summary><p>No. Context can explain reduced capacity without removing responsibility for threatening, abusive or harmful actions.</p></details><details><summary>How long does overwhelm last?</summary><p>Duration varies according to cause, safety, recovery, health and whether demands continue. Persistent or worsening difficulty merits professional assessment.</p></details><details><summary>Can sensory overload cause emotional overwhelm?</summary><p>Yes. Noise, light, touch, crowds and competing information can contribute, although sensory sensitivity has several possible explanations.</p></details><details><summary>When is urgent help necessary?</summary><p>Seek urgent local assistance when somebody cannot remain safe, may harm themselves or another person, or may be experiencing a medical emergency.</p></details></div></section>
+<section class="rf-eo-section" id="sources"><span class="rf-eo-label">Evidence and safety</span><h2>Evidence, limitations and responsible use</h2><p>Emotional overwhelm is discussed through overlapping research on stress, emotion regulation, executive function, trauma, anxiety, sensory processing and autonomic arousal. The term does not identify one cause. Similar experiences may arise from psychological, social, environmental or medical factors.</p><p>This guide provides education and cannot assess an individual. Persistent, severe or unexplained changes in emotion, cognition or bodily functioning should be discussed with an appropriately qualified professional. Medical symptoms should not be assumed to be psychological.</p><p>Seek urgent local assistance if somebody cannot remain safe, may harm themselves or another person, or is experiencing a medical emergency.</p></section></article>
+<aside class="rf-eo-side"><section class="rf-eo-box"><h2>On this page</h2><nav><a href="#clear-answer"><span>Clear answer</span><span class="rf-eo-arrow">&rarr;</span></a><a href="#definition"><span>Definition</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#stress-overwhelm"><span>Key distinction</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#nervous-system"><span>Nervous system</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#window-tolerance"><span>Capacity</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#signs"><span>Recognition</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#physical-signs"><span>Body signals</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#thinking"><span>Thinking</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#emotional-flooding"><span>Flooding</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#shutdown"><span>Shutdown</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#causes"><span>Causes</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#cumulative-load"><span>Accumulation</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#trauma"><span>Trauma-informed care</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#sensory"><span>Sensory load</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#neurodiversity"><span>Neurodiversity</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#hormones-health"><span>Health context</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#relationships"><span>Relationships</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#conflict"><span>Conflict</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#boundaries"><span>Boundaries</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#work"><span>Work</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#caregiving"><span>Caregiving</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#grief"><span>Grief</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#anxiety"><span>Anxiety</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#depression"><span>Low mood</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#anger"><span>Anger</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#shame"><span>Shame</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#immediate-response"><span>Immediate support</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#grounding"><span>Grounding</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#breathing"><span>Breathing</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#communication"><span>Communication</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#recovery"><span>Recovery</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#prevention"><span>Prevention</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#support"><span>Professional support</span><span class="rf-eo-arrow" aria-hidden="true">&rarr;</span></a><a href="#exercises"><span>Exercises</span><span class="rf-eo-arrow">&rarr;</span></a><a href="#faq"><span>Questions</span><span class="rf-eo-arrow">&rarr;</span></a><a href="#sources"><span>Evidence</span><span class="rf-eo-arrow">&rarr;</span></a></nav></section>
+<section class="rf-eo-box"><h2>Reading note</h2><p>Pause if reflection adds to the load. Immediate safety and basic needs come first.</p></section><section class="rf-eo-box"><h2>Related Knowledge</h2><a href="/knowledge/emotional-regulation.html">Emotional regulation <span>&rarr;</span></a><a href="/knowledge/what-is-hypervigilance.html">What is hypervigilance? <span>&rarr;</span></a><a href="/knowledge/understanding-trauma-responses.html">Trauma responses <span>&rarr;</span></a></section></aside></div></div></main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <!-- KH_BATCH_A_LINK_FIX -->
+<style class="KH_BATCH_A_LINK_FIX_STYLES">
+.kh-depth-contents {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents div,
+.kh-depth-contents a {
+  position: relative;
+  z-index: 31;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents a {
+  display: block;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.kh-depth-section[id] {
+  scroll-margin-top: 175px;
+}
+
+.kh-depth-section:focus {
+  outline: none;
+}
+</style>
+<!-- /KH_BATCH_A_LINK_FIX -->
+<!-- DISSOCIATION_FLAGSHIP_DEPTH -->
+<!-- KH_CPTSD_EQUAL_SPACING_START -->
+<style class="KH_CPTSD_EQUAL_SPACING_STYLES">
+.kh-cptsd-page {
+    --cptsd-section-gap: 32px;
+    --cptsd-content-gap: 16px;
+    --cptsd-card-gap: 16px;
+    --cptsd-panel-padding: 28px;
+}
+
+/* Remove unpredictable collapsed margins. */
+.kh-cptsd-page .ke-article,
+.kh-cptsd-page .ke-article section,
+.kh-cptsd-page .ke-article article,
+.kh-cptsd-page .ke-article div,
+.kh-cptsd-page .ke-side,
+.kh-cptsd-page .ke-side-box {
+    min-width: 0;
+}
+
+.kh-cptsd-page .ke-article > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-article > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Equal major section spacing. */
+.kh-cptsd-page .kh-cptsd-section {
+    margin: 0 0 var(--cptsd-section-gap) !important;
+    padding: var(--cptsd-section-gap) 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:first-of-type {
+    padding-top: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:last-of-type {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+/* Equal spacing inside every normal section. */
+.kh-cptsd-page .kh-cptsd-section > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Consistent headings. */
+.kh-cptsd-page .ke-section-label {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page h2 {
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page h3 {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page p {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Lists use the same content rhythm. */
+.kh-cptsd-page ul,
+.kh-cptsd-page ol {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page li + li {
+    margin-top: 10px !important;
+}
+
+/* Equal spacing around major panels. */
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-table-wrap,
+.kh-cptsd-page .kh-cptsd-faq,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    padding: var(--cptsd-panel-padding) !important;
+}
+
+/* Equal two-column card gaps. */
+.kh-cptsd-page .kh-cptsd-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--cptsd-card-gap) !important;
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Contents links have equal rows and columns. */
+.kh-cptsd-page .kh-cptsd-contents ol {
+    gap: 12px 28px !important;
+    margin: var(--cptsd-content-gap) 0 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-contents li,
+.kh-cptsd-page .kh-cptsd-contents li + li {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal FAQ gaps. */
+.kh-cptsd-page .kh-cptsd-faq details {
+    margin: 0 !important;
+    padding: 20px 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details + details {
+    margin-top: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details p {
+    margin-top: var(--cptsd-content-gap) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal sidebar gaps. */
+.kh-cptsd-page .ke-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .ke-side-box > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Keep hero and main-content separation equal. */
+.kh-cptsd-page .ke-hero {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    margin-top: 0 !important;
+}
+
+/* Tablet layout. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--cptsd-card-gap) !important;
+    }
+}
+
+/* Mobile spacing remains equal but more compact. */
+@media (max-width: 650px) {
+    .kh-cptsd-page {
+        --cptsd-section-gap: 24px;
+        --cptsd-content-gap: 14px;
+        --cptsd-card-gap: 14px;
+        --cptsd-panel-padding: 20px;
+    }
+
+    .kh-cptsd-page .kh-cptsd-grid,
+    .kh-cptsd-page .ke-side {
+        grid-template-columns: 1fr;
+    }
+
+    .kh-cptsd-page .kh-cptsd-card,
+    .kh-cptsd-page .ke-side-box {
+        padding: 18px !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-section {
+        padding: var(--cptsd-section-gap) 0 !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_EQUAL_SPACING_END -->
+<!-- KH_CPTSD_WIDTH_SIDEBAR_START -->
+<style class="KH_CPTSD_WIDTH_SIDEBAR_STYLES">
+/* Allow the layout to use the full available desktop width. */
+.kh-cptsd-page .ke-wrap {
+    width: calc(100% - 80px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    overflow: visible !important;
+}
+
+.kh-cptsd-page,
+.kh-cptsd-page .ke-layout,
+.kh-cptsd-page .ke-article {
+    overflow: visible !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 344px !important;
+    align-items: start !important;
+    gap: 48px !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.kh-cptsd-page .ke-article {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.kh-cptsd-page .ke-article > section,
+.kh-cptsd-page .ke-article > div {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Keep readable lines without leaving half the screen unused. */
+.kh-cptsd-page .ke-article p,
+.kh-cptsd-page .ke-article ul,
+.kh-cptsd-page .ke-article ol {
+    max-width: 1080px;
+}
+
+.kh-cptsd-page .ke-article .kh-cptsd-grid,
+.kh-cptsd-page .ke-article .kh-cptsd-table-wrap,
+.kh-cptsd-page .ke-article .kh-cptsd-box,
+.kh-cptsd-page .ke-article .ke-answer-box,
+.kh-cptsd-page .ke-article .kh-cptsd-faq,
+.kh-cptsd-page .ke-article .kh-cptsd-sources,
+.kh-cptsd-page .ke-article .ke-disclaimer {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* The complete right column remains visible during scrolling. */
+.kh-cptsd-page .ke-side {
+    position: sticky !important;
+    top: 105px !important;
+    align-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 344px !important;
+    max-width: 344px !important;
+    max-height: calc(100vh - 125px);
+    margin: 0 !important;
+    padding: 0 5px 20px 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(229, 173, 50, 0.45) transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar {
+    width: 5px;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(229, 173, 50, 0.45);
+}
+
+.kh-cptsd-page .ke-side-box {
+    width: 100% !important;
+    margin: 0 !important;
+    flex: 0 0 auto;
+}
+
+/* Compact On This Page navigation matching the example. */
+.kh-cptsd-page .kh-cptsd-on-page nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 12px 0 !important;
+    color: #c9c4bb !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-decoration: none !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:first-child {
+    padding-top: 4px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:last-child {
+    padding-bottom: 4px !important;
+    border-bottom: 0;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a span {
+    flex: 0 0 auto;
+    color: var(--kh-gold);
+    font-size: 1.05rem;
+    transition: transform 160ms ease;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover,
+.kh-cptsd-page .kh-cptsd-on-page nav a:focus-visible {
+    color: var(--kh-gold-light) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover span {
+    transform: translateX(3px);
+}
+
+/* Match the example's content proportions. */
+.kh-cptsd-page .kh-cptsd-table {
+    width: 100% !important;
+    min-width: 760px;
+}
+
+.kh-cptsd-page .kh-cptsd-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Large desktop screens. */
+@media (min-width: 1500px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 112px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 360px !important;
+        gap: 56px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 360px !important;
+        max-width: 360px !important;
+    }
+}
+
+/* Tablet: narrower sidebar while retaining two columns. */
+@media (max-width: 1150px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 48px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 290px !important;
+        gap: 30px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+}
+
+/* Stack sidebar beneath the article on smaller screens. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 36px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-on-page {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile layout. */
+@media (max-width: 650px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 28px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        gap: 24px !important;
+    }
+
+    .kh-cptsd-page .ke-side,
+    .kh-cptsd-page .kh-cptsd-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-table-wrap {
+        max-width: calc(100vw - 28px) !important;
+        overflow-x: auto !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_WIDTH_SIDEBAR_END -->
+<!-- FOUR_GUIDE_NATIVE_LINKS_START -->
+<style>
+.ke-page::before,
+.ke-page::after,
+.ke-wrap::before,
+.ke-wrap::after,
+.ke-hero::before,
+.ke-hero::after,
+.ke-hero-visual::before,
+.ke-hero-visual::after,
+.ke-side::before,
+.ke-side::after,
+.ke-side-box::before,
+.ke-side-box::after {
+    pointer-events: none !important;
+}
+
+.ke-page a[href],
+.ke-page .ke-breadcrumb a[href],
+.ke-page .knowledge-breadcrumb-cta,
+.ke-page .ke-back-hub,
+.ke-page .ke-article a[href],
+.ke-page .ke-side a[href],
+.ke-page .ke-side-box a[href],
+.ke-page .kh-cptsd-on-page a[href],
+.home-footer a[href] {
+    position: relative !important;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.ke-page .ke-layout {
+    isolation: isolate;
+}
+
+.ke-page .ke-side {
+    z-index: 90 !important;
+    pointer-events: auto !important;
+    isolation: isolate;
+}
+
+.ke-page .ke-side-box,
+.ke-page .ke-side-box nav,
+.ke-page .kh-cptsd-on-page,
+.ke-page .kh-cptsd-on-page nav {
+    position: relative !important;
+    z-index: 91 !important;
+    pointer-events: auto !important;
+}
+
+.ke-page section[id] {
+    scroll-margin-top: 125px;
+}
+</style>
+<!-- FOUR_GUIDE_NATIVE_LINKS_END -->
+<!-- RF_MEGA_MENU_START -->
+<div class="rf-mm-backdrop" id="rf-mega-backdrop" aria-hidden="true"></div>
+<aside class="rf-mega-menu" id="rf-mega-menu" aria-label="Explore ReikiFish" aria-hidden="true">
+  <div class="rf-mm-shell">
+    <button class="rf-mm-close" type="button" aria-label="Close menu">&#10005;</button>
+    <section class="rf-mm-panel" data-panel="about" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">The person and purpose</p><h2>About ReikiFish</h2></div><a href="/about.html">Explore the story &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/about.html"><span class="rf-mm-icon">A</span><span class="rf-mm-copy"><strong>About Andy</strong><span>Lived experience, professional background and the thinking behind ReikiFish.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">B</span><span class="rf-mm-copy"><strong>Books and writing</strong><span>Explore Walking the Grey and writing grounded in reflection and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">K</span><span class="rf-mm-copy"><strong>Evidence-led learning</strong><span>Clear psychology and emotional-health guides in plain English.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Contact</strong><span>Ask a question or make an initial enquiry in confidence.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="books" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Depth, reflection and recovery</p><h2>Books by Andy Fish</h2></div><a href="/books.html">View all books &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">W</span><span class="rf-mm-copy"><strong>Walking the Grey</strong><span>A journey through alienation, abuse, self-understanding and reclamation.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>The Book of DARVO</strong><span>Updates and insights into denial, attack and reversal of victim and offender.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Stay regulated when another person appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">N</span><span class="rf-mm-copy"><strong>News and enquiries</strong><span>Follow publication updates or ask about the writing.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="coaching" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Calm, structured support</p><h2>Coaching pathways</h2></div><a href="/coaching.html">Explore coaching &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/trauma-coaching.html"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma coaching</strong><span>Build steadiness, choice and practical ways to move forward.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/parental-alienation-coaching.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Structured support through grief, uncertainty and difficult dynamics.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/team-leadership-coaching.html"><span class="rf-mm-icon">L</span><span class="rf-mm-copy"><strong>Team leadership</strong><span>Clearer communication, healthier teams and grounded leadership.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/coaching.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Find the right route</strong><span>Compare the coaching pathways and understand what support includes.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="knowledge" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Evidence led, plain English</p><h2>Explore the Knowledge Hub</h2></div><a href="/knowledge.html">View all guides &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Personality"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Personality</strong><span>Traits, patterns and personality disorders without careless labelling.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Trauma"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma</strong><span>Survival responses, dissociation, memory and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Manipulation"><span class="rf-mm-icon">M</span><span class="rf-mm-copy"><strong>Manipulation</strong><span>Gaslighting, DARVO and coercive interpersonal patterns.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Relationships"><span class="rf-mm-icon">R</span><span class="rf-mm-copy"><strong>Relationships</strong><span>Attachment, boundaries, trust, conflict and repair.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Emotional%20Health"><span class="rf-mm-icon">E</span><span class="rf-mm-copy"><strong>Emotional health</strong><span>Regulation, resilience, self-awareness and self-compassion.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Parental%20Alienation"><span class="rf-mm-icon">F</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Child-focused explanations of harmful relational behaviours.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge/what-is-complex-ptsd.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Complex PTSD</strong><span>An in-depth guide to prolonged trauma and its effects.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">A-Z</span><span class="rf-mm-copy"><strong>Psychology A to Z</strong><span>Browse the complete library of definitions and guides.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="blog" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Ideas, experience and reflection</p><h2>From the ReikiFish blog</h2></div><a href="/blog.html">View all articles &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Staying regulated when someone appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Psychology</strong><span>Evidence-informed perspectives on behaviour and emotional life.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>DARVO and manipulation</strong><span>Patterns of denial, blame reversal and missing context.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">U</span><span class="rf-mm-copy"><strong>Latest updates</strong><span>New writing, resources and project developments.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+  </div>
+</aside>
+<!-- RF_MEGA_MENU_END -->
+<script src="/assets/js/mega-menu.js?v=20260813-mm1"></script>
+</body>
+</html>

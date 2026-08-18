@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Leadership Coaching | Performance & Management | Andy Fish</title>
+    <meta name="description" content="Team leadership coaching for managers and organisations seeking stronger performance, communication, conflict management, efficiency and team alignment.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260806-trauma-v4" />
+
+<style id="TEAM_LEADERSHIP_PAGE_V1">
+
+.team-leadership-page {
+    background: #0b0f0f;
+    color: #f1ede5;
+}
+
+.team-leadership-page * {
+    box-sizing: border-box;
+}
+
+.tl-container {
+    width: min(1480px, calc(100% - 96px));
+    margin: 0 auto;
+}
+
+/* HERO */
+
+.tl-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 92px 0 88px;
+    border-bottom: 1px solid rgba(223,166,76,.22);
+    background:
+        radial-gradient(circle at 82% 32%, rgba(223,166,76,.13), transparent 27%),
+        radial-gradient(circle at 12% 80%, rgba(17,93,89,.13), transparent 30%),
+        linear-gradient(115deg,#091919 0%,#111616 52%,#2a1e12 100%);
+}
+
+.tl-hero::after {
+    content: "";
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    right: -170px;
+    top: -140px;
+    border: 1px solid rgba(223,166,76,.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 65px rgba(223,166,76,.025),
+        0 0 0 130px rgba(31,111,105,.022);
+}
+
+.tl-hero-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0,1.12fr) minmax(390px,.88fr);
+    gap: 82px;
+    align-items: center;
+}
+
+.tl-eyebrow {
+    display: inline-block;
+    color: #dfa64c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .27em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.tl-rule {
+    width: 88px;
+    height: 2px;
+    background: #dfa64c;
+    margin-bottom: 31px;
+}
+
+.tl-hero h1 {
+    max-width: 850px;
+    margin: 0 0 27px;
+    font-size: clamp(54px,5.3vw,88px);
+    line-height: .99;
+    letter-spacing: -.035em;
+    color: #f1ede5;
+}
+
+.tl-hero h1 em {
+    display: block;
+    margin-top: 8px;
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tl-hero-copy {
+    max-width: 750px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgba(241,237,229,.82);
+}
+
+.tl-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 29px;
+    padding: 17px 27px;
+    border-radius: 999px;
+    background: #e3aa4f;
+    color: #090b0b !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .2s ease;
+}
+
+.tl-button:hover {
+    transform: translateY(-2px);
+    background: #edb85f;
+}
+
+/* HERO VISUAL */
+
+.tl-performance-panel {
+    position: relative;
+    padding: 38px;
+    border: 1px solid rgba(223,166,76,.38);
+    border-radius: 25px;
+    background: rgba(5,11,11,.82);
+    box-shadow: 0 28px 65px rgba(0,0,0,.28);
+}
+
+.tl-panel-label {
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+}
+
+.tl-panel-title {
+    margin: 18px 0 30px;
+    font-family: Georgia,serif;
+    font-size: 35px;
+    line-height: 1.15;
+}
+
+.tl-performance-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 18px;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(223,166,76,.14);
+}
+
+.tl-performance-number {
+    width: 46px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(223,166,76,.42);
+    border-radius: 50%;
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.tl-performance-item strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.tl-performance-item span {
+    color: rgba(241,237,229,.65);
+    line-height: 1.5;
+}
+
+/* GENERAL SECTIONS */
+
+.tl-section {
+    padding: 88px 0;
+    border-bottom: 1px solid rgba(255,255,255,.055);
+}
+
+.tl-section-heading {
+    display: grid;
+    grid-template-columns: minmax(0,.92fr) minmax(0,1.08fr);
+    gap: 90px;
+    align-items: start;
+}
+
+.tl-section h2 {
+    margin: 0;
+    font-size: clamp(44px,4vw,68px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+}
+
+.tl-section h2 em {
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+}
+
+.tl-copy {
+    font-size: 19px;
+    line-height: 1.75;
+    color: rgba(241,237,229,.76);
+}
+
+.tl-copy p {
+    margin-top: 0;
+    margin-bottom: 23px;
+}
+
+/* EXPERIENCE */
+
+.tl-experience {
+    background:
+        linear-gradient(90deg,rgba(10,38,37,.3),transparent 55%);
+}
+
+.tl-experience-strip {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    border: 1px solid rgba(223,166,76,.23);
+    border-radius: 21px;
+    overflow: hidden;
+    background: #090e0e;
+}
+
+.tl-experience-item {
+    padding: 29px 27px;
+    border-right: 1px solid rgba(223,166,76,.15);
+}
+
+.tl-experience-item:last-child {
+    border-right: 0;
+}
+
+.tl-experience-item span {
+    display: block;
+    margin-bottom: 10px;
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-experience-item strong {
+    font-size: 19px;
+}
+
+/* CAPABILITY CARDS */
+
+.tl-capabilities {
+    background: #090d0d;
+}
+
+.tl-card-grid {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.tl-card {
+    min-height: 250px;
+    padding: 31px;
+    border: 1px solid rgba(223,166,76,.25);
+    border-radius: 20px;
+    background:
+        linear-gradient(145deg,rgba(12,21,21,.98),rgba(8,12,12,.98));
+    transition: .22s ease;
+}
+
+.tl-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(223,166,76,.52);
+    box-shadow: 0 20px 45px rgba(0,0,0,.22);
+}
+
+.tl-card-number {
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .15em;
+}
+
+.tl-card h3 {
+    margin: 34px 0 13px;
+    font-size: 25px;
+    color: #f1ede5;
+}
+
+.tl-card p {
+    margin: 0;
+    color: rgba(241,237,229,.65);
+    line-height: 1.65;
+}
+
+/* LEVELS */
+
+.tl-level-grid {
+    margin-top: 54px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.tl-level {
+    position: relative;
+    padding: 35px 32px;
+    border-top: 2px solid #dfa64c;
+    background: rgba(7,14,14,.72);
+}
+
+.tl-level-label {
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-level h3 {
+    margin: 18px 0 13px;
+    font-family: Georgia,serif;
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.tl-level p {
+    margin: 0;
+    line-height: 1.65;
+    color: rgba(241,237,229,.67);
+}
+
+/* SYNERGY */
+
+.tl-synergy {
+    background:
+        radial-gradient(circle at 50% 100%,rgba(223,166,76,.08),transparent 34%);
+}
+
+.tl-synergy-flow {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr 70px 1fr;
+    align-items: center;
+}
+
+.tl-flow-card {
+    padding: 31px;
+    min-height: 190px;
+    border: 1px solid rgba(223,166,76,.27);
+    border-radius: 19px;
+    background: #080d0d;
+}
+
+.tl-flow-card span {
+    color: #dfa64c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2em;
+}
+
+.tl-flow-card h3 {
+    margin: 17px 0 10px;
+    font-size: 23px;
+}
+
+.tl-flow-card p {
+    color: rgba(241,237,229,.63);
+    line-height: 1.6;
+}
+
+.tl-flow-line {
+    height: 1px;
+    background: linear-gradient(90deg,#dfa64c,rgba(223,166,76,.18));
+}
+
+/* CTA */
+
+.tl-cta {
+    padding: 95px 0;
+    text-align: center;
+    background:
+        radial-gradient(circle at 50% 100%,rgba(223,166,76,.12),transparent 34%),
+        #090d0d;
+}
+
+.tl-cta-inner {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+.tl-cta h2 {
+    margin: 0;
+    font-size: clamp(48px,5vw,76px);
+    line-height: 1.03;
+}
+
+.tl-cta h2 em {
+    color: #dfa64c;
+    font-family: Georgia,serif;
+    font-weight: 400;
+}
+
+.tl-cta p {
+    max-width: 720px;
+    margin: 27px auto 0;
+    color: rgba(241,237,229,.72);
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1050px) {
+
+    .tl-container {
+        width: min(100% - 48px,1480px);
+    }
+
+    .tl-hero-grid,
+    .tl-section-heading {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .tl-performance-panel {
+        max-width: 680px;
+    }
+
+    .tl-experience-strip,
+    .tl-card-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .tl-level-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-synergy-flow {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .tl-flow-line {
+        width: 1px;
+        height: 35px;
+        margin-left: 35px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .tl-container {
+        width: calc(100% - 28px);
+    }
+
+    .tl-hero,
+    .tl-section {
+        padding: 58px 0;
+    }
+
+    .tl-hero h1 {
+        font-size: clamp(45px,13vw,63px);
+    }
+
+    .tl-section h2 {
+        font-size: clamp(38px,10vw,52px);
+    }
+
+    .tl-experience-strip,
+    .tl-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-experience-item {
+        border-right: 0;
+        border-bottom: 1px solid rgba(223,166,76,.15);
+    }
+
+    .tl-experience-item:last-child {
+        border-bottom: 0;
+    }
+
+    .tl-performance-panel {
+        padding: 27px 23px;
+    }
+}
+
+</style>
+
+
+
+<style id="TEAM_LEADERSHIP_INTRO_FINAL">
+
+/* ==========================================================
+   TEAM LEADERSHIP INTRO
+   ========================================================== */
+
+.tl-intro-feature {
+
+    position: relative;
+    overflow: hidden;
+
+    padding: 78px 0 82px;
+
+    background:
+        radial-gradient(
+            circle at 82% 28%,
+            rgba(223,166,76,.10),
+            transparent 29%
+        ),
+        linear-gradient(
+            115deg,
+            #081818 0%,
+            #101717 52%,
+            #241a11 100%
+        );
+
+    border-bottom:
+        1px solid rgba(223,166,76,.24);
+}
+
+
+/* Subtle background detail */
+
+.tl-intro-feature::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    left: -230px;
+    bottom: -310px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(223,166,76,.09);
+
+    box-shadow:
+        0 0 0 70px rgba(27,104,99,.025),
+        0 0 0 140px rgba(223,166,76,.018);
+}
+
+
+.tl-intro-inner {
+
+    width:
+        min(1480px, calc(100% - 96px));
+
+    margin:
+        0 auto;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, .94fr)
+        minmax(520px, 1.06fr);
+
+    gap:
+        clamp(65px, 6vw, 105px);
+
+    align-items:
+        center;
+}
+
+
+/* ==========================================================
+   LEFT CONTENT
+   ========================================================== */
+
+.tl-intro-copy {
+
+    max-width:
+        710px;
+}
+
+
+.tl-intro-eyebrow {
+
+    display:
+        block;
+
+    margin-bottom:
+        22px;
+
+    color:
+        #dfa64c;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        .27em;
+
+    text-transform:
+        uppercase;
+}
+
+
+.tl-intro-rule {
+
+    width:
+        88px;
+
+    height:
+        2px;
+
+    margin-bottom:
+        31px;
+
+    background:
+        #dfa64c;
+}
+
+
+.tl-intro-copy h1 {
+
+    margin:
+        0 0 28px;
+
+    color:
+        #f1ede5;
+
+    font-size:
+        clamp(50px, 4.7vw, 76px);
+
+    line-height:
+        1.01;
+
+    letter-spacing:
+        -.035em;
+}
+
+
+.tl-intro-copy h1 em {
+
+    display:
+        block;
+
+    margin-top:
+        9px;
+
+    color:
+        #dfa64c;
+
+    font-family:
+        Georgia, serif;
+
+    font-size:
+        .88em;
+
+    font-style:
+        italic;
+
+    font-weight:
+        400;
+
+    line-height:
+        1.05;
+}
+
+
+.tl-intro-copy p {
+
+    max-width:
+        690px;
+
+    margin:
+        0 0 20px;
+
+    color:
+        rgba(241,237,229,.75);
+
+    font-size:
+        18px;
+
+    line-height:
+        1.7;
+}
+
+
+.tl-intro-copy
+.tl-intro-lead {
+
+    color:
+        rgba(241,237,229,.91);
+
+    font-size:
+        20px;
+}
+
+
+.tl-intro-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        18px;
+
+    margin-top:
+        14px;
+
+    padding:
+        17px 27px;
+
+    border-radius:
+        999px;
+
+    background:
+        #e3aa4f;
+
+    color:
+        #090b0b !important;
+
+    text-decoration:
+        none;
+
+    font-weight:
+        700;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.tl-intro-button:hover {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        #efb960;
+}
+
+
+/* ==========================================================
+   IMAGE SIDE
+   ========================================================== */
+
+.tl-intro-visual {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        625px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid rgba(223,166,76,.38);
+
+    border-radius:
+        28px;
+
+    background:
+        #080d0d;
+
+    box-shadow:
+        0 32px 75px rgba(0,0,0,.30);
+}
+
+
+.tl-intro-visual img {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    display:
+        block;
+}
+
+
+/* Dark gradient makes overlays premium/readable */
+
+.tl-image-shade {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(4,8,8,.12) 52%,
+            rgba(4,8,8,.88) 100%
+        );
+}
+
+
+/* Bottom statement */
+
+.tl-image-label {
+
+    position:
+        absolute;
+
+    left:
+        30px;
+
+    right:
+        30px;
+
+    bottom:
+        112px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        15px 20px;
+
+    border:
+        1px solid rgba(223,166,76,.35);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(5,10,10,.86);
+
+    backdrop-filter:
+        blur(7px);
+
+    color:
+        #f1ede5;
+
+    font-weight:
+        650;
+}
+
+
+.tl-image-label span {
+
+    width:
+        35px;
+
+    height:
+        1px;
+
+    flex:
+        0 0 auto;
+
+    background:
+        #dfa64c;
+}
+
+
+/* Performance strip */
+
+.tl-image-metrics {
+
+    position:
+        absolute;
+
+    left:
+        30px;
+
+    right:
+        30px;
+
+    bottom:
+        28px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        8px;
+}
+
+
+.tl-image-metrics div {
+
+    padding:
+        14px 15px;
+
+    border-top:
+        1px solid rgba(223,166,76,.38);
+
+    background:
+        rgba(5,10,10,.64);
+}
+
+
+.tl-image-metrics strong {
+
+    display:
+        block;
+
+    margin-bottom:
+        3px;
+
+    color:
+        #dfa64c;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .15em;
+}
+
+
+.tl-image-metrics span {
+
+    color:
+        #f1ede5;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .tl-intro-inner {
+
+        width:
+            min(100% - 48px, 1480px);
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            46px;
+    }
+
+
+    .tl-intro-copy {
+
+        max-width:
+            800px;
+    }
+
+
+    .tl-intro-visual {
+
+        min-height:
+            560px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+    .tl-intro-feature {
+
+        padding:
+            54px 0;
+    }
+
+
+    .tl-intro-inner {
+
+        width:
+            calc(100% - 28px);
+    }
+
+
+    .tl-intro-copy h1 {
+
+        font-size:
+            clamp(43px, 12vw, 59px);
+    }
+
+
+    .tl-intro-copy p,
+    .tl-intro-copy .tl-intro-lead {
+
+        font-size:
+            16px;
+
+        line-height:
+            1.65;
+    }
+
+
+    .tl-intro-visual {
+
+        min-height:
+            470px;
+
+        border-radius:
+            20px;
+    }
+
+
+    .tl-image-label {
+
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            125px;
+
+        border-radius:
+            18px;
+    }
+
+
+    .tl-image-metrics {
+
+        left:
+            18px;
+
+        right:
+            18px;
+
+        bottom:
+            20px;
+    }
+
+
+    .tl-image-metrics span {
+
+        font-size:
+            11px;
+    }
+
+}
+
+</style>
+
+
+
+
+<style id="TEAM_EXPERIENCE_PREMIUM_V1">
+
+/* ==========================================================
+   TEAM LEADERSHIP - EXPERIENCE
+   ========================================================== */
+
+.tl-experience-premium {
+    position: relative;
+    overflow: hidden;
+    padding: 58px 0 64px;
+    background:
+        radial-gradient(
+            circle at 88% 15%,
+            rgba(223,166,76,.07),
+            transparent 25%
+        ),
+        #0b1010;
+    border-bottom: 1px solid rgba(223,166,76,.14);
+}
+
+.tl-experience-inner {
+    width: min(1480px, calc(100% - 96px));
+    margin: 0 auto;
+}
+
+.tl-experience-heading {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 70px;
+    align-items: end;
+    margin-bottom: 38px;
+}
+
+.tl-experience-eyebrow {
+    display: block;
+    color: #dfa64c;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .25em;
+}
+
+.tl-experience-rule {
+    width: 72px;
+    height: 2px;
+    margin: 18px 0 22px;
+    background: #dfa64c;
+}
+
+.tl-experience-heading h2 {
+    max-width: 620px;
+    margin: 0;
+    color: #f1ede5;
+    font-size: clamp(36px, 3.4vw, 55px);
+    line-height: 1.04;
+    letter-spacing: -.025em;
+}
+
+.tl-experience-heading h2 em {
+    display: inline;
+    color: #dfa64c;
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.tl-experience-heading > p {
+    max-width: 700px;
+    margin: 0 0 4px;
+    color: rgba(241,237,229,.70);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* FOUR PROOF CARDS */
+
+.tl-experience-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 14px;
+}
+
+.tl-experience-card {
+    position: relative;
+    min-height: 245px;
+    padding: 26px 25px 25px;
+    border: 1px solid rgba(223,166,76,.24);
+    border-radius: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.018),
+            rgba(223,166,76,.025)
+        ),
+        #090e0e;
+    transition:
+        transform .2s ease,
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.tl-experience-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(223,166,76,.48);
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,166,76,.055),
+            rgba(10,19,18,.9)
+        );
+}
+
+.tl-experience-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 22px;
+    border: 1px solid rgba(223,166,76,.36);
+    border-radius: 15px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(223,166,76,.13),
+            rgba(223,166,76,.025)
+        );
+    color: #dfa64c;
+}
+
+.tl-experience-icon span {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.tl-experience-card small {
+    display: block;
+    margin-bottom: 7px;
+    color: #dfa64c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .17em;
+}
+
+.tl-experience-card h3 {
+    margin: 0 0 11px;
+    color: #f1ede5;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.tl-experience-card p {
+    margin: 0;
+    color: rgba(241,237,229,.64);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .tl-experience-inner {
+        width: min(100% - 48px, 1480px);
+    }
+
+    .tl-experience-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tl-experience-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .tl-experience-premium {
+        padding: 45px 0 50px;
+    }
+
+    .tl-experience-inner {
+        width: calc(100% - 28px);
+    }
+
+    .tl-experience-heading {
+        margin-bottom: 28px;
+    }
+
+    .tl-experience-heading h2 {
+        font-size: 39px;
+    }
+
+    .tl-experience-heading > p {
+        font-size: 15px;
+    }
+
+    .tl-experience-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .tl-experience-card {
+        min-height: 0;
+        padding: 23px;
+    }
+}
+
+</style>
+
+
+
+
+<style id="TL_EXPERIENCE_ICON_ALIGNMENT">
+
+/* CENTRE THE COMPLETE ICON BOX ACROSS EACH CARD */
+
+.tl-experience-card .tl-experience-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* Centre the character inside the box */
+
+.tl-experience-card .tl-experience-icon span {
+    width: 100% !important;
+    height: 100% !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+/* Keep all four card numbers consistently aligned */
+
+.tl-experience-card small {
+    display: block !important;
+    margin-top: 0 !important;
+}
+
+</style>
+
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+</head>
+  <body class="coaching-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish Ã¢â‚¬â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link active" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Team Leadership</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+<section class="tl-intro-feature">
+
+  <div class="tl-intro-inner">
+
+    <div class="tl-intro-copy">
+
+      <span class="tl-intro-eyebrow">
+        LEADERSHIP IN PRACTICE
+      </span>
+
+      <div class="tl-intro-rule"></div>
+
+      <h1>
+        Great teams do not
+        happen by accident.
+        <em>They are led with clarity.</em>
+      </h1>
+
+      <p class="tl-intro-lead">
+        Strong leadership creates the conditions in which people
+        can perform at their best: clear expectations, honest
+        communication, useful accountability and the confidence
+        to deal with problems before they become bigger ones.
+      </p>
+
+      <p>
+        I bring more than 20 years of practical leadership
+        experience across agency and in-house environments,
+        successful marketing projects and the management of
+        multiple departments. I understand both the pressure
+        to deliver and the human dynamics behind the result.
+      </p>
+
+      <p>
+        Whether you are taking responsibility for a team for the
+        first time or working at senior or enterprise level, the
+        focus is the same: remove unnecessary friction, raise
+        standards and help capable people work together more
+        effectively.
+      </p>
+
+      <a href="contact.html" class="tl-intro-button">
+        Talk About Your Team
+        <span>?</span>
+      </a>
+
+    </div>
+
+
+    <div class="tl-intro-visual">
+
+      <img
+        src="assets/images/coaching.webp"
+        alt="Professional leadership coaching and team development"
+      >
+
+      <div class="tl-image-shade"></div>
+
+      <div class="tl-image-label">
+        <span></span>
+        Leadership that turns direction into performance.
+      </div>
+
+      <div class="tl-image-metrics">
+
+        <div>
+          <strong>01</strong>
+          <span>Clarity</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>Alignment</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>Performance</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+    </header>
+
+
+<main class="team-leadership-page">
+
+<section class="tl-hero">
+  <div class="tl-container tl-hero-grid">
+
+    <div>
+      <span class="tl-eyebrow">Team Leadership & Performance</span>
+      <div class="tl-rule"></div>
+
+      <h1>
+        Raise the bar.
+        <em>Bring the team with you.</em>
+      </h1>
+
+      <p class="tl-hero-copy">
+        Leadership is more than asking people to work harder. Strong teams need clarity,
+        trust, accountability, efficient communication and leaders who know how to deal
+        with pressure and conflict without creating more of it.
+      </p>
+
+      <p class="tl-hero-copy">
+        I work with managers, team leaders and organisations to turn friction into focus,
+        strengthen performance and create teams that work together rather than simply
+        working alongside one another.
+      </p>
+
+      <a class="tl-button" href="contact.html">
+        Discuss Your Team
+        <span>?</span>
+      </a>
+    </div>
+
+    <aside class="tl-performance-panel">
+
+      <span class="tl-panel-label">The performance equation</span>
+
+      <div class="tl-panel-title">
+        High performance needs more than high expectations.
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">01</div>
+        <div>
+          <strong>Clarity</strong>
+          <span>People understand the objective, their role and what good looks like.</span>
+        </div>
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">02</div>
+        <div>
+          <strong>Capability</strong>
+          <span>The team has the confidence, skills and support to deliver.</span>
+        </div>
+      </div>
+
+      <div class="tl-performance-item">
+        <div class="tl-performance-number">03</div>
+        <div>
+          <strong>Accountability</strong>
+          <span>Standards are clear, ownership is real and problems are addressed.</span>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</section>
+
+
+
+
+<section class="tl-experience-premium">
+
+  <div class="tl-experience-inner">
+
+    <div class="tl-experience-heading">
+
+      <div>
+        <span class="tl-experience-eyebrow">
+          EXPERIENCE BEHIND THE COACHING
+        </span>
+
+        <div class="tl-experience-rule"></div>
+
+        <h2>
+          Leadership built in the
+          <em>real world.</em>
+        </h2>
+      </div>
+
+      <p>
+        More than two decades working across agency and in-house
+        environments has taught me that strong leadership is not
+        about titles. It is about creating clarity, raising standards
+        and helping people perform together when the pressure is real.
+      </p>
+
+    </div>
+
+
+    <div class="tl-experience-grid">
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>25+</span>
+        </div>
+
+        <div>
+          <small>01</small>
+          <h3>Years of Leadership</h3>
+          <p>
+            Leading people, projects and teams through growth,
+            pressure, change and demanding commercial targets.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>10+</span>
+        </div>
+
+        <div>
+          <small>02</small>
+          <h3>Agency Experience</h3>
+          <p>
+            Fast-moving environments where priorities compete,
+            clients expect results and teams need to adapt quickly.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>15+</span>
+        </div>
+
+        <div>
+          <small>03</small>
+          <h3>In-House Leadership</h3>
+          <p>
+            Building sustainable performance, developing people and
+            turning strategy into consistent day-to-day execution.
+          </p>
+        </div>
+
+      </article>
+
+
+      <article class="tl-experience-card">
+
+        <div class="tl-experience-icon">
+          <span>12+</span>
+        </div>
+
+        <div>
+          <small>04</small>
+          <h3>Multi-Department Teams</h3>
+          <p>
+            Bringing different personalities, functions and priorities
+            together around shared outcomes and clearer accountability.
+          </p>
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+<section class="tl-section tl-capabilities">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Where We Raise The Bar</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Better leadership creates
+        <em>better conditions to perform.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Performance problems are rarely solved by pressure alone. We look underneath
+          the numbers at the communication, expectations, processes, relationships and
+          leadership behaviours shaping the result.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-card-grid">
+
+      <article class="tl-card">
+        <span class="tl-card-number">01</span>
+        <h3>Performance & Standards</h3>
+        <p>
+          Define what strong performance actually means, set expectations clearly and
+          create accountability without turning leadership into constant policing.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">02</span>
+        <h3>Conflict & Difficult Conversations</h3>
+        <p>
+          Deal with disagreement earlier, communicate directly and stop unresolved
+          tension from quietly damaging performance and trust.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">03</span>
+        <h3>Communication & Role Clarity</h3>
+        <p>
+          Reduce crossed wires, duplicated work and uncertainty by making ownership,
+          priorities and decision-making clearer.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">04</span>
+        <h3>Efficiency & Workflow</h3>
+        <p>
+          Identify friction, unnecessary complexity and bottlenecks so that people can
+          spend more time delivering useful work.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">05</span>
+        <h3>Team Culture & Synergy</h3>
+        <p>
+          Help individuals and departments understand how their work connects, building
+          cooperation instead of silos.
+        </p>
+      </article>
+
+      <article class="tl-card">
+        <span class="tl-card-number">06</span>
+        <h3>Change, Pressure & Growth</h3>
+        <p>
+          Lead more steadily when expectations rise, structures change or a growing
+          organisation needs its leadership to mature with it.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-section">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Leadership At Your Level</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Start where you are.
+        <em>Go as advanced as you need.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Leadership coaching should meet the reality of the person or organisation.
+          Someone managing people for the first time needs something different from a
+          senior leader coordinating multiple functions.
+        </p>
+
+        <p>
+          I can work at either level ? from helping somebody build their foundations to
+          working through advanced team performance and enterprise-level leadership
+          challenges.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-level-grid">
+
+      <article class="tl-level">
+        <span class="tl-level-label">FOUNDATION</span>
+        <h3>New & Emerging Leaders</h3>
+        <p>
+          Build confidence, delegate properly, set standards, give feedback and learn
+          how to handle difficult conversations without avoiding them.
+        </p>
+      </article>
+
+      <article class="tl-level">
+        <span class="tl-level-label">GROWTH</span>
+        <h3>Established Managers & Teams</h3>
+        <p>
+          Improve performance, accountability, communication and efficiency while
+          developing a leadership style people can actually work with.
+        </p>
+      </article>
+
+      <article class="tl-level">
+        <span class="tl-level-label">ADVANCED</span>
+        <h3>Senior & Enterprise Leadership</h3>
+        <p>
+          Work across departments, priorities and stakeholders to strengthen strategic
+          alignment, organisational performance and leadership through complexity.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-section tl-synergy">
+  <div class="tl-container">
+
+    <span class="tl-eyebrow">Creating Synergy</span>
+    <div class="tl-rule"></div>
+
+    <div class="tl-section-heading">
+
+      <h2>
+        Stop managing departments.
+        <em>Start connecting them.</em>
+      </h2>
+
+      <div class="tl-copy">
+        <p>
+          Some of the biggest performance losses happen between teams rather than
+          inside them. Different priorities, unclear ownership and poor handovers turn
+          capable people into a fragmented organisation.
+        </p>
+
+        <p>
+          My approach looks at the whole system: where friction begins, where
+          communication breaks down and what needs to align so that individual talent
+          becomes collective performance.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="tl-synergy-flow">
+
+      <article class="tl-flow-card">
+        <span>01 ? DIAGNOSE</span>
+        <h3>Find the friction</h3>
+        <p>
+          Identify where communication, process, expectations or relationships are
+          slowing the team down.
+        </p>
+      </article>
+
+      <div class="tl-flow-line"></div>
+
+      <article class="tl-flow-card">
+        <span>02 ? ALIGN</span>
+        <h3>Create shared clarity</h3>
+        <p>
+          Bring priorities, responsibilities and standards into a structure people can
+          understand and act on.
+        </p>
+      </article>
+
+      <div class="tl-flow-line"></div>
+
+      <article class="tl-flow-card">
+        <span>03 ? EMBED</span>
+        <h3>Turn insight into behaviour</h3>
+        <p>
+          Make the changes practical enough to survive beyond the coaching conversation
+          and become part of how the team operates.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="tl-cta">
+  <div class="tl-container tl-cta-inner">
+
+    <span class="tl-eyebrow">Team Leadership Coaching</span>
+
+    <h2>
+      Better teams start with
+      <em>better leadership conversations.</em>
+    </h2>
+
+    <p>
+      Whether you are stepping into management for the first time, trying to unlock
+      more from an established team or dealing with leadership complexity across an
+      organisation, we can start with the problem in front of you.
+    </p>
+
+    <a class="tl-button" href="contact.html">
+      Start a Leadership Conversation
+      <span>?</span>
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">Ã‚Â© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

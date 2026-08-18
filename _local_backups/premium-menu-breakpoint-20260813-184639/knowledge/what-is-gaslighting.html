@@ -1,0 +1,2255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <base href="../">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is Gaslighting? Signs, Psychology & Evidence | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+<meta name="description" content="What is gaslighting? A detailed evidence led guide to gaslighting, manipulation, memory, reality, psychological research, warning signs and what gaslighting is not.">
+<link rel="canonical" href="https://reikifish.com/knowledge/what-is-gaslighting.html">
+    <link rel="stylesheet" href="../assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-sync1">
+</head>
+  <body class="home-page about-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="/index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="/assets/images/logo.png"
+              alt="Andy Fish ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="/coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="/trauma-coaching.html">Trauma</a>
+
+        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
+<a href="/team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
+<li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="ke-page">
+
+<section class="ke-hero">
+
+  <div class="ke-wrap">
+
+    <nav class="ke-breadcrumb" aria-label="Breadcrumb">
+      <a href="/knowledge.html" class="knowledge-breadcrumb-cta">Knowledge Hub</a>
+      <span>›</span>
+      <a href="/knowledge-search.html?category=Manipulation">Manipulation</a>
+    </nav>
+
+    <div class="ke-hero-grid">
+
+      <div class="ke-hero-copy">
+
+        <div class="ke-type">
+          DEFINITION · MANIPULATION
+        </div>
+
+        <h1>What is gaslighting?</h1>
+
+        <p class="ke-lead">
+          Gaslighting is a pattern of psychological manipulation that
+          undermines another person's confidence in their own perceptions,
+          memories, experiences or understanding of reality.
+        </p>
+
+        <div class="ke-reading">
+          Evidence led explanation · Plain English · Sources included
+        </div>
+
+      </div>
+
+
+      <div class="ke-hero-visual" aria-hidden="true">
+
+        <div class="ke-visual-glow"></div>
+
+        <svg class="ke-darvo-art"
+             viewBox="0 0 420 420">
+
+          <circle cx="210" cy="210" r="174"
+                  class="ke-art-faint"/>
+
+          <circle cx="210" cy="210" r="150"
+                  class="ke-art-dashed"/>
+
+          <circle cx="210" cy="210" r="112"
+                  class="ke-art-ring"/>
+
+
+          <!-- Split reality -->
+
+          <path
+            d="M210 107
+               C175 104 148 128 145 158
+               C122 171 124 205 145 218
+               C137 250 164 280 197 273
+               C202 290 207 298 210 302"
+            class="ke-art-brain"
+          />
+
+          <path
+            d="M210 107
+               C245 104 272 128 275 158
+               C298 171 296 205 275 218
+               C283 250 256 280 223 273
+               C218 290 213 298 210 302"
+            class="ke-art-brain"
+          />
+
+          <path d="M210 112 L210 299"
+                class="ke-art-line"/>
+
+          <path d="M165 151 C188 142 198 159 190 176"
+                class="ke-art-brain"/>
+
+          <path d="M255 151 C232 142 222 159 230 176"
+                class="ke-art-brain"/>
+
+          <path d="M150 213 C174 203 194 215 191 238"
+                class="ke-art-brain"/>
+
+          <path d="M270 213 C246 203 226 215 229 238"
+                class="ke-art-brain"/>
+
+
+          <!-- Distorted reality waves -->
+
+          <path d="M96 124 C120 106 137 112 151 125"
+                class="ke-art-line"/>
+
+          <path d="M324 124 C300 106 283 112 269 125"
+                class="ke-art-line"/>
+
+          <path d="M91 289 C120 310 144 301 160 286"
+                class="ke-art-line"/>
+
+          <path d="M329 289 C300 310 276 301 260 286"
+                class="ke-art-line"/>
+
+
+          <circle cx="97" cy="123" r="5"
+                  class="ke-art-node"/>
+
+          <circle cx="323" cy="123" r="5"
+                  class="ke-art-node"/>
+
+          <circle cx="93" cy="291" r="5"
+                  class="ke-art-node"/>
+
+          <circle cx="327" cy="291" r="5"
+                  class="ke-art-node"/>
+
+
+          <text
+            x="210"
+            y="337"
+            text-anchor="middle"
+            class="ke-art-title"
+          >
+            REALITY?
+          </text>
+
+          <text
+            x="210"
+            y="357"
+            text-anchor="middle"
+            class="ke-art-subtitle"
+          >
+            MEMORY · PERCEPTION · SELF TRUST
+          </text>
+
+        </svg>
+
+        <div class="ke-visual-caption">
+          When confidence in reality is deliberately undermined
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="ke-layout">
+
+<article class="ke-article">
+
+
+  <div class="ke-answer-box">
+
+    <div class="ke-answer-label">QUICK ANSWER</div>
+
+    <p>
+      <strong>Gaslighting</strong> refers to a pattern in which someone
+      undermines another person's confidence in what they remember,
+      perceive, feel or understand.
+    </p>
+
+    <p>
+      It is more specific than lying or disagreeing. The central feature
+      is the destabilisation of another person's trust in their own
+      judgement or sense of reality.
+    </p>
+
+  </div>
+
+
+  <section class="ke-deep-dive">
+
+    <div class="ke-section-label">IN DEPTH</div>
+
+    <h2>Understanding gaslighting in detail</h2>
+
+    <p>
+      Gaslighting has become one of the most widely used psychological
+      terms on the internet, but its popularity has also caused the term
+      to become blurred. Ordinary disagreement, forgetfulness, lying,
+      selfish behaviour and different interpretations of an event are
+      sometimes all described as gaslighting.
+    </p>
+
+    <p>
+      A more useful definition focuses on what happens to the other
+      person's ability to trust their own knowledge. Gaslighting involves
+      behaviour that systematically undermines confidence in memory,
+      perception, judgement or reality.
+    </p>
+
+    <p>
+      Researchers have examined gaslighting not only as an individual
+      psychological interaction but also as a relational and social
+      phenomenon involving power, credibility and dependence.
+    </p>
+
+
+    <div class="ke-deep-grid">
+
+      <div>
+        <span>01</span>
+        <h3>Reality is challenged</h3>
+        <p>
+          Events, conversations or experiences may repeatedly be denied,
+          contradicted or reframed.
+        </p>
+      </div>
+
+      <div>
+        <span>02</span>
+        <h3>Confidence is weakened</h3>
+        <p>
+          The person may gradually become less certain about their
+          memory, interpretation or judgement.
+        </p>
+      </div>
+
+      <div>
+        <span>03</span>
+        <h3>Credibility shifts</h3>
+        <p>
+          The manipulator's account can increasingly become the version
+          that is treated as authoritative.
+        </p>
+      </div>
+
+      <div>
+        <span>04</span>
+        <h3>Self trust erodes</h3>
+        <p>
+          The target may begin checking their own recollections,
+          decisions and emotional responses more frequently.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <h2 id="meaning">What does gaslighting actually mean?</h2>
+
+  <p>
+    At its core, gaslighting concerns control over what counts as real,
+    believable or trustworthy within an interaction.
+  </p>
+
+  <p>
+    Someone may remember an event clearly, raise it and repeatedly be
+    told that it never happened, that they misunderstood it, that their
+    memory cannot be trusted or that their emotional response proves
+    they are irrational.
+  </p>
+
+  <p>
+    When this occurs as part of a sustained pattern, the person's
+    attention may gradually shift away from evaluating the other
+    person's behaviour and towards evaluating themselves.
+  </p>
+
+
+  <h2>Gaslighting is not simply lying</h2>
+
+  <p>
+    A lie attempts to make another person believe something untrue.
+    Gaslighting can go further by attacking the person's confidence in
+    their own ability to determine what is true.
+  </p>
+
+  <p>
+    Someone might lie about where they were yesterday. That does not
+    automatically make the behaviour gaslighting. If they repeatedly
+    deny observable events and insist that the other person's memory,
+    perception or judgement is fundamentally unreliable, the interaction
+    begins to resemble the concept more closely.
+  </p>
+
+
+  <div class="ke-important">
+
+    <div class="ke-important-title">
+      Disagreement is not automatically gaslighting
+    </div>
+
+    <p>
+      Two honest people can remember the same conversation differently.
+      Memory is reconstructive rather than a perfect recording, and
+      genuine disagreement about past events is common.
+    </p>
+
+    <p>
+      The presence of contradictory memories alone therefore does not
+      establish psychological manipulation.
+    </p>
+
+  </div>
+
+
+  <h2>Common gaslighting behaviours</h2>
+
+  <p>
+    Gaslighting does not require a particular script. What matters is the
+    wider pattern and its effect on who is permitted to define reality
+    within the relationship.
+  </p>
+
+  <ul class="ke-list">
+
+    <li>
+      Repeatedly denying events that the other person remembers.
+    </li>
+
+    <li>
+      Telling somebody that they are imagining things without a reasonable
+      basis for doing so.
+    </li>
+
+    <li>
+      Reframing concerns as evidence that the person is irrational,
+      unstable or incapable of remembering accurately.
+    </li>
+
+    <li>
+      Contradicting previous statements and then denying that those
+      statements were ever made.
+    </li>
+
+    <li>
+      Using another person's understandable emotional reaction as evidence
+      that their account cannot be trusted.
+    </li>
+
+    <li>
+      Repeatedly replacing discussion of observable events with attacks on
+      the person's judgement or mental stability.
+    </li>
+
+  </ul>
+
+
+  <h2>What can gaslighting sound like?</h2>
+
+  <div class="ke-example">
+
+    <div class="ke-example-row">
+      <span>DENIAL</span>
+      <p>“That never happened. You invented it.”</p>
+    </div>
+
+    <div class="ke-example-row">
+      <span>MEMORY</span>
+      <p>“You always remember things incorrectly.”</p>
+    </div>
+
+    <div class="ke-example-row">
+      <span>PERCEPTION</span>
+      <p>“You are imagining a problem that isn't there.”</p>
+    </div>
+
+    <div class="ke-example-row">
+      <span>EMOTION</span>
+      <p>“The fact you're upset proves you are irrational.”</p>
+    </div>
+
+  </div>
+
+  <p class="ke-note">
+    These examples require context. A single sentence cannot establish
+    that a relationship contains a pattern of gaslighting.
+  </p>
+
+
+  <h2>Why can gaslighting be difficult to recognise?</h2>
+
+  <p>
+    People normally rely on social feedback to make sense of ambiguous
+    situations. We ask other people what they remember, compare
+    interpretations and sometimes revise our beliefs when somebody gives
+    us new information.
+  </p>
+
+  <p>
+    That normal openness to correction can become a vulnerability when a
+    relationship repeatedly supplies misleading feedback about what is
+    real or reasonable.
+  </p>
+
+  <p>
+    The problem may be especially difficult when the same person who
+    destabilises someone's confidence is also an important source of
+    reassurance, affection, authority or information.
+  </p>
+
+
+  <h2>Gaslighting and power</h2>
+
+  <p>
+    Sociological research has emphasised that gaslighting can operate
+    within unequal relationships and broader structures of credibility
+    and power. This matters because not every person's account is treated
+    equally in every social environment.
+  </p>
+
+  <p>
+    Social status, gender, professional authority, institutional position
+    and existing stereotypes can influence whose interpretation receives
+    greater credibility.
+  </p>
+
+  <p>
+    This does not mean that every power imbalance creates gaslighting.
+    It means that the social context can affect whether attempts to
+    undermine another person's reality are successful.
+  </p>
+
+
+  <h2 id="research">What does research say about gaslighting?</h2>
+
+  <p>
+    Academic interest in gaslighting has expanded considerably. Paige
+    Sweet's sociological analysis highlighted the role of social
+    inequalities and power in gaslighting within intimate relationships.
+  </p>
+
+  <p>
+    Qualitative research by Willis Klein, Shuhong Li and Susan Wood has
+    examined experiences of gaslighting in romantic relationships,
+    including how affectionate and abusive behaviour may coexist over
+    time.
+  </p>
+
+  <p>
+    Researchers have also begun developing measurement tools and clearer
+    theoretical frameworks because the popular use of the word has
+    expanded faster than the empirical literature.
+  </p>
+
+
+  <div class="ke-analysis-box">
+
+    <div class="ke-section-label">EVIDENCE FIRST</div>
+
+    <h3>Ask what can actually be established</h3>
+
+    <p>
+      Psychological terminology should help us examine evidence rather
+      than replace it.
+    </p>
+
+    <ul>
+      <li>What specifically was said or done?</li>
+      <li>Is the behaviour isolated or repeated?</li>
+      <li>Are there independent records or witnesses?</li>
+      <li>Is disagreement about an event being confused with manipulation?</li>
+      <li>Is one person repeatedly attacking the other's ability to know what happened?</li>
+      <li>Does the pattern increase dependence on one person's version of reality?</li>
+    </ul>
+
+  </div>
+
+
+  <h2>Gaslighting and memory</h2>
+
+  <p>
+    One reason the subject requires care is that human memory is not
+    perfectly reliable. People can sincerely remember details
+    differently. Memory changes over time and can be affected by
+    attention, expectation, later information and emotion.
+  </p>
+
+  <p>
+    Therefore, “you remembered something differently from me” is not
+    enough to demonstrate gaslighting.
+  </p>
+
+  <p>
+    The concern becomes more specific when differences in memory are used
+    repeatedly to undermine another person's overall confidence in their
+    ability to perceive and evaluate reality.
+  </p>
+
+
+  <h2>Can gaslighting be unintentional?</h2>
+
+  <p>
+    The question of intention can be difficult. Some definitions emphasise
+    deliberate manipulation, while real interpersonal behaviour can also
+    involve defensiveness, self deception, poor memory and sincerely held
+    but inaccurate beliefs.
+  </p>
+
+  <p>
+    For practical purposes it can be useful to distinguish between
+    intention and impact. A person can examine a damaging pattern without
+    pretending to know another person's internal motives.
+  </p>
+
+
+  <h2>Gaslighting and narcissism</h2>
+
+  <p>
+    Gaslighting is frequently described online as a “narcissistic tactic”.
+    That wording is too simplistic.
+  </p>
+
+  <p>
+    Gaslighting is not a diagnostic criterion that allows somebody to
+    identify Narcissistic Personality Disorder. People with and without
+    psychiatric diagnoses can behave manipulatively, and observing
+    gaslighting-like behaviour does not establish a personality disorder.
+  </p>
+
+
+  <h2>Gaslighting and DARVO</h2>
+
+  <p>
+    Gaslighting and DARVO can overlap, but they are not interchangeable.
+    Gaslighting focuses on destabilising another person's confidence in
+    reality, perception or memory.
+  </p>
+
+  <p>
+    DARVO specifically describes the sequence of denying alleged
+    wrongdoing, attacking the person making the allegation and reversing
+    victim and offender roles.
+  </p>
+
+  <p>
+    One interaction could contain both patterns, but neither concept
+    should be used merely as another name for the other.
+  </p>
+
+
+  <h2 id="response">What can help if you are questioning your reality?</h2>
+
+  <p>
+    When somebody feels increasingly unable to trust their own judgement,
+    the goal should not be to diagnose the other person. The immediate
+    task is to restore clarity and independent reference points.
+  </p>
+
+  <ul class="ke-list">
+
+    <li>
+      Write down important events while they are still fresh in memory.
+    </li>
+
+    <li>
+      Preserve relevant communications where it is lawful and appropriate.
+    </li>
+
+    <li>
+      Separate observable facts from interpretations.
+    </li>
+
+    <li>
+      Discuss confusing experiences with trusted independent people.
+    </li>
+
+    <li>
+      Avoid allowing internet labels to become substitutes for evidence.
+    </li>
+
+    <li>
+      Seek appropriate professional support when a relationship is
+      affecting safety, wellbeing or mental health.
+    </li>
+
+  </ul>
+
+
+  <section class="ke-faq" id="questions">
+
+    <div class="ke-section-label">QUICK KNOWLEDGE</div>
+
+    <h2>Frequently asked questions</h2>
+
+
+    <details>
+
+      <summary>Is every lie gaslighting?</summary>
+
+      <p>
+        No. Lying and gaslighting can overlap, but gaslighting specifically
+        concerns behaviour that undermines another person's confidence in
+        their own perception, memory or reality.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Is disagreement gaslighting?</summary>
+
+      <p>
+        No. People regularly disagree or remember events differently.
+        Context and pattern matter.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Is gaslighting a psychiatric diagnosis?</summary>
+
+      <p>
+        No. Gaslighting describes a pattern of interpersonal or social
+        behaviour. It is not a psychiatric diagnosis.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Can gaslighting happen outside romantic relationships?</summary>
+
+      <p>
+        Research and academic discussion have considered gaslighting in
+        multiple settings, including workplaces and institutional
+        environments as well as intimate relationships.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>Is gaslighting the same as DARVO?</summary>
+
+      <p>
+        No. They can overlap, but DARVO concerns denial, attack and reversal
+        of victim and offender roles, while gaslighting concerns the
+        undermining of another person's confidence in reality.
+      </p>
+
+    </details>
+
+  </section>
+
+
+  <section class="ke-sources">
+
+    <div class="ke-section-label">
+      EVIDENCE &amp; FURTHER READING
+    </div>
+
+    <h2>Sources</h2>
+
+
+    <a
+      href="https://journals.sagepub.com/doi/10.1177/0003122419874843"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <strong>Sweet, P. L. (2019)</strong>
+      <span>
+        The Sociology of Gaslighting — American Sociological Review
+      </span>
+      <b>↗</b>
+    </a>
+
+
+    <a
+      href="https://onlinelibrary.wiley.com/doi/10.1111/pere.12510"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <strong>Klein, Li &amp; Wood (2023)</strong>
+      <span>
+        A qualitative analysis of gaslighting in romantic relationships
+      </span>
+      <b>↗</b>
+    </a>
+
+
+    <a
+      href="https://journals.sagepub.com/doi/10.1177/02654075211026975"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <strong>Graves &amp; Samp (2021)</strong>
+      <span>
+        The power to gaslight — Journal of Social and Personal Relationships
+      </span>
+      <b>↗</b>
+    </a>
+
+
+    <a
+      href="https://pubmed.ncbi.nlm.nih.gov/40650539/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <strong>Adair and colleagues</strong>
+      <span>
+        Research examining definitions of gaslighting in gender based violence
+      </span>
+      <b>↗</b>
+    </a>
+
+  </section>
+
+
+  <div class="ke-review">
+
+    <span>✓</span>
+
+    <div>
+
+      <strong>Evidence led Knowledge Base</strong>
+
+      <p>
+        This page separates the research concept of gaslighting from the
+        much broader way the word is sometimes used online.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="ke-disclaimer">
+    This page provides general psychological education and is not a
+    clinical diagnosis, legal assessment or substitute for individual
+    professional advice.
+  </div>
+
+
+</article>
+
+
+<aside class="ke-side">
+
+
+  <div class="ke-side-box">
+
+    <div class="ke-side-label">ON THIS PAGE</div>
+
+    <a href="/knowledge/what-is-gaslighting.html#meaning">
+      Understanding gaslighting
+    </a>
+
+    <a href="/knowledge/what-is-gaslighting.html#research">
+      Research
+    </a>
+
+    <a href="/knowledge/what-is-gaslighting.html#response">
+      Restoring clarity
+    </a>
+
+    <a href="/knowledge/what-is-gaslighting.html#questions">
+      Questions
+    </a>
+
+  </div>
+
+
+  <div class="ke-side-box">
+
+    <div class="ke-side-label">RELATED KNOWLEDGE</div>
+
+    <a href="/knowledge/what-is-darvo.html">
+      DARVO <span>→</span>
+    </a>
+
+    <a href="/knowledge/what-is-cognitive-dissonance.html">
+      Cognitive dissonance <span>→</span>
+    </a>
+
+    <a href="/knowledge/psychological-projection.html">
+      Psychological projection <span>→</span>
+    </a>
+
+    <a href="/knowledge/healthy-boundaries.html">
+      Healthy boundaries <span>→</span>
+    </a>
+
+  </div>
+
+
+  <a class="ke-back-hub" href="/knowledge.html">
+    ← Back to Knowledge Hub
+  </a>
+
+
+</aside>
+
+</section>
+
+</main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <!-- KH_LIVE_NATIVE_LINKS_START -->
+<style class="KH_LIVE_NATIVE_LINKS_STYLES">
+.ke-page a[href],
+.ke-page .ke-side a[href],
+.ke-page .ke-side-box a[href],
+.ke-page .kh-cptsd-on-page a[href],
+.ke-page .kh-depth-contents a[href],
+.ke-page .ke-back-hub,
+.ke-page .knowledge-breadcrumb-cta {
+    position: relative !important;
+    z-index: 200 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.ke-page .ke-side {
+    z-index: 500 !important;
+    pointer-events: auto !important;
+}
+
+.ke-page .ke-side-box,
+.ke-page .ke-side-box nav,
+.ke-page .kh-cptsd-on-page,
+.ke-page .kh-cptsd-on-page nav {
+    position: relative !important;
+    pointer-events: auto !important;
+}
+
+.ke-page .ke-side::before,
+.ke-page .ke-side::after,
+.ke-page .ke-side-box::before,
+.ke-page .ke-side-box::after,
+.ke-page .kh-cptsd-on-page::before,
+.ke-page .kh-cptsd-on-page::after {
+    pointer-events: none !important;
+}
+
+.ke-page section[id],
+.ke-page article[id],
+.ke-page div[id] {
+    scroll-margin-top: 125px;
+}
+</style>
+<!-- KH_LIVE_NATIVE_LINKS_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-sync1"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* Disable old Bootstrap dropdowns on the homepage */
+body.home-page header .dropdown-menu,
+body.home-page nav .dropdown-menu,
+body.home-page .coaching-nav-submenu {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Keep the generated premium menu above the homepage */
+body.home-page .rf-premium-menu,
+body.home-page #rf-premium-menu,
+body.home-page #rf-mega-menu {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: var(--rf-menu-top, 110px) !important;
+    width: 100% !important;
+    max-width: none !important;
+    z-index: 2147483000 !important;
+}
+
+body.home-page .rf-premium-menu.is-open,
+body.home-page #rf-premium-menu.is-open,
+body.home-page #rf-mega-menu.is-open {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+
+body.home-page .rf-premium-backdrop,
+body.home-page #rf-premium-backdrop,
+body.home-page #rf-mega-backdrop {
+    position: fixed !important;
+    z-index: 2147482999 !important;
+}
+
+body.home-page header,
+body.home-page nav,
+body.home-page .site-nav {
+    overflow: visible !important;
+}

@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What Is Self-Awareness? Complete Guide | ReikiFish</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=20260811-support-nav-v2" />
+    <style>
+      .about-page {
+        --chapter-space: clamp(3.75rem, 6vw, 5.75rem);
+        --chapter-gap: clamp(1.25rem, 2vw, 2rem);
+        --chapter-line: rgba(216, 173, 109, 0.26);
+        --glass: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+        background:
+          radial-gradient(circle at 12% 10%, rgba(197, 154, 99, 0.12), transparent 22%),
+          radial-gradient(circle at 86% 14%, rgba(238, 233, 226, 0.05), transparent 20%),
+          linear-gradient(180deg, #0d1011 0%, #111516 30%, #101415 58%, #0b0e10 100%);
+      }
+
+      .about-page .home-main {
+        position: relative;
+        padding-bottom: clamp(4rem, 6vw, 6rem);
+      }
+
+      .about-page .home-main::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background:
+          linear-gradient(180deg, rgba(216, 173, 109, 0.04), transparent 18%, transparent 82%, rgba(216, 173, 109, 0.03)),
+          url("assets/images/grey-texture.webp") center top / cover no-repeat;
+        opacity: 0.16;
+        mix-blend-mode: screen;
+      }
+
+      .about-page .home-container {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-page .section-frame {
+        padding: var(--chapter-space) 0;
+      }
+
+      .about-page .chapter-divider {
+        width: 7rem;
+        margin-bottom: 1.5rem;
+        opacity: 0.78;
+      }
+
+      .about-page .chapter-divider img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-page .chapter-header {
+        max-width: 46rem;
+        margin-bottom: clamp(1.5rem, 3vw, 2.1rem);
+      }
+
+      .about-page .chapter-header .lead-text,
+      .about-page .chapter-body,
+      .about-page .chapter-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .editorial-quote {
+        font-family: "Cormorant Garamond", serif;
+        font-size: clamp(1.8rem, 3vw, 3rem);
+        line-height: 1.15;
+        letter-spacing: -0.03em;
+        color: var(--text);
+        margin: 0;
+      }
+
+      .about-page .editorial-surface {
+        background: var(--glass);
+        border: 1px solid rgba(238, 233, 226, 0.08);
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+
+      .about-page .about-hero {
+        padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        padding-bottom: clamp(4.5rem, 7vw, 6rem);
+      }
+
+      .about-page .about-hero-grid {
+        display: grid;
+        gap: clamp(2.5rem, 3.5vw, 3rem);
+        grid-template-columns: minmax(0, 0.98fr) minmax(0, 1.02fr);
+        align-items: center;
+      }
+
+      .about-page .about-hero-copy {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-hero-title {
+        max-width: 9.25ch;
+        font-size: clamp(3.65rem, 6.35vw, 6.7rem);
+        line-height: 0.88;
+      }
+
+      .about-page .about-hero-copy .home-hero-subtitle {
+        max-width: 39rem;
+      }
+
+      .about-page .about-hero-note {
+        max-width: 28rem;
+        padding-left: 1rem;
+        border-left: 1px solid var(--chapter-line);
+        color: var(--gold-light);
+        font-size: 0.96rem;
+        line-height: 1.7;
+      }
+
+      .about-page .about-hero-visual {
+        position: relative;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage,
+      .about-page .about-story-stage,
+      .about-page .about-philosophy-book {
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.6rem;
+        border: 1px solid rgba(216, 173, 109, 0.18);
+        box-shadow: 0 28px 52px rgba(0, 0, 0, 0.24);
+      }
+
+      .about-page .about-hero-stage::after,
+      .about-page .about-story-stage::after,
+      .about-page .about-philosophy-book::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(255, 248, 235, 0.05), rgba(7, 9, 10, 0.16) 72%, rgba(7, 9, 10, 0.34)),
+          radial-gradient(circle at 24% 18%, rgba(216, 173, 109, 0.12), transparent 30%);
+        pointer-events: none;
+      }
+
+      .about-page .about-hero-stage img,
+      .about-page .about-story-stage img,
+      .about-page .about-philosophy-book img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.82) contrast(1.04) brightness(0.88) sepia(0.08);
+      }
+
+      .about-page .about-hero-stage {
+        aspect-ratio: 16 / 11;
+        min-height: clamp(420px, 52vw, 700px);
+      }
+
+      .about-page .about-hero-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(280px, 0.66fr) minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .about-page .about-story-media {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .about-story-stage {
+        aspect-ratio: 4 / 5;
+      }
+
+      .about-page .about-story-stage .media-image {
+        object-position: center center;
+      }
+
+      .about-page .about-story-pull {
+        padding: 1.2rem 1.25rem;
+        border-radius: 1.2rem;
+      }
+
+      .about-page .about-story-pull p {
+        margin: 0;
+        color: var(--text-soft);
+      }
+
+      .about-page .about-story-stream {
+        display: grid;
+        gap: 1.1rem;
+      }
+
+      .about-page .about-story-block {
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid rgba(238, 233, 226, 0.08);
+      }
+
+      .about-page .about-story-block:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .about-page .about-philosophy-layout {
+        display: grid;
+        gap: clamp(1.5rem, 3vw, 3rem);
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 320px);
+        align-items: end;
+      }
+
+      .about-page .about-philosophy-book {
+        aspect-ratio: 5 / 7;
+        justify-self: end;
+        background: linear-gradient(145deg, rgba(19, 23, 24, 0.98), rgba(31, 35, 36, 0.98));
+      }
+
+      .about-page .about-philosophy-book .media-image {
+        object-fit: contain;
+        padding: 0.8rem;
+        filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.35));
+        animation: floatCover 6.5s ease-in-out infinite alternate;
+      }
+
+      .about-page .about-philosophy-quote {
+        max-width: 56rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .about-page .about-philosophy-copy {
+        display: grid;
+        gap: 1rem;
+        max-width: 44rem;
+      }
+
+      .about-page .qualification-grid,
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .about-page .qualification-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .about-page .qualification-card,
+      .about-page .audience-card,
+      .about-page .value-card {
+        position: relative;
+        padding: 1.35rem;
+        border-radius: 1.35rem;
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .about-page .qualification-card:hover,
+      .about-page .audience-card:hover,
+      .about-page .value-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(216, 173, 109, 0.36);
+        box-shadow: 0 26px 48px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .qualification-card {
+        min-height: 170px;
+      }
+
+      .about-page .card-kicker,
+      .about-page .card-step {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 2rem;
+        height: 2rem;
+        margin-bottom: 0.95rem;
+        padding: 0 0.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.35);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 0.74rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about-page .qualification-card h3,
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        margin: 0 0 0.55rem;
+        font-family: "Cormorant Garamond", serif;
+        color: var(--text);
+        letter-spacing: -0.03em;
+      }
+
+      .about-page .qualification-card h3 {
+        font-size: 1.35rem;
+      }
+
+      .about-page .audience-card h3,
+      .about-page .value-card h3 {
+        font-size: 1.42rem;
+      }
+
+      .about-page .qualification-card p,
+      .about-page .audience-card p,
+      .about-page .value-card p {
+        margin: 0;
+        color: var(--text-soft);
+        line-height: 1.7;
+      }
+
+      .about-page .qualification-note {
+        max-width: 46rem;
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+        border-top: 1px solid rgba(238, 233, 226, 0.08);
+        color: var(--text-soft);
+      }
+
+      .about-page .audience-grid,
+      .about-page .values-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .about-page .audience-card {
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+      }
+
+      .about-page .audience-icon {
+        display: inline-flex;
+        width: 2.6rem;
+        height: 2.6rem;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        border: 1px solid rgba(216, 173, 109, 0.4);
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--gold-light);
+        font-size: 1rem;
+      }
+
+      .value-card-icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        border-radius: 50%;
+        border: 1px solid rgba(216, 173, 109, 0.6);
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 10px 24px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+      }
+
+      .value-card-icon::before {
+        content: "";
+        position: absolute;
+        inset: 10px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(216, 173, 109, 0.26) 0%, rgba(216, 173, 109, 0.08) 52%, transparent 74%);
+        filter: blur(10px);
+        transition: transform 0.35s ease, opacity 0.35s ease, filter 0.35s ease;
+      }
+
+      .value-card-icon i {
+        position: relative;
+        z-index: 1;
+        color: #d8ad6d;
+        font-size: 26px;
+        line-height: 1;
+      }
+
+      .about-page .value-card:hover .value-card-icon {
+        transform: translateY(-5px);
+        border-color: rgba(216, 173, 109, 0.95);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 16px 30px rgba(0, 0, 0, 0.22);
+      }
+
+      .about-page .value-card:hover .value-card-icon::before {
+        opacity: 1;
+        transform: scale(1.12);
+        filter: blur(14px);
+      }
+
+      .about-page .values-grid .value-card {
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        align-items: flex-start;
+      }
+
+      .about-page .values-grid .value-card h3,
+      .about-page .values-grid .value-card p {
+        width: 100%;
+      }
+
+      .about-page .about-cta-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+        max-width: 50rem;
+        margin: 0 auto;
+      }
+
+      .about-page .about-cta-copy {
+        max-width: 42rem;
+      }
+
+      .about-page .about-cta-panel .section-heading-lg {
+        font-size: clamp(2.35rem, 3.6vw, 3.4rem);
+      }
+
+      .about-page .about-cta-actions {
+        justify-content: center;
+      }
+
+      .about-page .about-cta-actions .btn {
+        min-width: 14rem;
+      }
+
+      @keyframes floatCover {
+        from { transform: translateY(0); }
+        to { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 1199.98px) {
+        .about-page .qualification-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .about-page .about-hero-grid,
+        .about-page .about-story-layout,
+        .about-page .about-philosophy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 520px;
+        }
+
+        .about-page .about-philosophy-book {
+          justify-self: start;
+          width: min(100%, 300px);
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .about-page .about-hero {
+          padding-top: calc(var(--nav-offset) + var(--hero-offset-gap));
+        }
+
+        .about-page .about-hero-title {
+          font-size: clamp(3.2rem, 14vw, 5rem);
+        }
+
+        .about-page .about-hero-visual {
+          min-height: 420px;
+        }
+
+        .about-page .qualification-grid,
+        .about-page .audience-grid,
+        .about-page .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .about-page .about-cta-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+
+
+
+<style id="KB_ENTRY_DESIGN_V1">
+
+.ke-page{
+  padding-top:var(--nav-offset,110px);
+  background:
+    radial-gradient(circle at 80% 8%,rgba(198,143,35,.055),transparent 26%),
+    #070d0e;
+  color:#eeeae3;
+}
+
+.ke-wrap{
+  width:min(1120px,calc(100% - 40px));
+  margin:0 auto;
+}
+
+.ke-hero{
+  padding:55px 0 58px;
+  border-bottom:1px solid rgba(204,150,43,.25);
+  background:
+    radial-gradient(circle at 50% 0%,rgba(209,154,45,.07),transparent 50%);
+}
+
+.ke-breadcrumb{
+  display:flex;
+  gap:10px;
+  margin-bottom:40px;
+  color:#968b75;
+  font-size:13px;
+}
+
+.ke-breadcrumb a{
+  color:#bd903e;
+  text-decoration:none;
+}
+
+.ke-type,
+.ke-section-label,
+.ke-side-label,
+.ke-answer-label{
+  color:#d7a13b;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.ke-hero h1{
+  max-width:850px;
+  margin:12px 0 18px;
+  color:#f1eee7;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,7vw,86px);
+  font-weight:400;
+  line-height:1;
+}
+
+.ke-lead{
+  max-width:830px;
+  margin:0;
+  color:#c2c0b9;
+  font-size:20px;
+  line-height:1.65;
+}
+
+.ke-reading{
+  margin-top:24px;
+  color:#817e77;
+  font-size:12px;
+}
+
+.ke-layout{
+  display:grid;
+  grid-template-columns:minmax(0,790px) 275px;
+  gap:70px;
+  width:min(1140px,calc(100% - 40px));
+  margin:0 auto;
+  padding:65px 0 100px;
+}
+
+.ke-article{
+  min-width:0;
+}
+
+.ke-article h2{
+  margin:55px 0 18px;
+  color:#f0ece4;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:34px;
+  font-weight:400;
+  line-height:1.2;
+}
+
+.ke-article p{
+  color:#b9b7b1;
+  font-size:17px;
+  line-height:1.82;
+}
+
+.ke-answer-box{
+  padding:28px 31px;
+  border-left:3px solid #d39a34;
+  background:#0c1314;
+}
+
+.ke-answer-box p{
+  margin:12px 0 0;
+}
+
+.ke-answer-box strong{
+  color:#ece8df;
+}
+
+.ke-three{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+
+.ke-stage{
+  padding:23px;
+  border:1px solid rgba(204,147,39,.4);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-stage > span{
+  color:#d69d36;
+  font-size:11px;
+  letter-spacing:.15em;
+}
+
+.ke-stage h3{
+  margin:11px 0 8px;
+  color:#eeeae2;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:23px;
+  font-weight:400;
+}
+
+.ke-stage p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-example{
+  margin:27px 0 16px;
+  border:1px solid rgba(206,150,41,.35);
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.ke-example-row{
+  display:grid;
+  grid-template-columns:105px 1fr;
+  align-items:center;
+  border-bottom:1px solid rgba(206,150,41,.18);
+}
+
+.ke-example-row:last-child{
+  border-bottom:0;
+}
+
+.ke-example-row > span{
+  padding:20px;
+  color:#d7a03a;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+}
+
+.ke-example-row p{
+  margin:0;
+  padding:18px 20px;
+  border-left:1px solid rgba(206,150,41,.18);
+  color:#d3d0ca;
+  font-size:15px;
+}
+
+.ke-note{
+  color:#8e8b84 !important;
+  font-size:13px !important;
+}
+
+.ke-important{
+  margin:30px 0;
+  padding:26px 28px;
+  border:1px solid rgba(218,161,53,.5);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(213,154,43,.08),#0b1112);
+}
+
+.ke-important-title{
+  margin-bottom:10px;
+  color:#daa23c;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:20px;
+}
+
+.ke-important p{
+  margin:7px 0;
+  font-size:15px;
+}
+
+.ke-list{
+  margin:24px 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-list li{
+  position:relative;
+  margin:0;
+  padding:13px 0 13px 27px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b1;
+  font-size:16px;
+  line-height:1.55;
+}
+
+.ke-list li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d7a13a;
+}
+
+.ke-faq{
+  margin-top:60px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-faq h2{
+  margin-top:8px;
+}
+
+.ke-faq details{
+  border-bottom:1px solid rgba(206,151,42,.25);
+}
+
+.ke-faq summary{
+  padding:19px 5px;
+  color:#e8e4dc;
+  font-size:17px;
+  cursor:pointer;
+}
+
+.ke-faq details p{
+  margin:0;
+  padding:0 5px 20px;
+  font-size:15px;
+}
+
+.ke-sources{
+  margin-top:65px;
+  padding-top:35px;
+  border-top:1px solid rgba(206,151,42,.28);
+}
+
+.ke-sources h2{
+  margin-top:8px;
+}
+
+.ke-sources > a{
+  display:grid;
+  grid-template-columns:185px 1fr 25px;
+  gap:18px;
+  align-items:center;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:#b9b7b1;
+  text-decoration:none;
+}
+
+.ke-sources strong{
+  color:#dfdcd5;
+  font-size:14px;
+}
+
+.ke-sources span{
+  font-size:14px;
+  line-height:1.5;
+}
+
+.ke-sources b{
+  color:#d79f37;
+  font-weight:400;
+}
+
+.ke-review{
+  display:flex;
+  gap:17px;
+  margin-top:42px;
+  padding:24px;
+  border:1px solid rgba(206,151,42,.34);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-review > span{
+  display:flex;
+  flex:0 0 37px;
+  width:37px;
+  height:37px;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #bc8426;
+  border-radius:50%;
+  color:#d9a13a;
+}
+
+.ke-review strong{
+  color:#e7e3dc;
+}
+
+.ke-review p{
+  margin:5px 0 0;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.ke-disclaimer{
+  margin-top:25px;
+  color:#74736f;
+  font-size:11px;
+  line-height:1.6;
+}
+
+.ke-side{
+  align-self:start;
+  position:sticky;
+  top:calc(var(--nav-offset,110px) + 25px);
+}
+
+.ke-side-box{
+  margin-bottom:16px;
+  padding:22px;
+  border:1px solid rgba(201,144,36,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-side-label{
+  margin-bottom:13px;
+}
+
+.ke-side-box a{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  color:#b9b7b0;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.ke-side-box a:last-child{
+  border-bottom:0;
+}
+
+.ke-side-box a:hover{
+  color:#dda640;
+}
+
+.ke-side-box span{
+  color:#d8a039;
+}
+
+.ke-back-hub{
+  display:block;
+  padding:14px 5px;
+  color:#c59337;
+  text-decoration:none;
+  font-size:13px;
+}
+
+@media(max-width:900px){
+
+  .ke-layout{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+
+  .ke-side{
+    position:static;
+  }
+
+}
+
+@media(max-width:650px){
+
+  .ke-hero{
+    padding:40px 0;
+  }
+
+  .ke-hero h1{
+    font-size:50px;
+  }
+
+  .ke-lead{
+    font-size:17px;
+  }
+
+  .ke-layout{
+    width:calc(100% - 28px);
+    padding-top:40px;
+  }
+
+  .ke-three{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row{
+    grid-template-columns:1fr;
+  }
+
+  .ke-example-row p{
+    border-left:0;
+    padding-top:0;
+  }
+
+  .ke-sources > a{
+    grid-template-columns:1fr 25px;
+  }
+
+  .ke-sources > a span{
+    grid-column:1 / -1;
+    grid-row:2;
+  }
+
+}
+
+</style>
+
+
+<style id="KB_ENTRY_HERO_VISUAL_V2">
+
+/* KNOWLEDGE ARTICLE HERO VISUAL ONLY */
+
+.ke-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.65fr) minmax(310px,.8fr);
+  gap:65px;
+  align-items:center;
+}
+
+.ke-hero-copy{
+  min-width:0;
+}
+
+.ke-hero-grid .ke-lead{
+  max-width:760px;
+}
+
+.ke-hero-visual{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:355px;
+}
+
+.ke-visual-glow{
+  position:absolute;
+  width:310px;
+  height:310px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(197,142,38,.10) 0%,
+      rgba(197,142,38,.035) 42%,
+      transparent 70%
+    );
+  filter:blur(4px);
+}
+
+.ke-darvo-art{
+  position:relative;
+  z-index:2;
+  width:min(100%,350px);
+  height:auto;
+  overflow:visible;
+}
+
+.ke-art-faint{
+  fill:none;
+  stroke:#8c6527;
+  stroke-width:1;
+  opacity:.22;
+}
+
+.ke-art-dashed{
+  fill:none;
+  stroke:#b37c27;
+  stroke-width:1;
+  stroke-dasharray:3 8;
+  opacity:.42;
+}
+
+.ke-art-ring{
+  fill:rgba(9,15,15,.3);
+  stroke:#a97828;
+  stroke-width:1;
+  opacity:.65;
+}
+
+.ke-art-line{
+  fill:none;
+  stroke:#d19a39;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.8;
+}
+
+.ke-art-node{
+  fill:#0a1011;
+  stroke:#d39a37;
+  stroke-width:1.4;
+}
+
+.ke-art-number{
+  fill:#e0a942;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.ke-art-brain{
+  fill:none;
+  stroke:#ce9635;
+  stroke-width:1.45;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  opacity:.82;
+}
+
+.ke-art-title{
+  fill:#e2aa42;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:22px;
+  letter-spacing:.12em;
+}
+
+.ke-art-subtitle{
+  fill:#887458;
+  font-family:Arial,sans-serif;
+  font-size:7.5px;
+  letter-spacing:.15em;
+}
+
+.ke-visual-caption{
+  position:relative;
+  z-index:2;
+  margin-top:-9px;
+  color:#746f64;
+  font-size:10px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Slightly reduce heading so composition balances */
+
+.ke-hero-grid .ke-hero-copy h1{
+  font-size:clamp(52px,6vw,82px);
+}
+
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+  .ke-hero-grid{
+    grid-template-columns:minmax(0,1.4fr) 280px;
+    gap:30px;
+  }
+
+  .ke-darvo-art{
+    width:285px;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:780px){
+
+  .ke-hero-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  .ke-hero-visual{
+    min-height:280px;
+  }
+
+  .ke-darvo-art{
+    width:270px;
+  }
+
+}
+
+</style>
+<style id="KB_DARVO_DEEP_DIVE">
+
+.ke-deep-dive{
+  margin-top:55px;
+  padding-top:38px;
+  border-top:1px solid rgba(208,154,47,.28);
+}
+
+.ke-deep-dive > h2:first-of-type{
+  margin-top:9px;
+  font-size:40px;
+}
+
+.ke-deep-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:30px 0 45px;
+}
+
+.ke-deep-grid > div{
+  padding:23px;
+  border:1px solid rgba(204,148,41,.32);
+  border-radius:8px;
+  background:#0b1112;
+}
+
+.ke-deep-grid span{
+  color:#d89f38;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.ke-deep-grid h3{
+  margin:9px 0 8px;
+  color:#e9e5dd;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:21px;
+  font-weight:400;
+}
+
+.ke-deep-grid p{
+  margin:0;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.ke-analysis-box{
+  margin:38px 0 48px;
+  padding:28px 30px;
+  border:1px solid rgba(218,161,53,.48);
+  border-radius:8px;
+  background:
+    linear-gradient(120deg,rgba(206,149,40,.075),#0b1112);
+}
+
+.ke-analysis-box h3{
+  margin:9px 0 12px;
+  color:#ece8df;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:25px;
+  font-weight:400;
+}
+
+.ke-analysis-box p{
+  margin-top:0;
+}
+
+.ke-analysis-box ul{
+  margin:18px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.ke-analysis-box li{
+  position:relative;
+  padding:9px 0 9px 24px;
+  border-bottom:1px solid rgba(255,255,255,.055);
+  color:#b9b7b0;
+  font-size:14px;
+}
+
+.ke-analysis-box li::before{
+  content:"→";
+  position:absolute;
+  left:0;
+  color:#d99f38;
+}
+
+@media(max-width:650px){
+
+  .ke-deep-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+
+<meta name="description" content="Understand self-awareness, emotional patterns, personal values, reflective thinking and practical ways to develop clearer insight into yourself.">
+<link rel="canonical" href="https://reikifish.com/knowledge/what-is-self-awareness.html">
+    <link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+
+<style class="HPD_LOCAL_PREVIEW_STYLES">
+html {
+    scroll-behavior: smooth;
+}
+
+.kh-depth-section[id],
+#hpd-clear-answer {
+    scroll-margin-top: 125px;
+}
+
+.ke-side {
+    scrollbar-width: thin;
+}
+
+.ke-side-box,
+.ke-side-box p,
+.ke-side-box a,
+.ke-side-box span {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.ke-side-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ke-side-nav a span:first-child {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.ke-side-nav a span:last-child {
+    flex: 0 0 auto;
+}
+
+@media (min-width: 992px) {
+    .ke-side {
+        position: sticky;
+        top: 105px;
+        align-self: start;
+        max-height: calc(100vh - 125px);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .ke-side {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+</style>
+<!-- RF_HPD_SIDEBAR_FIX_START -->
+<style>
+/* HPD sidebar matched to the established Knowledge Hub article layout. */
+. .ke-side {
+    position: sticky !important;
+    top: 7rem !important;
+    align-self: start !important;
+    width: 100% !important;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    padding-right: .35rem;
+}
+
+. .ke-side .ke-side-box {
+    box-sizing: border-box;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 1.25rem !important;
+    padding: clamp(1.5rem, 2vw, 2rem) !important;
+    overflow: hidden;
+}
+
+. .ke-side .ke-side-label {
+    display: block;
+    margin: 0 0 1rem !important;
+}
+
+. .ke-side .ke-side-box nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+. .ke-side .ke-side-box nav a {
+    position: relative;
+    z-index: 2;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: .85rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    color: inherit;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+. .ke-side .ke-side-box nav a:last-child {
+    border-bottom: 0;
+}
+
+. .ke-side .ke-side-box nav a:hover,
+. .ke-side .ke-side-box nav a:focus-visible {
+    color: #e4ae28;
+}
+
+. .ke-side .ke-side-box nav a::after {
+    content: "\2192";
+    flex: 0 0 auto;
+    color: #e4ae28;
+}
+
+. [id] {
+    scroll-margin-top: 8rem;
+}
+
+@media (max-width: 991.98px) {
+    . .ke-side {
+        position: static !important;
+        top: auto !important;
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+    }
+}
+</style>
+<!-- RF_HPD_SIDEBAR_FIX_END -->
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "What Is Self-Awareness?",
+  "description": "Understand self-awareness, emotional patterns, personal values, reflective thinking and practical ways to develop clearer insight into yourself.",
+  "url": "https://reikifish.com/knowledge/what-is-self-awareness.html",
+  "inLanguage": "en-GB",
+  "about": {
+    "@type": "Thing",
+    "name": "Self-Awareness"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "ReikiFish",
+    "url": "https://reikifish.com/"
+  }
+}
+</script>
+
+<!-- RF_SHORT_EMOTIONAL_GUIDE_STYLES_START -->
+<style id="rf-short-emotional-guide-styles">
+.rf-eh-page {
+    --rf-gold: #efb126;
+    --rf-cream: #f5f1e8;
+    --rf-muted: rgba(245,241,232,.76);
+    --rf-border: rgba(239,177,38,.34);
+    background: #080e0d;
+    color: var(--rf-cream);
+}
+.rf-eh-wrap {
+    width: min(1540px, calc(100% - 4rem));
+    margin: 0 auto;
+}
+.rf-eh-back {
+    padding: 2rem 0 1rem;
+}
+.rf-eh-back a {
+    color: var(--rf-gold);
+    text-decoration: none;
+    font-weight: 700;
+}
+.rf-eh-hero {
+    display: grid;
+    grid-template-columns: minmax(0,1.25fr) minmax(330px,.75fr);
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--rf-border);
+}
+.rf-eh-kicker,
+.rf-eh-label,
+.rf-eh-side-title {
+    color: var(--rf-gold);
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-weight: 800;
+    font-size: .88rem;
+}
+.rf-eh-hero h1 {
+    margin: 1rem 0 1.25rem;
+    max-width: 850px;
+    color: var(--rf-cream);
+    font-family: Georgia, serif;
+    font-size: clamp(3.4rem, 7vw, 7rem);
+    line-height: .94;
+}
+.rf-eh-lead {
+    max-width: 850px;
+    color: var(--rf-muted);
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    line-height: 1.65;
+}
+.rf-eh-art {
+    min-height: 410px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--rf-border);
+    border-radius: 2rem;
+    background:
+        radial-gradient(circle, rgba(239,177,38,.19), transparent 37%),
+        linear-gradient(145deg, #0d1715, #070d0c);
+    overflow: hidden;
+}
+.rf-eh-art-symbol {
+    width: 210px;
+    height: 210px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--rf-gold);
+    border-radius: 50%;
+    color: var(--rf-gold);
+    font-family: Georgia, serif;
+    font-size: 6rem;
+    box-shadow:
+        0 0 0 28px rgba(239,177,38,.05),
+        0 0 70px rgba(239,177,38,.16);
+}
+.rf-eh-layout {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 360px;
+    gap: 4rem;
+    align-items: start;
+    padding: 4rem 0 6rem;
+}
+.rf-eh-article {
+    min-width: 0;
+}
+.rf-eh-answer,
+.rf-eh-section {
+    margin: 0 0 2rem;
+    padding: clamp(1.7rem, 3vw, 2.6rem);
+    border: 1px solid var(--rf-border);
+    border-radius: 1.4rem;
+    background: #0b1413;
+}
+.rf-eh-answer {
+    border-left: 4px solid var(--rf-gold);
+}
+.rf-eh-section h2 {
+    margin: .65rem 0 1.2rem;
+    col
+<main class="rf-eh-page">
+    <div class="rf-eh-wrap">
+        <div class="rf-eh-back">
+            <a href="/knowledge.html">&larr; Knowledge Hub</a>
+        </div>
+
+        <section class="rf-eh-hero" aria-labelledby="guide-title">
+            <div>
+                <div class="rf-eh-kicker">Emotional health · Foundation guide</div>
+                <h1 id="guide-title">What Is Self-Awareness?</h1>
+                <p class="rf-eh-lead">Self-awareness is the ability to notice and understand your thoughts, emotions, habits, values and responses without immediately judging them.</p>
+            </div>
+
+            <div class="rf-eh-art"
+                 role="img"
+                 aria-label="Abstract circular illustration representing what is self-awareness?">
+                <span class="rf-eh-art-symbol" aria-hidden="true">S</span>
+            </div>
+        </section>
+
+        <div class="rf-eh-layout">
+            <article class="rf-eh-article">
+                <section class="rf-eh-answer" id="clear-answer">
+                    <span class="rf-eh-label">Clear answer</span>
+                    <p><strong>Self-awareness means recognising what is happening within you and understanding how your internal experience may influence your choices, communication and behaviour. It is not constant self-analysis or criticism. Healthy awareness creates room for thoughtful choice.</strong></p>
+                </section>
+
+                <section class="rf-eh-section" id="meaning">
+<span class="rf-eh-label">In this guide</span>
+<h2>What self-awareness means</h2>
+<p>Self-awareness involves paying attention to your internal experience while remaining connected to the situation around you. It includes noticing emotions, bodily sensations, recurring thoughts, personal values and behavioural patterns.</p>
+<p>Awareness does not require perfect certainty. A person can recognise that they feel unsettled without immediately knowing why. Naming what is present is often the first step towards understanding it.</p>
+</section><section class="rf-eh-section" id="why-it-matters">
+<span class="rf-eh-label">In this guide</span>
+<h2>Why self-awareness matters</h2>
+<p>Greater awareness can make emotional reactions easier to understand. It may help somebody notice when stress, fear, shame or previous experiences are shaping how a present situation feels.</p>
+<p>This pause between experience and action can support clearer communication, stronger boundaries and more deliberate decisions.</p>
+</section><section class="rf-eh-section" id="signs">
+<span class="rf-eh-label">In this guide</span>
+<h2>Signs of developing self-awareness</h2>
+<p>Useful signs include becoming more able to name emotions, recognising personal triggers, noticing repeated relationship patterns and distinguishing immediate feelings from considered conclusions.</p>
+<p>Self-awareness also includes recognising strengths, needs and limits. It should not become an exercise in searching only for faults.</p>
+</section><section class="rf-eh-section" id="practice">
+<span class="rf-eh-label">In this guide</span>
+<h2>Ways to build self-awareness</h2>
+<p>Brief reflection, journalling, mindful attention and conversations with trusted people can all support insight. It may help to ask: What am I feeling? What happened before this feeling? What do I need? What evidence supports my interpretation?</p>
+<p>Progress is usually gradual. The aim is not to monitor every thought but to become more familiar with important patterns.</p>
+</section><section class="rf-eh-section" id="cautions">
+<span class="rf-eh-label">In this guide</span>
+<h2>Healthy reflection and overthinking</h2>
+<p>Reflection becomes less useful when it turns into repetitive self-criticism, certainty seeking or endless examination of the same event. Awareness should eventually support action, acceptance or a decision to pause.</p>
+<p>If reflection regularly increases distress or interferes with daily life, support from a qualified professional may be helpful.</p>
+</section><section class="rf-eh-section" id="support">
+<span class="rf-eh-label">In this guide</span>
+<h2>When support may help</h2>
+<p>Professional support may be useful when emotions feel persistently confusing, reactions seem difficult to control or past experiences repeatedly affect relationships and daily life.</p>
+<p>A practitioner can help explore patterns carefully without reducing a person to a label or assuming that every difficulty has one cause.</p>
+</section>
+
+                <section class="rf-eh-section" id="sources">
+                    <span class="rf-eh-label">Evidence and context</span>
+                    <h2>Sources and responsible use</h2>
+                    <p>This introductory guide is provided for education rather than diagnosis. Emotional experiences require context, and similar signs can have different causes.</p>
+                    <p>For personal assessment, diagnosis or treatment, consult an appropriately qualified health professional. Seek urgent local assistance if somebody cannot remain safe.</p>
+                </section>
+
+                <p class="rf-eh-footer-note">
+                    Reviewed as an introductory ReikiFish Knowledge Hub guide.
+                    Further evidence-led content can be added without rebuilding this page.
+                </p>
+            </article>
+
+            <aside class="rf-eh-side" aria-label="Article navigation and related knowledge">
+                <section class="rf-eh-sidebox">
+                    <h2 class="rf-eh-side-title">On this page</h2>
+                    <nav aria-label="On this page">
+                        <a href="#clear-answer"><span>Clear answer</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#meaning"><span>What self-awareness means</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#why-it-matters"><span>Why self-awareness matters</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#signs"><span>Signs of developing self-awareness</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#practice"><span>Ways to build self-awareness</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#cautions"><span>Healthy reflection and overthinking</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#support"><span>When support may help</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="#sources"><span>Sources and context</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+                    </nav>
+                </section>
+
+                <section class="rf-eh-sidebox">
+                    <h2 class="rf-eh-side-title">Reading note</h2>
+                    <p class="rf-eh-note">
+                        Read at your own pace. Pause if reflection becomes uncomfortable or overwhelming.
+                    </p>
+                </section>
+
+                <section class="rf-eh-sidebox">
+                    <h2 class="rf-eh-side-title">Related Knowledge</h2>
+                    <div class="rf-eh-related">
+                        <a href="/knowledge/emotional-regulation.html"><span>Emotional regulation</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="/knowledge/healthy-boundaries.html"><span>Healthy boundaries</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="/knowledge/what-is-empathy.html"><span>What is empathy?</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+<a href="/knowledge/understanding-trauma-responses.html"><span>Understanding trauma responses</span><span class="rf-eh-arrow" aria-hidden="true">&rarr;</span></a>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</main>
+><span aria-hidden="true">→</span></a>
+            <a href="#relationships"><span>Relationships</span><span aria-hidden="true">→</span></a>
+            <a href="#communication"><span>Communication</span><span aria-hidden="true">→</span></a>
+            <a href="#culture-gender"><span>Gender and culture</span><span aria-hidden="true">→</span></a>
+            <a href="#causes"><span>Possible causes</span><span aria-hidden="true">→</span></a>
+            <a href="#trauma"><span>Trauma and HPD</span><span aria-hidden="true">→</span></a>
+            <a href="#attachment"><span>Attachment</span><span aria-hidden="true">→</span></a>
+            <a href="#not-hpd"><span>What HPD does not mean</span><span aria-hidden="true">→</span></a>
+            <a href="#differential-diagnosis"><span>Differential diagnosis</span><span aria-hidden="true">→</span></a>
+            <a href="#assessment"><span>Assessment</span><span aria-hidden="true">→</span></a>
+            <a href="#misdiagnosis"><span>Misdiagnosis and stigma</span><span aria-hidden="true">→</span></a>
+            <a href="#treatment"><span>Treatment</span><span aria-hidden="true">→</span></a>
+            <a href="#therapy-goals"><span>Therapy goals</span><span aria-hidden="true">→</span></a>
+            <a href="#self-help"><span>Self-management</span><span aria-hidden="true">→</span></a>
+            <a href="#work-education"><span>Work and education</span><span aria-hidden="true">→</span></a>
+            <a href="#friendships-family"><span>Friends and family</span><span aria-hidden="true">→</span></a>
+            <a href="#social-media"><span>Social media</span><span aria-hidden="true">→</span></a>
+            <a href="#boundaries"><span>Boundaries</span><span aria-hidden="true">→</span></a>
+            <a href="#supporting-someone"><span>Supporting someone</span><span aria-hidden="true">→</span></a>
+            <a href="#conflict-repair"><span>Conflict and repair</span><span aria-hidden="true">→</span></a>
+            <a href="#manipulation"><span>Manipulation questions</span><span aria-hidden="true">→</span></a>
+            <a href="#sexuality-flirtation"><span>Sexuality and flirtation</span><span aria-hidden="true">→</span></a>
+            <a href="#strengths"><span>Strengths</span><span aria-hidden="true">→</span></a>
+            <a href="#prognosis"><span>Recovery</span><span aria-hidden="true">→</span></a>
+            <a href="#when-to-seek-help"><span>When to seek help</span><span aria-hidden="true">→</span></a>
+            <a href="#frequently-asked-questions"><span>Questions</span><span aria-hidden="true">→</span></a>
+            <a href="#sources"><span>Sources</span><span aria-hidden="true">→</span></a>
+            <a href="#final-perspective"><span>Final perspective</span><span aria-hidden="true">→</span></a>
+        </nav>
+    </div>
+
+    <div class="ke-side-box">
+        <p class="ke-side-label">Reading note</p>
+        <p>This guide discusses personality difficulties, trauma, relationships, self-harm and suicide. Read at your own pace and seek urgent help if safety is at risk.</p>
+    </div>
+
+    <div class="ke-side-box">
+        <p class="ke-side-label">Related Knowledge</p>
+
+        <nav class="ke-side-nav" aria-label="Related Knowledge Hub guides">
+            <a href="/knowledge/what-are-cluster-b-personality-disorders.html"><span>Cluster B personality disorders</span><span aria-hidden="true">→</span></a>
+            <a href="/knowledge/narcissistic-personality-disorder.html"><span>Narcissistic personality disorder</span><span aria-hidden="true">→</span></a>
+            <a href="/knowledge/what-is-narcissism.html"><span>What is narcissism?</span><span aria-hidden="true">→</span></a>
+            <a href="/knowledge/emotional-regulation.html"><span>Emotional regulation</span><span aria-hidden="true">→</span></a>
+            <a href="/knowledge/attachment-styles.html"><span>Attachment styles</span><span aria-hidden="true">→</span></a>
+            <a href="/knowledge/understanding-trauma-responses.html"><span>Understanding trauma responses</span><span aria-hidden="true">→</span></a>
+        </nav>
+    </div>
+
+    <a class="ke-back-hub" href="/knowledge.html">
+        <span aria-hidden="true">←</span>
+        Back to Knowledge Hub
+    </a>
+</aside>
+        </div>
+    </div>
+</div>
+</main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="/about.html">About</a>
+          <a href="/books.html">Books</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/main.js"></script>
+  <!-- KH_BATCH_A_LINK_FIX -->
+<style class="KH_BATCH_A_LINK_FIX_STYLES">
+.kh-depth-contents {
+  position: relative;
+  z-index: 30;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents div,
+.kh-depth-contents a {
+  position: relative;
+  z-index: 31;
+  pointer-events: auto !important;
+}
+
+.kh-depth-contents a {
+  display: block;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.kh-depth-section[id] {
+  scroll-margin-top: 175px;
+}
+
+.kh-depth-section:focus {
+  outline: none;
+}
+</style>
+<!-- /KH_BATCH_A_LINK_FIX -->
+<!-- DISSOCIATION_FLAGSHIP_DEPTH -->
+<!-- KH_CPTSD_EQUAL_SPACING_START -->
+<style class="KH_CPTSD_EQUAL_SPACING_STYLES">
+.kh-cptsd-page {
+    --cptsd-section-gap: 32px;
+    --cptsd-content-gap: 16px;
+    --cptsd-card-gap: 16px;
+    --cptsd-panel-padding: 28px;
+}
+
+/* Remove unpredictable collapsed margins. */
+.kh-cptsd-page .ke-article,
+.kh-cptsd-page .ke-article section,
+.kh-cptsd-page .ke-article article,
+.kh-cptsd-page .ke-article div,
+.kh-cptsd-page .ke-side,
+.kh-cptsd-page .ke-side-box {
+    min-width: 0;
+}
+
+.kh-cptsd-page .ke-article > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-article > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Equal major section spacing. */
+.kh-cptsd-page .kh-cptsd-section {
+    margin: 0 0 var(--cptsd-section-gap) !important;
+    padding: var(--cptsd-section-gap) 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:first-of-type {
+    padding-top: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section:last-of-type {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+/* Equal spacing inside every normal section. */
+.kh-cptsd-page .kh-cptsd-section > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-section > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Consistent headings. */
+.kh-cptsd-page .ke-section-label {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page h2 {
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page h3 {
+    margin: 0 0 10px !important;
+}
+
+.kh-cptsd-page p {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Lists use the same content rhythm. */
+.kh-cptsd-page ul,
+.kh-cptsd-page ol {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page li + li {
+    margin-top: 10px !important;
+}
+
+/* Equal spacing around major panels. */
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-table-wrap,
+.kh-cptsd-page .kh-cptsd-faq,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-answer-box,
+.kh-cptsd-page .kh-cptsd-box,
+.kh-cptsd-page .kh-cptsd-sources,
+.kh-cptsd-page .ke-disclaimer {
+    padding: var(--cptsd-panel-padding) !important;
+}
+
+/* Equal two-column card gaps. */
+.kh-cptsd-page .kh-cptsd-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--cptsd-card-gap) !important;
+    margin: 0 0 var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-card > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Contents links have equal rows and columns. */
+.kh-cptsd-page .kh-cptsd-contents ol {
+    gap: 12px 28px !important;
+    margin: var(--cptsd-content-gap) 0 0 !important;
+}
+
+.kh-cptsd-page .kh-cptsd-contents li,
+.kh-cptsd-page .kh-cptsd-contents li + li {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal FAQ gaps. */
+.kh-cptsd-page .kh-cptsd-faq details {
+    margin: 0 !important;
+    padding: 20px 22px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details + details {
+    margin-top: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-faq details p {
+    margin-top: var(--cptsd-content-gap) !important;
+    margin-bottom: 0 !important;
+}
+
+/* Equal sidebar gaps. */
+.kh-cptsd-page .ke-side {
+    display: flex;
+    flex-direction: column;
+    gap: var(--cptsd-card-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box {
+    margin: 0 !important;
+    padding: 22px !important;
+}
+
+.kh-cptsd-page .ke-side-box > * {
+    margin-top: 0 !important;
+    margin-bottom: var(--cptsd-content-gap) !important;
+}
+
+.kh-cptsd-page .ke-side-box > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Keep hero and main-content separation equal. */
+.kh-cptsd-page .ke-hero {
+    margin-bottom: var(--cptsd-section-gap) !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    margin-top: 0 !important;
+}
+
+/* Tablet layout. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--cptsd-card-gap) !important;
+    }
+}
+
+/* Mobile spacing remains equal but more compact. */
+@media (max-width: 650px) {
+    .kh-cptsd-page {
+        --cptsd-section-gap: 24px;
+        --cptsd-content-gap: 14px;
+        --cptsd-card-gap: 14px;
+        --cptsd-panel-padding: 20px;
+    }
+
+    .kh-cptsd-page .kh-cptsd-grid,
+    .kh-cptsd-page .ke-side {
+        grid-template-columns: 1fr;
+    }
+
+    .kh-cptsd-page .kh-cptsd-card,
+    .kh-cptsd-page .ke-side-box {
+        padding: 18px !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-section {
+        padding: var(--cptsd-section-gap) 0 !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_EQUAL_SPACING_END -->
+<!-- KH_CPTSD_WIDTH_SIDEBAR_START -->
+<style class="KH_CPTSD_WIDTH_SIDEBAR_STYLES">
+/* Allow the layout to use the full available desktop width. */
+.kh-cptsd-page .ke-wrap {
+    width: calc(100% - 80px) !important;
+    max-width: 1600px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    overflow: visible !important;
+}
+
+.kh-cptsd-page,
+.kh-cptsd-page .ke-layout,
+.kh-cptsd-page .ke-article {
+    overflow: visible !important;
+}
+
+.kh-cptsd-page .ke-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 344px !important;
+    align-items: start !important;
+    gap: 48px !important;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.kh-cptsd-page .ke-article {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.kh-cptsd-page .ke-article > section,
+.kh-cptsd-page .ke-article > div {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* Keep readable lines without leaving half the screen unused. */
+.kh-cptsd-page .ke-article p,
+.kh-cptsd-page .ke-article ul,
+.kh-cptsd-page .ke-article ol {
+    max-width: 1080px;
+}
+
+.kh-cptsd-page .ke-article .kh-cptsd-grid,
+.kh-cptsd-page .ke-article .kh-cptsd-table-wrap,
+.kh-cptsd-page .ke-article .kh-cptsd-box,
+.kh-cptsd-page .ke-article .ke-answer-box,
+.kh-cptsd-page .ke-article .kh-cptsd-faq,
+.kh-cptsd-page .ke-article .kh-cptsd-sources,
+.kh-cptsd-page .ke-article .ke-disclaimer {
+    width: 100% !important;
+    max-width: none !important;
+}
+
+/* The complete right column remains visible during scrolling. */
+.kh-cptsd-page .ke-side {
+    position: sticky !important;
+    top: 105px !important;
+    align-self: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+    width: 344px !important;
+    max-width: 344px !important;
+    max-height: calc(100vh - 125px);
+    margin: 0 !important;
+    padding: 0 5px 20px 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(229, 173, 50, 0.45) transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar {
+    width: 5px;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.kh-cptsd-page .ke-side::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(229, 173, 50, 0.45);
+}
+
+.kh-cptsd-page .ke-side-box {
+    width: 100% !important;
+    margin: 0 !important;
+    flex: 0 0 auto;
+}
+
+/* Compact On This Page navigation matching the example. */
+.kh-cptsd-page .kh-cptsd-on-page nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    width: 100%;
+    padding: 12px 0 !important;
+    color: #c9c4bb !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+    font-size: 0.94rem;
+    font-weight: 500;
+    line-height: 1.35;
+    text-decoration: none !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:first-child {
+    padding-top: 4px !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:last-child {
+    padding-bottom: 4px !important;
+    border-bottom: 0;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a span {
+    flex: 0 0 auto;
+    color: var(--kh-gold);
+    font-size: 1.05rem;
+    transition: transform 160ms ease;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover,
+.kh-cptsd-page .kh-cptsd-on-page nav a:focus-visible {
+    color: var(--kh-gold-light) !important;
+}
+
+.kh-cptsd-page .kh-cptsd-on-page nav a:hover span {
+    transform: translateX(3px);
+}
+
+/* Match the example's content proportions. */
+.kh-cptsd-page .kh-cptsd-table {
+    width: 100% !important;
+    min-width: 760px;
+}
+
+.kh-cptsd-page .kh-cptsd-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+/* Large desktop screens. */
+@media (min-width: 1500px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 112px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 360px !important;
+        gap: 56px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 360px !important;
+        max-width: 360px !important;
+    }
+}
+
+/* Tablet: narrower sidebar while retaining two columns. */
+@media (max-width: 1150px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 48px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: minmax(0, 1fr) 290px !important;
+        gap: 30px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        width: 290px !important;
+        max-width: 290px !important;
+    }
+}
+
+/* Stack sidebar beneath the article on smaller screens. */
+@media (max-width: 900px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 36px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .kh-cptsd-page .ke-side {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: none !important;
+        max-height: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-on-page {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile layout. */
+@media (max-width: 650px) {
+    .kh-cptsd-page .ke-wrap {
+        width: calc(100% - 28px) !important;
+    }
+
+    .kh-cptsd-page .ke-layout {
+        gap: 24px !important;
+    }
+
+    .kh-cptsd-page .ke-side,
+    .kh-cptsd-page .kh-cptsd-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .kh-cptsd-page .kh-cptsd-table-wrap {
+        max-width: calc(100vw - 28px) !important;
+        overflow-x: auto !important;
+    }
+}
+</style>
+<!-- KH_CPTSD_WIDTH_SIDEBAR_END -->
+<!-- FOUR_GUIDE_NATIVE_LINKS_START -->
+<style>
+.ke-page::before,
+.ke-page::after,
+.ke-wrap::before,
+.ke-wrap::after,
+.ke-hero::before,
+.ke-hero::after,
+.ke-hero-visual::before,
+.ke-hero-visual::after,
+.ke-side::before,
+.ke-side::after,
+.ke-side-box::before,
+.ke-side-box::after {
+    pointer-events: none !important;
+}
+
+.ke-page a[href],
+.ke-page .ke-breadcrumb a[href],
+.ke-page .knowledge-breadcrumb-cta,
+.ke-page .ke-back-hub,
+.ke-page .ke-article a[href],
+.ke-page .ke-side a[href],
+.ke-page .ke-side-box a[href],
+.ke-page .kh-cptsd-on-page a[href],
+.home-footer a[href] {
+    position: relative !important;
+    z-index: 100 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.ke-page .ke-layout {
+    isolation: isolate;
+}
+
+.ke-page .ke-side {
+    z-index: 90 !important;
+    pointer-events: auto !important;
+    isolation: isolate;
+}
+
+.ke-page .ke-side-box,
+.ke-page .ke-side-box nav,
+.ke-page .kh-cptsd-on-page,
+.ke-page .kh-cptsd-on-page nav {
+    position: relative !important;
+    z-index: 91 !important;
+    pointer-events: auto !important;
+}
+
+.ke-page section[id] {
+    scroll-margin-top: 125px;
+}
+</style>
+<!-- FOUR_GUIDE_NATIVE_LINKS_END -->
+</body>
+</html>

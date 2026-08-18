@@ -1,0 +1,124 @@
+
+> booking:dev
+> wrangler pages dev . --port 8000
+
+
+ ⛅️ wrangler 4.123.0
+────────────────────
+✨ Compiled Worker successfully
+Using secrets defined in .dev.vars
+Your Worker has access to the following bindings:
+Binding                                                                    Resource                  Mode
+env.BOOKING_DB (reikifish-bookings-local)                                  D1 Database               local
+env.CF_PAGES ("1")                                                         Environment Variable      local
+env.CF_PAGES_BRANCH ("HEAD")                                               Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("25a07c54e04f206fdf9e495e5c5af59f83929...")       Environment Variable      local
+env.CF_PAGES_URL ("https://25a07c5.reikifish-website.pag...")              Environment Variable      local
+env.PAYPAL_ENV ("(hidden)")                                                Environment Variable      local
+env.PAYPAL_CLIENT_ID ("(hidden)")                                          Environment Variable      local
+env.PAYPAL_CLIENT_SECRET ("(hidden)")                                      Environment Variable      local
+env.PAYPAL_WEBHOOK_ID ("(hidden)")                                         Environment Variable      local
+env.BOOKING_ADMIN_TOKEN ("(hidden)")                                       Environment Variable      local
+env.BOOKING_EMAIL ("(hidden)")                                             Environment Variable      local
+env.MAILGUN_DOMAIN ("(hidden)")                                            Environment Variable      local
+env.MAILGUN_API_KEY ("(hidden)")                                           Environment Variable      local
+env.MAILGUN_API_BASE ("(hidden)")                                          Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://127.0.0.1:8000
+[wrangler:info] GET /booking.html 308 Permanent Redirect (317ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (14ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (13ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (19ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (9ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (19ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (18ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (12ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (16ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (10ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (8ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (9ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (11ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (12ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (17ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (9ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (18ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (8ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (19ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (18ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (17ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (7ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (10ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (8ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (7ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (7ms)
+[wrangler:info] GET /booking 200 OK (19ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (32ms)
+[wrangler:info] GET /assets/css/booking.css 304 Not Modified (38ms)
+[wrangler:info] GET /assets/images/coaching.webp 304 Not Modified (37ms)
+[wrangler:info] GET /assets/js/booking.js 304 Not Modified (66ms)
+[wrangler:info] GET /api/booking/config 200 OK (6ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (12ms)
+[wrangler:info] GET /booking 200 OK (18ms)
+[wrangler:info] GET /assets/css/style.css 200 OK (21ms)
+[wrangler:info] GET /assets/css/booking.css 200 OK (25ms)
+[wrangler:info] GET /assets/images/coaching.webp 200 OK (29ms)
+[wrangler:info] GET /assets/js/booking.js 200 OK (28ms)
+[wrangler:info] GET /api/booking/config 200 OK (6ms)
+[wrangler:info] GET /favicon.ico 200 OK (13ms)
+[wrangler:info] GET /api/booking/availability 200 OK (146ms)
+[wrangler:info] POST /api/booking/create-order 200 OK (974ms)
+[wrangler:info] POST /api/booking/capture-order 200 OK (2456ms)
+[wrangler:info] GET /index.html 308 Permanent Redirect (19ms)
+[wrangler:info] GET / 200 OK (9ms)
+[wrangler:info] GET /assets/css/style.css 200 OK (16ms)
+[wrangler:info] GET /assets/css/mega-menu.css 200 OK (27ms)
+[wrangler:info] GET /assets/css/mega-menu-controller.css 200 OK (33ms)
+[wrangler:info] GET /assets/js/mega-menu-controller.js 200 OK (55ms)
+[wrangler:info] GET /assets/js/mega-menu.js 200 OK (100ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (8ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (8ms)
+[wrangler:info] GET /booking 304 Not Modified (15ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (23ms)
+[wrangler:info] GET /assets/css/booking.css 304 Not Modified (30ms)
+[wrangler:info] GET /assets/images/coaching.webp 304 Not Modified (31ms)
+[wrangler:info] GET /assets/js/booking.js 304 Not Modified (31ms)
+[wrangler:info] GET /api/booking/config 200 OK (5ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (11ms)
+[wrangler:info] GET /booking 200 OK (20ms)
+[wrangler:info] GET /assets/css/style.css 200 OK (23ms)
+[wrangler:info] GET /assets/css/booking.css 200 OK (29ms)
+[wrangler:info] GET /assets/images/coaching.webp 200 OK (33ms)
+[wrangler:info] GET /assets/js/booking.js 200 OK (31ms)
+[wrangler:info] GET /api/booking/config 200 OK (4ms)
+[wrangler:info] GET /favicon.ico 200 OK (10ms)
+[wrangler:info] GET /api/booking/availability 200 OK (5ms)
+[wrangler:info] GET /api/booking/availability 200 OK (91ms)
+[wrangler:info] GET / 304 Not Modified (18ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (19ms)
+[wrangler:info] GET /assets/css/mega-menu.css 304 Not Modified (25ms)
+[wrangler:info] GET /assets/css/mega-menu-controller.css 304 Not Modified (28ms)
+[wrangler:info] GET /assets/js/mega-menu.js 304 Not Modified (33ms)
+[wrangler:info] GET /assets/js/mega-menu-controller.js 304 Not Modified (34ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (6ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (9ms)
+Using secrets defined in .dev.vars
+Your Worker has access to the following bindings:
+Binding                                                                    Resource                  Mode
+env.BOOKING_DB (reikifish-bookings)                                        D1 Database               local
+env.CF_PAGES ("1")                                                         Environment Variable      local
+env.CF_PAGES_BRANCH ("HEAD")                                               Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("25a07c54e04f206fdf9e495e5c5af59f83929...")       Environment Variable      local
+env.CF_PAGES_URL ("https://25a07c5.reikifish-website.pag...")              Environment Variable      local
+env.PAYPAL_ENV ("(hidden)")                                                Environment Variable      local
+env.PAYPAL_CLIENT_ID ("(hidden)")                                          Environment Variable      local
+env.PAYPAL_CLIENT_SECRET ("(hidden)")                                      Environment Variable      local
+env.PAYPAL_WEBHOOK_ID ("(hidden)")                                         Environment Variable      local
+env.BOOKING_ADMIN_TOKEN ("(hidden)")                                       Environment Variable      local
+env.BOOKING_EMAIL ("(hidden)")                                             Environment Variable      local
+env.MAILGUN_DOMAIN ("(hidden)")                                            Environment Variable      local
+env.MAILGUN_API_KEY ("(hidden)")                                           Environment Variable      local
+env.MAILGUN_API_BASE ("(hidden)")                                          Environment Variable      local
+
+⎔ Reloading local server...
+⎔ Local server updated and ready

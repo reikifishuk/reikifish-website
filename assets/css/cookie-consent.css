@@ -1,0 +1,198 @@
+/* ReikiFish compact cookie consent */
+
+:root {
+    --rf-cookie-gold: #d0a15e;
+    --rf-cookie-bright-gold: #f1b82d;
+    --rf-cookie-background: rgba(10, 14, 12, 0.97);
+    --rf-cookie-border: rgba(208, 161, 94, 0.48);
+    --rf-cookie-text: #e8e5de;
+    --rf-cookie-muted: #aaa9a4;
+}
+
+.rf-cookie-banner {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 99999;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: min(350px, calc(100vw - 36px));
+    padding: 15px;
+    color: var(--rf-cookie-text);
+    background: var(--rf-cookie-background);
+    border: 1px solid var(--rf-cookie-border);
+    border-radius: 12px;
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(14px);
+}
+
+.rf-cookie-banner.is-visible {
+    display: flex;
+}
+
+.rf-cookie-copy {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.rf-cookie-mark {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    color: var(--rf-cookie-gold);
+    border: 1px solid var(--rf-cookie-border);
+    border-radius: 50%;
+}
+
+.rf-cookie-mark svg {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+}
+
+.rf-cookie-text {
+    min-width: 0;
+}
+
+.rf-cookie-title {
+    display: block;
+    margin: 0 0 2px;
+    color: #f2efe8;
+    font-size: 0.84rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.rf-cookie-description {
+    margin: 0;
+    color: var(--rf-cookie-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+}
+
+.rf-cookie-description a {
+    color: var(--rf-cookie-gold);
+    text-decoration: underline;
+    text-decoration-color: rgba(208, 161, 94, 0.45);
+    text-underline-offset: 3px;
+}
+
+.rf-cookie-description a:hover,
+.rf-cookie-description a:focus-visible {
+    color: var(--rf-cookie-bright-gold);
+}
+
+.rf-cookie-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.rf-cookie-button {
+    min-height: 32px;
+    padding: 6px 11px;
+    color: #e4e1da;
+    background: transparent;
+    border: 1px solid rgba(208, 161, 94, 0.44);
+    border-radius: 999px;
+    font: inherit;
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        color 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease,
+        transform 160ms ease;
+}
+
+.rf-cookie-button:hover,
+.rf-cookie-button:focus-visible {
+    color: #ffffff;
+    border-color: var(--rf-cookie-gold);
+    transform: translateY(-1px);
+}
+
+.rf-cookie-button--accept {
+    color: #10130f;
+    background: var(--rf-cookie-gold);
+    border-color: var(--rf-cookie-gold);
+}
+
+.rf-cookie-button--accept:hover,
+.rf-cookie-button--accept:focus-visible {
+    color: #0c0f0c;
+    background: var(--rf-cookie-bright-gold);
+    border-color: var(--rf-cookie-bright-gold);
+}
+
+.rf-cookie-button:focus-visible,
+.rf-cookie-settings-link:focus-visible {
+    outline: 2px solid var(--rf-cookie-bright-gold);
+    outline-offset: 3px;
+}
+
+.rf-cookie-settings-link {
+    padding: 0;
+    color: inherit;
+    background: transparent;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.rf-cookie-settings-link:hover {
+    color: var(--rf-cookie-gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .rf-cookie-banner {
+        right: 10px;
+        bottom: 10px;
+        width: min(340px, calc(100vw - 20px));
+        padding: 13px;
+        border-radius: 11px;
+    }
+
+    .rf-cookie-mark {
+        display: none;
+    }
+
+    .rf-cookie-copy {
+        align-items: flex-start;
+    }
+
+    .rf-cookie-button {
+        flex: 1 1 auto;
+        min-height: 34px;
+        padding-inline: 9px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rf-cookie-banner {
+        flex-direction: column;
+    }
+
+    .rf-cookie-actions {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rf-cookie-button {
+        transition: none;
+    }
+}

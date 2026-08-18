@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-mm5">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trauma-Informed Leadership Coaching | Andy Fish</title>
+    <link rel="canonical" href="https://reikifish.com/coaching.html" />
+    <meta name="description" content="Transform through trauma-informed leadership coaching. Andy Fish combines psychology, resilience and lived experience to help you lead with clarity." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811-support-nav-v2" />
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<!-- COACHING_LINKED_SERVICES_STYLES_START -->
+<style>
+  .coaching-main-hero {
+    padding-top: clamp(3.75rem, 7vw, 6.5rem);
+    padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  }
+
+  .coaching-pathways {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(4.75rem, 8vw, 7.5rem) 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background:
+      radial-gradient(
+        circle at 12% 8%,
+        rgba(202, 151, 75, 0.09),
+        transparent 32rem
+      ),
+      #181b1f;
+  }
+
+  .coaching-pathways::after {
+    content: "";
+    position: absolute;
+    right: -12rem;
+    bottom: -14rem;
+    width: 30rem;
+    height: 30rem;
+    border: 1px solid rgba(202, 151, 75, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+
+  .coaching-pathways-heading {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  .coaching-pathways-eyebrow {
+    margin: 0 0 1rem;
+    color: #d2a258;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+
+  .coaching-pathways-heading h2 {
+    max-width: 760px;
+    margin: 0 0 1.25rem;
+    color: #f4f1eb;
+    font-size: clamp(2.1rem, 4vw, 3.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+  }
+
+  .coaching-pathways-intro {
+    max-width: 760px;
+    margin: 0;
+    color: rgba(244, 241, 235, 0.78);
+    font-size: clamp(1rem, 1.6vw, 1.16rem);
+    line-height: 1.8;
+  }
+
+  .coaching-pathways-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.4rem;
+  }
+
+  .coaching-pathway-card {
+    position: relative;
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    border: 1px solid rgba(210, 162, 88, 0.22);
+    border-radius: 1.4rem;
+    background: #202328;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.18);
+    transition:
+      transform 180ms ease,
+      border-color 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .coaching-pathway-card:hover,
+  .coaching-pathway-card:focus-visible {
+    color: inherit;
+    text-decoration: none;
+    transform: translateY(-6px);
+    border-color: rgba(210, 162, 88, 0.62);
+    box-shadow: 0 1.8rem 3.6rem rgba(0, 0, 0, 0.3);
+  }
+
+  .coaching-pathway-card:focus-visible {
+    outline: 3px solid rgba(210, 162, 88, 0.42);
+    outline-offset: 4px;
+  }
+
+  .coaching-pathway-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .coaching-pathway-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: #111316;
+  }
+
+  .coaching-pathway-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(17, 19, 22, 0.5) 100%
+      );
+    pointer-events: none;
+  }
+
+  .coaching-pathway-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms ease;
+  }
+
+  .coaching-pathway-card:hover .coaching-pathway-image img {
+    transform: scale(1.04);
+  }
+
+  .coaching-pathway-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.7rem;
+  }
+
+  .coaching-pathway-number {
+    display: block;
+    margin-bottom: 1rem;
+    color: #d2a258;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .coaching-pathway-content h3 {
+    margin: 0 0 0.85rem;
+    color: #f4f1eb;
+    font-size: clamp(1.3rem, 2vw, 1.65rem);
+    line-height: 1.25;
+  }
+
+  .coaching-pathway-content p {
+    margin: 0 0 1.35rem;
+    color: rgba(244, 241, 235, 0.7);
+    line-height: 1.7;
+  }
+
+  .coaching-pathway-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: auto;
+    color: #e2b56d;
+    font-weight: 700;
+  }
+
+  .coaching-pathway-link span {
+    transition: transform 180ms ease;
+  }
+
+  .coaching-pathway-card:hover .coaching-pathway-link span {
+    transform: translateX(4px);
+  }
+
+  .coaching-pathways-note {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+    padding: 1.6rem 1.8rem;
+    border-left: 3px solid #d2a258;
+    border-radius: 0 1rem 1rem 0;
+    background: rgba(255, 255, 255, 0.035);
+    color: rgba(244, 241, 235, 0.78);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  @media (max-width: 991.98px) {
+    .coaching-main-hero {
+      padding-top: 3.25rem;
+    }
+
+    .coaching-pathways-grid {
+      grid-template-columns: 1fr;
+      max-width: 720px;
+    }
+
+    .coaching-pathway-card {
+      min-height: 0;
+    }
+
+    .coaching-pathway-inner {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.8fr) 1.2fr;
+    }
+
+    .coaching-pathway-image {
+      height: 100%;
+      min-height: 270px;
+      aspect-ratio: auto;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .coaching-main-hero {
+      padding-top: 2.25rem;
+      padding-bottom: 3.75rem;
+    }
+
+    .coaching-pathways {
+      padding: 4rem 0;
+    }
+
+    .coaching-pathway-inner {
+      display: flex;
+    }
+
+    .coaching-pathway-image {
+      min-height: 0;
+      aspect-ratio: 16 / 10;
+    }
+
+    .coaching-pathway-content {
+      padding: 1.4rem;
+    }
+
+    .coaching-pathways-note {
+      margin-top: 2.5rem;
+      padding: 1.35rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .coaching-pathway-card,
+    .coaching-pathway-image img,
+    .coaching-pathway-link span {
+      transition: none;
+    }
+  }
+</style>
+<!-- COACHING_LINKED_SERVICES_STYLES_END -->
+<!-- COACHING_SPACING_FIX_START -->
+<style>
+  /*
+   * Tighter desktop rhythm for the main Coaching page.
+   * These rules deliberately override older shared spacing.
+   */
+
+  .coaching-main-hero {
+    padding-top: clamp(1.5rem, 3vw, 3rem) !important;
+    padding-bottom: clamp(2.75rem, 5vw, 4.5rem) !important;
+  }
+
+  .coaching-main-hero .coaching-hero-grid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .coaching-main-hero .coaching-hero-copy,
+  .coaching-main-hero .coaching-hero-visual {
+    margin-top: 0 !important;
+  }
+
+  .coaching-pathways {
+    padding-top: clamp(2.75rem, 5vw, 4.5rem) !important;
+    padding-bottom: clamp(2.25rem, 4vw, 3.5rem) !important;
+  }
+
+  .coaching-pathways-heading {
+    margin-bottom: clamp(2rem, 3vw, 3rem) !important;
+  }
+
+  .coaching-pathways-note {
+    margin-top: clamp(1.75rem, 3vw, 2.5rem) !important;
+  }
+
+  .coaching-pathways + .coaching-support-section {
+    padding-top: clamp(2rem, 4vw, 3.5rem) !important;
+  }
+
+  .coaching-pathways + .coaching-support-section .coaching-final-cta {
+    margin-top: 0 !important;
+  }
+
+  @media (max-width: 991.98px) {
+    .coaching-main-hero {
+      padding-top: 1.5rem !important;
+      padding-bottom: 3rem !important;
+    }
+
+    .coaching-pathways {
+      padding-top: 3.25rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+
+    .coaching-pathways + .coaching-support-section {
+      padding-top: 2rem !important;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .coaching-main-hero {
+      padding-top: 1rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+
+    .coaching-pathways {
+      padding-top: 2.75rem !important;
+      padding-bottom: 2rem !important;
+    }
+
+    .coaching-pathways-heading {
+      margin-bottom: 1.75rem !important;
+    }
+
+    .coaching-pathways-note {
+      margin-top: 1.5rem !important;
+    }
+
+    .coaching-pathways + .coaching-support-section {
+      padding-top: 1.5rem !important;
+    }
+  }
+</style>
+<!-- COACHING_SPACING_FIX_END -->
+<!-- COACHING_FINAL_GAP_FIX_START -->
+<style>
+  /*
+   * Remove inherited spacing surrounding the final CTA.
+   */
+  .coaching-support-section.support-cta-section {
+    margin-top: 0 !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .coaching-support-section.support-cta-section > .container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .coaching-support-section.support-cta-section .coaching-final-cta {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: clamp(3rem, 5vw, 4.5rem) !important;
+    padding-bottom: clamp(3rem, 5vw, 4.5rem) !important;
+  }
+
+  .coaching-pathways {
+    margin-bottom: 0 !important;
+  }
+
+  @media (max-width: 767.98px) {
+    .coaching-support-section.support-cta-section {
+      padding-top: 1rem !important;
+      padding-bottom: 2rem !important;
+    }
+
+    .coaching-support-section.support-cta-section .coaching-final-cta {
+      padding: 2.75rem 1.25rem !important;
+    }
+  }
+</style>
+<!-- COACHING_FINAL_GAP_FIX_END -->
+</head>
+  <body class="coaching-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link active" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container coaching-main-hero reveal">
+        <p class="eyebrow">Coaching</p>
+
+<div class="coaching-hero-grid">
+
+    <div class="coaching-hero-copy">
+<h1 class="display-4 fw-semibold">A measured path toward steadier living.</h1>
+
+<p class="lead-text">
+Private, trauma-informed coaching for people navigating emotional overwhelm, difficult relationships, major life change or simply feeling stuck. We slow things down, separate what is happening from the noise around it, and work towards clearer decisions, stronger boundaries and a steadier sense of self.
+</p>
+
+<p class="lead-text" style="margin-top: 1rem;">
+No labels. No judgement. No pressure to become someone else. Just a calm space to understand where you are, what is keeping you there and what your next step could be.
+</p>
+
+<p class="lead-text" style="margin-top: 1rem;">
+Sessions are shaped around what is happening in your life now. We can explore patterns, choices and practical next steps at a pace that feels manageable, while keeping the focus on what you can influence and change.
+</p>
+
+<div style="margin-top: 2rem;">
+  <a href="contact.html" class="btn btn-gold">Start a Conversation</a>
+</div>
+    </div>
+
+    <div class="coaching-hero-visual">
+        <img
+            src="assets/images/the grey.png"
+            alt="A quiet path leading towards warm light, representing calm progress and steadier living."
+            class="coaching-hero-image"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+        >
+    </div>
+
+</div>
+      </section>
+    </header>
+
+    <main class="container py-5">
+      <section class="coaching-editorial reveal" aria-labelledby="coaching-editorial-title">
+        <div class="coaching-editorial-layout">
+          <article class="coaching-editorial-copy">
+            <h2 class="section-heading-xl" id="coaching-editorial-title">Leadership shaped my experience.<br />Psychology deepened my understanding.</h2>
+            <p>
+              For more than two decades I've worked in leadership, management and performance, helping individuals and teams navigate pressure, uncertainty and change.
+            </p>
+            <p>
+              That professional experience naturally led me towards coaching and the study of psychology, trauma, attachment, emotional regulation and human behaviour.
+            </p>
+            <p>
+              Today those worlds come together.
+            </p>
+            <p>
+              My coaching combines practical leadership experience with psychological insight to help people navigate grief, conflict, emotional overwhelm, identity change, difficult relationships and major life transitions.
+            </p>
+            <p>
+              My role is not to provide quick answers.
+            </p>
+            <p>
+              It is to create a calm, grounded space where clarity can emerge.
+            </p>
+            <p>
+              Together we explore patterns, regulate the nervous system, strengthen emotional resilience and develop practical ways to respond rather than simply react.
+            </p>
+            <p>
+              The goal isn't perfection.
+            </p>
+            <p>
+              It's living with greater awareness, steadiness and truth.
+            </p>
+          </article>
+
+          <figure class="coaching-editorial-media">
+            <img
+              src="assets/images/mind-coach.png"
+              alt="Trauma-informed coaching conversation"
+              width="1430"
+              height="1073"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+
+        <div class="coaching-credibility-row" aria-label="Coaching credibility">
+          <article class="coaching-credibility-card">
+
+<div class="coaching-value-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="8.5"></circle>
+  <path d="M12 7.5V12l3.2 2"></path>
+  <path d="M7 3.8 5.2 5.6"></path>
+  <path d="M17 3.8 18.8 5.6"></path>
+</svg>
+</div>
+<h3>20+ Years</h3>
+            <p>Leadership, management and guiding people through pressure and change.</p>
+          </article>
+          <article class="coaching-credibility-card">
+
+<div class="coaching-value-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24">
+  <path d="M4 5.5h16v10H9l-5 4v-14Z"></path>
+  <path d="M8 9h8"></path>
+  <path d="M8 12h5"></path>
+</svg>
+</div>
+<h3>Professional Coaching</h3>
+            <p>Evidence based coaching informed by psychology, behavioural science and emotional regulation.</p>
+          </article>
+          <article class="coaching-credibility-card">
+
+<div class="coaching-value-icon" aria-hidden="true">
+<svg viewBox="0 0 24 24">
+  <circle cx="12" cy="5" r="2"></circle>
+  <path d="M12 7v12"></path>
+  <path d="M7.5 10.5h9"></path>
+  <path d="M5 12.5c0 4 3 7 7 7s7-3 7-7"></path>
+  <path d="M5 12.5 3.5 14"></path>
+  <path d="M19 12.5 20.5 14"></path>
+</svg>
+</div>
+<h3>Grounded Approach</h3>
+            <p>Combining practical leadership experience with compassionate psychological insight.</p>
+          </article>
+        </div>
+
+        <!-- COACHING_LINKED_SERVICES_START -->
+<section class="coaching-pathways reveal" aria-labelledby="coaching-pathways-title">
+  <div class="container">
+    <div class="coaching-pathways-heading">
+      <p class="coaching-pathways-eyebrow">Explore coaching support</p>
+
+      <h2 id="coaching-pathways-title">
+        Find the support that meets you where you are
+      </h2>
+
+      <p class="coaching-pathways-intro">
+        Difficult experiences rarely fit neatly into one category. Explore
+        focused coaching support for trauma, parental alienation and workplace
+        leadership, each grounded in calm reflection, clearer boundaries and
+        practical next steps.
+      </p>
+    </div>
+
+    <div class="coaching-pathways-grid">
+      <a
+        class="coaching-pathway-card"
+        href="trauma-coaching.html"
+        aria-label="Explore trauma informed coaching"
+      >
+        <article class="coaching-pathway-inner">
+          <div class="coaching-pathway-image">
+            <img
+              src="assets/images/coaching.webp"
+              alt="A calm visual representing trauma informed coaching and emotional recovery"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="coaching-pathway-content">
+            <span class="coaching-pathway-number">01 &middot; Personal support</span>
+            <h3>Trauma Informed Coaching</h3>
+            <p>
+              A steady, non-judgemental space for understanding overwhelm,
+              rebuilding emotional safety and moving forward without being
+              reduced to a label.
+            </p>
+            <span class="coaching-pathway-link">
+              Explore trauma informed coaching
+              <span aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </article>
+      </a>
+
+      <a
+        class="coaching-pathway-card"
+        href="parental-alienation-coaching.html"
+        aria-label="Explore parental alienation coaching"
+      >
+        <article class="coaching-pathway-inner">
+          <div class="coaching-pathway-image">
+            <img
+              src="assets/images/blog/parental_alienation.png"
+              alt="A thoughtful visual representing parental alienation coaching and family support"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="coaching-pathway-content">
+            <span class="coaching-pathway-number">02 &middot; Family support</span>
+            <h3>Parental Alienation Coaching</h3>
+            <p>
+              Calm, child-focused support for parents facing separation,
+              damaged relationships, difficult communication or the emotional
+              strain of restricted contact.
+            </p>
+            <span class="coaching-pathway-link">
+              Explore parental alienation coaching
+              <span aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </article>
+      </a>
+
+      <a
+        class="coaching-pathway-card"
+        href="team-leadership-coaching.html"
+        aria-label="Explore business and team leadership coaching"
+      >
+        <article class="coaching-pathway-inner">
+          <div class="coaching-pathway-image">
+            <img
+              src="assets/images/coaching.webp"
+              alt="A professional visual representing business coaching and team leadership"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          <div class="coaching-pathway-content">
+            <span class="coaching-pathway-number">03 &middot; Professional support</span>
+            <h3>Business &amp; Team Leadership Coaching</h3>
+            <p>
+              Practical coaching for leaders managing pressure, change,
+              difficult dynamics and the responsibility of helping people work
+              together more effectively.
+            </p>
+            <span class="coaching-pathway-link">
+              Explore business and leadership coaching
+              <span aria-hidden="true">&rarr;</span>
+            </span>
+          </div>
+        </article>
+      </a>
+    </div>
+
+    <p class="coaching-pathways-note">
+      These areas often overlap. Trauma can affect confidence and decision
+      making, family conflict can influence work and wellbeing, and leadership
+      pressure can follow people home. The starting point is not choosing the
+      perfect label. It is identifying what feels most important now.
+    </p>
+  </div>
+</section>
+<!-- COACHING_LINKED_SERVICES_END -->
+<section class="coaching-support-section support-premium-section support-cta-section" aria-labelledby="support-section-title">
+
+<div class="container">
+
+    <div class="coaching-final-cta">
+
+        <p class="coaching-final-eyebrow">
+            Take the Next Step
+        </p>
+
+        <div class="coaching-final-line"></div>
+
+        <h2>
+            Start with a conversation,<br>
+            not a commitment.
+        </h2>
+
+        <p class="coaching-final-copy">
+            You don't need to know exactly what you need before getting in touch.
+            An initial conversation is simply a chance to talk about what is happening,
+            what you would like to change and whether coaching feels like the right next step.
+        </p>
+
+        <a href="contact.html" class="btn btn-gold coaching-final-button">
+            Book an Initial Conversation
+            <span aria-hidden="true">&rarr;</span>
+        </a>
+
+        <div class="coaching-final-reassurance">
+            <span>Private</span>
+            <span class="coaching-final-dot"></span>
+            <span>Calm</span>
+            <span class="coaching-final-dot"></span>
+            <span>No pressure</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+    </main>
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  <!-- RF_MEGA_MENU_START -->
+<div class="rf-mm-backdrop" id="rf-mega-backdrop" aria-hidden="true"></div>
+<aside class="rf-mega-menu" id="rf-mega-menu" aria-label="Explore ReikiFish" aria-hidden="true">
+  <div class="rf-mm-shell">
+    <button class="rf-mm-close" type="button" aria-label="Close menu">&#10005;</button>
+    <section class="rf-mm-panel" data-panel="about" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">The person and purpose</p><h2>About ReikiFish</h2></div><a href="/about.html">Explore the story &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/about.html"><span class="rf-mm-icon">A</span><span class="rf-mm-copy"><strong>About Andy</strong><span>Lived experience, professional background and the thinking behind ReikiFish.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">B</span><span class="rf-mm-copy"><strong>Books and writing</strong><span>Explore Walking the Grey and writing grounded in reflection and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">K</span><span class="rf-mm-copy"><strong>Evidence-led learning</strong><span>Clear psychology and emotional-health guides in plain English.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Contact</strong><span>Ask a question or make an initial enquiry in confidence.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="books" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Depth, reflection and recovery</p><h2>Books by Andy Fish</h2></div><a href="/books.html">View all books &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">W</span><span class="rf-mm-copy"><strong>Walking the Grey</strong><span>A journey through alienation, abuse, self-understanding and reclamation.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>The Book of DARVO</strong><span>Updates and insights into denial, attack and reversal of victim and offender.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Stay regulated when another person appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">N</span><span class="rf-mm-copy"><strong>News and enquiries</strong><span>Follow publication updates or ask about the writing.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="coaching" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Calm, structured support</p><h2>Coaching pathways</h2></div><a href="/coaching.html">Explore coaching &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/trauma-coaching.html"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma coaching</strong><span>Build steadiness, choice and practical ways to move forward.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/parental-alienation-coaching.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Structured support through grief, uncertainty and difficult dynamics.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/team-leadership-coaching.html"><span class="rf-mm-icon">L</span><span class="rf-mm-copy"><strong>Team leadership</strong><span>Clearer communication, healthier teams and grounded leadership.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/coaching.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Find the right route</strong><span>Compare the coaching pathways and understand what support includes.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="knowledge" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Evidence led, plain English</p><h2>Explore the Knowledge Hub</h2></div><a href="/knowledge.html">View all guides &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Personality"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Personality</strong><span>Traits, patterns and personality disorders without careless labelling.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Trauma"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma</strong><span>Survival responses, dissociation, memory and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Manipulation"><span class="rf-mm-icon">M</span><span class="rf-mm-copy"><strong>Manipulation</strong><span>Gaslighting, DARVO and coercive interpersonal patterns.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Relationships"><span class="rf-mm-icon">R</span><span class="rf-mm-copy"><strong>Relationships</strong><span>Attachment, boundaries, trust, conflict and repair.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Emotional%20Health"><span class="rf-mm-icon">E</span><span class="rf-mm-copy"><strong>Emotional health</strong><span>Regulation, resilience, self-awareness and self-compassion.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Parental%20Alienation"><span class="rf-mm-icon">F</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Child-focused explanations of harmful relational behaviours.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge/what-is-complex-ptsd.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Complex PTSD</strong><span>An in-depth guide to prolonged trauma and its effects.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">A-Z</span><span class="rf-mm-copy"><strong>Psychology A to Z</strong><span>Browse the complete library of definitions and guides.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="blog" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Ideas, experience and reflection</p><h2>From the ReikiFish blog</h2></div><a href="/blog.html">View all articles &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Staying regulated when someone appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Psychology</strong><span>Evidence-informed perspectives on behaviour and emotional life.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>DARVO and manipulation</strong><span>Patterns of denial, blame reversal and missing context.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">U</span><span class="rf-mm-copy"><strong>Latest updates</strong><span>New writing, resources and project developments.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+  </div>
+</aside>
+<!-- RF_MEGA_MENU_END -->
+<script src="/assets/js/mega-menu.js?v=20260813-mm5"></script>
+</body>
+</html>

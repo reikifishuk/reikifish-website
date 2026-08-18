@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-mm4">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trauma-Informed Coaching | Andy Fish</title>
+    <meta name="description" content="Trauma-informed coaching with Andy Fish. A calm, practical approach to understanding patterns, rebuilding boundaries, regaining choice and moving forward after difficult experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811-support-nav-v2" />
+    <link rel="canonical" href="https://www.reikifish.com/trauma-coaching.html">
+
+<style>
+/* TRAUMA_CARD_CENTRE_DIRECT_V2 */
+
+/*
+   Targets cards containing BOTH an icon element and an H3.
+   This avoids relying on the missing section wrapper.
+*/
+
+:is(article, div):has(> [class*="icon"]):has(> h3) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    text-align: center !important;
+}
+
+/* Icon boxes */
+:is(article, div):has(> [class*="icon"]):has(> h3) > [class*="icon"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 28px !important;
+}
+
+/* Actual SVG */
+:is(article, div):has(> [class*="icon"]):has(> h3) > [class*="icon"] svg {
+    display: block !important;
+    margin: auto !important;
+}
+
+/* Heading */
+:is(article, div):has(> [class*="icon"]):has(> h3) > h3 {
+    width: 100% !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+
+    text-align: center !important;
+}
+
+/* Description */
+:is(article, div):has(> [class*="icon"]):has(> h3) > p {
+    width: 100% !important;
+    max-width: 355px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    text-align: center !important;
+    line-height: 1.65 !important;
+}
+
+/* Keep all cards visually balanced */
+:is(article, div):has(> [class*="icon"]):has(> h3) {
+    min-height: 340px !important;
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+
+    transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease !important;
+}
+
+:is(article, div):has(> [class*="icon"]):has(> h3):hover {
+    transform: translateY(-4px) !important;
+    border-color: rgba(223,166,76,.52) !important;
+    box-shadow: 0 24px 50px rgba(0,0,0,.25) !important;
+}
+
+@media (max-width: 700px) {
+
+    :is(article, div):has(> [class*="icon"]):has(> h3) {
+        min-height: 0 !important;
+        padding-left: 26px !important;
+        padding-right: 26px !important;
+    }
+
+}
+</style>
+
+<style>
+/* ==========================================================
+   TRAUMA_IMPACT_VISUAL_FINAL
+   ========================================================== */
+
+/* Automatically finds the parent containing our new visual */
+:is(section, div):has(> .trauma-impact-visual) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: minmax(0,1.15fr) minmax(380px,.85fr);
+    column-gap: 70px;
+
+    padding: 65px;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(223,166,76,.13),
+            transparent 28%
+        ),
+        linear-gradient(
+            125deg,
+            rgba(7,30,30,.98),
+            rgba(13,20,20,.98) 52%,
+            rgba(29,22,14,.98)
+        );
+
+    border: 1px solid rgba(223,166,76,.25);
+    border-radius: 26px;
+
+    box-shadow: 0 30px 75px rgba(0,0,0,.20);
+}
+
+/* Put all existing copy on the left */
+:is(section, div):has(> .trauma-impact-visual) > *:not(.trauma-impact-visual) {
+    grid-column: 1;
+}
+
+/* Graphical panel occupies right side */
+.trauma-impact-visual {
+    position: relative;
+    grid-column: 2;
+    grid-row: 1 / span 20;
+
+    align-self: center;
+
+    padding: 38px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,14,14,.92),
+            rgba(11,15,14,.96)
+        );
+
+    border: 1px solid rgba(223,166,76,.34);
+    border-radius: 24px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.30),
+        inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+/* Decorative rings */
+.trauma-impact-visual::before {
+    content: "";
+
+    position: absolute;
+    width: 330px;
+    height: 330px;
+
+    right: -125px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(223,166,76,.35) 0 3px,
+            transparent 4px 60px,
+            rgba(223,166,76,.11) 61px 62px,
+            transparent 63px 105px,
+            rgba(63,132,126,.11) 106px 107px,
+            transparent 108px 150px,
+            rgba(223,166,76,.07) 151px 152px,
+            transparent 153px
+        );
+
+    pointer-events: none;
+}
+
+.impact-visual-label {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    color: #dfa64c;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .24em;
+}
+
+.impact-step {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+
+    align-items: center;
+}
+
+.impact-number {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    color: #dfa64c;
+    background: rgba(223,166,76,.06);
+
+    border: 1px solid rgba(223,166,76,.36);
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.impact-step strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #f1ede5;
+
+    font-size: 19px;
+}
+
+.impact-step p {
+    margin: 0 !important;
+
+    color: rgba(239,235,226,.63) !important;
+
+    font-size: 14px !important;
+    line-height: 1.55 !important;
+}
+
+.impact-connector {
+    width: 1px;
+    height: 34px;
+
+    margin: 7px 0 7px 22px;
+
+    background:
+        linear-gradient(
+            #dfa64c,
+            rgba(223,166,76,.10)
+        );
+}
+
+.impact-step-final .impact-number {
+    color: #101313;
+    background: #dfa64c;
+}
+
+.impact-statement {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 32px;
+    padding-top: 23px;
+
+    color: rgba(241,237,229,.85);
+
+    border-top: 1px solid rgba(255,255,255,.08);
+
+    font-family: Georgia,serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.impact-statement span {
+    display: inline-block;
+
+    width: 36px;
+    height: 1px;
+
+    margin-right: 12px;
+    vertical-align: middle;
+
+    background: #dfa64c;
+}
+
+/* Tablet/mobile */
+
+@media (max-width: 1000px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        grid-template-columns: 1fr;
+        padding: 42px;
+    }
+
+    .trauma-impact-visual {
+        grid-column: 1;
+        grid-row: auto;
+
+        margin-top: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .trauma-impact-visual {
+        padding: 27px 22px;
+        border-radius: 18px;
+    }
+}
+</style>
+
+
+
+<style id="TRAUMA_IMPACT_OPEN_FLOW_FINAL">
+
+/* ==========================================================
+   UNDERSTANDING THE IMPACT
+   OPEN EDITORIAL SECTION
+   ========================================================== */
+
+/*
+   The outside is deliberately NOT a card.
+   It becomes a normal full-width section like the rest
+   of the Trauma page.
+*/
+
+:is(section, div):has(> .trauma-impact-visual) {
+
+    box-sizing: border-box !important;
+
+    width: 100vw !important;
+    max-width: none !important;
+
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    transform: none !important;
+
+    padding:
+        76px
+        clamp(55px, 8vw, 150px)
+        76px !important;
+
+    min-height: 0 !important;
+    height: auto !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1.1fr)
+        minmax(390px, .9fr) !important;
+
+    grid-template-rows:
+        repeat(5, auto) !important;
+
+    column-gap:
+        clamp(55px, 6vw, 100px) !important;
+
+    row-gap:
+        17px !important;
+
+    align-items: center !important;
+
+    /*
+       NO giant outer card
+    */
+
+    border: 0 !important;
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    background:
+        radial-gradient(
+            circle at 82% 44%,
+            rgba(223,166,76,.035),
+            transparent 27%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(5,25,25,.30),
+            transparent 47%
+        ) !important;
+
+    overflow: hidden !important;
+    position: relative !important;
+}
+
+
+/* Subtle separator between sections */
+
+:is(section, div):has(> .trauma-impact-visual)::after {
+
+    content: "" !important;
+
+    position: absolute !important;
+
+    bottom: 0 !important;
+    left: clamp(55px, 8vw, 150px) !important;
+    right: clamp(55px, 8vw, 150px) !important;
+
+    height: 1px !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(223,166,76,.35),
+            rgba(223,166,76,.07),
+            transparent
+        ) !important;
+
+}
+
+
+/* ==========================================================
+   LEFT EDITORIAL CONTENT
+   ========================================================== */
+
+:is(section, div):has(> .trauma-impact-visual)
+> *:not(.trauma-impact-visual) {
+
+    grid-column: 1 !important;
+
+    width: 100% !important;
+    max-width: 720px !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+
+/* Eyebrow */
+
+:is(section, div):has(> .trauma-impact-visual)
+.section-label,
+
+:is(section, div):has(> .trauma-impact-visual)
+.eyebrow {
+
+    color: #dfa64c !important;
+
+    font-size: 14px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: .25em !important;
+
+    text-transform: uppercase !important;
+}
+
+
+/* Main heading */
+
+:is(section, div):has(> .trauma-impact-visual)
+h2 {
+
+    width: 100% !important;
+    max-width: 720px !important;
+
+    margin:
+        15px 0 27px !important;
+
+    font-size:
+        clamp(44px, 4.1vw, 66px) !important;
+
+    line-height:
+        1.04 !important;
+
+    letter-spacing:
+        -.025em !important;
+
+    color:
+        #f1ede5 !important;
+}
+
+
+/* Paragraphs */
+
+:is(section, div):has(> .trauma-impact-visual)
+p {
+
+    max-width:
+        700px !important;
+
+    margin:
+        0 0 20px !important;
+
+    font-size:
+        clamp(17px, 1.25vw, 20px) !important;
+
+    line-height:
+        1.7 !important;
+
+    color:
+        rgba(241,237,229,.79) !important;
+}
+
+
+/* ==========================================================
+   RIGHT FEATURE PANEL
+   ========================================================== */
+
+:is(section, div):has(> .trauma-impact-visual)
+> .trauma-impact-visual {
+
+    grid-column:
+        2 !important;
+
+    grid-row:
+        1 / span 5 !important;
+
+    align-self:
+        center !important;
+
+    justify-self:
+        end !important;
+
+    box-sizing:
+        border-box !important;
+
+    width:
+        100% !important;
+
+    max-width:
+        510px !important;
+
+    min-width:
+        0 !important;
+
+    margin:
+        0 !important;
+
+    padding:
+        38px 40px !important;
+
+    position:
+        relative !important;
+
+    overflow:
+        hidden !important;
+
+    border:
+        1px solid rgba(223,166,76,.34) !important;
+
+    border-radius:
+        22px !important;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,14,14,.98),
+            rgba(10,14,13,.98)
+        ) !important;
+
+    box-shadow:
+        0 24px 55px rgba(0,0,0,.28) !important;
+}
+
+
+/* Decorative rings stay INSIDE right panel */
+
+.trauma-impact-visual::before {
+
+    content: "" !important;
+
+    position:
+        absolute !important;
+
+    width:
+        210px !important;
+
+    height:
+        210px !important;
+
+    right:
+        -68px !important;
+
+    top:
+        -72px !important;
+
+    border-radius:
+        50% !important;
+
+    border:
+        1px solid rgba(223,166,76,.14) !important;
+
+    box-shadow:
+        0 0 0 46px rgba(41,110,104,.035),
+        0 0 0 92px rgba(223,166,76,.025) !important;
+
+    pointer-events:
+        none !important;
+}
+
+
+/* Panel label */
+
+.trauma-impact-visual
+.impact-visual-label {
+
+    display:
+        block !important;
+
+    position:
+        relative !important;
+
+    z-index:
+        2 !important;
+
+    margin-bottom:
+        25px !important;
+
+    color:
+        #dfa64c !important;
+
+    font-size:
+        12px !important;
+
+    font-weight:
+        700 !important;
+
+    letter-spacing:
+        .22em !important;
+
+    text-transform:
+        uppercase !important;
+}
+
+
+/* Path */
+
+.trauma-impact-visual
+.impact-path {
+
+    position:
+        relative !important;
+
+    z-index:
+        2 !important;
+
+    width:
+        100% !important;
+
+    display:
+        grid !important;
+
+    gap:
+        0 !important;
+}
+
+
+/* Final statement */
+
+.trauma-impact-visual
+.impact-statement {
+
+    position:
+        relative !important;
+
+    z-index:
+        2 !important;
+
+    margin-top:
+        25px !important;
+
+    padding-top:
+        22px !important;
+
+    border-top:
+        1px solid rgba(223,166,76,.18) !important;
+
+    color:
+        rgba(241,237,229,.88) !important;
+
+    font-family:
+        Georgia, serif !important;
+
+    font-style:
+        italic !important;
+
+    line-height:
+        1.55 !important;
+}
+
+
+/* ==========================================================
+   SECTION AFTER IT
+   ========================================================== */
+
+:is(section, div):has(> .trauma-impact-visual)
++ section {
+
+    margin-top:
+        0 !important;
+
+    padding-top:
+        65px !important;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1050px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+
+        padding:
+            58px 38px !important;
+
+        grid-template-columns:
+            1fr !important;
+
+        grid-template-rows:
+            auto !important;
+
+        gap:
+            38px !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    > *:not(.trauma-impact-visual),
+
+    :is(section, div):has(> .trauma-impact-visual)
+    > .trauma-impact-visual {
+
+        grid-column:
+            1 !important;
+
+        grid-row:
+            auto !important;
+
+        width:
+            100% !important;
+
+        max-width:
+            none !important;
+
+        justify-self:
+            stretch !important;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 600px) {
+
+    :is(section, div):has(> .trauma-impact-visual) {
+
+        padding:
+            44px 22px !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    h2 {
+
+        font-size:
+            clamp(36px, 11vw, 48px) !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    p {
+
+        font-size:
+            16px !important;
+
+        line-height:
+            1.65 !important;
+    }
+
+    :is(section, div):has(> .trauma-impact-visual)
+    > .trauma-impact-visual {
+
+        padding:
+            28px 23px !important;
+
+        border-radius:
+            18px !important;
+    }
+
+}
+
+</style>
+<style id="TRAUMA_HELP_GAP_FINAL">
+
+/*
+   Pull HOW COACHING CAN HELP upward.
+   Only this exact section is affected.
+*/
+
+[data-trauma-help-section="true"] {
+
+    margin-top: 0 !important;
+
+    padding-top: 48px !important;
+
+    border-top: 0 !important;
+}
+
+
+/* Keep the eyebrow neatly positioned */
+
+[data-trauma-help-section="true"]
+.section-label,
+
+[data-trauma-help-section="true"]
+.eyebrow {
+
+    margin-top: 0 !important;
+}
+
+
+/* Desktop spacing should feel connected, not cramped */
+
+@media (min-width: 1051px) {
+
+    [data-trauma-help-section="true"] {
+
+        padding-top: 52px !important;
+        padding-bottom: 70px !important;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 1050px) {
+
+    [data-trauma-help-section="true"] {
+
+        padding-top: 38px !important;
+    }
+
+}
+
+</style>
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<!-- RF_SUBPAGE_BREADCRUMB_SCHEMA_START -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://reikifish.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Coaching",
+      "item": "https://reikifish.com/coaching.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Trauma Informed Coaching",
+      "item": "https://reikifish.com/trauma-coaching.html"
+    }
+  ]
+}
+</script>
+<!-- RF_SUBPAGE_BREADCRUMB_SCHEMA_END -->
+<!-- TRAUMA_BREADCRUMB_FINAL_STYLE_START -->
+<style id="trauma-breadcrumb-final-style">
+  body:has(main.trauma-page) > header.inner-header {
+    width: 100% !important;
+    height: 108px !important;
+    min-height: 108px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body:has(main.trauma-page) > header.inner-header + main.trauma-page {
+    position: relative !important;
+    top: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: hidden !important;
+  }
+
+  main.trauma-page > .rf-coaching-subpage-breadcrumb {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 100 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 66px !important;
+    margin: 0 !important;
+    padding: 10px clamp(1.5rem, 4vw, 4.5rem) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(226, 172, 66, 0.28) !important;
+    background: #080d0d !important;
+    transform: none !important;
+  }
+
+  main.trauma-page
+  > .rf-coaching-subpage-breadcrumb
+  .rf-coaching-subpage-breadcrumb__inner {
+    width: 100% !important;
+    max-width: 1680px !important;
+    min-height: 46px !important;
+    margin: 0 auto !important;
+  }
+
+  main.trauma-page > .trauma-banner-v7 {
+    position: relative !important;
+    top: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    transform: none !important;
+  }
+
+  @media (max-width: 991.98px) {
+    body:has(main.trauma-page) > header.inner-header {
+      height: 84px !important;
+      min-height: 84px !important;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    body:has(main.trauma-page) > header.inner-header {
+      height: 76px !important;
+      min-height: 76px !important;
+    }
+
+    main.trauma-page > .rf-coaching-subpage-breadcrumb {
+      min-height: 58px !important;
+      padding: 8px 1rem !important;
+    }
+  }
+</style>
+<!-- TRAUMA_BREADCRUMB_FINAL_STYLE_END -->
+<!-- TRAUMA_PREMIUM_ART_STYLE_START -->
+<style id="trauma-premium-art-style">
+  .trauma-banner-v7 .trauma-premium-journey-art {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    opacity: 1 !important;
+  }
+
+  .trauma-banner-v7 .trauma-premium-journey-art svg {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .trauma-banner-v7 .trauma-banner-v7-inner {
+    position: relative !important;
+    z-index: 3 !important;
+  }
+
+  .trauma-banner-v7 .trauma-banner-shape {
+    display: none !important;
+  }
+
+  @media (max-width: 767.98px) {
+    .trauma-banner-v7 .trauma-premium-journey-art {
+      opacity: 0.72 !important;
+    }
+  }
+</style>
+<!-- TRAUMA_PREMIUM_ART_STYLE_END -->
+</head>
+  <body class="coaching-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link active" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+<main class="trauma-page">
+<!-- RF_SUBPAGE_BREADCRUMB_START -->
+<nav class="rf-coaching-subpage-breadcrumb" aria-label="Breadcrumb">
+  <div class="rf-coaching-subpage-breadcrumb__inner">
+    <a
+      class="rf-coaching-subpage-breadcrumb__hub"
+      href="coaching.html"
+    >
+      <span
+        class="rf-coaching-subpage-breadcrumb__back"
+        aria-hidden="true"
+      >&larr;</span>
+      <span>Coaching</span>
+    </a>
+
+    <span
+      class="rf-coaching-subpage-breadcrumb__separator"
+      aria-hidden="true"
+    >&rsaquo;</span>
+
+    <span
+      class="rf-coaching-subpage-breadcrumb__current"
+      aria-current="page"
+    >Trauma Informed Coaching</span>
+  </div>
+</nav>
+<!-- RF_SUBPAGE_BREADCRUMB_END -->
+
+<section class="trauma-impact-banner trauma-banner-v7">
+
+
+<!-- TRAUMA_PREMIUM_ART_START -->
+<div class="trauma-banner-editorial-art trauma-premium-journey-art" aria-hidden="true">
+  <svg
+    viewBox="0 0 1600 420"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid slice"
+    focusable="false"
+  >
+    <defs>
+      <linearGradient id="journeyBackground" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#0b302f" stop-opacity="0.72"/>
+        <stop offset="45%" stop-color="#111a1a" stop-opacity="0.08"/>
+        <stop offset="100%" stop-color="#4b2d14" stop-opacity="0.58"/>
+      </linearGradient>
+
+      <linearGradient id="journeyLine" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#3d817b" stop-opacity="0.14"/>
+        <stop offset="46%" stop-color="#8d8a76" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#e0a54b" stop-opacity="0.8"/>
+      </linearGradient>
+
+      <linearGradient id="journeyPath" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#67aaa3" stop-opacity="0.1"/>
+        <stop offset="48%" stop-color="#b2a46f" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#efb34f" stop-opacity="0.92"/>
+      </linearGradient>
+
+      <radialGradient id="quietCentre">
+        <stop offset="0%" stop-color="#d8a34e" stop-opacity="0.16"/>
+        <stop offset="52%" stop-color="#34716c" stop-opacity="0.07"/>
+        <stop offset="100%" stop-color="#101718" stop-opacity="0"/>
+      </radialGradient>
+
+      <radialGradient id="goldPoint">
+        <stop offset="0%" stop-color="#ffd47b" stop-opacity="1"/>
+        <stop offset="35%" stop-color="#e2a64c" stop-opacity="0.9"/>
+        <stop offset="100%" stop-color="#e2a64c" stop-opacity="0"/>
+      </radialGradient>
+
+      <filter id="softJourneyGlow" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="13"/>
+      </filter>
+
+      <filter id="smallJourneyGlow" x="-100%" y="-100%" width="300%" height="300%">
+        <feGaussianBlur stdDeviation="5"/>
+      </filter>
+
+      <filter id="journeyTexture" x="0" y="0" width="100%" height="100%">
+        <feTurbulence
+          type="fractalNoise"
+          baseFrequency="0.65"
+          numOctaves="2"
+          seed="8"
+          stitchTiles="stitch"
+        />
+        <feColorMatrix type="saturate" values="0"/>
+        <feComponentTransfer>
+          <feFuncA type="table" tableValues="0 0.035"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+
+    <rect width="1600" height="420" fill="url(#journeyBackground)"/>
+    <rect width="1600" height="420" filter="url(#journeyTexture)" opacity="0.4"/>
+
+    <!-- A quiet regulated centre behind the message -->
+    <ellipse
+      cx="820"
+      cy="218"
+      rx="520"
+      ry="250"
+      fill="url(#quietCentre)"
+    />
+
+    <!-- Fragmented patterns: present but deliberately subtle -->
+    <g
+      fill="none"
+      stroke="#4e9690"
+      stroke-linecap="round"
+      opacity="0.2"
+    >
+      <path d="M-30 88 C70 44 142 128 228 79 C286 46 330 69 378 42" stroke-width="1.2"/>
+      <path d="M-45 142 C32 101 89 182 167 141 C236 105 276 161 351 111" stroke-width="1"/>
+      <path d="M-20 217 C62 179 109 237 182 207 C248 179 302 211 373 164" stroke-width="1.1"/>
+      <path d="M-52 285 C36 231 92 319 171 273 C235 236 289 290 359 249" stroke-width="0.9"/>
+      <path d="M-30 352 C52 309 118 373 191 332 C248 300 308 333 387 295" stroke-width="1"/>
+    </g>
+
+    <!-- Small incomplete shapes suggest disrupted patterns -->
+    <g fill="none" stroke="#63a19b" opacity="0.14">
+      <path d="M61 84 L111 59 L157 93 L145 145 L96 163 L54 130 Z"/>
+      <path d="M94 76 L129 99 L116 137 L77 139 L64 105 Z"/>
+      <path d="M204 246 L240 219 L279 239 L284 280 L250 307 L210 289 Z"/>
+      <path d="M225 248 L254 241 L271 266 L253 291 L224 279 Z"/>
+    </g>
+
+    <!-- Lines gradually begin to converge -->
+    <g fill="none" stroke="url(#journeyLine)" stroke-linecap="round">
+      <path
+        d="M190 342 C360 290 421 329 548 278 C655 235 709 255 808 221"
+        stroke-width="1.2"
+        opacity="0.38"
+      />
+      <path
+        d="M267 99 C411 151 466 128 574 174 C654 208 730 211 808 221"
+        stroke-width="1.05"
+        opacity="0.3"
+      />
+      <path
+        d="M154 221 C320 204 429 250 555 230 C650 215 720 222 808 221"
+        stroke-width="1.1"
+        opacity="0.34"
+      />
+    </g>
+
+    <!-- The still point: not an endpoint, but a place of choice -->
+    <circle
+      cx="808"
+      cy="221"
+      r="78"
+      fill="none"
+      stroke="#d6a04a"
+      stroke-width="1"
+      opacity="0.1"
+    />
+    <circle
+      cx="808"
+      cy="221"
+      r="48"
+      fill="none"
+      stroke="#d6a04a"
+      stroke-width="1"
+      opacity="0.14"
+    />
+    <circle
+      cx="808"
+      cy="221"
+      r="6"
+      fill="#e3a84e"
+      opacity="0.72"
+    />
+    <circle
+      cx="808"
+      cy="221"
+      r="25"
+      fill="url(#goldPoint)"
+      filter="url(#softJourneyGlow)"
+      opacity="0.55"
+    />
+
+    <!-- One clearer path continues forward -->
+    <path
+      d="M808 221 C936 221 1019 184 1120 197 C1234 211 1321 175 1440 118 C1502 88 1552 79 1632 65"
+      fill="none"
+      stroke="url(#journeyPath)"
+      stroke-width="2"
+      stroke-linecap="round"
+      opacity="0.72"
+    />
+
+    <path
+      d="M808 227 C936 229 1030 201 1125 210 C1242 222 1339 190 1449 137 C1511 108 1565 95 1630 87"
+      fill="none"
+      stroke="#e6ad53"
+      stroke-width="0.7"
+      stroke-linecap="round"
+      opacity="0.22"
+    />
+
+    <!-- Forward markers become calmer and more deliberate -->
+    <g fill="#e3a84e">
+      <circle cx="1042" cy="198" r="3" opacity="0.42"/>
+      <circle cx="1216" cy="207" r="4" opacity="0.56"/>
+      <circle cx="1373" cy="153" r="4.5" opacity="0.7"/>
+      <circle cx="1504" cy="94" r="5" opacity="0.88"/>
+    </g>
+
+    <g fill="url(#goldPoint)" filter="url(#smallJourneyGlow)">
+      <circle cx="1216" cy="207" r="16" opacity="0.34"/>
+      <circle cx="1373" cy="153" r="18" opacity="0.46"/>
+      <circle cx="1504" cy="94" r="22" opacity="0.58"/>
+    </g>
+
+    <!-- Quiet horizon and final open space -->
+    <path
+      d="M1015 321 C1180 289 1326 301 1464 263 C1520 248 1571 247 1625 252"
+      fill="none"
+      stroke="#d3a052"
+      stroke-width="0.8"
+      opacity="0.18"
+    />
+
+    <path
+      d="M1115 351 C1262 325 1400 331 1532 305 C1570 298 1602 297 1635 300"
+      fill="none"
+      stroke="#d3a052"
+      stroke-width="0.7"
+      opacity="0.11"
+    />
+  </svg>
+</div>
+<!-- TRAUMA_PREMIUM_ART_END -->
+
+
+    <div class="trauma-banner-shape trauma-shape-a" aria-hidden="true"></div>
+    <div class="trauma-banner-shape trauma-shape-b" aria-hidden="true"></div>
+    <div class="trauma-banner-shape trauma-shape-c" aria-hidden="true"></div>
+
+    <div class="trauma-banner-v7-inner">
+
+        <span class="trauma-banner-v7-label">
+            CLARITY &nbsp;&bull;&nbsp; CHOICE &nbsp;&bull;&nbsp; FORWARD
+        </span>
+
+        <h2>
+            <span>What happened matters.</span>
+            <strong>What happens next is yours to shape.</strong>
+        </h2>
+
+    </div>
+
+</section>
+
+
+<section class="trauma-hero">
+    <div class="trauma-hero-inner">
+
+        <div class="trauma-hero-copy">
+            <span class="trauma-eyebrow">TRAUMA-INFORMED COACHING</span>
+            <span class="trauma-gold-line"></span>
+
+            <h1>When the past keeps affecting the present.</h1>
+
+            <p class="trauma-hero-lead">
+                Difficult experiences do not always stay neatly in the past.
+                They can influence how we respond to pressure, relationships,
+                conflict, uncertainty and even the way we see ourselves.
+            </p>
+
+            <p>
+                Trauma-informed coaching creates a calm space to slow things
+                down, understand what is happening now and begin separating
+                present-day choices from patterns shaped by what has already
+                happened.
+            </p>
+
+            <p>
+                The aim is not to force disclosure or repeatedly revisit painful
+                experiences. We work with where you are today, what you need,
+                what you can influence and what a steadier way forward could
+                look like.
+            </p>
+
+            <a class="btn btn-gold trauma-hero-cta" href="contact.html">
+                Start a Conversation
+            </a>
+        </div>
+
+        <div class="trauma-hero-panel trauma-hero-panel-v4">
+
+    <span class="trauma-panel-label">
+        A CALMER STARTING POINT
+    </span>
+
+    <h2>
+        Understand the response before trying to change it.
+    </h2>
+
+    <p class="trauma-panel-intro">
+        When something has left you feeling unsettled, overwhelmed
+        or constantly on guard, the first step is not judgement.
+        It is understanding what is happening and what you need now.
+    </p>
+
+    <div class="trauma-panel-principles">
+
+        <div class="trauma-principle">
+            <span class="trauma-principle-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3 5 6v5c0 4.6 2.8 8 7 10 4.2-2 7-5.4 7-10V6l-7-3Z"/>
+                    <path d="m9.5 12 1.7 1.7 3.8-4"/>
+                </svg>
+            </span>
+
+            <div>
+                <strong>Safety</strong>
+                <small>Enough calm to think clearly.</small>
+            </div>
+        </div>
+
+
+        <div class="trauma-principle">
+            <span class="trauma-principle-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 12h12"/>
+                    <path d="m14 8 4 4-4 4"/>
+                    <path d="M6 6v12"/>
+                </svg>
+            </span>
+
+            <div>
+                <strong>Choice</strong>
+                <small>You decide what we explore.</small>
+            </div>
+        </div>
+
+
+        <div class="trauma-principle">
+            <span class="trauma-principle-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8"/>
+                    <path d="M12 8v4l3 2"/>
+                </svg>
+            </span>
+
+            <div>
+                <strong>Agency</strong>
+                <small>The next step remains yours.</small>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="trauma-panel-foot">
+        No pressure to tell your whole story. We start with
+        what is affecting your life today.
+    </p>
+
+</div>
+
+    </div>
+</section>
+
+
+<section class="trauma-understanding">
+    <div class="trauma-section-inner">
+
+        <div class="trauma-section-heading">
+            <span class="trauma-eyebrow">UNDERSTANDING THE IMPACT</span>
+            <span class="trauma-gold-line"></span>
+
+            <h2>Sometimes the reaction makes sense when you understand the history.</h2>
+
+            <p>
+                Difficult or overwhelming experiences can shape the way we
+                anticipate danger, interpret other people's behaviour, respond
+                to conflict and protect ourselves emotionally.
+            </p>
+
+            <p>
+                What once helped somebody cope can later become exhausting.
+                Hypervigilance, shutting down, overthinking, people pleasing,
+                difficulty trusting, strong reactions to conflict or constantly
+                preparing for the worst can all leave a person feeling as though
+                life is being lived in permanent defence.
+            </p>
+
+            <p>
+                Coaching provides room to notice those patterns without shame,
+                understand what may be keeping them active and identify where
+                greater choice can be created in the present.
+            </p>
+<div class="trauma-impact-visual">
+
+    <span class="impact-visual-label">FROM REACTION TO CHOICE</span>
+
+    <div class="impact-path">
+
+        <div class="impact-step">
+            <span class="impact-number">01</span>
+            <div>
+                <strong>Notice</strong>
+                <p>The response that appears automatically.</p>
+            </div>
+        </div>
+
+        <div class="impact-connector"></div>
+
+        <div class="impact-step">
+            <span class="impact-number">02</span>
+            <div>
+                <strong>Understand</strong>
+                <p>What shaped it and what may still be keeping it active.</p>
+            </div>
+        </div>
+
+        <div class="impact-connector"></div>
+
+        <div class="impact-step impact-step-final">
+            <span class="impact-number">03</span>
+            <div>
+                <strong>Choose</strong>
+                <p>Create space for a response that belongs to the present.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="impact-statement">
+        <span></span>
+        The past can explain a pattern without deciding what happens next.
+    </div>
+
+</div>
+        </div>
+
+    </div>
+</section>
+
+
+<section data-trauma-help-section="true" class="trauma-support-section">
+    <div class="trauma-section-inner">
+
+        <div class="trauma-support-intro">
+            <span class="trauma-eyebrow">HOW COACHING CAN HELP</span>
+            <span class="trauma-gold-line"></span>
+
+            <h2>From reacting automatically to responding with greater choice.</h2>
+
+            <p>
+                The work is practical, collaborative and paced around the
+                individual. There is no demand to tell your entire story before
+                you are ready.
+            </p>
+        </div>
+
+        <div class="trauma-card-grid">
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3 5 6v5c0 4.6 2.8 8 7 10 4.2-2 7-5.4 7-10V6l-7-3Z"/>
+                        <path d="m9.5 12 1.7 1.7 3.8-4"/>
+                    </svg>
+                </div>
+                <h3>Safety &amp; steadiness</h3>
+                <p>
+                    Creating enough calm to think clearly without being pushed,
+                    rushed or judged.
+                </p>
+            </article>
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="8"/>
+                        <path d="M12 8v4l3 2"/>
+                    </svg>
+                </div>
+                <h3>Understanding patterns</h3>
+                <p>
+                    Recognising repeated responses, triggers and behaviours
+                    without reducing everything to a label.
+                </p>
+            </article>
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 12h12"/>
+                        <path d="m14 8 4 4-4 4"/>
+                        <path d="M6 6v12"/>
+                    </svg>
+                </div>
+                <h3>Regaining choice</h3>
+                <p>
+                    Creating space between what happens and how you respond,
+                    so the past does not automatically decide the present.
+                </p>
+            </article>
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 20V9"/>
+                        <path d="M20 20V9"/>
+                        <path d="M4 12h16"/>
+                        <path d="M8 9V5"/>
+                        <path d="M16 9V5"/>
+                    </svg>
+                </div>
+                <h3>Stronger boundaries</h3>
+                <p>
+                    Understanding what belongs to you, what does not and where
+                    clearer limits may be needed.
+                </p>
+            </article>
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 12c2.2-4 4.7-4 7 0s4.8 4 9 0"/>
+                        <path d="M4 17c2.2-4 4.7-4 7 0s4.8 4 9 0"/>
+                    </svg>
+                </div>
+                <h3>Emotional regulation</h3>
+                <p>
+                    Developing practical ways to pause, regulate and regain
+                    perspective when emotions become overwhelming.
+                </p>
+            </article>
+
+            <article class="trauma-card">
+                <div class="trauma-card-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M5 19 19 5"/>
+                        <path d="M10 5h9v9"/>
+                    </svg>
+                </div>
+                <h3>Moving forward</h3>
+                <p>
+                    Turning understanding into manageable decisions and
+                    practical next steps that belong to you.
+                </p>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="trauma-process">
+    <div class="trauma-section-inner trauma-process-grid">
+
+        <div class="trauma-process-heading">
+            <span class="trauma-eyebrow">WORKING TOGETHER</span>
+            <span class="trauma-gold-line"></span>
+
+            <h2>You remain in control of the conversation.</h2>
+
+            <p>
+                Trauma-informed coaching is collaborative. You decide what
+                feels relevant, what you are comfortable discussing and what
+                you want to work towards.
+            </p>
+
+            <p>
+                My role is to help you slow down the noise, explore what is
+                happening from different perspectives and identify realistic
+                changes that support greater clarity, stability and agency.
+            </p>
+        </div>
+
+        <div class="trauma-process-list">
+
+            <div class="trauma-process-item">
+                <span>01</span>
+                <div>
+                    <h3>Understand where you are</h3>
+                    <p>We begin with what is happening in your life now.</p>
+                </div>
+            </div>
+
+            <div class="trauma-process-item">
+                <span>02</span>
+                <div>
+                    <h3>Recognise what is keeping you there</h3>
+                    <p>We explore patterns, pressures and recurring responses.</p>
+                </div>
+            </div>
+
+            <div class="trauma-process-item">
+                <span>03</span>
+                <div>
+                    <h3>Separate the past from the present</h3>
+                    <p>We identify where old protective responses may still be operating.</p>
+                </div>
+            </div>
+
+            <div class="trauma-process-item">
+                <span>04</span>
+                <div>
+                    <h3>Choose the next step</h3>
+                    <p>We turn insight into practical, manageable action.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="trauma-boundary-section">
+    <div class="trauma-section-inner">
+
+        <div class="trauma-boundary-panel">
+
+            <div>
+                <span class="trauma-eyebrow">COACHING &amp; THERAPY</span>
+                <h2>Knowing when specialist support is needed matters.</h2>
+
+                <p>
+                    Trauma-informed coaching is not psychotherapy and does not
+                    diagnose or treat PTSD or other mental-health conditions.
+                    Where somebody needs trauma treatment, crisis support or
+                    specialist mental-health care, an appropriately qualified
+                    clinical professional or NHS service is the right place for
+                    that work.
+                </p>
+
+                <p>
+                    Coaching can instead focus on present-day understanding,
+                    personal agency, boundaries, decision-making and practical
+                    movement forward.
+                </p>
+            </div>
+
+            <div class="trauma-boundary-mark trauma-boundary-mark-v2">
+
+    <span class="trauma-boundary-side-label">
+        WHAT COACHING KEEPS IN VIEW
+    </span>
+
+    <div class="trauma-boundary-track">
+
+        <article class="trauma-boundary-value">
+
+            <div class="trauma-boundary-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="7"/>
+                    <path d="M12 2v3"/>
+                    <path d="M12 19v3"/>
+                    <path d="M2 12h3"/>
+                    <path d="M19 12h3"/>
+                    <circle cx="12" cy="12" r="2"/>
+                </svg>
+            </div>
+
+            <div>
+                <h3>Clarity</h3>
+                <p>
+                    Understanding what coaching can support,
+                    and recognising when something needs specialist care.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="trauma-boundary-value">
+
+            <div class="trauma-boundary-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5v14"/>
+                    <path d="M5 12h7"/>
+                    <path d="m9 8 4 4-4 4"/>
+                    <path d="M13 7h6"/>
+                    <path d="M13 17h6"/>
+                </svg>
+            </div>
+
+            <div>
+                <h3>Choice</h3>
+                <p>
+                    Choosing the kind of support that best fits
+                    what you are experiencing and what you need now.
+                </p>
+            </div>
+
+        </article>
+
+
+        <article class="trauma-boundary-value">
+
+            <div class="trauma-boundary-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 3v18"/>
+                    <path d="M5 8h14"/>
+                    <path d="M7 8c0 4 2 6 5 6s5-2 5-6"/>
+                    <circle cx="12" cy="5" r="2"/>
+                </svg>
+            </div>
+
+            <div>
+                <h3>Agency</h3>
+                <p>
+                    Remaining informed, involved and in control
+                    of the decisions you make about your next step.
+                </p>
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="trauma-final-cta">
+    <div class="trauma-final-inner">
+
+        <span class="trauma-eyebrow">TAKE THE NEXT STEP</span>
+        <span class="trauma-gold-line trauma-gold-line-centred"></span>
+
+        <h2>You do not have to have everything worked out before we talk.</h2>
+
+        <p>
+            An initial conversation is simply an opportunity to explain what is
+            happening, ask questions and decide whether this style of coaching
+            feels right for you.
+        </p>
+
+        <a href="contact.html" class="btn btn-gold">
+            Start a Conversation
+        </a>
+
+        <small>Private &nbsp;?&nbsp; Calm &nbsp;?&nbsp; No pressure</small>
+
+    </div>
+</section>
+
+</main>
+
+<footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  <!-- RF_MEGA_MENU_START -->
+<div class="rf-mm-backdrop" id="rf-mega-backdrop" aria-hidden="true"></div>
+<aside class="rf-mega-menu" id="rf-mega-menu" aria-label="Explore ReikiFish" aria-hidden="true">
+  <div class="rf-mm-shell">
+    <button class="rf-mm-close" type="button" aria-label="Close menu">&#10005;</button>
+    <section class="rf-mm-panel" data-panel="about" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">The person and purpose</p><h2>About ReikiFish</h2></div><a href="/about.html">Explore the story &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/about.html"><span class="rf-mm-icon">A</span><span class="rf-mm-copy"><strong>About Andy</strong><span>Lived experience, professional background and the thinking behind ReikiFish.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">B</span><span class="rf-mm-copy"><strong>Books and writing</strong><span>Explore Walking the Grey and writing grounded in reflection and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">K</span><span class="rf-mm-copy"><strong>Evidence-led learning</strong><span>Clear psychology and emotional-health guides in plain English.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Contact</strong><span>Ask a question or make an initial enquiry in confidence.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="books" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Depth, reflection and recovery</p><h2>Books by Andy Fish</h2></div><a href="/books.html">View all books &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">W</span><span class="rf-mm-copy"><strong>Walking the Grey</strong><span>A journey through alienation, abuse, self-understanding and reclamation.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>The Book of DARVO</strong><span>Updates and insights into denial, attack and reversal of victim and offender.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Stay regulated when another person appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">N</span><span class="rf-mm-copy"><strong>News and enquiries</strong><span>Follow publication updates or ask about the writing.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="coaching" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Calm, structured support</p><h2>Coaching pathways</h2></div><a href="/coaching.html">Explore coaching &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/trauma-coaching.html"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma coaching</strong><span>Build steadiness, choice and practical ways to move forward.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/parental-alienation-coaching.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Structured support through grief, uncertainty and difficult dynamics.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/team-leadership-coaching.html"><span class="rf-mm-icon">L</span><span class="rf-mm-copy"><strong>Team leadership</strong><span>Clearer communication, healthier teams and grounded leadership.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/coaching.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Find the right route</strong><span>Compare the coaching pathways and understand what support includes.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="knowledge" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Evidence led, plain English</p><h2>Explore the Knowledge Hub</h2></div><a href="/knowledge.html">View all guides &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Personality"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Personality</strong><span>Traits, patterns and personality disorders without careless labelling.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Trauma"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma</strong><span>Survival responses, dissociation, memory and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Manipulation"><span class="rf-mm-icon">M</span><span class="rf-mm-copy"><strong>Manipulation</strong><span>Gaslighting, DARVO and coercive interpersonal patterns.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Relationships"><span class="rf-mm-icon">R</span><span class="rf-mm-copy"><strong>Relationships</strong><span>Attachment, boundaries, trust, conflict and repair.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Emotional%20Health"><span class="rf-mm-icon">E</span><span class="rf-mm-copy"><strong>Emotional health</strong><span>Regulation, resilience, self-awareness and self-compassion.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Parental%20Alienation"><span class="rf-mm-icon">F</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Child-focused explanations of harmful relational behaviours.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge/what-is-complex-ptsd.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Complex PTSD</strong><span>An in-depth guide to prolonged trauma and its effects.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">A-Z</span><span class="rf-mm-copy"><strong>Psychology A to Z</strong><span>Browse the complete library of definitions and guides.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="blog" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Ideas, experience and reflection</p><h2>From the ReikiFish blog</h2></div><a href="/blog.html">View all articles &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Staying regulated when someone appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Psychology</strong><span>Evidence-informed perspectives on behaviour and emotional life.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>DARVO and manipulation</strong><span>Patterns of denial, blame reversal and missing context.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">U</span><span class="rf-mm-copy"><strong>Latest updates</strong><span>New writing, resources and project developments.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+  </div>
+</aside>
+<!-- RF_MEGA_MENU_END -->
+<script src="/assets/js/mega-menu.js?v=20260813-mm4"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+> booking:dev
+> wrangler pages dev . --port 8000
+
+
+ ⛅️ wrangler 4.123.0
+────────────────────
+✨ Compiled Worker successfully
+Using secrets defined in .dev.vars
+Your Worker has access to the following bindings:
+Binding                                                                    Resource                  Mode
+env.BOOKING_DB (reikifish-bookings-local)                                  D1 Database               local
+env.CF_PAGES ("1")                                                         Environment Variable      local
+env.CF_PAGES_BRANCH ("HEAD")                                               Environment Variable      local
+env.CF_PAGES_COMMIT_SHA ("25a07c54e04f206fdf9e495e5c5af59f83929...")       Environment Variable      local
+env.CF_PAGES_URL ("https://25a07c5.reikifish-website.pag...")              Environment Variable      local
+env.PAYPAL_ENV ("(hidden)")                                                Environment Variable      local
+env.PAYPAL_CLIENT_ID ("(hidden)")                                          Environment Variable      local
+env.PAYPAL_CLIENT_SECRET ("(hidden)")                                      Environment Variable      local
+env.PAYPAL_WEBHOOK_ID ("(hidden)")                                         Environment Variable      local
+env.BOOKING_ADMIN_TOKEN ("(hidden)")                                       Environment Variable      local
+env.BOOKING_EMAIL ("(hidden)")                                             Environment Variable      local
+env.MAILGUN_DOMAIN ("(hidden)")                                            Environment Variable      local
+env.MAILGUN_API_KEY ("(hidden)")                                           Environment Variable      local
+
+⎔ Starting local server...
+[wrangler:info] Ready on http://127.0.0.1:8000
+[wrangler:info] GET /api/booking/config 200 OK (28ms)
+[wrangler:info] GET /booking.html 308 Permanent Redirect (20ms)
+[wrangler:info] GET /booking 200 OK (16ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (28ms)
+[wrangler:info] GET /assets/css/booking.css 304 Not Modified (30ms)
+[wrangler:info] GET /assets/images/coaching.webp 304 Not Modified (38ms)
+[wrangler:info] GET /assets/js/booking.js 304 Not Modified (24ms)
+[wrangler:info] GET /api/booking/config 200 OK (6ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (13ms)
+[wrangler:info] GET /api/booking/availability 200 OK (129ms)
+[wrangler:info] GET /booking 304 Not Modified (15ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (15ms)
+[wrangler:info] GET /assets/css/booking.css 304 Not Modified (33ms)
+[wrangler:info] GET /assets/images/coaching.webp 304 Not Modified (38ms)
+[wrangler:info] GET /assets/js/booking.js 304 Not Modified (36ms)
+[wrangler:info] GET /api/booking/config 200 OK (5ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (10ms)
+[wrangler:info] GET /api/booking/availability 200 OK (10ms)
+[wrangler:info] GET /api/booking/availability 200 OK (87ms)
+[wrangler:info] POST /api/booking/create-order 200 OK (1053ms)
+[wrangler:info] GET /booking 200 OK (15ms)
+[wrangler:info] GET /assets/css/style.css 200 OK (17ms)
+[wrangler:info] GET /assets/css/booking.css 200 OK (30ms)
+[wrangler:info] GET /assets/js/booking.js 200 OK (32ms)
+[wrangler:info] GET /assets/images/coaching.webp 200 OK (34ms)
+[wrangler:info] GET /api/booking/config 200 OK (7ms)
+[wrangler:info] GET /favicon.ico 200 OK (9ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (15ms)
+[wrangler:info] GET /api/booking/availability 200 OK (86ms)
+[wrangler:info] POST /api/booking/create-order 200 OK (1153ms)
+[wrangler:info] GET /booking 200 OK (15ms)
+[wrangler:info] GET /assets/css/style.css 304 Not Modified (18ms)
+[wrangler:info] GET /assets/css/booking.css 200 OK (26ms)
+[wrangler:info] GET /assets/js/booking.js 200 OK (17ms)
+[wrangler:info] GET /api/booking/config 200 OK (6ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (8ms)
+[wrangler:info] GET /favicon.ico 304 Not Modified (8ms)
+[wrangler:info] GET /api/booking/availability 200 OK (80ms)
+[wrangler:info] POST /api/booking/create-order 200 OK (943ms)
+[wrangler:info] POST /api/booking/capture-order 200 OK (2348ms)

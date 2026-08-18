@@ -1,0 +1,1229 @@
+N<!DOCTYPE html>
+<html lang="en">
+  <head>
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-mm5">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trauma-Informed Coaching & Psychology Insights | Andy Fish</title>
+    <meta
+      name="description"
+      content="Explore trauma-informed coaching, psychology insights and Walking the Grey. Andy Fish helps people navigate change, resilience and personal growth."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811-support-nav-v2" />
+      <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+<style id="reikifish-home-equal-gaps">
+/* HOMEPAGE EQUAL-GAP RULES START */
+
+/*
+   Sections retain their own background and internal layouts.
+   Their outer vertical spacing is replaced by one consistent gap.
+*/
+
+body:has(#rf-support-feature) main {
+    --home-block-gap: 64px;
+}
+
+/* Remove the causes of the excessive empty areas. */
+body:has(#rf-support-feature) main > section {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+   Standardise the outer space between every direct section.
+   Half above plus half below produces exactly 64px between blocks.
+   The first homepage section is excluded to preserve the hero.
+*/
+body:has(#rf-support-feature) main > section:not(:first-child) {
+    padding-top: calc(var(--home-block-gap) / 2) !important;
+    padding-bottom: calc(var(--home-block-gap) / 2) !important;
+}
+
+/*
+   The Support Finder's original section padding is overridden,
+   while the card's internal padding remains unchanged.
+*/
+body:has(#rf-support-feature) main > #rf-support-feature {
+    padding-top: calc(var(--home-block-gap) / 2) !important;
+    padding-right: clamp(16px, 3vw, 32px) !important;
+    padding-bottom: calc(var(--home-block-gap) / 2) !important;
+    padding-left: clamp(16px, 3vw, 32px) !important;
+}
+
+/* Prevent content margins from creating extra space at section edges. */
+body:has(#rf-support-feature) main > section:not(:first-child) > :first-child {
+    margin-top: 0 !important;
+}
+
+body:has(#rf-support-feature) main > section:not(:first-child) > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Keep all main block containers centred consistently. */
+body:has(#rf-support-feature) main > section > :is(
+    .container,
+    .section-container,
+    .content-container,
+    .section-inner,
+    .inner,
+    .wrapper,
+    .wrap
+) {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+/* Equalise cards only within their own rows. */
+body:has(#rf-support-feature) main :is(
+    .card-grid,
+    .feature-grid,
+    .services-grid,
+    .testimonial-grid,
+    .testimonials-grid,
+    .topics-grid,
+    .patterns-grid
+) {
+    align-items: stretch !important;
+}
+
+body:has(#rf-support-feature) main :is(
+    .card-grid,
+    .feature-grid,
+    .services-grid,
+    .testimonial-grid,
+    .testimonials-grid,
+    .topics-grid,
+    .patterns-grid
+) > * {
+    height: 100%;
+}
+
+/* Tablet: slightly tighter but still equal. */
+@media (max-width: 900px) {
+    body:has(#rf-support-feature) main {
+        --home-block-gap: 48px;
+    }
+}
+
+/* Mobile: consistent compact spacing between stacked blocks. */
+@media (max-width: 600px) {
+    body:has(#rf-support-feature) main {
+        --home-block-gap: 36px;
+    }
+
+    body:has(#rf-support-feature) main > #rf-support-feature {
+        padding-right: 14px !important;
+        padding-left: 14px !important;
+    }
+}
+
+/* HOMEPAGE EQUAL-GAP RULES END */
+</style>
+<style id="reikifish-hero-gap-fix">
+/* HERO TO MEET ANDY EQUAL-GAP FIX */
+
+body:has(#rf-support-feature) .home-hero,
+body:has(#rf-support-feature) header .home-hero {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+/*
+   Remove surplus space at the bottom of the hero.
+   Meet Andy supplies half of the shared gap.
+*/
+body:has(#rf-support-feature) header .home-hero {
+    padding-bottom: 32px !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+   Meet Andy is the first section in main and was excluded from
+   the earlier rule. Give it the other half of the 64px gap.
+*/
+body:has(#rf-support-feature) main > #meet-andy {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+}
+
+body:has(#rf-support-feature) main > #meet-andy > :first-child {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+    body:has(#rf-support-feature) header .home-hero {
+        padding-bottom: 24px !important;
+    }
+
+    body:has(#rf-support-feature) main > #meet-andy {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body:has(#rf-support-feature) header .home-hero {
+        padding-bottom: 18px !important;
+    }
+
+    body:has(#rf-support-feature) main > #meet-andy {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+    }
+}
+</style>
+<style id="reikifish-balanced-navigation">
+/*
+   Balanced homepage navigation:
+   96px desktop bar, clearly visible centred logo and safe hero clearance.
+   No transforms affect the hero or later sections.
+*/
+
+@media (min-width: 992px) {
+    body.home-page .site-nav.navbar {
+        height: 96px !important;
+        min-height: 96px !important;
+        padding: 0 28px !important;
+    }
+
+    body.home-page .site-nav > .container,
+    body.home-page .site-nav > .container-fluid {
+        height: 96px !important;
+        min-height: 96px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: center !important;
+    }
+
+    body.home-page .site-nav .navbar-brand {
+        display: flex !important;
+        flex: 0 0 260px !important;
+        width: 260px !important;
+        height: 96px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+    }
+
+    body.home-page .site-nav .site-logo {
+        display: block !important;
+        width: 178px !important;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        margin: 0 !important;
+        object-fit: contain !important;
+        transform: translateY(2px) scale(1.72) !important;
+        transform-origin: left center !important;
+    }
+
+    body.home-page .site-nav .navbar-collapse,
+    body.home-page .site-nav .navbar-nav {
+        min-height: 96px !important;
+        align-items: center !important;
+    }
+
+    /*
+       96px navigation plus 24px safe clearance.
+       Content remains fully below the fixed navigation.
+    */
+    body.home-page .home-hero {
+        min-height: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding-top: 120px !important;
+    }
+
+    body.home-page .home-hero-grid {
+        align-items: center !important;
+    }
+}
+
+/* Tablet and mobile keep a safe menu-button area. */
+@media (max-width: 991.98px) {
+    body.home-page .site-nav.navbar {
+        min-height: 72px !important;
+        padding-top: 7px !important;
+        padding-bottom: 7px !important;
+    }
+
+    body.home-page .site-nav .navbar-brand {
+        display: flex !important;
+        width: 165px !important;
+        min-height: 58px !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        align-items: center !important;
+    }
+
+    body.home-page .site-nav .site-logo {
+        width: 142px !important;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: scale(1.22) !important;
+        transform-origin: left center !important;
+    }
+
+    body.home-page .home-hero {
+        min-height: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+        padding-top: 96px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    body.home-page .site-nav .navbar-brand {
+        width: 145px !important;
+    }
+
+    body.home-page .site-nav .site-logo {
+        width: 128px !important;
+        transform: scale(1.15) !important;
+    }
+
+    body.home-page .home-hero {
+        padding-top: 92px !important;
+    }
+}
+</style>
+<style id="reikifish-responsive-book-image">
+/*
+   Responsive hero-book enhancement.
+
+   The frame, columns and hero position are unchanged.
+   Only the image inside its existing frame is enlarged.
+*/
+
+/* Preserve the frame’s shape and contain the enlarged image. */
+body.home-page .home-hero .hero-frame {
+    position: relative;
+    overflow: hidden !important;
+    isolation: isolate;
+}
+
+/* Desktop: make the book and scene approximately 8% larger. */
+@media (min-width: 1200px) {
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.08) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/* Smaller desktop and tablet: use a gentler enlargement. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: scale(1.04) !important;
+        transform-origin: center center !important;
+    }
+}
+
+/*
+   Mobile: preserve the complete composition.
+   No enlargement or cropping is introduced.
+*/
+@media (max-width: 767.98px) {
+    body.home-page .home-hero .hero-frame {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+    }
+
+    body.home-page .home-hero .hero-frame .media-image,
+    body.home-page .home-hero .hero-frame img {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+        transform: none !important;
+    }
+}
+
+/* Very small phones retain natural responsive width. */
+@media (max-width: 420px) {
+    body.home-page .home-hero .hero-frame {
+        border-radius: 16px;
+    }
+}
+</style>
+<style id="reikifish-short-desktop-hero">
+/*
+   Short desktop screens:
+   move the complete hero upwards without cropping or changing its contents.
+*/
+@media (min-width: 992px) and (max-height: 900px) {
+    body.home-page .home-hero {
+        padding-top: 101px !important;
+    }
+}
+</style>
+</head>
+  <body class="home-page">
+    <header class="home-shell">
+      <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish Ã¢â‚¬â€œ Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#siteNav"
+            aria-controls="siteNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-2 gap-xl-3">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="home-hero section-frame">
+        <div class="container-fluid home-container">
+          <div class="row g-4 g-xl-5 align-items-center home-hero-grid">
+            <div class="col-12 col-lg-5 home-hero-copy reveal">
+              <p class="eyebrow">"There is another place to stand. Between reaction and response."</p>
+              <h1 class="home-hero-title">
+                <span>WALKING</span>
+                <span>THE GREY</span>
+              </h1>
+              <p class="home-hero-subtitle">
+                A father's journey through alienation, abuse and reclamation.
+
+Walking the Grey explores what happens when reaction gives way to reflection, pain becomes understanding and certainty is rebuilt through stillness.
+              </p>
+              <div class="home-actions d-flex flex-wrap gap-3">
+                <a class="btn btn-gold" href="https://www.amazon.co.uk/Walking-Grey-Reiki-Fish-ebook/dp/B0GX2R2SW5/" target="_blank" rel="noopener noreferrer">Begin the Journey</a>
+                <a class="btn btn-outline" href="books.html">Explore the Book</a>
+              </div>
+              <div class="home-quote-panel">
+                <p class="mb-0">
+                  "Stillness is not emptiness. It is where the mind learns to hear itself."
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7 home-hero-media reveal">
+              <div class="media-frame hero-frame" data-media-shell>
+                <img
+                  class="media-image"
+                  src="assets/images/walking the grey book.png"
+                  alt="Walking the Grey philosophy of healing and resilience"
+                  width="1600"
+                  height="900"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main class="home-main">
+      <section class="section-frame hp-section meet-editorial reveal" id="meet-andy">
+        <div class="container-fluid home-container">
+          <div class="meet-editorial-layout">
+            <article class="meet-editorial-copy">
+              <p class="eyebrow">Meet Andy</p>
+              <h2 class="section-heading-xl hp-heading">Author. Practitioner. Student of Human Nature.</h2>
+              <p class="lead-text hp-lead">
+                I write, coach and speak from lived experience and applied psychology. My work helps people hold complexity,
+                regulate emotion and find steadier footing in moments that demand more than easy answers.
+              </p>
+              <p>
+                For over two decades, I have worked at the edge of conflict, performance pressure and personal reinvention.
+                The through-line has always been the same: clarity is not found by force. It is built through awareness,
+                language and deliberate practice.
+              </p>
+              <p>
+                Walking the Grey is an extension of that philosophy. It is not a manifesto. It is a field guide for anyone
+                learning to move beyond reaction and into a life led by grounded, conscious response.
+              </p>
+              <a class="btn btn-gold" href="about.html">Read Andy's Story</a>
+            </article>
+
+            <aside class="meet-editorial-media" aria-label="Andy speaking on stage">
+              <img
+                src="assets/images/stage-speaker.png"
+                alt="Portrait of Andy Fish, coach, author and psychology advocate"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame hp-section hp-help reveal" id="how-i-help">
+        <div class="container-fluid home-container">
+          <div class="hp-intro hp-intro-narrow help-editorial-intro">
+            <p class="eyebrow">How I Help</p>
+            <h2 class="section-heading-lg hp-heading">Practical work for real-world pressure.</h2>
+          </div>
+          <div class="help-editorial-grid">
+            <article class="help-editorial-card">
+              <div class="help-editorial-media" aria-hidden="true">
+                <img
+                  src="assets/images/home/trauma-informed-coaching.jpg"
+                  alt="Personal coaching conversation in a calm setting"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Trauma-Informed Coaching</h3>
+              <p>Rebuild internal safety, emotional regulation and self-trust without bypassing what happened.</p>
+              <a href="coaching.html">Explore Coaching </a>
+            </article>
+            <article class="help-editorial-card">
+              <div class="help-editorial-media" aria-hidden="true">
+                <img
+                  src="assets/images/home/high-conflict-relationships.jpg"
+                  alt="Psychology concepts supporting trauma-informed coaching"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>High-Conflict Dynamics</h3>
+              <p>Understand manipulation patterns, restore boundaries and communicate from grounded strength.</p>
+              <a href="coaching.html">Resolve Conflict </a>
+            </article>
+            <article class="help-editorial-card">
+              <div class="help-editorial-media" aria-hidden="true">
+                <img
+                  src="assets/images/home/leadership-performance.jpg"
+                  alt="Leadership coaching and personal development"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Leadership Under Pressure</h3>
+              <p>Lead with calm authority, cleaner decisions and stronger interpersonal awareness.</p>
+              <a href="contact.html">Leadership Coaching </a>
+            </article>
+            <article class="help-editorial-card">
+              <div class="help-editorial-media" aria-hidden="true">
+                <img
+                  src="assets/images/home/personal-growth.jpg"
+                  alt="Andy Fish offering trauma-informed coaching and guidance"
+                  width="1600"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <h3>Personal Reinvention</h3>
+              <p>Move from survival mode to intentional growth through structured psychological practice.</p>
+              <a href="coaching.html">Begin Your Next Chapter </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame hp-section hp-book reveal" id="walking-the-grey">
+        <div class="container-fluid home-container">
+          <div class="grey-philosophy-layout">
+            <div class="grey-philosophy-symbols" aria-hidden="true">
+              <div class="grey-symbol-group">
+                <span class="grey-symbol grey-symbol-light"></span>
+                <span class="grey-symbol-label">Light</span>
+              </div>
+              <div class="grey-symbol-group grey-symbol-group-focus">
+                <span class="grey-symbol grey-symbol-centre"></span>
+                <span class="grey-symbol-label">The Grey</span>
+              </div>
+              <div class="grey-symbol-group">
+                <span class="grey-symbol grey-symbol-dark"></span>
+                <span class="grey-symbol-label">Dark</span>
+              </div>
+            </div>
+            <div class="grey-philosophy-copy">
+              <p class="eyebrow">The Grey</p>
+              <h2 class="section-heading-xl hp-heading">Where light heals.<br />Where darkness teaches.</h2>
+              <div class="grey-philosophy-intro">
+                <p>Everything I write, teach and coach begins with one belief.</p>
+                <p>Growth does not come from choosing the light or fearing the dark.</p>
+                <p>It comes from learning to hold both with honesty.</p>
+              </div>
+            </div>
+            <div class="grey-philosophy-columns" aria-label="The Grey philosophy pillars">
+              <section class="grey-philosophy-column">
+                <h3>Light</h3>
+                <ul>
+                  <li>Compassion</li>
+                  <li>Hope</li>
+                  <li>Healing</li>
+                  <li>Connection</li>
+                </ul>
+              </section>
+              <section class="grey-philosophy-column grey-philosophy-column-focus">
+                <h3>The Grey</h3>
+                <ul>
+                  <li>Reality</li>
+                  <li>Truth</li>
+                  <li>Acceptance</li>
+                  <li>Wisdom</li>
+                </ul>
+              </section>
+              <section class="grey-philosophy-column">
+                <h3>Dark</h3>
+                <ul>
+                  <li>Challenge</li>
+                  <li>Loss</li>
+                  <li>Resilience</li>
+                  <li>Transformation</li>
+                </ul>
+              </section>
+            </div>
+            <div class="grey-philosophy-closing">
+              <p>"The Grey isn't compromise.<br />It is the courage to embrace reality exactly as it is."</p>
+            </div>
+            <a class="grey-philosophy-link" href="about.html">Explore the Philosophy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame hp-section hp-psych reveal" id="psychology-human-behaviour">
+        <div class="container-fluid home-container">
+          <div class="hp-intro">
+            <p class="eyebrow">Psychology &amp; Human Behaviour</p>
+            <h2 class="section-heading-lg hp-heading">The patterns beneath reaction.</h2>
+          </div>
+          <div class="hp-topic-grid">
+            <article class="hp-panel hp-topic-card">
+              <div class="hp-topic-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M12 3l7 3.2v4.6c0 5-3.2 8-7 10.2-3.8-2.2-7-5.2-7-10.2V6.2L12 3z" />
+                  <path d="M12 16.8s-2.6-1.8-2.6-3.7a1.8 1.8 0 0 1 2.6-1.5 1.8 1.8 0 0 1 2.6 1.5c0 1.9-2.6 3.7-2.6 3.7z" />
+                </svg>
+              </div>
+              <h3>Attachment &amp; Safety</h3>
+              <p>How early bonding shapes adult closeness, trust and conflict reactivity.</p>
+            </article>
+            <article class="hp-panel hp-topic-card">
+              <div class="hp-topic-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M4.5 6.5h7a2 2 0 0 1 2 2v3.2a2 2 0 0 1-2 2H8.4L6 16v-2.3H4.5a2 2 0 0 1-2-2V8.5a2 2 0 0 1 2-2z" />
+                  <path d="M19.5 17.5h-7a2 2 0 0 1-2-2v-3.2a2 2 0 0 1 2-2h3.1l2.4-2.3v2.3h1.5a2 2 0 0 1 2 2v3.2a2 2 0 0 1-2 2z" />
+                </svg>
+              </div>
+              <h3>DARVO &amp; Defensive Patterns</h3>
+              <p>Recognising denial, blame reversal and distortions that erode relational clarity.</p>
+            </article>
+            <article class="hp-panel hp-topic-card">
+              <div class="hp-topic-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <circle cx="7" cy="8" r="1.4" />
+                  <circle cx="12" cy="6" r="1.4" />
+                  <circle cx="17" cy="8" r="1.4" />
+                  <circle cx="8" cy="13.5" r="1.4" />
+                  <circle cx="16" cy="13.5" r="1.4" />
+                  <circle cx="12" cy="18" r="1.4" />
+                  <path d="M8.2 8.7L10.8 7" />
+                  <path d="M13.2 7l2.6 1.7" />
+                  <path d="M7.7 9.3l.6 2.9" />
+                  <path d="M16.3 9.3l-.6 2.9" />
+                  <path d="M9.2 14.3l1.9 2.5" />
+                  <path d="M14.8 14.3l-1.9 2.5" />
+                  <path d="M9.4 13.5h5.2" />
+                </svg>
+              </div>
+              <h3>Nervous System Literacy</h3>
+              <p>Learning to read and regulate stress responses without suppressing emotion.</p>
+            </article>
+            <article class="hp-panel hp-topic-card">
+              <div class="hp-topic-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M12 3.8c4.5 0 8.2 3.6 8.2 8.2 0 4.5-3.7 8.2-8.2 8.2S3.8 16.5 3.8 12c0-4.6 3.7-8.2 8.2-8.2z" />
+                  <path d="M12 16.9v-3.1" />
+                  <path d="M12 12.8a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" />
+                  <path d="M8.6 18.3c.9-1.5 2-2.2 3.4-2.2 1.4 0 2.5.7 3.4 2.2" />
+                </svg>
+              </div>
+              <h3>Identity After Adversity</h3>
+              <p>Reconstructing selfhood when old certainties have collapsed.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame hp-section hp-speaking reveal" id="speaking-media">
+        <div class="container-fluid home-container">
+          <div class="hp-speaking-grid hp-panel">
+            <div class="hp-speaking-copy">
+              <p class="eyebrow">Speaking &amp; Media</p>
+              <h2 class="section-heading-lg hp-heading">Conversations that challenge certainty.</h2>
+              <p class="lead-text hp-lead">
+                I speak on psychology, emotional regulation, high-conflict dynamics, resilience and leadership under strain.
+                Sessions are designed for depth, practical value and meaningful behaviour change.
+              </p>
+              <div class="hp-badges" aria-label="Speaking formats">
+                <span>Keynotes</span>
+                <span>Panels</span>
+                <span>Podcasts</span>
+                <span>Media Interviews</span>
+              </div>
+              <a class="btn btn-outline" href="contact.html">Enquire About Speaking</a>
+            </div>
+            <div class="hp-speaking-media" data-media-shell>
+              <img
+                class="media-image"
+                src="assets/images/andy fish - walking the grey.png"
+                alt="Psychology and emotional resilience guidance"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-frame hp-section hp-testimonials reveal" id="testimonials">
+        <div class="container-fluid home-container">
+          <div class="hp-intro hp-intro-narrow">
+            <p class="eyebrow">Testimonials</p>
+            <h2 class="section-heading-lg hp-heading">What clients and readers often tell me.</h2>
+          </div>
+          <div class="hp-testimonial-grid">
+            <blockquote class="hp-panel hp-quote">
+              <p>
+                "Andy has a rare ability to name what is happening psychologically without judgement. The clarity that gave me changed how I lead my team and my home life."
+              </p>
+              <cite>Leadership Client</cite>
+            </blockquote>
+            <blockquote class="hp-panel hp-quote">
+              <p>
+                "Walking the Grey met me in a chapter I could barely explain. It felt precise, compassionate and unafraid of difficult truth."
+              </p>
+              <cite>Reader</cite>
+            </blockquote>
+            <blockquote class="hp-panel hp-quote">
+              <p>
+                "Our sessions were practical from day one. I stopped reacting from panic and started making decisions from a steadier place."
+              </p>
+              <cite>Coaching Client</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+<!-- RF_SUPPORT_FINDER_HOME_START -->
+<!-- SUPPORT_FINDER_PROMO_START -->
+<section id="rf-support-feature" aria-labelledby="rf-support-title">
+    <style>
+        #rf-support-feature {
+            padding: clamp(42px, 6vw, 82px) clamp(20px, 4vw, 64px);
+            background:
+                radial-gradient(circle at 88% 50%, rgba(218, 158, 49, 0.08), transparent 32%),
+                #101514;
+            border-top: 1px solid rgba(218, 158, 49, 0.18);
+            border-bottom: 1px solid rgba(218, 158, 49, 0.18);
+        }
+
+        #rf-support-feature,
+        #rf-support-feature * {
+            box-sizing: border-box;
+        }
+
+        #rf-support-feature .rf-support-card {
+            width: min(100%, 1420px);
+            margin: 0 auto;
+            padding: clamp(34px, 4.5vw, 68px);
+            display: grid;
+            grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+            align-items: center;
+            gap: clamp(48px, 7vw, 108px);
+            overflow: hidden;
+            border: 1px solid rgba(218, 158, 49, 0.48);
+            border-radius: 28px;
+            background:
+                linear-gradient(135deg, rgba(255, 255, 255, 0.022), transparent 46%),
+                #0b1110;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+        }
+
+        #rf-support-feature .rf-support-copy {
+            min-width: 0;
+            max-width: 710px;
+        }
+
+        #rf-support-feature .rf-support-eyebrow {
+            margin: 0 0 20px;
+            color: #e3aa39;
+            font-size: 0.82rem;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        #rf-support-feature .rf-support-eyebrow::after {
+            content: "";
+            display: block;
+            width: 68px;
+            height: 2px;
+            margin-top: 18px;
+            background: linear-gradient(90deg, #e3aa39, #56c9c2);
+        }
+
+        #rf-support-feature .rf-support-title {
+            max-width: 680px;
+            margin: 0;
+            color: #f4f1e9;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.65rem, 4.4vw, 5rem);
+            font-weight: 500;
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+            text-wrap: balance;
+        }
+
+        #rf-support-feature .rf-support-description {
+            max-width: 700px;
+            margin: 28px 0 0;
+            color: #c8c8c3;
+            font-size: clamp(1.05rem, 1.3vw, 1.28rem);
+            line-height: 1.65;
+        }
+
+        #rf-support-feature .rf-support-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 26px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #rf-support-feature .rf-support-topics li {
+            padding: 9px 15px;
+            color: #deddd8;
+            font-size: 0.91rem;
+            font-weight: 700;
+            line-height: 1.2;
+            border: 1px solid rgba(218, 158, 49, 0.42);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.018);
+        }
+
+        #rf-support-feature .rf-support-actions {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        #rf-support-feature .rf-support-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            min-height: 58px;
+            padding: 15px 25px;
+            color: #111;
+            font-size: 1rem;
+            font-weight: 800;
+            line-height: 1.2;
+            text-decoration: none;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #f4be58, #e9a73c);
+            box-shadow: 0 12px 32px rgba(225, 161, 54, 0.18);
+            transition: transform 180ms ease, box-shadow 180ms ease;
+        }
+
+        #rf-support-feature .rf-support-button:hover,
+        #rf-support-feature .rf-support-button:focus-visible {
+            color: #111;
+            transform: translateY(-2px);
+            box-shadow: 0 16px 38px rgba(225, 161, 54, 0.28);
+        }
+
+        #rf-support-feature .rf-support-note {
+            max-width: 300px;
+            margin: 0;
+            color: #929692;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        #rf-support-feature .rf-support-visual {
+            width: 100%;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #rf-support-feature .rf-support-image-link {
+            position: relative;
+            display: block;
+            width: min(100%, 560px);
+            aspect-ratio: 3 / 2;
+            overflow: hidden;
+            border: 1px solid rgba(218, 158, 49, 0.62);
+            border-radius: 22px;
+            background: #080d0c;
+            box-shadow:
+                0 30px 65px rgba(0, 0, 0, 0.42),
+                0 0 45px rgba(218, 158, 49, 0.07);
+            isolation: isolate;
+        }
+
+        #rf-support-feature .rf-support-image-link::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background: linear-gradient(
+                180deg,
+                transparent 58%,
+                rgba(3, 7, 6, 0.32) 100%
+            );
+        }
+
+        #rf-support-feature .rf-support-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 500ms ease;
+        }
+
+        #rf-support-feature .rf-support-image-link:hover .rf-support-image {
+            transform: scale(1.025);
+        }
+
+        #rf-support-feature .rf-support-image-label {
+            position: absolute;
+            right: 20px;
+            bottom: 18px;
+            z-index: 2;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            color: #101312;
+            font-size: 1.35rem;
+            border-radius: 50%;
+            background: #e3aa39;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+        }
+
+        @media (max-width: 1050px) {
+            #rf-support-feature .rf-support-card {
+                grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+                gap: 44px;
+            }
+
+            #rf-support-feature .rf-support-title {
+                font-size: clamp(2.55rem, 5vw, 4.1rem);
+            }
+        }
+
+        @media (max-width: 820px) {
+            #rf-support-feature {
+                padding: 34px 16px;
+            }
+
+            #rf-support-feature .rf-support-card {
+                grid-template-columns: 1fr;
+                gap: 34px;
+                padding: 34px 24px;
+                border-radius: 22px;
+            }
+
+            #rf-support-feature .rf-support-copy {
+                max-width: none;
+            }
+
+            #rf-support-feature .rf-support-title {
+                font-size: clamp(2.5rem, 11vw, 4rem);
+                line-height: 1;
+            }
+
+            #rf-support-feature .rf-support-description {
+                margin-top: 22px;
+                font-size: 1.04rem;
+                line-height: 1.58;
+            }
+
+            #rf-support-feature .rf-support-visual {
+                grid-row: 2;
+            }
+
+            #rf-support-feature .rf-support-image-link {
+                width: 100%;
+                max-width: 620px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            #rf-support-feature .rf-support-card {
+                padding: 28px 19px;
+                gap: 28px;
+            }
+
+            #rf-support-feature .rf-support-eyebrow {
+                margin-bottom: 17px;
+                font-size: 0.71rem;
+                letter-spacing: 0.15em;
+            }
+
+            #rf-support-feature .rf-support-title {
+                font-size: clamp(2.35rem, 12vw, 3.25rem);
+            }
+
+            #rf-support-feature .rf-support-topics {
+                gap: 8px;
+            }
+
+            #rf-support-feature .rf-support-topics li {
+                padding: 8px 12px;
+                font-size: 0.81rem;
+            }
+
+            #rf-support-feature .rf-support-actions {
+                align-items: stretch;
+                flex-direction: column;
+                margin-top: 25px;
+            }
+
+            #rf-support-feature .rf-support-button {
+                width: 100%;
+            }
+
+            #rf-support-feature .rf-support-note {
+                max-width: none;
+                text-align: center;
+            }
+
+            #rf-support-feature .rf-support-image-link {
+                aspect-ratio: 3 / 2;
+                border-radius: 17px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            #rf-support-feature .rf-support-button,
+            #rf-support-feature .rf-support-image {
+                transition: none;
+            }
+        }
+    </style>
+
+    <div class="rf-support-card">
+        <div class="rf-support-copy">
+            <p class="rf-support-eyebrow">New · AI-guided Support Finder</p>
+
+            <h2 class="rf-support-title" id="rf-support-title">
+                Find a clearer route to the right support.
+            </h2>
+
+            <p class="rf-support-description">
+                Describe what is happening and add your location. The ReikiFish Support Finder helps you explore relevant professional directories, trusted services and nearby sources of support.
+            </p>
+
+            <ul class="rf-support-topics" aria-label="Types of support">
+                <li>Legal support</li>
+                <li>Mental health</li>
+                <li>Family support</li>
+                <li>Abuse services</li>
+            </ul>
+
+            <div class="rf-support-actions">
+                <a class="rf-support-button" href="support-finder.html">
+                    <span>Try the Support Finder</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+
+                <p class="rf-support-note">
+                    Free information and service signposting. No account required.
+                </p>
+            </div>
+        </div>
+
+        <div class="rf-support-visual">
+            <a
+                class="rf-support-image-link"
+                href="support-finder.html"
+                aria-label="Open the ReikiFish Support Finder"
+            >
+                <img
+                    class="rf-support-image"
+                    src="assets/images/reikifish-ai-support-finder-in-action.png"
+                    alt="A man discovering a clearer path towards legal, mental health and family support"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                >
+                <span class="rf-support-image-label" aria-hidden="true">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- SUPPORT_FINDER_PROMO_END -->
+<!-- RF_SUPPORT_FINDER_HOME_END -->
+
+
+      <section class="section-frame hp-section hp-cta reveal" id="contact">
+        <div class="container-fluid home-container">
+          <div class="hp-panel hp-cta-panel">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2 class="section-heading-lg hp-heading">Ready to begin the conversation?</h2>
+              <p class="lead-text hp-lead mb-0">
+                For coaching, speaking, collaborations or media requests, get in touch and we will shape the right next step.
+              </p>
+            </div>
+            <div class="hp-cta-actions">
+              <a class="btn btn-gold" href="contact.html">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer home-footer">
+      <div class="container-fluid home-container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">&copy; <span id="year"></span> Andy Fish</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="knowledge.html">Knowledge Hub</a>
+          <a href="support-finder.html">Support Finder</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  <!-- RF_MEGA_MENU_START -->
+<div class="rf-mm-backdrop" id="rf-mega-backdrop" aria-hidden="true"></div>
+<aside class="rf-mega-menu" id="rf-mega-menu" aria-label="Explore ReikiFish" aria-hidden="true">
+  <div class="rf-mm-shell">
+    <button class="rf-mm-close" type="button" aria-label="Close menu">&#10005;</button>
+    <section class="rf-mm-panel" data-panel="about" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">The person and purpose</p><h2>About ReikiFish</h2></div><a href="/about.html">Explore the story &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/about.html"><span class="rf-mm-icon">A</span><span class="rf-mm-copy"><strong>About Andy</strong><span>Lived experience, professional background and the thinking behind ReikiFish.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">B</span><span class="rf-mm-copy"><strong>Books and writing</strong><span>Explore Walking the Grey and writing grounded in reflection and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">K</span><span class="rf-mm-copy"><strong>Evidence-led learning</strong><span>Clear psychology and emotional-health guides in plain English.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Contact</strong><span>Ask a question or make an initial enquiry in confidence.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="books" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Depth, reflection and recovery</p><h2>Books by Andy Fish</h2></div><a href="/books.html">View all books &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/books.html"><span class="rf-mm-icon">W</span><span class="rf-mm-copy"><strong>Walking the Grey</strong><span>A journey through alienation, abuse, self-understanding and reclamation.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>The Book of DARVO</strong><span>Updates and insights into denial, attack and reversal of victim and offender.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Stay regulated when another person appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/contact.html"><span class="rf-mm-icon">N</span><span class="rf-mm-copy"><strong>News and enquiries</strong><span>Follow publication updates or ask about the writing.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="coaching" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Calm, structured support</p><h2>Coaching pathways</h2></div><a href="/coaching.html">Explore coaching &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/trauma-coaching.html"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma coaching</strong><span>Build steadiness, choice and practical ways to move forward.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/parental-alienation-coaching.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Structured support through grief, uncertainty and difficult dynamics.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/team-leadership-coaching.html"><span class="rf-mm-icon">L</span><span class="rf-mm-copy"><strong>Team leadership</strong><span>Clearer communication, healthier teams and grounded leadership.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/coaching.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Find the right route</strong><span>Compare the coaching pathways and understand what support includes.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="knowledge" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Evidence led, plain English</p><h2>Explore the Knowledge Hub</h2></div><a href="/knowledge.html">View all guides &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Personality"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Personality</strong><span>Traits, patterns and personality disorders without careless labelling.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Trauma"><span class="rf-mm-icon">T</span><span class="rf-mm-copy"><strong>Trauma</strong><span>Survival responses, dissociation, memory and recovery.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Manipulation"><span class="rf-mm-icon">M</span><span class="rf-mm-copy"><strong>Manipulation</strong><span>Gaslighting, DARVO and coercive interpersonal patterns.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Relationships"><span class="rf-mm-icon">R</span><span class="rf-mm-copy"><strong>Relationships</strong><span>Attachment, boundaries, trust, conflict and repair.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Emotional%20Health"><span class="rf-mm-icon">E</span><span class="rf-mm-copy"><strong>Emotional health</strong><span>Regulation, resilience, self-awareness and self-compassion.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge-search.html?category=Parental%20Alienation"><span class="rf-mm-icon">F</span><span class="rf-mm-copy"><strong>Parental alienation</strong><span>Child-focused explanations of harmful relational behaviours.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge/what-is-complex-ptsd.html"><span class="rf-mm-icon">C</span><span class="rf-mm-copy"><strong>Complex PTSD</strong><span>An in-depth guide to prolonged trauma and its effects.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/knowledge.html"><span class="rf-mm-icon">A-Z</span><span class="rf-mm-copy"><strong>Psychology A to Z</strong><span>Browse the complete library of definitions and guides.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+    <section class="rf-mm-panel" data-panel="blog" aria-hidden="true">
+      <div class="rf-mm-heading"><div><p class="rf-mm-kicker">Ideas, experience and reflection</p><h2>From the ReikiFish blog</h2></div><a href="/blog.html">View all articles &#8594;</a></div>
+      <div class="rf-mm-grid">
+        <a class="rf-mm-card" href="/articles/the-grey-method-staying-regulated-under-provocation.html"><span class="rf-mm-icon">G</span><span class="rf-mm-copy"><strong>The Grey Method</strong><span>Staying regulated when someone appears to want a reaction.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">P</span><span class="rf-mm-copy"><strong>Psychology</strong><span>Evidence-informed perspectives on behaviour and emotional life.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">D</span><span class="rf-mm-copy"><strong>DARVO and manipulation</strong><span>Patterns of denial, blame reversal and missing context.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+        <a class="rf-mm-card" href="/blog.html"><span class="rf-mm-icon">U</span><span class="rf-mm-copy"><strong>Latest updates</strong><span>New writing, resources and project developments.</span></span><span class="rf-mm-arrow">&#8594;</span></a>
+      </div>
+    </section>
+  </div>
+</aside>
+<!-- RF_MEGA_MENU_END -->
+<script src="/assets/js/mega-menu.js?v=20260813-mm5"></script>
+</body>
+</html>

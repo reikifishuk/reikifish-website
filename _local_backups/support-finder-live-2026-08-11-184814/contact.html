@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Trauma-Informed Coaching | Leadership Coach Andy Fish</title>
+    <meta
+      name="description"
+      content="Book trauma-informed coaching, leadership coaching or a speaking engagement with Andy Fish. Enquire today to begin your journey with confidence."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260806-trauma-v4" />
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+
+    <style>
+        /* RF_CONTACT_PRIVACY_STYLE_START */
+
+        .contact-privacy-notice {
+            position: relative;
+            isolation: isolate;
+            display: grid;
+            grid-template-columns: auto minmax(0, 1fr) auto;
+            gap: clamp(1.2rem, 2.5vw, 2rem);
+            align-items: center;
+            margin-top: 1.75rem;
+            padding: clamp(1.4rem, 2.8vw, 2.15rem);
+            overflow: hidden;
+            border: 1px solid rgba(218, 166, 75, 0.35);
+            border-radius: 18px;
+            background:
+                radial-gradient(
+                    circle at 90% 15%,
+                    rgba(218, 166, 75, 0.13),
+                    transparent 18rem
+                ),
+                radial-gradient(
+                    circle at 4% 110%,
+                    rgba(29, 104, 98, 0.13),
+                    transparent 18rem
+                ),
+                linear-gradient(120deg, #090e0f, #121718 58%, #201a12);
+            box-shadow:
+                0 26px 55px rgba(0, 0, 0, 0.24),
+                inset 0 1px rgba(255, 255, 255, 0.025);
+        }
+
+        .contact-privacy-notice::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 8%;
+            left: 8%;
+            height: 3px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #bb7d25 25%,
+                #e4b65d 50%,
+                #bb7d25 75%,
+                transparent
+            );
+        }
+
+        .contact-privacy-notice::after {
+            content: "PRIVACY";
+            position: absolute;
+            z-index: -1;
+            right: 1rem;
+            bottom: -1rem;
+            color: rgba(220, 169, 77, 0.04);
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3.5rem, 8vw, 7rem);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .contact-privacy-graphic {
+            display: grid;
+            width: clamp(5rem, 7vw, 6.4rem);
+            height: clamp(5rem, 7vw, 6.4rem);
+            place-items: center;
+        }
+
+        .contact-privacy-graphic svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: rgba(220, 169, 77, 0.28);
+            stroke-width: 1;
+            overflow: visible;
+        }
+
+        .contact-privacy-graphic .privacy-dashed-orbit {
+            stroke: rgba(47, 122, 114, 0.35);
+            stroke-dasharray: 4 4;
+        }
+
+        .contact-privacy-graphic .privacy-shield,
+        .contact-privacy-graphic .privacy-lock {
+            stroke: #dfae55;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .contact-privacy-content {
+            position: relative;
+            z-index: 1;
+            min-width: 0;
+        }
+
+        .contact-privacy-notice .contact-privacy-eyebrow {
+            margin: 0 0 0.4rem;
+            color: #dba94e;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+        }
+
+        .contact-privacy-notice h3 {
+            margin: 0 0 0.65rem;
+            color: #f0ece4;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .contact-privacy-notice p {
+            max-width: 900px;
+            margin: 0;
+            color: #b9bebb;
+            font-size: 0.84rem;
+            line-height: 1.72;
+        }
+
+        .contact-privacy-notice p a {
+            color: #e4b65d;
+            font-weight: 800;
+            text-decoration: underline;
+            text-decoration-color: rgba(228, 182, 93, 0.48);
+            text-underline-offset: 3px;
+        }
+
+        .contact-privacy-notice p a:hover {
+            color: #f1ca78;
+        }
+
+        .contact-privacy-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-privacy-points span {
+            padding: 0.4rem 0.65rem;
+            border: 1px solid rgba(218, 166, 75, 0.18);
+            border-radius: 999px;
+            background: rgba(218, 166, 75, 0.045);
+            color: #afb4b1;
+            font-size: 0.62rem;
+            font-weight: 700;
+        }
+
+        .contact-privacy-action {
+            position: relative;
+            z-index: 1;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            align-items: center;
+            justify-content: center;
+            width: 5.5rem;
+            height: 5.5rem;
+            border: 1px solid rgba(218, 166, 75, 0.3);
+            border-radius: 50%;
+            background: rgba(218, 166, 75, 0.06);
+            color: #dfae55;
+            text-decoration: none;
+            transition:
+                transform 180ms ease,
+                background 180ms ease,
+                border-color 180ms ease;
+        }
+
+        .contact-privacy-action span {
+            font-size: 0.58rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .contact-privacy-action strong {
+            font-size: 1.15rem;
+        }
+
+        .contact-privacy-action:hover,
+        .contact-privacy-action:focus-visible {
+            transform: translateY(-3px);
+            border-color: rgba(229, 181, 92, 0.7);
+            background: rgba(218, 166, 75, 0.12);
+            color: #f1ca78;
+        }
+
+        @media (max-width: 760px) {
+            .contact-privacy-notice {
+                grid-template-columns: auto minmax(0, 1fr);
+            }
+
+            .contact-privacy-action {
+                grid-column: 1 / -1;
+                width: 100%;
+                height: 3rem;
+                border-radius: 999px;
+                flex-direction: row;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .contact-privacy-notice {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-privacy-graphic {
+                width: 4.6rem;
+                height: 4.6rem;
+            }
+        }
+
+        /* RF_CONTACT_PRIVACY_STYLE_END */
+    </style>
+
+    <style>
+        /* RF_CONTACT_PREMIUM_FORM_START */
+
+        .contact-premium-form {
+            position: relative;
+            isolation: isolate;
+            margin-top: 2rem;
+            padding: clamp(1.5rem, 3.5vw, 3rem);
+            overflow: hidden;
+            border: 1px solid rgba(218, 166, 75, 0.30);
+            border-radius: 22px;
+            background:
+                radial-gradient(
+                    circle at 94% 4%,
+                    rgba(218, 166, 75, 0.085),
+                    transparent 24rem
+                ),
+                radial-gradient(
+                    circle at 2% 100%,
+                    rgba(30, 106, 99, 0.07),
+                    transparent 22rem
+                ),
+                linear-gradient(
+                    125deg,
+                    rgba(7, 11, 12, 0.84),
+                    rgba(16, 21, 22, 0.94)
+                );
+            box-shadow:
+                0 30px 65px rgba(0, 0, 0, 0.22),
+                inset 0 1px rgba(255, 255, 255, 0.022);
+        }
+
+        .contact-premium-form::before {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            top: -1px;
+            right: 7%;
+            left: 7%;
+            height: 3px;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                #aa6f1d 18%,
+                #dfa94d 50%,
+                #aa6f1d 82%,
+                transparent
+            );
+        }
+
+        .contact-premium-form::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 21rem;
+            height: 21rem;
+            right: -12rem;
+            bottom: -14rem;
+            border: 1px solid rgba(218, 166, 75, 0.08);
+            border-radius: 50%;
+            box-shadow:
+                0 0 0 3.5rem rgba(218, 166, 75, 0.012),
+                0 0 0 7rem rgba(32, 108, 101, 0.012);
+            pointer-events: none;
+        }
+
+        .contact-premium-form label {
+            color: rgba(238, 235, 228, 0.80);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        .contact-premium-form label .optional,
+        .contact-premium-form label small {
+            color: rgba(238, 235, 228, 0.48);
+            letter-spacing: normal;
+        }
+
+        .contact-premium-form input,
+        .contact-premium-form select,
+        .contact-premium-form textarea {
+            border-color: rgba(218, 166, 75, 0.23);
+            background:
+                linear-gradient(
+                    110deg,
+                    rgba(255, 255, 255, 0.012),
+                    transparent
+                ),
+                #0b1011;
+            color: #eeeae3;
+            box-shadow:
+                inset 0 1px 0 rgba(255, 255, 255, 0.015),
+                0 9px 20px rgba(0, 0, 0, 0.06);
+            transition:
+                border-color 180ms ease,
+                background 180ms ease,
+                box-shadow 180ms ease,
+                transform 180ms ease;
+        }
+
+        .contact-premium-form input:hover,
+        .contact-premium-form select:hover,
+        .contact-premium-form textarea:hover {
+            border-color: rgba(218, 166, 75, 0.42);
+            background-color: #0d1213;
+        }
+
+        .contact-premium-form input:focus,
+        .contact-premium-form select:focus,
+        .contact-premium-form textarea:focus {
+            border-color: #d9a44a;
+            background-color: #0d1213;
+            box-shadow:
+                0 0 0 4px rgba(217, 164, 74, 0.10),
+                0 15px 28px rgba(0, 0, 0, 0.12);
+            outline: none;
+        }
+
+        .contact-premium-form input::placeholder,
+        .contact-premium-form textarea::placeholder {
+            color: rgba(229, 229, 224, 0.35);
+        }
+
+        .contact-premium-form select {
+            cursor: pointer;
+        }
+
+        .contact-premium-form select option {
+            background: #101516;
+            color: #eeeae3;
+        }
+
+        .contact-premium-form button[type="submit"],
+        .contact-premium-form input[type="submit"] {
+            position: relative;
+            border: 1px solid #dfa94d;
+            background:
+                linear-gradient(
+                    115deg,
+                    #d99f3e,
+                    #e7b961
+                );
+            color: #080b0c;
+            box-shadow:
+                0 14px 30px rgba(218, 166, 75, 0.16),
+                inset 0 1px rgba(255, 255, 255, 0.28);
+            font-weight: 800;
+            transition:
+                transform 180ms ease,
+                box-shadow 180ms ease,
+                background 180ms ease;
+        }
+
+        .contact-premium-form button[type="submit"]:hover,
+        .contact-premium-form input[type="submit"]:hover {
+            transform: translateY(-2px);
+            background:
+                linear-gradient(
+                    115deg,
+                    #e4ad4f,
+                    #efc978
+                );
+            box-shadow:
+                0 18px 36px rgba(218, 166, 75, 0.24),
+                inset 0 1px rgba(255, 255, 255, 0.32);
+        }
+
+        .contact-premium-form button[type="submit"]:focus-visible,
+        .contact-premium-form input[type="submit"]:focus-visible {
+            outline: 3px solid rgba(232, 190, 111, 0.35);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 680px) {
+            .contact-premium-form {
+                padding: 1.25rem;
+                border-radius: 16px;
+            }
+        }
+
+        /* RF_CONTACT_PREMIUM_FORM_END */
+    </style>
+</head>
+  <body class="contact-page">
+    <header class="inner-header">
+      <nav class="navbar navbar-expand-lg fixed-top px-3 px-lg-5 py-3">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" aria-label="Andy Fish home">
+            <img
+              class="site-logo"
+              src="assets/images/logo.png"
+              alt="Andy Fish – Author, Psychology & Mindset Coach"
+              width="1681"
+              height="935"
+            />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="siteNav">
+            <ul class="navbar-nav align-items-lg-center gap-lg-3">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="books.html">Books</a></li>
+              <li class="nav-item"><div class="coaching-nav-dropdown">
+<a class="nav-link" href="coaching.html">Coaching</a>
+    <div class="coaching-nav-submenu">
+        <a href="trauma-coaching.html">Trauma</a>
+
+        <a href="parental-alienation-coaching.html">Parental Alienation</a>
+<a href="team-leadership-coaching.html">Business Coaching</a>
+    </div>
+</div></li>
+              <li class="nav-item"><a class="nav-link" href="knowledge.html">Knowledge Hub</a></li>
+              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+              <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="container py-6 reveal">
+        <p class="eyebrow">Contact</p>
+        <h1 class="display-4 fw-semibold">Begin with a conversation.</h1>
+        <p class="lead-text">Whether you're looking for trauma-informed coaching, interested in Walking the Grey, planning a speaking or podcast appearance, or simply want to start a conversation around psychology, resilience and personal growth, you're welcome to get in touch.<br><br>
+Use the enquiry form below, or email <a href="mailto:hello@reikifish.com">hello@reikifish.com</a> directly.</p>
+      </section>
+    </header>
+
+    <main class="container py-5">
+      <section class="contact-enquiry reveal" aria-labelledby="contact-enquiry-title">
+        <div class="contact-enquiry-intro">
+          <p class="eyebrow">Enquiry</p>
+          <h2 class="section-heading-lg" id="contact-enquiry-title">Tell me what you need.</h2>
+          <p class="lead-text">
+            You don't need to have everything worked out before you get in touch. Tell me a little about what's happening, what you're looking for and where you'd like to get to. Every enquiry is read personally, and I'll reply with a clear next step.
+          </p>
+        </div>
+
+        <form
+          class="contact-premium-form contact-form"
+          data-contact-form
+          data-contact-endpoint="/api/contact"
+          action="/api/contact"
+          method="post"
+          novalidate
+        >
+          <input type="hidden" name="submittedAtClient" data-submitted-at-client />
+          <input type="hidden" name="website" value="" autocomplete="off" tabindex="-1" data-honeypot />
+          <div class="contact-form-status" data-contact-status hidden role="alert" aria-live="polite"></div>
+
+          <div class="contact-form-grid">
+            <div class="contact-field">
+              <label for="fullName">Full Name *</label>
+              <input id="fullName" name="Full Name" type="text" autocomplete="name" required />
+              <p class="contact-field-error" data-error-for="fullName" hidden></p>
+            </div>
+
+            <div class="contact-field">
+              <label for="emailAddress">Email Address *</label>
+              <input id="emailAddress" name="Email" type="email" autocomplete="email" required />
+              <p class="contact-field-error" data-error-for="emailAddress" hidden></p>
+            </div>
+
+            <div class="contact-field">
+              <label for="telephoneNumber">Telephone Number <span class="contact-optional">(optional)</span></label>
+              <input id="telephoneNumber" name="Telephone" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="contact-field">
+              <label for="organisation">Organisation / Company <span class="contact-optional">(optional)</span></label>
+              <input id="organisation" name="Organisation" type="text" autocomplete="organization" />
+            </div>
+
+            <div class="contact-field">
+              <label for="enquiryType">Enquiry Type *</label>
+              <select id="enquiryType" name="Enquiry Type" required>
+                <option value="" selected disabled>Select an enquiry type</option>
+                <option>Trauma-Informed Coaching</option>
+                <option>Leadership Coaching</option>
+                <option>Executive Coaching</option>
+                <option>Speaking Engagement</option>
+                <option>Podcast / Media Interview</option>
+                <option>Literary Event</option>
+                <option>Book Enquiry</option>
+                <option>General Enquiry</option>
+              </select>
+              <p class="contact-field-error" data-error-for="enquiryType" hidden></p>
+            </div>
+
+            <div class="contact-field contact-field-span-2 contact-message-field">
+              <label for="message">Tell me a little about your enquiry...</label>
+              <textarea id="message" name="Message" rows="8" minlength="10" required></textarea>
+              <p class="contact-field-error" data-error-for="message" hidden></p>
+            </div>
+          </div>
+
+          <div class="contact-form-actions">
+            <button class="btn btn-gold" type="submit">Send Enquiry</button>
+          </div>
+        </form>
+            <!-- RF_CONTACT_PRIVACY_NOTICE -->
+            <aside class="contact-privacy-notice" aria-labelledby="contact-privacy-heading">
+                <div class="contact-privacy-graphic" aria-hidden="true">
+                    <svg viewBox="0 0 82 82" focusable="false">
+                        <circle cx="41" cy="41" r="36"></circle>
+                        <circle class="privacy-dashed-orbit" cx="41" cy="41" r="28"></circle>
+
+                        <path
+                            class="privacy-shield"
+                            d="M41 19 58 25v14c0 11-7 19-17 23-10-4-17-12-17-23V25l17-6Z"
+                        ></path>
+
+                        <rect
+                            class="privacy-lock"
+                            x="34"
+                            y="35"
+                            width="14"
+                            height="13"
+                            rx="2"
+                        ></rect>
+
+                        <path
+                            class="privacy-lock"
+                            d="M37 35v-4a4 4 0 0 1 8 0v4M41 40v4"
+                        ></path>
+                    </svg>
+                </div>
+
+                <div class="contact-privacy-content">
+                    <p class="contact-privacy-eyebrow">
+                        DATA PROTECTION AND PRIVACY
+                    </p>
+
+                    <h3 id="contact-privacy-heading">
+                        Your information is handled with care.
+                    </h3>
+
+                    <p>
+                        Information submitted through this form is handled in
+                        accordance with the UK GDPR and the Data Protection Act
+                        2018. It is used to respond to your enquiry and is
+                        normally retained for no longer than 12 months. Please
+                        avoid including unnecessary sensitive information.
+                        Read our
+                        <a href="privacy-policy.html">Privacy Policy</a>
+                        for full details.
+                    </p>
+
+                    <div class="contact-privacy-points">
+                        <span>No marketing without consent</span>
+                        <span>Information is not sold</span>
+                        <span>UK data rights apply</span>
+                    </div>
+                </div>
+
+                <a
+                    class="contact-privacy-action"
+                    href="privacy-policy.html"
+                    aria-label="Read the ReikiFish Privacy Policy"
+                >
+                    <span>Read policy</span>
+                    <strong aria-hidden="true">&rarr;</strong>
+                </a>
+            </aside>
+
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container py-4 d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <p class="mb-0">© <span id="year"></span> Andy Fish. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="books.html">Books</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js?v=20260806-contact-mailgun"></script>
+  </body>
+</html>
