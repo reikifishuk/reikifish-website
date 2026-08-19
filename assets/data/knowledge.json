@@ -728,5 +728,21 @@
       "schizophrenia spectrum"
     ],
     "url": "knowledge/schizotypal-personality-disorder.html"
+  },
+  {
+    "slug": "the-bystander-effect",
+    "title": "The Bystander Effect",
+    "type": "Complete Guide",
+    "category": "Social Psychology",
+    "summary": "Understand the bystander effect, the Kitty Genovese case, diffusion of responsibility and practical ways to intervene safely and effectively.",
+    "keywords": [
+      "bystander effect",
+      "diffusion of responsibility",
+      "pluralistic ignorance",
+      "Kitty Genovese",
+      "bystander intervention",
+      "social psychology"
+    ],
+    "url": "knowledge/the-bystander-effect.html"
   }
 ]
