@@ -6,6 +6,7 @@
     'books': 'books',
     'coaching': 'coaching',
     'knowledge hub': 'knowledge',
+    'support finder': 'support',
     'blog': 'blog'
   };
   var timer = 0;
@@ -76,25 +77,44 @@
     var navigation = document.querySelector('header nav .navbar-nav');
     if (!navigation) return;
 
+    // Compare by filename only so nested pages (../about.html) still match root-relative entries.
+    var basename = function (href) {
+      var clean = String(href || '').split('?')[0].split('#')[0];
+      var parts = clean.split('/');
+      return parts[parts.length - 1] || '';
+    };
+
+    var existingLinks = navigation.querySelectorAll('a');
+
+    // Derive the current page's relative path prefix (e.g. "../") from the Home link.
+    var prefix = '';
+    Array.prototype.some.call(existingLinks, function (link) {
+      var href = link.getAttribute('href') || '';
+      if (basename(href) !== 'index.html') return false;
+      prefix = href.slice(0, href.length - 'index.html'.length);
+      return true;
+    });
+
     var links = [
       ['Home', 'index.html'],
       ['About', 'about.html'],
       ['Books', 'books.html'],
       ['Coaching', 'coaching.html'],
       ['Knowledge Hub', 'knowledge.html'],
+      ['Support Finder', 'support-finder.html'],
       ['Blog', 'blog.html'],
       ['Contact', 'contact.html']
     ];
 
     links.forEach(function (entry) {
-      var exists = Array.prototype.some.call(navigation.querySelectorAll('a'), function (link) {
-        return link.getAttribute('href') === entry[1];
+      var exists = Array.prototype.some.call(existingLinks, function (link) {
+        return basename(link.getAttribute('href')) === entry[1];
       });
       if (exists) return;
 
       var item = document.createElement('li');
       item.className = 'nav-item';
-      item.innerHTML = '<a class="nav-link" href="' + entry[1] + '">' + entry[0] + '</a>';
+      item.innerHTML = '<a class="nav-link" href="' + prefix + entry[1] + '">' + entry[0] + '</a>';
       navigation.appendChild(item);
     });
   }
