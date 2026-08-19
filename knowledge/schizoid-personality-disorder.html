@@ -2047,34 +2047,65 @@
     filter: drop-shadow(0 25px 40px rgba(0,0,0,.35));
 }
 
-.pe-nav {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--pe-line);
-    background: rgba(5,10,10,.94);
+.pe-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 285px;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
+  padding-top: 20px;
 }
 
-.pe-nav ul {
-    display: flex;
-    gap: 7px;
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    list-style: none;
+.pe-article-content { min-width: 0; }
+
+.pe-sidebar {
+  position: sticky;
+  top: 122px;
+  min-width: 0;
+  padding-top: 55px;
 }
 
-.pe-nav li {
-    flex: 0 0 auto;
+.pe-sidebar-card {
+  padding: 23px 21px;
+  border: 1px solid var(--pe-line);
+  background: rgba(11,19,18,.94);
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
 }
 
-.pe-nav a {
-    display: block;
-    padding: 8px 12px;
-    border: 1px solid var(--pe-line);
-    border-radius: 999px;
-    color: var(--pe-text);
-    text-decoration: none;
-    font-size: .84rem;
+.pe-sidebar-label {
+  margin: 0 0 10px;
+  color: var(--pe-gold-soft);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }
+
+.pe-sidebar-title {
+  margin: 0 0 8px;
+  color: var(--pe-text) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.1 !important;
+}
+
+.pe-sidebar-copy {
+  margin: 0 0 15px;
+  color: var(--pe-muted) !important;
+  font-size: .88rem;
+  line-height: 1.55 !important;
+}
+
+.pe-sidebar nav a {
+  display: block;
+  padding: 9px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: var(--pe-text);
+  font-size: .88rem;
+  text-decoration: none;
+}
+
+.pe-sidebar nav a:hover,
+.pe-sidebar nav a:focus-visible { color: var(--pe-gold-soft); }
 
 .pe-section {
     padding: 55px 0;
@@ -2225,6 +2256,9 @@
         grid-template-columns: 1fr;
     }
 
+    .pe-layout { grid-template-columns: 1fr; }
+    .pe-sidebar { position: static; order: 2; padding-top: 0; }
+
     .pe-hero {
         padding: 42px 0 38px;
     }
@@ -2304,6 +2338,9 @@
 }
 </script>
     <link rel="stylesheet" href="../assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -2336,12 +2373,6 @@
               <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
               <li class="nav-item"><div class="coaching-nav-dropdown">
 <a class="nav-link" href="/coaching.html">Coaching</a>
-    <div class="coaching-nav-submenu">
-        <a href="/trauma-coaching.html">Trauma</a>
-
-        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
-<a href="/team-leadership-coaching.html">Business Coaching</a>
-    </div>
 </div></li>
               <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
 <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
@@ -2401,15 +2432,8 @@ meaningful consideration of the person’s internal experience and functioning.
 </div>
 </header>
 
-<nav class="pe-nav"><div class="pe-wrap"><ul>
-<li><a href="/knowledge/schizoid-personality-disorder.html#definition">Definition</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#features">Features</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#differences">Differences</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#relationships">Relationships</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#assessment">Assessment</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#treatment">Treatment</a></li>
-<li><a href="/knowledge/schizoid-personality-disorder.html#faq">FAQs</a></li>
-</ul></div></nav>
+<div class="pe-layout pe-wrap">
+<div class="pe-article-content">
 
 <section class="pe-section" id="definition"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">Definition</div><h2>What is Schizoid Personality Disorder?</h2></div>
@@ -2427,6 +2451,67 @@ person has no emotions, imagination, needs or sensitivity.
 </p>
 </div></section>
 
+<section class="pe-section" id="experience"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Lived experience</div><h2>What detachment may mean from the inside</h2></div>
+<p>Descriptions of schizoid personality disorder often focus on what other people observe: limited relationships, little visible emotion and a preference for solitary activities. That viewpoint is incomplete. A person may experience solitude as restorative, neutral, protective or simply more manageable than interaction. Another person may want connection but find it effortful, confusing or intrusive. A third may feel emotionally muted, disconnected from bodily signals or uncertain how to translate private feelings into ordinary social language. The same outward behaviour can therefore have very different meanings.</p>
+<p>Some people describe a strong private imaginative life, intense intellectual interests or a rich relationship with books, music, nature, animals, systems or ideas. Others describe emptiness, low reward, difficulty identifying feelings or a sense that social life is happening at a distance. These experiences should not be assumed from appearance. Quietness is not proof of emotional absence, just as a lively public manner is not proof of deep social interest.</p>
+<p>It is also important not to confuse privacy with deception. A person who does not volunteer personal information may be protecting autonomy rather than hiding wrongdoing. Pressuring someone to disclose feelings, perform warmth or maintain constant contact can increase withdrawal. Respectful support asks what the person wants to change, what is causing harm, and which forms of connection feel acceptable to them.</p>
+<div class="pe-evidence-note">A diagnosis should describe a persistent pattern of functioning and its consequences. It should never be used as a shortcut for calling someone cold, selfish, dangerous or incapable of care.</div>
+</div></section>
+
+<section class="pe-section" id="development"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Development and formulation</div><h2>How a long-term pattern is distinguished from a recent change</h2></div>
+<p>Personality diagnosis requires attention to time. Clinicians may ask about childhood friendships, family relationships, play, interests, school, work, romantic relationships and the person's usual response to praise, criticism and conflict. The aim is not to search for a single cause but to understand whether detachment has been stable across contexts, when it became noticeable, and whether it has changed.</p>
+<p>A recent loss of interest in people can reflect depression, burnout, grief, chronic pain, medication effects, trauma, substance use, sleep disruption or a physical illness. Those possibilities need attention before a longstanding personality pattern is assumed. A person who was previously sociable and has become isolated is presenting a different clinical question from someone who has consistently preferred a small, private life without distress or impairment.</p>
+<p>Developmental information can be incomplete. Some people have moved frequently, grown up in unsafe homes, experienced bullying or learned that emotional disclosure brought punishment. Others have had little opportunity to practise relationships. A careful formulation holds these experiences alongside temperament and neurodevelopment rather than treating the person's adaptations as evidence of bad character.</p>
+<p>Research on personality functioning supports dimensional thinking: detachment can vary in degree, and people may show strengths in some domains while struggling in others. A label should not erase that variation. It is more useful to describe the specific pattern, its severity, the person's goals and the supports that make participation easier.</p>
+</div></section>
+
+<section class="pe-section" id="culture"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Culture and context</div><h2>Solitude is not a universal sign of disorder</h2></div>
+<p>Expectations about family closeness, friendship, eye contact, emotional display, hospitality, dating, privacy and community participation differ across cultures and subcultures. A person may be seen as detached by one assessor and appropriately private by another. Migration, language, racism, religious discrimination, poverty and disability can also shape how safe or rewarding social contact feels.</p>
+<p>Assessment should ask how the person understands their own pattern and how their community understands it. It should consider whether the person's choices are freely made, whether they cause distress, and whether practical impairment results. A quiet lifestyle that is culturally ordinary and personally satisfying is not made pathological by being unfamiliar to a clinician.</p>
+<p>Culture is not a blanket explanation. Someone can belong to a highly social community and still experience profound detachment, just as someone from a private or individualistic culture may have depression or social anxiety. Cultural formulation improves accuracy by making the assessor's assumptions visible and inviting the person's own explanation.</p>
+</div></section>
+
+<section class="pe-section" id="functioning"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Daily functioning</div><h2>Work, study and independent life</h2></div>
+<p>Detachment may be less visible in structured settings than in intimate relationships. A person may perform well when tasks are clear, interaction is limited and success is measured by a concrete outcome. They may struggle more when work depends on informal networking, constant collaboration, emotional display or rapidly changing social expectations. The issue is not a lack of ability; it may be a mismatch between the environment and the person's preferred way of working.</p>
+<p>Useful adjustments can include written instructions, predictable meetings, advance notice of changes, a quiet workspace, clear responsibility boundaries and feedback that is specific rather than socially coded. These are not special privileges. Many people work more effectively when expectations are explicit. Adjustments should be based on functional need and local employment or education law, not on assumptions about a diagnosis.</p>
+<p>Independent living can be a genuine strength. Someone who prefers solitude may manage routines, finances, creative projects or technical work very well. Difficulties may emerge during illness, bereavement, housing instability or a practical crisis when there are few people to contact. A support plan can identify trusted contacts, preferred communication methods and the tasks that become harder under stress without treating independence as a problem.</p>
+</div></section>
+
+<section class="pe-section" id="emotion"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Emotion and embodiment</div><h2>Restricted expression is not the same as no feeling</h2></div>
+<p>People vary in how they notice, name and show emotion. Some feel emotions clearly but keep them private. Some recognise emotion first through physical sensations, fatigue, irritability or changes in concentration. Others experience genuinely low emotional intensity or difficulty accessing feeling. Observers cannot reliably infer the inner state from facial expression, voice or eye contact alone.</p>
+<p>Therapy should not begin by insisting that a person express emotion in a conventional way. It may begin with practical questions: What changed? What matters to you? What situations drain you? What helps you feel settled? Which decisions are difficult? Emotional vocabulary can be developed gradually, but it should serve the person's goals rather than satisfy another person's demand for reassurance.</p>
+<p>Low pleasure and emotional flatness can also be symptoms of depression, medication effects, trauma-related dissociation, negative symptoms or physical illness. A clinician should ask whether this is longstanding, whether there are periods of greater feeling, and whether the person is distressed by it. Changes in appetite, sleep, energy, self-care, hope or safety require attention even when the person does not describe sadness.</p>
+</div></section>
+
+<section class="pe-section" id="intimacy"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Intimacy and consent</div><h2>Relationships should not be measured by performance</h2></div>
+<p>Romantic and sexual interest varies widely. Some people with schizoid features have little interest in romance or sex; others want companionship, physical intimacy or a committed relationship but prefer more space than a partner expects. Relationship status does not diagnose a personality disorder, and asexuality, aromantic identity, celibacy and privacy are not symptoms in themselves.</p>
+<p>Healthy relationships require consent and negotiated expectations, not emotional performance. Partners can discuss contact frequency, time alone, affection, sex, household responsibilities, money and how conflict will be paused and resumed. It is reasonable for one person to need more closeness and for the other to need more space; the question is whether an arrangement can be freely agreed and practically sustained.</p>
+<p>Coercion is not treatment. Pressuring someone to disclose, attend social events, abandon friends, prove love or accept unwanted touch is harmful. At the same time, a need for privacy does not excuse intimidation, neglect of agreed responsibilities or cruelty. Boundaries protect both people and make consent clearer.</p>
+</div></section>
+
+<section class="pe-section" id="differences"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Differential understanding</div><h2>Similar-looking patterns need different questions</h2></div>
+<div class="pe-table-scroll"><table class="pe-table">
+<thead><tr><th>Possibility</th><th>What to explore</th><th>Clinical implication</th></tr></thead>
+<tbody>
+<tr><td>Ordinary introversion</td><td>Does the person enjoy selected relationships, recover through solitude and function without marked distress?</td><td>Introversion is a normal variation, not a disorder.</td></tr>
+<tr><td>Depression</td><td>Is withdrawal a change accompanied by low mood, hopelessness, fatigue or loss of pleasure?</td><td>Treating depression may substantially restore interest and energy.</td></tr>
+<tr><td>Social anxiety</td><td>Is contact avoided because of fear of embarrassment, criticism or rejection?</td><td>Anxiety-focused psychological treatment may be central.</td></tr>
+<tr><td>Avoidant personality disorder</td><td>Does the person want closeness but expect shame, rejection or inadequacy?</td><td>Desire for connection and fear of it are important formulation differences.</td></tr>
+<tr><td>Autism</td><td>Are social communication, sensory and routine differences evident from early development?</td><td>Neurodevelopmental assessment and accommodations may be needed.</td></tr>
+<tr><td>Trauma and dissociation</td><td>Does detachment follow danger, abuse, intrusive memories or feeling unreal?</td><td>Trauma-informed assessment should address safety and stabilisation.</td></tr>
+<tr><td>Schizotypal patterns</td><td>Are unusual beliefs, perceptions, speech or eccentricity central?</td><td>Reality-testing and psychosis-spectrum assessment may be relevant.</td></tr>
+<tr><td>Psychotic or negative symptoms</td><td>Is there a change in reality testing, motivation, self-care or functioning?</td><td>Prompt specialist assessment may be important.</td></tr>
+</tbody></table></div>
+<p>These distinctions are not a checklist for self-diagnosis. Co-occurrence is common, and an accurate formulation may include more than one process. The most useful question is often not “Which label is this?” but “What is happening, what is causing harm, and what support would help?”</p>
+</div></section>
+
 <section class="pe-section" id="features"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">Possible features</div><h2>How schizoid patterns may appear</h2></div>
 <div class="pe-grid-3">
@@ -2437,20 +2522,6 @@ person has no emotions, imagination, needs or sensitivity.
 <div class="pe-card"><h3>Sexual and romantic interest</h3><p>Some individuals report limited interest, but this cannot be assumed from relationship status.</p></div>
 <div class="pe-card"><h3>Rich private experience</h3><p>Outward detachment can coexist with imagination, intellectual interests and private emotional life.</p></div>
 </div>
-</div></section>
-
-<section class="pe-section" id="differences"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Differential understanding</div><h2>What SPD can be confused with</h2></div>
-<div class="pe-table-scroll"><table class="pe-table">
-<thead><tr><th>Possibility</th><th>Difference to investigate</th></tr></thead>
-<tbody>
-<tr><td>Introversion</td><td>A normal personality dimension that does not require impairment or pervasive detachment.</td></tr>
-<tr><td>Autism</td><td>A neurodevelopmental condition involving developmental social communication differences and restricted or repetitive patterns.</td></tr>
-<tr><td>Depression</td><td>Withdrawal and reduced pleasure may represent a change from the person’s usual functioning.</td></tr>
-<tr><td>Avoidant Personality Disorder</td><td>Closeness may be desired but avoided because of shame, rejection sensitivity or feelings of inadequacy.</td></tr>
-<tr><td>Social anxiety</td><td>Avoidance is more clearly driven by fear of scrutiny or embarrassment.</td></tr>
-<tr><td>Schizotypal Personality Disorder</td><td>Unusual beliefs, perceptions, speech or eccentricity are more central to schizotypal patterns.</td></tr>
-</tbody></table></div>
 </div></section>
 
 <section class="pe-section" id="relationships"><div class="pe-wrap">
@@ -2488,6 +2559,19 @@ functioning. A slower pace and respect for privacy may support engagement.
 <div class="pe-caution">Treatment should not equate health with becoming highly sociable. Distress, choice and functioning matter more than conformity.</div>
 </div></section>
 
+<section class="pe-section" id="support"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Practical support</div><h2>Helping without forcing intimacy</h2></div>
+<div class="pe-grid-3">
+<div class="pe-card"><h3>Make contact predictable</h3><p>Agree when to call, how much notice is helpful and what a pause in communication means. Predictability can reduce the feeling that every interaction requires an immediate performance.</p></div>
+<div class="pe-card"><h3>Use direct language</h3><p>Say what you need, ask one question at a time and avoid testing someone through hints. Clear requests are kinder than demanding that the person infer an emotional expectation.</p></div>
+<div class="pe-card"><h3>Respect privacy</h3><p>Privacy is not automatically avoidance. Ask what can be shared, keep confidences appropriately and negotiate practical responsibilities without demanding access to every inner thought.</p></div>
+<div class="pe-card"><h3>Notice change</h3><p>A sudden increase in isolation, hopelessness, confusion, substance use or inability to manage daily tasks deserves assessment even if the person usually prefers solitude.</p></div>
+<div class="pe-card"><h3>Build from interests</h3><p>Shared activities based on a person's genuine interests may be less demanding than unstructured socialising. Connection does not have to begin with emotional disclosure.</p></div>
+<div class="pe-card"><h3>Protect autonomy</h3><p>Support should focus on chosen goals and safety. Becoming more conventional or more sociable is not a sufficient treatment outcome by itself.</p></div>
+</div>
+<p>Supporters also need boundaries. They can decline disrespect, state when they are unavailable and ask for reciprocal practical cooperation. Respect for detachment does not require tolerating abuse, coercion or complete absence of shared responsibility.</p>
+</div></section>
+
 <section class="pe-section pe-faq" id="faq"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">FAQs</div><h2>Schizoid Personality Disorder questions</h2></div>
 <details><summary>Is SPD the same as schizophrenia?</summary><div><p>No. The names share historical roots, but they are distinct conditions.</p></div></details>
@@ -2495,11 +2579,48 @@ functioning. A slower pace and respect for privacy may support engagement.
 <details><summary>Is every solitary person schizoid?</summary><div><p>No. Solitude can be healthy, chosen and consistent with ordinary introversion.</p></div></details>
 </div></section>
 
-<section class="pe-section pe-references"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Sources</div><h2>Diagnostic foundations</h2></div>
-<ol><li>American Psychiatric Association, DSM-5-TR personality disorder framework.</li><li>World Health Organization, ICD-11 dimensional personality disorder model.</li><li>Clinical literature on detachment, differential diagnosis and personality functioning.</li></ol>
+<section class="pe-section pe-references" id="sources"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Sources and limits</div><h2>Evidence, guidance and further reading</h2></div>
+<p>This page is educational and cannot diagnose a person. Evidence specifically about schizoid personality disorder is limited, and some practical recommendations are drawn from broader research on personality functioning, depression, social anxiety, autism, trauma and psychosis-spectrum assessment. The distinction matters: evidence from one condition should not be presented as proof about another.</p>
+<ol>
+<li><a href="https://www.who.int/standards/classifications/classification-of-diseases" rel="noopener noreferrer">World Health Organization, International Classification of Diseases (ICD-11)</a>. Current international classification and implementation material.</li>
+<li><a href="https://www.psychiatry.org/psychiatrists/diversity/education/cultural-formulation-interview" rel="noopener noreferrer">American Psychiatric Association, Cultural Formulation Interview</a>. Guidance for exploring culture, identity, explanatory models and help-seeking.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg90" rel="noopener noreferrer">NICE, Depression in adults</a>. Relevant when withdrawal, low pleasure or reduced motivation may represent a change from baseline.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg159" rel="noopener noreferrer">NICE, Social anxiety disorder</a>. Guidance for a common overlapping difficulty in which connection may be desired but avoided because of fear.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg142" rel="noopener noreferrer">NICE, Autism spectrum disorder in adults</a>. Relevant to differential assessment of lifelong social communication and sensory differences.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg178" rel="noopener noreferrer">NICE, Psychosis and schizophrenia in adults</a>. Relevant when there is a marked change in reality testing, functioning or safety.</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=schizoid+personality+disorder+review" rel="noopener noreferrer">PubMed: research and reviews on schizoid personality disorder</a>. A research search portal; findings vary in definitions, samples and methods.</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=personality+functioning+detachment+dimensional+model" rel="noopener noreferrer">PubMed: dimensional personality functioning and detachment research</a>. Useful context for understanding traits as dimensions rather than fixed identities.</li>
+</ol>
+<p>Readers should check the date, population and methods of individual studies. A source link indicates where to investigate further; it does not mean that every sentence on this page is directly established by one source.</p>
 <p><a href="/knowledge/what-are-cluster-a-personality-disorders.html">Return to the Cluster A guide →</a></p>
 </div></section>
+</div>
+<aside class="pe-sidebar" aria-label="Schizoid guide navigation">
+  <div class="pe-sidebar-card">
+    <p class="pe-sidebar-label">Guide sections</p>
+    <p class="pe-sidebar-title">Navigate the evidence</p>
+    <p class="pe-sidebar-copy">Move between the clinical overview, lived experience, assessment and support sections.</p>
+    <nav aria-label="Guide sections">
+      <a href="/knowledge/schizoid-personality-disorder.html#definition">Overview</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#experience">Experience</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#features">Features</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#development">Development</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#culture">Culture</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#functioning">Daily functioning</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#emotion">Emotion</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#intimacy">Intimacy</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#differences">Differential</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#relationships">Relationships</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#assessment">Assessment</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#treatment">Treatment</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#support">Support</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#faq">FAQs</a>
+      <a href="/knowledge/schizoid-personality-disorder.html#sources">Sources</a>
+    </nav>
+  </div>
+</aside>
+</div>
 </article>
 </main>
 
@@ -2515,7 +2636,7 @@ functioning. A slower pace and respect for privacy may support engagement.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js?v=20260816-knowledge-nav-3"></script>
   <!-- KH_LIVE_NATIVE_LINKS_START -->
 <style class="KH_LIVE_NATIVE_LINKS_STYLES">
 .ke-page a[href],
@@ -2560,5 +2681,8 @@ functioning. A slower pace and respect for privacy may support engagement.
 }
 </style>
 <!-- KH_LIVE_NATIVE_LINKS_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
 </body>
 </html>

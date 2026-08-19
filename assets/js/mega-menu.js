@@ -212,7 +212,7 @@
       }, 500);
     }
 
-    document.querySelectorAll('header a, nav a').forEach(function (link) {
+    document.querySelectorAll('header nav a').forEach(function (link) {
       var name = labels[normalise(link.textContent)];
       if (!name) return;
 

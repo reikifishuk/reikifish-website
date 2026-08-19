@@ -1306,9 +1306,320 @@ html {
     }
 }
 </style>
+<!-- RF_HPD_SIDEBAR_FIX_START -->
+<style>
+/* HPD sidebar matched to the established Knowledge Hub article layout. */
+.rf-hpd-sidebar-page .ke-side {
+    position: sticky !important;
+    top: 7rem !important;
+    align-self: start !important;
+    width: 100% !important;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    padding-right: .35rem;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box {
+    box-sizing: border-box;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 1.25rem !important;
+    padding: clamp(1.5rem, 2vw, 2rem) !important;
+    overflow: hidden;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-label {
+    display: block;
+    margin: 0 0 1rem !important;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav a {
+    position: relative;
+    z-index: 2;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: .85rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    color: inherit;
+    line-height: 1.4;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav a:last-child {
+    border-bottom: 0;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav a:hover,
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav a:focus-visible {
+    color: #e4ae28;
+}
+
+.rf-hpd-sidebar-page .ke-side .ke-side-box nav a::after {
+    content: "\2192";
+    flex: 0 0 auto;
+    color: #e4ae28;
+}
+
+.rf-hpd-sidebar-page [id] {
+    scroll-margin-top: 8rem;
+}
+
+@media (max-width: 991.98px) {
+    .rf-hpd-sidebar-page .ke-side {
+        position: static !important;
+        top: auto !important;
+        max-height: none;
+        overflow: visible;
+        padding-right: 0;
+    }
+}
+</style>
+<!-- RF_HPD_SIDEBAR_FIX_END -->
+<!-- RF_GLOBAL_WHITE_SIDEBAR_START -->
+<style id="rf-global-white-sidebar">
+@media (min-width: 992px) {
+    .ke-layout,
+    .kh-article-layout,
+    .article-layout {
+        align-items: start !important;
+    }
+
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        align-self: start !important;
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(197, 151, 37, .65) transparent;
+    }
+}
+
+.ke-side .ke-side-box,
+.kh-sidebar .ke-side-box,
+.article-sidebar .ke-side-box {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav,
+.kh-sidebar nav,
+.article-sidebar nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+.ke-side nav a,
+.kh-sidebar nav a,
+.article-sidebar nav a,
+.ke-side .ke-side-box a,
+.kh-sidebar .ke-side-box a,
+.article-sidebar .ke-side-box a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: .9rem 0 !important;
+    margin: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .08) !important;
+    color: rgba(245, 241, 232, .76) !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+.ke-side nav a:last-child,
+.kh-sidebar nav a:last-child,
+.article-sidebar nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+.ke-side nav a::after,
+.kh-sidebar nav a::after,
+.article-sidebar nav a::after,
+.ke-side .ke-side-box a::after,
+.kh-sidebar .ke-side-box a::after,
+.article-sidebar .ke-side-box a::after {
+    content: none !important;
+    display: none !important;
+}
+
+.ke-side nav a:hover,
+.ke-side nav a:focus-visible,
+.ke-side nav a.active,
+.ke-side nav a[aria-current="true"],
+.ke-side nav a[aria-current="location"],
+.kh-sidebar nav a:hover,
+.kh-sidebar nav a:focus-visible,
+.kh-sidebar nav a.active,
+.kh-sidebar nav a[aria-current="true"],
+.kh-sidebar nav a[aria-current="location"],
+.article-sidebar nav a:hover,
+.article-sidebar nav a:focus-visible,
+.article-sidebar nav a.active,
+.article-sidebar nav a[aria-current="true"],
+.article-sidebar nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+.ke-side nav a span[aria-hidden="true"],
+.kh-sidebar nav a span[aria-hidden="true"],
+.article-sidebar nav a span[aria-hidden="true"],
+.ke-side nav a .arrow,
+.kh-sidebar nav a .arrow,
+.article-sidebar nav a .arrow {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+@media (max-width: 991.98px) {
+    .ke-side,
+    .kh-sidebar,
+    .article-sidebar {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+        width: 100% !important;
+    }
+}
+</style>
+<!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+<!-- RF_HPD_SOP_NAV_START -->
+<style id="rf-hpd-sop-navigation">
+/* Match the established white/grey Knowledge Hub navigation. */
+main aside {
+    align-self: start !important;
+}
+
+main aside > section,
+main aside > div {
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+main aside nav {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 0 !important;
+    width: 100% !important;
+}
+
+main aside nav a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 1rem !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, .09) !important;
+    color: rgba(245, 241, 232, .78) !important;
+    font-size: 1.08rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    overflow-wrap: anywhere !important;
+    box-sizing: border-box !important;
+}
+
+main aside nav a:last-child {
+    border-bottom: 0 !important;
+}
+
+/* Prevent old CSS from generating a second arrow. */
+main aside nav a::after {
+    content: none !important;
+    display: none !important;
+}
+
+main aside nav a:hover,
+main aside nav a:focus-visible,
+main aside nav a.active,
+main aside nav a[aria-current="true"],
+main aside nav a[aria-current="location"] {
+    color: #efb126 !important;
+}
+
+main aside nav a span:last-child,
+main aside nav a .arrow,
+main aside nav a [aria-hidden="true"] {
+    flex: 0 0 auto !important;
+    margin-left: auto !important;
+    color: #efb126 !important;
+}
+
+main aside nav a:focus-visible {
+    outline: 2px solid #efb126 !important;
+    outline-offset: 4px !important;
+}
+
+/* Keep the complete HPD sidebar visible while the article scrolls. */
+@media (min-width: 992px) {
+    main aside {
+        position: sticky !important;
+        top: 7rem !important;
+        max-height: calc(100vh - 8rem) !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(239, 177, 38, .58) transparent;
+    }
+}
+
+@media (max-width: 991.98px) {
+    main aside {
+        position: static !important;
+        top: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main [id] {
+    scroll-margin-top: 8rem;
+}
+</style>
+<!-- RF_HPD_SOP_NAV_END -->
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
 </head>
 
-<body class="home-page about-page">
+<body class="home-page about-page rf-hpd-sidebar-page">
     <header class="home-shell">
       <nav class="navbar navbar-expand-lg fixed-top site-nav px-3 px-lg-4 py-2 py-lg-3">
         <div class="container-fluid">
@@ -1339,12 +1650,6 @@ html {
               <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
               <li class="nav-item"><div class="coaching-nav-dropdown">
 <a class="nav-link" href="/coaching.html">Coaching</a>
-    <div class="coaching-nav-submenu">
-        <a href="/trauma-coaching.html">Trauma</a>
-
-        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
-<a href="/team-leadership-coaching.html">Business Coaching</a>
-    </div>
 </div></li>
               <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
 <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
@@ -2934,7 +3239,7 @@ html {
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js?v=20260816-knowledge-nav-3"></script>
   <!-- KH_BATCH_A_LINK_FIX -->
 <style class="KH_BATCH_A_LINK_FIX_STYLES">
 .kh-depth-contents {
@@ -3477,5 +3782,44 @@ html {
 }
 </style>
 <!-- FOUR_GUIDE_NATIVE_LINKS_END -->
+<!-- RF_HPD_FINAL_WHITE_NAV_START -->
+<style id="rf-hpd-final-white-navigation">
+/* Final HPD override: match the established white SOP navigation. */
+html body main aside nav a[href^="#"],
+html body main aside .ke-side-box a[href^="#"],
+html body main .ke-side nav a[href^="#"] {
+    color: rgba(245, 241, 232, .78) !important;
+    font-size: 1.08rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+/* Keep only the arrow gold. */
+html body main aside nav a[href^="#"]::after,
+html body main aside .ke-side-box a[href^="#"]::after,
+html body main .ke-side nav a[href^="#"]::after {
+    color: #efb126 !important;
+}
+
+/* Support arrows already contained in a separate element. */
+html body main aside nav a[href^="#"] [aria-hidden="true"],
+html body main aside nav a[href^="#"] .arrow,
+html body main aside nav a[href^="#"] .ke-arrow {
+    color: #efb126 !important;
+}
+
+/* Gold is used for interaction and the current section only. */
+html body main aside nav a[href^="#"]:hover,
+html body main aside nav a[href^="#"]:focus-visible,
+html body main aside nav a[href^="#"].active,
+html body main aside nav a[href^="#"][aria-current="true"],
+html body main aside nav a[href^="#"][aria-current="location"] {
+    color: #efb126 !important;
+}
+</style>
+<!-- RF_HPD_FINAL_WHITE_NAV_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
 </body>
 </html>

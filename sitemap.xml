@@ -11,6 +11,66 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.reikifish.com/knowledge/covert-narcissism.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/attachment-theory.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/neuroplasticity.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+    <url>
+      <loc>https://www.reikifish.com/knowledge/what-is-love-bombing.html</loc>
+      <lastmod>2026-08-17</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+    </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/habit-loop.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/what-is-emotional-contagion.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/what-is-cluster-d-personality-disorders.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/schizotypal-personality-disorder.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/schizoid-personality-disorder.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/knowledge/nervous-system-regulation.html</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.reikifish.com/books.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -29,6 +89,30 @@
     <loc>https://www.reikifish.com/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/articles/evidence-led-understanding-parent-alienation-children.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/articles/child-s-rights-when-a-child-is-coerced-what-it-means-for-a-parent-england-scotland.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/articles/fathers-family-courts-scotland-issues-reform.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.reikifish.com/articles/reiki-level-1-attunement-guide.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.reikifish.com/articles/the-grey-method-staying-regulated-under-provocation.html</loc>
@@ -83,5 +167,25 @@
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reikifish.com/knowledge/what-is-trauma-bonding.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://reikifish.com/knowledge/what-is-betrayal-trauma.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reikifish.com/knowledge/what-is-polyvagal-theory.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://reikifish.com/knowledge/what-is-bpd.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

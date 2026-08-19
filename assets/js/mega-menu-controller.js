@@ -6,7 +6,6 @@
     'books': 'books',
     'coaching': 'coaching',
     'knowledge hub': 'knowledge',
-    'support finder': 'support',
     'blog': 'blog'
   };
   var timer = 0;
@@ -18,7 +17,7 @@
   }
   function findTrigger(node) {
     if (!node || !node.closest) return null;
-    var link = node.closest('header a, nav a');
+    var link = node.closest('header nav a');
     return link && map[label(link)] ? link : null;
   }
   function menu() { return document.getElementById('rf-premium-menu') || document.querySelector('.rf-premium-menu'); }
@@ -29,7 +28,7 @@
     document.querySelectorAll('.coaching-nav-submenu, header .dropdown-menu, nav .dropdown-menu').forEach(function (node) {
       node.remove();
     });
-    document.querySelectorAll('header a, nav a').forEach(function (link) {
+    document.querySelectorAll('header nav a').forEach(function (link) {
       if (!map[label(link)]) return;
       link.classList.remove('dropdown-toggle');
       link.removeAttribute('data-bs-toggle');
@@ -77,45 +76,36 @@
     var navigation = document.querySelector('header nav .navbar-nav');
     if (!navigation) return;
 
-    // Compare by filename only so nested pages (../about.html) still match root-relative entries.
-    var basename = function (href) {
-      var clean = String(href || '').split('?')[0].split('#')[0];
-      var parts = clean.split('/');
-      return parts[parts.length - 1] || '';
-    };
-
-    var existingLinks = navigation.querySelectorAll('a');
-
-    // Derive the current page's relative path prefix (e.g. "../") from the Home link.
-    var prefix = '';
-    Array.prototype.some.call(existingLinks, function (link) {
-      var href = link.getAttribute('href') || '';
-      if (basename(href) !== 'index.html') return false;
-      prefix = href.slice(0, href.length - 'index.html'.length);
-      return true;
-    });
-
     var links = [
       ['Home', 'index.html'],
       ['About', 'about.html'],
       ['Books', 'books.html'],
       ['Coaching', 'coaching.html'],
       ['Knowledge Hub', 'knowledge.html'],
-      ['Support Finder', 'support-finder.html'],
       ['Blog', 'blog.html'],
       ['Contact', 'contact.html']
     ];
 
+    var seen = {};
+    Array.prototype.forEach.call(navigation.querySelectorAll('a'), function (link) {
+      var linkLabel = label(link);
+      if (!linkLabel || !map[linkLabel] && linkLabel !== 'home' && linkLabel !== 'contact') return;
+      if (seen[linkLabel]) {
+        var duplicate = link.closest('li');
+        if (duplicate) duplicate.remove();
+        return;
+      }
+      seen[linkLabel] = true;
+    });
+
     links.forEach(function (entry) {
-      var exists = Array.prototype.some.call(existingLinks, function (link) {
-        return basename(link.getAttribute('href')) === entry[1];
-      });
-      if (exists) return;
+      if (seen[entry[0].toLowerCase()]) return;
 
       var item = document.createElement('li');
       item.className = 'nav-item';
-      item.innerHTML = '<a class="nav-link" href="' + prefix + entry[1] + '">' + entry[0] + '</a>';
+      item.innerHTML = '<a class="nav-link" href="' + entry[1] + '">' + entry[0] + '</a>';
       navigation.appendChild(item);
+      seen[entry[0].toLowerCase()] = true;
     });
   }
 

@@ -1,5 +1,50 @@
 [
   {
+    "slug": "what-is-bpd",
+    "title": "What Is BPD?",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "Understand borderline personality disorder, its symptoms, causes, treatment and relationships, explained clearly and without stigma.",
+    "keywords": [
+      "BPD",
+      "borderline personality disorder",
+      "emotional dysregulation",
+      "DBT",
+      "personality disorder treatment"
+    ],
+    "url": "knowledge/what-is-bpd.html"
+  },
+  {
+    "slug": "what-is-polyvagal-theory",
+    "title": "What Is Polyvagal Theory?",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Understand polyvagal theory, the autonomic nervous system states, neuroception and practical ways to build a steadier sense of safety.",
+    "keywords": [
+      "polyvagal theory",
+      "autonomic nervous system",
+      "neuroception",
+      "vagal tone",
+      "nervous system regulation"
+    ],
+    "url": "knowledge/what-is-polyvagal-theory.html"
+  },
+  {
+    "slug": "what-is-betrayal-trauma",
+    "title": "What Is Betrayal Trauma?",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Understand betrayal trauma, betrayal blindness, institutional betrayal and practical steps for rebuilding trust, safety and clarity.",
+    "keywords": [
+      "betrayal trauma",
+      "betrayal blindness",
+      "institutional betrayal",
+      "trust after betrayal",
+      "dependency and trauma"
+    ],
+    "url": "knowledge/what-is-betrayal-trauma.html"
+  },
+  {
     "slug": "what-is-trauma-bonding",
     "title": "What Is Trauma Bonding?",
     "type": "Complete Guide",

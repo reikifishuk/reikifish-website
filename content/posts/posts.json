@@ -1,6 +1,87 @@
 {
   "items": [
     {
+      "title": "A Guide To Reiki Level 1 Attunement",
+      "slug": "reiki-level-1-attunement-guide",
+      "url": "articles/reiki-level-1-attunement-guide.html",
+      "date": "2026-08-16T18:08:53",
+      "dateLabel": "16 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "A Reiki Level 1 attunement is often described as one of the more significant moments in a practitioner's life — yet many people walk away feeling very little at all. This guide covers what actually happens in the ceremony, the philosophy behind it, the 21-day clearing period, and an honest look at what the research says.",
+      "category": "Reiki",
+      "categories": [
+        "Reiki"
+      ],
+      "tags": [
+        "['Reiki Attunement']"
+      ],
+      "image": "assets/images/blog/reiki.jpg",
+      "imageAlt": "Person receiving a Reiki Level 1 attunement, hands resting gently near the head during a calm training session",
+      "readingTime": "35 min read",
+      "featured": false
+    },
+    {
+      "title": "What Kids Really Feel When a Parent Alienates the Other Parent: An Evidence-Led Guide for Understanding and Responding",
+      "slug": "evidence-led-understanding-parent-alienation-children",
+      "url": "articles/evidence-led-understanding-parent-alienation-children.html",
+      "date": "2026-08-16T17:35:53",
+      "dateLabel": "16 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "\\\"Children's nervous systems encode threat patterns through repeated experiences, overheard conversations, and emotional climate shifts. This is not manipulation—it's adaptation. When a child learns that expressing attachment to Dad creates consequences, their threat system becomes active. Over time, what began as 'what I say to keep things calm' can become 'what I believe.'\\\"",
+      "category": "Social Science",
+      "categories": [
+        "Social Science"
+      ],
+      "tags": [
+        "['Child Psychology']"
+      ],
+      "image": "assets/images/blog/father.webp",
+      "imageAlt": "Diagram showing reinforcement cycle of threat encoding and nervous system activation in parent alienation patterns\\\"",
+      "readingTime": "24 min read",
+      "featured": false
+    },
+    {
+      "title": "Child’s “Rights” When a Child Is Coerced: What It Means for a Parent (England & Scotland)",
+      "slug": "child-s-rights-when-a-child-is-coerced-what-it-means-for-a-parent-england-scotland",
+      "url": "articles/child-s-rights-when-a-child-is-coerced-what-it-means-for-a-parent-england-scotland.html",
+      "date": "2026-08-16",
+      "dateLabel": "16 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "Under pressure from an alienating or coercing parent? This evidence-led guide explains how the child’s views are assessed in Scotland & England, what “coerced” can mean in court, and what steps to take to protect your child’s welfare and your position (with practical evidence and safer contact options).",
+      "category": "Parental Alienation & DARVO",
+      "categories": [
+        "Parental Alienation & DARVO"
+      ],
+      "tags": [
+        "['Parental Alienation']"
+      ],
+      "image": "assets/images/blog/parental_alienation.jfif",
+      "imageAlt": "Evidence-led family court guidance showing how children’s views are assessed when pressure or coercion may be present in Scotland & England.",
+      "readingTime": "10 min read",
+      "featured": false
+    },
+    {
+      "title": "Fighting for Your Child: Do Scottish Family Courts Fail Fathers?",
+      "slug": "fathers-family-courts-scotland-issues-reform",
+      "url": "articles/fathers-family-courts-scotland-issues-reform.html",
+      "date": "2026-08-16",
+      "dateLabel": "16 August 2026",
+      "author": "Reiki Fish",
+      "excerpt": "This detailed article examines the systemic issues faced by fathers in Scottish family courts, highlighting historical biases, current patterns, and the urgent need for reform. It advocates for involving trained psychologists to ensure fair outcomes and emphasizes the importance of balancing parental rights for the wellbeing of children.",
+      "category": "Parental Alienation & DARVO",
+      "categories": [
+        "Parental Alienation & DARVO"
+      ],
+      "tags": [
+        "['Darvo'",
+        "'Parental Alienation']"
+      ],
+      "image": "assets/images/blog/scottish_parental_alienation.jfif",
+      "imageAlt": "Father advocating for fair access to children in Scottish family courts",
+      "readingTime": "21 min read",
+      "featured": false
+    },
+    {
       "title": "The Grey Method: Staying Regulated When Someone Wants a Reaction",
       "slug": "the-grey-method-staying-regulated-under-provocation",
       "url": "articles/the-grey-method-staying-regulated-under-provocation.html",

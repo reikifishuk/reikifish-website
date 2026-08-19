@@ -638,6 +638,11 @@ a.knowledge-breadcrumb-cta::before {
         0 4px 12px rgba(223, 164, 49, 0.22) !important;
 }
 
+a.knowledge-guide-back::before {
+    content: none !important;
+    display: none !important;
+}
+
 a.knowledge-breadcrumb-cta:hover,
 a.knowledge-breadcrumb-cta:focus-visible {
     color: #ffffff !important;

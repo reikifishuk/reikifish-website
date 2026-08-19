@@ -2047,33 +2047,68 @@
     filter: drop-shadow(0 25px 40px rgba(0,0,0,.35));
 }
 
-.pe-nav {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--pe-line);
-    background: rgba(5,10,10,.94);
+.pe-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 285px;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  align-items: start;
+  padding-top: 20px;
 }
 
-.pe-nav ul {
-    display: flex;
-    gap: 7px;
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    list-style: none;
+.pe-article-content {
+  min-width: 0;
 }
 
-.pe-nav li {
-    flex: 0 0 auto;
+.pe-sidebar {
+  position: sticky;
+  top: 122px;
+  min-width: 0;
+  padding-top: 55px;
 }
 
-.pe-nav a {
-    display: block;
-    padding: 8px 12px;
-    border: 1px solid var(--pe-line);
-    border-radius: 999px;
-    color: var(--pe-text);
-    text-decoration: none;
-    font-size: .84rem;
+.pe-sidebar-card {
+  padding: 23px 21px;
+  border: 1px solid var(--pe-line);
+  background: rgba(11,19,18,.94);
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.pe-sidebar-label {
+  margin: 0 0 10px;
+  color: var(--pe-gold-soft);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.pe-sidebar-title {
+  margin: 0 0 8px;
+  color: var(--pe-text) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.1 !important;
+}
+
+.pe-sidebar-copy {
+  margin: 0 0 15px;
+  color: var(--pe-muted) !important;
+  font-size: .88rem;
+  line-height: 1.55 !important;
+}
+
+.pe-sidebar nav a {
+  display: block;
+  padding: 9px 0;
+  border-top: 1px solid rgba(255,255,255,.08);
+  color: var(--pe-text);
+  font-size: .88rem;
+  text-decoration: none;
+}
+
+.pe-sidebar nav a:hover,
+.pe-sidebar nav a:focus-visible {
+  color: var(--pe-gold-soft);
 }
 
 .pe-section {
@@ -2225,6 +2260,16 @@
         grid-template-columns: 1fr;
     }
 
+  .pe-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pe-sidebar {
+    position: static;
+    order: 2;
+    padding-top: 0;
+  }
+
     .pe-hero {
         padding: 42px 0 38px;
     }
@@ -2304,6 +2349,9 @@
 }
 </script>
     <link rel="stylesheet" href="../assets/css/mobile-responsive.css?v=20260810-mobile-v1">
+
+<link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
+<link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -2336,12 +2384,6 @@
               <li class="nav-item"><a class="nav-link" href="/books.html">Books</a></li>
               <li class="nav-item"><div class="coaching-nav-dropdown">
 <a class="nav-link" href="/coaching.html">Coaching</a>
-    <div class="coaching-nav-submenu">
-        <a href="/trauma-coaching.html">Trauma</a>
-
-        <a href="/parental-alienation-coaching.html">Parental Alienation</a>
-<a href="/team-leadership-coaching.html">Business Coaching</a>
-    </div>
 </div></li>
               <li class="nav-item"><a class="nav-link active" href="/knowledge.html">Knowledge Hub</a></li>
 <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
@@ -2403,16 +2445,8 @@ belief systems must be considered.
 </div>
 </header>
 
-<nav class="pe-nav"><div class="pe-wrap"><ul>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#definition">Definition</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#domains">Domains</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#differences">Differences</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#spectrum">Spectrum</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#assessment">Assessment</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#treatment">Treatment</a></li>
-<li><a href="/knowledge/schizotypal-personality-disorder.html#faq">FAQs</a></li>
-</ul></div></nav>
-
+<div class="pe-layout pe-wrap">
+<div class="pe-article-content">
 <section class="pe-section" id="definition"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">Definition</div><h2>What is Schizotypal Personality Disorder?</h2></div>
 <div class="pe-definition">
@@ -2429,6 +2463,102 @@ social anxiety that does not readily reduce with familiarity.
 </p>
 </div></section>
 
+<section class="pe-section" id="experience"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Lived experience</div><h2>How the pattern may feel from the inside</h2></div>
+<p>Diagnostic descriptions are written from an observer's perspective, but a person is not a list of traits. Someone may experience the world as unusually charged with meaning, difficult to predict or hard to share with other people. A coincidence can feel important without the person being certain that it has a supernatural explanation. A room can feel socially unsafe even when nobody is openly hostile. Conversation can require intense monitoring because ordinary facial expressions, jokes or indirect requests seem ambiguous. These experiences may be exhausting, isolating and confusing, particularly when other people respond with ridicule or assume deliberate oddness.</p>
+<p>People also differ in how much insight they have into an experience. One person may say, “I know this interpretation might be wrong, but it feels compelling.” Another may be more convinced. A third may mainly notice the social consequences: missed friendships, difficulty with work conversations or a tendency to avoid unfamiliar places. Insight can change with stress, sleep loss, substance use, mood and the quality of support available. It should be explored rather than treated as a moral measure.</p>
+<p>The phrase “unusual beliefs” needs care. An unfamiliar idea is not automatically irrational, and a private belief is not automatically a symptom. Assessment asks how the belief was formed, whether it is shared in a cultural or spiritual community, how flexible it is when evidence changes, whether it causes distress or impairment, and whether other experiences such as hallucinations, mania, intoxication or neurological illness are present.</p>
+<div class="pe-evidence-note">A respectful account begins with the person's meaning and goals. Diagnostic language should clarify support needs, not turn difference into a character judgement.</div>
+</div></section>
+
+<section class="pe-section" id="thinking"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Thinking and perception</div><h2>Ideas of reference, unusual perceptions and pattern detection</h2></div>
+<p>Ideas of reference describe a tendency to experience ordinary events as carrying a personal message or special relevance. This can range from noticing a song lyric and wondering whether it fits one's situation to feeling that strangers, media or public signs are deliberately communicating with the person. The intensity, certainty and impact matter. Human attention naturally detects patterns; the clinical question is whether interpretations become persistent, distressing, inflexible or impairing.</p>
+<p>Unusual perceptual experiences can include sensing a presence, hearing a sound as unusually meaningful, seeing fleeting shapes or experiencing bodily sensations that are difficult to explain. These experiences are not identical to persistent hallucinations. Sleep deprivation, migraine, medication effects, trauma-related states, substance use and medical conditions can also alter perception. A careful assessment therefore asks about timing, context, physical health and changes from the person's baseline.</p>
+<p>Suspiciousness may involve expecting criticism, exploitation or hidden motives. It can be understandable after repeated mistreatment, but it may become difficult when neutral events are consistently read as threatening and reassurance cannot be considered. Support should avoid arguing about every interpretation. It is usually more useful to examine confidence, alternative explanations, consequences and what would help the person feel safer without reinforcing an unfounded threat.</p>
+</div></section>
+
+<section class="pe-section" id="communication"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Communication and expression</div><h2>Why speech and behaviour can be misread</h2></div>
+<p>Speech may be unusually abstract, metaphorical, circumstantial or difficult for another person to follow. That does not mean the speaker lacks intelligence. A person may be trying to communicate a complex association, protecting a private idea, managing anxiety or using language that makes sense within their own experience. Under pressure, the gap between intended meaning and received meaning can widen.</p>
+<p>Appearance and behaviour may be described by others as eccentric. That label can conceal many possibilities: sensory preferences, a creative identity, poverty, cultural dress, a wish to avoid conventional roles, reduced confidence, or a communication difference. Clinicians should distinguish a stable personal style from a change that signals deterioration, distress or a safety concern.</p>
+<p>Practical communication helps. Use concrete language when a request matters, ask one question at a time, allow extra processing time and check what was understood without sounding like an interrogation. If the person uses an image or unusual phrase, ask what it means to them. Avoid public correction or humour at their expense. These approaches are useful regardless of whether a diagnosis is eventually made.</p>
+</div></section>
+
+<section class="pe-section" id="development"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Development and causes</div><h2>What research can and cannot say about origins</h2></div>
+<p>There is no single cause of schizotypal personality disorder. Research describes contributions from genetics, neurodevelopment, cognition, temperament, adversity and social context, but a statistical association does not explain one individual's life. The same outward feature can arise through different pathways, and many people with unusual perceptions or social differences do not meet diagnostic criteria.</p>
+<p>Developmental history matters. Clinicians may ask when social discomfort, unusual beliefs, communication differences or perceptual experiences began; whether they were present across settings; and how they changed during adolescence, bereavement, trauma, illness, relocation or substance exposure. Early differences can be confused with autism, language disorder, attention difficulties, bullying-related withdrawal or a family culture that is unfamiliar to the assessor. A diagnosis should not be made from a single interview impression.</p>
+<p>Stress can amplify existing vulnerabilities. Poor sleep, isolation, financial pressure, discrimination, conflict and intoxicating substances may make interpretations feel more urgent or reduce the capacity to reality-test them. This does not mean that stress “causes” a personality disorder, nor that the person is choosing the response. It means that prevention and treatment can target modifiable conditions while respecting the longer developmental picture.</p>
+<p>Family explanations should be handled carefully. Blaming parents, trauma survivors or the person themselves oversimplifies a complex evidence base. Adversity may be relevant without being a complete explanation. A good formulation holds biological, psychological, relational and social factors together and remains open to revision.</p>
+</div></section>
+
+<section class="pe-section" id="culture"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Culture, spirituality and power</div><h2>Difference must not be mistaken for disorder</h2></div>
+<p>Culture shapes ideas about spirits, ancestors, dreams, intuition, healing, coincidence, privacy, eye contact, family duty and acceptable self-expression. A belief that appears unusual to an assessor may be ordinary within the person's community. The <a href="https://www.psychiatry.org/psychiatrists/diversity/education/cultural-formulation-interview" rel="noopener noreferrer">DSM-5-TR Cultural Formulation Interview</a> encourages clinicians to ask how the person and their community understand the experience rather than imposing an outside explanation.</p>
+<p>Cultural humility is more than learning a list of customs. It includes noticing the assessor's own assumptions, asking permission to explore sensitive beliefs, and considering language, migration, racism, religious discrimination, poverty and access to care. A person from a minority group may have good reasons to be cautious around institutions. Suspicion should not be pathologised without considering whether the person has actually experienced surveillance, exclusion or harm.</p>
+<p>The relevant questions are functional and contextual. Is the belief shared or intelligible within a community? Can the person consider alternative interpretations? Does it produce marked distress, unsafe behaviour or significant impairment? Is there a clear change from the person's usual way of thinking? These questions do not make culture an exemption from care; they make assessment more accurate and less harmful.</p>
+</div></section>
+
+<section class="pe-section" id="differences"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Differential understanding</div><h2>Conditions and experiences that can look similar</h2></div>
+<div class="pe-table-scroll"><table class="pe-table">
+<thead><tr><th>Possibility</th><th>Questions that help distinguish it</th><th>Why the distinction matters</th></tr></thead>
+<tbody>
+<tr><td>Schizophrenia-spectrum psychosis</td><td>Are there persistent hallucinations, fixed delusions, marked thought disorder or a substantial decline in functioning? What is the duration and course?</td><td>Psychosis may require urgent specialist assessment and a different treatment plan.</td></tr>
+<tr><td>Autism</td><td>Were social communication differences and focused interests present in early development? How do sensory and routine needs fit the picture?</td><td>Neurodevelopmental support should not be replaced by a personality label.</td></tr>
+<tr><td>Social anxiety</td><td>Is fear of scrutiny the main difficulty, without unusual beliefs, perceptions or eccentric communication?</td><td>Exposure-based and anxiety-focused interventions may be especially relevant.</td></tr>
+<tr><td>Trauma-related states</td><td>Do hypervigilance, dissociation, intrusive memories or threat interpretations follow trauma reminders?</td><td>Trauma-informed care can reduce shame and avoid reinforcing danger beliefs.</td></tr>
+<tr><td>Paranoid personality disorder</td><td>Is pervasive mistrust central, while unusual perception and eccentric expression are less prominent?</td><td>Formulation should focus on the person's actual pattern rather than a broad Cluster A assumption.</td></tr>
+<tr><td>Obsessive-compulsive phenomena</td><td>Are thoughts unwanted and resisted, with rituals or checking aimed at reducing anxiety?</td><td>OCD has evidence-based treatments that differ from approaches to psychosis-spectrum symptoms.</td></tr>
+<tr><td>Mood episodes</td><td>Do unusual beliefs or perceptions occur only during mania, severe depression or mixed states?</td><td>Treating the mood episode may change the experience substantially.</td></tr>
+<tr><td>Substances, medication or medical illness</td><td>Did symptoms follow intoxication, withdrawal, a new prescription, seizures, migraine or another physical change?</td><td>Medical review and substance support may be urgent and directly treatable.</td></tr>
+</tbody></table></div>
+<p>These are not self-diagnosis categories. They are prompts for a qualified assessment. More than one condition can be present, and the most useful formulation may change over time.</p>
+</div></section>
+
+<section class="pe-section" id="spectrum"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Schizophrenia spectrum</div><h2>Shared dimensions without a fixed destiny</h2></div>
+<p>The word schizotypal is used in more than one way. In clinical diagnosis it can refer to a personality disorder or, in ICD-11, a schizotypal disorder placed within the schizophrenia or other primary psychotic disorders grouping. In research, schizotypy can describe a set of traits distributed across the population. These uses overlap but are not interchangeable. An article or screening scale may use the term more broadly than a clinician would.</p>
+<p>Research finds relationships between schizotypal traits and psychosis-spectrum outcomes at the group level. Findings can involve genetic liability, cognition, perception, social functioning and unusual experiences. Group-level risk estimates cannot predict an individual's future. Many people with schizotypal traits do not develop schizophrenia, and a person with a psychotic episode may not have a longstanding schizotypal pattern.</p>
+<p>Warning signs that deserve prompt professional attention include a rapid and marked change in reality testing, inability to care for basic needs, severe sleep loss, escalating substance use, frightening voices, command experiences, suicidal thoughts or threats from others that feel immediate and unavoidable. Seeking help does not confirm a diagnosis. It is a way to reduce risk and understand what is happening.</p>
+</div></section>
+
+<section class="pe-section" id="assessment"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Assessment</div><h2>What a careful evaluation should cover</h2></div>
+<p>A responsible assessment is broader than asking whether a person has “odd beliefs.” It usually includes the person's priorities, current symptoms, developmental history, relationships, work or study, physical health, medication, alcohol and other substances, sleep, trauma exposure, mood, risk and cultural identity. Information from relatives can help when the person agrees, but it should not replace listening to the person directly.</p>
+<p>The clinician may explore the form and strength of an experience: what happened, what the person thought it meant, how certain they felt, what other explanations were considered, and what action followed. It is important to distinguish a thought from a belief, a belief from a perception, and a perception from a fixed conclusion. The same content can have different clinical meanings depending on conviction, flexibility, distress and impairment.</p>
+<p>Screening questionnaires can support an assessment but cannot diagnose schizotypal personality disorder. Structured interviews improve consistency, while formulation explains how the person's experiences fit together. Physical examination or laboratory testing may be appropriate when there is a new onset, cognitive change, neurological symptom, medication concern or possible intoxication. Assessment should also identify strengths: curiosity, creativity, persistence, spiritual connection, technical interests, compassion or insight can all matter to recovery.</p>
+</div></section>
+
+<section class="pe-section" id="treatment"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Treatment and recovery</div><h2>Care should be collaborative, gradual and specific</h2></div>
+<p>There is no single intervention that works for every person. Treatment goals might include reducing distress, improving sleep, strengthening reality-testing skills, making social contact safer, managing suspiciousness, supporting work, treating depression or anxiety, and responding early to changes in functioning. The person should be involved in choosing priorities. A diagnosis is not a reason to remove ordinary autonomy.</p>
+<p>Psychological therapies may use elements of cognitive behavioural therapy, metacognitive work, social skills support, compassion-focused approaches, family intervention or other structured methods. The evidence base for schizotypal personality disorder specifically is smaller than the evidence base for some other conditions, so claims should be modest. Therapists should explain what is known, what is being adapted from related research, and how progress will be judged.</p>
+<p>Medication is not a simple cure for a personality pattern. A prescriber may consider medication for particular symptoms, a co-occurring disorder or an episode of psychosis, balancing possible benefit against adverse effects. Medication decisions require individual medical review. People should not stop prescribed medication suddenly without speaking with the prescriber.</p>
+<p>Recovery may mean fewer frightening interpretations, stronger relationships, better daily functioning or greater confidence in deciding which experiences deserve action. It does not require erasing individuality or forcing conventionality. Progress is often non-linear and can include learning what increases vulnerability, making a crisis plan, and returning to valued activities after setbacks.</p>
+</div></section>
+
+<section class="pe-section" id="relationships"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Relationships and communication</div><h2>Building trust without reinforcing fear</h2></div>
+<p>Relationships can be difficult when social signals feel ambiguous or threatening. A person may withdraw before they can be rejected, interpret a delayed message as deliberate, or speak indirectly because direct disclosure feels unsafe. Other people may respond with impatience, which then confirms the expectation of rejection. This cycle is understandable but changeable.</p>
+<p>Supporters can be warm without agreeing that every feared explanation is true. Helpful language includes, “I can see why that felt frightening. I do not know that the person intended it, so perhaps we can list what we know and what we are guessing.” Avoid secret tests, confrontational reality checks, mocking, or joining an escalating interpretation. If there is a genuine safeguarding concern, respond to observable behaviour and immediate risk rather than debating a worldview.</p>
+<p>Boundaries matter in both directions. A supporter can say when they are unavailable, decline abusive behaviour and agree a calmer time to talk. The person receiving support can ask for clarity, request written information, or pause a conversation. Family education can reduce blame and help everyone recognise early warning signs. Confidentiality, consent and the person's right to make decisions should remain central unless there is a serious and immediate risk requiring intervention.</p>
+</div></section>
+
+<section class="pe-section" id="support"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Practical support</div><h2>Small changes that can reduce overload</h2></div>
+<div class="pe-grid-3">
+<div class="pe-card"><h3>Protect sleep</h3><p>Keep a regular waking time where possible, reduce late stimulation and treat major sleep disruption as a meaningful change rather than a minor inconvenience.</p></div>
+<div class="pe-card"><h3>Record patterns</h3><p>Note situations, interpretations, certainty, emotions, actions and outcomes. The purpose is curiosity, not proving the person wrong.</p></div>
+<div class="pe-card"><h3>Reduce substances</h3><p>Cannabis, stimulants, hallucinogens and heavy alcohol use can worsen perception, anxiety or sleep. Medical and specialist advice can support change.</p></div>
+<div class="pe-card"><h3>Make requests concrete</h3><p>Written plans, clear times and direct questions can reduce the burden of interpreting hints and shifting social expectations.</p></div>
+<div class="pe-card"><h3>Keep valued contact</h3><p>One reliable relationship, interest group or routine can provide more protection than pressure to socialise widely.</p></div>
+<div class="pe-card"><h3>Plan for escalation</h3><p>Agree who to contact, what early signs look like and what emergency support is available before a crisis makes planning harder.</p></div>
+</div>
+<p>These suggestions are not substitutes for assessment or treatment. They are experiments to discuss with the person and adapt to sensory needs, culture, disability, resources and safety.</p>
+</div></section>
+
 <section class="pe-section" id="domains"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">Core domains</div><h2>Three areas of difficulty</h2></div>
 <div class="pe-grid-3">
@@ -2438,53 +2568,6 @@ social anxiety that does not readily reduce with familiarity.
 </div>
 </div></section>
 
-<section class="pe-section" id="differences"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Differential understanding</div><h2>What schizotypal patterns can resemble</h2></div>
-<div class="pe-table-scroll"><table class="pe-table">
-<thead><tr><th>Possibility</th><th>Difference to investigate</th></tr></thead>
-<tbody>
-<tr><td>Schizophrenia</td><td>Persistent hallucinations, delusions and marked thought disorder require separate assessment.</td></tr>
-<tr><td>Autism</td><td>Developmental social communication patterns and restricted interests require neurodevelopmental assessment.</td></tr>
-<tr><td>Social anxiety</td><td>Fear of scrutiny may occur without unusual beliefs, perception or expression.</td></tr>
-<tr><td>Paranoid Personality Disorder</td><td>Mistrust is more central, while perceptual and eccentric features are less prominent.</td></tr>
-<tr><td>Spiritual or cultural beliefs</td><td>Beliefs shared and understood within a cultural community should not be pathologised merely because they are unfamiliar.</td></tr>
-<tr><td>Substance effects</td><td>Intoxication, withdrawal and medication effects can alter perception and thought.</td></tr>
-</tbody></table></div>
-</div></section>
-
-<section class="pe-section" id="spectrum"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Schizophrenia spectrum</div><h2>Related does not mean identical</h2></div>
-<p>
-Schizotypal features show genetic, cognitive and phenomenological relationships
-with schizophrenia spectrum conditions. However, most people with schizotypal
-traits do not simply progress through a fixed sequence into schizophrenia.
-Risk is probabilistic, and severity, environment, substance use and other
-factors matter.
-</p>
-<div class="pe-evidence-note">A spectrum describes related variation. It does not mean that every point has the same symptoms, impairment or prognosis.</div>
-</div></section>
-
-<section class="pe-section" id="assessment"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Assessment</div><h2>Culture and context are essential</h2></div>
-<p>
-Assessment considers developmental history, persistence, impairment, cultural
-meaning, shared community beliefs, trauma, autism, mood, psychosis, substances
-and medical causes. The clinician should explore the person’s experience rather
-than assuming that unfamiliar language or spirituality is pathological.
-</p>
-</div></section>
-
-<section class="pe-section" id="treatment"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Treatment</div><h2>Support can address distress and functioning</h2></div>
-<p>
-Psychological treatment may address social anxiety, suspicious interpretation,
-communication, emotional regulation and practical functioning. A reliable,
-respectful therapeutic relationship is important. Medication may sometimes be
-considered for particular symptoms or coexisting conditions following medical
-assessment, but it is not a simple cure for a personality pattern.
-</p>
-</div></section>
-
 <section class="pe-section pe-faq" id="faq"><div class="pe-wrap">
 <div class="pe-section-head"><div class="pe-kicker">FAQs</div><h2>Schizotypal questions answered</h2></div>
 <details><summary>Is schizotypal personality schizophrenia?</summary><div><p>No. They are related within a spectrum but have distinct diagnostic requirements.</p></div></details>
@@ -2492,11 +2575,47 @@ assessment, but it is not a simple cure for a personality pattern.
 <details><summary>Does everyone with schizotypal traits develop psychosis?</summary><div><p>No. Risk is not destiny, and traits vary in severity and outcome.</p></div></details>
 </div></section>
 
-<section class="pe-section pe-references"><div class="pe-wrap">
-<div class="pe-section-head"><div class="pe-kicker">Sources</div><h2>Diagnostic foundations</h2></div>
-<ol><li>American Psychiatric Association, DSM-5-TR material on Schizotypal Personality Disorder.</li><li>World Health Organization, ICD-11 schizophrenia spectrum and personality disorder frameworks.</li><li>Clinical research on schizotypy, psychosis risk, culture and differential diagnosis.</li></ol>
+<section class="pe-section pe-references" id="sources"><div class="pe-wrap">
+<div class="pe-section-head"><div class="pe-kicker">Sources and limits</div><h2>Evidence, guidance and further reading</h2></div>
+<p>This guide is an educational overview, not a diagnostic tool or a substitute for care. The evidence is strongest for broad principles such as careful assessment, culturally informed formulation, treatment of co-occurring conditions and early support when psychosis or safety concerns emerge. Evidence specifically focused on schizotypal personality disorder is more limited than evidence for schizophrenia, social anxiety, autism or psychosis prevention, so recommendations should be presented with appropriate uncertainty.</p>
+<ol>
+<li><a href="https://www.who.int/standards/classifications/classification-of-diseases" rel="noopener noreferrer">World Health Organization, International Classification of Diseases (ICD-11)</a>. Use the current clinical guidance and national implementation material rather than relying on informal summaries.</li>
+<li><a href="https://www.psychiatry.org/psychiatrists/diversity/education/cultural-formulation-interview" rel="noopener noreferrer">American Psychiatric Association, Cultural Formulation Interview</a>. A practical framework for understanding identity, explanatory models, context and help-seeking.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg178" rel="noopener noreferrer">NICE, Psychosis and schizophrenia in adults: prevention and management</a>. Guidance relevant to assessment, shared decision-making, psychological interventions, medication and crisis planning when psychosis is present.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg155" rel="noopener noreferrer">NICE, Psychosis and schizophrenia in children and young people</a>. Relevant to developmental assessment and early support, while recognising that this guide is not a child diagnostic manual.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg159" rel="noopener noreferrer">NICE, Social anxiety disorder</a>. Evidence-based guidance for a common overlapping difficulty that should not be confused with schizotypal features.</li>
+<li><a href="https://www.nice.org.uk/guidance/cg142" rel="noopener noreferrer">NICE, Autism spectrum disorder in adults</a>. Useful for differential assessment when lifelong social communication or sensory differences are part of the history.</li>
+<li><a href="https://www.nimh.nih.gov/health/topics/schizophrenia" rel="noopener noreferrer">National Institute of Mental Health, Schizophrenia</a>. Plain-language information about psychosis, treatment and when professional help is important.</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=schizotypy+systematic+review" rel="noopener noreferrer">PubMed: systematic reviews and research on schizotypy</a>. A search portal rather than a single conclusion; individual studies vary in measures, samples and definitions.</li>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=schizotypal+personality+disorder+treatment" rel="noopener noreferrer">PubMed: research on schizotypal personality disorder treatment</a>. This evidence base is comparatively small and should be interpreted with attention to study quality.</li>
+</ol>
+<p>Sources are linked so readers can inspect the underlying guidance. A link does not mean that every statement on this page is directly established by one source; some paragraphs explain how to apply evidence cautiously to real-world assessment and support.</p>
 <p><a href="/knowledge/what-are-cluster-a-personality-disorders.html">Return to the Cluster A guide →</a></p>
 </div></section>
+</div>
+<aside class="pe-sidebar" aria-label="Schizotypal guide navigation">
+  <div class="pe-sidebar-card">
+    <p class="pe-sidebar-label">Guide sections</p>
+    <p class="pe-sidebar-title">Navigate the evidence</p>
+    <p class="pe-sidebar-copy">Move between the clinical overview, lived experience, assessment and support sections.</p>
+    <nav aria-label="Guide sections">
+      <a href="/knowledge/schizotypal-personality-disorder.html#definition">Overview</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#experience">Experience</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#domains">Features</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#development">Development</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#culture">Culture</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#differences">Differential</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#spectrum">Spectrum</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#assessment">Assessment</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#treatment">Treatment</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#relationships">Relationships</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#support">Support</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#faq">FAQs</a>
+      <a href="/knowledge/schizotypal-personality-disorder.html#sources">Sources</a>
+    </nav>
+  </div>
+</aside>
+</div>
 </article>
 </main>
 
@@ -2512,7 +2631,7 @@ assessment, but it is not a simple cure for a personality pattern.
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main.js?v=20260816-knowledge-nav-3"></script>
   <!-- KH_LIVE_NATIVE_LINKS_START -->
 <style class="KH_LIVE_NATIVE_LINKS_STYLES">
 .ke-page a[href],
@@ -2557,5 +2676,8 @@ assessment, but it is not a simple cure for a personality pattern.
 }
 </style>
 <!-- KH_LIVE_NATIVE_LINKS_END -->
+
+<script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
+<script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
 </body>
 </html>

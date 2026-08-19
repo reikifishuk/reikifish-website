@@ -1,4 +1,61 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const knowledgeMain = document.querySelector('main');
+
+  if (/\/knowledge\/what-is-emotional-contagion(?:\.html)?$/.test(window.location.pathname)) {
+    const expansion = document.createElement('script');
+    expansion.src = '/assets/js/emotional-contagion-expansion.js?v=20260817-expansion-v3';
+    document.head.appendChild(expansion);
+    const expansionTwo = document.createElement('script');
+    expansionTwo.src = '/assets/js/emotional-contagion-expansion-2.js?v=20260817-expansion2';
+    document.head.appendChild(expansionTwo);
+  }
+
+  if (/\/knowledge\/habit-loop(?:\.html)?$/.test(window.location.pathname)) {
+    const habitContent = document.querySelector('.hb-content');
+    const sourceSection = habitContent?.querySelector('#sources');
+    if (habitContent && sourceSection && !habitContent.querySelector('#faq')) {
+      const faq = document.createElement('section');
+      faq.className = 'hb-section hb-faq';
+      faq.id = 'faq';
+      faq.innerHTML = '<div class="hb-section-head"><div class="hb-kicker">FAQs</div><h2>Habit Loop questions answered</h2></div><details><summary>What are the three parts of a habit loop?</summary><div><p>The common model describes a cue, a routine and a reward or outcome. Real habits are more complex and may have several cues and functions.</p></div></details><details><summary>Can every habit be changed?</summary><div><p>Many behaviours can change, but the process depends on health, safety, resources, support and the function the behaviour serves.</p></div></details><details><summary>Why do I keep returning to an old habit?</summary><div><p>Old routines may still be strongly associated with relief or reward, especially during stress. A lapse is information, not proof of failure.</p></div></details><details><summary>Is habit change just willpower?</summary><div><p>No. Environment, sleep, emotion, accessibility, social support and task design often determine what is realistically repeatable.</p></div></details><details><summary>How long does it take to build a habit?</summary><div><p>There is no universal number of days. Difficulty, context, repetition and the person all affect the timeline.</p></div></details>';
+      habitContent.insertBefore(faq, sourceSection);
+    }
+  }
+
+  const isKnowledgeGuide = /^\/knowledge\/[^/]+(?:\.html)?$/.test(window.location.pathname);
+
+  if (knowledgeMain && isKnowledgeGuide) {
+    const legacyNavigation = knowledgeMain.querySelectorAll(
+      '[class*="breadcrumb"], [class*="-back"]'
+    );
+
+    legacyNavigation.forEach((element) => {
+      if (
+        element.matches('a[href*="knowledge.html"]') ||
+        element.querySelector('a[href*="knowledge.html"]')
+      ) {
+        element.remove();
+      }
+    });
+
+    const heading = knowledgeMain.querySelector('h1');
+    const currentPage = heading ? heading.textContent.trim() : document.title;
+    const navigation = document.createElement('div');
+    navigation.className = 'knowledge-guide-nav';
+    navigation.innerHTML = `
+      <nav class="ke-breadcrumb knowledge-guide-breadcrumb" aria-label="Breadcrumb">
+        <a href="/index.html">Home</a>
+        <span aria-hidden="true">&rsaquo;</span>
+        <a href="/knowledge.html">Knowledge Hub</a>
+        <span aria-hidden="true">&rsaquo;</span>
+        <span class="knowledge-guide-current" aria-current="page"></span>
+      </nav>
+      <a class="ke-back-hub knowledge-breadcrumb-cta knowledge-guide-back" href="/knowledge.html"><span class="knowledge-guide-back-icon" aria-hidden="true">&larr;</span><span>Knowledge Hub</span></a>
+      `;
+    navigation.querySelector('.knowledge-guide-current').textContent = currentPage;
+    knowledgeMain.prepend(navigation);
+  }
+
   const fixedNavbar = document.querySelector('.navbar.fixed-top');
 
   if (fixedNavbar) {
