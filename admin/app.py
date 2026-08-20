@@ -800,7 +800,7 @@ def knowledge_hub_publish():
     hub_page_lib.register_hub_page(spec)
 
     report["success"] = True
-    report["message"] = "Page generated locally and registered (featured card, search index, sitemap)."
+    report["message"] = "Page generated locally and registered safely (featured card, Knowledge data and sitemap)."
     report["slug"] = spec.slug
     report["path"] = str(out_path.relative_to(hub_page_lib.ROOT))
     report["url"] = f"/knowledge/{spec.slug}.html"
@@ -808,4 +808,4 @@ def knowledge_hub_publish():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False)

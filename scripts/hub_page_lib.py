@@ -27,6 +27,40 @@ SITEMAP = ROOT / "sitemap.xml"
 BASE_URL = "https://reikifish.com"
 
 MIN_WORD_COUNT = 10000
+# Unambiguous American spellings prohibited in generated Hub content.
+# Context-sensitive words such as licence/license and practice/practise are
+# deliberately excluded because they require grammatical interpretation.
+US_ENGLISH_SPELLINGS = (
+    "analyze", "analyzed", "analyzes", "analyzing",
+    "behavior", "behaviors", "behavioral",
+    "center", "centered", "centering", "centers",
+    "color", "colored", "colors",
+    "counseling",
+    "defense",
+    "emphasize", "emphasized", "emphasizes", "emphasizing",
+    "favor", "favored", "favorite", "favors",
+    "gray",
+    "honor", "honored", "honors",
+    "internalize", "internalized", "internalizes", "internalizing",
+    "labor",
+    "maximize", "maximized", "maximizes", "maximizing",
+    "minimize", "minimized", "minimizes", "minimizing",
+    "modeling",
+    "neighbor", "neighbors",
+    "normalize", "normalized", "normalizes", "normalizing",
+    "offense",
+    "organize", "organized", "organizes", "organizing",
+    "organization", "organizations",
+    "rationalize", "rationalized", "rationalizes", "rationalizing",
+    "realize", "realized", "realizes", "realizing",
+    "recognize", "recognized", "recognizes", "recognizing",
+    "socialize", "socialized", "socializes", "socializing",
+    "stabilize", "stabilized", "stabilizes", "stabilizing",
+    "traumatize", "traumatized", "traumatizes", "traumatizing",
+    "traveling",
+    "utilize", "utilized", "utilizes", "utilizing",
+)
+
 
 EXTRA_CSS_TEMPLATE = """
 .__P__-visual{min-height:300px;display:flex;align-items:center;justify-content:center;border:1px solid var(--b);border-radius:1.5rem;background:radial-gradient(circle at 50% 50%,rgba(239,177,38,.1),transparent 60%),#0d1514;padding:1.5rem}
@@ -301,25 +335,84 @@ def validate_seo(spec: HubPageSpec) -> list:
         err("title", "Title is required (minimum 10 characters).")
     else:
         full_title_len = len(f"{spec.title} | ReikiFish")
-        if full_title_len > 60:
-            err("title", f"Full <title> (\"{spec.title} | ReikiFish\") is {full_title_len} characters; SOP requires 60 or fewer.")
+        if not (50 <= full_title_len <= 60):
+            err(
+                "title",
+                f"Full meta title (\"{spec.title} | ReikiFish\") is "
+                f"{full_title_len} characters; SEO requires 50-60."
+            )
 
     if not spec.meta_description:
         err("meta_description", "Meta description is required.")
-    elif not (50 <= len(spec.meta_description) <= 155):
-        err("meta_description", f"Meta description is {len(spec.meta_description)} characters; SOP requires 50-155.")
+    elif not (145 <= len(spec.meta_description) <= 155):
+        err("meta_description", f"Meta description is {len(spec.meta_description)} characters; SEO requires 145-155.")
 
+    content_for_language_check = " ".join([
+        spec.title,
+        spec.h1,
+        spec.meta_description,
+        spec.og_description,
+        spec.lead,
+        spec.note_html,
+        spec.featured_summary,
+        " ".join(section.heading + " " + section.body_html for section in spec.sections),
+        " ".join(question + " " + answer for question, answer in spec.faqs),
+    ])
+    content_for_language_check = re.sub(
+        r"<[^>]+>",
+        " ",
+        content_for_language_check,
+    ).lower()
+
+    american_spellings_found = sorted({
+        spelling
+        for spelling in US_ENGLISH_SPELLINGS
+        if re.search(rf"\b{re.escape(spelling)}\b", content_for_language_check)
+    })
+
+    if american_spellings_found:
+        err(
+            "british_english",
+            "American English spelling detected: "
+            + ", ".join(american_spellings_found)
+            + ". Use British English throughout before publishing."
+        )
     if not spec.category:
         err("category", "Category is required.")
-
-    if len(spec.keywords) < 3:
-        warn("keywords", "Add at least 3 keywords for better search coverage.")
-
     if not spec.og_description:
         warn("og_description", "OG description is empty; social shares will fall back to the meta description.")
 
     if not spec.featured_summary or not (60 <= len(spec.featured_summary) <= 220):
         warn("featured_summary", "Featured card summary should be roughly 60-220 characters.")
+
+    if (
+        not spec.svg_html
+        or spec.svg_html == DEFAULT_SVG
+        or "<text" not in spec.svg_html
+        or "<line" not in spec.svg_html
+    ):
+        err(
+            "diagram",
+            "A topic-specific labelled visual diagram is required. "
+            "Regenerate the AI draft before publishing."
+        )
+    alt_match = re.search(
+        r'<svg\b[^>]*\baria-label="([^"]+)"',
+        spec.svg_html,
+        re.I,
+    )
+
+    if not alt_match:
+        err(
+            "diagram_alt",
+            "The visual diagram requires an accessibility description."
+        )
+    elif len(alt_match.group(1)) > 100:
+        err(
+            "diagram_alt",
+            f"Diagram accessibility description is "
+            f"{len(alt_match.group(1))} characters; maximum is 100."
+        )
 
     if len(spec.sections) < 3:
         err("sections", "Add at least 3 content sections.")
@@ -384,7 +477,52 @@ def check_links(spec: HubPageSpec) -> list:
     return results
 
 
+def _normalise_spec_british_english(spec: HubPageSpec) -> HubPageSpec:
+    """Convert every editable content field to British English in place."""
+    from ai_hub_writer import _clean_ai_text
+
+    simple_fields = (
+        "title",
+        "h1",
+        "meta_description",
+        "og_description",
+        "eyebrow",
+        "lead",
+        "note_html",
+        "featured_summary",
+    )
+
+    for field_name in simple_fields:
+        value = getattr(spec, field_name, "")
+        if value:
+            setattr(spec, field_name, _clean_ai_text(value))
+
+    for section in spec.sections:
+        section.heading = _clean_ai_text(section.heading)
+        section.kicker = _clean_ai_text(section.kicker)
+        section.body_html = _clean_ai_text(section.body_html)
+
+    spec.faqs = [
+        (
+            _clean_ai_text(question),
+            _clean_ai_text(answer),
+        )
+        for question, answer in spec.faqs
+    ]
+
+    spec.related_links = [
+        (
+            _clean_ai_text(label),
+            url,
+        )
+        for label, url in spec.related_links
+    ]
+
+    return spec
+
+
 def run_sop_checks(spec: HubPageSpec) -> dict:
+    spec = _normalise_spec_british_english(spec)
     word_count = count_words(spec)
     seo_issues = validate_seo(spec)
     link_results = check_links(spec)
@@ -422,6 +560,7 @@ def run_sop_checks(spec: HubPageSpec) -> dict:
 # ---------------------------------------------------------------------------
 
 def write_hub_page(spec: HubPageSpec) -> Path:
+    spec = _normalise_spec_british_english(spec)
     html = build_hub_page(spec)
     out_path = ROOT / "knowledge" / f"{spec.slug}.html"
     out_path.write_text(html, encoding="utf-8")
@@ -429,10 +568,85 @@ def write_hub_page(spec: HubPageSpec) -> Path:
 
 
 def register_hub_page(spec: HubPageSpec):
-    _add_to_knowledge_json(spec)
-    _add_featured_card(spec)
-    _add_to_sitemap(spec)
+    """
+    Register one generated guide safely.
 
+    The real Knowledge Hub landing page is ROOT / "knowledge.html".
+    The obsolete knowledge/index.html file is never read or written.
+
+    Knowledge data, the featured card and sitemap are treated as one
+    transaction. If any operation or validation fails, all three files
+    are restored to their exact previous bytes.
+    """
+    protected_files = (KNOWLEDGE_JSON, KNOWLEDGE_HTML, SITEMAP)
+    original_bytes = {
+        path: path.read_bytes()
+        for path in protected_files
+        if path.exists()
+    }
+
+    try:
+        original_hub = KNOWLEDGE_HTML.read_text(encoding="utf-8")
+
+        required_hub_markers = (
+            "<!DOCTYPE html",
+            '<div class="kb-featured-grid">',
+            "</body>",
+            "</html>",
+        )
+        missing = [
+            marker
+            for marker in required_hub_markers
+            if marker not in original_hub
+        ]
+        if missing:
+            raise RuntimeError(
+                "Knowledge Hub safety check failed before registration. "
+                f"Missing required marker(s): {missing}"
+            )
+
+        if original_hub.count('<div class="kb-featured-grid">') != 1:
+            raise RuntimeError(
+                "Knowledge Hub safety check failed: expected exactly one "
+                "featured-card grid."
+            )
+
+        _add_to_knowledge_json(spec)
+        _add_featured_card(spec)
+        _add_to_sitemap(spec)
+
+        updated_hub = KNOWLEDGE_HTML.read_text(encoding="utf-8")
+        start_marker = f"<!-- HUB-CARD:{spec.slug} START -->"
+        end_marker = f"<!-- HUB-CARD:{spec.slug} END -->"
+
+        if updated_hub.count(start_marker) != 1:
+            raise RuntimeError(
+                "Featured-card validation failed: start marker is missing "
+                "or duplicated."
+            )
+
+        if updated_hub.count(end_marker) != 1:
+            raise RuntimeError(
+                "Featured-card validation failed: end marker is missing "
+                "or duplicated."
+            )
+
+        for marker in required_hub_markers:
+            if marker not in updated_hub:
+                raise RuntimeError(
+                    "Knowledge Hub layout validation failed after registration. "
+                    f"Missing marker: {marker}"
+                )
+
+        if updated_hub.count('<div class="kb-featured-grid">') != 1:
+            raise RuntimeError(
+                "Knowledge Hub featured-card grid was unexpectedly altered."
+            )
+
+    except Exception:
+        for path, content in original_bytes.items():
+            path.write_bytes(content)
+        raise
 
 def _add_to_knowledge_json(spec: HubPageSpec):
     data = json.loads(KNOWLEDGE_JSON.read_text(encoding="utf-8"))
@@ -443,7 +657,6 @@ def _add_to_knowledge_json(spec: HubPageSpec):
         "type": "Complete Guide",
         "category": spec.category,
         "summary": spec.featured_summary,
-        "keywords": spec.keywords,
         "url": f"knowledge/{spec.slug}.html",
     })
     KNOWLEDGE_JSON.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
@@ -486,7 +699,37 @@ def _add_to_sitemap(spec: HubPageSpec):
     SITEMAP.write_text(xml, encoding="utf-8")
 
 
+def _normalise_british_english(value):
+    """Recursively convert generated form data to British English."""
+    # Imported here to avoid a module-loading loop: ai_hub_writer imports this
+    # library when generating a draft.
+    from ai_hub_writer import _clean_ai_text
+
+    if isinstance(value, str):
+        return _clean_ai_text(value)
+
+    if isinstance(value, list):
+        return [
+            _normalise_british_english(item)
+            for item in value
+        ]
+
+    if isinstance(value, tuple):
+        return tuple(
+            _normalise_british_english(item)
+            for item in value
+        )
+
+    if isinstance(value, dict):
+        return {
+            key: _normalise_british_english(item)
+            for key, item in value.items()
+        }
+
+    return value
+
 def spec_from_dict(data: dict) -> HubPageSpec:
+    data = _normalise_british_english(data)
     sections = [
         Section(
             id=s.get("id") or slugify(s.get("heading", "")) or f"section-{i+1}",

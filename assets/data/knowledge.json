@@ -761,5 +761,80 @@
       "Mental Health"
     ],
     "url": "knowledge/parentification.html"
+  },
+  {
+    "slug": "flying-monkeys",
+    "title": "Flying Monkeys",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Discover the tactics and warning signs of flying monkeys and learn how to protect yourself from their manipulation.",
+    "keywords": [
+      "Flying monkeys",
+      "Manipulation",
+      "Emotional blackmail",
+      "Coercion",
+      "Exploitation",
+      "Mental health",
+      "Abuse",
+      "Toxic relationships"
+    ],
+    "url": "knowledge/flying-monkeys.html"
+  },
+  {
+    "slug": "grey-rock-method",
+    "title": "Grey Rock Method",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Learn how to use the grey rock method to protect yourself from manipulative individuals and maintain your emotional well-being.",
+    "keywords": [
+      "Grey rock method",
+      "Manipulation",
+      "Emotional regulation",
+      "Toxic relationships",
+      "Boundary setting",
+      "Emotional intelligence",
+      "Self-protection"
+    ],
+    "url": "knowledge/grey-rock-method.html"
+  },
+  {
+    "slug": "adhd",
+    "title": "ADHD",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "ADHD: Causes, symptoms, and management strategies for a better understanding of this complex disorder.",
+    "url": "knowledge/adhd.html"
+  },
+  {
+    "slug": "triangulation",
+    "title": "Triangulation",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Manipulative tactic used to gain power or influence, creating a false narrative or manipulating information.",
+    "url": "knowledge/triangulation.html"
+  },
+  {
+    "slug": "codependency",
+    "title": "Codependency",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "Understanding codependency, its causes, and effects to break free and build healthier relationships.",
+    "url": "knowledge/codependency.html"
+  },
+  {
+    "slug": "confirmation-bias-full-guide",
+    "title": "Confirmation Bias",
+    "type": "Complete Guide",
+    "category": "Social Psychology",
+    "summary": "Recognise and overcome confirmation bias with our evidence-led guide.",
+    "url": "knowledge/confirmation-bias-full-guide.html"
+  },
+  {
+    "slug": "narcissistic-personality-disorder-in-women-vs-men",
+    "title": "Narcissistic Personality Disorder in Women vs. Men",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "Understanding the differences in Narcissistic Personality Disorder in women and men",
+    "url": "knowledge/narcissistic-personality-disorder-in-women-vs-men.html"
   }
 ]

@@ -13,7 +13,7 @@ process environment, falling back to a `.dev.vars` file at the repo root
 
 SOP awareness: every prompt below is built around the same rules the SOP
 checker enforces (hub_page_lib.run_sop_checks) - minimum 10,000 words total,
->=3 sections, >=3 FAQs, 50-160 char meta description - so a generated draft
+>=3 sections, >=3 FAQs, 145-155 char meta description - so a generated draft
 should pass the checker on the first try. Sources are explicitly generated
 as general, non-fabricated references; the draft is always flagged
 `needs_citation_review` so a human confirms accuracy before publishing.
@@ -227,7 +227,8 @@ _BRITISH_SPELLING_MAP = {
     "fulfill": "fulfil", "skillful": "skilful", "willful": "wilful", "enrollment": "enrolment",
 }
 _BRITISH_SPELLING_RE = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in _BRITISH_SPELLING_MAP) + r")\b"
+    r"\b(" + "|".join(re.escape(k) for k in _BRITISH_SPELLING_MAP) + r")\b",
+    re.IGNORECASE,
 )
 
 
@@ -267,7 +268,6 @@ def _clean_draft_text(draft):
                   "og_description", "featured_summary", "sources_html", "note_html"):
         if draft.get(field):
             draft[field] = _clean_ai_text(draft[field])
-    draft["keywords"] = [_clean_ai_text(k) for k in draft.get("keywords", [])]
     for s in draft.get("sections", []):
         s["kicker"] = _clean_ai_text(s.get("kicker", ""))
         s["heading"] = _clean_ai_text(s.get("heading", ""))
@@ -298,9 +298,8 @@ def _generate_outline(subject, category, notes):
         f'never the literal word "Subject" or "Topic"), '
         '"eyebrow" (short string like "Category · Complete guide"), '
         '"lead" (1-2 sentence summary paragraph), '
-        '"meta_description" (string, 50-155 characters, SEO search snippet), '
+        '"meta_description" (string, exactly 145-155 characters, natural SEO search snippet), '
         '"og_description" (1 sentence social share description), '
-        '"keywords" (array of 5-8 short search keyword strings), '
         '"featured_icon" (a single capital letter representing the topic), '
         '"featured_summary" (string, 60-220 characters, for a homepage card), '
         '"diagram_labels" (array of exactly 5 short 1-3 word phrases naming '
@@ -478,11 +477,131 @@ def _build_hub_spoke_svg(center_label, labels):
 
     svg = (
         f'<svg viewBox="0 0 {width} {height}" xmlns="http://www.w3.org/2000/svg" '
-        f'role="img" aria-label="Diagram showing key factors related to {center_label}">'
+        f'role="img" aria-label="{_fit_diagram_alt(center_label, labels)}">'
         + "".join(lines) + "".join(nodes) + "".join(texts) + center + center_text
         + "</svg>"
     )
     return svg
+
+
+
+def _fit_meta_title(value, subject):
+    """Create a natural title whose branded form is 50-60 characters."""
+    suffix = " | ReikiFish"
+    minimum = 50 - len(suffix)
+    maximum = 60 - len(suffix)
+
+    candidates = [
+        value or "",
+        f"{subject} Explained: An Evidence-Led Guide",
+        f"Understanding {subject}: Complete Evidence Guide",
+        f"Understanding {subject}: Evidence-Led Guide",
+        f"{subject}: Evidence Guide",
+        f"{subject}: Evidence-Led Guide",
+        f"{subject}: A Complete Evidence-Led Guide",
+    ]
+
+    for candidate in candidates:
+        candidate = re.sub(r"\s+", " ", candidate).strip()
+        if minimum <= len(candidate) <= maximum:
+            return candidate
+
+    available = maximum - len(": Evidence Guide")
+    shortened_subject = subject[:available].rsplit(" ", 1)[0]
+    shortened_subject = shortened_subject or subject[:available]
+
+    candidate = f"{shortened_subject}: Evidence Guide"
+
+    if len(candidate) < minimum:
+        candidate = f"Understanding {shortened_subject}: Complete Guide"
+
+    return candidate[:maximum].rstrip()
+
+
+def _fit_meta_description(value, subject):
+    """Create a natural meta description between 145 and 155 characters."""
+    value = re.sub(r"\s+", " ", value or "").strip()
+
+    if 145 <= len(value) <= 155:
+        return value
+
+    endings = (
+        "understanding, support and everyday life",
+        "clear understanding, informed support and daily life",
+        "understanding, practical support and daily life",
+    )
+
+    candidates = [
+        (
+            f"Explore {subject}, including key signs, causes, effects and "
+            f"evidence-led guidance, with practical information for {ending}."
+        )
+        for ending in endings
+    ]
+
+    candidates += [
+        (
+            f"Understand {subject}, including signs, causes and effects, "
+            f"with evidence-led guidance and practical information for {ending}."
+        )
+        for ending in endings
+    ]
+
+    candidates += [
+        (
+            f"Understand {subject}, including key signs, causes and effects, "
+            "with evidence-led guidance and practical information for support "
+            "and daily life."
+        ),
+        (
+            f"Understand {subject}, its signs, causes and effects. Find "
+            "evidence-led guidance and practical information for informed "
+            "support and everyday life."
+        ),
+        (
+            f"Explore {subject}, its signs, causes and effects, with "
+            "evidence-led guidance and practical information for understanding "
+            "and support."
+        ),
+    ]
+
+    valid = [
+        candidate
+        for candidate in candidates
+        if 145 <= len(candidate) <= 155
+    ]
+
+    if valid:
+        return min(
+            valid,
+            key=lambda candidate: abs(len(candidate) - 150),
+        )
+
+    # Natural guaranteed fallback: 153 characters.
+    return (
+        "Explore this topic through clear, evidence-led guidance covering key "
+        "signs, causes and effects, with practical information for "
+        "understanding and support."
+    )
+
+
+def _fit_diagram_alt(center_label, labels):
+    """Create a descriptive SVG accessibility label of at most 100 characters."""
+    factors = ", ".join(
+        str(label).strip()
+        for label in (labels or [])[:3]
+        if label
+    )
+
+    text = (
+        f"Hub-and-spoke diagram of {center_label} showing "
+        f"{factors or 'five related factors'}"
+    )
+
+    if len(text) > 100:
+        text = text[:101].rsplit(" ", 1)[0]
+
+    return text.rstrip(" .")
 
 
 _PLACEHOLDER_RE = re.compile(r"^\s*(subject|topic)\b", re.I)
@@ -510,6 +629,14 @@ def generate_hub_draft(subject: str, category: str, notes: str = "", log=None):
         outline.get("title"), subject, f"{subject}: A Complete Evidence-Led Guide"
     )
     outline["h1"] = _sanitize_title_field(outline.get("h1"), subject, subject)
+    outline["title"] = _fit_meta_title(
+        outline["title"],
+        subject,
+    )
+    outline["meta_description"] = _fit_meta_description(
+        outline.get("meta_description"),
+        subject,
+    )
 
     slug = lib.slugify(outline.get("h1") or subject)
     sections = []
@@ -539,9 +666,8 @@ def generate_hub_draft(subject: str, category: str, notes: str = "", log=None):
         "category": category,
         "eyebrow": outline.get("eyebrow", f"{category} \u00b7 Complete guide"),
         "lead": outline.get("lead", ""),
-        "meta_description": outline.get("meta_description", "")[:155],
+        "meta_description": outline["meta_description"],
         "og_description": outline.get("og_description", ""),
-        "keywords": outline.get("keywords", []),
         "featured_icon": (outline.get("featured_icon") or subject[:1]).strip()[:2].upper(),
         "featured_summary": outline.get("featured_summary", "")[:220],
         "sources_html": sources_html,

@@ -104,10 +104,6 @@ button:disabled{opacity:.5;cursor:not-allowed;}
 
 <label>Open Graph / social description</label>
 <textarea id="f-og" rows="3"></textarea>
-
-<label>Keywords (comma separated)</label>
-<input id="f-keywords" type="text" placeholder="bystander effect, diffusion of responsibility, social psychology">
-
 <div class="two-col">
 <div>
 <label>Featured card icon (single letter/emoji)</label>
@@ -191,6 +187,7 @@ button:disabled{opacity:.5;cursor:not-allowed;}
 
 <script>
 const MIN_WORDS = {{ min_words }};
+let generatedSvgHtml = "";
 
 function addRepeater(containerId, templateId) {
   const tpl = document.getElementById(templateId);
@@ -217,9 +214,23 @@ function bindCounter(inputId, countId, suffix) {
   el.addEventListener("input", update);
   update();
 }
-bindCounter("f-title", "title-count", "");
+function bindMetaTitleCounter() {
+  const el = document.getElementById("f-title");
+  const label = document.getElementById("title-count");
+
+  const update = () => {
+    const completeLength = el.value.length + 12;
+    label.textContent =
+      `${completeLength}/60 including | ReikiFish`;
+  };
+
+  el.addEventListener("input", update);
+  update();
+}
+
+bindMetaTitleCounter();
 bindCounter("f-eyebrow", "eyebrow-count", "");
-bindCounter("f-meta", "meta-count", "/160");
+bindCounter("f-meta", "meta-count", "/155");
 bindCounter("f-summary", "summary-count", "/220");
 
 function collectFormData() {
@@ -252,13 +263,13 @@ function collectFormData() {
     note_html: document.getElementById("f-note").value.trim(),
     meta_description: document.getElementById("f-meta").value.trim(),
     og_description: document.getElementById("f-og").value.trim(),
-    keywords: document.getElementById("f-keywords").value.trim(),
     featured_icon: document.getElementById("f-icon").value.trim(),
     featured_summary: document.getElementById("f-summary").value.trim(),
     sources_html: document.getElementById("f-sources").value.trim(),
     sections,
     faqs,
     related_links,
+    svg_html: generatedSvgHtml,
   };
 }
 
@@ -314,6 +325,7 @@ function clearRepeater(containerId) {
 }
 
 function fillDraft(draft) {
+  generatedSvgHtml = draft.svg_html || "";
   document.getElementById("f-title").value = draft.title || "";
   document.getElementById("f-h1").value = draft.h1 || "";
   document.getElementById("f-slug").value = draft.slug || "";
@@ -322,8 +334,7 @@ function fillDraft(draft) {
   document.getElementById("f-lead").value = draft.lead || "";
   document.getElementById("f-meta").value = draft.meta_description || "";
   document.getElementById("f-og").value = draft.og_description || "";
-  document.getElementById("f-keywords").value = Array.isArray(draft.keywords) ? draft.keywords.join(", ") : (draft.keywords || "");
-  document.getElementById("f-icon").value = draft.featured_icon || "";
+document.getElementById("f-icon").value = draft.featured_icon || "";
   document.getElementById("f-summary").value = draft.featured_summary || "";
   document.getElementById("f-sources").value = draft.sources_html || "";
 
