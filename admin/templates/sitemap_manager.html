@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ReikiFish Sitemap Manager</title>
+  <style>
+    :root{--green:#124a3d;--teal:#287c69;--ink:#16352e;--paper:#eef3f0;--gold:#b58514;--red:#a43128}
+    *{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 Arial,sans-serif}
+    header{background:var(--green);color:#fff;padding:24px 4vw;display:flex;justify-content:space-between;align-items:center}
+    header h1{margin:0;font-size:30px} header a{color:#fff;text-decoration:none}
+    main{max-width:1160px;margin:32px auto;padding:0 20px 60px}.panel{background:#fff;border-radius:18px;padding:28px;margin-bottom:22px;box-shadow:0 10px 30px #143c2f14}
+    button{border:0;border-radius:9px;padding:13px 20px;background:var(--teal);color:#fff;font-size:16px;cursor:pointer;margin-right:10px}
+    button.danger{background:var(--green)} button:disabled{opacity:.45;cursor:not-allowed}.notice{padding:14px;border-radius:9px;background:#e5f5eb;margin-top:18px}
+    .warning{background:#fff4d8;color:#6f4d00}.error{background:#ffe8e5;color:var(--red)}
+    .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0}.stat{padding:18px;border:1px solid #cfded8;border-radius:12px}.stat strong{display:block;font-size:28px}
+    details{border-top:1px solid #d9e3df;padding:14px 0} summary{cursor:pointer;font-weight:700}.items{max-height:260px;overflow:auto;margin-top:10px}.items div{padding:7px 5px;border-bottom:1px solid #edf2f0;word-break:break-word}
+    code{font-size:13px} .muted{color:#587169}
+  </style>
+</head>
+<body>
+<header><h1>Sitemap Manager</h1><a href="/">← Dashboard</a></header>
+<main>
+  <section class="panel">
+    <h2>Safe sitemap scan</h2>
+    <p>This scans local HTML, includes only indexable pages with a ReikiFish canonical, excludes <code>noindex</code> and Cloudflare system URLs, and never edits Hub pages.</p>
+    <button id="scan">Scan website</button>
+    <button id="update" class="danger" disabled>Confirm and update sitemap.xml</button>
+    <div id="message" class="notice">Run the scan first. Nothing changes during scanning.</div>
+  </section>
+  <section id="results" class="panel" hidden>
+    <h2>Scan report</h2><div id="stats" class="stats"></div><div id="groups"></div>
+  </section>
+</main>
+<script>
+const scanButton=document.getElementById('scan'), updateButton=document.getElementById('update');
+const message=document.getElementById('message'), results=document.getElementById('results');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function render(report){
+  results.hidden=false;
+  const labels={html_files_scanned:'HTML scanned',eligible_canonical_pages:'Eligible pages',existing_sitemap_urls:'Existing URLs',missing_from_sitemap:'To add',noindex_or_excluded:'Excluded',missing_canonical:'Missing canonical',duplicate_canonical:'Duplicate canonical',canonical_domain_mismatch:'Domain mismatch',preserved_existing_urls:'Existing URLs preserved',proposed_total_urls:'Proposed total'};
+  document.getElementById('stats').innerHTML=Object.entries(report.summary).map(([k,v])=>`<div class="stat"><strong>${esc(v)}</strong>${esc(labels[k]||k)}</div>`).join('');
+  const groups=[['missing_from_sitemap','URLs to add'],['missing_canonical','Pages missing canonical'],['duplicate_canonical','Duplicate canonicals'],['canonical_domain_mismatch','Canonical domain mismatches'],['excluded','Noindex or excluded pages'],['preserved_existing_urls','Existing sitemap URLs preserved']];
+  document.getElementById('groups').innerHTML=groups.map(([key,title])=>{const data=report[key]||[]; return `<details><summary>${esc(title)} (${data.length})</summary><div class="items">${data.length?data.map(x=>`<div>${esc(typeof x==='string'?x:(x.file+' — '+(x.canonical||x.detail||x.status)))}</div>`).join(''):'<div class="muted">None</div>'}</div></details>`}).join('');
+}
+async function call(url){const response=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'}); const data=await response.json(); if(!response.ok||!data.success)throw new Error(data.message||'Request failed'); return data;}
+scanButton.onclick=async()=>{scanButton.disabled=true;updateButton.disabled=true;message.className='notice';message.textContent='Scanning…';try{const data=await call('/sitemap-manager/scan');render(data.report);updateButton.disabled=false;message.textContent='Scan complete. Review the report, then confirm the update.'}catch(e){message.className='notice error';message.textContent=e.message}finally{scanButton.disabled=false}};
+updateButton.onclick=async()=>{if(!confirm('Update sitemap.xml now? A dated local backup will be created first.'))return;updateButton.disabled=true;message.className='notice';message.textContent='Updating and verifying sitemap.xml…';try{const data=await call('/sitemap-manager/update');render(data.report);message.textContent=`Updated safely: ${data.report.written_urls} URLs. Backup: ${data.report.backup||'new sitemap'}`;}catch(e){message.className='notice error';message.textContent=e.message}finally{updateButton.disabled=false}};
+</script>
+</body></html>

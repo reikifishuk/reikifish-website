@@ -12,6 +12,7 @@ ASSETS_FOLDER = PROJECT_ROOT / "assets"
 
 sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
 import hub_page_lib  # Knowledge Hub page generator + SOP checks (New Hub Page feature)
+import sitemap_manager_lib  # Local canonical-only sitemap manager
 
 UPLOAD_FOLDER = ASSETS_FOLDER / "images" / "blog"
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
@@ -806,6 +807,32 @@ def knowledge_hub_publish():
     report["url"] = f"/knowledge/{spec.slug}.html"
     return jsonify(report)
 
+
+
+
+# ---------------------------------------------------------------------------
+# Safe Sitemap Manager (separate from the Knowledge Hub generator)
+# ---------------------------------------------------------------------------
+@app.route("/sitemap-manager")
+def sitemap_manager_page():
+    return render_template("sitemap_manager.html")
+
+
+@app.route("/sitemap-manager/scan", methods=["POST"])
+def sitemap_manager_scan():
+    try:
+        return jsonify(success=True, report=sitemap_manager_lib.scan_site(PROJECT_ROOT))
+    except Exception as exc:
+        return jsonify(success=False, message=f"Sitemap scan failed: {exc}"), 500
+
+
+@app.route("/sitemap-manager/update", methods=["POST"])
+def sitemap_manager_update():
+    try:
+        report = sitemap_manager_lib.update_sitemap(PROJECT_ROOT)
+        return jsonify(success=True, report=report)
+    except Exception as exc:
+        return jsonify(success=False, message=f"Sitemap update failed: {exc}"), 500
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True, use_reloader=False)
