@@ -1,0 +1,7 @@
+_local_backups/
+_local_build/
+node_modules/
+.git/
+.wrangler/
+reikifish-booking-local-build/
+scripts/__pycache__/

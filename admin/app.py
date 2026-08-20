@@ -3,11 +3,15 @@ from pathlib import Path
 from werkzeug.utils import secure_filename
 from datetime import date
 import subprocess
+import sys
 
 app = Flask(__name__)
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 ASSETS_FOLDER = PROJECT_ROOT / "assets"
+
+sys.path.insert(0, str(PROJECT_ROOT / "scripts"))
+import hub_page_lib  # Knowledge Hub page generator + SOP checks (New Hub Page feature)
 
 UPLOAD_FOLDER = ASSETS_FOLDER / "images" / "blog"
 UPLOAD_FOLDER.mkdir(parents=True, exist_ok=True)
@@ -719,6 +723,89 @@ def upload_image():
 
 
 # CMS_COMPLETE_PUBLISH_START
+
+
+# ---------------------------------------------------------------------------
+# Knowledge Hub page generator (SOP-checked: SEO meta, 10k word minimum,
+# working links). Writes local files only - no git commit, no deploy.
+# ---------------------------------------------------------------------------
+
+@app.route("/knowledge-hub")
+def knowledge_hub_form():
+    categories = []
+    if hub_page_lib.KNOWLEDGE_JSON.exists():
+        import json as _json
+        data = _json.loads(hub_page_lib.KNOWLEDGE_JSON.read_text(encoding="utf-8"))
+        categories = sorted({d.get("category", "") for d in data if d.get("category")})
+    return render_template("knowledge_hub.html", categories=categories, min_words=hub_page_lib.MIN_WORD_COUNT)
+
+
+@app.route("/knowledge-hub/check", methods=["POST"])
+def knowledge_hub_check():
+    data = request.get_json(silent=True) or {}
+    try:
+        spec = hub_page_lib.spec_from_dict(data)
+    except Exception as exc:
+        return jsonify({"success": False, "message": f"Could not read form data: {exc}"}), 400
+    report = hub_page_lib.run_sop_checks(spec)
+    report["success"] = True
+    report["slug"] = spec.slug
+    return jsonify(report)
+
+
+@app.route("/knowledge-hub/generate-ai", methods=["POST"])
+def knowledge_hub_generate_ai():
+    import ai_hub_writer
+
+    data = request.get_json(silent=True) or {}
+    subject = (data.get("subject") or "").strip()
+    category = (data.get("category") or "").strip()
+    notes = (data.get("notes") or "").strip()
+
+    if not subject:
+        return jsonify({"success": False, "message": "Enter a subject to generate a guide for."}), 400
+    if not category:
+        return jsonify({"success": False, "message": "Choose or enter a category."}), 400
+
+    try:
+        draft, report, log = ai_hub_writer.generate_hub_draft(subject, category, notes)
+    except ai_hub_writer.AIGenerationError as exc:
+        return jsonify({"success": False, "message": str(exc)}), 400
+
+    return jsonify({
+        "success": True,
+        "draft": draft,
+        "report": report,
+        "log": log,
+        "ai_generated": True,
+        "needs_citation_review": True,
+    })
+
+
+@app.route("/knowledge-hub/publish", methods=["POST"])
+def knowledge_hub_publish():
+    data = request.get_json(silent=True) or {}
+    try:
+        spec = hub_page_lib.spec_from_dict(data)
+    except Exception as exc:
+        return jsonify({"success": False, "message": f"Could not read form data: {exc}"}), 400
+
+    report = hub_page_lib.run_sop_checks(spec)
+    if not report["passed"]:
+        report["success"] = False
+        report["message"] = "SOP checks failed - fix the errors below before publishing."
+        return jsonify(report), 400
+
+    out_path = hub_page_lib.write_hub_page(spec)
+    hub_page_lib.register_hub_page(spec)
+
+    report["success"] = True
+    report["message"] = "Page generated locally and registered (featured card, search index, sitemap)."
+    report["slug"] = spec.slug
+    report["path"] = str(out_path.relative_to(hub_page_lib.ROOT))
+    report["url"] = f"/knowledge/{spec.slug}.html"
+    return jsonify(report)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)

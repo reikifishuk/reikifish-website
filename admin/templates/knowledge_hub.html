@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>New Knowledge Hub Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+<style>
+.hub-wrap{max-width:1000px;margin:30px auto;padding:0 20px 80px;}
+.hub-section{background:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 8px 24px rgba(0,0,0,.08);margin-bottom:24px;}
+.hub-section h2{margin:0 0 16px;font-size:1.15rem;color:#173f35;}
+label{display:block;margin:14px 0 6px;font-weight:600;color:#24312d;}
+input[type=text],input[type=url],textarea,select{width:100%;padding:10px 12px;border:1px solid #cdd6d1;border-radius:8px;font:inherit;font-size:.95rem;}
+textarea{min-height:80px;resize:vertical;font-family:Consolas,Menlo,monospace;font-size:.85rem;}
+.count{font-weight:400;color:#6b7a74;font-size:.82rem;float:right;}
+.repeater-item{border:1px solid #e0e6e2;border-radius:10px;padding:14px 16px;margin-bottom:12px;position:relative;}
+.repeater-item .remove-btn{position:absolute;top:10px;right:10px;background:#c0392b;padding:4px 10px;font-size:.78rem;border-radius:6px;}
+.add-btn{background:#2f6f5e;margin-top:6px;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+button{padding:12px 20px;background:#2f6f5e;color:#fff;border:none;border-radius:8px;font-size:15px;cursor:pointer;}
+button.primary{background:#173f35;font-size:16px;padding:14px 26px;}
+button:disabled{opacity:.5;cursor:not-allowed;}
+#report{margin-top:20px;}
+.issue{padding:10px 14px;border-radius:8px;margin-bottom:8px;font-size:.9rem;}
+.issue.error{background:#fdecea;color:#a3231b;border:1px solid #f3b5ae;}
+.issue.warning{background:#fff8e1;color:#8a6500;border:1px solid #f0dfa0;}
+.issue.ok{background:#e9f7ef;color:#1e7e46;border:1px solid #b7e4c7;}
+.actions{display:flex;gap:12px;align-items:center;margin-top:10px;}
+#result-banner{padding:14px 18px;border-radius:8px;margin-top:16px;font-weight:600;}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+<h1>New Knowledge Hub Page</h1>
+<a href="/">&larr; Dashboard</a>
+</header>
+
+<main class="hub-wrap">
+
+<div class="hub-section" style="border:2px solid #2f6f5e;">
+<h2>Auto-generate from a subject</h2>
+<p>Type a subject, pick a category, hit Generate - the rest of the form below fills in automatically (AI-drafted via Cloudflare Workers AI). Always review before publishing, especially the Sources section.</p>
+<label>Subject</label>
+<input id="ai-subject" type="text" placeholder="e.g. Cognitive Dissonance">
+<div class="two-col">
+<div>
+<label>Category</label>
+<select id="ai-category">
+<option value="">Select or type below&hellip;</option>
+{% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+</select>
+<input id="ai-category-new" type="text" placeholder="Or type a new category" style="margin-top:8px;">
+</div>
+<div>
+<label>Notes / angle (optional)</label>
+<input id="ai-notes" type="text" placeholder="Any specific angle to focus on">
+</div>
+</div>
+<div class="actions">
+<button type="button" id="ai-generate-btn">Generate</button>
+<span id="ai-status" style="font-size:.9rem;color:#6b7a74;"></span>
+</div>
+<div id="ai-warning" style="display:none;" class="issue warning">This content was AI-drafted. Read every section and especially the Sources list before publishing - verify any claimed research is real.</div>
+</div>
+
+<div class="hub-section">
+<h2>Basics</h2>
+<label>Title <span class="count" id="title-count">0</span></label>
+<input id="f-title" type="text" placeholder="e.g. The Bystander Effect: A Complete Evidence-Led Guide">
+
+<label>H1 (defaults to the part of the title before the colon)</label>
+<input id="f-h1" type="text" placeholder="e.g. The Bystander Effect">
+
+<div class="two-col">
+<div>
+<label>Slug</label>
+<input id="f-slug" type="text" placeholder="e.g. the-bystander-effect">
+</div>
+<div>
+<label>Category</label>
+<select id="f-category">
+<option value="">Select or type below&hellip;</option>
+{% for c in categories %}<option value="{{ c }}">{{ c }}</option>{% endfor %}
+</select>
+<input id="f-category-new" type="text" placeholder="Or type a new category" style="margin-top:8px;">
+</div>
+</div>
+
+<label>Eyebrow / kicker <span class="count" id="eyebrow-count">0</span></label>
+<input id="f-eyebrow" type="text" placeholder="e.g. Social Psychology &middot; Complete guide">
+
+<label>Lead paragraph</label>
+<textarea id="f-lead" rows="3" placeholder="One or two sentences summarising the guide."></textarea>
+
+<label>Note (optional callout HTML)</label>
+<textarea id="f-note" rows="2"></textarea>
+</div>
+
+<div class="hub-section">
+<h2>SEO metadata</h2>
+<label>Meta description <span class="count" id="meta-count">0/160</span></label>
+<textarea id="f-meta" rows="3" maxlength="160"></textarea>
+
+<label>Open Graph / social description</label>
+<textarea id="f-og" rows="3"></textarea>
+
+<label>Keywords (comma separated)</label>
+<input id="f-keywords" type="text" placeholder="bystander effect, diffusion of responsibility, social psychology">
+
+<div class="two-col">
+<div>
+<label>Featured card icon (single letter/emoji)</label>
+<input id="f-icon" type="text" maxlength="4">
+</div>
+<div>
+<label>Featured card summary <span class="count" id="summary-count">0/220</span></label>
+<textarea id="f-summary" rows="3" maxlength="220"></textarea>
+</div>
+</div>
+</div>
+
+<div class="hub-section">
+<h2>Content sections <span class="count" id="word-count">0 words</span></h2>
+<div id="sections"></div>
+<button type="button" class="add-btn" id="add-section">+ Add section</button>
+</div>
+
+<div class="hub-section">
+<h2>FAQs</h2>
+<div id="faqs"></div>
+<button type="button" class="add-btn" id="add-faq">+ Add FAQ</button>
+</div>
+
+<div class="hub-section">
+<h2>Sources</h2>
+<label>Sources HTML (list items, wrapped in &lt;ol&gt; automatically if omitted)</label>
+<textarea id="f-sources" rows="6" placeholder="&lt;li&gt;Author, A. (Year). Title. Journal.&lt;/li&gt;"></textarea>
+</div>
+
+<div class="hub-section">
+<h2>Related Knowledge links (optional, up to 3)</h2>
+<div id="related"></div>
+<button type="button" class="add-btn" id="add-related">+ Add related link</button>
+</div>
+
+<div class="hub-section">
+<h2>Publish</h2>
+<p>Run the SOP checks first (SEO metadata, 10,000 word minimum, working links). Publish is only enabled once there are no errors.</p>
+<div class="actions">
+<button type="button" id="run-checks">Run SOP checks</button>
+<button type="button" class="primary" id="publish-btn" disabled>Generate page locally</button>
+</div>
+<div id="report"></div>
+<div id="result-banner" style="display:none;"></div>
+</div>
+
+</main>
+
+<template id="section-template">
+<div class="repeater-item section-item">
+<button type="button" class="remove-btn">Remove</button>
+<label>Kicker (small label above heading)</label>
+<input type="text" class="s-kicker">
+<label>Heading</label>
+<input type="text" class="s-heading">
+<label>Body HTML</label>
+<textarea class="s-body" rows="6"></textarea>
+</div>
+</template>
+
+<template id="faq-template">
+<div class="repeater-item faq-item">
+<button type="button" class="remove-btn">Remove</button>
+<label>Question</label>
+<input type="text" class="q-question">
+<label>Answer</label>
+<textarea class="q-answer" rows="3"></textarea>
+</div>
+</template>
+
+<template id="related-template">
+<div class="repeater-item related-item">
+<button type="button" class="remove-btn">Remove</button>
+<div class="two-col">
+<div><label>Label</label><input type="text" class="r-label"></div>
+<div><label>URL</label><input type="text" class="r-url" placeholder="/knowledge/some-page.html"></div>
+</div>
+</div>
+</template>
+
+<script>
+const MIN_WORDS = {{ min_words }};
+
+function addRepeater(containerId, templateId) {
+  const tpl = document.getElementById(templateId);
+  const container = document.getElementById(containerId);
+  const node = tpl.content.cloneNode(true);
+  node.querySelector(".remove-btn").addEventListener("click", (e) => {
+    e.target.closest(".repeater-item").remove();
+  });
+  container.appendChild(node);
+}
+
+document.getElementById("add-section").addEventListener("click", () => addRepeater("sections", "section-template"));
+document.getElementById("add-faq").addEventListener("click", () => addRepeater("faqs", "faq-template"));
+document.getElementById("add-related").addEventListener("click", () => addRepeater("related", "related-template"));
+
+// start with 3 sections and 3 FAQs since those are the SOP minimums
+for (let i = 0; i < 3; i++) addRepeater("sections", "section-template");
+for (let i = 0; i < 3; i++) addRepeater("faqs", "faq-template");
+
+function bindCounter(inputId, countId, suffix) {
+  const el = document.getElementById(inputId);
+  const label = document.getElementById(countId);
+  const update = () => { label.textContent = el.value.length + (suffix || ""); };
+  el.addEventListener("input", update);
+  update();
+}
+bindCounter("f-title", "title-count", "");
+bindCounter("f-eyebrow", "eyebrow-count", "");
+bindCounter("f-meta", "meta-count", "/160");
+bindCounter("f-summary", "summary-count", "/220");
+
+function collectFormData() {
+  const category = document.getElementById("f-category-new").value.trim()
+    || document.getElementById("f-category").value.trim();
+
+  const sections = Array.from(document.querySelectorAll(".section-item")).map(el => ({
+    kicker: el.querySelector(".s-kicker").value.trim(),
+    heading: el.querySelector(".s-heading").value.trim(),
+    body_html: el.querySelector(".s-body").value.trim(),
+  }));
+
+  const faqs = Array.from(document.querySelectorAll(".faq-item")).map(el => ({
+    question: el.querySelector(".q-question").value.trim(),
+    answer: el.querySelector(".q-answer").value.trim(),
+  }));
+
+  const related_links = Array.from(document.querySelectorAll(".related-item")).map(el => ({
+    label: el.querySelector(".r-label").value.trim(),
+    url: el.querySelector(".r-url").value.trim(),
+  }));
+
+  return {
+    title: document.getElementById("f-title").value.trim(),
+    h1: document.getElementById("f-h1").value.trim(),
+    slug: document.getElementById("f-slug").value.trim(),
+    category,
+    eyebrow: document.getElementById("f-eyebrow").value.trim(),
+    lead: document.getElementById("f-lead").value.trim(),
+    note_html: document.getElementById("f-note").value.trim(),
+    meta_description: document.getElementById("f-meta").value.trim(),
+    og_description: document.getElementById("f-og").value.trim(),
+    keywords: document.getElementById("f-keywords").value.trim(),
+    featured_icon: document.getElementById("f-icon").value.trim(),
+    featured_summary: document.getElementById("f-summary").value.trim(),
+    sources_html: document.getElementById("f-sources").value.trim(),
+    sections,
+    faqs,
+    related_links,
+  };
+}
+
+function renderReport(report) {
+  const box = document.getElementById("report");
+  box.innerHTML = "";
+
+  const wordLine = document.createElement("div");
+  wordLine.className = "issue " + (report.word_count_ok ? "ok" : "error");
+  wordLine.textContent = `Word count: ${report.word_count} / ${report.min_word_count} minimum`;
+  box.appendChild(wordLine);
+
+  (report.issues || []).forEach(i => {
+    const d = document.createElement("div");
+    d.className = "issue " + i.level;
+    d.textContent = `[${i.field}] ${i.message}`;
+    box.appendChild(d);
+  });
+
+  (report.links || []).forEach(l => {
+    if (!l.ok) {
+      const d = document.createElement("div");
+      d.className = "issue " + (l.type === "internal" ? "error" : "warning");
+      d.textContent = `Broken ${l.type} link: ${l.url}`;
+      box.appendChild(d);
+    }
+  });
+
+  if (report.passed) {
+    const d = document.createElement("div");
+    d.className = "issue ok";
+    d.textContent = "All SOP checks passed. Ready to publish.";
+    box.appendChild(d);
+  }
+
+  document.getElementById("word-count").textContent = report.word_count + " words";
+  document.getElementById("publish-btn").disabled = !report.passed;
+}
+
+document.getElementById("run-checks").addEventListener("click", async () => {
+  const data = collectFormData();
+  const res = await fetch("/knowledge-hub/check", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(data),
+  });
+  const report = await res.json();
+  renderReport(report);
+});
+
+function clearRepeater(containerId) {
+  document.getElementById(containerId).innerHTML = "";
+}
+
+function fillDraft(draft) {
+  document.getElementById("f-title").value = draft.title || "";
+  document.getElementById("f-h1").value = draft.h1 || "";
+  document.getElementById("f-slug").value = draft.slug || "";
+  document.getElementById("f-category-new").value = draft.category || "";
+  document.getElementById("f-eyebrow").value = draft.eyebrow || "";
+  document.getElementById("f-lead").value = draft.lead || "";
+  document.getElementById("f-meta").value = draft.meta_description || "";
+  document.getElementById("f-og").value = draft.og_description || "";
+  document.getElementById("f-keywords").value = Array.isArray(draft.keywords) ? draft.keywords.join(", ") : (draft.keywords || "");
+  document.getElementById("f-icon").value = draft.featured_icon || "";
+  document.getElementById("f-summary").value = draft.featured_summary || "";
+  document.getElementById("f-sources").value = draft.sources_html || "";
+
+  clearRepeater("sections");
+  (draft.sections || []).forEach(s => {
+    addRepeater("sections", "section-template");
+    const el = document.querySelectorAll("#sections .section-item");
+    const node = el[el.length - 1];
+    node.querySelector(".s-kicker").value = s.kicker || "";
+    node.querySelector(".s-heading").value = s.heading || "";
+    node.querySelector(".s-body").value = s.body_html || "";
+  });
+
+  clearRepeater("faqs");
+  (draft.faqs || []).forEach(f => {
+    addRepeater("faqs", "faq-template");
+    const el = document.querySelectorAll("#faqs .faq-item");
+    const node = el[el.length - 1];
+    node.querySelector(".q-question").value = f.question || "";
+    node.querySelector(".q-answer").value = f.answer || "";
+  });
+
+  clearRepeater("related");
+  (draft.related_links || []).forEach(r => {
+    addRepeater("related", "related-template");
+    const el = document.querySelectorAll("#related .related-item");
+    const node = el[el.length - 1];
+    node.querySelector(".r-label").value = r.label || "";
+    node.querySelector(".r-url").value = r.url || "";
+  });
+
+  ["title-count", "eyebrow-count", "meta-count", "summary-count"].forEach(id => {});
+  document.getElementById("f-title").dispatchEvent(new Event("input"));
+  document.getElementById("f-eyebrow").dispatchEvent(new Event("input"));
+  document.getElementById("f-meta").dispatchEvent(new Event("input"));
+  document.getElementById("f-summary").dispatchEvent(new Event("input"));
+}
+
+document.getElementById("ai-generate-btn").addEventListener("click", async () => {
+  const subject = document.getElementById("ai-subject").value.trim();
+  const category = document.getElementById("ai-category-new").value.trim()
+    || document.getElementById("ai-category").value.trim();
+  const notes = document.getElementById("ai-notes").value.trim();
+  const status = document.getElementById("ai-status");
+  const btn = document.getElementById("ai-generate-btn");
+
+  if (!subject || !category) {
+    status.textContent = "Enter a subject and category first.";
+    return;
+  }
+
+  btn.disabled = true;
+  status.textContent = "Generating... this can take a minute or two for a full 10k-word draft.";
+
+  try {
+    const res = await fetch("/knowledge-hub/generate-ai", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({subject, category, notes}),
+    });
+    const data = await res.json();
+    if (!data.success) {
+      status.textContent = data.message || "Generation failed.";
+      btn.disabled = false;
+      return;
+    }
+    fillDraft(data.draft);
+    document.getElementById("ai-warning").style.display = "block";
+    renderReport(data.report);
+    status.textContent = "Draft generated - review below, then Run SOP checks and Publish.";
+  } catch (err) {
+    status.textContent = "Error: " + err.message;
+  }
+  btn.disabled = false;
+});
+
+document.getElementById("publish-btn").addEventListener("click", async () => {
+  const data = collectFormData();
+  const res = await fetch("/knowledge-hub/publish", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(data),
+  });
+  const report = await res.json();
+  const banner = document.getElementById("result-banner");
+  banner.style.display = "block";
+  if (report.success) {
+    banner.style.background = "#e9f7ef";
+    banner.style.color = "#1e7e46";
+    banner.textContent = `Published: ${report.url} (local file, not deployed).`;
+  } else {
+    banner.style.background = "#fdecea";
+    banner.style.color = "#a3231b";
+    banner.textContent = report.message || "Publish failed.";
+    renderReport(report);
+  }
+});
+</script>
+
+</body>
+</html>
