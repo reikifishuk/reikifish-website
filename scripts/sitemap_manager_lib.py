@@ -59,6 +59,17 @@ def _normalise_site_url(url: str) -> str:
     if parsed.netloc.lower() not in {"reikifish.com", "www.reikifish.com"}:
         return ""
     path = parsed.path or "/"
+
+    # Keep physical files as .html but publish clean Cloudflare URLs.
+    if path == "/index.html":
+        path = "/"
+    elif path.endswith("/index.html"):
+        path = path[:-10] or "/"
+        if not path.endswith("/"):
+            path += "/"
+    elif path.endswith(".html"):
+        path = path[:-5] or "/"
+
     return urlunparse(("https", "reikifish.com", path, "", "", ""))
 
 
@@ -200,11 +211,11 @@ def _priority_for(url: str) -> tuple[str, str]:
     path = urlparse(url).path
     if path == "/":
         return "weekly", "1.0"
-    if path in {"/knowledge.html", "/blog.html", "/knowledge-search.html"}:
+    if path in {"/knowledge", "/blog", "/knowledge-search"}:
         return "weekly", "0.8"
     if path.startswith(("/knowledge/", "/articles/", "/blog/")):
         return "monthly", "0.7"
-    if path == "/privacy.html":
+    if path == "/privacy":
         return "yearly", "0.3"
     return "monthly", "0.7"
 

@@ -101,7 +101,7 @@ def build_page(spec: PageSpec) -> Path:
 
     p = spec.prefix
     css = css.replace("np-", f"{p}-")
-    canonical = f"{BASE_URL}/knowledge/{spec.slug}.html"
+    canonical = f"{BASE_URL}/knowledge/{spec.slug}"
     full_title = f"{spec.title} | ReikiFish"
 
     keywords_attr = ", ".join(spec.keywords)
@@ -127,16 +127,16 @@ def build_page(spec: PageSpec) -> Path:
         f'<section class="{p}-section {p}-references" id="sources">'
         f'<div class="{p}-section-head"><div class="{p}-kicker">Evidence and limits</div>'
         f"<h2>Sources and further reading</h2></div>{spec.sources_html}"
-        f'<p>Return to the <a href="/knowledge.html">Knowledge Hub</a> or browse the '
-        f'<a href="/knowledge-search.html?category={spec.category.replace(" ", "%20")}">'
+        f'<p>Return to the <a href="/knowledge">Knowledge Hub</a> or browse the '
+        f'<a href="/knowledge-search?category={spec.category.replace(" ", "%20")}">'
         f"{spec.category} index</a>.</p></section>"
     )
 
     sidebar_links = "".join(
-        f'<a href="/knowledge/{spec.slug}.html#{s.id}">{s.heading}</a>' for s in spec.sections
+        f'<a href="/knowledge/{spec.slug}#{s.id}">{s.heading}</a>' for s in spec.sections
     )
-    sidebar_links += f'<a href="/knowledge/{spec.slug}.html#faq">FAQs</a>'
-    sidebar_links += f'<a href="/knowledge/{spec.slug}.html#sources">Sources</a>'
+    sidebar_links += f'<a href="/knowledge/{spec.slug}#faq">FAQs</a>'
+    sidebar_links += f'<a href="/knowledge/{spec.slug}#sources">Sources</a>'
 
     note_html = (
         f'<div class="{p}-note">{spec.note_html}</div>' if spec.note_html else ""
@@ -151,14 +151,14 @@ def build_page(spec: PageSpec) -> Path:
                 "headline": spec.title,
                 "description": spec.og_description,
                 "inLanguage": "en-GB",
-                "author": {"@type": "Person", "name": "Andy Fish", "url": f"{BASE_URL}/about.html"},
+                "author": {"@type": "Person", "name": "Andy Fish", "url": f"{BASE_URL}/about"},
                 "publisher": {"@type": "Organization", "name": "ReikiFish", "url": f"{BASE_URL}/"},
                 "mainEntityOfPage": {"@type": "WebPage", "@id": canonical},
             },
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Knowledge Hub", "item": f"{BASE_URL}/knowledge.html"},
+                    {"@type": "ListItem", "position": 1, "name": "Knowledge Hub", "item": f"{BASE_URL}/knowledge"},
                     {"@type": "ListItem", "position": 2, "name": spec.title.split(":")[0], "item": canonical},
                 ],
             },
@@ -217,7 +217,7 @@ def _add_to_knowledge_json(spec: PageSpec):
         "category": spec.category,
         "summary": spec.featured_summary,
         "keywords": spec.keywords,
-        "url": f"knowledge/{spec.slug}.html",
+        "url": f"knowledge/{spec.slug}",
     }
     data = [d for d in data if d.get("slug") != spec.slug]
     data.append(entry)
@@ -235,7 +235,7 @@ def _add_featured_card(spec: PageSpec):
     card = (
         f'\n{start_marker}\n'
         f'<a class="kb-featured-card kb-featured-card-primary"\n'
-        f'   href="/knowledge/{spec.slug}.html"\n'
+        f'   href="/knowledge/{spec.slug}"\n'
         f'   aria-label="Read {title_short}: Complete Guide">\n'
         f'  <div class="kb-featured-badges">\n'
         f'    <span class="kb-featured-badge kb-featured-badge-new">New</span>\n'
@@ -254,7 +254,7 @@ def _add_featured_card(spec: PageSpec):
 
 def _add_to_sitemap(spec: PageSpec):
     xml = SITEMAP.read_text(encoding="utf-8")
-    loc = f"{BASE_URL}/knowledge/{spec.slug}.html"
+    loc = f"{BASE_URL}/knowledge/{spec.slug}"
     if loc in xml:
         return
     entry = (

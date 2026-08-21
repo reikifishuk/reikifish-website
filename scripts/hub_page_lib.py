@@ -223,8 +223,8 @@ def build_hub_page(spec: HubPageSpec) -> str:
     sources_section = (
         f'<section class="{p}-section" id="sources"><span class="{p}-label">Evidence and limits</span>'
         f"<h2>Sources and further reading</h2>{sources_html}"
-        f'<p>Return to the <a href="/knowledge.html">Knowledge Hub</a> or browse the '
-        f'<a href="/knowledge-search.html?category={category_query}">{spec.category} index</a>.</p></section>'
+        f'<p>Return to the <a href="/knowledge">Knowledge Hub</a> or browse the '
+        f'<a href="/knowledge-search?category={category_query}">{spec.category} index</a>.</p></section>'
     )
 
     sidebar_links = "".join(
@@ -235,7 +235,7 @@ def build_hub_page(spec: HubPageSpec) -> str:
     sidebar_links += f'<a href="#sources"><span>Sources</span><span class="{p}-arrow" aria-hidden="true">&rarr;</span></a>'
 
     note_html = f'<div class="{p}-note">{spec.note_html}</div>' if spec.note_html else ""
-    canonical = f"{BASE_URL}/knowledge/{spec.slug}.html"
+    canonical = f"{BASE_URL}/knowledge/{spec.slug}"
     full_title = f"{spec.title} | ReikiFish"
 
     json_ld = {
@@ -270,7 +270,7 @@ def build_hub_page(spec: HubPageSpec) -> str:
 """
 
     body = f"""{nav_block}
-<main class="{p}-page" id="main-content"><div class="{p}-wrap"><div class="{p}-back"><a href="/knowledge.html">&larr; Knowledge Hub</a></div>
+<main class="{p}-page" id="main-content"><div class="{p}-wrap"><div class="{p}-back"><a href="/knowledge">&larr; Knowledge Hub</a></div>
 <section class="{p}-hero" aria-labelledby="{p}-title"><div><span class="{p}-kicker">{spec.eyebrow}</span><h1 id="{p}-title">{spec.h1}</h1><p>{spec.lead}</p>{note_html}</div>
 <div class="{p}-visual" aria-label="Illustrative diagram">{spec.svg_html}</div>
 </section>
@@ -657,7 +657,7 @@ def _add_to_knowledge_json(spec: HubPageSpec):
         "type": "Complete Guide",
         "category": spec.category,
         "summary": spec.featured_summary,
-        "url": f"knowledge/{spec.slug}.html",
+        "url": f"knowledge/{spec.slug}",
     })
     KNOWLEDGE_JSON.write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
 
@@ -672,7 +672,7 @@ def _add_featured_card(spec: HubPageSpec):
     idx = html.index(marker) + len(marker)
     card = (
         f"\n{start_marker}\n"
-        f'<a class="kb-featured-card kb-featured-card-primary" href="/knowledge/{spec.slug}.html" '
+        f'<a class="kb-featured-card kb-featured-card-primary" href="/knowledge/{spec.slug}" '
         f'aria-label="Read {spec.h1}: Complete Guide">'
         f'<div class="kb-featured-badges"><span class="kb-featured-badge kb-featured-badge-new">New</span>'
         f'<span class="kb-featured-badge">Complete guide</span></div>'
@@ -688,7 +688,7 @@ def _add_featured_card(spec: HubPageSpec):
 
 def _add_to_sitemap(spec: HubPageSpec):
     xml = SITEMAP.read_text(encoding="utf-8")
-    loc = f"{BASE_URL}/knowledge/{spec.slug}.html"
+    loc = f"{BASE_URL}/knowledge/{spec.slug}"
     if loc in xml:
         return
     entry = (

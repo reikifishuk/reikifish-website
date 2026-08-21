@@ -804,7 +804,7 @@ def knowledge_hub_publish():
     report["message"] = "Page generated locally and registered safely (featured card, Knowledge data and sitemap)."
     report["slug"] = spec.slug
     report["path"] = str(out_path.relative_to(hub_page_lib.ROOT))
-    report["url"] = f"/knowledge/{spec.slug}.html"
+    report["url"] = f"/knowledge/{spec.slug}"
     return jsonify(report)
 
 
