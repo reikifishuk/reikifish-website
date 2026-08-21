@@ -414,37 +414,6 @@ body.home-page .home-hero .hero-frame {
   }
 </style>
 <!-- RF_COACHING_COMPACT_SPACING_END -->
-<!-- RF_HOMEPAGE_EQUAL_GAPS_START -->
-<style id="rf-homepage-equal-block-gaps">
-  /*
-    One spacing source for every consecutive homepage block.
-    Individual internal padding remains untouched.
-  */
-  body.home-page :where(section.hp-section, section.rf-coaching-feature) {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  body.home-page :where(section.hp-section, section.rf-coaching-feature)
-  + :where(section.hp-section, section.rf-coaching-feature) {
-    margin-top: 64px !important;
-  }
-
-  @media (max-width: 991px) {
-    body.home-page :where(section.hp-section, section.rf-coaching-feature)
-    + :where(section.hp-section, section.rf-coaching-feature) {
-      margin-top: 48px !important;
-    }
-  }
-
-  @media (max-width: 767px) {
-    body.home-page :where(section.hp-section, section.rf-coaching-feature)
-    + :where(section.hp-section, section.rf-coaching-feature) {
-      margin-top: 36px !important;
-    }
-  }
-</style>
-<!-- RF_HOMEPAGE_EQUAL_GAPS_END -->
 <style id="rf-footer-social-styles">
 footer:has(.rf-footer-social) {
     position: relative;
@@ -984,6 +953,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
           </div>
         </div>
       </section>
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
 
       
 <!-- RF_BOOKING_POSITION_BEFORE_TESTIMONIALS -->
@@ -1273,7 +1243,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
   </div>
 </section>
 <!-- RF_BOOKING_PROMO_END -->
-
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
 <section class="section-frame hp-section hp-testimonials reveal" id="testimonials">
         <div class="container-fluid home-container">
           <div class="hp-intro hp-intro-narrow">
@@ -1613,7 +1583,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
 
     <div class="rf-support-card">
         <div class="rf-support-copy">
-            <p class="rf-support-eyebrow">New ┬À AI-guided Support Finder</p>
+            <p class="rf-support-eyebrow">New · AI-guided Support Finder</p>
 
             <h2 class="rf-support-title" id="rf-support-title">
                 Find a clearer route to the right support.
@@ -3023,215 +2993,6 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
 <script src="/assets/js/mega-menu-controller.js?v=20260814-global-20260814-132222"></script>
 <!-- RF_GLOBAL_PREMIUM_MENU_JS_END -->
 <script src="/assets/js/cookie-consent.js?v=20260815" defer></script>
-<!-- RF_EXACT_PHYSICAL_GAPS -->
-<style>
-/*
- * Exact physical homepage gaps.
- *
- * Margins are removed from the four new blocks.
- * Three real spacer elements provide the visible distance.
- * These heights cannot collapse.
- */
-.rf-exact-home-gap {
-    display: block !important;
-    width: 100% !important;
-    height: 64px !important;
-    min-height: 64px !important;
-    max-height: 64px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: 0 !important;
-    flex: 0 0 64px !important;
-    clear: both !important;
-    pointer-events: none !important;
-}
-
-/* Remove every competing external block margin. */
-#rf-support-feature,
-.rf-andy-fish-podcast,
-.rf-find-andy,
-.rf-premium-contact {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* Preserve the normal space between Contact and the footer. */
-.rf-premium-contact {
-    margin-bottom: 64px !important;
-}
-
-@media (max-width: 1024px) {
-    .rf-exact-home-gap {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        flex-basis: 48px !important;
-    }
-
-    .rf-premium-contact {
-        margin-bottom: 48px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    .rf-exact-home-gap {
-        height: 36px !important;
-        min-height: 36px !important;
-        max-height: 36px !important;
-        flex-basis: 36px !important;
-    }
-
-    .rf-premium-contact {
-        margin-bottom: 36px !important;
-    }
-}
-</style>
-<!-- RF_REMOVE_HIDDEN_SECTION_PADDING -->
-<style>
-/*
- * The global homepage stylesheet adds vertical padding to every
- * direct section. These four blocks already contain their own
- * internal padding, so that global padding created unequal visible
- * border-to-border gaps.
- *
- * All external spacing is now provided only by rf-exact-home-gap.
- */
-body:has(#rf-support-feature) main > #rf-support-feature,
-body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
-body:has(#rf-support-feature) main > .rf-find-andy,
-body:has(#rf-support-feature) main > .rf-premium-contact {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Correct the Podcast selector used by the earlier gap controller. */
-.rf-podcast-coming-soon {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/*
- * Each physical spacer is the sole source of spacing.
- * Border-to-border distances are therefore identical.
- */
-.rf-exact-home-gap {
-    height: 64px !important;
-    min-height: 64px !important;
-    max-height: 64px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex: 0 0 64px !important;
-}
-
-@media (max-width: 1024px) {
-    .rf-exact-home-gap {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        flex-basis: 48px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    .rf-exact-home-gap {
-        height: 36px !important;
-        min-height: 36px !important;
-        max-height: 36px !important;
-        flex-basis: 36px !important;
-    }
-}
-</style>
-<!-- RF_STRONG_SECTION_PADDING_OVERRIDE -->
-<style>
-/*
- * These selectors deliberately exceed the specificity of the original
- * main > section:not(:first-child) rule.
- *
- * The blocks already contain their own internal padding. External
- * spacing is supplied only by the physical gap elements.
- */
-html body:has(#rf-support-feature) main > section#rf-support-feature,
-html body:has(#rf-support-feature) main > section.rf-podcast-coming-soon.rf-podcast-coming-soon,
-html body:has(#rf-support-feature) main > section#professional-presence.rf-find-andy,
-html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-}
-
-/* Contact-to-footer space remains controlled separately. */
-html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
-    margin-bottom: 64px !important;
-}
-
-@media (max-width: 1024px) {
-    html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
-        margin-bottom: 48px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
-        margin-bottom: 36px !important;
-    }
-}
-</style>
-<!-- RF_TESTIMONIALS_EXACT_SPACING -->
-<style>
-/*
- * Testimonials previously inherited half-padding from the old
- * homepage spacing system. This replaces it with one explicit,
- * measurable gap above and below the visible Testimonials content.
- */
-html body.home-page:has(#rf-support-feature)
-main > section#testimonials.hp-testimonials {
-    min-height: 0 !important;
-    height: auto !important;
-    margin-top: 64px !important;
-    margin-bottom: 64px !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-/* Prevent content margins from escaping the section boundary. */
-html body.home-page:has(#rf-support-feature)
-main > section#testimonials.hp-testimonials > :first-child {
-    margin-top: 0 !important;
-}
-
-html body.home-page:has(#rf-support-feature)
-main > section#testimonials.hp-testimonials > :last-child {
-    margin-bottom: 0 !important;
-}
-
-/*
- * Support Finder already contains its own card padding.
- * Remove inherited outer vertical padding so it does not enlarge
- * the Testimonials-to-Support-Finder gap.
- */
-html body.home-page:has(#rf-support-feature)
-main > section#rf-support-feature {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-@media (max-width: 1024px) {
-    html body.home-page:has(#rf-support-feature)
-    main > section#testimonials.hp-testimonials {
-        margin-top: 48px !important;
-        margin-bottom: 48px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    html body.home-page:has(#rf-support-feature)
-    main > section#testimonials.hp-testimonials {
-        margin-top: 36px !important;
-        margin-bottom: 36px !important;
-    }
-}
-</style>
 <!-- RF_ANIMATED_FULL_BLEED_CONTACT -->
 <style>
 /*
@@ -3873,47 +3634,249 @@ main > section#rf-support-feature {
 }
 </style>
 
-<!-- RF_DEFINITIVE_EQUAL_HOMEPAGE_GAPS -->
+<!-- RF_FINAL_CONSOLIDATED_LOWER_HOMEPAGE -->
 <style>
 /*
- * One definitive spacing system for the homepage feature sequence.
+ * Final lower-homepage layout system.
+ *
+ * One physical spacer controls every transition from Speaking through
+ * Contact. No section margin or outer padding contributes to a gap.
  *
  * Desktop: 64px
  * Tablet:  48px
  * Mobile:  36px
  */
 
-/* Remove inherited section padding that previously enlarged some gaps. */
-body:has(#rf-support-feature) main > #testimonials,
-body:has(#rf-support-feature) main > #rf-support-feature,
-body:has(#rf-support-feature) main > .rf-andy-fish-podcast,
-body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
-body:has(#rf-support-feature) main > .rf-find-andy,
-body:has(#rf-support-feature) main > .rf-premium-contact {
+body.home-page main {
+    --rf-final-home-gap: 64px;
+}
+
+/* Remove all competing external spacing from the final sequence. */
+html body.home-page main > section#speaking-media,
+html body.home-page main > section#book-a-session,
+html body.home-page main > section#testimonials,
+html body.home-page main > section#rf-support-feature,
+html body.home-page main > section.rf-podcast-coming-soon,
+html body.home-page main > section#professional-presence,
+html body.home-page main > section#contact {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove residual height and spacing inside Testimonials. */
+html body.home-page main > section#testimonials {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+}
+
+html body.home-page main > section#testimonials > .home-container,
+html body.home-page main > section#testimonials > .container-fluid,
+html body.home-page main > section#testimonials .hp-testimonial-grid {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /*
- * Support Finder previously received 32px top and bottom padding from
- * an older global rule. Its card already contains its own spacing.
+ * Speaking & Media now uses the same main feature width as Coaching.
+ * Its inner panel matches the established 445px desktop tile height.
  */
-body:has(#rf-support-feature) main > #rf-support-feature {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+html body.home-page main > section#speaking-media > .home-container {
+    width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+    max-width: 1440px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
 
-/* Remove external spacing from the three following feature tiles. */
-body:has(#rf-support-feature) main > .rf-andy-fish-podcast,
-body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
-body:has(#rf-support-feature) main > .rf-find-andy,
-body:has(#rf-support-feature) main > .rf-premium-contact {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+html body.home-page main > section#speaking-media .hp-speaking-grid {
+    width: 100% !important;
+    height: 445px !important;
+    min-height: 445px !important;
+    max-height: 445px !important;
+    margin: 0 !important;
+    padding: clamp(1.25rem, 2.2vw, 2rem) !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(226, 166, 38, 0.62) !important;
+    border-radius: 30px !important;
+    background:
+        linear-gradient(
+            115deg,
+            rgba(9, 23, 19, 0.98),
+            rgba(19, 20, 19, 0.96)
+        ) !important;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28) !important;
 }
 
-/* Every visible gap is now a real, non-collapsing element. */
-body:has(#rf-support-feature) main > .rf-exact-home-gap {
+html body.home-page main > section#speaking-media .hp-speaking-copy,
+html body.home-page main > section#speaking-media .hp-speaking-media {
+    min-height: 0 !important;
+    height: 100% !important;
+}
+
+html body.home-page main > section#speaking-media .hp-speaking-media {
+    border-radius: 22px !important;
+}
+
+/* Every transition is represented by one non-collapsing spacer. */
+html body.home-page main > .rf-exact-home-gap {
+    display: block !important;
+    width: 100% !important;
+    height: var(--rf-final-home-gap) !important;
+    min-height: var(--rf-final-home-gap) !important;
+    max-height: var(--rf-final-home-gap) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clear: both !important;
+    flex: 0 0 var(--rf-final-home-gap) !important;
+    pointer-events: none !important;
+}
+
+/* Contact-to-footer spacing follows the same measurement. */
+html body.home-page main > section#contact {
+    margin-bottom: var(--rf-final-home-gap) !important;
+}
+
+@media (max-width: 1024px) {
+    body.home-page main {
+        --rf-final-home-gap: 48px;
+    }
+
+    html body.home-page main > section#speaking-media .hp-speaking-grid {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    html body.home-page main > section#speaking-media .hp-speaking-media {
+        min-height: 340px !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 640px) {
+    body.home-page main {
+        --rf-final-home-gap: 36px;
+    }
+
+    html body.home-page main > section#speaking-media > .home-container {
+        width: min(calc(100% - 28px), 1440px) !important;
+    }
+
+    html body.home-page main > section#speaking-media .hp-speaking-grid {
+        padding: 20px !important;
+        border-radius: 22px !important;
+    }
+
+    html body.home-page main > section#speaking-media .hp-speaking-media {
+        min-height: 270px !important;
+    }
+}
+</style>
+
+<!-- RF_EXACT_UNIFIED_FEATURE_DIMENSIONS -->
+<style>
+/*
+ * Exact desktop dimensions for the six premium bordered feature tiles.
+ *
+ * Maximum width: 1440px
+ * Height:        445px
+ *
+ * Mobile and tablet layouts retain natural responsive heights.
+ */
+
+@media (min-width: 1025px) {
+    /* Speaking & Media outer width */
+    html body.home-page main > section#speaking-media > .home-container {
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    /* Coaching section outer width */
+    html body.home-page main > section#book-a-session.rf-coaching-feature {
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+    }
+
+    /* Support Finder card outer width */
+    html body.home-page main > section#rf-support-feature .rf-support-card {
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+    }
+
+    /* Podcast, profiles and Contact outer widths */
+    html body.home-page main > section.rf-podcast-coming-soon,
+    html body.home-page main > section#professional-presence.rf-find-andy,
+    html body.home-page main > section#contact.rf-premium-contact {
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+    }
+
+    /*
+     * Give each visible bordered tile the same exact outer height.
+     * Border-box prevents borders and padding enlarging the measurement.
+     */
+    html body.home-page main > section#speaking-media .hp-speaking-grid,
+    html body.home-page main > section#book-a-session .rf-coaching-shell,
+    html body.home-page main > section#rf-support-feature .rf-support-card,
+    html body.home-page main > section.rf-podcast-coming-soon,
+    html body.home-page main > section#professional-presence.rf-find-andy,
+    html body.home-page main > section#contact.rf-premium-contact {
+        box-sizing: border-box !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+    }
+
+    /* Keep the Coaching content within its unified tile height. */
+    html body.home-page main > section#book-a-session .rf-coaching-shell {
+        grid-template-rows: minmax(0, 1fr) !important;
+        overflow: hidden !important;
+    }
+
+    html body.home-page main > section#book-a-session .rf-coaching-intro,
+    html body.home-page main > section#book-a-session .rf-coaching-explore {
+        height: 443px !important;
+        min-height: 0 !important;
+        max-height: 443px !important;
+        overflow: hidden !important;
+    }
+
+    html body.home-page main > section#book-a-session .rf-coaching-explore {
+        display: grid !important;
+        grid-template-rows: minmax(0, 1fr) auto auto !important;
+    }
+
+    html body.home-page main > section#book-a-session .rf-coaching-photo {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    /* Keep each lower split layout inside the 445px outer tile. */
+    html body.home-page main > section.rf-podcast-coming-soon .rf-podcast-layout,
+    html body.home-page main > section#professional-presence .rf-find-layout,
+    html body.home-page main > section#contact .rf-premium-contact__shell {
+        box-sizing: border-box !important;
+        height: 443px !important;
+        min-height: 443px !important;
+        max-height: 443px !important;
+    }
+}
+
+/* One exact non-collapsing gap remains between every feature tile. */
+html body.home-page main > .rf-exact-home-gap {
     display: block !important;
     width: 100% !important;
     height: 64px !important;
@@ -3922,156 +3885,147 @@ body:has(#rf-support-feature) main > .rf-exact-home-gap {
     margin: 0 !important;
     padding: 0 !important;
     border: 0 !important;
-    clear: both !important;
     flex: 0 0 64px !important;
-    pointer-events: none !important;
 }
 
-/* Keep the Contact-to-footer distance consistent too. */
-body:has(#rf-support-feature) main > .rf-premium-contact {
+/* Contact to footer follows the same desktop gap. */
+html body.home-page main > section#contact.rf-premium-contact {
     margin-bottom: 64px !important;
 }
 
 @media (max-width: 1024px) {
-    body:has(#rf-support-feature) main > .rf-exact-home-gap {
+    html body.home-page main > section#speaking-media .hp-speaking-grid,
+    html body.home-page main > section#book-a-session .rf-coaching-shell,
+    html body.home-page main > section#rf-support-feature .rf-support-card,
+    html body.home-page main > section.rf-podcast-coming-soon,
+    html body.home-page main > section#professional-presence.rf-find-andy,
+    html body.home-page main > section#contact.rf-premium-contact,
+    html body.home-page main > section.rf-podcast-coming-soon .rf-podcast-layout,
+    html body.home-page main > section#professional-presence .rf-find-layout,
+    html body.home-page main > section#contact .rf-premium-contact__shell {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    html body.home-page main > .rf-exact-home-gap {
         height: 48px !important;
         min-height: 48px !important;
         max-height: 48px !important;
         flex-basis: 48px !important;
     }
 
-    body:has(#rf-support-feature) main > .rf-premium-contact {
+    html body.home-page main > section#contact.rf-premium-contact {
         margin-bottom: 48px !important;
     }
 }
 
 @media (max-width: 640px) {
-    body:has(#rf-support-feature) main > .rf-exact-home-gap {
+    html body.home-page main > .rf-exact-home-gap {
         height: 36px !important;
         min-height: 36px !important;
         max-height: 36px !important;
         flex-basis: 36px !important;
     }
 
-    body:has(#rf-support-feature) main > .rf-premium-contact {
+    html body.home-page main > section#contact.rf-premium-contact {
         margin-bottom: 36px !important;
     }
 }
 </style>
 
-<!-- RF_TESTIMONIAL_SUPPORT_EXACT_GAP -->
+<!-- RF_SUPPORT_MATCHES_PODCAST_EXACTLY -->
 <style>
 /*
- * Testimonials previously contributed its own bottom padding in
- * addition to the physical 64px spacer. Remove only that residual
- * outer spacing so this transition matches the three blocks below.
+ * Support Finder was previously a card inside a padded full-width
+ * section. Podcast is itself the centred feature tile.
+ *
+ * Make Support Finder use the same outer geometry as Podcast.
  */
-html body.home-page main > section#testimonials.hp-testimonials {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
 
-html body.home-page main > section#testimonials.hp-testimonials > :last-child,
-html body.home-page main > section#testimonials.hp-testimonials .home-container {
-    margin-bottom: 0 !important;
-}
+@media (min-width: 1025px) {
+    html body.home-page main > section#rf-support-feature {
+        box-sizing: border-box !important;
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding: 0 !important;
+        overflow: visible !important;
+        border: 0 !important;
+        background: transparent !important;
+    }
 
-/* Support Finder must begin immediately after the physical spacer. */
-html body.home-page main > section#rf-support-feature {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
+    html body.home-page main > section#rf-support-feature .rf-support-card {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin: 0 !important;
+        padding: clamp(30px, 3vw, 48px) !important;
+        overflow: hidden !important;
+    }
 
-/*
- * Preserve the established physical spacer sizes:
- * desktop 64px, tablet 48px and mobile 36px.
- */
-html body.home-page main > .rf-exact-home-gap {
-    height: 64px !important;
-    min-height: 64px !important;
-    max-height: 64px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex-basis: 64px !important;
+    /*
+     * Podcast uses the identical viewport-based width and height.
+     * Repeating it here prevents an older rule taking precedence.
+     */
+    html body.home-page main > section.rf-podcast-coming-soon {
+        box-sizing: border-box !important;
+        width: min(calc(100% - clamp(2rem, 6vw, 7rem)), 1440px) !important;
+        max-width: 1440px !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    html body.home-page main > section.rf-podcast-coming-soon .rf-podcast-layout {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        height: 443px !important;
+        min-height: 443px !important;
+        max-height: 443px !important;
+    }
 }
 
 @media (max-width: 1024px) {
-    html body.home-page main > .rf-exact-home-gap {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        flex-basis: 48px !important;
+    html body.home-page main > section#rf-support-feature,
+    html body.home-page main > section.rf-podcast-coming-soon {
+        width: min(calc(100% - 48px), 1440px) !important;
+        max-width: 1440px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    html body.home-page main > section#rf-support-feature {
+        padding: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+    }
+
+    html body.home-page main > section#rf-support-feature .rf-support-card,
+    html body.home-page main > section.rf-podcast-coming-soon .rf-podcast-layout {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
     }
 }
 
 @media (max-width: 640px) {
-    html body.home-page main > .rf-exact-home-gap {
-        height: 36px !important;
-        min-height: 36px !important;
-        max-height: 36px !important;
-        flex-basis: 36px !important;
-    }
-}
-</style>
-
-<!-- RF_TESTIMONIALS_NATURAL_HEIGHT -->
-<style>
-/*
- * Remove the inherited minimum section height that leaves empty space
- * below the testimonial cards. The exact physical spacer immediately
- * after this section remains responsible for the visible block gap.
- */
-html body.home-page main > section#testimonials.hp-testimonials {
-    display: block !important;
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    align-content: initial !important;
-}
-
-html body.home-page main > section#testimonials.hp-testimonials > .home-container,
-html body.home-page main > section#testimonials.hp-testimonials > .container-fluid,
-html body.home-page main > section#testimonials.hp-testimonials .hp-testimonial-grid {
-    height: auto !important;
-    min-height: 0 !important;
-    max-height: none !important;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-}
-
-html body.home-page main > section#testimonials.hp-testimonials .hp-testimonial-grid > :last-child {
-    margin-bottom: 0 !important;
-}
-
-/* Preserve the one exact gap immediately after Testimonials. */
-html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
-    display: block !important;
-    height: 64px !important;
-    min-height: 64px !important;
-    max-height: 64px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    flex: 0 0 64px !important;
-}
-
-@media (max-width: 1024px) {
-    html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
-        height: 48px !important;
-        min-height: 48px !important;
-        max-height: 48px !important;
-        flex-basis: 48px !important;
-    }
-}
-
-@media (max-width: 640px) {
-    html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
-        height: 36px !important;
-        min-height: 36px !important;
-        max-height: 36px !important;
-        flex-basis: 36px !important;
+    html body.home-page main > section#rf-support-feature,
+    html body.home-page main > section.rf-podcast-coming-soon {
+        width: min(calc(100% - 28px), 1440px) !important;
     }
 }
 </style>
