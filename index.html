@@ -3958,5 +3958,122 @@ body:has(#rf-support-feature) main > .rf-premium-contact {
     }
 }
 </style>
+
+<!-- RF_TESTIMONIAL_SUPPORT_EXACT_GAP -->
+<style>
+/*
+ * Testimonials previously contributed its own bottom padding in
+ * addition to the physical 64px spacer. Remove only that residual
+ * outer spacing so this transition matches the three blocks below.
+ */
+html body.home-page main > section#testimonials.hp-testimonials {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+html body.home-page main > section#testimonials.hp-testimonials > :last-child,
+html body.home-page main > section#testimonials.hp-testimonials .home-container {
+    margin-bottom: 0 !important;
+}
+
+/* Support Finder must begin immediately after the physical spacer. */
+html body.home-page main > section#rf-support-feature {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/*
+ * Preserve the established physical spacer sizes:
+ * desktop 64px, tablet 48px and mobile 36px.
+ */
+html body.home-page main > .rf-exact-home-gap {
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-basis: 64px !important;
+}
+
+@media (max-width: 1024px) {
+    html body.home-page main > .rf-exact-home-gap {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        flex-basis: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body.home-page main > .rf-exact-home-gap {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        flex-basis: 36px !important;
+    }
+}
+</style>
+
+<!-- RF_TESTIMONIALS_NATURAL_HEIGHT -->
+<style>
+/*
+ * Remove the inherited minimum section height that leaves empty space
+ * below the testimonial cards. The exact physical spacer immediately
+ * after this section remains responsible for the visible block gap.
+ */
+html body.home-page main > section#testimonials.hp-testimonials {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    align-content: initial !important;
+}
+
+html body.home-page main > section#testimonials.hp-testimonials > .home-container,
+html body.home-page main > section#testimonials.hp-testimonials > .container-fluid,
+html body.home-page main > section#testimonials.hp-testimonials .hp-testimonial-grid {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+html body.home-page main > section#testimonials.hp-testimonials .hp-testimonial-grid > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Preserve the one exact gap immediately after Testimonials. */
+html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
+    display: block !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 64px !important;
+}
+
+@media (max-width: 1024px) {
+    html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        flex-basis: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body.home-page main > section#testimonials.hp-testimonials + .rf-exact-home-gap {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        flex-basis: 36px !important;
+    }
+}
+</style>
 </body>
 </html>
