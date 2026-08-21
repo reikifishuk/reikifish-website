@@ -9,7 +9,7 @@
       copy: 'Explore the experience, values and psychology-informed approach behind ReikiFish.',
       button: ['Discover our approach', '/about.html'],
       links: [
-        ['About ReikiFish', '/about.html'],
+        ['About Andy Fish', '/about.html'],
         ['Books and writing', '/books.html'],
         ['Coaching and support', '/coaching.html'],
         ['Knowledge Hub', '/knowledge.html'],
