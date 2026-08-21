@@ -836,5 +836,101 @@
     "category": "Personality",
     "summary": "Understanding the differences in Narcissistic Personality Disorder in women and men",
     "url": "knowledge/narcissistic-personality-disorder-in-women-vs-men.html"
+  },
+  {
+    "slug": "what-is-coercive-control",
+    "title": "What Is Coercive Control?",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "A form of abuse that involves manipulating and dominating another person, often through subtle and insidious means.",
+    "url": "knowledge/what-is-coercive-control.html"
+  },
+  {
+    "slug": "what-is-psychological-projection",
+    "title": "What Is Psychological Projection?",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Defence mechanism where individuals attribute their own thoughts and feelings to others.",
+    "url": "knowledge/what-is-psychological-projection.html"
+  },
+  {
+    "slug": "smear-campaigns",
+    "title": "Smear Campaigns",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Smear campaigns: a form of manipulation that damages reputations. Learn how to cope and address them.",
+    "url": "knowledge/smear-campaigns.html"
+  },
+  {
+    "slug": "breadcrumbing",
+    "title": "Breadcrumbing",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "A manipulative behaviour that involves giving mixed signals, leaving others feeling confused and uncertain.",
+    "url": "knowledge/breadcrumbing.html"
+  },
+  {
+    "slug": "trauma-memory",
+    "title": "Trauma memory",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Understanding trauma memory: definition, causes, and coping strategies",
+    "url": "knowledge/trauma-memory.html"
+  },
+  {
+    "slug": "somatic-symptoms-of-trauma",
+    "title": "Somatic Symptoms of Trauma",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Understanding the physical symptoms of trauma and how to address them.",
+    "url": "knowledge/somatic-symptoms-of-trauma.html"
+  },
+  {
+    "slug": "trauma-and-sleep",
+    "title": "Trauma and Sleep",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Trauma and sleep: how trauma affects sleep and what you can do to improve your sleep.",
+    "url": "knowledge/trauma-and-sleep.html"
+  },
+  {
+    "slug": "nervous-system-shutdown",
+    "title": "Nervous-system shutdown",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Trauma, stress, and the body's response: Understanding nervous-system shutdown",
+    "url": "knowledge/nervous-system-shutdown.html"
+  },
+  {
+    "slug": "fight-flight-freeze-and-fawn",
+    "title": "Fight, flight, freeze and fawn",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Trauma responses: fight, flight, freeze and fawn. Causes, effects, coping strategies.",
+    "url": "knowledge/fight-flight-freeze-and-fawn.html"
+  },
+  {
+    "slug": "dissociation-versus-psychosis",
+    "title": "Dissociation versus psychosis",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Dissociation vs psychosis: definitions, causes, symptoms, and treatment options.",
+    "url": "knowledge/dissociation-versus-psychosis.html"
+  },
+  {
+    "slug": "emotional-validation",
+    "title": "Emotional Validation",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "Emotional validation: understanding and accepting emotions in relationships.",
+    "url": "knowledge/emotional-validation.html"
+  },
+  {
+    "slug": "machiavellianism",
+    "title": "Machiavellianism",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "Manipulative personality trait: understanding and addressing Machiavellianism",
+    "url": "knowledge/machiavellianism.html"
   }
 ]

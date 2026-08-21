@@ -28,7 +28,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       name="description"
       content="Explore trauma-informed coaching, psychology insights and Walking the Grey. Andy Fish helps people navigate change, resilience and personal growth."
     />
-    <link rel="canonical" href="https://www.reikifish.com/" />
+    <link rel="canonical" href="https://reikifish.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

@@ -1,4 +1,4 @@
-﻿const fs = require('fs');
+const fs = require('fs');
 const path = require('path');
 
 const ROOT = process.cwd();
@@ -6,7 +6,7 @@ const POSTS_DIR = path.join(ROOT, 'content', 'posts');
 const POSTS_JSON_PATH = path.join(POSTS_DIR, 'posts.json');
 const ARTICLES_DIR = path.join(ROOT, 'articles');
 const SITEMAP_PATH = path.join(ROOT, 'sitemap.xml');
-const BASE_URL = 'https://www.reikifish.com';
+const BASE_URL = 'https://reikifish.com';
 
 function normalizeLineEndings(text) {
   return String(text || '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');

@@ -62,4 +62,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.reikifish.com/sitemap.xml
+Sitemap: https://reikifish.com/sitemap.xml

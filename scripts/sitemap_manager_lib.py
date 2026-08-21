@@ -11,7 +11,7 @@ import shutil
 import tempfile
 import xml.etree.ElementTree as ET
 
-SITE_ORIGIN = "https://www.reikifish.com"
+SITE_ORIGIN = "https://reikifish.com"
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 EXCLUDED_DIRS = {
     ".git", ".github", ".idea", ".vscode", "admin", "content",
@@ -59,7 +59,7 @@ def _normalise_site_url(url: str) -> str:
     if parsed.netloc.lower() not in {"reikifish.com", "www.reikifish.com"}:
         return ""
     path = parsed.path or "/"
-    return urlunparse(("https", "www.reikifish.com", path, "", "", ""))
+    return urlunparse(("https", "reikifish.com", path, "", "", ""))
 
 
 def _is_backup_or_fragment(path: Path) -> bool:
@@ -157,7 +157,7 @@ def scan_site(project_root: Path) -> dict:
         if urlparse(canonical).path.startswith(BLOCKED_URL_PREFIXES):
             excluded.append(PageRecord(str(relative), canonical, "blocked-system-url", "Cloudflare system endpoint"))
             continue
-        if urlparse(parser.canonical).netloc.lower() != "www.reikifish.com" or urlparse(parser.canonical).scheme != "https":
+        if urlparse(parser.canonical).netloc.lower() != "reikifish.com" or urlparse(parser.canonical).scheme != "https":
             domain_mismatch.append(PageRecord(str(relative), parser.canonical, "canonical-domain-mismatch", f"Preferred form: {canonical}"))
 
         record = PageRecord(str(relative), canonical, "eligible", "Canonical, indexable HTML page")
