@@ -1302,6 +1302,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
           </div>
         </div>
       </section>
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
 <!-- RF_SUPPORT_FINDER_HOME_START -->
 <!-- SUPPORT_FINDER_PROMO_START -->
 <section id="rf-support-feature" aria-labelledby="rf-support-title">
@@ -1660,471 +1661,1272 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
 </section>
 <!-- SUPPORT_FINDER_PROMO_END -->
 <!-- RF_SUPPORT_FINDER_HOME_END -->
-<!-- RF_AS_SEEN_ON_HOME_START -->
+
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
+<!-- RF_ANDY_FISH_PODCAST_START -->
 <style>
-  .rf-commercial-presence {
+  .rf-podcast-coming-soon {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
     width: calc(100% - 96px);
-    max-width: 1776px;
+    max-width: 1420px;
     min-height: 445px;
+    margin-top: 64px;
     margin-right: auto;
     margin-left: auto;
-    padding: 54px 46px;
-    border: 1px solid rgba(207, 158, 44, .55);
+    border: 1px solid rgba(207, 158, 44, .58);
     border-radius: 28px;
-    background:
-      radial-gradient(circle at 8% 85%, rgba(0, 114, 94, .14), transparent 27%),
-      radial-gradient(circle at 50% 100%, rgba(104, 35, 108, .11), transparent 30%),
-      radial-gradient(circle at 94% 84%, rgba(183, 119, 21, .12), transparent 27%),
-      linear-gradient(145deg, #07100e 0%, #080d0c 48%, #0b0d0c 100%);
+    background: #07100e;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, .025),
-      0 22px 70px rgba(0, 0, 0, .22);
+      0 22px 70px rgba(0, 0, 0, .24);
   }
 
-  .rf-commercial-presence::before {
+  .rf-podcast-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(520px, 1.08fr);
+    min-height: 443px;
+  }
+
+  .rf-podcast-copy {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px 28px 48px 62px;
+    background:
+      radial-gradient(
+        circle at 82% 50%,
+        rgba(13, 112, 94, .12),
+        transparent 42%
+      ),
+      linear-gradient(
+        90deg,
+        #06100e 0%,
+        #07100e 69%,
+        rgba(7, 16, 14, .95) 85%,
+        rgba(7, 16, 14, .35) 100%
+      );
+  }
+
+  .rf-podcast-eyebrow {
+    margin-bottom: 14px;
+    color: #dfa734;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: .3em;
+  }
+
+  .rf-podcast-copy h2 {
+    max-width: 650px;
+    margin: 0;
+    color: #f4eee3;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(48px, 4.2vw, 72px);
+    font-weight: 500;
+    line-height: .98;
+    letter-spacing: -.042em;
+  }
+
+  .rf-podcast-copy h2 span {
+    color: #dca743;
+  }
+
+  .rf-podcast-description {
+    max-width: 610px;
+    margin: 22px 0 0;
+    color: rgba(239, 234, 223, .77);
+    font-size: 17px;
+    line-height: 1.62;
+  }
+
+  .rf-podcast-status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 25px;
+    padding: 11px 18px;
+    color: #dfaa3d;
+    border: 1px solid rgba(220, 167, 67, .56);
+    border-radius: 4px;
+    background: rgba(12, 15, 13, .72);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .24em;
+  }
+
+  .rf-podcast-signoff {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 22px 0 0;
+    color: rgba(239, 233, 220, .55);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    font-style: italic;
+  }
+
+  .rf-podcast-signoff::before {
+    content: "";
+    flex: 0 0 48px;
+    height: 1px;
+    background: #bd8829;
+  }
+
+  .rf-podcast-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 443px;
+  }
+
+  .rf-podcast-visual::before {
     content: "";
     position: absolute;
-    left: 3%;
-    right: 3%;
-    top: 67%;
-    height: 2px;
-    opacity: .65;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      #20cba3 18%,
-      rgba(230, 184, 82, .75) 34%,
-      #ba64c4 51%,
-      rgba(230, 184, 82, .75) 70%,
-      #f0ad2f 84%,
-      transparent
-    );
-    box-shadow:
-      0 0 10px rgba(31, 203, 163, .25),
-      0 0 18px rgba(191, 83, 204, .18),
-      0 0 25px rgba(240, 173, 47, .14);
+    inset: 0;
+    z-index: 2;
+    background:
+      linear-gradient(
+        90deg,
+        #07100e 0%,
+        rgba(7, 16, 14, .7) 10%,
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, .04),
+        transparent 67%,
+        rgba(0, 0, 0, .25)
+      );
     pointer-events: none;
   }
 
-  .rf-commercial-heading {
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-    margin: 0 auto 38px;
-    text-align: center;
+  .rf-podcast-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 443px;
+    object-fit: cover;
+    object-position: 57% center;
+    filter: saturate(.92) contrast(1.03);
   }
 
-  .rf-commercial-eyebrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 18px;
-    margin-bottom: 10px;
-    color: #efb32b;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .32em;
-  }
-
-  .rf-commercial-eyebrow::before,
-  .rf-commercial-eyebrow::after {
-    content: "";
-    width: 95px;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(229, 170, 43, .82)
-    );
-  }
-
-  .rf-commercial-eyebrow::after {
-    transform: rotate(180deg);
-  }
-
-  .rf-commercial-heading h2 {
-    margin: 0;
-    color: #f5f1e8;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 4vw, 62px);
-    font-weight: 500;
-    line-height: 1.03;
-    letter-spacing: -.035em;
-  }
-
-  .rf-commercial-heading h2 span {
-    color: #d9a949;
-  }
-
-  .rf-commercial-heading p {
-    margin: 15px 0 0;
-    color: rgba(235, 235, 230, .67);
-    font-size: 17px;
-    line-height: 1.5;
-  }
-
-  .rf-commercial-grid {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    max-width: 1370px;
-    margin: 0 auto;
-  }
-
-  .rf-commercial-card {
-    --accent: #d6a538;
-    --accent-rgb: 214, 165, 56;
-    position: relative;
-    display: grid;
-    grid-template-columns: 82px 1fr;
-    min-height: 176px;
-    padding: 25px 25px 23px;
-    overflow: hidden;
-    color: #f6f0e4;
-    text-decoration: none;
-    border: 1px solid rgba(212, 168, 69, .5);
-    border-radius: 8px;
-    background:
-      linear-gradient(135deg, rgba(var(--accent-rgb), .11), transparent 46%),
-      linear-gradient(160deg, rgba(255, 255, 255, .025), rgba(255, 255, 255, .008));
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, .045),
-      inset 0 -1px 0 rgba(0, 0, 0, .38),
-      0 16px 34px rgba(0, 0, 0, .2);
-    transition:
-      transform .25s ease,
-      border-color .25s ease,
-      box-shadow .25s ease;
-  }
-
-  .rf-commercial-card::before {
-    content: "";
+  .rf-podcast-wave {
     position: absolute;
-    top: 0;
-    left: 12%;
-    right: 12%;
-    height: 2px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      var(--accent),
-      transparent
-    );
-    box-shadow: 0 0 15px rgba(var(--accent-rgb), .65);
+    z-index: 4;
+    top: 50%;
+    left: -125px;
+    width: 260px;
+    height: 88px;
+    transform: translateY(-50%);
+    opacity: .8;
+    pointer-events: none;
   }
 
-  .rf-commercial-card::after {
-    content: "";
-    position: absolute;
-    width: 170px;
-    height: 170px;
-    right: -75px;
-    bottom: -100px;
-    border: 1px solid rgba(var(--accent-rgb), .16);
-    border-radius: 50%;
-    box-shadow:
-      0 0 0 23px rgba(var(--accent-rgb), .025),
-      0 0 0 48px rgba(var(--accent-rgb), .018);
-  }
-
-  .rf-commercial-card:hover,
-  .rf-commercial-card:focus-visible {
-    transform: translateY(-5px);
-    border-color: rgba(var(--accent-rgb), .88);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, .06),
-      0 22px 45px rgba(0, 0, 0, .32),
-      0 0 28px rgba(var(--accent-rgb), .09);
-  }
-
-  .rf-commercial-card:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-  }
-
-  .rf-commercial-proven {
-    --accent: #27c8a6;
-    --accent-rgb: 39, 200, 166;
-  }
-
-  .rf-commercial-coach {
-    --accent: #bd6bc7;
-    --accent-rgb: 189, 107, 199;
-  }
-
-  .rf-commercial-locator {
-    --accent: #efad31;
-    --accent-rgb: 239, 173, 49;
-  }
-
-  .rf-commercial-mark {
-    position: relative;
-    display: grid;
-    place-items: center;
-    align-self: center;
-    width: 64px;
-    height: 76px;
-    margin-right: 18px;
-    color: var(--accent);
-    border: 1px solid rgba(var(--accent-rgb), .62);
-    background:
-      linear-gradient(145deg, rgba(var(--accent-rgb), .13), rgba(0, 0, 0, .12));
-    box-shadow:
-      inset 0 0 18px rgba(var(--accent-rgb), .08),
-      0 0 20px rgba(var(--accent-rgb), .08);
-  }
-
-  .rf-commercial-mark::before,
-  .rf-commercial-mark::after {
-    content: "";
-    position: absolute;
-    inset: 7px;
-    border: 1px solid rgba(var(--accent-rgb), .18);
-  }
-
-  .rf-commercial-mark::after {
-    inset: 13px;
-  }
-
-  .rf-commercial-monogram {
-    position: relative;
-    z-index: 2;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 28px;
-    line-height: 1;
-    letter-spacing: -.06em;
-    text-shadow: 0 0 18px rgba(var(--accent-rgb), .34);
-  }
-
-  .rf-commercial-card-content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    min-width: 0;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 1px solid rgba(215, 173, 78, .26);
-    padding-left: 24px;
-  }
-
-  .rf-commercial-card h3 {
-    margin: 0;
-    color: #f3ead9;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(24px, 2vw, 31px);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -.025em;
-  }
-
-  .rf-commercial-card p {
-    margin: 9px 0 14px;
-    color: rgba(235, 233, 225, .64);
-    font-size: 13px;
-    line-height: 1.45;
-  }
-
-  .rf-commercial-action {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    width: fit-content;
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: .035em;
-  }
-
-  .rf-commercial-action::after {
-    content: "↗";
-    display: grid;
-    width: 23px;
-    height: 23px;
-    place-items: center;
-    border: 1px solid rgba(var(--accent-rgb), .55);
-    border-radius: 50%;
-    transition: transform .25s ease;
-  }
-
-  .rf-commercial-card:hover .rf-commercial-action::after {
-    transform: translate(2px, -2px);
+  .rf-podcast-wave path {
+    fill: none;
+    stroke-linecap: round;
   }
 
   @media (max-width: 1000px) {
-    .rf-commercial-presence {
+    .rf-podcast-coming-soon {
       min-height: 0;
-      padding: 46px 30px;
+      margin-top: 48px;
     }
 
-    .rf-commercial-grid {
+    .rf-podcast-layout {
       grid-template-columns: 1fr;
-      max-width: 720px;
+      min-height: 0;
     }
 
-    .rf-commercial-card {
-      min-height: 150px;
+    .rf-podcast-copy {
+      padding: 48px 42px 42px;
+      background: linear-gradient(
+        180deg,
+        #07100e 0%,
+        #07100e 84%,
+        rgba(7, 16, 14, .72) 100%
+      );
+    }
+
+    .rf-podcast-visual,
+    .rf-podcast-image {
+      min-height: 390px;
+    }
+
+    .rf-podcast-visual::before {
+      background: linear-gradient(
+        180deg,
+        #07100e 0%,
+        transparent 27%,
+        rgba(0, 0, 0, .18) 100%
+      );
+    }
+
+    .rf-podcast-wave {
+      top: -40px;
+      left: 50%;
+      width: 300px;
+      transform: translateX(-50%);
     }
   }
 
   @media (max-width: 620px) {
-    .rf-commercial-presence {
+    .rf-podcast-coming-soon {
       width: calc(100% - 32px);
-      padding: 38px 18px;
+      margin-top: 36px;
       border-radius: 22px;
     }
 
-    .rf-commercial-heading {
-      margin-bottom: 28px;
+    .rf-podcast-copy {
+      padding: 38px 23px 34px;
     }
 
-    .rf-commercial-heading h2 {
-      font-size: 39px;
+    .rf-podcast-eyebrow {
+      font-size: 10px;
+      letter-spacing: .21em;
     }
 
-    .rf-commercial-heading p {
+    .rf-podcast-copy h2 {
+      font-size: 44px;
+    }
+
+    .rf-podcast-description {
       font-size: 15px;
+      line-height: 1.56;
     }
 
-    .rf-commercial-eyebrow::before,
-    .rf-commercial-eyebrow::after {
-      width: 38px;
+    .rf-podcast-status {
+      padding: 10px 13px;
+      font-size: 9px;
+      letter-spacing: .16em;
     }
 
-    .rf-commercial-grid {
-      gap: 15px;
+    .rf-podcast-signoff {
+      align-items: flex-start;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
-    .rf-commercial-card {
-      grid-template-columns: 58px 1fr;
-      min-height: 142px;
-      padding: 19px 17px;
+    .rf-podcast-signoff::before {
+      flex-basis: 27px;
+      margin-top: 10px;
     }
 
-    .rf-commercial-mark {
-      width: 46px;
-      height: 59px;
-      margin-right: 12px;
+    .rf-podcast-visual,
+    .rf-podcast-image {
+      min-height: 285px;
     }
 
-    .rf-commercial-monogram {
-      font-size: 21px;
-    }
-
-    .rf-commercial-card-content {
-      padding-left: 16px;
-    }
-
-    .rf-commercial-card h3 {
-      font-size: 24px;
+    .rf-podcast-image {
+      object-position: 59% center;
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .rf-commercial-card,
-    .rf-commercial-action::after {
+    .rf-podcast-coming-soon *,
+    .rf-podcast-coming-soon *::before,
+    .rf-podcast-coming-soon *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+</style>
+
+<section
+  class="section-frame rf-podcast-coming-soon reveal"
+  id="andy-fish-podcast"
+  aria-labelledby="andy-fish-podcast-title"
+>
+  <div class="rf-podcast-layout">
+    <div class="rf-podcast-copy">
+      <div class="rf-podcast-eyebrow">
+        THE ANDY FISH PODCAST
+      </div>
+
+      <h2 id="andy-fish-podcast-title">
+        Podcasts<br>
+        coming soon<span>.</span>
+      </h2>
+
+      <p class="rf-podcast-description">
+        Honest conversations about psychology, philosophy, DARVO,
+        parental alienation, fathers’ rights and challenges within
+        the court system.
+      </p>
+
+      <div class="rf-podcast-status">
+        NEW SERIES IN DEVELOPMENT
+      </div>
+
+      <p class="rf-podcast-signoff">
+        Conversations with depth. Ideas that stay with you.
+      </p>
+    </div>
+
+    <div class="rf-podcast-visual">
+      <img
+        class="rf-podcast-image"
+        src="assets/images/andy-fish-podcast-coming-soon.png"
+        alt="Professional studio microphone prepared for the forthcoming Andy Fish podcast series"
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+      >
+
+      <svg
+        class="rf-podcast-wave"
+        viewBox="0 0 260 88"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <linearGradient id="rfPodcastWaveGold" x1="0" x2="1">
+            <stop offset="0" stop-color="#c8902b" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#e2ad49" stop-opacity=".9"/>
+            <stop offset="1" stop-color="#22aa91" stop-opacity=".18"/>
+          </linearGradient>
+        </defs>
+
+        <path
+          d="M0 44 C25 44 29 18 52 18 S83 70 108 70 139 28 162 28 194 60 217 60 237 39 260 39"
+          stroke="url(#rfPodcastWaveGold)"
+          stroke-width="1.2"
+        />
+
+        <path
+          d="M0 49 C22 49 33 33 53 33 S80 59 104 59 137 39 160 39 188 52 212 52 237 44 260 44"
+          stroke="url(#rfPodcastWaveGold)"
+          stroke-width=".65"
+          opacity=".6"
+        />
+      </svg>
+    </div>
+  </div>
+</section>
+<!-- RF_ANDY_FISH_PODCAST_END -->
+
+
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
+<!-- RF_AS_SEEN_ON_HOME_START -->
+<style>
+  .rf-find-andy {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(100% - 96px);
+    max-width: 1420px;
+    min-height: 445px;
+    margin-top: 64px !important;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgba(207, 158, 44, .58);
+    border-radius: 28px;
+    background: #07100e;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, .025),
+      0 22px 70px rgba(0, 0, 0, .24);
+  }
+
+  .rf-find-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.03fr) minmax(500px, .97fr);
+    min-height: 443px;
+  }
+
+  .rf-find-copy {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 46px 24px 46px 58px;
+    background:
+      radial-gradient(
+        circle at 88% 50%,
+        rgba(13, 104, 87, .13),
+        transparent 43%
+      ),
+      linear-gradient(
+        90deg,
+        #06100e 0%,
+        #07100e 69%,
+        rgba(7, 16, 14, .97) 84%,
+        rgba(7, 16, 14, .45) 100%
+      );
+  }
+
+  .rf-find-eyebrow {
+    margin-bottom: 14px;
+    color: #dfa734;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .3em;
+  }
+
+  .rf-find-copy h2 {
+    max-width: 650px;
+    margin: 0;
+    color: #f4eee3;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 4vw, 65px);
+    font-weight: 500;
+    line-height: .99;
+    letter-spacing: -.043em;
+  }
+
+  .rf-find-copy h2 span {
+    color: #dca743;
+  }
+
+  .rf-find-description {
+    max-width: 610px;
+    margin: 19px 0 0;
+    color: rgba(239, 234, 223, .76);
+    font-size: 16px;
+    line-height: 1.57;
+  }
+
+  .rf-find-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 23px;
+  }
+
+  .rf-find-link {
+    --link-colour: #d8a541;
+    --link-rgb: 216, 165, 65;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 40px;
+    padding: 7px 12px 7px 9px;
+    color: #f1eadc;
+    border: 1px solid rgba(var(--link-rgb), .72);
+    border-radius: 999px;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(var(--link-rgb), .09),
+        rgba(0, 0, 0, .08)
+      );
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, .035),
+      0 8px 20px rgba(0, 0, 0, .12);
+    transition:
+      transform .24s ease,
+      background .24s ease,
+      box-shadow .24s ease;
+  }
+
+  .rf-find-link:hover,
+  .rf-find-link:focus-visible {
+    transform: translateY(-3px);
+    background: rgba(var(--link-rgb), .14);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, .05),
+      0 12px 27px rgba(0, 0, 0, .24);
+  }
+
+  .rf-find-link:focus-visible {
+    outline: 2px solid var(--link-colour);
+    outline-offset: 3px;
+  }
+
+  .rf-find-proven {
+    --link-colour: #d3a541;
+    --link-rgb: 211, 165, 65;
+  }
+
+  .rf-find-coach {
+    --link-colour: #b967c2;
+    --link-rgb: 185, 103, 194;
+  }
+
+  .rf-find-locator {
+    --link-colour: #eda72f;
+    --link-rgb: 237, 167, 47;
+  }
+
+  .rf-find-logo {
+    display: grid;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    color: #07100e;
+    border-radius: 50%;
+    background: var(--link-colour);
+    box-shadow: 0 0 13px rgba(var(--link-rgb), .2);
+  }
+
+  .rf-find-logo svg {
+    width: 14px;
+    height: 14px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .rf-find-arrow {
+    color: var(--link-colour);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .rf-find-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 18px 0 0;
+    color: rgba(235, 231, 222, .52);
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .rf-find-note::before {
+    content: "i";
+    display: grid;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    place-items: center;
+    color: #dca73c;
+    border: 1px solid rgba(220, 167, 60, .65);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 11px;
+    font-style: italic;
+  }
+
+  .rf-find-visual {
+    position: relative;
+    min-width: 0;
+    min-height: 443px;
+  }
+
+  .rf-find-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+      linear-gradient(
+        90deg,
+        #07100e 0%,
+        rgba(7, 16, 14, .7) 10%,
+        transparent 38%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, .03),
+        transparent 66%,
+        rgba(0, 0, 0, .23)
+      );
+    pointer-events: none;
+  }
+
+  .rf-find-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 443px;
+    object-fit: cover;
+    object-position: 58% center;
+    filter: saturate(.91) contrast(1.03);
+  }
+
+  .rf-find-image-arrow {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    z-index: 3;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    color: #11130f;
+    border: 1px solid rgba(255, 218, 123, .72);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f1b636, #d79c2e);
+    box-shadow:
+      0 9px 24px rgba(0, 0, 0, .32),
+      0 0 20px rgba(226, 168, 49, .14);
+    font-size: 22px;
+    pointer-events: none;
+  }
+
+  @media (max-width: 1050px) {
+    .rf-find-andy {
+      min-height: 0;
+      margin-top: 48px !important;
+    }
+
+    .rf-find-layout {
+      grid-template-columns: 1fr;
+      min-height: 0;
+    }
+
+    .rf-find-copy {
+      padding: 46px 40px 40px;
+      background: linear-gradient(
+        180deg,
+        #07100e 0%,
+        #07100e 84%,
+        rgba(7, 16, 14, .72) 100%
+      );
+    }
+
+    .rf-find-visual,
+    .rf-find-image {
+      min-height: 380px;
+    }
+
+    .rf-find-visual::before {
+      background: linear-gradient(
+        180deg,
+        #07100e 0%,
+        transparent 27%,
+        rgba(0, 0, 0, .18) 100%
+      );
+    }
+  }
+
+  @media (max-width: 620px) {
+    .rf-find-andy {
+      width: calc(100% - 32px);
+      margin-top: 36px !important;
+      border-radius: 22px;
+    }
+
+    .rf-find-copy {
+      padding: 37px 22px 33px;
+    }
+
+    .rf-find-eyebrow {
+      font-size: 10px;
+      letter-spacing: .21em;
+    }
+
+    .rf-find-copy h2 {
+      font-size: 42px;
+    }
+
+    .rf-find-description {
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .rf-find-links {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .rf-find-link {
+      justify-content: flex-start;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .rf-find-link .rf-find-arrow {
+      margin-left: auto;
+    }
+
+    .rf-find-visual,
+    .rf-find-image {
+      min-height: 285px;
+    }
+
+    .rf-find-image {
+      object-position: 61% center;
+    }
+
+    .rf-find-image-arrow {
+      right: 17px;
+      bottom: 17px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .rf-find-link {
       transition: none;
     }
   }
 </style>
 
 <section
-  class="section-frame rf-commercial-presence reveal"
+  class="section-frame rf-find-andy reveal"
   id="professional-presence"
   aria-labelledby="professional-presence-title"
 >
-  <div class="rf-commercial-heading">
-    <div class="rf-commercial-eyebrow">AS SEEN ON</div>
+  <div class="rf-find-layout">
+    <div class="rf-find-copy">
+      <div class="rf-find-eyebrow">
+        ALSO FIND ANDY ON
+      </div>
 
-    <h2 id="professional-presence-title">
-      A trusted presence<span>.</span>
-    </h2>
+      <h2 id="professional-presence-title">
+        Explore the work<br>
+        beyond this site<span>.</span>
+      </h2>
 
-    <p>
-      Discover Andy Fish across respected professional platforms.
-    </p>
-  </div>
+      <p class="rf-find-description">
+        Learn more about Andy Fish, his work and coaching across
+        independent professional platforms.
+      </p>
 
-  <div class="rf-commercial-grid">
-    <a
-      class="rf-commercial-card rf-commercial-proven"
-      href="https://www.provenexpert.com/andy-fish/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View Andy Fish on ProvenExpert — opens in a new tab"
-    >
-      <span class="rf-commercial-mark" aria-hidden="true">
-        <span class="rf-commercial-monogram">PE</span>
-      </span>
+      <div class="rf-find-links">
+        <a
+          class="rf-find-link rf-find-proven"
+          href="https://www.provenexpert.com/andy-fish/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Andy Fish on ProvenExpert — opens in a new tab"
+        >
+          <span class="rf-find-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="m6 12 4 4 8-9"></path>
+            </svg>
+          </span>
 
-      <span class="rf-commercial-card-content">
-        <h3>ProvenExpert</h3>
-        <p>Verified reviews. Proven trust.</p>
-        <span class="rf-commercial-action">View profile</span>
-      </span>
-    </a>
+          <span>ProvenExpert</span>
+          <span class="rf-find-arrow" aria-hidden="true">↗</span>
+        </a>
 
-    <a
-      class="rf-commercial-card rf-commercial-coach"
-      href="https://coachcompare.com/coach/19768-andy-fish"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View Andy Fish on CoachCompare — opens in a new tab"
-    >
-      <span class="rf-commercial-mark" aria-hidden="true">
-        <span class="rf-commercial-monogram">CC</span>
-      </span>
+        <a
+          class="rf-find-link rf-find-coach"
+          href="https://coachcompare.com/coach/19768-andy-fish"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Andy Fish on CoachCompare — opens in a new tab"
+        >
+          <span class="rf-find-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M7 7h11"></path>
+              <path d="m15 4 3 3-3 3"></path>
+              <path d="M17 17H6"></path>
+              <path d="m9 14-3 3 3 3"></path>
+            </svg>
+          </span>
 
-      <span class="rf-commercial-card-content">
-        <h3>CoachCompare</h3>
-        <p>A professional coaching profile.</p>
-        <span class="rf-commercial-action">View profile</span>
-      </span>
-    </a>
+          <span>CoachCompare</span>
+          <span class="rf-find-arrow" aria-hidden="true">↗</span>
+        </a>
 
-    <a
-      class="rf-commercial-card rf-commercial-locator"
-      href="https://lifecoachlocator.com/coaches/andy-fish"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="View Andy Fish on Life Coach Locator — opens in a new tab"
-    >
-      <span class="rf-commercial-mark" aria-hidden="true">
-        <span class="rf-commercial-monogram">LC</span>
-      </span>
+        <a
+          class="rf-find-link rf-find-locator"
+          href="https://lifecoachlocator.com/coaches/andy-fish"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Andy Fish on Life Coach Locator — opens in a new tab"
+        >
+          <span class="rf-find-logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+          </span>
 
-      <span class="rf-commercial-card-content">
-        <h3>Life Coach Locator</h3>
-        <p>Connecting people with coaching support.</p>
-        <span class="rf-commercial-action">View profile</span>
-      </span>
-    </a>
+          <span>Life Coach Locator</span>
+          <span class="rf-find-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <p class="rf-find-note">
+        Each link opens the corresponding public profile.
+      </p>
+    </div>
+
+    <div class="rf-find-visual">
+      <img
+        class="rf-find-image"
+        src="assets/images/andy-fish-professional-profiles-phone.png"
+        alt="Hand holding a phone displaying a professional profile in a dark consultation workspace"
+        width="1672"
+        height="941"
+        loading="lazy"
+        decoding="async"
+      >
+
+      <span class="rf-find-image-arrow" aria-hidden="true">→</span>
+    </div>
   </div>
 </section>
 <!-- RF_AS_SEEN_ON_HOME_END -->
+<div class="rf-exact-home-gap" aria-hidden="true"></div>
+<!-- RF_PREMIUM_CONTACT_START -->
+<section class="rf-premium-contact" id="contact" aria-labelledby="rf-contact-heading">
+    <style>
+        .rf-premium-contact {
+            --rf-contact-gold: #e4b24d;
+            --rf-contact-gold-bright: #f4d181;
+            --rf-contact-ivory: #f4f0e7;
+            --rf-contact-muted: #b8bab5;
+            --rf-contact-emerald: #06372f;
+            width: min(calc(100% - 64px), 1420px);
+            margin: 64px auto !important;
+            padding: 0;
+            position: relative;
+            isolation: isolate;
+        }
 
+        .rf-premium-contact *,
+        .rf-premium-contact *::before,
+        .rf-premium-contact *::after {
+            box-sizing: border-box;
+        }
 
+        .rf-premium-contact__shell {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+            gap: 42px;
+            min-height: 470px;
+            padding: 28px;
+            overflow: hidden;
+            border: 1px solid rgba(228, 178, 77, 0.92);
+            border-radius: 28px;
+            background:
+                radial-gradient(circle at 18% 48%, rgba(5, 71, 58, 0.36), transparent 37%),
+                radial-gradient(circle at 93% 5%, rgba(203, 137, 45, 0.18), transparent 30%),
+                linear-gradient(115deg, #071310 0%, #080d0c 52%, #100e09 100%);
+            box-shadow:
+                0 28px 75px rgba(0, 0, 0, 0.34),
+                inset 0 1px 0 rgba(255, 239, 191, 0.08);
+        }
 
-      <section class="section-frame hp-section hp-cta reveal" id="contact">
-        <div class="container-fluid home-container">
-          <div class="hp-panel hp-cta-panel">
-            <div>
-              <p class="eyebrow">Contact</p>
-              <h2 class="section-heading-lg hp-heading">Ready to begin the conversation?</h2>
-              <p class="lead-text hp-lead mb-0">
-                For coaching, speaking, collaborations or media requests, get in touch and we will shape the right next step.
-              </p>
-            </div>
-            <div class="hp-cta-actions">
-              <a class="btn btn-gold" href="contact.html">Get in Touch</a>
-            </div>
-          </div>
+        .rf-premium-contact__shell::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                linear-gradient(
+                    100deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.018) 45%,
+                    transparent 72%
+                );
+        }
+
+        .rf-premium-contact__copy {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 38px 30px 38px 44px;
+        }
+
+        .rf-premium-contact__eyebrow {
+            margin: 0 0 24px;
+            color: var(--rf-contact-gold);
+            font-size: 0.77rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.34em;
+            text-transform: uppercase;
+        }
+
+        .rf-premium-contact__heading {
+            max-width: 690px;
+            margin: 0;
+            color: var(--rf-contact-ivory);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3.15rem, 5vw, 5.25rem);
+            font-weight: 400;
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+            text-wrap: balance;
+        }
+
+        .rf-premium-contact__heading span {
+            color: var(--rf-contact-gold);
+        }
+
+        .rf-premium-contact__intro {
+            max-width: 660px;
+            margin: 28px 0 0;
+            color: var(--rf-contact-muted);
+            font-size: clamp(1rem, 1.25vw, 1.14rem);
+            line-height: 1.7;
+        }
+
+        .rf-premium-contact__services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .rf-premium-contact__services li {
+            padding: 10px 18px;
+            border: 1px solid rgba(228, 178, 77, 0.72);
+            border-radius: 999px;
+            color: #e8bd69;
+            background: rgba(3, 13, 11, 0.7);
+            font-size: 0.71rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .rf-premium-contact__action {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 414px;
+            padding: 38px;
+            overflow: hidden;
+            border: 1.5px solid rgba(242, 199, 105, 0.96);
+            border-radius: 22px;
+            background:
+                radial-gradient(circle at 94% 2%, rgba(225, 161, 59, 0.2), transparent 28%),
+                radial-gradient(circle at 20% 100%, rgba(5, 70, 57, 0.24), transparent 36%),
+                linear-gradient(145deg, rgba(7, 17, 15, 0.98), rgba(11, 12, 10, 0.98));
+            box-shadow:
+                0 20px 48px rgba(0, 0, 0, 0.3),
+                inset 0 0 0 1px rgba(255, 229, 158, 0.05);
+        }
+
+        .rf-premium-contact__action::before,
+        .rf-premium-contact__action::after {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            right: -42px;
+            top: -30px;
+            border: 1px solid rgba(228, 178, 77, 0.2);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .rf-premium-contact__action::after {
+            width: 236px;
+            height: 236px;
+            right: 5px;
+            top: 17px;
+            border-color: rgba(228, 178, 77, 0.32);
+            box-shadow:
+                0 0 0 42px rgba(228, 178, 77, 0.025),
+                0 0 50px rgba(228, 178, 77, 0.04);
+        }
+
+        .rf-premium-contact__radar {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            right: 145px;
+            top: 132px;
+            z-index: 2;
+            border: 2px solid #fff0bb;
+            border-radius: 50%;
+            background: var(--rf-contact-gold);
+            box-shadow:
+                0 0 0 8px rgba(228, 178, 77, 0.08),
+                0 0 26px rgba(238, 181, 69, 0.75);
+        }
+
+        .rf-premium-contact__radar::before,
+        .rf-premium-contact__radar::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #edc468;
+            box-shadow: 0 0 10px rgba(237, 196, 104, 0.7);
+        }
+
+        .rf-premium-contact__radar::before {
+            left: -107px;
+            top: 93px;
+        }
+
+        .rf-premium-contact__radar::after {
+            left: 102px;
+            top: 84px;
+        }
+
+        .rf-premium-contact__action-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .rf-premium-contact__start {
+            margin: 0 0 16px;
+            color: var(--rf-contact-gold);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+        }
+
+        .rf-premium-contact__action-title {
+            max-width: 450px;
+            margin: 0;
+            color: var(--rf-contact-ivory);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.9rem, 2.5vw, 2.8rem);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.025em;
+        }
+
+        .rf-premium-contact__reassurance {
+            margin: 15px 0 26px;
+            color: #c3c3bd;
+            font-size: 0.96rem;
+            line-height: 1.55;
+        }
+
+        .rf-premium-contact__button {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 82px;
+            min-height: 76px;
+            overflow: hidden;
+            border: 1px solid var(--rf-contact-gold-bright);
+            border-radius: 9px;
+            color: #11100c;
+            background:
+                linear-gradient(105deg, #c88e2f 0%, #f0c66c 48%, #d99d38 100%);
+            box-shadow:
+                0 13px 30px rgba(197, 130, 34, 0.22),
+                inset 0 1px 0 rgba(255, 244, 198, 0.78);
+            text-decoration: none;
+            transition:
+                transform 220ms ease,
+                box-shadow 220ms ease,
+                border-color 220ms ease;
+        }
+
+        .rf-premium-contact__button::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(
+                105deg,
+                transparent 22%,
+                rgba(255, 255, 255, 0.28) 48%,
+                transparent 72%
+            );
+            transform: translateX(-120%);
+            transition: transform 650ms ease;
+        }
+
+        .rf-premium-contact__button-label {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+            font-size: 0.82rem;
+            font-weight: 900;
+            letter-spacing: 0.23em;
+            text-transform: uppercase;
+        }
+
+        .rf-premium-contact__button-arrow {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid rgba(238, 195, 102, 0.66);
+            color: var(--rf-contact-gold-bright);
+            background: #080d0c;
+        }
+
+        .rf-premium-contact__button-arrow svg {
+            width: 29px;
+            height: 29px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.45;
+            stroke-linecap: square;
+            stroke-linejoin: miter;
+            transition: transform 220ms ease;
+        }
+
+        .rf-premium-contact__button:hover,
+        .rf-premium-contact__button:focus-visible {
+            color: #090805;
+            border-color: #ffe5a0;
+            box-shadow:
+                0 17px 38px rgba(201, 135, 34, 0.32),
+                inset 0 1px 0 rgba(255, 250, 220, 0.9);
+            transform: translateY(-3px);
+            text-decoration: none;
+        }
+
+        .rf-premium-contact__button:hover::before,
+        .rf-premium-contact__button:focus-visible::before {
+            transform: translateX(120%);
+        }
+
+        .rf-premium-contact__button:hover .rf-premium-contact__button-arrow svg,
+        .rf-premium-contact__button:focus-visible .rf-premium-contact__button-arrow svg {
+            transform: translateX(5px);
+        }
+
+        .rf-premium-contact__button:focus-visible {
+            outline: 3px solid rgba(244, 209, 129, 0.45);
+            outline-offset: 4px;
+        }
+
+        @media (max-width: 1100px) {
+            .rf-premium-contact {
+                width: min(calc(100% - 48px), 1420px);
+                margin: 48px auto !important;
+            }
+
+            .rf-premium-contact__shell {
+                grid-template-columns: 1fr;
+            }
+
+            .rf-premium-contact__copy {
+                padding: 34px 24px 18px;
+            }
+
+            .rf-premium-contact__action {
+                min-height: 390px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .rf-premium-contact {
+                width: min(calc(100% - 28px), 1420px);
+                margin: 36px auto !important;
+            }
+
+            .rf-premium-contact__shell {
+                gap: 22px;
+                padding: 16px;
+                border-radius: 21px;
+            }
+
+            .rf-premium-contact__copy {
+                padding: 24px 10px 8px;
+            }
+
+            .rf-premium-contact__heading {
+                font-size: clamp(2.55rem, 13vw, 3.7rem);
+            }
+
+            .rf-premium-contact__intro {
+                margin-top: 22px;
+                font-size: 0.98rem;
+            }
+
+            .rf-premium-contact__services {
+                margin-top: 24px;
+            }
+
+            .rf-premium-contact__services li {
+                padding: 9px 13px;
+                font-size: 0.64rem;
+            }
+
+            .rf-premium-contact__action {
+                min-height: 410px;
+                padding: 27px 21px 22px;
+                border-radius: 17px;
+            }
+
+            .rf-premium-contact__action-title {
+                font-size: 2.05rem;
+            }
+
+            .rf-premium-contact__button {
+                grid-template-columns: 1fr 66px;
+                min-height: 68px;
+            }
+
+            .rf-premium-contact__button-label {
+                padding: 0 19px;
+                font-size: 0.72rem;
+                letter-spacing: 0.17em;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .rf-premium-contact__button,
+            .rf-premium-contact__button::before,
+            .rf-premium-contact__button-arrow svg {
+                transition: none;
+            }
+        }
+    </style>
+
+    <div class="rf-premium-contact__shell">
+        <div class="rf-premium-contact__copy">
+            <p class="rf-premium-contact__eyebrow">Contact</p>
+
+            <h2 class="rf-premium-contact__heading" id="rf-contact-heading">
+                Let’s begin with<br>a conversation<span>.</span>
+            </h2>
+
+            <p class="rf-premium-contact__intro">
+                Whether you are looking for coaching, inviting Andy to speak,
+                or exploring a thoughtful collaboration, this is the place to start.
+            </p>
+
+            <ul class="rf-premium-contact__services" aria-label="Reasons to contact Andy Fish">
+                <li>Coaching</li>
+                <li>Speaking</li>
+                <li>Collaborations</li>
+            </ul>
         </div>
-      </section>
+
+        <div class="rf-premium-contact__action">
+            <span class="rf-premium-contact__radar" aria-hidden="true"></span>
+
+            <div class="rf-premium-contact__action-content">
+                <p class="rf-premium-contact__start">Start here</p>
+
+                <h3 class="rf-premium-contact__action-title">
+                    A thoughtful first conversation
+                </h3>
+
+                <p class="rf-premium-contact__reassurance">
+                    Confidential, considered and without pressure.
+                </p>
+
+                <a class="rf-premium-contact__button" href="contact.html">
+                    <span class="rf-premium-contact__button-label">Get in touch</span>
+
+                    <span class="rf-premium-contact__button-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M5 16h21"></path>
+                            <path d="m18 8 8 8-8 8"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- RF_PREMIUM_CONTACT_END -->
     </main>
 
     <footer class="footer home-footer">
@@ -2221,5 +3023,940 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
 <script src="/assets/js/mega-menu-controller.js?v=20260814-global-20260814-132222"></script>
 <!-- RF_GLOBAL_PREMIUM_MENU_JS_END -->
 <script src="/assets/js/cookie-consent.js?v=20260815" defer></script>
+<!-- RF_EXACT_PHYSICAL_GAPS -->
+<style>
+/*
+ * Exact physical homepage gaps.
+ *
+ * Margins are removed from the four new blocks.
+ * Three real spacer elements provide the visible distance.
+ * These heights cannot collapse.
+ */
+.rf-exact-home-gap {
+    display: block !important;
+    width: 100% !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    flex: 0 0 64px !important;
+    clear: both !important;
+    pointer-events: none !important;
+}
+
+/* Remove every competing external block margin. */
+#rf-support-feature,
+.rf-andy-fish-podcast,
+.rf-find-andy,
+.rf-premium-contact {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Preserve the normal space between Contact and the footer. */
+.rf-premium-contact {
+    margin-bottom: 64px !important;
+}
+
+@media (max-width: 1024px) {
+    .rf-exact-home-gap {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        flex-basis: 48px !important;
+    }
+
+    .rf-premium-contact {
+        margin-bottom: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .rf-exact-home-gap {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        flex-basis: 36px !important;
+    }
+
+    .rf-premium-contact {
+        margin-bottom: 36px !important;
+    }
+}
+</style>
+<!-- RF_REMOVE_HIDDEN_SECTION_PADDING -->
+<style>
+/*
+ * The global homepage stylesheet adds vertical padding to every
+ * direct section. These four blocks already contain their own
+ * internal padding, so that global padding created unequal visible
+ * border-to-border gaps.
+ *
+ * All external spacing is now provided only by rf-exact-home-gap.
+ */
+body:has(#rf-support-feature) main > #rf-support-feature,
+body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
+body:has(#rf-support-feature) main > .rf-find-andy,
+body:has(#rf-support-feature) main > .rf-premium-contact {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Correct the Podcast selector used by the earlier gap controller. */
+.rf-podcast-coming-soon {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+ * Each physical spacer is the sole source of spacing.
+ * Border-to-border distances are therefore identical.
+ */
+.rf-exact-home-gap {
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 0 0 64px !important;
+}
+
+@media (max-width: 1024px) {
+    .rf-exact-home-gap {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        flex-basis: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .rf-exact-home-gap {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        flex-basis: 36px !important;
+    }
+}
+</style>
+<!-- RF_STRONG_SECTION_PADDING_OVERRIDE -->
+<style>
+/*
+ * These selectors deliberately exceed the specificity of the original
+ * main > section:not(:first-child) rule.
+ *
+ * The blocks already contain their own internal padding. External
+ * spacing is supplied only by the physical gap elements.
+ */
+html body:has(#rf-support-feature) main > section#rf-support-feature,
+html body:has(#rf-support-feature) main > section.rf-podcast-coming-soon.rf-podcast-coming-soon,
+html body:has(#rf-support-feature) main > section#professional-presence.rf-find-andy,
+html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Contact-to-footer space remains controlled separately. */
+html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
+    margin-bottom: 64px !important;
+}
+
+@media (max-width: 1024px) {
+    html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
+        margin-bottom: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body:has(#rf-support-feature) main > section#contact.rf-premium-contact {
+        margin-bottom: 36px !important;
+    }
+}
+</style>
+<!-- RF_TESTIMONIALS_EXACT_SPACING -->
+<style>
+/*
+ * Testimonials previously inherited half-padding from the old
+ * homepage spacing system. This replaces it with one explicit,
+ * measurable gap above and below the visible Testimonials content.
+ */
+html body.home-page:has(#rf-support-feature)
+main > section#testimonials.hp-testimonials {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-top: 64px !important;
+    margin-bottom: 64px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Prevent content margins from escaping the section boundary. */
+html body.home-page:has(#rf-support-feature)
+main > section#testimonials.hp-testimonials > :first-child {
+    margin-top: 0 !important;
+}
+
+html body.home-page:has(#rf-support-feature)
+main > section#testimonials.hp-testimonials > :last-child {
+    margin-bottom: 0 !important;
+}
+
+/*
+ * Support Finder already contains its own card padding.
+ * Remove inherited outer vertical padding so it does not enlarge
+ * the Testimonials-to-Support-Finder gap.
+ */
+html body.home-page:has(#rf-support-feature)
+main > section#rf-support-feature {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+@media (max-width: 1024px) {
+    html body.home-page:has(#rf-support-feature)
+    main > section#testimonials.hp-testimonials {
+        margin-top: 48px !important;
+        margin-bottom: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    html body.home-page:has(#rf-support-feature)
+    main > section#testimonials.hp-testimonials {
+        margin-top: 36px !important;
+        margin-bottom: 36px !important;
+    }
+}
+</style>
+<!-- RF_ANIMATED_FULL_BLEED_CONTACT -->
+<style>
+/*
+ * Final premium Contact design.
+ *
+ * The external homepage spacing system is intentionally untouched.
+ */
+.rf-premium-contact__shell {
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr) !important;
+    gap: 0 !important;
+    min-height: 445px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(229, 177, 70, 0.9) !important;
+    border-radius: 28px !important;
+    background:
+        radial-gradient(circle at 18% 45%, rgba(4, 71, 57, 0.3), transparent 38%),
+        linear-gradient(110deg, #061410, #080d0c) !important;
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 238, 187, 0.07) !important;
+}
+
+/* Left editorial content. */
+.rf-premium-contact__copy {
+    min-height: 443px !important;
+    justify-content: center !important;
+    padding: clamp(34px, 4vw, 58px) clamp(32px, 4.4vw, 68px) !important;
+    background:
+        radial-gradient(circle at 18% 44%, rgba(2, 73, 59, 0.26), transparent 42%),
+        linear-gradient(115deg, #061410, #07100e) !important;
+}
+
+.rf-premium-contact__heading {
+    font-size: clamp(3rem, 4.25vw, 4.8rem) !important;
+    line-height: 0.98 !important;
+}
+
+.rf-premium-contact__intro {
+    margin-top: 24px !important;
+    font-size: clamp(0.98rem, 1.05vw, 1.1rem) !important;
+    line-height: 1.65 !important;
+}
+
+.rf-premium-contact__services {
+    margin-top: 26px !important;
+}
+
+/* Full-bleed photographic right panel. */
+.rf-premium-contact__action {
+    position: relative !important;
+    isolation: isolate !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    justify-content: stretch !important;
+    min-height: 443px !important;
+    padding: clamp(28px, 3vw, 44px) !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-left: 1px solid rgba(229, 177, 70, 0.28) !important;
+    border-radius: 0 !important;
+    background-color: #07100e !important;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(2, 10, 8, 0.9) 0%,
+            rgba(2, 10, 8, 0.6) 38%,
+            rgba(2, 10, 8, 0.14) 72%,
+            rgba(2, 10, 8, 0.05) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(2, 8, 7, 0.92) 0%,
+            rgba(2, 8, 7, 0.33) 48%,
+            transparent 78%
+        ),
+        url("assets/images/contact-andy-fish-today.png") !important;
+    background-position: center, center, center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    box-shadow: none !important;
+}
+
+/* Cinematic shading—not another box. */
+.rf-premium-contact__action::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    pointer-events: none !important;
+    background:
+        radial-gradient(
+            circle at 84% 12%,
+            rgba(229, 170, 64, 0.13),
+            transparent 29%
+        ),
+        linear-gradient(
+            115deg,
+            rgba(1, 13, 10, 0.3),
+            transparent 62%
+        ) !important;
+}
+
+.rf-premium-contact__action::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 222, 142, 0.08) 0,
+            transparent 1px
+        ) !important;
+    box-shadow: none !important;
+}
+
+.rf-premium-contact__radar {
+    display: none !important;
+}
+
+/*
+ * Text sits directly over the photograph.
+ * No inner square, border, backdrop or nested card.
+ */
+.rf-premium-contact__action-content {
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.rf-premium-contact__start {
+    position: relative;
+    margin: 0 0 13px !important;
+    padding-top: 16px;
+    color: #e4b24d !important;
+    font-size: 0.68rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.27em !important;
+}
+
+.rf-premium-contact__start::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 1px;
+    background: linear-gradient(90deg, #efbd55, rgba(239, 189, 85, 0));
+}
+
+.rf-premium-contact__action-title {
+    max-width: 620px !important;
+    color: #f4f0e7 !important;
+    font-size: clamp(1.9rem, 2.45vw, 2.75rem) !important;
+    line-height: 1.03 !important;
+    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.72);
+}
+
+.rf-premium-contact__reassurance {
+    margin: 12px 0 22px !important;
+    color: #d2d2cc !important;
+    font-size: 0.95rem !important;
+    text-shadow: 0 2px 13px rgba(0, 0, 0, 0.82);
+}
+
+/* Premium full-width animated CTA. */
+.rf-premium-contact__button {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 82px !important;
+    width: 100% !important;
+    min-height: 72px !important;
+    overflow: hidden !important;
+    border: 1px solid #e8b84e !important;
+    border-radius: 8px !important;
+    color: #f6f1e6 !important;
+    background:
+        linear-gradient(
+            110deg,
+            rgba(3, 13, 11, 0.98) 0%,
+            rgba(10, 23, 19, 0.98) 55%,
+            rgba(3, 12, 10, 0.98) 100%
+        ) !important;
+    box-shadow:
+        0 14px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 243, 202, 0.13),
+        inset 0 0 0 1px rgba(100, 65, 15, 0.28) !important;
+    transform: translateY(0);
+    transition:
+        transform 240ms ease,
+        border-color 240ms ease,
+        box-shadow 240ms ease !important;
+}
+
+/* Animated light travelling across the dark CTA field. */
+.rf-premium-contact__button::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: -45% !important;
+    z-index: 1 !important;
+    display: block !important;
+    width: 32% !important;
+    height: auto !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            105deg,
+            transparent,
+            rgba(255, 224, 145, 0.12),
+            rgba(255, 243, 202, 0.22),
+            rgba(255, 224, 145, 0.08),
+            transparent
+        ) !important;
+    transform: skewX(-18deg) !important;
+    animation: rfContactCtaSweep 6.2s ease-in-out infinite;
+}
+
+/* Precision upper-edge highlight. */
+.rf-premium-contact__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14px;
+    right: 96px;
+    z-index: 2;
+    height: 1px;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 234, 178, 0.78),
+            rgba(255, 234, 178, 0.14),
+            transparent
+        );
+}
+
+.rf-premium-contact__button-label {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 29px !important;
+    color: #f6f1e6 !important;
+    font-size: 0.78rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.24em !important;
+    text-transform: uppercase !important;
+}
+
+/* Integrated gold action segment at the far-right edge. */
+.rf-premium-contact__button-arrow {
+    position: relative !important;
+    z-index: 3 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-left: 1px solid rgba(23, 17, 7, 0.88) !important;
+    color: #11100c !important;
+    background:
+        linear-gradient(
+            135deg,
+            #f2cb71 0%,
+            #e4ae45 58%,
+            #cf902e 100%
+        ) !important;
+    box-shadow:
+        inset 1px 0 0 rgba(255, 239, 192, 0.52),
+        inset 0 1px 0 rgba(255, 247, 215, 0.52) !important;
+    transition:
+        color 240ms ease,
+        background 240ms ease !important;
+}
+
+.rf-premium-contact__button-arrow svg {
+    width: 28px !important;
+    height: 28px !important;
+    stroke-width: 1.55 !important;
+    transition: transform 240ms ease !important;
+}
+
+.rf-premium-contact__button:hover,
+.rf-premium-contact__button:focus-visible {
+    border-color: #ffe09a !important;
+    box-shadow:
+        0 18px 39px rgba(0, 0, 0, 0.48),
+        0 0 28px rgba(225, 163, 53, 0.16),
+        inset 0 1px 0 rgba(255, 247, 212, 0.21) !important;
+    transform: translateY(-3px) !important;
+}
+
+.rf-premium-contact__button:hover .rf-premium-contact__button-arrow,
+.rf-premium-contact__button:focus-visible .rf-premium-contact__button-arrow {
+    background:
+        linear-gradient(
+            135deg,
+            #ffe092,
+            #edbb54 58%,
+            #d99a35
+        ) !important;
+}
+
+.rf-premium-contact__button:hover .rf-premium-contact__button-arrow svg,
+.rf-premium-contact__button:focus-visible .rf-premium-contact__button-arrow svg {
+    transform: translateX(6px) !important;
+}
+
+.rf-premium-contact__button:focus-visible {
+    outline: 3px solid rgba(242, 203, 113, 0.4) !important;
+    outline-offset: 4px !important;
+}
+
+@keyframes rfContactCtaSweep {
+    0%,
+    62% {
+        left: -45%;
+        opacity: 0;
+    }
+
+    67% {
+        opacity: 1;
+    }
+
+    84% {
+        left: 115%;
+        opacity: 1;
+    }
+
+    88%,
+    100% {
+        left: 115%;
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1100px) {
+    .rf-premium-contact__shell {
+        grid-template-columns: 1fr !important;
+    }
+
+    .rf-premium-contact__copy {
+        min-height: auto !important;
+    }
+
+    .rf-premium-contact__action {
+        min-height: 500px !important;
+        border-top: 1px solid rgba(229, 177, 70, 0.28) !important;
+        border-left: 0 !important;
+        background-position: center, center, 58% center !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .rf-premium-contact__shell {
+        border-radius: 21px !important;
+    }
+
+    .rf-premium-contact__copy {
+        padding: 33px 24px !important;
+    }
+
+    .rf-premium-contact__action {
+        min-height: 470px !important;
+        padding: 24px 18px !important;
+        background-position: center, center, 62% center !important;
+    }
+
+    .rf-premium-contact__action-title {
+        font-size: 2rem !important;
+    }
+
+    .rf-premium-contact__button {
+        grid-template-columns: minmax(0, 1fr) 66px !important;
+        min-height: 66px !important;
+    }
+
+    .rf-premium-contact__button-label {
+        padding: 0 18px !important;
+        font-size: 0.69rem !important;
+        letter-spacing: 0.18em !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rf-premium-contact__button::before {
+        display: none !important;
+        animation: none !important;
+    }
+
+    .rf-premium-contact__button,
+    .rf-premium-contact__button-arrow,
+    .rf-premium-contact__button-arrow svg {
+        transition: none !important;
+    }
+}
+</style>
+<!-- RF_EQUAL_FEATURE_TILE_SIZES -->
+<style>
+/*
+ * FINAL FEATURE BLOCK DIMENSIONS
+ *
+ * Desktop:
+ * - identical 1420px maximum width
+ * - identical 445px visible height
+ *
+ * Existing 64px/48px/36px gaps remain untouched.
+ */
+@media (min-width: 1101px) {
+    /* Support Finder */
+    #rf-support-feature .rf-support-card {
+        box-sizing: border-box !important;
+        width: min(calc(100% - 96px), 1420px) !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin: 0 auto !important;
+        padding: clamp(30px, 3vw, 48px) !important;
+        overflow: hidden !important;
+    }
+
+    #rf-support-feature .rf-support-image-link {
+        width: 100% !important;
+        height: 310px !important;
+        max-height: 310px !important;
+        aspect-ratio: auto !important;
+    }
+
+    #rf-support-feature .rf-support-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Podcast */
+    html body.home-page:has(#rf-support-feature)
+    main > section.rf-podcast-coming-soon {
+        box-sizing: border-box !important;
+        width: min(calc(100% - 96px), 1420px) !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .rf-podcast-coming-soon .rf-podcast-layout {
+        box-sizing: border-box !important;
+        height: 443px !important;
+        min-height: 443px !important;
+        max-height: 443px !important;
+    }
+
+    /* Professional profiles */
+    html body.home-page:has(#rf-support-feature)
+    main > section#professional-presence.rf-find-andy {
+        box-sizing: border-box !important;
+        width: min(calc(100% - 96px), 1420px) !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .rf-find-andy .rf-find-layout {
+        box-sizing: border-box !important;
+        height: 443px !important;
+        min-height: 443px !important;
+        max-height: 443px !important;
+    }
+
+    .rf-find-andy .rf-find-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Contact */
+    html body.home-page:has(#rf-support-feature)
+    main > section#contact.rf-premium-contact {
+        box-sizing: border-box !important;
+        width: min(calc(100% - 96px), 1420px) !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        padding: 0 !important;
+    }
+
+    .rf-premium-contact__shell {
+        box-sizing: border-box !important;
+        width: 100% !important;
+        height: 445px !important;
+        min-height: 445px !important;
+        max-height: 445px !important;
+        gap: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .rf-premium-contact__copy,
+    .rf-premium-contact__action {
+        box-sizing: border-box !important;
+        height: 443px !important;
+        min-height: 443px !important;
+        max-height: 443px !important;
+    }
+
+    /*
+     * Fill the complete right column.
+     * Removes the empty bottom-right internal gap.
+     */
+    .rf-premium-contact__action {
+        align-self: stretch !important;
+        margin: 0 !important;
+        padding: clamp(28px, 3vw, 44px) !important;
+        overflow: hidden !important;
+        border-radius: 0 !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+    }
+
+    .rf-premium-contact__action-content {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .rf-premium-contact__button {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+/* Tablet and mobile retain natural responsive heights. */
+@media (max-width: 1100px) {
+    #rf-support-feature .rf-support-card,
+    .rf-podcast-coming-soon,
+    .rf-find-andy,
+    .rf-premium-contact,
+    .rf-premium-contact__shell,
+    .rf-premium-contact__copy {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    .rf-podcast-layout,
+    .rf-find-layout {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+    }
+
+    .rf-premium-contact__action {
+        height: auto !important;
+        min-height: 500px !important;
+        max-height: none !important;
+        background-size: cover !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #rf-support-feature .rf-support-card,
+    .rf-podcast-coming-soon,
+    .rf-find-andy,
+    .rf-premium-contact {
+        width: min(calc(100% - 28px), 1420px) !important;
+    }
+
+    .rf-premium-contact__action {
+        min-height: 470px !important;
+    }
+}
+</style>
+<!-- RF_CONTACT_BOTTOM_ALIGNMENT -->
+<style>
+/*
+ * Anchor the photographic-panel content and CTA to the bottom.
+ * This removes the large unused area beneath the button.
+ */
+.rf-premium-contact__action {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-end !important;
+}
+
+.rf-premium-contact__action-content {
+    width: 100% !important;
+    margin-top: auto !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: 0 !important;
+}
+
+.rf-premium-contact__button {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Keep the heading balanced rather than stretching excessively. */
+.rf-premium-contact__action-title {
+    max-width: 650px !important;
+    text-wrap: balance;
+}
+
+@media (max-width: 1100px) {
+    .rf-premium-contact__action {
+        justify-content: flex-end !important;
+    }
+}
+</style>
+
+<!-- RF_DEFINITIVE_EQUAL_HOMEPAGE_GAPS -->
+<style>
+/*
+ * One definitive spacing system for the homepage feature sequence.
+ *
+ * Desktop: 64px
+ * Tablet:  48px
+ * Mobile:  36px
+ */
+
+/* Remove inherited section padding that previously enlarged some gaps. */
+body:has(#rf-support-feature) main > #testimonials,
+body:has(#rf-support-feature) main > #rf-support-feature,
+body:has(#rf-support-feature) main > .rf-andy-fish-podcast,
+body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
+body:has(#rf-support-feature) main > .rf-find-andy,
+body:has(#rf-support-feature) main > .rf-premium-contact {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*
+ * Support Finder previously received 32px top and bottom padding from
+ * an older global rule. Its card already contains its own spacing.
+ */
+body:has(#rf-support-feature) main > #rf-support-feature {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove external spacing from the three following feature tiles. */
+body:has(#rf-support-feature) main > .rf-andy-fish-podcast,
+body:has(#rf-support-feature) main > .rf-podcast-coming-soon,
+body:has(#rf-support-feature) main > .rf-find-andy,
+body:has(#rf-support-feature) main > .rf-premium-contact {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Every visible gap is now a real, non-collapsing element. */
+body:has(#rf-support-feature) main > .rf-exact-home-gap {
+    display: block !important;
+    width: 100% !important;
+    height: 64px !important;
+    min-height: 64px !important;
+    max-height: 64px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clear: both !important;
+    flex: 0 0 64px !important;
+    pointer-events: none !important;
+}
+
+/* Keep the Contact-to-footer distance consistent too. */
+body:has(#rf-support-feature) main > .rf-premium-contact {
+    margin-bottom: 64px !important;
+}
+
+@media (max-width: 1024px) {
+    body:has(#rf-support-feature) main > .rf-exact-home-gap {
+        height: 48px !important;
+        min-height: 48px !important;
+        max-height: 48px !important;
+        flex-basis: 48px !important;
+    }
+
+    body:has(#rf-support-feature) main > .rf-premium-contact {
+        margin-bottom: 48px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    body:has(#rf-support-feature) main > .rf-exact-home-gap {
+        height: 36px !important;
+        min-height: 36px !important;
+        max-height: 36px !important;
+        flex-basis: 36px !important;
+    }
+
+    body:has(#rf-support-feature) main > .rf-premium-contact {
+        margin-bottom: 36px !important;
+    }
+}
+</style>
 </body>
 </html>
