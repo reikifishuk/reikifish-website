@@ -964,5 +964,29 @@
     "category": "Personality",
     "summary": "Understand and address Avoidant Personality Disorder with our expert guide",
     "url": "knowledge/avoidant-personality-disorder"
+  },
+  {
+    "slug": "malignant-narcissism",
+    "title": "Malignant Narcissism",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "A comprehensive guide to understanding and addressing malignant narcissism, a destructive personality disorder.",
+    "url": "knowledge/malignant-narcissism"
+  },
+  {
+    "slug": "deflection",
+    "title": "Deflection",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "A comprehensive guide to understanding and addressing deflection, a common psychological defence mechanism.",
+    "url": "knowledge/deflection"
+  },
+  {
+    "slug": "vicarious-trauma",
+    "title": "Vicarious Trauma",
+    "type": "Complete Guide",
+    "category": "Trauma",
+    "summary": "Experiencing trauma through others. Causes, effects, and coping strategies.",
+    "url": "knowledge/vicarious-trauma"
   }
 ]

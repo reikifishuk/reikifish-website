@@ -195,16 +195,18 @@ def build_page(spec: PageSpec) -> Path:
   <meta property="og:type" content="article"><meta property="og:site_name" content="ReikiFish"><meta property="og:title" content="{spec.title}"><meta property="og:description" content="{spec.og_description}"><meta property="og:url" content="{canonical}"><meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary"><meta name="twitter:title" content="{spec.title}"><meta name="twitter:description" content="{spec.og_description}">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"><link rel="stylesheet" href="/assets/css/style.css?v=20260819-{spec.slug}"><link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260819-{spec.slug}"><link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2"><link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260817-breadcrumb-fix2">
-  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v3">
   <style>
 {css}
   </style>
   <script type="application/ld+json">{json.dumps(json_ld)}</script>
 </head>
 {nav_block}
-<main class="{p}-page" id="main-content"><!-- RF_STATIC_HUB_BREADCRUMB_START -->
+<main class="{p}-page" id="main-content">
+<!-- RF_STATIC_HUB_BREADCRUMB_START -->
 <nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb"><a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub"><span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span><span>Knowledge Hub</span></a><span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span><span class="rf-static-hub-breadcrumb__current" aria-current="page">{spec.title.split(":")[0]}</span></nav>
-<!-- RF_STATIC_HUB_BREADCRUMB_END --><article><header class="{p}-hero"><div class="{p}-wrap {p}-hero-grid"><div><div class="{p}-eyebrow">{spec.eyebrow}</div><h1>{spec.h1_html}</h1><p class="{p}-lead">{spec.lead}</p>{note_html}</div><div class="{p}-visual" aria-label="Illustrative diagram">{spec.svg_html}</div></div></header>
+<!-- RF_STATIC_HUB_BREADCRUMB_END -->
+<article><header class="{p}-hero"><div class="{p}-wrap {p}-hero-grid"><div><div class="{p}-eyebrow">{spec.eyebrow}</div><h1>{spec.h1_html}</h1><p class="{p}-lead">{spec.lead}</p>{note_html}</div><div class="{p}-visual" aria-label="Illustrative diagram">{spec.svg_html}</div></div></header>
 <div class="{p}-layout {p}-wrap"><div class="{p}-content">
 {sections_html}
 {faq_html}
