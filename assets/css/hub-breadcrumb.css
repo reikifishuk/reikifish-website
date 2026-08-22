@@ -1,0 +1,136 @@
+/* RF_SHARED_HUB_BREADCRUMB_START */
+.rf-static-hub-breadcrumb {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: min(calc(100% - 64px), 1660px);
+  margin: 0 auto;
+  padding: 18px 0 8px;
+  color: #aaa59b;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.rf-static-hub-breadcrumb__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  color: #f2eee5;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+.rf-static-hub-breadcrumb__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid #dca91d;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f7ca58, #e8a91e);
+  color: #07100d;
+  font-size: 20px;
+  line-height: 1;
+  box-shadow: 0 8px 24px rgba(236,177,42,.16), inset 0 1px 0 rgba(255,255,255,.38);
+}
+.rf-static-hub-breadcrumb__link:hover,
+.rf-static-hub-breadcrumb__link:focus-visible {
+  color: #ecb12a;
+  transform: translateX(-2px);
+}
+.rf-static-hub-breadcrumb__link:focus-visible {
+  outline: 2px solid #ecb12a;
+  outline-offset: 4px;
+  border-radius: 999px;
+}
+.rf-static-hub-breadcrumb__separator { color: #b99030; font-size: 18px; }
+.rf-static-hub-breadcrumb__current {
+  min-width: 0;
+  overflow: hidden;
+  color: #aaa59b;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 900px) {
+  .rf-static-hub-breadcrumb { width: min(calc(100% - 40px), 1660px); padding-top: 16px; }
+}
+@media (max-width: 640px) {
+  .rf-static-hub-breadcrumb { gap: 8px; width: min(calc(100% - 28px), 1660px); padding-top: 14px; font-size: 13px; }
+  .rf-static-hub-breadcrumb__icon { width: 34px; height: 34px; flex-basis: 34px; font-size: 18px; }
+  .rf-static-hub-breadcrumb__current { max-width: 43vw; }
+}
+/* RF_SHARED_HUB_BREADCRUMB_END */
+/* RF_HUB_BREADCRUMB_POSITION_START */
+
+/*
+ * All Hub guides use one consistent header offset.
+ * This prevents the breadcrumb from overlapping the fixed logo/navigation.
+ */
+main:has(> .rf-static-hub-breadcrumb) {
+    box-sizing: border-box;
+    padding-top: var(--nav-offset, 100px) !important;
+}
+
+/*
+ * The breadcrumb remains in normal document flow directly below the header.
+ */
+main > .rf-static-hub-breadcrumb {
+    position: relative !important;
+    inset: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    z-index: 2;
+    width: min(calc(100% - 96px), 1660px);
+    margin: 0 auto !important;
+    padding: 18px 0 14px !important;
+    transform: none !important;
+}
+
+/*
+ * Prevent the first hero section from adding another large navigation gap.
+ */
+main:has(> .rf-static-hub-breadcrumb)
+> .rf-static-hub-breadcrumb
++ header,
+main:has(> .rf-static-hub-breadcrumb)
+> .rf-static-hub-breadcrumb
++ article,
+main:has(> .rf-static-hub-breadcrumb)
+> .rf-static-hub-breadcrumb
++ section,
+main:has(> .rf-static-hub-breadcrumb)
+> .rf-static-hub-breadcrumb
++ div {
+    margin-top: 0 !important;
+}
+
+@media (max-width: 900px) {
+    main:has(> .rf-static-hub-breadcrumb) {
+        padding-top: var(--nav-offset, 88px) !important;
+    }
+
+    main > .rf-static-hub-breadcrumb {
+        width: min(calc(100% - 40px), 1660px);
+        padding: 16px 0 12px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    main:has(> .rf-static-hub-breadcrumb) {
+        padding-top: var(--nav-offset, 76px) !important;
+    }
+
+    main > .rf-static-hub-breadcrumb {
+        width: min(calc(100% - 28px), 1660px);
+        padding: 14px 0 10px !important;
+    }
+}
+
+/* RF_HUB_BREADCRUMB_POSITION_END */

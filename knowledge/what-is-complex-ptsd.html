@@ -1371,6 +1371,9 @@
 
 <link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2">
 <link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
+
+<link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260821-single-breadcrumb-all">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -1416,6 +1419,18 @@
     </header>
 
     <main class="ke-page">
+<!-- RF_STATIC_HUB_BREADCRUMB_START -->
+<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb">
+  <a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub">
+    <span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span>
+    <span>Knowledge Hub</span>
+  </a>
+  <span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span>
+  <span class="rf-static-hub-breadcrumb__current" aria-current="page">What Is Complex PTSD?</span>
+</nav>
+<!-- RF_STATIC_HUB_BREADCRUMB_END -->
+
+
 <style class="KH_CPTSD_PAGE_STYLES">
 .kh-cptsd-page {
     --kh-space: 2rem;
@@ -2205,17 +2220,7 @@
 
 <div class="kh-cptsd-page">
     <div class="ke-wrap">
-        <nav class="ke-breadcrumb" aria-label="Breadcrumb">
-            <a href="../index.html">Home</a>
-            <span aria-hidden="true">›</span>
-            <a href="../knowledge.html">Knowledge Hub</a>
-            <span aria-hidden="true">›</span>
-            <span>Complex PTSD</span>
-        </nav>
-
-        <a class="ke-back-hub knowledge-breadcrumb-cta" href="../knowledge.html">← Knowledge Hub</a>
-
-        <header class="ke-hero">
+<header class="ke-hero">
             <div class="ke-hero-grid">
                 <div class="ke-hero-copy">
                     <p class="ke-type">Trauma · In-depth guide</p>
@@ -2630,8 +2635,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js?v=20260816-knowledge-nav-3"></script>
-  <!-- KH_BATCH_A_LINK_FIX -->
+<!-- KH_BATCH_A_LINK_FIX -->
 <style class="KH_BATCH_A_LINK_FIX_STYLES">
 .kh-depth-contents {
   position: relative;
@@ -3259,5 +3263,6 @@ main aside a[href^="#"] *,
 
 <script src="/assets/js/mega-menu.js?v=20260813-force2"></script>
 <script src="/assets/js/mega-menu-controller.js?v=20260813-force2"></script>
+    <script src="/assets/js/main.js?v=20260822-single-breadcrumb-v2" defer></script>
 </body>
 </html>

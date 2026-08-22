@@ -932,5 +932,37 @@
     "category": "Personality",
     "summary": "Manipulative personality trait: understanding and addressing Machiavellianism",
     "url": "knowledge/machiavellianism"
+  },
+  {
+    "slug": "cognitive-reframing",
+    "title": "Cognitive Reframing",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Transform your thoughts, transform your life with cognitive reframing techniques.",
+    "url": "knowledge/cognitive-reframing"
+  },
+  {
+    "slug": "grieving-someone-who-is-still-alive",
+    "title": "Grieving someone who is still alive",
+    "type": "Complete Guide",
+    "category": "Emotional Health",
+    "summary": "Grieving someone who is still alive: causes, effects, and coping strategies.",
+    "url": "knowledge/grieving-someone-who-is-still-alive"
+  },
+  {
+    "slug": "moral-disengagement",
+    "title": "Moral Disengagement",
+    "type": "Complete Guide",
+    "category": "Social Psychology",
+    "summary": "A psychological process that enables harmful behaviour, with far-reaching consequences.",
+    "url": "knowledge/moral-disengagement"
+  },
+  {
+    "slug": "avoidant-personality-disorder",
+    "title": "Avoidant Personality Disorder",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "Understand and address Avoidant Personality Disorder with our expert guide",
+    "url": "knowledge/avoidant-personality-disorder"
   }
 ]

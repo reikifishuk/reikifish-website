@@ -51,6 +51,9 @@
     @media(max-width:900px){.tb-shell{width:calc(100% - 36px)}.tb-hero{grid-template-columns:1fr;padding:3rem 0}.tb-hero img{width:100%;aspect-ratio:16/10}.tb-layout{grid-template-columns:1fr;gap:2rem;padding:3rem 0 4rem}.tb-side{position:static;order:-1;max-height:none;overflow:visible}.tb-side nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}}
     @media(max-width:560px){.tb-shell{width:calc(100% - 28px)}.tb-side nav{grid-template-columns:1fr}.tb-article{font-size:1rem}.tb-article section{padding:1.5rem}}
   </style>
+
+<link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260821-single-breadcrumb-all">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
 </head>
 <body class="tb-page">
 <header class="home-shell">
@@ -64,7 +67,19 @@
     </div>
   </nav>
 </header>
-<main class="tb-shell rf-eo-page" id="top"><div class="rf-eo-wrap">
+<main class="tb-shell rf-eo-page" id="top">
+<!-- RF_STATIC_HUB_BREADCRUMB_START -->
+<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb">
+  <a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub">
+    <span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span>
+    <span>Knowledge Hub</span>
+  </a>
+  <span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span>
+  <span class="rf-static-hub-breadcrumb__current" aria-current="page">What Is Trauma Bonding?</span>
+</nav>
+<!-- RF_STATIC_HUB_BREADCRUMB_END -->
+
+<div class="rf-eo-wrap">
   <div class="tb-hero"><div><div class="tb-hero-kicker">REIKIFISH KNOWLEDGE HUB · TRAUMA</div><h1>What Is Trauma Bonding?</h1><p>An original, evidence-led guide to the powerful attachment that can form when care, fear, conflict and relief become tied together. Trauma bonding is not a character flaw. It is a pattern that can make clear thinking and leaving feel much harder than outsiders expect.</p></div><div class="tb-hero-visual"><img src="/assets/images/andy-fish-reflection-misty-lake.webp" alt="A reflective figure beside a misty lake, representing perspective after a difficult relationship" loading="lazy" decoding="async"></div></div>
   <div class="tb-layout"><article class="tb-article">
     <section id="overview"><h2>Trauma bonding in plain language</h2><p>Trauma bonding describes an attachment that is strengthened by a repeating cycle of threat and relief. A person may experience criticism, intimidation, withdrawal, coercion or emotional instability, followed by warmth, apology, attention or a short period of calm. The relief can feel unusually powerful because the nervous system has been waiting for danger to stop. Over time, the relationship may feel precious precisely because safety is inconsistent.</p><p>The phrase is often used casually, but a careful explanation matters. Trauma bonding is not simply loving somebody who has problems, staying in a difficult relationship, or finding separation painful. It refers to a pattern in which unequal power, repeated harm and intermittent positive treatment combine to make attachment unusually resistant to evidence. Understanding that pattern can replace shame with useful observation.</p><div class="tb-callout">A bond can feel emotionally real and still be organised around fear, uncertainty and relief. Naming the mechanism does not require denying the good moments.</div></section>
@@ -99,7 +114,7 @@
     <a href="#overview">Trauma bonding in plain language</a><a href="#not-love">Not a diagnosis</a><a href="#cycle">The cycle</a><a href="#intermittent-reinforcement">Intermittent reinforcement</a><a href="#nervous-system">The nervous system</a><a href="#power">Power and dependency</a><a href="#signs">Common signs</a><a href="#confusion">Confusion and self-doubt</a><a href="#attachment">Attachment history</a><a href="#hope">Hope and promises</a><a href="#gaslighting">Gaslighting and denial</a><a href="#isolation">Isolation</a><a href="#children">Children and family</a><a href="#leaving">Leaving</a><a href="#contact">Contact decisions</a><a href="#boundaries">Boundaries</a><a href="#recovery">Recovery</a><a href="#therapy">Professional support</a><a href="#safety">Safety planning</a><a href="#endurance">Endurance</a><a href="#summary">Summary</a>
   </nav></aside></div>
 </div></main>
-<script src="/assets/js/main.js"></script><script src="/assets/js/mega-menu.js"></script><script src="/assets/js/mega-menu-controller.js"></script>
+<script src="/assets/js/mega-menu.js"></script><script src="/assets/js/mega-menu-controller.js"></script>
 <script>
 const deepDiveTopics = ["the first moment you noticed the pattern","the difference between intensity and intimacy","what a peaceful morning can conceal","why apologies can feel physically relieving","how uncertainty changes attention","the cost of monitoring another person","when ordinary requests become dangerous","the meaning of a sudden affectionate gesture","how private rules develop","the role of financial dependence","the role of housing dependence","the role of immigration uncertainty","the role of professional reputation","the role of shared passwords","the role of children’s routines","the role of pets and practical care","the role of social embarrassment","the role of religious or cultural pressure","the role of promises about therapy","the role of promises about sobriety","how a crisis can erase the previous crisis","how a gift can become evidence of loyalty","how silence can become a punishment","how anger can be made unpredictable","how charm can divide public and private life","how friends become cautious visitors","how a person edits their own memories","how fear changes a text message","how fear changes a household routine","how fear changes financial decisions","how fear changes sexual consent","how fear changes parenting decisions","how fear changes work performance","how fear changes sleep","how fear changes appetite","how fear changes movement through a home","how fear changes the use of technology","how fear changes the meaning of privacy","how fear changes the experience of weekends","how fear changes the experience of holidays","how fear changes the experience of illness","how fear changes the experience of success","how fear changes the experience of independence","how fear changes the experience of disagreement","how fear changes the experience of silence","how fear changes the experience of kindness","how fear changes the experience of touch","how fear changes the experience of future planning","how fear changes the experience of solitude","how fear changes the experience of friendship","how fear changes the experience of professional help","how fear changes the experience of being believed","how relief can be mistaken for repair","how remorse can be separated from accountability","how accountability can be measured","how consistency can be measured","how safety can be measured","how trust can be rebuilt slowly","how choice can be practised","how identity can return","how grief can coexist with clarity","how guilt can be tolerated","how loneliness can be survived","how anger can become information","how boundaries can become ordinary","how a new routine becomes evidence","how support can be accepted","how children can be protected from adult roles","how records can restore sequence","how language can restore precision","how professional advice can restore options","how a future can become believable"];
 const deepDive = document.getElementById('deep-dive-content');
@@ -111,4 +126,5 @@ deepDiveTopics.forEach((topic, index) => {
   deepDive.append(heading, first, second, third);
 });
 </script>
+    <script src="/assets/js/main.js?v=20260822-single-breadcrumb-v2" defer></script>
 </body></html>

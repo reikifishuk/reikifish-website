@@ -1566,6 +1566,9 @@
 }
 </style>
 <!-- RF_GLOBAL_WHITE_SIDEBAR_END -->
+
+<link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260821-single-breadcrumb-all">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -1617,16 +1620,20 @@
     </header>
 
     <main class="ke-page rf-er-page">
-    <div class="ke-wrap">
-        <nav class="ke-breadcrumb" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <span aria-hidden="true">›</span>
-            <a href="/knowledge">Knowledge Hub</a>
-            <span aria-hidden="true">›</span>
-            <span>Emotional resilience</span>
-        </nav>
+<!-- RF_STATIC_HUB_BREADCRUMB_START -->
+<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb">
+  <a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub">
+    <span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span>
+    <span>Knowledge Hub</span>
+  </a>
+  <span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span>
+  <span class="rf-static-hub-breadcrumb__current" aria-current="page">What Is Emotional Resilience?</span>
+</nav>
+<!-- RF_STATIC_HUB_BREADCRUMB_END -->
 
-        <a class="ke-back-hub" href="/knowledge">
+
+    <div class="ke-wrap">
+<a class="ke-back-hub" href="/knowledge">
             <span aria-hidden="true">←</span> Knowledge Hub
         </a>
 
@@ -2491,8 +2498,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/main.js?v=20260816-knowledge-nav-3"></script>
-  <!-- KH_BATCH_A_LINK_FIX -->
+<!-- KH_BATCH_A_LINK_FIX -->
 <style class="KH_BATCH_A_LINK_FIX_STYLES">
 .kh-depth-contents {
   position: relative;
@@ -3022,5 +3028,6 @@
 }
 </style>
 <!-- KH_LIVE_NATIVE_LINKS_END -->
+    <script src="/assets/js/main.js?v=20260822-single-breadcrumb-v2" defer></script>
 </body>
 </html>

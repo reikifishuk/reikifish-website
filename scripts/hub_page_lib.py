@@ -185,6 +185,23 @@ def _extract_template_parts(prefix: str):
             '\n<script src="/assets/js/mega-menu-controller.js?v=20260817-breadcrumb-fix2"></script>'
         )
 
+
+    shared_main_script = (
+        '<script '
+        'src="/assets/js/main.js?v=20260821-single-breadcrumb-all">'
+        '</script>'
+    )
+
+    footer_scripts = re.sub(
+        r'<script\b[^>]*\bsrc=["\']/assets/js/main\.js'
+        r'(?:\?[^"\']*)?["\'][^>]*>\s*</script>',
+        "",
+        footer_scripts,
+        flags=re.I,
+    )
+
+    footer_scripts += "\n" + shared_main_script
+
     return css, nav_block, footer_scripts
 
 
@@ -262,6 +279,7 @@ def build_hub_page(spec: HubPageSpec) -> str:
   <meta property="og:type" content="article"><meta property="og:site_name" content="ReikiFish"><meta property="og:title" content="{spec.title}"><meta property="og:description" content="{spec.og_description}"><meta property="og:url" content="{canonical}"><meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary"><meta name="twitter:title" content="{spec.title}"><meta name="twitter:description" content="{spec.og_description}">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg"><link rel="stylesheet" href="/assets/css/style.css?v=20260819-{spec.slug}"><link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260819-{spec.slug}"><link rel="stylesheet" href="/assets/css/mega-menu.css?v=20260813-force2"><link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260817-breadcrumb-fix2">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
   <style>
 {css}
   </style>
@@ -270,7 +288,9 @@ def build_hub_page(spec: HubPageSpec) -> str:
 """
 
     body = f"""{nav_block}
-<main class="{p}-page" id="main-content"><div class="{p}-wrap"><div class="{p}-back"><a href="/knowledge">&larr; Knowledge Hub</a></div>
+<main class="{p}-page" id="main-content"><div class="{p}-wrap"><!-- RF_STATIC_HUB_BREADCRUMB_START -->
+<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb"><a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub"><span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span><span>Knowledge Hub</span></a><span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span><span class="rf-static-hub-breadcrumb__current" aria-current="page">{spec.h1}</span></nav>
+<!-- RF_STATIC_HUB_BREADCRUMB_END -->
 <section class="{p}-hero" aria-labelledby="{p}-title"><div><span class="{p}-kicker">{spec.eyebrow}</span><h1 id="{p}-title">{spec.h1}</h1><p>{spec.lead}</p>{note_html}</div>
 <div class="{p}-visual" aria-label="Illustrative diagram">{spec.svg_html}</div>
 </section>

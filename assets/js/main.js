@@ -22,40 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  const isKnowledgeGuide = /^\/knowledge\/[^/]+(?:\.html)?$/.test(window.location.pathname);
-
-  if (knowledgeMain && isKnowledgeGuide) {
-    const legacyNavigation = knowledgeMain.querySelectorAll(
-      '[class*="breadcrumb"], [class*="-back"]'
-    );
-
-    legacyNavigation.forEach((element) => {
-      if (
-        element.matches('a[href*="knowledge.html"]') ||
-        element.querySelector('a[href*="knowledge.html"]')
-      ) {
-        element.remove();
-      }
-    });
-
-    const heading = knowledgeMain.querySelector('h1');
-    const currentPage = heading ? heading.textContent.trim() : document.title;
-    const navigation = document.createElement('div');
-    navigation.className = 'knowledge-guide-nav';
-    navigation.innerHTML = `
-      <nav class="ke-breadcrumb knowledge-guide-breadcrumb" aria-label="Breadcrumb">
-        <a href="/index.html">Home</a>
-        <span aria-hidden="true">&rsaquo;</span>
-        <a href="/knowledge.html">Knowledge Hub</a>
-        <span aria-hidden="true">&rsaquo;</span>
-        <span class="knowledge-guide-current" aria-current="page"></span>
-      </nav>
-      <a class="ke-back-hub knowledge-breadcrumb-cta knowledge-guide-back" href="/knowledge.html"><span class="knowledge-guide-back-icon" aria-hidden="true">&larr;</span><span>Knowledge Hub</span></a>
-      `;
-    navigation.querySelector('.knowledge-guide-current').textContent = currentPage;
-    knowledgeMain.prepend(navigation);
-  }
-
   const fixedNavbar = document.querySelector('.navbar.fixed-top');
 
   if (fixedNavbar) {
