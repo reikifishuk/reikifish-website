@@ -1020,5 +1020,69 @@
     "category": "Manipulation",
     "summary": "Understand and address antagonistic interpersonal behaviour to improve relationships and wellbeing.",
     "url": "knowledge/antagonistic-interpersonal-behaviour"
+  },
+  {
+    "slug": "dyadic-coping",
+    "title": "Dyadic Coping",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "Improving dyadic coping through shared stress management strategies.",
+    "url": "knowledge/dyadic-coping"
+  },
+  {
+    "slug": "attachment-deactivation",
+    "title": "Attachment Deactivation",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "Attachment deactivation: causes, effects, and practical guidance",
+    "url": "knowledge/attachment-deactivation"
+  },
+  {
+    "slug": "exploitative-interpersonal-orientation",
+    "title": "Exploitative Interpersonal Orientation",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "A guide to recognising and addressing exploitative interpersonal orientation.",
+    "url": "knowledge/exploitative-interpersonal-orientation"
+  },
+  {
+    "slug": "dependent-personality-disorder",
+    "title": "Dependent Personality Disorder",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "A comprehensive guide to Dependent Personality Disorder, its causes, symptoms, and treatment options.",
+    "url": "knowledge/dependent-personality-disorder"
+  },
+  {
+    "slug": "morbid-jealousy",
+    "title": "Morbid jealousy",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "A comprehensive guide to understanding and addressing morbid jealousy",
+    "url": "knowledge/morbid-jealousy"
+  },
+  {
+    "slug": "mate-guarding",
+    "title": "Mate guarding",
+    "type": "Complete Guide",
+    "category": "Relationships",
+    "summary": "Explore mate guarding, the behaviours used to protect a relationship from perceived rivals, including jealousy, vigilance, control and manipulation.",
+    "url": "knowledge/mate-guarding"
+  },
+  {
+    "slug": "compliance-gaining-strategies",
+    "title": "Compliance-Gaining Strategies",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Influence people's decisions with evidence-led compliance-gaining strategies.",
+    "url": "knowledge/compliance-gaining-strategies"
+  },
+  {
+    "slug": "dispositional-sadism",
+    "title": "Dispositional Sadism",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "A complex personality trait marked by pleasure in causing harm, with significant consequences for relationships and well-being.",
+    "url": "knowledge/dispositional-sadism"
   }
 ]
