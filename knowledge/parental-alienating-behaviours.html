@@ -1982,7 +1982,34 @@
 <link rel="stylesheet" href="/assets/css/mega-menu-controller.css?v=20260813-force2">
 
 <link rel="stylesheet" href="/assets/css/mobile-responsive.css?v=20260821-single-breadcrumb-all">
-  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v2">
+  <link rel="stylesheet" href="/assets/css/hub-breadcrumb.css?v=20260822-shared-v3">
+<!-- RF_PARENTAL_BREADCRUMB_FINAL_POSITION_START -->
+<style>
+main#main-content {
+    position: relative;
+}
+
+main#main-content > .rf-static-hub-breadcrumb {
+    position: absolute !important;
+    top: 90px !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: 24px !important;
+    transform: none !important;
+    z-index: 20 !important;
+    width: auto !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    main#main-content > .rf-static-hub-breadcrumb {
+        top: 82px !important;
+        left: 16px !important;
+        max-width: calc(100% - 32px) !important;
+    }
+}
+</style>
+<!-- RF_PARENTAL_BREADCRUMB_FINAL_POSITION_END -->
 </head>
   <body class="home-page about-page">
     <header class="home-shell">
@@ -2029,18 +2056,9 @@
 
     <main class="pa-page" id="main-content">
 <!-- RF_STATIC_HUB_BREADCRUMB_START -->
-<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb">
-  <a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub">
-    <span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span>
-    <span>Knowledge Hub</span>
-  </a>
-  <span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span>
-  <span class="rf-static-hub-breadcrumb__current" aria-current="page">Understanding parental alienating behaviours</span>
-</nav>
+<nav class="rf-static-hub-breadcrumb" aria-label="Breadcrumb"><a class="rf-static-hub-breadcrumb__link" href="/knowledge" aria-label="Return to Knowledge Hub"><span class="rf-static-hub-breadcrumb__icon" aria-hidden="true">&larr;</span><span>Knowledge Hub</span></a><span class="rf-static-hub-breadcrumb__separator" aria-hidden="true">&rsaquo;</span><span class="rf-static-hub-breadcrumb__current" aria-current="page">Understanding parental alienating behaviours</span></nav>
 <!-- RF_STATIC_HUB_BREADCRUMB_END -->
-
-
-    <article>
+<article>
         <header class="pa-hero">
             <div class="pa-wrap">
                 <div class="pa-hero-grid">
