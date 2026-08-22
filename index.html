@@ -591,6 +591,29 @@ footer:has(.rf-footer-social) {
         0 8px 20px rgba(0, 0, 0, 0.32),
         0 0 0 2px rgba(105, 87, 232, 0.22);
 }
+
+/* Recognisable Reddit branding */
+.rf-footer-social-link[href*="reddit.com"],
+.rf-footer-reddit-link {
+    color: #ffffff;
+    background: #ff4500;
+    border-color: #ff4500;
+}
+
+.rf-reddit-brand-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+.rf-footer-social-link[href*="reddit.com"]:hover,
+.rf-footer-social-link[href*="reddit.com"]:focus-visible {
+    border-color: #ffb49a;
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.32),
+        0 0 0 2px rgba(255, 69, 0, 0.24);
+}
 </style>
 <link rel="stylesheet" href="/assets/css/cookie-consent.css?v=20260815">
 </head>
@@ -955,7 +978,7 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
       </section>
 <div class="rf-exact-home-gap" aria-hidden="true"></div>
 
-      
+
 <!-- RF_BOOKING_POSITION_BEFORE_TESTIMONIALS -->
 <!-- RF_BOOKING_PROMO_START -->
 <section class="rf-coaching-feature" id="book-a-session" aria-labelledby="rf-coaching-title">
@@ -2980,6 +3003,25 @@ Walking the Grey explores what happens when reaction gives way to reflection, pa
             >mix</text>
         </svg>
     </a>
+    <!-- RF_REDDIT_FOOTER_START -->
+    <a
+        class="rf-footer-social-link rf-footer-reddit-link"
+        href="https://www.reddit.com/r/WalkingTheGrey/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Follow Walking The Grey on Reddit"
+        title="Reddit"
+    >
+        <svg
+            class="rf-reddit-brand-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+        >
+            <path d="M12 2.25a1 1 0 0 0-.98.8l-.72 3.42a10.2 10.2 0 0 0-4.16 1.09 2.7 2.7 0 0 0-4.39 2.1c0 .75.3 1.43.79 1.92a4.8 4.8 0 0 0-.12 1.06c0 3.38 4.29 6.12 9.58 6.12s9.58-2.74 9.58-6.12c0-.36-.04-.71-.12-1.06a2.7 2.7 0 0 0-3.6-4.02 10.2 10.2 0 0 0-5.58-1.2l.52-2.45 2.13.45a1.88 1.88 0 1 0 .21-.98l-2.93-.62a1 1 0 0 0-.21-.02ZM7.75 10.6a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7Zm8.5 0a1.35 1.35 0 1 1 0 2.7 1.35 1.35 0 0 1 0-2.7Zm-8.02 3.86a.55.55 0 0 1 .77-.08c.74.58 1.74.87 3 .87s2.26-.29 3-.87a.55.55 0 1 1 .68.86c-.95.75-2.18 1.12-3.68 1.12s-2.73-.37-3.68-1.12a.55.55 0 0 1-.09-.78Z"/>
+        </svg>
+    </a>
+    <!-- RF_REDDIT_FOOTER_END -->
 </div>
 </footer>
 
