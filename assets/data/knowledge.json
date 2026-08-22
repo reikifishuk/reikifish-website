@@ -988,5 +988,37 @@
     "category": "Trauma",
     "summary": "Experiencing trauma through others. Causes, effects, and coping strategies.",
     "url": "knowledge/vicarious-trauma"
+  },
+  {
+    "slug": "what-is-hoovering",
+    "title": "What Is Hoovering?",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Recognise the signs of hoovering in relationships and learn how to set healthy boundaries.",
+    "url": "knowledge/what-is-hoovering"
+  },
+  {
+    "slug": "introjection",
+    "title": "Introjection",
+    "type": "Complete Guide",
+    "category": "Personality",
+    "summary": "Internalising external influences: understanding introjection and its impact on our sense of self.",
+    "url": "knowledge/introjection"
+  },
+  {
+    "slug": "group-entitativity",
+    "title": "Group Entitativity",
+    "type": "Complete Guide",
+    "category": "Social Psychology",
+    "summary": "The power of group cohesion: understanding group entitativity and its effects on social psychology",
+    "url": "knowledge/group-entitativity"
+  },
+  {
+    "slug": "antagonistic-interpersonal-behaviour",
+    "title": "Antagonistic Interpersonal Behaviour",
+    "type": "Complete Guide",
+    "category": "Manipulation",
+    "summary": "Understand and address antagonistic interpersonal behaviour to improve relationships and wellbeing.",
+    "url": "knowledge/antagonistic-interpersonal-behaviour"
   }
 ]
